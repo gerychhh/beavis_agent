@@ -1,77 +1,134 @@
-# Command Protocol
+# Command Protocol — Beavis Agent
 
-This document defines the JSON protocol between `python_agent` and `cpp_runtime`.
+## 1. Purpose
 
-For the first MVP, Python sends one `ToolCall` to C++ and C++ returns one
-`SkillResult`.
+This document defines the JSON protocol between the Python layer and the C++ runtime.
 
-```text
-Text input
--> Python NLU pipeline
--> ToolCall JSON
--> C++ Executor
--> C++ Skill
--> SkillResult JSON
--> Python Logger
-```
-
-## Goals
-
-- Keep command understanding separate from command execution.
-- Use strict JSON as the only boundary between Python and C++.
-- Make the protocol stable before adding real Windows actions.
-- Allow future message types without breaking the MVP.
-
-## Current Message Types
-
-The MVP uses only:
+Python sends:
 
 ```text
-tool_call
-skill_result
+ToolCall
 ```
 
-Future versions may add:
+C++ returns:
 
 ```text
-plan
-plan_result
-clarification
-unknown_command
+SkillResult
 ```
 
-## ToolCall
+The protocol is the execution contract. UI, voice, and text input must all eventually produce the same `ToolCall` structure.
 
-`ToolCall` is a request to execute one skill.
+## 2. ToolCall
 
-### Required Fields
-
-```text
-request_id
-type
-skill
-args
-```
-
-### Optional Fields
-
-```text
-meta
-```
+A `ToolCall` represents one requested skill execution.
 
 ### Schema
 
 ```json
 {
-  "request_id": "string",
+  "request_id": "cmd_12345678",
   "type": "tool_call",
-  "skill": "string",
+  "skill": "volume_set",
   "args": {},
   "meta": {}
 }
 ```
 
-### Example
+### Required fields
+
+| Field | Type | Required | Description |
+|---|---:|---:|---|
+| `request_id` | string | yes | Unique command id |
+| `type` | string | yes | Must be `tool_call` |
+| `skill` | string | yes | Skill name |
+| `args` | object | yes | Skill arguments |
+| `meta` | object | no | Debug/tracing metadata |
+
+### Recommended `meta`
+
+```json
+{
+  "source": "text",
+  "raw_text": "звук на 50",
+  "normalized_text": "звук на 50",
+  "skill_confidence": 0.94,
+  "args_confidence": 0.95
+}
+```
+
+Possible sources:
+
+```text
+text
+voice
+ui
+test
+```
+
+## 3. SkillResult
+
+A `SkillResult` represents the result of one skill execution.
+
+### Success schema
+
+```json
+{
+  "request_id": "cmd_12345678",
+  "type": "skill_result",
+  "success": true,
+  "skill": "volume_set",
+  "message": "Volume set to 50",
+  "data": {
+    "mode": "set",
+    "percent": 50
+  },
+  "error": null
+}
+```
+
+### Error schema
+
+```json
+{
+  "request_id": "cmd_12345678",
+  "type": "skill_result",
+  "success": false,
+  "skill": "open_app",
+  "message": "Application was not resolved",
+  "data": {},
+  "error": {
+    "code": "APP_NOT_FOUND",
+    "details": "Cannot resolve app_id: unknown_app"
+  }
+}
+```
+
+### Fields
+
+| Field | Type | Required | Description |
+|---|---:|---:|---|
+| `request_id` | string/null | yes | Original command id if available |
+| `type` | string | yes | `skill_result` |
+| `success` | boolean | yes | Execution status |
+| `skill` | string/null | yes | Skill name if available |
+| `message` | string | yes | Human-readable result |
+| `data` | object | yes | Skill-specific result data |
+| `error` | object/null | yes | Error details |
+
+## 4. Skill: `volume_set`
+
+### Purpose
+
+Set or change system volume.
+
+### Supported modes
+
+```text
+set
+delta
+```
+
+### Set volume
 
 ```json
 {
@@ -80,200 +137,88 @@ meta
   "skill": "volume_set",
   "args": {
     "mode": "set",
-    "percent": 80
-  },
-  "meta": {
-    "source": "text",
-    "raw_text": "сделай громкость на 80",
-    "normalized_text": "сделай громкость на 80",
-    "skill_confidence": 0.95,
-    "args_confidence": 0.93
+    "percent": 50
   }
 }
 ```
 
-## SkillResult
-
-`SkillResult` is the result of executing one skill.
-
-### Required Fields
+Validation:
 
 ```text
-request_id
-type
-success
-skill
-message
-data
-error
+mode must be "set"
+percent must be integer
+percent must be between 0 and 100
 ```
 
-### Schema
-
-```json
-{
-  "request_id": "string",
-  "type": "skill_result",
-  "success": true,
-  "skill": "string",
-  "message": "string",
-  "data": {},
-  "error": null
-}
-```
-
-### Success Example
+Legacy compatible form:
 
 ```json
 {
   "request_id": "cmd_001",
-  "type": "skill_result",
-  "success": true,
+  "type": "tool_call",
   "skill": "volume_set",
-  "message": "Volume set to 80",
-  "data": {
-    "mode": "set",
-    "percent": 80
-  },
-  "error": null
+  "args": {
+    "percent": 50
+  }
 }
 ```
 
-### Error Example
+### Change volume by delta
+
+```json
+{
+  "request_id": "cmd_002",
+  "type": "tool_call",
+  "skill": "volume_set",
+  "args": {
+    "mode": "delta",
+    "delta": -10
+  }
+}
+```
+
+Validation:
+
+```text
+mode must be "delta"
+delta must be integer
+delta must be between -100 and 100
+```
+
+## 5. Skill: `open_app`
+
+### Purpose
+
+Open or focus an installed application.
+
+### Example
 
 ```json
 {
   "request_id": "cmd_003",
-  "type": "skill_result",
-  "success": false,
-  "skill": "open_app",
-  "message": "Application not found",
-  "data": {},
-  "error": {
-    "code": "APP_NOT_FOUND",
-    "details": "No existing launch target for app_id: unknown_app"
-  }
-}
-```
-
-## Skill Arguments
-
-### volume_set
-
-Sets system volume or changes it relative to the current volume.
-
-```json
-{
-  "skill": "volume_set",
-  "args": {
-    "mode": "set",
-    "percent": 100
-  }
-}
-```
-
-```json
-{
-  "skill": "volume_set",
-  "args": {
-    "mode": "delta",
-    "delta": -20
-  }
-}
-```
-
-Rules:
-
-- `mode` is required.
-- `mode` must be `set` or `delta`.
-- If `mode` is `set`, `percent` is required.
-- `percent` must be an integer between `0` and `100`.
-- If `mode` is `delta`, `delta` is required.
-- `delta` must be an integer between `-100` and `100`.
-
-### open_app
-
-Makes an application visible.
-
-```json
-{
+  "type": "tool_call",
   "skill": "open_app",
   "args": {
-    "app_id": "chrome"
-  }
-}
-```
-
-Rules:
-
-- `app_id` is required.
-- `app_id` must be a non-empty string.
-- Python models choose the canonical `app_id`.
-- C++ `OpenAppSkill` resolves `app_id` through `apps_index.json`.
-- If a matching top-level window is already open, C++ focuses that window instead of launching a new process.
-- If no matching window is found, C++ launches the resolved target.
-
-Existing window result:
-
-```json
-{
-  "success": true,
-  "skill": "open_app",
-  "message": "Application focused: chrome",
-  "data": {
-    "app_id": "chrome",
-    "focused_existing": true,
-    "launched": false
-  },
-  "error": null
-}
-```
-
-New launch result:
-
-```json
-{
-  "success": true,
-  "skill": "open_app",
-  "message": "Application opened: chrome",
-  "data": {
-    "app_id": "chrome",
-    "focused_existing": false,
-    "launched": true
-  },
-  "error": null
-}
-```
-
-### window_control
-
-Controls an existing visible window.
-
-```json
-{
-  "skill": "window_control",
-  "args": {
-    "action": "minimize",
-    "target_type": "current"
-  }
-}
-```
-
-```json
-{
-  "skill": "window_control",
-  "args": {
-    "action": "close",
-    "target_type": "app",
     "app_id": "notepad"
   }
 }
 ```
 
-Rules:
+Validation:
 
-- `action` is required.
-- `action` must be one of:
+```text
+app_id must be a non-empty string
+```
+
+The C++ runtime resolves `app_id` through the app resolver.
+
+## 6. Skill: `window_control`
+
+### Purpose
+
+Close, minimize, maximize, or restore a window.
+
+### Supported actions
 
 ```text
 close
@@ -282,43 +227,64 @@ maximize
 restore
 ```
 
-- `target_type` is required.
-- `target_type` must be `current` or `app`.
-- If `target_type` is `app`, `app_id` is required.
-- C++ finds the matching visible window and applies `ShowWindow` or `WM_CLOSE`.
+### Supported target types
 
-### window_layout
+```text
+current
+app
+```
 
-Arranges one or more existing visible windows on the screen.
-
-Single-window placement:
+### Current window example
 
 ```json
 {
-  "skill": "window_layout",
+  "request_id": "cmd_004",
+  "type": "tool_call",
+  "skill": "window_control",
   "args": {
-    "layout": "left_half",
-    "targets": ["current"]
+    "action": "minimize",
+    "target_type": "current"
   }
 }
 ```
 
-Two-window split:
+Validation:
+
+```text
+action must be supported
+target_type must be "current"
+```
+
+### App window example
 
 ```json
 {
-  "skill": "window_layout",
+  "request_id": "cmd_005",
+  "type": "tool_call",
+  "skill": "window_control",
   "args": {
-    "layout": "split_2_vertical",
-    "targets": ["telegram", "vscode"]
+    "action": "close",
+    "target_type": "app",
+    "app_id": "telegram"
   }
 }
 ```
 
-Rules:
+Validation:
 
-- `layout` is required.
-- `layout` must be one of:
+```text
+action must be supported
+target_type must be "app"
+app_id must be a non-empty string
+```
+
+## 7. Skill: `window_layout`
+
+### Purpose
+
+Move one or more windows to a layout on screen.
+
+### Supported layouts
 
 ```text
 left_half
@@ -332,187 +298,172 @@ split_2_horizontal
 grid_2x2
 ```
 
-- `targets` is required and must be a non-empty array of app ids.
-- `current` means the active foreground window.
-- Single-window layouts require at least one target.
-- `split_2_vertical` and `split_2_horizontal` require at least two targets.
-- `grid_2x2` requires at least four targets.
-- C++ finds already-open windows. It does not launch missing applications for this skill.
-
-### window_snap
-
-Moves or resizes an application window.
+### One-window layout example
 
 ```json
 {
-  "skill": "window_snap",
+  "request_id": "cmd_006",
+  "type": "tool_call",
+  "skill": "window_layout",
   "args": {
-    "app_query": "браузер",
-    "position": "left"
+    "layout": "left_half",
+    "targets": ["telegram"]
   }
 }
 ```
 
-Rules:
+### Two-window split example
 
-- `position` is required.
-- `position` must be one of:
-
-```text
-left
-right
-maximize
-minimize
+```json
+{
+  "request_id": "cmd_007",
+  "type": "tool_call",
+  "skill": "window_layout",
+  "args": {
+    "layout": "split_2_vertical",
+    "targets": ["telegram", "vscode"]
+  }
+}
 ```
 
-- `app_query` is optional only when the active window should be used.
+### Four-window grid example
 
-## Error Codes
+```json
+{
+  "request_id": "cmd_008",
+  "type": "tool_call",
+  "skill": "window_layout",
+  "args": {
+    "layout": "grid_2x2",
+    "targets": ["telegram", "vscode", "chrome", "notepad"]
+  }
+}
+```
 
-The C++ executor should return `success: false` and an `error` object when it
-cannot execute a command.
+Validation:
 
-Recommended MVP error codes:
+```text
+layout must be supported
+targets must be an array
+targets must contain non-empty strings
+left/right/top/bottom/center/fullscreen require at least 1 target
+split_2_vertical and split_2_horizontal require at least 2 targets
+grid_2x2 requires at least 4 targets
+```
+
+## 8. Error codes
+
+Common validation/runtime error codes:
 
 ```text
 INVALID_JSON
 INVALID_TYPE
-UNKNOWN_SKILL
 INVALID_ARGS
 MISSING_ARG
-APP_NOT_FOUND
-WINDOW_NOT_FOUND
-WINDOW_ACTION_FAILED
+UNKNOWN_SKILL
 SKILL_FAILED
 INTERNAL_ERROR
 ```
 
-### INVALID_JSON
+Skill-specific errors may include:
 
-Returned when stdin does not contain valid JSON.
+```text
+APP_NOT_FOUND
+FILE_NOT_FOUND
+PATH_NOT_FOUND
+ACCESS_DENIED
+WINDOW_NOT_FOUND
+WINDOW_FOCUS_FAILED
+SHELL_EXECUTE_FAILED
+```
+
+## 9. Protocol rules
+
+### Rule 1 — C++ only executes validated ToolCalls
+
+The C++ runtime must not execute invalid JSON or invalid arguments.
+
+### Rule 2 — Python must not bypass the protocol
+
+UI, voice, tests, and text input must all go through:
+
+```text
+ToolCall JSON → C++ runtime
+```
+
+### Rule 3 — New skills must update this file
+
+Every new skill must define:
+
+```text
+skill name
+purpose
+arguments
+validation
+examples
+result data
+```
+
+### Rule 4 — Keep backward compatibility when possible
+
+If an old argument format is supported, document it explicitly.
+
+Example:
 
 ```json
 {
-  "request_id": null,
-  "type": "skill_result",
-  "success": false,
-  "skill": null,
-  "message": "Invalid JSON",
-  "data": {},
-  "error": {
-    "code": "INVALID_JSON",
-    "details": "Failed to parse input"
+  "skill": "volume_set",
+  "args": {
+    "percent": 80
   }
 }
 ```
 
-### UNKNOWN_SKILL
+is accepted as legacy `mode = set`.
 
-Returned when the requested skill is not registered in `SkillRegistry`.
+## 10. Example full flow
+
+Input:
+
+```text
+звук на 50
+```
+
+Python output:
 
 ```json
 {
-  "request_id": "cmd_010",
-  "type": "skill_result",
-  "success": false,
-  "skill": "unknown_skill",
-  "message": "Unknown skill",
-  "data": {},
-  "error": {
-    "code": "UNKNOWN_SKILL",
-    "details": "Skill is not registered"
-  }
-}
-```
-
-## Transport
-
-For the MVP, `cpp_runtime` is a process called by Python through `subprocess`.
-
-Python sends one JSON object through stdin.
-
-C++ returns one JSON object through stdout.
-
-Stderr may be used only for debug messages. Python should parse stdout as JSON.
-
-```text
-python_agent/cpp_client.py
--> subprocess
--> cpp_runtime executable
--> stdin: ToolCall JSON
--> stdout: SkillResult JSON
-```
-
-Future transports may include:
-
-```text
-persistent process
-named pipes
-local HTTP
-full C++ runtime
-```
-
-The JSON payloads should stay compatible across transports.
-
-## Compatibility Rules
-
-- `type` must always be present.
-- Unknown top-level fields should be ignored by receivers.
-- Required fields must never be silently guessed by C++.
-- Python may include `meta`; C++ may ignore it.
-- `request_id` must be copied from `ToolCall` to `SkillResult`.
-- All C++ results must be valid JSON.
-- All command execution must go through `SkillRegistry` and `Executor`.
-- Real Windows actions should be added only after fake skills work end to end.
-
-## MVP End-To-End Example
-
-Input text:
-
-```text
-звук на полную
-```
-
-Python builds:
-
-```json
-{
-  "request_id": "cmd_001",
+  "request_id": "cmd_ab12cd34",
   "type": "tool_call",
   "skill": "volume_set",
   "args": {
     "mode": "set",
-    "percent": 100
+    "percent": 50
   },
   "meta": {
     "source": "text",
-    "raw_text": "звук на полную",
-    "normalized_text": "звук на полную",
+    "raw_text": "звук на 50",
+    "normalized_text": "звук на 50",
     "skill_confidence": 0.94,
     "args_confidence": 0.95
   }
 }
 ```
 
-C++ returns:
+C++ output:
 
 ```json
 {
-  "request_id": "cmd_001",
+  "request_id": "cmd_ab12cd34",
   "type": "skill_result",
   "success": true,
   "skill": "volume_set",
-  "message": "Volume set to 100",
+  "message": "Volume set to 50",
   "data": {
     "mode": "set",
-    "percent": 100
+    "previous_percent": 80,
+    "percent": 50
   },
   "error": null
 }
-```
-
-Python logs the command to:
-
-```text
-python_agent/data/logs/actions.jsonl
 ```
