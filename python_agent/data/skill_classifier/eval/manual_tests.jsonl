@@ -1,0 +1,124 @@
+{"text": "брух сделай громче", "expected_skill": "volume_set"}
+{"text": "сделавй громче", "expected_skill": "volume_set"}
+{"text": "бивис громкость на десять", "expected_skill": "volume_set"}
+{"text": "динамики рвуться", "expected_skill": "volume_set"}
+{"text": "заткнись", "expected_skill": "volume_set"}
+{"text": "бивис зактни", "expected_skill": "volume_set"}
+{"text": "громко слишком", "expected_skill": "volume_set"}
+{"text": "поставь звук на семдесят пять", "expected_skill": "volume_set"}
+{"text": "сделай на 20 тише", "expected_skill": "volume_set"}
+{"text": "прибавь на пятнадцать", "expected_skill": "volume_set"}
+{"text": "еле слышно", "expected_skill": "volume_set"}
+{"text": "сделай еле слышно", "expected_skill": "volume_set"}
+{"text": "на мксимум громкость", "expected_skill": "volume_set"}
+{"text": "поставь на палавину", "expected_skill": "volume_set"}
+{"text": "колонки орут сделай тише", "expected_skill": "volume_set"}
+{"text": "звук на восимьдесят", "expected_skill": "volume_set"}
+{"text": "убавь до двадцати", "expected_skill": "volume_set"}
+{"text": "саунд потише", "expected_skill": "volume_set"}
+{"text": "mute звук", "expected_skill": "volume_set"}
+{"text": "бивис открой браузер", "expected_skill": "open_app"}
+{"text": "открой хром", "expected_skill": "open_app"}
+{"text": "браузер включи", "expected_skill": "open_app"}
+{"text": "запусти блокнот", "expected_skill": "open_app"}
+{"text": "бивис открой вс код", "expected_skill": "open_app"}
+{"text": "открой где код пишу", "expected_skill": "open_app"}
+{"text": "код открой", "expected_skill": "open_app"}
+{"text": "открой телиграм", "expected_skill": "open_app"}
+{"text": "тг запусти", "expected_skill": "open_app"}
+{"text": "включи дискордик", "expected_skill": "open_app"}
+{"text": "открой калькулятор", "expected_skill": "open_app"}
+{"text": "правадник запусти", "expected_skill": "open_app"}
+{"text": "командную строку открой", "expected_skill": "open_app"}
+{"text": "павершелл запусти", "expected_skill": "open_app"}
+{"text": "настройки винды", "expected_skill": "open_app"}
+{"text": "открой фотошоп", "expected_skill": "open_app"}
+{"text": "запусти премьер про", "expected_skill": "open_app"}
+{"text": "открой фигму", "expected_skill": "open_app"}
+{"text": "анрил включи", "expected_skill": "open_app"}
+{"text": "пайчарм открой", "expected_skill": "open_app"}
+{"text": "open visual studio code", "expected_skill": "open_app"}
+{"text": "start chrome", "expected_skill": "open_app"}
+{"text": "го телегу", "expected_skill": "open_app"}
+{"text": "запусти 3д макс", "expected_skill": "open_app"}
+{"text": "открой docker desktop", "expected_skill": "open_app"}
+{"text": "постман включи", "expected_skill": "open_app"}
+{"text": "закрой браузер", "expected_skill": "window_control"}
+{"text": "закрой хром", "expected_skill": "window_control"}
+{"text": "сверни окно", "expected_skill": "window_control"}
+{"text": "сверни блокнот", "expected_skill": "window_control"}
+{"text": "разверни окно", "expected_skill": "window_control"}
+{"text": "восстанови текущее окно", "expected_skill": "window_control"}
+{"text": "верни телеграм", "expected_skill": "window_control"}
+{"text": "close chrome", "expected_skill": "window_control"}
+{"text": "minimize current window", "expected_skill": "window_control"}
+{"text": "какая погода завтра", "expected_skill": "unknown"}
+{"text": "поставь таймер на десять минут", "expected_skill": "unknown"}
+{"text": "создай заметку про проект", "expected_skill": "unknown"}
+{"text": "сделай скриншот", "expected_skill": "unknown"}
+{"text": "напиши сообщение в телеграм", "expected_skill": "unknown"}
+{"text": "найди файл отчет", "expected_skill": "unknown"}
+{"text": "расскажи анекдот", "expected_skill": "unknown"}
+{"text": "что такое random forest", "expected_skill": "unknown"}
+{"text": "введи текст привет", "expected_skill": "unknown"}
+{"text": "перезагрузи компьютер", "expected_skill": "unknown"}
+{"text": "следующий трек", "expected_skill": "unknown"}
+{"text": "поставь музыку", "expected_skill": "unknown"}
+{"text": "бивис", "expected_skill": "unknown"}
+{"text": "открой", "expected_skill": "open_app"}
+{"text": "разверни телеграмм и вскод пополам", "expected_skill": "window_layout"}
+{"text": "телега слева вс код справа", "expected_skill": "window_layout"}
+{"text": "бивис поставь хром слева", "expected_skill": "window_layout"}
+{"text": "вскод на правую половину", "expected_skill": "window_layout"}
+{"text": "браузер сверху консоль снизу", "expected_skill": "window_layout"}
+{"text": "раскинь хром телегу вскод и терминал сеткой", "expected_skill": "window_layout"}
+{"text": "фотошоп на весь экран", "expected_skill": "window_layout"}
+{"text": "поставь окно слева", "expected_skill": "window_layout"}
+{"text": "текущее окно вправо", "expected_skill": "window_layout"}
+{"text": "фигму в центр", "expected_skill": "window_layout"}
+{"text": "анрил на весь экран", "expected_skill": "window_layout"}
+{"text": "поставь блокнот снизу", "expected_skill": "window_layout"}
+{"text": "поставь терминал сверху", "expected_skill": "window_layout"}
+{"text": "постафь браузер слево", "expected_skill": "window_layout"}
+{"text": "развирни фоташоп на весь екран", "expected_skill": "window_layout"}
+{"text": "телиграм и вскот по полам", "expected_skill": "window_layout"}
+{"text": "открой codex", "expected_skill": "open_app"}
+{"text": "запусти codex", "expected_skill": "open_app"}
+{"text": "открой openai", "expected_skill": "open_app"}
+{"text": "запусти openai", "expected_skill": "open_app"}
+{"text": "открой openai.codex_2p2nqsd0c76g0!app", "expected_skill": "open_app"}
+{"text": "запусти openai.codex_2p2nqsd0c76g0!app", "expected_skill": "open_app"}
+{"text": "открой кодекс", "expected_skill": "open_app"}
+{"text": "запусти кодекс", "expected_skill": "open_app"}
+{"text": "открой cyberpunk 2077", "expected_skill": "open_app"}
+{"text": "запусти cyberpunk 2077", "expected_skill": "open_app"}
+{"text": "открой 1091500", "expected_skill": "open_app"}
+{"text": "запусти 1091500", "expected_skill": "open_app"}
+{"text": "открой steam://rungameid/1091500", "expected_skill": "open_app"}
+{"text": "запусти steam://rungameid/1091500", "expected_skill": "open_app"}
+{"text": "открой кибер пунк", "expected_skill": "open_app"}
+{"text": "запусти кибер пунк", "expected_skill": "open_app"}
+{"text": "открой dota 2", "expected_skill": "open_app"}
+{"text": "запусти dota 2", "expected_skill": "open_app"}
+{"text": "открой 570", "expected_skill": "open_app"}
+{"text": "запусти 570", "expected_skill": "open_app"}
+{"text": "открой steam://rungameid/570", "expected_skill": "open_app"}
+{"text": "запусти steam://rungameid/570", "expected_skill": "open_app"}
+{"text": "открой дота", "expected_skill": "open_app"}
+{"text": "запусти дота", "expected_skill": "open_app"}
+{"text": "открой planetvpn", "expected_skill": "open_app"}
+{"text": "запусти planetvpn", "expected_skill": "open_app"}
+{"text": "открой freevpnplanet", "expected_skill": "open_app"}
+{"text": "запусти freevpnplanet", "expected_skill": "open_app"}
+{"text": "открой freevpnplanet.planetvpn_b2qrq2z57ppd2!planetvpn", "expected_skill": "open_app"}
+{"text": "запусти freevpnplanet.planetvpn_b2qrq2z57ppd2!planetvpn", "expected_skill": "open_app"}
+{"text": "открой впн", "expected_skill": "open_app"}
+{"text": "запусти впн", "expected_skill": "open_app"}
+{"text": "открой яндекс музыка", "expected_skill": "open_app"}
+{"text": "запусти яндекс музыка", "expected_skill": "open_app"}
+{"text": "открой музыка", "expected_skill": "open_app"}
+{"text": "запусти музыка", "expected_skill": "open_app"}
+{"text": "открой янмузыка", "expected_skill": "open_app"}
+{"text": "запусти янмузыка", "expected_skill": "open_app"}
+{"text": "открой яндекс мьюзик", "expected_skill": "open_app"}
+{"text": "запусти яндекс мьюзик", "expected_skill": "open_app"}

@@ -1,0 +1,94 @@
+{
+  "total_rows": 63575,
+  "action_counts": {
+    "close": 11252,
+    "minimize": 11425,
+    "maximize": 11399,
+    "restore": 11175,
+    "unknown": 18324
+  },
+  "target_classes": 87,
+  "target_top_counts": [
+    [
+      "unknown",
+      18324
+    ],
+    [
+      "current",
+      2899
+    ],
+    [
+      "access",
+      500
+    ],
+    [
+      "blender",
+      500
+    ],
+    [
+      "brave",
+      500
+    ],
+    [
+      "calculator",
+      500
+    ],
+    [
+      "cmd",
+      500
+    ],
+    [
+      "discord",
+      500
+    ],
+    [
+      "figma",
+      500
+    ],
+    [
+      "firefox",
+      500
+    ],
+    [
+      "godot",
+      500
+    ],
+    [
+      "lightroom",
+      500
+    ],
+    [
+      "maya",
+      500
+    ],
+    [
+      "notepad",
+      500
+    ],
+    [
+      "paint",
+      500
+    ],
+    [
+      "photoshop",
+      500
+    ],
+    [
+      "postman",
+      500
+    ],
+    [
+      "pycharm",
+      500
+    ],
+    [
+      "signal",
+      500
+    ],
+    [
+      "sketchup",
+      500
+    ]
+  ],
+  "app_classes": 85
+}

@@ -1,0 +1,73 @@
+{"text": "открой браузер", "expected_app_id": "chrome"}
+{"text": "запусти блокнот", "expected_app_id": "notepad"}
+{"text": "открой где код пишу", "expected_app_id": "vscode"}
+{"text": "бивис открой вс код", "expected_app_id": "vscode"}
+{"text": "бивис запусти visual studio code", "expected_app_id": "vscode"}
+{"text": "брух открой хром", "expected_app_id": "chrome"}
+{"text": "браузер включи", "expected_app_id": "chrome"}
+{"text": "открой интернет", "expected_app_id": "chrome"}
+{"text": "запусти калькулятор", "expected_app_id": "calculator"}
+{"text": "посчитай открой калькулятор", "expected_app_id": "calculator"}
+{"text": "открой проводник", "expected_app_id": "explorer"}
+{"text": "открой файлы", "expected_app_id": "explorer"}
+{"text": "командную строку", "expected_app_id": "cmd"}
+{"text": "открой cmd", "expected_app_id": "cmd"}
+{"text": "запусти павершелл", "expected_app_id": "powershell"}
+{"text": "открой настройки винды", "expected_app_id": "settings"}
+{"text": "параметры windows", "expected_app_id": "settings"}
+{"text": "открой телегу", "expected_app_id": "telegram"}
+{"text": "запусти телеграмм", "expected_app_id": "telegram"}
+{"text": "тг открой", "expected_app_id": "telegram"}
+{"text": "открой дискорд брух", "expected_app_id": "discord"}
+{"text": "запусти дс", "expected_app_id": "discord"}
+{"text": "открой ватсап", "expected_app_id": "whatsapp"}
+{"text": "открой вайбер", "expected_app_id": "viber"}
+{"text": "скайп запусти", "expected_app_id": "skype"}
+{"text": "открой слак", "expected_app_id": "slack"}
+{"text": "тимс запусти", "expected_app_id": "teams"}
+{"text": "зум открой", "expected_app_id": "zoom"}
+{"text": "открой ворд", "expected_app_id": "word"}
+{"text": "где документ пишу", "expected_app_id": "word"}
+{"text": "открой эксель", "expected_app_id": "excel"}
+{"text": "таблицу открыть", "expected_app_id": "excel"}
+{"text": "пауэрпоинт запусти", "expected_app_id": "powerpoint"}
+{"text": "презентацию открыть", "expected_app_id": "powerpoint"}
+{"text": "почту outlook открой", "expected_app_id": "outlook"}
+{"text": "ван нот открой", "expected_app_id": "onenote"}
+{"text": "открой фотошоп", "expected_app_id": "photoshop"}
+{"text": "фотошопчик запусти", "expected_app_id": "photoshop"}
+{"text": "редактор фотографий adobe открой", "expected_app_id": "photoshop"}
+{"text": "иллюстратор открой", "expected_app_id": "illustrator"}
+{"text": "векторный редактор запусти", "expected_app_id": "illustrator"}
+{"text": "премьер про открой", "expected_app_id": "premiere_pro"}
+{"text": "где видео монтировать", "expected_app_id": "premiere_pro"}
+{"text": "афтер эффектс запусти", "expected_app_id": "after_effects"}
+{"text": "аудишн открой", "expected_app_id": "audition"}
+{"text": "лайтрум открой", "expected_app_id": "lightroom"}
+{"text": "пдф ридер открой", "expected_app_id": "acrobat_reader"}
+{"text": "индизайн запусти", "expected_app_id": "indesign"}
+{"text": "пайчарм открой", "expected_app_id": "pycharm"}
+{"text": "где питон пишу", "expected_app_id": "pycharm"}
+{"text": "открой идею", "expected_app_id": "intellij_idea"}
+{"text": "java ide запусти", "expected_app_id": "intellij_idea"}
+{"text": "вебшторм открой", "expected_app_id": "webstorm"}
+{"text": "постман запусти", "expected_app_id": "postman"}
+{"text": "докер десктоп открой", "expected_app_id": "docker_desktop"}
+{"text": "гит баш открой", "expected_app_id": "git_bash"}
+{"text": "блендер открой", "expected_app_id": "blender"}
+{"text": "где 3d делаю", "expected_app_id": "blender"}
+{"text": "фигму открой", "expected_app_id": "figma"}
+{"text": "дизайн интерфейса открой", "expected_app_id": "figma"}
+{"text": "анрил запусти", "expected_app_id": "unreal_engine"}
+{"text": "юнити открой", "expected_app_id": "unity"}
+{"text": "обс студио открой", "expected_app_id": "obs_studio"}
+{"text": "сделай громкость 20", "expected_app_id": "unknown"}
+{"text": "убавь звук", "expected_app_id": "unknown"}
+{"text": "какая погода", "expected_app_id": "unknown"}
+{"text": "поставь таймер", "expected_app_id": "unknown"}
+{"text": "открой окно", "expected_app_id": "unknown"}
+{"text": "сверни браузер", "expected_app_id": "unknown"}
+{"text": "закрой хром", "expected_app_id": "unknown"}
+{"text": "бивис сделай громче", "expected_app_id": "unknown"}
+{"text": "динамики рвуться", "expected_app_id": "unknown"}
+{"text": "заткнись", "expected_app_id": "unknown"}

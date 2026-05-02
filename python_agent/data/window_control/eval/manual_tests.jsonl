@@ -1,0 +1,47 @@
+{"text": "закрой хром", "expected": {"action": "close", "target_type": "app", "app_id": "chrome"}}
+{"text": "бивис закрой браузер", "expected": {"action": "close", "target_type": "app", "app_id": "chrome"}}
+{"text": "зактни блокнот", "expected": {"action": "close", "target_type": "app", "app_id": "notepad"}}
+{"text": "выйди из телеги", "expected": {"action": "close", "target_type": "app", "app_id": "telegram"}}
+{"text": "прибей дискорд", "expected": {"action": "close", "target_type": "app", "app_id": "discord"}}
+{"text": "закрой где код пишу", "expected": {"action": "close", "target_type": "app", "app_id": "vscode"}}
+{"text": "брух закрой вс код", "expected": {"action": "close", "target_type": "app", "app_id": "vscode"}}
+{"text": "выключи фотошоп", "expected": {"action": "close", "target_type": "app", "app_id": "photoshop"}}
+{"text": "закрой премьер про", "expected": {"action": "close", "target_type": "app", "app_id": "premiere_pro"}}
+{"text": "закрой проводник", "expected": {"action": "close", "target_type": "app", "app_id": "explorer"}}
+{"text": "убери хром полностью", "expected": {"action": "close", "target_type": "app", "app_id": "chrome"}}
+{"text": "сверни хром", "expected": {"action": "minimize", "target_type": "app", "app_id": "chrome"}}
+{"text": "сверни вс код", "expected": {"action": "minimize", "target_type": "app", "app_id": "vscode"}}
+{"text": "убери телеграм с экрана", "expected": {"action": "minimize", "target_type": "app", "app_id": "telegram"}}
+{"text": "спрячь фотошоп", "expected": {"action": "minimize", "target_type": "app", "app_id": "photoshop"}}
+{"text": "кинь блендер вниз", "expected": {"action": "minimize", "target_type": "app", "app_id": "blender"}}
+{"text": "сверний проводник", "expected": {"action": "minimize", "target_type": "app", "app_id": "explorer"}}
+{"text": "убери фигму с глаз", "expected": {"action": "minimize", "target_type": "app", "app_id": "figma"}}
+{"text": "разверни хром", "expected": {"action": "maximize", "target_type": "app", "app_id": "chrome"}}
+{"text": "разверни на весь экран блендер", "expected": {"action": "maximize", "target_type": "app", "app_id": "blender"}}
+{"text": "анрил на весь экран", "expected": {"action": "maximize", "target_type": "app", "app_id": "unreal_engine"}}
+{"text": "сделай фотошоп на весь экран", "expected": {"action": "maximize", "target_type": "app", "app_id": "photoshop"}}
+{"text": "раскрой телегу", "expected": {"action": "maximize", "target_type": "app", "app_id": "telegram"}}
+{"text": "верни хром", "expected": {"action": "restore", "target_type": "app", "app_id": "chrome"}}
+{"text": "восстанови терминал", "expected": {"action": "restore", "target_type": "app", "app_id": "terminal"}}
+{"text": "верни окно фотошоп", "expected": {"action": "restore", "target_type": "app", "app_id": "photoshop"}}
+{"text": "покажи обратно дискорд", "expected": {"action": "restore", "target_type": "app", "app_id": "discord"}}
+{"text": "верни как было блендер", "expected": {"action": "restore", "target_type": "app", "app_id": "blender"}}
+{"text": "закрой это", "expected": {"action": "close", "target_type": "current"}}
+{"text": "закрой текущее окно", "expected": {"action": "close", "target_type": "current"}}
+{"text": "зактни это", "expected": {"action": "close", "target_type": "current"}}
+{"text": "сверни окно", "expected": {"action": "minimize", "target_type": "current"}}
+{"text": "убери это с экрана", "expected": {"action": "minimize", "target_type": "current"}}
+{"text": "разверни на весь экран", "expected": {"action": "maximize", "target_type": "current"}}
+{"text": "фулл скрин", "expected": {"action": "maximize", "target_type": "current"}}
+{"text": "восстанови текущее окно", "expected": {"action": "restore", "target_type": "current"}}
+{"text": "верни окно", "expected": {"action": "restore", "target_type": "current"}}
+{"text": "открой браузер", "expected": {"missing": ["action"]}}
+{"text": "запусти блокнот", "expected": {"missing": ["action"]}}
+{"text": "сделай громкость 20", "expected": {"missing": ["action"]}}
+{"text": "динамики рвуться", "expected": {"missing": ["action"]}}
+{"text": "заткнись", "expected": {"missing": ["action"]}}
+{"text": "бивис зактни", "expected": {"action": "close", "missing": ["target"]}}
+{"text": "громко слишком", "expected": {"missing": ["action"]}}
+{"text": "сделавй громче", "expected": {"missing": ["action"]}}
+{"text": "какая погода", "expected": {"missing": ["action"]}}
+{"text": "поставь таймер", "expected": {"missing": ["action"]}}

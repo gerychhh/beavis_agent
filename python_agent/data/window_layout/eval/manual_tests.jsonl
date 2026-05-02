@@ -1,0 +1,123 @@
+{"text": "разверни телеграмм и вскод пополам", "expected": {"layout": "split_2_vertical", "targets": ["telegram", "vscode"]}}
+{"text": "телега слева вс код справа", "expected": {"layout": "split_2_vertical", "targets": ["telegram", "vscode"]}}
+{"text": "бивис поставь хром слева", "expected": {"layout": "left_half", "targets": ["chrome"]}}
+{"text": "вскод на правую половину", "expected": {"layout": "right_half", "targets": ["vscode"]}}
+{"text": "браузер сверху консоль снизу", "expected": {"layout": "split_2_horizontal", "targets": ["chrome", "cmd"]}}
+{"text": "раскинь хром телегу вскод и терминал сеткой", "expected": {"layout": "grid_2x2", "targets": ["chrome", "telegram", "vscode", "terminal"]}}
+{"text": "фотошоп на весь экран", "expected": {"layout": "fullscreen", "targets": ["photoshop"]}}
+{"text": "поставь окно слева", "expected": {"layout": "left_half", "targets": ["current"]}}
+{"text": "текущее окно вправо", "expected": {"layout": "right_half", "targets": ["current"]}}
+{"text": "фигму в центр", "expected": {"layout": "center", "targets": ["figma"]}}
+{"text": "анрил на весь экран", "expected": {"layout": "fullscreen", "targets": ["unreal_engine"]}}
+{"text": "поставь блокнот снизу", "expected": {"layout": "bottom_half", "targets": ["notepad"]}}
+{"text": "поставь терминал сверху", "expected": {"layout": "top_half", "targets": ["terminal"]}}
+{"text": "постафь браузер слево", "expected": {"layout": "left_half", "targets": ["chrome"]}}
+{"text": "развирни фоташоп на весь екран", "expected": {"layout": "fullscreen", "targets": ["photoshop"]}}
+{"text": "телиграм и вскот по полам", "expected": {"layout": "split_2_vertical", "targets": ["telegram", "vscode"]}}
+{"text": "открой браузер", "expected": {"missing": ["layout", "targets"]}}
+{"text": "закрой хром", "expected": {"missing": ["layout", "targets"]}}
+{"text": "сделай громкость на 20", "expected": {"missing": ["layout", "targets"]}}
+{"text": "привет как дела", "expected": {"missing": ["layout", "targets"]}}
+{"text": "хуйня какая то", "expected": {"missing": ["layout", "targets"]}}
+{"text": "3ds max 2025 на весь экран", "expected": {"layout": "fullscreen", "targets": ["3ds_max_2025"]}}
+{"text": "поставь 3ds max 2025 слева", "expected": {"layout": "left_half", "targets": ["3ds_max_2025"]}}
+{"text": "access на весь экран", "expected": {"layout": "fullscreen", "targets": ["access"]}}
+{"text": "поставь access слева", "expected": {"layout": "left_half", "targets": ["access"]}}
+{"text": "adobe xd на весь экран", "expected": {"layout": "fullscreen", "targets": ["adobe_xd"]}}
+{"text": "поставь adobe xd слева", "expected": {"layout": "left_half", "targets": ["adobe_xd"]}}
+{"text": "animate на весь экран", "expected": {"layout": "fullscreen", "targets": ["animate"]}}
+{"text": "поставь animate слева", "expected": {"layout": "left_half", "targets": ["animate"]}}
+{"text": "audition на весь экран", "expected": {"layout": "fullscreen", "targets": ["audition"]}}
+{"text": "поставь audition слева", "expected": {"layout": "left_half", "targets": ["audition"]}}
+{"text": "bridge на весь экран", "expected": {"layout": "fullscreen", "targets": ["bridge"]}}
+{"text": "поставь bridge слева", "expected": {"layout": "left_half", "targets": ["bridge"]}}
+{"text": "camera на весь экран", "expected": {"layout": "fullscreen", "targets": ["camera"]}}
+{"text": "поставь camera слева", "expected": {"layout": "left_half", "targets": ["camera"]}}
+{"text": "codex на весь экран", "expected": {"layout": "fullscreen", "targets": ["codex"]}}
+{"text": "поставь codex слева", "expected": {"layout": "left_half", "targets": ["codex"]}}
+{"text": "control panel на весь экран", "expected": {"layout": "fullscreen", "targets": ["control_panel"]}}
+{"text": "поставь control panel слева", "expected": {"layout": "left_half", "targets": ["control_panel"]}}
+{"text": "cyberpunk 2077 на весь экран", "expected": {"layout": "fullscreen", "targets": ["cyberpunk_2077"]}}
+{"text": "поставь cyberpunk 2077 слева", "expected": {"layout": "left_half", "targets": ["cyberpunk_2077"]}}
+{"text": "datagrip на весь экран", "expected": {"layout": "fullscreen", "targets": ["datagrip"]}}
+{"text": "поставь datagrip слева", "expected": {"layout": "left_half", "targets": ["datagrip"]}}
+{"text": "dbeaver на весь экран", "expected": {"layout": "fullscreen", "targets": ["dbeaver"]}}
+{"text": "поставь dbeaver слева", "expected": {"layout": "left_half", "targets": ["dbeaver"]}}
+{"text": "device manager на весь экран", "expected": {"layout": "fullscreen", "targets": ["device_manager"]}}
+{"text": "поставь device manager слева", "expected": {"layout": "left_half", "targets": ["device_manager"]}}
+{"text": "disk management на весь экран", "expected": {"layout": "fullscreen", "targets": ["disk_management"]}}
+{"text": "поставь disk management слева", "expected": {"layout": "left_half", "targets": ["disk_management"]}}
+{"text": "dota 2 на весь экран", "expected": {"layout": "fullscreen", "targets": ["dota_2"]}}
+{"text": "поставь dota 2 слева", "expected": {"layout": "left_half", "targets": ["dota_2"]}}
+{"text": "epic games на весь экран", "expected": {"layout": "fullscreen", "targets": ["epic_games"]}}
+{"text": "поставь epic games слева", "expected": {"layout": "left_half", "targets": ["epic_games"]}}
+{"text": "event viewer на весь экран", "expected": {"layout": "fullscreen", "targets": ["event_viewer"]}}
+{"text": "поставь event viewer слева", "expected": {"layout": "left_half", "targets": ["event_viewer"]}}
+{"text": "github desktop на весь экран", "expected": {"layout": "fullscreen", "targets": ["github_desktop"]}}
+{"text": "поставь github desktop слева", "expected": {"layout": "left_half", "targets": ["github_desktop"]}}
+{"text": "indesign на весь экран", "expected": {"layout": "fullscreen", "targets": ["indesign"]}}
+{"text": "поставь indesign слева", "expected": {"layout": "left_half", "targets": ["indesign"]}}
+{"text": "media encoder на весь экран", "expected": {"layout": "fullscreen", "targets": ["media_encoder"]}}
+{"text": "поставь media encoder слева", "expected": {"layout": "left_half", "targets": ["media_encoder"]}}
+{"text": "microsoft store на весь экран", "expected": {"layout": "fullscreen", "targets": ["microsoft_store"]}}
+{"text": "поставь microsoft store слева", "expected": {"layout": "left_half", "targets": ["microsoft_store"]}}
+{"text": "mysql workbench на весь экран", "expected": {"layout": "fullscreen", "targets": ["mysql_workbench"]}}
+{"text": "поставь mysql workbench слева", "expected": {"layout": "left_half", "targets": ["mysql_workbench"]}}
+{"text": "notion на весь экран", "expected": {"layout": "fullscreen", "targets": ["notion"]}}
+{"text": "поставь notion слева", "expected": {"layout": "left_half", "targets": ["notion"]}}
+{"text": "obsidian на весь экран", "expected": {"layout": "fullscreen", "targets": ["obsidian"]}}
+{"text": "поставь obsidian слева", "expected": {"layout": "left_half", "targets": ["obsidian"]}}
+{"text": "pgadmin на весь экран", "expected": {"layout": "fullscreen", "targets": ["pgadmin"]}}
+{"text": "поставь pgadmin слева", "expected": {"layout": "left_half", "targets": ["pgadmin"]}}
+{"text": "photos на весь экран", "expected": {"layout": "fullscreen", "targets": ["photos"]}}
+{"text": "поставь photos слева", "expected": {"layout": "left_half", "targets": ["photos"]}}
+{"text": "phpstorm на весь экран", "expected": {"layout": "fullscreen", "targets": ["phpstorm"]}}
+{"text": "поставь phpstorm слева", "expected": {"layout": "left_half", "targets": ["phpstorm"]}}
+{"text": "planetvpn на весь экран", "expected": {"layout": "fullscreen", "targets": ["planetvpn1"]}}
+{"text": "поставь planetvpn слева", "expected": {"layout": "left_half", "targets": ["planetvpn1"]}}
+{"text": "microsoft project на весь экран", "expected": {"layout": "fullscreen", "targets": ["project"]}}
+{"text": "поставь microsoft project слева", "expected": {"layout": "left_half", "targets": ["project"]}}
+{"text": "regedit на весь экран", "expected": {"layout": "fullscreen", "targets": ["regedit"]}}
+{"text": "поставь regedit слева", "expected": {"layout": "left_half", "targets": ["regedit"]}}
+{"text": "services на весь экран", "expected": {"layout": "fullscreen", "targets": ["services"]}}
+{"text": "поставь services слева", "expected": {"layout": "left_half", "targets": ["services"]}}
+{"text": "7zip на весь экран", "expected": {"layout": "fullscreen", "targets": ["seven_zip"]}}
+{"text": "поставь 7zip слева", "expected": {"layout": "left_half", "targets": ["seven_zip"]}}
+{"text": "snipping tool на весь экран", "expected": {"layout": "fullscreen", "targets": ["snipping_tool"]}}
+{"text": "поставь snipping tool слева", "expected": {"layout": "left_half", "targets": ["snipping_tool"]}}
+{"text": "spotify на весь экран", "expected": {"layout": "fullscreen", "targets": ["spotify"]}}
+{"text": "поставь spotify слева", "expected": {"layout": "left_half", "targets": ["spotify"]}}
+{"text": "steam на весь экран", "expected": {"layout": "fullscreen", "targets": ["steam"]}}
+{"text": "поставь steam слева", "expected": {"layout": "left_half", "targets": ["steam"]}}
+{"text": "substance painter на весь экран", "expected": {"layout": "fullscreen", "targets": ["substance_painter"]}}
+{"text": "поставь substance painter слева", "expected": {"layout": "left_half", "targets": ["substance_painter"]}}
+{"text": "visio на весь экран", "expected": {"layout": "fullscreen", "targets": ["visio"]}}
+{"text": "поставь visio слева", "expected": {"layout": "left_half", "targets": ["visio"]}}
+{"text": "vlc на весь экран", "expected": {"layout": "fullscreen", "targets": ["vlc"]}}
+{"text": "поставь vlc слева", "expected": {"layout": "left_half", "targets": ["vlc"]}}
+{"text": "voice recorder на весь экран", "expected": {"layout": "fullscreen", "targets": ["voice_recorder"]}}
+{"text": "поставь voice recorder слева", "expected": {"layout": "left_half", "targets": ["voice_recorder"]}}
+{"text": "winrar на весь экран", "expected": {"layout": "fullscreen", "targets": ["winrar"]}}
+{"text": "поставь winrar слева", "expected": {"layout": "left_half", "targets": ["winrar"]}}
+{"text": "wireshark на весь экран", "expected": {"layout": "fullscreen", "targets": ["wireshark"]}}
+{"text": "поставь wireshark слева", "expected": {"layout": "left_half", "targets": ["wireshark"]}}
+{"text": "яндекс музыка на весь экран", "expected": {"layout": "fullscreen", "targets": ["yandexmusic"]}}
+{"text": "поставь яндекс музыка слева", "expected": {"layout": "left_half", "targets": ["yandexmusic"]}}
+{"text": "си лайон на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь си лайон слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "си лев на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь си лев слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "c lion на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь c lion слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "си лаен на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь си лаен слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "microsoft teams на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь microsoft teams слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "майкрософт тимс на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь майкрософт тимс слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "yandex browser на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь yandex browser слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "яндекс браузер на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь яндекс браузер слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "браузер яндекс на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь браузер яндекс слева", "expected": {"missing": ["layout", "targets"]}}

@@ -1,0 +1,696 @@
+{
+  "total": 47,
+  "correct": 47,
+  "accuracy": 1.0,
+  "rows": [
+    {
+      "text": "закрой хром",
+      "expected": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "chrome"
+      },
+      "predicted": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "chrome",
+        "confidence": 0.8659
+      },
+      "ok": true
+    },
+    {
+      "text": "бивис закрой браузер",
+      "expected": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "chrome"
+      },
+      "predicted": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "chrome",
+        "confidence": 0.8118
+      },
+      "ok": true
+    },
+    {
+      "text": "зактни блокнот",
+      "expected": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "notepad"
+      },
+      "predicted": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "notepad",
+        "confidence": 0.8372
+      },
+      "ok": true
+    },
+    {
+      "text": "выйди из телеги",
+      "expected": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "telegram"
+      },
+      "predicted": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "telegram",
+        "confidence": 0.5922
+      },
+      "ok": true
+    },
+    {
+      "text": "прибей дискорд",
+      "expected": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "discord"
+      },
+      "predicted": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "discord",
+        "confidence": 0.7814
+      },
+      "ok": true
+    },
+    {
+      "text": "закрой где код пишу",
+      "expected": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "vscode"
+      },
+      "predicted": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "vscode",
+        "confidence": 0.903
+      },
+      "ok": true
+    },
+    {
+      "text": "брух закрой вс код",
+      "expected": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "vscode"
+      },
+      "predicted": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "vscode",
+        "confidence": 0.917
+      },
+      "ok": true
+    },
+    {
+      "text": "выключи фотошоп",
+      "expected": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "photoshop"
+      },
+      "predicted": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "photoshop",
+        "confidence": 0.9044
+      },
+      "ok": true
+    },
+    {
+      "text": "закрой премьер про",
+      "expected": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "premiere_pro"
+      },
+      "predicted": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "premiere_pro",
+        "confidence": 0.9167
+      },
+      "ok": true
+    },
+    {
+      "text": "закрой проводник",
+      "expected": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "explorer"
+      },
+      "predicted": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "explorer",
+        "confidence": 0.8521
+      },
+      "ok": true
+    },
+    {
+      "text": "убери хром полностью",
+      "expected": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "chrome"
+      },
+      "predicted": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "chrome",
+        "confidence": 0.4734
+      },
+      "ok": true
+    },
+    {
+      "text": "сверни хром",
+      "expected": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "chrome"
+      },
+      "predicted": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "chrome",
+        "confidence": 0.8394
+      },
+      "ok": true
+    },
+    {
+      "text": "сверни вс код",
+      "expected": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "vscode"
+      },
+      "predicted": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "vscode",
+        "confidence": 0.897
+      },
+      "ok": true
+    },
+    {
+      "text": "убери телеграм с экрана",
+      "expected": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "telegram"
+      },
+      "predicted": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "telegram",
+        "confidence": 0.8169
+      },
+      "ok": true
+    },
+    {
+      "text": "спрячь фотошоп",
+      "expected": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "photoshop"
+      },
+      "predicted": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "photoshop",
+        "confidence": 0.8687
+      },
+      "ok": true
+    },
+    {
+      "text": "кинь блендер вниз",
+      "expected": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "blender"
+      },
+      "predicted": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "blender",
+        "confidence": 0.861
+      },
+      "ok": true
+    },
+    {
+      "text": "сверний проводник",
+      "expected": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "explorer"
+      },
+      "predicted": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "explorer",
+        "confidence": 0.8153
+      },
+      "ok": true
+    },
+    {
+      "text": "убери фигму с глаз",
+      "expected": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "figma"
+      },
+      "predicted": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "figma",
+        "confidence": 0.4043
+      },
+      "ok": true
+    },
+    {
+      "text": "разверни хром",
+      "expected": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "chrome"
+      },
+      "predicted": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "chrome",
+        "confidence": 0.7904
+      },
+      "ok": true
+    },
+    {
+      "text": "разверни на весь экран блендер",
+      "expected": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "blender"
+      },
+      "predicted": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "blender",
+        "confidence": 0.855
+      },
+      "ok": true
+    },
+    {
+      "text": "анрил на весь экран",
+      "expected": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "unreal_engine"
+      },
+      "predicted": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "unreal_engine",
+        "confidence": 0.7721
+      },
+      "ok": true
+    },
+    {
+      "text": "сделай фотошоп на весь экран",
+      "expected": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "photoshop"
+      },
+      "predicted": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "photoshop",
+        "confidence": 0.82
+      },
+      "ok": true
+    },
+    {
+      "text": "раскрой телегу",
+      "expected": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "telegram"
+      },
+      "predicted": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "telegram",
+        "confidence": 0.888
+      },
+      "ok": true
+    },
+    {
+      "text": "верни хром",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "chrome"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "chrome",
+        "confidence": 0.8576
+      },
+      "ok": true
+    },
+    {
+      "text": "восстанови терминал",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "terminal"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "terminal",
+        "confidence": 0.8323
+      },
+      "ok": true
+    },
+    {
+      "text": "верни окно фотошоп",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "photoshop"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "photoshop",
+        "confidence": 0.8903
+      },
+      "ok": true
+    },
+    {
+      "text": "покажи обратно дискорд",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "discord"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "discord",
+        "confidence": 0.6361
+      },
+      "ok": true
+    },
+    {
+      "text": "верни как было блендер",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "blender"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "blender",
+        "confidence": 0.8431
+      },
+      "ok": true
+    },
+    {
+      "text": "закрой это",
+      "expected": {
+        "action": "close",
+        "target_type": "current"
+      },
+      "predicted": {
+        "action": "close",
+        "target_type": "current",
+        "confidence": 0.9309
+      },
+      "ok": true
+    },
+    {
+      "text": "закрой текущее окно",
+      "expected": {
+        "action": "close",
+        "target_type": "current"
+      },
+      "predicted": {
+        "action": "close",
+        "target_type": "current",
+        "confidence": 0.9326
+      },
+      "ok": true
+    },
+    {
+      "text": "зактни это",
+      "expected": {
+        "action": "close",
+        "target_type": "current"
+      },
+      "predicted": {
+        "action": "close",
+        "target_type": "current",
+        "confidence": 0.8405
+      },
+      "ok": true
+    },
+    {
+      "text": "сверни окно",
+      "expected": {
+        "action": "minimize",
+        "target_type": "current"
+      },
+      "predicted": {
+        "action": "minimize",
+        "target_type": "current",
+        "confidence": 0.5189
+      },
+      "ok": true
+    },
+    {
+      "text": "убери это с экрана",
+      "expected": {
+        "action": "minimize",
+        "target_type": "current"
+      },
+      "predicted": {
+        "action": "minimize",
+        "target_type": "current",
+        "confidence": 0.7995
+      },
+      "ok": true
+    },
+    {
+      "text": "разверни на весь экран",
+      "expected": {
+        "action": "maximize",
+        "target_type": "current"
+      },
+      "predicted": {
+        "action": "maximize",
+        "target_type": "current",
+        "confidence": 0.0808
+      },
+      "ok": true
+    },
+    {
+      "text": "фулл скрин",
+      "expected": {
+        "action": "maximize",
+        "target_type": "current"
+      },
+      "predicted": {
+        "action": "maximize",
+        "target_type": "current",
+        "confidence": 0.0842
+      },
+      "ok": true
+    },
+    {
+      "text": "восстанови текущее окно",
+      "expected": {
+        "action": "restore",
+        "target_type": "current"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "current",
+        "confidence": 0.8745
+      },
+      "ok": true
+    },
+    {
+      "text": "верни окно",
+      "expected": {
+        "action": "restore",
+        "target_type": "current"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "current",
+        "confidence": 0.6246
+      },
+      "ok": true
+    },
+    {
+      "text": "открой браузер",
+      "expected": {
+        "missing": [
+          "action"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.9883
+      },
+      "ok": true
+    },
+    {
+      "text": "запусти блокнот",
+      "expected": {
+        "missing": [
+          "action"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.9947
+      },
+      "ok": true
+    },
+    {
+      "text": "сделай громкость 20",
+      "expected": {
+        "missing": [
+          "action"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.9296
+      },
+      "ok": true
+    },
+    {
+      "text": "динамики рвуться",
+      "expected": {
+        "missing": [
+          "action"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.8691
+      },
+      "ok": true
+    },
+    {
+      "text": "заткнись",
+      "expected": {
+        "missing": [
+          "action"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.8908
+      },
+      "ok": true
+    },
+    {
+      "text": "бивис зактни",
+      "expected": {
+        "action": "close",
+        "missing": [
+          "target"
+        ]
+      },
+      "predicted": {
+        "action": "close",
+        "missing": [
+          "target"
+        ],
+        "confidence": 0.0297
+      },
+      "ok": true
+    },
+    {
+      "text": "громко слишком",
+      "expected": {
+        "missing": [
+          "action"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.9247
+      },
+      "ok": true
+    },
+    {
+      "text": "сделавй громче",
+      "expected": {
+        "missing": [
+          "action"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.9021
+      },
+      "ok": true
+    },
+    {
+      "text": "какая погода",
+      "expected": {
+        "missing": [
+          "action"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.8938
+      },
+      "ok": true
+    },
+    {
+      "text": "поставь таймер",
+      "expected": {
+        "missing": [
+          "action"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.8614
+      },
+      "ok": true
+    }
+  ]
+}

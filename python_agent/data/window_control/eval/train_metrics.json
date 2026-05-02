@@ -1,0 +1,24 @@
+{
+  "dataset_rows": 63575,
+  "train_rows": 50860,
+  "validation_rows": 12715,
+  "train_seconds": 4.79,
+  "action": {
+    "accuracy": 0.9998427054659851,
+    "macro_f1": 0.9998570756245467,
+    "weighted_f1": 0.9998427187393116,
+    "classes": [
+      "close",
+      "maximize",
+      "minimize",
+      "restore",
+      "unknown"
+    ]
+  },
+  "target": {
+    "accuracy": 0.994494691309477,
+    "macro_f1": 0.9959982909011111,
+    "weighted_f1": 0.9945342000581091,
+    "num_classes": 87
+  }
+}

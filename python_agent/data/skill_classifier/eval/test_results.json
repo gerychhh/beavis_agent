@@ -1,0 +1,1126 @@
+{
+  "model_path": "C:\\Users\\gerychhh_\\beavis_agent\\python_agent\\models\\skill_classifier.joblib",
+  "model_exists": true,
+  "total": 124,
+  "correct": 124,
+  "accuracy": 1.0,
+  "errors": [],
+  "results": [
+    {
+      "text": "брух сделай громче",
+      "normalized_text": "сделай громче",
+      "expected_skill": "volume_set",
+      "predicted_skill": "volume_set",
+      "confidence": 0.9923,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "сделавй громче",
+      "normalized_text": "сделавй громче",
+      "expected_skill": "volume_set",
+      "predicted_skill": "volume_set",
+      "confidence": 0.9797,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "бивис громкость на десять",
+      "normalized_text": "громкость на десять",
+      "expected_skill": "volume_set",
+      "predicted_skill": "volume_set",
+      "confidence": 0.9984,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "динамики рвуться",
+      "normalized_text": "динамики рвуться",
+      "expected_skill": "volume_set",
+      "predicted_skill": "volume_set",
+      "confidence": 0.9729,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "заткнись",
+      "normalized_text": "заткнись",
+      "expected_skill": "volume_set",
+      "predicted_skill": "volume_set",
+      "confidence": 0.963,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "бивис зактни",
+      "normalized_text": "зактни",
+      "expected_skill": "volume_set",
+      "predicted_skill": "volume_set",
+      "confidence": 0.817,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "громко слишком",
+      "normalized_text": "громко слишком",
+      "expected_skill": "volume_set",
+      "predicted_skill": "volume_set",
+      "confidence": 0.6623,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "поставь звук на семдесят пять",
+      "normalized_text": "поставь звук на семдесят пять",
+      "expected_skill": "volume_set",
+      "predicted_skill": "volume_set",
+      "confidence": 0.995,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "сделай на 20 тише",
+      "normalized_text": "сделай на 20 тише",
+      "expected_skill": "volume_set",
+      "predicted_skill": "volume_set",
+      "confidence": 0.9907,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "прибавь на пятнадцать",
+      "normalized_text": "прибавь на пятнадцать",
+      "expected_skill": "volume_set",
+      "predicted_skill": "volume_set",
+      "confidence": 0.9892,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "еле слышно",
+      "normalized_text": "еле слышно",
+      "expected_skill": "volume_set",
+      "predicted_skill": "volume_set",
+      "confidence": 0.9669,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "сделай еле слышно",
+      "normalized_text": "сделай еле слышно",
+      "expected_skill": "volume_set",
+      "predicted_skill": "volume_set",
+      "confidence": 0.9628,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "на мксимум громкость",
+      "normalized_text": "на мксимум громкость",
+      "expected_skill": "volume_set",
+      "predicted_skill": "volume_set",
+      "confidence": 0.9398,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "поставь на палавину",
+      "normalized_text": "поставь на палавину",
+      "expected_skill": "volume_set",
+      "predicted_skill": "volume_set",
+      "confidence": 0.876,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "колонки орут сделай тише",
+      "normalized_text": "колонки орут сделай тише",
+      "expected_skill": "volume_set",
+      "predicted_skill": "volume_set",
+      "confidence": 0.9892,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "звук на восимьдесят",
+      "normalized_text": "звук на восимьдесят",
+      "expected_skill": "volume_set",
+      "predicted_skill": "volume_set",
+      "confidence": 0.997,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "убавь до двадцати",
+      "normalized_text": "убавь до двадцати",
+      "expected_skill": "volume_set",
+      "predicted_skill": "volume_set",
+      "confidence": 0.987,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "саунд потише",
+      "normalized_text": "саунд потише",
+      "expected_skill": "volume_set",
+      "predicted_skill": "volume_set",
+      "confidence": 0.9805,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "mute звук",
+      "normalized_text": "mute звук",
+      "expected_skill": "volume_set",
+      "predicted_skill": "volume_set",
+      "confidence": 0.8677,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "бивис открой браузер",
+      "normalized_text": "открой браузер",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.939,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "открой хром",
+      "normalized_text": "открой хром",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9767,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "браузер включи",
+      "normalized_text": "браузер включи",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9733,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "запусти блокнот",
+      "normalized_text": "запусти блокнот",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9856,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "бивис открой вс код",
+      "normalized_text": "открой вс код",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9745,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "открой где код пишу",
+      "normalized_text": "открой где код пишу",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9605,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "код открой",
+      "normalized_text": "код открой",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9763,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "открой телиграм",
+      "normalized_text": "открой телиграм",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9475,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "тг запусти",
+      "normalized_text": "тг запусти",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9943,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "включи дискордик",
+      "normalized_text": "включи дискордик",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9719,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "открой калькулятор",
+      "normalized_text": "открой калькулятор",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9418,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "правадник запусти",
+      "normalized_text": "правадник запусти",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9563,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "командную строку открой",
+      "normalized_text": "командную строку открой",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9373,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "павершелл запусти",
+      "normalized_text": "павершелл запусти",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9782,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "настройки винды",
+      "normalized_text": "настройки винды",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.6573,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "открой фотошоп",
+      "normalized_text": "открой фотошоп",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9664,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "запусти премьер про",
+      "normalized_text": "запусти премьер про",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9859,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "открой фигму",
+      "normalized_text": "открой фигму",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9738,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "анрил включи",
+      "normalized_text": "анрил включи",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9821,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "пайчарм открой",
+      "normalized_text": "пайчарм открой",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9596,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "open visual studio code",
+      "normalized_text": "open visual studio code",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9375,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "start chrome",
+      "normalized_text": "start chrome",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9748,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "го телегу",
+      "normalized_text": "го телегу",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9643,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "запусти 3д макс",
+      "normalized_text": "запусти 3д макс",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.992,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "открой docker desktop",
+      "normalized_text": "открой docker desktop",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.923,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "постман включи",
+      "normalized_text": "постман включи",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9794,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "закрой браузер",
+      "normalized_text": "закрой браузер",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9857,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "закрой хром",
+      "normalized_text": "закрой хром",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9911,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "сверни окно",
+      "normalized_text": "сверни окно",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9898,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "сверни блокнот",
+      "normalized_text": "сверни блокнот",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.992,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "разверни окно",
+      "normalized_text": "разверни окно",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9862,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "восстанови текущее окно",
+      "normalized_text": "восстанови текущее окно",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9836,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "верни телеграм",
+      "normalized_text": "верни телеграм",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9801,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "close chrome",
+      "normalized_text": "close chrome",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9275,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "minimize current window",
+      "normalized_text": "minimize current window",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9394,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "какая погода завтра",
+      "normalized_text": "какая погода завтра",
+      "expected_skill": "unknown",
+      "predicted_skill": "unknown",
+      "confidence": 0.8789,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "поставь таймер на десять минут",
+      "normalized_text": "поставь таймер на десять минут",
+      "expected_skill": "unknown",
+      "predicted_skill": "unknown",
+      "confidence": 0.8143,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "создай заметку про проект",
+      "normalized_text": "создай заметку про проект",
+      "expected_skill": "unknown",
+      "predicted_skill": "unknown",
+      "confidence": 0.8166,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "сделай скриншот",
+      "normalized_text": "сделай скриншот",
+      "expected_skill": "unknown",
+      "predicted_skill": "unknown",
+      "confidence": 0.7766,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "напиши сообщение в телеграм",
+      "normalized_text": "напиши сообщение в телеграм",
+      "expected_skill": "unknown",
+      "predicted_skill": "unknown",
+      "confidence": 0.9219,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "найди файл отчет",
+      "normalized_text": "найди файл отчет",
+      "expected_skill": "unknown",
+      "predicted_skill": "unknown",
+      "confidence": 0.8847,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "расскажи анекдот",
+      "normalized_text": "расскажи анекдот",
+      "expected_skill": "unknown",
+      "predicted_skill": "unknown",
+      "confidence": 0.8293,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "что такое random forest",
+      "normalized_text": "что такое random forest",
+      "expected_skill": "unknown",
+      "predicted_skill": "unknown",
+      "confidence": 0.9433,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "введи текст привет",
+      "normalized_text": "введи текст привет",
+      "expected_skill": "unknown",
+      "predicted_skill": "unknown",
+      "confidence": 0.6984,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "перезагрузи компьютер",
+      "normalized_text": "перезагрузи компьютер",
+      "expected_skill": "unknown",
+      "predicted_skill": "unknown",
+      "confidence": 0.8447,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "следующий трек",
+      "normalized_text": "следующий трек",
+      "expected_skill": "unknown",
+      "predicted_skill": "unknown",
+      "confidence": 0.8475,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "поставь музыку",
+      "normalized_text": "поставь музыку",
+      "expected_skill": "unknown",
+      "predicted_skill": "unknown",
+      "confidence": 0.737,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "бивис",
+      "normalized_text": "",
+      "expected_skill": "unknown",
+      "predicted_skill": "unknown",
+      "confidence": 0.0,
+      "source": "empty_text",
+      "ok": true
+    },
+    {
+      "text": "открой",
+      "normalized_text": "открой",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9467,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "разверни телеграмм и вскод пополам",
+      "normalized_text": "разверни телеграмм и вскод пополам",
+      "expected_skill": "window_layout",
+      "predicted_skill": "window_layout",
+      "confidence": 0.9585,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "телега слева вс код справа",
+      "normalized_text": "телега слева вс код справа",
+      "expected_skill": "window_layout",
+      "predicted_skill": "window_layout",
+      "confidence": 0.9927,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "бивис поставь хром слева",
+      "normalized_text": "поставь хром слева",
+      "expected_skill": "window_layout",
+      "predicted_skill": "window_layout",
+      "confidence": 0.9729,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "вскод на правую половину",
+      "normalized_text": "вскод на правую половину",
+      "expected_skill": "window_layout",
+      "predicted_skill": "window_layout",
+      "confidence": 0.9922,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "браузер сверху консоль снизу",
+      "normalized_text": "браузер сверху консоль снизу",
+      "expected_skill": "window_layout",
+      "predicted_skill": "window_layout",
+      "confidence": 0.9896,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "раскинь хром телегу вскод и терминал сеткой",
+      "normalized_text": "раскинь хром телегу вскод и терминал сеткой",
+      "expected_skill": "window_layout",
+      "predicted_skill": "window_layout",
+      "confidence": 0.9828,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "фотошоп на весь экран",
+      "normalized_text": "фотошоп на весь экран",
+      "expected_skill": "window_layout",
+      "predicted_skill": "window_layout",
+      "confidence": 0.9814,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "поставь окно слева",
+      "normalized_text": "поставь окно слева",
+      "expected_skill": "window_layout",
+      "predicted_skill": "window_layout",
+      "confidence": 0.876,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "текущее окно вправо",
+      "normalized_text": "текущее окно вправо",
+      "expected_skill": "window_layout",
+      "predicted_skill": "window_layout",
+      "confidence": 0.9257,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "фигму в центр",
+      "normalized_text": "фигму в центр",
+      "expected_skill": "window_layout",
+      "predicted_skill": "window_layout",
+      "confidence": 0.9654,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "анрил на весь экран",
+      "normalized_text": "анрил на весь экран",
+      "expected_skill": "window_layout",
+      "predicted_skill": "window_layout",
+      "confidence": 0.9889,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "поставь блокнот снизу",
+      "normalized_text": "поставь блокнот снизу",
+      "expected_skill": "window_layout",
+      "predicted_skill": "window_layout",
+      "confidence": 0.9674,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "поставь терминал сверху",
+      "normalized_text": "поставь терминал сверху",
+      "expected_skill": "window_layout",
+      "predicted_skill": "window_layout",
+      "confidence": 0.9861,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "постафь браузер слево",
+      "normalized_text": "постафь браузер слево",
+      "expected_skill": "window_layout",
+      "predicted_skill": "window_layout",
+      "confidence": 0.9785,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "развирни фоташоп на весь екран",
+      "normalized_text": "развирни фоташоп на весь екран",
+      "expected_skill": "window_layout",
+      "predicted_skill": "window_layout",
+      "confidence": 0.9675,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "телиграм и вскот по полам",
+      "normalized_text": "телиграм и вскот по полам",
+      "expected_skill": "window_layout",
+      "predicted_skill": "window_layout",
+      "confidence": 0.8963,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "открой codex",
+      "normalized_text": "открой codex",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9783,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "запусти codex",
+      "normalized_text": "запусти codex",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.991,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "открой openai",
+      "normalized_text": "открой openai",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9899,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "запусти openai",
+      "normalized_text": "запусти openai",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9946,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "открой openai.codex_2p2nqsd0c76g0!app",
+      "normalized_text": "открой openai codex_2p2nqsd0c76g0 app",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9834,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "запусти openai.codex_2p2nqsd0c76g0!app",
+      "normalized_text": "запусти openai codex_2p2nqsd0c76g0 app",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9886,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "открой кодекс",
+      "normalized_text": "открой кодекс",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9748,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "запусти кодекс",
+      "normalized_text": "запусти кодекс",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9901,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "открой cyberpunk 2077",
+      "normalized_text": "открой cyberpunk 2077",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9555,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "запусти cyberpunk 2077",
+      "normalized_text": "запусти cyberpunk 2077",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9705,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "открой 1091500",
+      "normalized_text": "открой 1091500",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.971,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "запусти 1091500",
+      "normalized_text": "запусти 1091500",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9817,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "открой steam://rungameid/1091500",
+      "normalized_text": "открой steam //rungameid/1091500",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.96,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "запусти steam://rungameid/1091500",
+      "normalized_text": "запусти steam //rungameid/1091500",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9727,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "открой кибер пунк",
+      "normalized_text": "открой кибер пунк",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9708,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "запусти кибер пунк",
+      "normalized_text": "запусти кибер пунк",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9847,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "открой dota 2",
+      "normalized_text": "открой dota 2",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9818,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "запусти dota 2",
+      "normalized_text": "запусти dota 2",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9885,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "открой 570",
+      "normalized_text": "открой 570",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9831,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "запусти 570",
+      "normalized_text": "запусти 570",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9883,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "открой steam://rungameid/570",
+      "normalized_text": "открой steam //rungameid/570",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9633,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "запусти steam://rungameid/570",
+      "normalized_text": "запусти steam //rungameid/570",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9769,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "открой дота",
+      "normalized_text": "открой дота",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9804,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "запусти дота",
+      "normalized_text": "запусти дота",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9922,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "открой planetvpn",
+      "normalized_text": "открой planetvpn",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9695,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "запусти planetvpn",
+      "normalized_text": "запусти planetvpn",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9817,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "открой freevpnplanet",
+      "normalized_text": "открой freevpnplanet",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9514,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "запусти freevpnplanet",
+      "normalized_text": "запусти freevpnplanet",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9685,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "открой freevpnplanet.planetvpn_b2qrq2z57ppd2!planetvpn",
+      "normalized_text": "открой freevpnplanet planetvpn_b2qrq2z57ppd2 planetvpn",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9315,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "запусти freevpnplanet.planetvpn_b2qrq2z57ppd2!planetvpn",
+      "normalized_text": "запусти freevpnplanet planetvpn_b2qrq2z57ppd2 planetvpn",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.945,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "открой впн",
+      "normalized_text": "открой впн",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9776,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "запусти впн",
+      "normalized_text": "запусти впн",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9921,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "открой яндекс музыка",
+      "normalized_text": "открой яндекс музыка",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9671,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "запусти яндекс музыка",
+      "normalized_text": "запусти яндекс музыка",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.984,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "открой музыка",
+      "normalized_text": "открой музыка",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9291,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "запусти музыка",
+      "normalized_text": "запусти музыка",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9848,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "открой янмузыка",
+      "normalized_text": "открой янмузыка",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9563,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "запусти янмузыка",
+      "normalized_text": "запусти янмузыка",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9825,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "открой яндекс мьюзик",
+      "normalized_text": "открой яндекс мьюзик",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9665,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "запусти яндекс мьюзик",
+      "normalized_text": "запусти яндекс мьюзик",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9818,
+      "source": "model_joblib",
+      "ok": true
+    }
+  ]
+}

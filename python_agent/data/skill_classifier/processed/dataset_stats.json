@@ -1,0 +1,22 @@
+{
+  "random_seed": 42,
+  "text_is_normalized": true,
+  "total_rows": 114253,
+  "class_counts": {
+    "window_control": 21994,
+    "open_app": 23592,
+    "window_layout": 21883,
+    "volume_set": 29410,
+    "unknown": 17374
+  },
+  "manual_test_rows": 124,
+  "app_surface_form_classes_in_generator": 82,
+  "user_app_ids": [
+    "codex",
+    "cyberpunk_2077",
+    "dota_2",
+    "planetvpn1",
+    "yandexmusic"
+  ],
+  "note": "Synthetic dataset. Runtime model has no normalizer, dictionaries or manual shortcuts."
+}

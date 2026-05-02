@@ -1,0 +1,2112 @@
+{
+  "total": 123,
+  "correct": 123,
+  "accuracy": 1.0,
+  "rows": [
+    {
+      "text": "разверни телеграмм и вскод пополам",
+      "expected": {
+        "layout": "split_2_vertical",
+        "targets": [
+          "telegram",
+          "vscode"
+        ]
+      },
+      "predicted": {
+        "layout": "split_2_vertical",
+        "targets": [
+          "telegram",
+          "vscode"
+        ],
+        "confidence": 0.8316
+      },
+      "correct": true
+    },
+    {
+      "text": "телега слева вс код справа",
+      "expected": {
+        "layout": "split_2_vertical",
+        "targets": [
+          "telegram",
+          "vscode"
+        ]
+      },
+      "predicted": {
+        "layout": "split_2_vertical",
+        "targets": [
+          "telegram",
+          "vscode"
+        ],
+        "confidence": 0.8761
+      },
+      "correct": true
+    },
+    {
+      "text": "бивис поставь хром слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "chrome"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "chrome"
+        ],
+        "confidence": 0.7804
+      },
+      "correct": true
+    },
+    {
+      "text": "вскод на правую половину",
+      "expected": {
+        "layout": "right_half",
+        "targets": [
+          "vscode"
+        ]
+      },
+      "predicted": {
+        "layout": "right_half",
+        "targets": [
+          "vscode"
+        ],
+        "confidence": 0.9013
+      },
+      "correct": true
+    },
+    {
+      "text": "браузер сверху консоль снизу",
+      "expected": {
+        "layout": "split_2_horizontal",
+        "targets": [
+          "chrome",
+          "cmd"
+        ]
+      },
+      "predicted": {
+        "layout": "split_2_horizontal",
+        "targets": [
+          "chrome",
+          "cmd"
+        ],
+        "confidence": 0.8585
+      },
+      "correct": true
+    },
+    {
+      "text": "раскинь хром телегу вскод и терминал сеткой",
+      "expected": {
+        "layout": "grid_2x2",
+        "targets": [
+          "chrome",
+          "telegram",
+          "vscode",
+          "terminal"
+        ]
+      },
+      "predicted": {
+        "layout": "grid_2x2",
+        "targets": [
+          "chrome",
+          "telegram",
+          "vscode",
+          "terminal"
+        ],
+        "confidence": 0.736
+      },
+      "correct": true
+    },
+    {
+      "text": "фотошоп на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "photoshop"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "photoshop"
+        ],
+        "confidence": 0.904
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь окно слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "current"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "current"
+        ],
+        "confidence": 0.9102
+      },
+      "correct": true
+    },
+    {
+      "text": "текущее окно вправо",
+      "expected": {
+        "layout": "right_half",
+        "targets": [
+          "current"
+        ]
+      },
+      "predicted": {
+        "layout": "right_half",
+        "targets": [
+          "current"
+        ],
+        "confidence": 0.9522
+      },
+      "correct": true
+    },
+    {
+      "text": "фигму в центр",
+      "expected": {
+        "layout": "center",
+        "targets": [
+          "figma"
+        ]
+      },
+      "predicted": {
+        "layout": "center",
+        "targets": [
+          "figma"
+        ],
+        "confidence": 0.9262
+      },
+      "correct": true
+    },
+    {
+      "text": "анрил на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "unreal_engine"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "unreal_engine"
+        ],
+        "confidence": 0.9119
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь блокнот снизу",
+      "expected": {
+        "layout": "bottom_half",
+        "targets": [
+          "notepad"
+        ]
+      },
+      "predicted": {
+        "layout": "bottom_half",
+        "targets": [
+          "notepad"
+        ],
+        "confidence": 0.884
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь терминал сверху",
+      "expected": {
+        "layout": "top_half",
+        "targets": [
+          "terminal"
+        ]
+      },
+      "predicted": {
+        "layout": "top_half",
+        "targets": [
+          "terminal"
+        ],
+        "confidence": 0.8183
+      },
+      "correct": true
+    },
+    {
+      "text": "постафь браузер слево",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "chrome"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "chrome"
+        ],
+        "confidence": 0.8654
+      },
+      "correct": true
+    },
+    {
+      "text": "развирни фоташоп на весь екран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "photoshop"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "photoshop"
+        ],
+        "confidence": 0.893
+      },
+      "correct": true
+    },
+    {
+      "text": "телиграм и вскот по полам",
+      "expected": {
+        "layout": "split_2_vertical",
+        "targets": [
+          "telegram",
+          "vscode"
+        ]
+      },
+      "predicted": {
+        "layout": "split_2_vertical",
+        "targets": [
+          "telegram",
+          "vscode"
+        ],
+        "confidence": 0.8484
+      },
+      "correct": true
+    },
+    {
+      "text": "открой браузер",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9095
+      },
+      "correct": true
+    },
+    {
+      "text": "закрой хром",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9706
+      },
+      "correct": true
+    },
+    {
+      "text": "сделай громкость на 20",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8497
+      },
+      "correct": true
+    },
+    {
+      "text": "привет как дела",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9669
+      },
+      "correct": true
+    },
+    {
+      "text": "хуйня какая то",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9435
+      },
+      "correct": true
+    },
+    {
+      "text": "3ds max 2025 на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "3ds_max_2025"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "3ds_max_2025"
+        ],
+        "confidence": 0.891
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь 3ds max 2025 слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "3ds_max_2025"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "3ds_max_2025"
+        ],
+        "confidence": 0.839
+      },
+      "correct": true
+    },
+    {
+      "text": "access на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "access"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "access"
+        ],
+        "confidence": 0.9138
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь access слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "access"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "access"
+        ],
+        "confidence": 0.8634
+      },
+      "correct": true
+    },
+    {
+      "text": "adobe xd на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "adobe_xd"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "adobe_xd"
+        ],
+        "confidence": 0.9102
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь adobe xd слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "adobe_xd"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "adobe_xd"
+        ],
+        "confidence": 0.8425
+      },
+      "correct": true
+    },
+    {
+      "text": "animate на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "animate"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "animate"
+        ],
+        "confidence": 0.9035
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь animate слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "animate"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "animate"
+        ],
+        "confidence": 0.8831
+      },
+      "correct": true
+    },
+    {
+      "text": "audition на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "audition"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "audition"
+        ],
+        "confidence": 0.8977
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь audition слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "audition"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "audition"
+        ],
+        "confidence": 0.8577
+      },
+      "correct": true
+    },
+    {
+      "text": "bridge на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "bridge"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "bridge"
+        ],
+        "confidence": 0.9123
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь bridge слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "bridge"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "bridge"
+        ],
+        "confidence": 0.8658
+      },
+      "correct": true
+    },
+    {
+      "text": "camera на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "camera"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "camera"
+        ],
+        "confidence": 0.8968
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь camera слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "camera"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "camera"
+        ],
+        "confidence": 0.8664
+      },
+      "correct": true
+    },
+    {
+      "text": "codex на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "codex"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "codex"
+        ],
+        "confidence": 0.9017
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь codex слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "codex"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "codex"
+        ],
+        "confidence": 0.851
+      },
+      "correct": true
+    },
+    {
+      "text": "control panel на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "control_panel"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "control_panel"
+        ],
+        "confidence": 0.885
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь control panel слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "control_panel"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "control_panel"
+        ],
+        "confidence": 0.8625
+      },
+      "correct": true
+    },
+    {
+      "text": "cyberpunk 2077 на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "cyberpunk_2077"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "cyberpunk_2077"
+        ],
+        "confidence": 0.883
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь cyberpunk 2077 слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "cyberpunk_2077"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "cyberpunk_2077"
+        ],
+        "confidence": 0.8519
+      },
+      "correct": true
+    },
+    {
+      "text": "datagrip на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "datagrip"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "datagrip"
+        ],
+        "confidence": 0.8955
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь datagrip слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "datagrip"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "datagrip"
+        ],
+        "confidence": 0.8658
+      },
+      "correct": true
+    },
+    {
+      "text": "dbeaver на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "dbeaver"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "dbeaver"
+        ],
+        "confidence": 0.9059
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь dbeaver слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "dbeaver"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "dbeaver"
+        ],
+        "confidence": 0.8628
+      },
+      "correct": true
+    },
+    {
+      "text": "device manager на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "device_manager"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "device_manager"
+        ],
+        "confidence": 0.8823
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь device manager слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "device_manager"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "device_manager"
+        ],
+        "confidence": 0.8495
+      },
+      "correct": true
+    },
+    {
+      "text": "disk management на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "disk_management"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "disk_management"
+        ],
+        "confidence": 0.8789
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь disk management слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "disk_management"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "disk_management"
+        ],
+        "confidence": 0.8484
+      },
+      "correct": true
+    },
+    {
+      "text": "dota 2 на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "dota_2"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "dota_2"
+        ],
+        "confidence": 0.9016
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь dota 2 слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "dota_2"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "dota_2"
+        ],
+        "confidence": 0.8539
+      },
+      "correct": true
+    },
+    {
+      "text": "epic games на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "epic_games"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "epic_games"
+        ],
+        "confidence": 0.9076
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь epic games слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "epic_games"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "epic_games"
+        ],
+        "confidence": 0.8589
+      },
+      "correct": true
+    },
+    {
+      "text": "event viewer на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "event_viewer"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "event_viewer"
+        ],
+        "confidence": 0.8916
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь event viewer слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "event_viewer"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "event_viewer"
+        ],
+        "confidence": 0.8449
+      },
+      "correct": true
+    },
+    {
+      "text": "github desktop на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "github_desktop"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "github_desktop"
+        ],
+        "confidence": 0.8963
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь github desktop слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "github_desktop"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "github_desktop"
+        ],
+        "confidence": 0.8559
+      },
+      "correct": true
+    },
+    {
+      "text": "indesign на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "indesign"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "indesign"
+        ],
+        "confidence": 0.9085
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь indesign слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "indesign"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "indesign"
+        ],
+        "confidence": 0.8777
+      },
+      "correct": true
+    },
+    {
+      "text": "media encoder на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "media_encoder"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "media_encoder"
+        ],
+        "confidence": 0.8942
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь media encoder слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "media_encoder"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "media_encoder"
+        ],
+        "confidence": 0.8532
+      },
+      "correct": true
+    },
+    {
+      "text": "microsoft store на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "microsoft_store"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "microsoft_store"
+        ],
+        "confidence": 0.8988
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь microsoft store слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "microsoft_store"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "microsoft_store"
+        ],
+        "confidence": 0.8485
+      },
+      "correct": true
+    },
+    {
+      "text": "mysql workbench на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "mysql_workbench"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "mysql_workbench"
+        ],
+        "confidence": 0.8879
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь mysql workbench слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "mysql_workbench"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "mysql_workbench"
+        ],
+        "confidence": 0.8626
+      },
+      "correct": true
+    },
+    {
+      "text": "notion на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "notion"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "notion"
+        ],
+        "confidence": 0.9031
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь notion слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "notion"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "notion"
+        ],
+        "confidence": 0.8643
+      },
+      "correct": true
+    },
+    {
+      "text": "obsidian на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "obsidian"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "obsidian"
+        ],
+        "confidence": 0.9071
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь obsidian слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "obsidian"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "obsidian"
+        ],
+        "confidence": 0.8547
+      },
+      "correct": true
+    },
+    {
+      "text": "pgadmin на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "pgadmin"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "pgadmin"
+        ],
+        "confidence": 0.9042
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь pgadmin слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "pgadmin"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "pgadmin"
+        ],
+        "confidence": 0.8607
+      },
+      "correct": true
+    },
+    {
+      "text": "photos на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "photos"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "photos"
+        ],
+        "confidence": 0.8876
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь photos слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "photos"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "photos"
+        ],
+        "confidence": 0.8468
+      },
+      "correct": true
+    },
+    {
+      "text": "phpstorm на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "phpstorm"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "phpstorm"
+        ],
+        "confidence": 0.9008
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь phpstorm слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "phpstorm"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "phpstorm"
+        ],
+        "confidence": 0.8758
+      },
+      "correct": true
+    },
+    {
+      "text": "planetvpn на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "planetvpn1"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "planetvpn1"
+        ],
+        "confidence": 0.8966
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь planetvpn слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "planetvpn1"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "planetvpn1"
+        ],
+        "confidence": 0.859
+      },
+      "correct": true
+    },
+    {
+      "text": "microsoft project на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "project"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "project"
+        ],
+        "confidence": 0.8774
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь microsoft project слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "project"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "project"
+        ],
+        "confidence": 0.8389
+      },
+      "correct": true
+    },
+    {
+      "text": "regedit на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "regedit"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "regedit"
+        ],
+        "confidence": 0.9011
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь regedit слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "regedit"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "regedit"
+        ],
+        "confidence": 0.8633
+      },
+      "correct": true
+    },
+    {
+      "text": "services на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "services"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "services"
+        ],
+        "confidence": 0.8961
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь services слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "services"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "services"
+        ],
+        "confidence": 0.855
+      },
+      "correct": true
+    },
+    {
+      "text": "7zip на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "seven_zip"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "seven_zip"
+        ],
+        "confidence": 0.9088
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь 7zip слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "seven_zip"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "seven_zip"
+        ],
+        "confidence": 0.8486
+      },
+      "correct": true
+    },
+    {
+      "text": "snipping tool на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "snipping_tool"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "snipping_tool"
+        ],
+        "confidence": 0.8778
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь snipping tool слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "snipping_tool"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "snipping_tool"
+        ],
+        "confidence": 0.8585
+      },
+      "correct": true
+    },
+    {
+      "text": "spotify на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "spotify"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "spotify"
+        ],
+        "confidence": 0.9028
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь spotify слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "spotify"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "spotify"
+        ],
+        "confidence": 0.8646
+      },
+      "correct": true
+    },
+    {
+      "text": "steam на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "steam"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "steam"
+        ],
+        "confidence": 0.9129
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь steam слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "steam"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "steam"
+        ],
+        "confidence": 0.8429
+      },
+      "correct": true
+    },
+    {
+      "text": "substance painter на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "substance_painter"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "substance_painter"
+        ],
+        "confidence": 0.8846
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь substance painter слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "substance_painter"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "substance_painter"
+        ],
+        "confidence": 0.8464
+      },
+      "correct": true
+    },
+    {
+      "text": "visio на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "visio"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "visio"
+        ],
+        "confidence": 0.9188
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь visio слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "visio"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "visio"
+        ],
+        "confidence": 0.8521
+      },
+      "correct": true
+    },
+    {
+      "text": "vlc на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "vlc"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "vlc"
+        ],
+        "confidence": 0.9131
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь vlc слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "vlc"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "vlc"
+        ],
+        "confidence": 0.8514
+      },
+      "correct": true
+    },
+    {
+      "text": "voice recorder на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "voice_recorder"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "voice_recorder"
+        ],
+        "confidence": 0.8734
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь voice recorder слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "voice_recorder"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "voice_recorder"
+        ],
+        "confidence": 0.8394
+      },
+      "correct": true
+    },
+    {
+      "text": "winrar на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "winrar"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "winrar"
+        ],
+        "confidence": 0.9098
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь winrar слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "winrar"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "winrar"
+        ],
+        "confidence": 0.8613
+      },
+      "correct": true
+    },
+    {
+      "text": "wireshark на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "wireshark"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "wireshark"
+        ],
+        "confidence": 0.9005
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь wireshark слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "wireshark"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "wireshark"
+        ],
+        "confidence": 0.8461
+      },
+      "correct": true
+    },
+    {
+      "text": "яндекс музыка на весь экран",
+      "expected": {
+        "layout": "fullscreen",
+        "targets": [
+          "yandexmusic"
+        ]
+      },
+      "predicted": {
+        "layout": "fullscreen",
+        "targets": [
+          "yandexmusic"
+        ],
+        "confidence": 0.8553
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь яндекс музыка слева",
+      "expected": {
+        "layout": "left_half",
+        "targets": [
+          "yandexmusic"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "targets": [
+          "yandexmusic"
+        ],
+        "confidence": 0.8339
+      },
+      "correct": true
+    },
+    {
+      "text": "си лайон на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.7673
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь си лайон слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.7028
+      },
+      "correct": true
+    },
+    {
+      "text": "си лев на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.6971
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь си лев слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "missing": [
+          "targets"
+        ],
+        "confidence": 0.5666
+      },
+      "correct": true
+    },
+    {
+      "text": "c lion на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.7246
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь c lion слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "layout": "left_half",
+        "missing": [
+          "targets"
+        ],
+        "confidence": 0.5074
+      },
+      "correct": true
+    },
+    {
+      "text": "си лаен на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8727
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь си лаен слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.6498
+      },
+      "correct": true
+    },
+    {
+      "text": "microsoft teams на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8509
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь microsoft teams слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.5567
+      },
+      "correct": true
+    },
+    {
+      "text": "майкрософт тимс на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8214
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь майкрософт тимс слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.5555
+      },
+      "correct": true
+    },
+    {
+      "text": "yandex browser на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8707
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь yandex browser слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.7866
+      },
+      "correct": true
+    },
+    {
+      "text": "яндекс браузер на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.7939
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь яндекс браузер слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.6792
+      },
+      "correct": true
+    },
+    {
+      "text": "браузер яндекс на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.651
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь браузер яндекс слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.6668
+      },
+      "correct": true
+    }
+  ]
+}

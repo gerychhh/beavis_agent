@@ -1,0 +1,46 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local environment and editor state
+.env
+.env.*
+.idea/
+.vscode/
+
+# Native build outputs
+cpp_runtime/build/
+build/
+dist/
+
+# Local runtime data
+external_data/
+python_agent/data/cache/
+python_agent/data/feedback/*.jsonl
+python_agent/data/logs/*.jsonl
+python_agent/data/settings/*.json
+python_agent/data/user_apps/
+python_agent/data/user_apps/*.json
+python_agent/data/user_apps/catalog_overrides.json
+
+# ML / generated models
+python_agent/models/*
+!python_agent/models/.gitkeep
+!python_agent/models/stt/
+python_agent/models/stt/*
+!python_agent/models/stt/.gitkeep
+
+# Temporary files
+*.tmp
+*.bak
+*.orig
+*.log

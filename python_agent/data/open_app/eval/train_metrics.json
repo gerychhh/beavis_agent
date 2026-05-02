@@ -1,0 +1,698 @@
+{
+  "rows_total": 95072,
+  "rows_train": 76057,
+  "rows_valid": 19015,
+  "text_is_normalized": true,
+  "classes": [
+    "access",
+    "acrobat_reader",
+    "adobe_xd",
+    "after_effects",
+    "android_studio",
+    "animate",
+    "audition",
+    "autocad",
+    "blender",
+    "brave",
+    "bridge",
+    "calculator",
+    "camera",
+    "chrome",
+    "cinema_4d",
+    "clion",
+    "cmd",
+    "control_panel",
+    "datagrip",
+    "davinci_resolve",
+    "dbeaver",
+    "device_manager",
+    "discord",
+    "disk_management",
+    "docker_desktop",
+    "edge",
+    "epic_games",
+    "event_viewer",
+    "excel",
+    "explorer",
+    "figma",
+    "firefox",
+    "fusion_360",
+    "git_bash",
+    "github_desktop",
+    "godot",
+    "illustrator",
+    "indesign",
+    "intellij_idea",
+    "lightroom",
+    "max_3ds",
+    "maya",
+    "media_encoder",
+    "microsoft_store",
+    "mysql_workbench",
+    "notepad",
+    "notion",
+    "obs_studio",
+    "obsidian",
+    "onenote",
+    "opera",
+    "outlook",
+    "paint",
+    "pgadmin",
+    "photos",
+    "photoshop",
+    "phpstorm",
+    "postman",
+    "powerpoint",
+    "powershell",
+    "premiere_pro",
+    "project",
+    "pycharm",
+    "regedit",
+    "services",
+    "settings",
+    "seven_zip",
+    "signal",
+    "sketchup",
+    "skype",
+    "slack",
+    "snipping_tool",
+    "spotify",
+    "steam",
+    "substance_painter",
+    "task_manager",
+    "teams",
+    "telegram",
+    "terminal",
+    "tor_browser",
+    "unity",
+    "unknown",
+    "unreal_engine",
+    "viber",
+    "visio",
+    "visual_studio",
+    "vlc",
+    "voice_recorder",
+    "vscode",
+    "webstorm",
+    "whatsapp",
+    "winrar",
+    "word",
+    "yandex_browser",
+    "zbrush",
+    "zoom"
+  ],
+  "accuracy": 0.9859584538522219,
+  "macro_f1": 0.9912385932905382,
+  "weighted_f1": 0.9856148386806277,
+  "classification_report": {
+    "access": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 180.0
+    },
+    "acrobat_reader": {
+      "precision": 0.9782608695652174,
+      "recall": 1.0,
+      "f1-score": 0.989010989010989,
+      "support": 180.0
+    },
+    "adobe_xd": {
+      "precision": 0.9836065573770492,
+      "recall": 1.0,
+      "f1-score": 0.9917355371900827,
+      "support": 180.0
+    },
+    "after_effects": {
+      "precision": 0.9944444444444445,
+      "recall": 0.9944444444444445,
+      "f1-score": 0.9944444444444445,
+      "support": 180.0
+    },
+    "android_studio": {
+      "precision": 0.989010989010989,
+      "recall": 1.0,
+      "f1-score": 0.994475138121547,
+      "support": 180.0
+    },
+    "animate": {
+      "precision": 0.9782608695652174,
+      "recall": 1.0,
+      "f1-score": 0.989010989010989,
+      "support": 180.0
+    },
+    "audition": {
+      "precision": 0.989010989010989,
+      "recall": 1.0,
+      "f1-score": 0.994475138121547,
+      "support": 180.0
+    },
+    "autocad": {
+      "precision": 0.989010989010989,
+      "recall": 1.0,
+      "f1-score": 0.994475138121547,
+      "support": 180.0
+    },
+    "blender": {
+      "precision": 0.9836065573770492,
+      "recall": 1.0,
+      "f1-score": 0.9917355371900827,
+      "support": 180.0
+    },
+    "brave": {
+      "precision": 0.9782608695652174,
+      "recall": 1.0,
+      "f1-score": 0.989010989010989,
+      "support": 180.0
+    },
+    "bridge": {
+      "precision": 1.0,
+      "recall": 0.9944444444444445,
+      "f1-score": 0.9972144846796658,
+      "support": 180.0
+    },
+    "calculator": {
+      "precision": 1.0,
+      "recall": 0.9945945945945946,
+      "f1-score": 0.997289972899729,
+      "support": 185.0
+    },
+    "camera": {
+      "precision": 0.988950276243094,
+      "recall": 0.9944444444444445,
+      "f1-score": 0.9916897506925207,
+      "support": 180.0
+    },
+    "chrome": {
+      "precision": 0.9707317073170731,
+      "recall": 0.9851485148514851,
+      "f1-score": 0.9778869778869779,
+      "support": 202.0
+    },
+    "cinema_4d": {
+      "precision": 0.967741935483871,
+      "recall": 1.0,
+      "f1-score": 0.9836065573770492,
+      "support": 180.0
+    },
+    "clion": {
+      "precision": 0.989010989010989,
+      "recall": 1.0,
+      "f1-score": 0.994475138121547,
+      "support": 180.0
+    },
+    "cmd": {
+      "precision": 0.9837837837837838,
+      "recall": 1.0,
+      "f1-score": 0.9918256130790191,
+      "support": 182.0
+    },
+    "control_panel": {
+      "precision": 0.994475138121547,
+      "recall": 1.0,
+      "f1-score": 0.997229916897507,
+      "support": 180.0
+    },
+    "datagrip": {
+      "precision": 0.9836065573770492,
+      "recall": 1.0,
+      "f1-score": 0.9917355371900827,
+      "support": 180.0
+    },
+    "davinci_resolve": {
+      "precision": 0.989010989010989,
+      "recall": 1.0,
+      "f1-score": 0.994475138121547,
+      "support": 180.0
+    },
+    "dbeaver": {
+      "precision": 0.9782608695652174,
+      "recall": 1.0,
+      "f1-score": 0.989010989010989,
+      "support": 180.0
+    },
+    "device_manager": {
+      "precision": 0.989010989010989,
+      "recall": 1.0,
+      "f1-score": 0.994475138121547,
+      "support": 180.0
+    },
+    "discord": {
+      "precision": 0.989010989010989,
+      "recall": 1.0,
+      "f1-score": 0.994475138121547,
+      "support": 180.0
+    },
+    "disk_management": {
+      "precision": 0.9782608695652174,
+      "recall": 1.0,
+      "f1-score": 0.989010989010989,
+      "support": 180.0
+    },
+    "docker_desktop": {
+      "precision": 0.994413407821229,
+      "recall": 0.9888888888888889,
+      "f1-score": 0.9916434540389972,
+      "support": 180.0
+    },
+    "edge": {
+      "precision": 0.9781420765027322,
+      "recall": 0.9944444444444445,
+      "f1-score": 0.9862258953168044,
+      "support": 180.0
+    },
+    "epic_games": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 180.0
+    },
+    "event_viewer": {
+      "precision": 0.989010989010989,
+      "recall": 1.0,
+      "f1-score": 0.994475138121547,
+      "support": 180.0
+    },
+    "excel": {
+      "precision": 0.967741935483871,
+      "recall": 1.0,
+      "f1-score": 0.9836065573770492,
+      "support": 180.0
+    },
+    "explorer": {
+      "precision": 0.9787234042553191,
+      "recall": 0.9945945945945946,
+      "f1-score": 0.9865951742627346,
+      "support": 185.0
+    },
+    "figma": {
+      "precision": 0.9782608695652174,
+      "recall": 1.0,
+      "f1-score": 0.989010989010989,
+      "support": 180.0
+    },
+    "firefox": {
+      "precision": 1.0,
+      "recall": 0.9944444444444445,
+      "f1-score": 0.9972144846796658,
+      "support": 180.0
+    },
+    "fusion_360": {
+      "precision": 0.994475138121547,
+      "recall": 1.0,
+      "f1-score": 0.997229916897507,
+      "support": 180.0
+    },
+    "git_bash": {
+      "precision": 0.972972972972973,
+      "recall": 1.0,
+      "f1-score": 0.9863013698630136,
+      "support": 180.0
+    },
+    "github_desktop": {
+      "precision": 0.989010989010989,
+      "recall": 1.0,
+      "f1-score": 0.994475138121547,
+      "support": 180.0
+    },
+    "godot": {
+      "precision": 0.989010989010989,
+      "recall": 1.0,
+      "f1-score": 0.994475138121547,
+      "support": 180.0
+    },
+    "illustrator": {
+      "precision": 0.9836065573770492,
+      "recall": 1.0,
+      "f1-score": 0.9917355371900827,
+      "support": 180.0
+    },
+    "indesign": {
+      "precision": 0.989010989010989,
+      "recall": 1.0,
+      "f1-score": 0.994475138121547,
+      "support": 180.0
+    },
+    "intellij_idea": {
+      "precision": 0.9782608695652174,
+      "recall": 1.0,
+      "f1-score": 0.989010989010989,
+      "support": 180.0
+    },
+    "lightroom": {
+      "precision": 0.989010989010989,
+      "recall": 1.0,
+      "f1-score": 0.994475138121547,
+      "support": 180.0
+    },
+    "max_3ds": {
+      "precision": 0.989010989010989,
+      "recall": 1.0,
+      "f1-score": 0.994475138121547,
+      "support": 180.0
+    },
+    "maya": {
+      "precision": 0.994475138121547,
+      "recall": 1.0,
+      "f1-score": 0.997229916897507,
+      "support": 180.0
+    },
+    "media_encoder": {
+      "precision": 0.994475138121547,
+      "recall": 1.0,
+      "f1-score": 0.997229916897507,
+      "support": 180.0
+    },
+    "microsoft_store": {
+      "precision": 0.994475138121547,
+      "recall": 1.0,
+      "f1-score": 0.997229916897507,
+      "support": 180.0
+    },
+    "mysql_workbench": {
+      "precision": 0.9836065573770492,
+      "recall": 1.0,
+      "f1-score": 0.9917355371900827,
+      "support": 180.0
+    },
+    "notepad": {
+      "precision": 0.9946236559139785,
+      "recall": 1.0,
+      "f1-score": 0.9973045822102425,
+      "support": 185.0
+    },
+    "notion": {
+      "precision": 0.9728260869565217,
+      "recall": 0.9944444444444445,
+      "f1-score": 0.9835164835164835,
+      "support": 180.0
+    },
+    "obs_studio": {
+      "precision": 0.988950276243094,
+      "recall": 0.9944444444444445,
+      "f1-score": 0.9916897506925207,
+      "support": 180.0
+    },
+    "obsidian": {
+      "precision": 0.994475138121547,
+      "recall": 1.0,
+      "f1-score": 0.997229916897507,
+      "support": 180.0
+    },
+    "onenote": {
+      "precision": 0.994475138121547,
+      "recall": 1.0,
+      "f1-score": 0.997229916897507,
+      "support": 180.0
+    },
+    "opera": {
+      "precision": 0.994475138121547,
+      "recall": 1.0,
+      "f1-score": 0.997229916897507,
+      "support": 180.0
+    },
+    "outlook": {
+      "precision": 0.9836065573770492,
+      "recall": 1.0,
+      "f1-score": 0.9917355371900827,
+      "support": 180.0
+    },
+    "paint": {
+      "precision": 0.994475138121547,
+      "recall": 1.0,
+      "f1-score": 0.997229916897507,
+      "support": 180.0
+    },
+    "pgadmin": {
+      "precision": 0.994475138121547,
+      "recall": 1.0,
+      "f1-score": 0.997229916897507,
+      "support": 180.0
+    },
+    "photos": {
+      "precision": 0.988950276243094,
+      "recall": 0.9944444444444445,
+      "f1-score": 0.9916897506925207,
+      "support": 180.0
+    },
+    "photoshop": {
+      "precision": 0.967741935483871,
+      "recall": 1.0,
+      "f1-score": 0.9836065573770492,
+      "support": 180.0
+    },
+    "phpstorm": {
+      "precision": 0.9782608695652174,
+      "recall": 1.0,
+      "f1-score": 0.989010989010989,
+      "support": 180.0
+    },
+    "postman": {
+      "precision": 0.989010989010989,
+      "recall": 1.0,
+      "f1-score": 0.994475138121547,
+      "support": 180.0
+    },
+    "powerpoint": {
+      "precision": 0.989010989010989,
+      "recall": 1.0,
+      "f1-score": 0.994475138121547,
+      "support": 180.0
+    },
+    "powershell": {
+      "precision": 0.994535519125683,
+      "recall": 1.0,
+      "f1-score": 0.9972602739726028,
+      "support": 182.0
+    },
+    "premiere_pro": {
+      "precision": 0.9782608695652174,
+      "recall": 1.0,
+      "f1-score": 0.989010989010989,
+      "support": 180.0
+    },
+    "project": {
+      "precision": 0.9473684210526315,
+      "recall": 1.0,
+      "f1-score": 0.972972972972973,
+      "support": 180.0
+    },
+    "pycharm": {
+      "precision": 0.9782608695652174,
+      "recall": 1.0,
+      "f1-score": 0.989010989010989,
+      "support": 180.0
+    },
+    "regedit": {
+      "precision": 0.9625668449197861,
+      "recall": 1.0,
+      "f1-score": 0.9809264305177112,
+      "support": 180.0
+    },
+    "services": {
+      "precision": 0.9782608695652174,
+      "recall": 1.0,
+      "f1-score": 0.989010989010989,
+      "support": 180.0
+    },
+    "settings": {
+      "precision": 0.9893048128342246,
+      "recall": 1.0,
+      "f1-score": 0.9946236559139785,
+      "support": 185.0
+    },
+    "seven_zip": {
+      "precision": 0.994475138121547,
+      "recall": 1.0,
+      "f1-score": 0.997229916897507,
+      "support": 180.0
+    },
+    "signal": {
+      "precision": 1.0,
+      "recall": 0.9944444444444445,
+      "f1-score": 0.9972144846796658,
+      "support": 180.0
+    },
+    "sketchup": {
+      "precision": 0.9781420765027322,
+      "recall": 0.9944444444444445,
+      "f1-score": 0.9862258953168044,
+      "support": 180.0
+    },
+    "skype": {
+      "precision": 0.9781420765027322,
+      "recall": 0.9944444444444445,
+      "f1-score": 0.9862258953168044,
+      "support": 180.0
+    },
+    "slack": {
+      "precision": 0.9835164835164835,
+      "recall": 0.9944444444444445,
+      "f1-score": 0.988950276243094,
+      "support": 180.0
+    },
+    "snipping_tool": {
+      "precision": 0.9836065573770492,
+      "recall": 1.0,
+      "f1-score": 0.9917355371900827,
+      "support": 180.0
+    },
+    "spotify": {
+      "precision": 0.994475138121547,
+      "recall": 1.0,
+      "f1-score": 0.997229916897507,
+      "support": 180.0
+    },
+    "steam": {
+      "precision": 0.988950276243094,
+      "recall": 0.9944444444444445,
+      "f1-score": 0.9916897506925207,
+      "support": 180.0
+    },
+    "substance_painter": {
+      "precision": 0.994475138121547,
+      "recall": 1.0,
+      "f1-score": 0.997229916897507,
+      "support": 180.0
+    },
+    "task_manager": {
+      "precision": 0.972972972972973,
+      "recall": 1.0,
+      "f1-score": 0.9863013698630136,
+      "support": 180.0
+    },
+    "teams": {
+      "precision": 0.994413407821229,
+      "recall": 0.9888888888888889,
+      "f1-score": 0.9916434540389972,
+      "support": 180.0
+    },
+    "telegram": {
+      "precision": 0.9840425531914894,
+      "recall": 1.0,
+      "f1-score": 0.9919571045576407,
+      "support": 185.0
+    },
+    "terminal": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 180.0
+    },
+    "tor_browser": {
+      "precision": 0.9836065573770492,
+      "recall": 1.0,
+      "f1-score": 0.9917355371900827,
+      "support": 180.0
+    },
+    "unity": {
+      "precision": 0.9835164835164835,
+      "recall": 0.9944444444444445,
+      "f1-score": 0.988950276243094,
+      "support": 180.0
+    },
+    "unknown": {
+      "precision": 0.9938385705483672,
+      "recall": 0.8700107874865156,
+      "f1-score": 0.9278113316077078,
+      "support": 1854.0
+    },
+    "unreal_engine": {
+      "precision": 0.989010989010989,
+      "recall": 1.0,
+      "f1-score": 0.994475138121547,
+      "support": 180.0
+    },
+    "viber": {
+      "precision": 0.989010989010989,
+      "recall": 1.0,
+      "f1-score": 0.994475138121547,
+      "support": 180.0
+    },
+    "visio": {
+      "precision": 0.9836065573770492,
+      "recall": 1.0,
+      "f1-score": 0.9917355371900827,
+      "support": 180.0
+    },
+    "visual_studio": {
+      "precision": 0.9836065573770492,
+      "recall": 1.0,
+      "f1-score": 0.9917355371900827,
+      "support": 180.0
+    },
+    "vlc": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 180.0
+    },
+    "voice_recorder": {
+      "precision": 0.989010989010989,
+      "recall": 1.0,
+      "f1-score": 0.994475138121547,
+      "support": 180.0
+    },
+    "vscode": {
+      "precision": 0.8909952606635071,
+      "recall": 0.9894736842105263,
+      "f1-score": 0.9376558603491272,
+      "support": 190.0
+    },
+    "webstorm": {
+      "precision": 0.9836065573770492,
+      "recall": 1.0,
+      "f1-score": 0.9917355371900827,
+      "support": 180.0
+    },
+    "whatsapp": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 180.0
+    },
+    "winrar": {
+      "precision": 0.994475138121547,
+      "recall": 1.0,
+      "f1-score": 0.997229916897507,
+      "support": 180.0
+    },
+    "word": {
+      "precision": 0.989010989010989,
+      "recall": 1.0,
+      "f1-score": 0.994475138121547,
+      "support": 180.0
+    },
+    "yandex_browser": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 180.0
+    },
+    "zbrush": {
+      "precision": 0.9835164835164835,
+      "recall": 0.9944444444444445,
+      "f1-score": 0.988950276243094,
+      "support": 180.0
+    },
+    "zoom": {
+      "precision": 0.9836065573770492,
+      "recall": 1.0,
+      "f1-score": 0.9917355371900827,
+      "support": 180.0
+    },
+    "accuracy": 0.9859584538522219,
+    "macro avg": {
+      "precision": 0.98556843121593,
+      "recall": 0.9971694439602309,
+      "f1-score": 0.9912385932905382,
+      "support": 19015.0
+    },
+    "weighted avg": {
+      "precision": 0.9862353099875699,
+      "recall": 0.9859584538522219,
+      "f1-score": 0.9856148386806277,
+      "support": 19015.0
+    }
+  }
+}

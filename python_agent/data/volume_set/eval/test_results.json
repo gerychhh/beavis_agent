@@ -1,0 +1,300 @@
+{
+  "model_path": "C:\\Users\\gerychhh_\\beavis_agent\\python_agent\\models\\volume_set_arg_model.joblib",
+  "summary": [
+    {
+      "name": "manual",
+      "total": 9,
+      "passed": 9,
+      "failed": 0,
+      "accuracy": 1.0
+    },
+    {
+      "name": "combined_first_500",
+      "total": 500,
+      "passed": 496,
+      "failed": 4,
+      "accuracy": 0.992
+    }
+  ],
+  "manual_results": [
+    {
+      "text": "звук на полную",
+      "normalized_text": "звук на полную",
+      "expected": {
+        "mode": "set",
+        "percent": 100
+      },
+      "predicted": {
+        "mode": "set",
+        "percent": 100
+      },
+      "ok": true,
+      "confidence": 0.7946,
+      "debug": {
+        "source": "value_model",
+        "action": "set",
+        "action_conf": 0.9332,
+        "value": "100",
+        "value_conf": 0.656
+      }
+    },
+    {
+      "text": "громкость 80",
+      "normalized_text": "громкость 80",
+      "expected": {
+        "mode": "set",
+        "percent": 80
+      },
+      "predicted": {
+        "mode": "set",
+        "percent": 80
+      },
+      "ok": true,
+      "confidence": 0.5856,
+      "debug": {
+        "source": "value_model",
+        "action": "set",
+        "action_conf": 0.9893,
+        "value": "80",
+        "value_conf": 0.1818
+      }
+    },
+    {
+      "text": "поставь на половину",
+      "normalized_text": "поставь на половину",
+      "expected": {
+        "mode": "set",
+        "percent": 50
+      },
+      "predicted": {
+        "mode": "set",
+        "percent": 50
+      },
+      "ok": true,
+      "confidence": 0.7761,
+      "debug": {
+        "source": "value_model",
+        "action": "set",
+        "action_conf": 0.9342,
+        "value": "50",
+        "value_conf": 0.618
+      }
+    },
+    {
+      "text": "убавь на 20",
+      "normalized_text": "убавь на 20",
+      "expected": {
+        "mode": "delta",
+        "delta": -20
+      },
+      "predicted": {
+        "mode": "delta",
+        "delta": -20
+      },
+      "ok": true,
+      "confidence": 0.6003,
+      "debug": {
+        "source": "value_model",
+        "action": "decrease",
+        "action_conf": 0.9743,
+        "value": "20",
+        "value_conf": 0.2264
+      }
+    },
+    {
+      "text": "сделай громкость до 20",
+      "normalized_text": "сделай громкость до 20",
+      "expected": {
+        "mode": "set",
+        "percent": 20
+      },
+      "predicted": {
+        "mode": "set",
+        "percent": 20
+      },
+      "ok": true,
+      "confidence": 0.6737,
+      "debug": {
+        "source": "value_model",
+        "action": "set",
+        "action_conf": 0.9994,
+        "value": "20",
+        "value_conf": 0.3479
+      }
+    },
+    {
+      "text": "прибавь на 10",
+      "normalized_text": "прибавь на 10",
+      "expected": {
+        "mode": "delta",
+        "delta": 10
+      },
+      "predicted": {
+        "mode": "delta",
+        "delta": 10
+      },
+      "ok": true,
+      "confidence": 0.8176,
+      "debug": {
+        "source": "value_model",
+        "action": "increase",
+        "action_conf": 0.9676,
+        "value": "10",
+        "value_conf": 0.6676
+      }
+    },
+    {
+      "text": "погромче",
+      "normalized_text": "погромче",
+      "expected": {
+        "mode": "delta",
+        "delta": 10
+      },
+      "predicted": {
+        "mode": "delta",
+        "delta": 10
+      },
+      "ok": true,
+      "confidence": 0.9276,
+      "debug": {
+        "source": "vague_model",
+        "action": "increase",
+        "action_conf": 0.9276,
+        "value": "NO_VALUE",
+        "value_conf": 0.3903,
+        "vague": "DELTA_PLUS_10",
+        "vague_conf": 0.537
+      }
+    },
+    {
+      "text": "потише",
+      "normalized_text": "потише",
+      "expected": {
+        "mode": "delta",
+        "delta": -10
+      },
+      "predicted": {
+        "mode": "delta",
+        "delta": -10
+      },
+      "ok": true,
+      "confidence": 0.9198,
+      "debug": {
+        "source": "vague_model",
+        "action": "decrease",
+        "action_conf": 0.9198,
+        "value": "NO_VALUE",
+        "value_conf": 0.52,
+        "vague": "DELTA_MINUS_10",
+        "vague_conf": 0.7974
+      }
+    },
+    {
+      "text": "бивис сделай звук на семдесят пять",
+      "normalized_text": "сделай звук на семдесят пять",
+      "expected": {
+        "mode": "set",
+        "percent": 75
+      },
+      "predicted": {
+        "mode": "set",
+        "percent": 75
+      },
+      "ok": true,
+      "confidence": 0.7966,
+      "debug": {
+        "source": "value_model",
+        "action": "set",
+        "action_conf": 0.9577,
+        "value": "75",
+        "value_conf": 0.6355
+      }
+    }
+  ],
+  "combined_failures": [
+    {
+      "text": "ну опусти звук до деисть",
+      "normalized_text": "опусти звук до деисть",
+      "expected": {
+        "mode": "set",
+        "percent": 10
+      },
+      "predicted": {
+        "mode": "set",
+        "percent": 9
+      },
+      "ok": false,
+      "confidence": 0.4753,
+      "debug": {
+        "source": "value_model",
+        "action": "set",
+        "action_conf": 0.8984,
+        "value": "9",
+        "value_conf": 0.0521
+      }
+    },
+    {
+      "text": "слушай еле слышно быстро",
+      "normalized_text": "еле слышно",
+      "expected": {
+        "mode": "delta",
+        "delta": 15
+      },
+      "predicted": {
+        "mode": "delta",
+        "delta": 10
+      },
+      "ok": false,
+      "confidence": 0.6504,
+      "debug": {
+        "source": "value_model",
+        "action": "increase",
+        "action_conf": 0.9065,
+        "value": "10",
+        "value_conf": 0.3944
+      }
+    },
+    {
+      "text": "короче сделай громкость на пятьдесят плиз",
+      "normalized_text": "сделай громкость на пятьдесят",
+      "expected": {
+        "mode": "set",
+        "percent": 50
+      },
+      "predicted": {
+        "mode": "set",
+        "percent": 55
+      },
+      "ok": false,
+      "confidence": 0.5555,
+      "debug": {
+        "source": "value_model",
+        "action": "set",
+        "action_conf": 0.9687,
+        "value": "55",
+        "value_conf": 0.1423
+      }
+    },
+    {
+      "text": "эй бивис прибери громкость на девяноста быстро",
+      "normalized_text": "прибери громкость на девяноста",
+      "expected": {
+        "mode": "delta",
+        "delta": -90
+      },
+      "predicted": {
+        "mode": "delta",
+        "delta": -95
+      },
+      "ok": false,
+      "confidence": 0.5447,
+      "debug": {
+        "source": "value_model",
+        "action": "decrease",
+        "action_conf": 0.9884,
+        "value": "95",
+        "value_conf": 0.101
+      }
+    }
+  ]
+}
