@@ -20,6 +20,7 @@ from python_agent.resolvers.app_catalog_overrides import (
     load_app_catalog_overrides,
 )
 from python_agent.resolvers.user_app_catalog import load_user_apps
+from python_agent.training.dataset_sources import dict_from_source, int_key_dict_from_source, list_from_source, load_training_source
 
 DATA_DIR = ROOT / "data" / "skill_classifier"
 PROCESSED_DIR = DATA_DIR / "processed"
@@ -34,234 +35,24 @@ SKILL_UNKNOWN = "unknown"
 
 RANDOM_SEED = 42
 
-AGENT_PREFIXES = [
-    "", "бивис ", "beavis ", "эй бивис ", "слушай бивис ",
-    "брух ", "бивис брух ", "алло бивис ", "окей бивис ",
-]
-SUFFIXES = ["", " пожалуйста", " быстро", " сейчас", " пж", " бро", " если можно", " давай"]
+_SOURCE = load_training_source("skill_classifier.json")
 
-APP_CATALOG = {
-    # browsers
-    "chrome": ["браузер", "хром", "chrome", "google chrome", "гугл хром", "интернет", "хромчик"],
-    "edge": ["edge", "эдж", "microsoft edge", "майкрософт эдж"],
-    "firefox": ["firefox", "фаерфокс", "файрфокс", "mozilla", "мозила"],
-    "opera": ["opera", "опера", "браузер опера"],
-    "brave": ["brave", "брейв"],
-    "yandex_browser": ["яндекс браузер", "yandex browser", "яндекс"],
-    "tor_browser": ["tor browser", "тор браузер", "tor", "тор"],
+AGENT_PREFIXES = list_from_source(_SOURCE, "agent_prefixes")
+SUFFIXES = list_from_source(_SOURCE, "suffixes")
+APP_CATALOG = dict_from_source(_SOURCE, "app_catalog")
+OPEN_TEMPLATES = list_from_source(_SOURCE, "open_templates")
+TYPO_PAIRS = [tuple(item) for item in list_from_source(_SOURCE, "typo_pairs")]
+NUMBER_WORDS = int_key_dict_from_source(_SOURCE, "number_words")
+VOLUME_FIXED = list_from_source(_SOURCE, "volume_fixed")
+VOLUME_SET_TEMPLATES = list_from_source(_SOURCE, "volume_set_templates")
+VOLUME_PLUS_TEMPLATES = list_from_source(_SOURCE, "volume_plus_templates")
+VOLUME_MINUS_TEMPLATES = list_from_source(_SOURCE, "volume_minus_templates")
+UNKNOWN_PHRASES = list_from_source(_SOURCE, "unknown_phrases")
+UNKNOWN_TEMPLATES = list_from_source(_SOURCE, "unknown_templates")
+CURATED_HARD_EXAMPLES = [tuple(item) for item in list_from_source(_SOURCE, "curated_hard_examples")]
+WINDOW_CONTROL_ACTION_WORDS = set(list_from_source(_SOURCE, "window_control_action_words"))
+MANUAL_TESTS = list_from_source(_SOURCE, "manual_tests")
 
-    # windows
-    "notepad": ["блокнот", "notepad", "нотпад", "текстовый редактор"],
-    "calculator": ["калькулятор", "calculator", "калк", "считалку"],
-    "explorer": ["проводник", "explorer", "файлы", "папки", "мой компьютер"],
-    "cmd": ["cmd", "цмд", "командная строка", "командную строку", "консоль cmd"],
-    "powershell": ["powershell", "павершелл", "пауэршелл", "power shell"],
-    "terminal": ["terminal", "терминал", "windows terminal", "виндовс терминал"],
-    "settings": ["настройки", "параметры", "settings", "параметры windows", "настройки винды"],
-    "task_manager": ["диспетчер задач", "task manager", "таск менеджер", "процессы"],
-    "control_panel": ["панель управления", "control panel", "контрол панель"],
-    "paint": ["paint", "пейнт", "паинт", "рисовалку"],
-    "snipping_tool": ["ножницы", "snipping tool", "сниппинг тул", "скриншот ножницы"],
-    "photos": ["фотографии", "photos", "просмотр фото"],
-    "camera": ["камера", "camera", "вебка"],
-    "voice_recorder": ["диктофон", "voice recorder", "запись голоса"],
-
-    # office
-    "word": ["word", "ворд", "microsoft word", "документ ворд"],
-    "excel": ["excel", "эксель", "microsoft excel", "таблицы"],
-    "powerpoint": ["powerpoint", "power point", "паверпоинт", "презентации"],
-    "outlook": ["outlook", "аутлук", "почта outlook", "почту"],
-    "onenote": ["onenote", "one note", "ван ноут", "заметки onenote"],
-    "access": ["access", "аксесс"],
-    "visio": ["visio", "висио"],
-    "project": ["microsoft project", "project"],
-
-    # messengers
-    "telegram": ["telegram", "телеграм", "телега", "тг", "телиграм", "телегу"],
-    "discord": ["discord", "дискорд", "дс", "дискордик"],
-    "whatsapp": ["whatsapp", "ватсап", "вацап", "ватс апп"],
-    "viber": ["viber", "вайбер", "вибер"],
-    "skype": ["skype", "скайп"],
-    "signal": ["signal", "сигнал"],
-    "slack": ["slack", "слак"],
-    "teams": ["teams", "тимс", "microsoft teams"],
-    "zoom": ["zoom", "зум"],
-
-    # adobe
-    "photoshop": ["photoshop", "фотошоп", "фатошоп", "adobe photoshop", "шоп"],
-    "illustrator": ["illustrator", "иллюстратор", "adobe illustrator"],
-    "premiere_pro": ["premiere pro", "премьер", "премьер про", "adobe premiere"],
-    "after_effects": ["after effects", "афтер эффектс", "after", "моушн дизайн"],
-    "audition": ["audition", "аудишн", "adobe audition"],
-    "lightroom": ["lightroom", "лайтрум"],
-    "acrobat_reader": ["acrobat", "acrobat reader", "акробат", "pdf reader", "пдф ридер"],
-    "indesign": ["indesign", "индизайн"],
-    "adobe_xd": ["adobe xd", "xd", "икс ди"],
-
-    # dev
-    "vscode": ["vscode", "vs code", "вс код", "visual studio code", "код", "где код пишу", "редактор кода"],
-    "visual_studio": ["visual studio", "вижуал студио", "студия", "vs ide"],
-    "pycharm": ["pycharm", "пайчарм", "пичарм", "python ide"],
-    "intellij_idea": ["intellij idea", "интеллидж", "idea", "идея"],
-    "webstorm": ["webstorm", "вебшторм"],
-    "phpstorm": ["phpstorm", "пхп шторм"],
-    "clion": ["clion", "си лайон", "cpp ide"],
-    "datagrip": ["datagrip", "дата грип"],
-    "android_studio": ["android studio", "андроид студио"],
-    "docker_desktop": ["docker", "docker desktop", "докер", "докер десктоп"],
-    "git_bash": ["git bash", "гит баш", "гит консоль"],
-    "github_desktop": ["github desktop", "гитхаб десктоп", "github"],
-    "postman": ["postman", "постман", "api клиент"],
-
-    # design / 3d / game dev / media
-    "blender": ["blender", "блендер", "3д блендер", "моделирование"],
-    "figma": ["figma", "фигма", "фигму", "дизайн макет"],
-    "fusion_360": ["fusion 360", "фьюжн", "фьюжен 360"],
-    "autocad": ["autocad", "автокад", "чертежи"],
-    "sketchup": ["sketchup", "скетчап"],
-    "max_3ds": ["3ds max", "3д макс", "три д макс"],
-    "maya": ["maya", "майя"],
-    "cinema_4d": ["cinema 4d", "синема 4д", "cinema"],
-    "zbrush": ["zbrush", "зибраш"],
-    "substance_painter": ["substance painter", "сабстанс", "substance", "текстуры"],
-    "unreal_engine": ["unreal engine", "анрил", "unreal", "ue5", "движок анрил"],
-    "unity": ["unity", "юнити", "unity hub"],
-    "godot": ["godot", "годот"],
-    "davinci_resolve": ["davinci", "davinci resolve", "давинчи", "resolve"],
-    "obs_studio": ["obs", "obs studio", "обс", "запись экрана"],
-    "vlc": ["vlc", "влц", "видео плеер"],
-    "steam": ["steam", "стим"],
-}
-
-OPEN_TEMPLATES = [
-    "открой {app}", "запусти {app}", "включи {app}", "открой мне {app}",
-    "запускай {app}", "мне нужен {app}", "давай {app}", "подними {app}",
-    "{app} открой", "{app} запусти", "{app} включи",
-    "можешь открыть {app}", "open {app}", "start {app}", "launch {app}",
-    "го {app}", "гоу {app}",
-]
-
-TYPO_PAIRS = [
-    ("открой", "аткрой"), ("открой", "открои"), ("запусти", "запусть"),
-    ("громкость", "громкасть"), ("громкость", "громкось"),
-    ("сделай", "сделавй"), ("слишком", "слышком"),
-    ("телеграм", "телиграм"), ("проводник", "правадник"),
-    ("блокнот", "блакнот"), ("калькулятор", "калкулятор"),
-    ("фотошоп", "фатошоп"), ("семьдесят", "семдесят"),
-    ("пятьдесят", "питдесят"), ("восемьдесят", "восимьдесят"),
-    ("максимум", "мксимум"), ("половину", "палавину"),
-]
-
-NUMBER_WORDS = {
-    0: ["ноль", "нуль"], 1: ["один", "одну"], 2: ["два", "две"], 3: ["три"],
-    4: ["четыре"], 5: ["пять"], 6: ["шесть"], 7: ["семь"], 8: ["восемь", "восимь"],
-    9: ["девять"], 10: ["десять", "десятку"], 11: ["одиннадцать"], 12: ["двенадцать"],
-    13: ["тринадцать"], 14: ["четырнадцать"], 15: ["пятнадцать"], 16: ["шестнадцать"],
-    17: ["семнадцать"], 18: ["восемнадцать"], 19: ["девятнадцать"],
-    20: ["двадцать"], 30: ["тридцать"], 40: ["сорок"], 50: ["пятьдесят", "питдесят"],
-    60: ["шестьдесят"], 70: ["семьдесят", "семдесят"], 80: ["восемьдесят", "восимьдесят"],
-    90: ["девяносто"], 100: ["сто", "сотку"],
-}
-
-VOLUME_FIXED = [
-    "громче", "погромче", "сделай громче", "сделавй громче", "звук громче",
-    "прибавь звук", "прибавь громкость", "увеличь звук", "увеличь громкость",
-    "чуть громче", "намного громче", "потише", "сделай тише", "звук тише",
-    "убавь звук", "убавь громкость", "сбавь звук", "уменьши громкость",
-    "чуть тише", "намного тише", "громко слишком", "слишком громко",
-    "динамики рвутся", "динамики рвуться", "колонки орут", "уши режет",
-    "на максимум", "на мксимум", "на максемум", "на полную", "во всю громкость",
-    "поставь на половину", "на половину", "наполовину", "на палавину",
-    "заткнись", "зактни", "выключи звук", "отключи звук", "убери звук",
-    "без звука", "в ноль", "mute", "еле слышно", "плохо слышно",
-    "почти не слышу", "сделай еле слышно", "сделай очень тихо",
-    "нормальная громкость", "комфортная громкость", "средняя громкость",
-    "динамики рвутца", "звук рвет динамики", "динамик рвется", "динамики сейчас рвутся",
-    "слишком громко динамики рвет", "заткни звук", "зактни звук", "заткнись звук",
-    "тишину сделай", "замолчи звук", "заткнись уже", "заткнись пожалуйста", "пожалуйста заткнись", "ну заткнись", "эй заткнись", "хватит орать", "эй бивис зактни", "бивис зактни пожалуйста", "бивис зактни уже", "бивис зактни звук", "бивис заткни", "бивис заткнись уже", "зактни динамики", "зактни колонки", "закти звук", "закни звук", "еле слышно звук", "очень плохо слышно",
-    "саунд тише", "саунд потише", "sound потише", "звук почти не слышен",
-]
-
-VOLUME_SET_TEMPLATES = [
-    "громкость на {n}", "звук на {n}", "сделай громкость на {n}",
-    "поставь звук на {n}", "установи громкость {n}", "выставь звук {n}",
-    "сделай {n}", "поставь {n} громкость", "громкость до {n}",
-    "убавь до {n}", "снизь до {n}", "подними до {n}",
-]
-VOLUME_PLUS_TEMPLATES = [
-    "прибавь на {n}", "увеличь на {n}", "сделай на {n} громче",
-    "громче на {n}", "добавь громкость на {n}", "подними звук на {n}",
-]
-VOLUME_MINUS_TEMPLATES = [
-    "убавь на {n}", "уменьши на {n}", "сделай на {n} тише",
-    "тише на {n}", "сбавь звук на {n}", "опусти громкость на {n}",
-]
-
-UNKNOWN_PHRASES = [
-    "какая погода", "погода на завтра", "сколько градусов", "поставь таймер",
-    "таймер на десять минут", "поставь будильник", "напомни мне завтра",
-    "создай заметку", "запиши заметку", "найди файл", "удали файл",
-    "создай папку", "сделай скриншот", "сними экран", "запиши экран",
-    "закрой браузер", "сверни окно", "разверни окно", "переключи окно",
-    "перезагрузи компьютер", "выключи компьютер", "отправь сообщение",
-    "напиши в телеграм", "прочитай сообщения", "что у меня в календаре",
-    "создай встречу", "включи вайфай", "выключи блютуз", "найди в интернете",
-    "загугли рецепт", "что такое машинное обучение", "расскажи анекдот",
-    "как дела", "ты кто", "помоги с кодом", "реши пример",
-    "сколько будет два плюс два", "открой окно", "закрой дверь",
-    "сделай кофе", "перемести мышку", "кликни сюда", "нажми enter",
-    "введи текст", "скопируй это", "поставь музыку", "следующий трек",
-    "пауза видео", "плей", "останови музыку", "микрофон работает",
-    "проверь интернет", "обнови драйвер", "установи программу",
-    "бивис", "брух", "алло", "эээ ну это", "что там", "давай потом",
-    "сделай", "настрой", "поставь",
-    "открой пожалуйста", "открой что", "открой мне", "что открыть", "запусти что",
-    "что запустить", "включи что-нибудь", "что такое random forest", "объясни random forest",
-    "что такое leakage", "объясни машинное обучение", "что такое системный журнал",
-]
-UNKNOWN_TEMPLATES = [
-    "{phrase}", "бивис {phrase}", "эй бивис {phrase}", "брух {phrase}",
-    "пожалуйста {phrase}", "можешь {phrase}", "ну ка {phrase}",
-]
-
-CURATED_HARD_EXAMPLES = [
-    ("еле слышно", SKILL_VOLUME_SET),
-    ("еле слышно звук", SKILL_VOLUME_SET),
-    ("звук еле слышно", SKILL_VOLUME_SET),
-    ("саунд потише", SKILL_VOLUME_SET),
-    ("саунд тише", SKILL_VOLUME_SET),
-    ("sound потише", SKILL_VOLUME_SET),
-    ("динамики рвуться", SKILL_VOLUME_SET),
-    ("динамики рвутся", SKILL_VOLUME_SET),
-    ("колонки орут", SKILL_VOLUME_SET),
-    ("бивис зактни", SKILL_VOLUME_SET),
-    ("зактни", SKILL_VOLUME_SET),
-    ("заткнись", SKILL_VOLUME_SET),
-    ("заткнись звук", SKILL_VOLUME_SET),
-    ("поставь на палавину", SKILL_VOLUME_SET),
-    ("открой", SKILL_OPEN_APP),
-    ("открыть", SKILL_OPEN_APP),
-    ("открывай", SKILL_OPEN_APP),
-]
-
-WINDOW_CONTROL_ACTION_WORDS = {
-    "\u0437\u0430\u043a\u0440\u043e\u0439",
-    "\u0437\u0430\u043a\u0440\u044b\u0442\u044c",
-    "\u0437\u0430\u043a\u0440\u044b\u0432\u0430\u0439",
-    "\u0437\u0430\u043a\u0442\u043d\u0438",
-    "\u0441\u0432\u0435\u0440\u043d\u0438",
-    "\u0441\u0432\u0435\u0440\u043d\u0443\u0442\u044c",
-    "\u0441\u043f\u0440\u044f\u0447\u044c",
-    "\u0440\u0430\u0437\u0432\u0435\u0440\u043d\u0438",
-    "\u0440\u0430\u0437\u0432\u0435\u0440\u043d\u0443\u0442\u044c",
-    "\u0432\u043e\u0441\u0441\u0442\u0430\u043d\u043e\u0432\u0438",
-    "\u0432\u0435\u0440\u043d\u0438",
-    "close",
-    "minimize",
-    "maximize",
-    "restore",
-    "fullscreen",
-}
 
 def norm(text: str) -> str:
     return " ".join(str(text).lower().split())
@@ -550,80 +341,7 @@ def generate_unknown_rows(rng, count):
     return rows[:count]
 
 def manual_tests():
-    pairs = [
-        ("брух сделай громче", SKILL_VOLUME_SET),
-        ("сделавй громче", SKILL_VOLUME_SET),
-        ("бивис громкость на десять", SKILL_VOLUME_SET),
-        ("динамики рвуться", SKILL_VOLUME_SET),
-        ("заткнись", SKILL_VOLUME_SET),
-        ("бивис зактни", SKILL_VOLUME_SET),
-        ("громко слишком", SKILL_VOLUME_SET),
-        ("поставь звук на семдесят пять", SKILL_VOLUME_SET),
-        ("сделай на 20 тише", SKILL_VOLUME_SET),
-        ("прибавь на пятнадцать", SKILL_VOLUME_SET),
-        ("еле слышно", SKILL_VOLUME_SET),
-        ("сделай еле слышно", SKILL_VOLUME_SET),
-        ("на мксимум громкость", SKILL_VOLUME_SET),
-        ("поставь на палавину", SKILL_VOLUME_SET),
-        ("колонки орут сделай тише", SKILL_VOLUME_SET),
-        ("звук на восимьдесят", SKILL_VOLUME_SET),
-        ("убавь до двадцати", SKILL_VOLUME_SET),
-        ("саунд потише", SKILL_VOLUME_SET),
-        ("mute звук", SKILL_VOLUME_SET),
-
-        ("бивис открой браузер", SKILL_OPEN_APP),
-        ("открой хром", SKILL_OPEN_APP),
-        ("браузер включи", SKILL_OPEN_APP),
-        ("запусти блокнот", SKILL_OPEN_APP),
-        ("бивис открой вс код", SKILL_OPEN_APP),
-        ("открой где код пишу", SKILL_OPEN_APP),
-        ("код открой", SKILL_OPEN_APP),
-        ("открой телиграм", SKILL_OPEN_APP),
-        ("тг запусти", SKILL_OPEN_APP),
-        ("включи дискордик", SKILL_OPEN_APP),
-        ("открой калькулятор", SKILL_OPEN_APP),
-        ("правадник запусти", SKILL_OPEN_APP),
-        ("командную строку открой", SKILL_OPEN_APP),
-        ("павершелл запусти", SKILL_OPEN_APP),
-        ("настройки винды", SKILL_OPEN_APP),
-        ("открой фотошоп", SKILL_OPEN_APP),
-        ("запусти премьер про", SKILL_OPEN_APP),
-        ("открой фигму", SKILL_OPEN_APP),
-        ("анрил включи", SKILL_OPEN_APP),
-        ("пайчарм открой", SKILL_OPEN_APP),
-        ("open visual studio code", SKILL_OPEN_APP),
-        ("start chrome", SKILL_OPEN_APP),
-        ("го телегу", SKILL_OPEN_APP),
-        ("запусти 3д макс", SKILL_OPEN_APP),
-        ("открой docker desktop", SKILL_OPEN_APP),
-        ("постман включи", SKILL_OPEN_APP),
-
-        ("закрой браузер", SKILL_WINDOW_CONTROL),
-        ("закрой хром", SKILL_WINDOW_CONTROL),
-        ("сверни окно", SKILL_WINDOW_CONTROL),
-        ("сверни блокнот", SKILL_WINDOW_CONTROL),
-        ("разверни окно", SKILL_WINDOW_CONTROL),
-        ("восстанови текущее окно", SKILL_WINDOW_CONTROL),
-        ("верни телеграм", SKILL_WINDOW_CONTROL),
-        ("close chrome", SKILL_WINDOW_CONTROL),
-        ("minimize current window", SKILL_WINDOW_CONTROL),
-
-        ("какая погода завтра", SKILL_UNKNOWN),
-        ("поставь таймер на десять минут", SKILL_UNKNOWN),
-        ("создай заметку про проект", SKILL_UNKNOWN),
-        ("сделай скриншот", SKILL_UNKNOWN),
-        ("напиши сообщение в телеграм", SKILL_UNKNOWN),
-        ("найди файл отчет", SKILL_UNKNOWN),
-        ("расскажи анекдот", SKILL_UNKNOWN),
-        ("что такое random forest", SKILL_UNKNOWN),
-        ("введи текст привет", SKILL_UNKNOWN),
-        ("перезагрузи компьютер", SKILL_UNKNOWN),
-        ("следующий трек", SKILL_UNKNOWN),
-        ("поставь музыку", SKILL_UNKNOWN),
-        ("бивис", SKILL_UNKNOWN),
-        ("открой", SKILL_OPEN_APP),
-    ]
-    return [{"text": t, "expected_skill": y} for t, y in pairs]
+    return [dict(item) for item in MANUAL_TESTS]
 
 
 def build_manual_tests(app_catalog, disabled_app_catalog=None):

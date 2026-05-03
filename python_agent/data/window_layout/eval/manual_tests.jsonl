@@ -23,26 +23,12 @@
 {"text": "поставь 3ds max 2025 слева", "expected": {"layout": "left_half", "targets": ["3ds_max_2025"]}}
 {"text": "access на весь экран", "expected": {"layout": "fullscreen", "targets": ["access"]}}
 {"text": "поставь access слева", "expected": {"layout": "left_half", "targets": ["access"]}}
-{"text": "adobe xd на весь экран", "expected": {"layout": "fullscreen", "targets": ["adobe_xd"]}}
-{"text": "поставь adobe xd слева", "expected": {"layout": "left_half", "targets": ["adobe_xd"]}}
-{"text": "animate на весь экран", "expected": {"layout": "fullscreen", "targets": ["animate"]}}
-{"text": "поставь animate слева", "expected": {"layout": "left_half", "targets": ["animate"]}}
-{"text": "audition на весь экран", "expected": {"layout": "fullscreen", "targets": ["audition"]}}
-{"text": "поставь audition слева", "expected": {"layout": "left_half", "targets": ["audition"]}}
-{"text": "bridge на весь экран", "expected": {"layout": "fullscreen", "targets": ["bridge"]}}
-{"text": "поставь bridge слева", "expected": {"layout": "left_half", "targets": ["bridge"]}}
-{"text": "camera на весь экран", "expected": {"layout": "fullscreen", "targets": ["camera"]}}
-{"text": "поставь camera слева", "expected": {"layout": "left_half", "targets": ["camera"]}}
 {"text": "codex на весь экран", "expected": {"layout": "fullscreen", "targets": ["codex"]}}
 {"text": "поставь codex слева", "expected": {"layout": "left_half", "targets": ["codex"]}}
 {"text": "control panel на весь экран", "expected": {"layout": "fullscreen", "targets": ["control_panel"]}}
 {"text": "поставь control panel слева", "expected": {"layout": "left_half", "targets": ["control_panel"]}}
 {"text": "cyberpunk 2077 на весь экран", "expected": {"layout": "fullscreen", "targets": ["cyberpunk_2077"]}}
 {"text": "поставь cyberpunk 2077 слева", "expected": {"layout": "left_half", "targets": ["cyberpunk_2077"]}}
-{"text": "datagrip на весь экран", "expected": {"layout": "fullscreen", "targets": ["datagrip"]}}
-{"text": "поставь datagrip слева", "expected": {"layout": "left_half", "targets": ["datagrip"]}}
-{"text": "dbeaver на весь экран", "expected": {"layout": "fullscreen", "targets": ["dbeaver"]}}
-{"text": "поставь dbeaver слева", "expected": {"layout": "left_half", "targets": ["dbeaver"]}}
 {"text": "device manager на весь экран", "expected": {"layout": "fullscreen", "targets": ["device_manager"]}}
 {"text": "поставь device manager слева", "expected": {"layout": "left_half", "targets": ["device_manager"]}}
 {"text": "disk management на весь экран", "expected": {"layout": "fullscreen", "targets": ["disk_management"]}}
@@ -53,26 +39,14 @@
 {"text": "поставь epic games слева", "expected": {"layout": "left_half", "targets": ["epic_games"]}}
 {"text": "event viewer на весь экран", "expected": {"layout": "fullscreen", "targets": ["event_viewer"]}}
 {"text": "поставь event viewer слева", "expected": {"layout": "left_half", "targets": ["event_viewer"]}}
-{"text": "github desktop на весь экран", "expected": {"layout": "fullscreen", "targets": ["github_desktop"]}}
-{"text": "поставь github desktop слева", "expected": {"layout": "left_half", "targets": ["github_desktop"]}}
-{"text": "indesign на весь экран", "expected": {"layout": "fullscreen", "targets": ["indesign"]}}
-{"text": "поставь indesign слева", "expected": {"layout": "left_half", "targets": ["indesign"]}}
 {"text": "media encoder на весь экран", "expected": {"layout": "fullscreen", "targets": ["media_encoder"]}}
 {"text": "поставь media encoder слева", "expected": {"layout": "left_half", "targets": ["media_encoder"]}}
 {"text": "microsoft store на весь экран", "expected": {"layout": "fullscreen", "targets": ["microsoft_store"]}}
 {"text": "поставь microsoft store слева", "expected": {"layout": "left_half", "targets": ["microsoft_store"]}}
 {"text": "mysql workbench на весь экран", "expected": {"layout": "fullscreen", "targets": ["mysql_workbench"]}}
 {"text": "поставь mysql workbench слева", "expected": {"layout": "left_half", "targets": ["mysql_workbench"]}}
-{"text": "notion на весь экран", "expected": {"layout": "fullscreen", "targets": ["notion"]}}
-{"text": "поставь notion слева", "expected": {"layout": "left_half", "targets": ["notion"]}}
-{"text": "obsidian на весь экран", "expected": {"layout": "fullscreen", "targets": ["obsidian"]}}
-{"text": "поставь obsidian слева", "expected": {"layout": "left_half", "targets": ["obsidian"]}}
 {"text": "pgadmin на весь экран", "expected": {"layout": "fullscreen", "targets": ["pgadmin"]}}
 {"text": "поставь pgadmin слева", "expected": {"layout": "left_half", "targets": ["pgadmin"]}}
-{"text": "photos на весь экран", "expected": {"layout": "fullscreen", "targets": ["photos"]}}
-{"text": "поставь photos слева", "expected": {"layout": "left_half", "targets": ["photos"]}}
-{"text": "phpstorm на весь экран", "expected": {"layout": "fullscreen", "targets": ["phpstorm"]}}
-{"text": "поставь phpstorm слева", "expected": {"layout": "left_half", "targets": ["phpstorm"]}}
 {"text": "planetvpn на весь экран", "expected": {"layout": "fullscreen", "targets": ["planetvpn1"]}}
 {"text": "поставь planetvpn слева", "expected": {"layout": "left_half", "targets": ["planetvpn1"]}}
 {"text": "microsoft project на весь экран", "expected": {"layout": "fullscreen", "targets": ["project"]}}
@@ -91,18 +65,60 @@
 {"text": "поставь steam слева", "expected": {"layout": "left_half", "targets": ["steam"]}}
 {"text": "substance painter на весь экран", "expected": {"layout": "fullscreen", "targets": ["substance_painter"]}}
 {"text": "поставь substance painter слева", "expected": {"layout": "left_half", "targets": ["substance_painter"]}}
-{"text": "visio на весь экран", "expected": {"layout": "fullscreen", "targets": ["visio"]}}
-{"text": "поставь visio слева", "expected": {"layout": "left_half", "targets": ["visio"]}}
-{"text": "vlc на весь экран", "expected": {"layout": "fullscreen", "targets": ["vlc"]}}
-{"text": "поставь vlc слева", "expected": {"layout": "left_half", "targets": ["vlc"]}}
-{"text": "voice recorder на весь экран", "expected": {"layout": "fullscreen", "targets": ["voice_recorder"]}}
-{"text": "поставь voice recorder слева", "expected": {"layout": "left_half", "targets": ["voice_recorder"]}}
 {"text": "winrar на весь экран", "expected": {"layout": "fullscreen", "targets": ["winrar"]}}
 {"text": "поставь winrar слева", "expected": {"layout": "left_half", "targets": ["winrar"]}}
 {"text": "wireshark на весь экран", "expected": {"layout": "fullscreen", "targets": ["wireshark"]}}
 {"text": "поставь wireshark слева", "expected": {"layout": "left_half", "targets": ["wireshark"]}}
 {"text": "яндекс музыка на весь экран", "expected": {"layout": "fullscreen", "targets": ["yandexmusic"]}}
 {"text": "поставь яндекс музыка слева", "expected": {"layout": "left_half", "targets": ["yandexmusic"]}}
+{"text": "adobe xd на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь adobe xd слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "икс ди на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь икс ди слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "эдоб xd на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь эдоб xd слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "adobe хд на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь adobe хд слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "android studio на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь android studio слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "андроид студио на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь андроид студио слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "студия android на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь студия android слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "андройд студио на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь андройд студио слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "android studo на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь android studo слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "андроид студия на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь андроид студия слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "adobe animate на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь adobe animate слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "audition на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь audition слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "adobe audition на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь adobe audition слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "адоб аудишн на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь адоб аудишн слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "brave browser на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь brave browser слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "браузер brave на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь браузер brave слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "adobe bridge на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь adobe bridge слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "адоб бридж на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь адоб бридж слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "веб камера на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь веб камера слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "камера windows на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь камера windows слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "cinema 4d на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь cinema 4d слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "синема 4d на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь синема 4d слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "cinema four d на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь cinema four d слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "синема фор ди на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь синема фор ди слева", "expected": {"missing": ["layout", "targets"]}}
 {"text": "си лайон на весь экран", "expected": {"missing": ["layout", "targets"]}}
 {"text": "поставь си лайон слева", "expected": {"missing": ["layout", "targets"]}}
 {"text": "си лев на весь экран", "expected": {"missing": ["layout", "targets"]}}
@@ -111,13 +127,171 @@
 {"text": "поставь c lion слева", "expected": {"missing": ["layout", "targets"]}}
 {"text": "си лаен на весь экран", "expected": {"missing": ["layout", "targets"]}}
 {"text": "поставь си лаен слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "datagrip на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь datagrip слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "data grip на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь data grip слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "датагрип на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь датагрип слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "дата грип на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь дата грип слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "дата грипп на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь дата грипп слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "датагрипп на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь датагрипп слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "davinci resolve на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь davinci resolve слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "да винчи на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь да винчи слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "давинчи резолв на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь давинчи резолв слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "ди бивер на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь ди бивер слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "д бивер на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь д бивер слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "d beaver на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь d beaver слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "docker desktop на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь docker desktop слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "докер десктоп на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь докер десктоп слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "fusion 360 на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь fusion 360 слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "фьюжен 360 на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь фьюжен 360 слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "фужен 360 на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь фужен 360 слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "фьюжн триста шестьдесят на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь фьюжн триста шестьдесят слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "git bash на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь git bash слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "гит баш на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь гит баш слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "git terminal на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь git terminal слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "баш гит на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь баш гит слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "github desktop на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь github desktop слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "гитхаб десктоп на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь гитхаб десктоп слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "гит хаб десктоп на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь гит хаб десктоп слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "гитхаб десктопп на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь гитхаб десктопп слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "git hub desktop на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь git hub desktop слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "indesign на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь indesign слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "adobe indesign на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь adobe indesign слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "индизайн на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь индизайн слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "ин дизайн на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь ин дизайн слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "индизайин на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь индизайин слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "индезайн на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь индезайн слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "3ds max на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь 3ds max слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "3d max на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь 3d max слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "три дэ макс на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь три дэ макс слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "3 ds max на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь 3 ds max слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "тридэ макс на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь тридэ макс слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "notion app на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь notion app слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "obsidian на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь obsidian слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "обсидиан на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь обсидиан слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "obsidian notes на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь obsidian notes слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "обсидианн на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь обсидианн слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "обсидиен на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь обсидиен слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "obsidion на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь obsidion слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "фотографии на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь фотографии слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "просмотр фото на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь просмотр фото слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "фотаграфии на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь фотаграфии слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "phpstorm на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь phpstorm слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "php storm на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь php storm слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "пхп шторм на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь пхп шторм слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "пиэйчпи шторм на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь пиэйчпи шторм слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "пхпшторм на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь пхпшторм слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "пхп сторм на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь пхп сторм слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "signal messenger на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь signal messenger слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "sketchup на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь sketchup слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "скетч ап на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь скетч ап слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "sketch up на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь sketch up слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "скетчапп на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь скетчапп слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "рабочий чат на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь рабочий чат слева", "expected": {"missing": ["layout", "targets"]}}
 {"text": "microsoft teams на весь экран", "expected": {"missing": ["layout", "targets"]}}
 {"text": "поставь microsoft teams слева", "expected": {"missing": ["layout", "targets"]}}
 {"text": "майкрософт тимс на весь экран", "expected": {"missing": ["layout", "targets"]}}
 {"text": "поставь майкрософт тимс слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "microsoft visio на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь microsoft visio слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "схемы visio на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь схемы visio слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "vlc player на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь vlc player слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "вэ эл це на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь вэ эл це слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "плеер vlc на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь плеер vlc слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "voice recorder на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь voice recorder слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "звукозапись на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь звукозапись слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "диктофон на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь диктофон слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "запись голоса на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь запись голоса слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "звукозапис на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь звукозапис слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "диктофан на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь диктофан слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "webstorm на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь webstorm слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "вебшторм на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь вебшторм слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "веб сторм на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь веб сторм слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "вэбшторм на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь вэбшторм слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "web storm на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь web storm слева", "expected": {"missing": ["layout", "targets"]}}
 {"text": "yandex browser на весь экран", "expected": {"missing": ["layout", "targets"]}}
 {"text": "поставь yandex browser слева", "expected": {"missing": ["layout", "targets"]}}
 {"text": "яндекс браузер на весь экран", "expected": {"missing": ["layout", "targets"]}}
 {"text": "поставь яндекс браузер слева", "expected": {"missing": ["layout", "targets"]}}
 {"text": "браузер яндекс на весь экран", "expected": {"missing": ["layout", "targets"]}}
 {"text": "поставь браузер яндекс слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "зи браш на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь зи браш слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "з брасх на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь з брасх слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "z brush на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь z brush слева", "expected": {"missing": ["layout", "targets"]}}

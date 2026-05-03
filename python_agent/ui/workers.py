@@ -12,9 +12,12 @@ from python_agent.voice.service import VoiceService
 from python_agent.voice.settings import VoiceSettings
 from python_agent.training.add_user_app import (
     AddUserAppRequest,
+    AppCatalogChange,
+    ApplyUserAppChangesRequest,
     DeleteUserAppRequest,
     UpdateUserAppRequest,
     add_user_app,
+    apply_user_app_changes,
     delete_user_app,
     list_user_app_records,
     list_windows_apps,
@@ -198,6 +201,42 @@ class DeleteUserAppTask(QRunnable):
                     app_id=self.app_id,
                     retrain=True,
                 ),
+                progress=self.signals.progress.emit,
+            )
+        except Exception as error:  # pragma: no cover - UI background task boundary.
+            details = traceback.format_exception_only(type(error), error)
+            self.signals.failed.emit("".join(details).strip())
+        else:
+            self.signals.succeeded.emit(result)
+        finally:
+            self.signals.finished.emit()
+
+
+class ApplyUserAppChangesTask(QRunnable):
+    def __init__(self, changes: list[dict[str, object]]) -> None:
+        super().__init__()
+        self.changes = changes
+        self.signals = UserAppTaskSignals()
+
+    @Slot()
+    def run(self) -> None:
+        try:
+            request_changes = []
+            for item in self.changes:
+                path_value = str(item.get("path") or "").strip()
+                request_changes.append(AppCatalogChange(
+                    operation=str(item.get("operation") or ""),
+                    source=str(item.get("source") or ""),
+                    app_id=str(item.get("app_id") or ""),
+                    display_name=str(item.get("display_name") or ""),
+                    speech_forms=[str(value) for value in item.get("speech_forms") or []],
+                    path=Path(path_value) if path_value else None,
+                    windows_app_id=str(item.get("windows_app_id") or "") or None,
+                    launch_type=str(item.get("launch_type") or "apps_folder"),
+                    launch_target=str(item.get("launch_target") or "") or None,
+                ))
+            result = apply_user_app_changes(
+                ApplyUserAppChangesRequest(changes=request_changes, retrain=True),
                 progress=self.signals.progress.emit,
             )
         except Exception as error:  # pragma: no cover - UI background task boundary.
@@ -500,7 +539,7 @@ class UserAppRunner(QObject):
         super().__init__()
         self.thread_pool = QThreadPool(self)
         self.thread_pool.setMaxThreadCount(1)
-        self._active_tasks: set[UserAppTask | WindowsAppsTask | UserAppsTask | UpdateUserAppTask | DeleteUserAppTask] = set()
+        self._active_tasks: set[QRunnable] = set()
 
     def add_app(
         self,
@@ -560,6 +599,22 @@ class UserAppRunner(QObject):
             return False
 
         task = DeleteUserAppTask(app_id.strip())
+        task.signals.progress.connect(self.progress)
+        task.signals.succeeded.connect(self.succeeded)
+        task.signals.failed.connect(self.failed)
+        task.signals.finished.connect(self.finished)
+        task.signals.finished.connect(lambda task=task: self._active_tasks.discard(task))
+
+        self._active_tasks.add(task)
+        self.thread_pool.start(task)
+        return True
+
+    def apply_app_changes(self, changes: list[dict[str, object]]) -> bool:
+        if not changes:
+            self.failed.emit("Нет изменений для применения")
+            return False
+
+        task = ApplyUserAppChangesTask(changes)
         task.signals.progress.connect(self.progress)
         task.signals.succeeded.connect(self.succeeded)
         task.signals.failed.connect(self.failed)

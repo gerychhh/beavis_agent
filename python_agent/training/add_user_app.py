@@ -14,9 +14,11 @@ if __package__ is None or __package__ == "":
 from python_agent.core.pipeline import CommandPipeline
 from python_agent.resolvers import app_indexer
 from python_agent.resolvers.app_catalog_overrides import (
+    AppCatalogOverride,
     DEFAULT_APP_OVERRIDES_PATH,
     disable_app_catalog_entry,
     load_app_catalog_overrides,
+    save_app_catalog_overrides,
     update_app_catalog_speech_forms,
 )
 from python_agent.resolvers.user_app_catalog import (
@@ -28,6 +30,8 @@ from python_agent.resolvers.user_app_catalog import (
     delete_user_app_record,
     load_user_apps,
     normalize_app_id,
+    normalize_speech_forms,
+    save_user_apps,
     update_user_app_speech_forms,
 )
 from python_agent.resolvers.windows_app_discovery import discover_windows_apps
@@ -90,6 +94,44 @@ class DeleteUserAppRequest:
     overrides_path: Path = DEFAULT_APP_OVERRIDES_PATH
 
 
+@dataclass(frozen=True)
+class AppCatalogChange:
+    operation: str
+    source: str
+    app_id: str
+    display_name: str = ""
+    speech_forms: list[str] = field(default_factory=list)
+    path: Path | None = None
+    windows_app_id: str | None = None
+    launch_type: str = "apps_folder"
+    launch_target: str | None = None
+
+
+@dataclass(frozen=True)
+class ApplyUserAppChangesRequest:
+    changes: list[AppCatalogChange]
+    retrain: bool = True
+    catalog_path: Path = DEFAULT_USER_APPS_PATH
+    index_output_path: Path = app_indexer.DEFAULT_OUTPUT_PATH
+    overrides_path: Path = DEFAULT_APP_OVERRIDES_PATH
+
+
+@dataclass(frozen=True)
+class ApplyUserAppChangesResult:
+    changes: list[dict[str, Any]]
+    index_summary: dict[str, Any]
+    commands: list[dict[str, Any]]
+    smoke_results: list[dict[str, Any]]
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "changes": self.changes,
+            "index_summary": self.index_summary,
+            "commands": self.commands,
+            "smoke_results": self.smoke_results,
+        }
+
+
 def add_user_app(
     request: AddUserAppRequest,
     progress: ProgressCallback | None = None,
@@ -120,6 +162,136 @@ def add_user_app(
     progress("Готово")
     return AddUserAppResult(
         app=record,
+        index_summary=index_summary,
+        commands=commands,
+        smoke_results=smoke_results,
+    )
+
+
+def apply_user_app_changes(
+    request: ApplyUserAppChangesRequest,
+    progress: ProgressCallback | None = None,
+) -> ApplyUserAppChangesResult:
+    progress = progress or (lambda _message: None)
+    progress("Проверяю изменения")
+
+    user_records = {record.app_id: record for record in load_user_apps(request.catalog_path)}
+    overrides = dict(load_app_catalog_overrides(request.overrides_path))
+    applied: list[dict[str, Any]] = []
+    smoke_records: list[UserAppRecord] = []
+
+    if not request.changes:
+        raise ValueError("No app catalog changes to apply")
+
+    for raw_change in request.changes:
+        operation = raw_change.operation.strip().lower()
+        app_id = normalize_app_id(raw_change.app_id)
+        if operation not in {"add", "update_speech_forms", "delete"}:
+            raise ValueError(f"Unsupported app catalog operation: {raw_change.operation}")
+        if not app_id:
+            raise ValueError("app_id is required")
+
+        if operation == "add":
+            record = _build_record(
+                AddUserAppRequest(
+                    path=raw_change.path,
+                    display_name=raw_change.display_name,
+                    app_id=app_id,
+                    speech_forms=raw_change.speech_forms,
+                    windows_app_id=raw_change.windows_app_id,
+                    launch_type=raw_change.launch_type,
+                    launch_target=raw_change.launch_target,
+                    retrain=False,
+                    catalog_path=request.catalog_path,
+                    index_output_path=request.index_output_path,
+                    overrides_path=request.overrides_path,
+                )
+            )
+            active_builtin_ids = {
+                builtin_id
+                for builtin_id in APP_CATALOG
+                if not (builtin_id in overrides and overrides[builtin_id].disabled)
+            }
+            if record.app_id in user_records or record.app_id in active_builtin_ids:
+                raise ValueError(f"app_id is already used: {record.app_id}")
+
+            user_records[record.app_id] = record
+            applied.append({"operation": "add", "source": "user", "app_id": record.app_id})
+            smoke_records.append(record)
+            continue
+
+        if operation == "update_speech_forms":
+            forms = normalize_speech_forms(raw_change.speech_forms)
+            if app_id in user_records:
+                current = user_records[app_id]
+                record = UserAppRecord(
+                    app_id=current.app_id,
+                    display_name=current.display_name,
+                    launch_type=current.launch_type,
+                    launch_target=current.launch_target,
+                    target_path=current.target_path,
+                    working_directory=current.working_directory,
+                    speech_forms=forms,
+                )
+                user_records[app_id] = record
+                applied.append({"operation": "update_speech_forms", "source": "user", "app_id": app_id})
+                smoke_records.append(record)
+            elif app_id in APP_CATALOG:
+                current = overrides.get(app_id, AppCatalogOverride(app_id=app_id))
+                overrides[app_id] = AppCatalogOverride(
+                    app_id=app_id,
+                    speech_forms=forms,
+                    disabled=current.disabled,
+                )
+                record = _builtin_record_payload(app_id, forms, disabled=current.disabled)
+                applied.append({"operation": "update_speech_forms", "source": "builtin", "app_id": app_id})
+                if not current.disabled:
+                    smoke_records.append(record)
+            else:
+                raise ValueError(f"app not found: {app_id}")
+            continue
+
+        if operation == "delete":
+            if app_id in user_records:
+                del user_records[app_id]
+                applied.append({"operation": "delete", "source": "user", "app_id": app_id})
+            elif app_id in APP_CATALOG:
+                current = overrides.get(app_id, AppCatalogOverride(app_id=app_id))
+                overrides[app_id] = AppCatalogOverride(
+                    app_id=app_id,
+                    speech_forms=current.speech_forms,
+                    disabled=True,
+                )
+                applied.append({"operation": "delete", "source": "builtin", "app_id": app_id})
+            else:
+                raise ValueError(f"app not found: {app_id}")
+
+    progress("Сохраняю изменения")
+    save_user_apps(sorted(user_records.values(), key=lambda item: item.app_id), request.catalog_path)
+    save_app_catalog_overrides(overrides, request.overrides_path)
+
+    progress("Обновляю индекс")
+    index_summary = rebuild_apps_index(request.catalog_path, request.index_output_path, request.overrides_path)
+
+    commands: list[dict[str, Any]] = []
+    smoke_results: list[dict[str, Any]] = []
+    if request.retrain:
+        commands.extend(_run_training(progress, request.catalog_path, request.overrides_path))
+
+        progress("Проверяю новые фразы")
+        checked_ids: set[str] = set()
+        for record in smoke_records:
+            if record.app_id in checked_ids:
+                continue
+            checked_ids.add(record.app_id)
+            smoke_results.extend(smoke_check(record))
+        failed_smoke = [item for item in smoke_results if not item["ok"]]
+        if failed_smoke:
+            raise RuntimeError("App catalog smoke checks failed: " + json.dumps(failed_smoke, ensure_ascii=False))
+
+    progress("Готово")
+    return ApplyUserAppChangesResult(
+        changes=applied,
         index_summary=index_summary,
         commands=commands,
         smoke_results=smoke_results,

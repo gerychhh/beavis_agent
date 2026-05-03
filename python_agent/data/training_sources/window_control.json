@@ -1,0 +1,720 @@
+{
+  "schema_version": 1,
+  "apps": {
+    "access": [
+      "access",
+      "аксес",
+      "microsoft access"
+    ],
+    "acrobat_reader": [
+      "acrobat",
+      "acrobat reader",
+      "акробат",
+      "pdf reader",
+      "ридер"
+    ],
+    "adobe_xd": [
+      "adobe xd",
+      "xd",
+      "икс ди",
+      "адоб иксди"
+    ],
+    "after_effects": [
+      "after effects",
+      "афтер эффектс",
+      "афтэр",
+      "after",
+      "афтер"
+    ],
+    "anaconda_navigator": [
+      "anaconda",
+      "анаконда",
+      "anaconda navigator"
+    ],
+    "android_studio": [
+      "android studio",
+      "андроид студио",
+      "студия андроид"
+    ],
+    "audition": [
+      "audition",
+      "аудишн",
+      "адоб аудишн"
+    ],
+    "autocad": [
+      "autocad",
+      "автокад",
+      "auto cad"
+    ],
+    "blender": [
+      "blender",
+      "блендер"
+    ],
+    "brave": [
+      "brave",
+      "брейв",
+      "браве"
+    ],
+    "calculator": [
+      "калькулятор",
+      "calculator",
+      "калкулятор",
+      "кальк",
+      "посчитай"
+    ],
+    "chrome": [
+      "хром",
+      "chrome",
+      "google chrome",
+      "гугл хром",
+      "браузер",
+      "интернет",
+      "хромик",
+      "гугл браузер"
+    ],
+    "cinema_4d": [
+      "cinema 4d",
+      "синема",
+      "синема 4д"
+    ],
+    "clion": [
+      "clion",
+      "си лайон",
+      "клайон"
+    ],
+    "cmd": [
+      "cmd",
+      "командная строка",
+      "консоль cmd",
+      "команда",
+      "цмд",
+      "си эм ди"
+    ],
+    "control_panel": [
+      "панель управления",
+      "control panel",
+      "контрол панель"
+    ],
+    "creative_cloud": [
+      "creative cloud",
+      "креатив клауд",
+      "adobe cloud"
+    ],
+    "datagrip": [
+      "datagrip",
+      "дата грип",
+      "датагрип"
+    ],
+    "davinci_resolve": [
+      "davinci resolve",
+      "давинчи",
+      "резолв"
+    ],
+    "device_manager": [
+      "диспетчер устройств",
+      "device manager",
+      "девайс менеджер"
+    ],
+    "discord": [
+      "discord",
+      "дискорд",
+      "дис",
+      "дискордик"
+    ],
+    "docker_desktop": [
+      "docker",
+      "docker desktop",
+      "докер",
+      "докер десктоп"
+    ],
+    "edge": [
+      "edge",
+      "эдж",
+      "майкрософт эдж",
+      "microsoft edge",
+      "край"
+    ],
+    "epic_games_launcher": [
+      "epic games",
+      "эпик",
+      "эпик геймс",
+      "epic launcher"
+    ],
+    "excel": [
+      "excel",
+      "эксель",
+      "microsoft excel",
+      "таблицы"
+    ],
+    "explorer": [
+      "проводник",
+      "explorer",
+      "файлы",
+      "окно файлов",
+      "file explorer",
+      "эксплорер"
+    ],
+    "figma": [
+      "figma",
+      "фигма"
+    ],
+    "firefox": [
+      "firefox",
+      "фаерфокс",
+      "файрфокс",
+      "огнелис",
+      "mozilla",
+      "мозила"
+    ],
+    "fusion_360": [
+      "fusion 360",
+      "фьюжн",
+      "фьюжн 360"
+    ],
+    "git_bash": [
+      "git bash",
+      "гит баш",
+      "bash",
+      "баш"
+    ],
+    "github_desktop": [
+      "github desktop",
+      "гитхаб десктоп",
+      "github"
+    ],
+    "godot": [
+      "godot",
+      "годот"
+    ],
+    "illustrator": [
+      "illustrator",
+      "иллюстратор",
+      "адоб иллюстратор"
+    ],
+    "indesign": [
+      "indesign",
+      "индизайн",
+      "in design"
+    ],
+    "intellij_idea": [
+      "intellij idea",
+      "идея",
+      "интелидж",
+      "intellij",
+      "интеллидж"
+    ],
+    "jupyter_lab": [
+      "jupyter",
+      "jupyter lab",
+      "джупитер",
+      "юпитер"
+    ],
+    "lightroom": [
+      "lightroom",
+      "лайтрум",
+      "адоб лайтрум"
+    ],
+    "max_3ds": [
+      "3ds max",
+      "три д макс",
+      "макс",
+      "3d max"
+    ],
+    "maya": [
+      "maya",
+      "майя"
+    ],
+    "notepad": [
+      "блокнот",
+      "notepad",
+      "ноутпад",
+      "текстовый редактор",
+      "заметки"
+    ],
+    "notepad_plus_plus": [
+      "notepad++",
+      "ноутпад плюс плюс",
+      "блокнот плюс плюс",
+      "npp"
+    ],
+    "obs_studio": [
+      "obs",
+      "obs studio",
+      "обс",
+      "обс студио"
+    ],
+    "onenote": [
+      "onenote",
+      "ваннот",
+      "one note",
+      "заметки one note"
+    ],
+    "opera": [
+      "opera",
+      "опера",
+      "опера браузер"
+    ],
+    "outlook": [
+      "outlook",
+      "аутлук",
+      "почта outlook"
+    ],
+    "paint": [
+      "paint",
+      "паинт",
+      "пейнт",
+      "рисовалка"
+    ],
+    "photoshop": [
+      "photoshop",
+      "фотошоп",
+      "адоб фотошоп",
+      "ps",
+      "фш"
+    ],
+    "phpstorm": [
+      "phpstorm",
+      "пхпшторм",
+      "php storm"
+    ],
+    "postman": [
+      "postman",
+      "постман"
+    ],
+    "powerpoint": [
+      "powerpoint",
+      "пауэрпоинт",
+      "power point",
+      "презентации"
+    ],
+    "powershell": [
+      "powershell",
+      "павершелл",
+      "пауэршелл",
+      "power shell",
+      "павер шелл"
+    ],
+    "premiere_pro": [
+      "premiere pro",
+      "премьер",
+      "премьер про",
+      "adobe premiere",
+      "премьера"
+    ],
+    "project": [
+      "project",
+      "проджект",
+      "microsoft project"
+    ],
+    "pycharm": [
+      "pycharm",
+      "пайчарм",
+      "пичарм",
+      "пайтчарм"
+    ],
+    "regedit": [
+      "regedit",
+      "редактор реестра",
+      "реестр",
+      "регедит"
+    ],
+    "settings": [
+      "настройки",
+      "параметры",
+      "settings",
+      "настройки винды",
+      "параметры windows"
+    ],
+    "signal": [
+      "signal",
+      "сигнал"
+    ],
+    "sketchup": [
+      "sketchup",
+      "скетчап"
+    ],
+    "skype": [
+      "skype",
+      "скайп"
+    ],
+    "slack": [
+      "slack",
+      "слак"
+    ],
+    "snipping_tool": [
+      "ножницы",
+      "snipping tool",
+      "скриншотер",
+      "фрагмент экрана"
+    ],
+    "spotify": [
+      "spotify",
+      "спотифай",
+      "спотик"
+    ],
+    "steam": [
+      "steam",
+      "стим"
+    ],
+    "sublime_text": [
+      "sublime",
+      "sublime text",
+      "саблайм"
+    ],
+    "substance_painter": [
+      "substance painter",
+      "сабстенс",
+      "пейнтер"
+    ],
+    "task_manager": [
+      "диспетчер задач",
+      "task manager",
+      "таск менеджер",
+      "диспетчер"
+    ],
+    "teams": [
+      "teams",
+      "тимс",
+      "microsoft teams",
+      "команды"
+    ],
+    "telegram": [
+      "telegram",
+      "телеграм",
+      "телега",
+      "тг",
+      "телиграм",
+      "телегу"
+    ],
+    "terminal": [
+      "terminal",
+      "терминал",
+      "windows terminal",
+      "виндовс терминал"
+    ],
+    "tor_browser": [
+      "tor",
+      "тор",
+      "тор браузер",
+      "tor browser"
+    ],
+    "unity": [
+      "unity",
+      "юнити"
+    ],
+    "unreal_engine": [
+      "unreal engine",
+      "анрил",
+      "анрил engine",
+      "ue",
+      "ue5"
+    ],
+    "viber": [
+      "viber",
+      "вайбер",
+      "вибер"
+    ],
+    "visio": [
+      "visio",
+      "визио",
+      "microsoft visio"
+    ],
+    "visual_studio": [
+      "visual studio",
+      "вижуал студио",
+      "студия",
+      "vs studio"
+    ],
+    "vlc": [
+      "vlc",
+      "влц",
+      "плеер vlc",
+      "видео плеер"
+    ],
+    "vscode": [
+      "vscode",
+      "vs code",
+      "visual studio code",
+      "вс код",
+      "вис код",
+      "вэс код",
+      "код",
+      "где код пишу"
+    ],
+    "webstorm": [
+      "webstorm",
+      "вебшторм",
+      "web storm"
+    ],
+    "whatsapp": [
+      "whatsapp",
+      "ватсап",
+      "вацап",
+      "вотсап"
+    ],
+    "winrar": [
+      "winrar",
+      "винрар",
+      "архиватор"
+    ],
+    "word": [
+      "word",
+      "ворд",
+      "microsoft word",
+      "документ ворд"
+    ],
+    "wsl": [
+      "wsl",
+      "дабл ю эс эл",
+      "линукс подсистема",
+      "ubuntu"
+    ],
+    "yandex_browser": [
+      "яндекс браузер",
+      "yandex browser",
+      "яндекс",
+      "yandex"
+    ],
+    "zbrush": [
+      "zbrush",
+      "збраш",
+      "зи браш"
+    ],
+    "zoom": [
+      "zoom",
+      "зум",
+      "зуум"
+    ]
+  },
+  "agent_prefixes": [
+    "",
+    "бивис ",
+    "beavis ",
+    "эй бивис ",
+    "брух ",
+    "слушай ",
+    "алло ",
+    "ну ка ",
+    "дружище "
+  ],
+  "action_templates": {
+    "close": [
+      "{agent}закрой {alias}",
+      "{agent}закрой пожалуйста {alias}",
+      "{agent}закрой окно {alias}",
+      "{agent}закрывай {alias}",
+      "{agent}закрыть {alias}",
+      "{agent}выйди из {alias}",
+      "{agent}выключи {alias}",
+      "{agent}заверши {alias}",
+      "{agent}прибей {alias}",
+      "{agent}убей процесс {alias}",
+      "{agent}kill {alias}",
+      "{agent}close {alias}",
+      "{agent}снеси {alias}",
+      "{agent}убери {alias} полностью",
+      "{agent}заканчивай с {alias}",
+      "{agent}хватит {alias}",
+      "{agent}зактни {alias}",
+      "{agent}зкрой {alias}",
+      "{agent}закрой нафиг {alias}",
+      "{agent}убери нахрен {alias}",
+      "{agent}закрывай эту {alias}",
+      "{agent}{alias} закрой",
+      "{agent}{alias} выключи",
+      "{agent}{alias} заверши"
+    ],
+    "minimize": [
+      "{agent}сверни {alias}",
+      "{agent}сверни окно {alias}",
+      "{agent}сверни пожалуйста {alias}",
+      "{agent}сверний {alias}",
+      "{agent}сврени {alias}",
+      "{agent}убери {alias} с экрана",
+      "{agent}убери окно {alias}",
+      "{agent}спрячь {alias}",
+      "{agent}скрой {alias}",
+      "{agent}кинь вниз {alias}",
+      "{agent}отправь {alias} вниз",
+      "{agent}сверни в панель {alias}",
+      "{agent}minimize {alias}",
+      "{agent}убери {alias} с глаз",
+      "{agent}{alias} сверни",
+      "{agent}{alias} спрячь",
+      "{agent}{alias} вниз"
+    ],
+    "maximize": [
+      "{agent}разверни {alias}",
+      "{agent}разверни окно {alias}",
+      "{agent}разверни на весь экран {alias}",
+      "{agent}на весь экран {alias}",
+      "{agent}увеличь окно {alias}",
+      "{agent}раскрой {alias}",
+      "{agent}максимизируй {alias}",
+      "{agent}сделай {alias} на весь экран",
+      "{agent}fullscreen {alias}",
+      "{agent}фулл скрин {alias}",
+      "{agent}во весь экран {alias}",
+      "{agent}{alias} разверни",
+      "{agent}{alias} на весь экран"
+    ],
+    "restore": [
+      "{agent}верни {alias}",
+      "{agent}верни окно {alias}",
+      "{agent}восстанови {alias}",
+      "{agent}восстанови окно {alias}",
+      "{agent}разверни обратно {alias}",
+      "{agent}достань {alias}",
+      "{agent}покажи обратно {alias}",
+      "{agent}верни на экран {alias}",
+      "{agent}открой обратно {alias}",
+      "{agent}{alias} верни",
+      "{agent}{alias} восстанови",
+      "{agent}верни как было {alias}"
+    ]
+  },
+  "current_aliases": [
+    "это",
+    "это окно",
+    "текущее окно",
+    "активное окно",
+    "текущую программу",
+    "активную программу",
+    "программу",
+    "окно",
+    "его",
+    "её",
+    "ее",
+    "текущий экран",
+    "активное приложение",
+    "приложение"
+  ],
+  "current_templates": {
+    "close": [
+      "{agent}закрой {alias}",
+      "{agent}закрой пожалуйста {alias}",
+      "{agent}закрыть {alias}",
+      "{agent}закрывай {alias}",
+      "{agent}выйди отсюда",
+      "{agent}закрой тут",
+      "{agent}закрой текущее",
+      "{agent}закрой активное",
+      "{agent}зактни это",
+      "{agent}убери это полностью",
+      "{agent}kill current window",
+      "{agent}{alias} закрой",
+      "{agent}{alias} закрывай",
+      "{agent}закрой {alias} полностью"
+    ],
+    "maximize": [
+      "{agent}разверни {alias}",
+      "{agent}разверни на весь экран",
+      "{agent}сделай на весь экран",
+      "{agent}раскрой {alias}",
+      "{agent}увеличь {alias}",
+      "{agent}во весь экран",
+      "{agent}фулл скрин",
+      "{agent}maximize current",
+      "{agent}разверни {alias} на весь экран",
+      "{agent}сделай {alias} на весь экран",
+      "{agent}{alias} фулл скрин",
+      "{agent}{alias} fullscreen",
+      "{agent}максимизируй {alias}",
+      "{agent}{alias} во весь экран"
+    ],
+    "minimize": [
+      "{agent}сверни {alias}",
+      "{agent}сверни пожалуйста {alias}",
+      "{agent}убери {alias} с экрана",
+      "{agent}спрячь {alias}",
+      "{agent}кинь {alias} вниз",
+      "{agent}сверни текущее",
+      "{agent}убери вниз",
+      "{agent}minimize current",
+      "{agent}скрой это",
+      "{agent}сверни {alias} вниз",
+      "{agent}кинь вниз {alias}",
+      "{agent}{alias} спрячь"
+    ],
+    "restore": [
+      "{agent}верни {alias}",
+      "{agent}восстанови {alias}",
+      "{agent}верни окно",
+      "{agent}достань обратно",
+      "{agent}покажи обратно",
+      "{agent}верни на экран",
+      "{agent}restore current",
+      "{agent}верни как было",
+      "{agent}{alias} верни",
+      "{agent}{alias} восстанови",
+      "{agent}верни {alias} на экран"
+    ]
+  },
+  "unknown_phrases": [
+    "сделай громкость 20",
+    "убавь звук",
+    "прибавь громкость",
+    "бивис громкость на десять",
+    "динамики рвуться",
+    "заткнись",
+    "бивис зактни",
+    "громко слишком",
+    "сделавй громче",
+    "открой браузер",
+    "запусти блокнот",
+    "открой вс код",
+    "открой где код пишу",
+    "какая погода",
+    "поставь таймер",
+    "напомни мне завтра",
+    "найди в интернете",
+    "сделай скриншот",
+    "переключи трек",
+    "пауза музыку",
+    "следующая песня",
+    "что по времени",
+    "сколько время",
+    "найди файл",
+    "удали файл",
+    "создай папку",
+    "расскажи анекдот",
+    "напиши сообщение",
+    "отправь письмо",
+    "покажи календарь",
+    "открой окно",
+    "сверни браузер когда откроешь",
+    "закрой глаза",
+    "закрытый вопрос",
+    "погода минск",
+    "переведи текст",
+    "проснись",
+    "ты где",
+    "помолчи",
+    "брух сделай громче",
+    "сделай тихо",
+    "выруби звук",
+    "на максимум",
+    "перезагрузи компьютер",
+    "выключи компьютер",
+    "заблокируй экран"
+  ],
+  "non_control_app_templates": [
+    "открой {alias}",
+    "запусти {alias}",
+    "включи {alias}",
+    "open {alias}",
+    "start {alias}",
+    "найди {alias}"
+  ],
+  "unknown_wrappers": [
+    "бивис {text}",
+    "брух {text}",
+    "эй {text}",
+    "слушай {text}",
+    "{text} пожалуйста",
+    "{text}",
+    "ну ка {text}",
+    "давай {text}",
+    "{text} быстро"
+  ]
+}

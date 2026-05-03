@@ -13,117 +13,30 @@ if str(ROOT) not in sys.path:
 
 from python_agent.resolvers.app_catalog_overrides import DEFAULT_APP_OVERRIDES_PATH
 from python_agent.training.generate_open_app_dataset import build_app_catalog, build_disabled_app_catalog
+from python_agent.training.dataset_sources import dict_from_source, list_from_source, load_training_source
 
 
 RANDOM_SEED = 42
 NO_TARGET = "NO_TARGET"
 
 
-APPS = {
-    # browsers
-    "chrome": ["хром", "chrome", "google chrome", "гугл хром", "браузер", "интернет", "хроум", "хромчик", "гхром"],
-    "edge": ["edge", "эдж", "майкрософт эдж", "браузер edge", "едж"],
-    "firefox": ["firefox", "фаерфокс", "мозила", "mozilla", "огнелис", "файрфокс", "фирефокс"],
-    "opera": ["opera", "опера", "оперу", "опира"],
-    "brave": ["brave", "брейв", "браве"],
-    "yandex_browser": ["яндекс браузер", "yandex", "яндекс", "яндексбраузер", "браузер яндекс"],
-    "tor_browser": ["tor", "тор", "тор браузер", "tor browser"],
+_SOURCE = load_training_source("window_layout.json")
 
-    # messengers
-    "telegram": ["telegram", "телеграм", "телеграмм", "телега", "тг", "telega", "телиграм", "телиграмм", "телегу"],
-    "discord": ["discord", "дискорд", "дис", "дискордик", "дискор"],
-    "whatsapp": ["whatsapp", "ватсап", "вацап", "вотсап", "ватсапп"],
-    "viber": ["viber", "вайбер", "вибер"],
-    "skype": ["skype", "скайп", "скаип"],
-    "signal": ["signal", "сигнал"],
-    "slack": ["slack", "слак", "слаке"],
-    "teams": ["teams", "тимс", "microsoft teams", "майкрософт тимс"],
-    "zoom": ["zoom", "зум", "zoom meeting", "зумчик"],
-
-    # windows/system
-    "notepad": ["notepad", "блокнот", "нотпад", "текстовый редактор", "заметки"],
-    "calculator": ["calculator", "калькулятор", "кальк", "калк", "считалка"],
-    "explorer": ["explorer", "проводник", "файлы", "эксплорер", "папки", "мой компьютер"],
-    "cmd": ["cmd", "цмд", "командная строка", "консоль cmd", "командку"],
-    "powershell": ["powershell", "павершелл", "повершелл", "power shell", "ps"],
-    "terminal": ["terminal", "терминал", "виндовс терминал", "windows terminal"],
-    "settings": ["settings", "настройки", "параметры", "параметры windows", "настройки винды"],
-    "task_manager": ["диспетчер задач", "task manager", "таск менеджер", "диспетчер"],
-    "paint": ["paint", "пейнт", "паинт", "рисовалка"],
-
-    # office
-    "word": ["word", "ворд", "microsoft word", "документ ворд"],
-    "excel": ["excel", "эксель", "ексель", "таблицы", "microsoft excel"],
-    "powerpoint": ["powerpoint", "поверпоинт", "пауэрпоинт", "презентации", "power point"],
-    "outlook": ["outlook", "аутлук", "почта outlook", "майкрософт аутлук"],
-    "onenote": ["onenote", "ванноут", "one note", "заметки one note"],
-
-    # adobe
-    "photoshop": ["photoshop", "фотошоп", "фш", "адоб фотошоп", "фотошопчик", "фотошопа"],
-    "illustrator": ["illustrator", "иллюстратор", "илюстратор", "адоб иллюстратор", "ai"],
-    "premiere_pro": ["premiere pro", "премьер", "премьер про", "адоб премьер", "premiere"],
-    "after_effects": ["after effects", "афтер", "афтер эффектс", "after", "афтеры"],
-    "lightroom": ["lightroom", "лайтрум", "лайт рум"],
-    "acrobat_reader": ["acrobat", "акробат", "pdf", "адоб ридер", "acrobat reader"],
-
-    # dev
-    "vscode": ["vscode", "vs code", "visual studio code", "вскод", "вс код", "визуал студио код", "код", "где код пишу", "редактор кода", "вэ эс код"],
-    "visual_studio": ["visual studio", "вижуал студио", "студия", "vs", "visual studio ide"],
-    "pycharm": ["pycharm", "пайчарм", "пичарм", "python ide", "пайтон редактор"],
-    "intellij_idea": ["intellij", "idea", "интелиджей", "интеллидж идея", "идея"],
-    "webstorm": ["webstorm", "вебшторм", "web storm"],
-    "clion": ["clion", "си лайон", "клион", "цлион"],
-    "android_studio": ["android studio", "андроид студио", "андроид студия"],
-    "docker_desktop": ["docker", "докер", "docker desktop", "докер десктоп"],
-    "git_bash": ["git bash", "гит баш", "git bash терминал", "гит баш терминал"],
-    "postman": ["postman", "постман", "post man"],
-
-    # design / 3d / media
-    "blender": ["blender", "блендер", "блендр", "3d blender"],
-    "figma": ["figma", "фигма", "фигму", "figma design"],
-    "fusion_360": ["fusion 360", "фьюжен", "фьюжн 360", "fusion"],
-    "autocad": ["autocad", "автокад", "auto cad", "кад"],
-    "sketchup": ["sketchup", "скетчап", "скетч ап"],
-    "max_3ds": ["3ds max", "три дэ макс", "3д макс", "макс"],
-    "maya": ["maya", "майя", "мая"],
-    "cinema_4d": ["cinema 4d", "синема", "cinema", "синема 4д"],
-    "zbrush": ["zbrush", "зибраш", "зи браш"],
-    "unreal_engine": ["unreal", "анрил", "unreal engine", "анрил engine", "ue"],
-    "unity": ["unity", "юнити", "юнайти"],
-    "godot": ["godot", "годот", "го дот"],
-    "davinci_resolve": ["davinci", "давинчи", "resolve", "давинчи резолв"],
-    "obs_studio": ["obs", "обс", "obs studio", "обс студио"],
-}
-
-
-PREFIXES = [
-    "", "бивис ", "эй бивис ", "брух ", "слушай ", "короче ", "давай ", "пожалуйста ",
-    "быстро ", "срочно ", "ну ", "а ну ", "beavis ", "бивес ", "бивис брат ",
-]
-SUFFIXES = ["", " пожалуйста", " плиз", " быстро", " щас", " нормально", " на экране", " у меня", " давай"]
-
-ONE_CURRENT = ["окно", "это окно", "текущее окно", "активное окно", "его", "это", "текущие окно", "текущее"]
-JOINERS = [" и ", " потом ", " а потом ", " рядом с ", " плюс ", " вместе с ", " затем "]
-
-LEFT_WORDS = ["слева", "на левую половину", "влево", "с лева", "слево", "на левый бок", "в левую часть"]
-RIGHT_WORDS = ["справа", "на правую половину", "вправо", "с право", "справо", "на правый бок", "в правую часть"]
-TOP_WORDS = ["сверху", "на верхнюю половину", "вверх", "в верх", "на верх", "с верху"]
-BOTTOM_WORDS = ["снизу", "на нижнюю половину", "вниз", "в низ", "на низ", "с низу"]
-CENTER_WORDS = ["по центру", "в центр", "посередине", "в середину", "центром", "по середине"]
-FULL_WORDS = ["на весь экран", "во весь экран", "фулл скрин", "fullscreen", "большим", "максимально", "на максимум экрана", "развернутым"]
-HALF_WORDS = ["пополам", "по полам", "на две половины", "по половинам", "палавину", "поровну", "пополам экрана"]
-GRID_WORDS = ["сеткой", "2 на 2", "два на два", "по углам", "четыре окна сеткой", "квадратом", "плиткой"]
-
-UNKNOWN_PHRASES = [
-    "открой браузер", "запусти телеграм", "закрой хром", "сверни блокнот", "верни фотошоп",
-    "громкость на десять", "сделай звук тише", "прибавь громкость", "убавь звук",
-    "привет как дела", "хуйня какая то", "какая погода", "поставь таймер", "сделай скриншот",
-    "хром лагает", "телеграм тупит", "вскод завис", "браузер открыт уже", "не открывай хром",
-    "не трогай телеграм", "закрой тему", "открой глаза", "сверни разговор", "разверни мысль",
-    "половина дела сделана", "слева красиво", "справа плохо", "верхний экран не работает",
-    "я не хочу работать", "ну и ладно", "спасибо", "ага", "угу", "бред полный",
-    "бивис привет", "бивис как дела", "бивис заткнись", "динамики рвутся", "громко слишком",
-]
+APPS = dict_from_source(_SOURCE, "apps")
+PREFIXES = list_from_source(_SOURCE, "prefixes")
+SUFFIXES = list_from_source(_SOURCE, "suffixes")
+ONE_CURRENT = list_from_source(_SOURCE, "one_current")
+JOINERS = list_from_source(_SOURCE, "joiners")
+POSITION_WORDS = dict_from_source(_SOURCE, "position_words")
+LEFT_WORDS = list(POSITION_WORDS["left"])
+RIGHT_WORDS = list(POSITION_WORDS["right"])
+TOP_WORDS = list(POSITION_WORDS["top"])
+BOTTOM_WORDS = list(POSITION_WORDS["bottom"])
+CENTER_WORDS = list(POSITION_WORDS["center"])
+FULL_WORDS = list(POSITION_WORDS["fullscreen"])
+HALF_WORDS = list(POSITION_WORDS["half"])
+GRID_WORDS = list(POSITION_WORDS["grid"])
+UNKNOWN_PHRASES = list_from_source(_SOURCE, "unknown_phrases")
 
 
 def is_spoken_form(value: str) -> bool:

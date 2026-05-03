@@ -1,6 +1,6 @@
 {
-  "total": 123,
-  "correct": 123,
+  "total": 297,
+  "correct": 297,
   "accuracy": 1.0,
   "rows": [
     {
@@ -18,7 +18,7 @@
           "telegram",
           "vscode"
         ],
-        "confidence": 0.8316
+        "confidence": 0.8557
       },
       "correct": true
     },
@@ -37,7 +37,7 @@
           "telegram",
           "vscode"
         ],
-        "confidence": 0.8761
+        "confidence": 0.8974
       },
       "correct": true
     },
@@ -54,7 +54,7 @@
         "targets": [
           "chrome"
         ],
-        "confidence": 0.7804
+        "confidence": 0.7705
       },
       "correct": true
     },
@@ -71,7 +71,7 @@
         "targets": [
           "vscode"
         ],
-        "confidence": 0.9013
+        "confidence": 0.9257
       },
       "correct": true
     },
@@ -90,7 +90,7 @@
           "chrome",
           "cmd"
         ],
-        "confidence": 0.8585
+        "confidence": 0.8785
       },
       "correct": true
     },
@@ -113,7 +113,7 @@
           "vscode",
           "terminal"
         ],
-        "confidence": 0.736
+        "confidence": 0.7832
       },
       "correct": true
     },
@@ -130,7 +130,7 @@
         "targets": [
           "photoshop"
         ],
-        "confidence": 0.904
+        "confidence": 0.8803
       },
       "correct": true
     },
@@ -147,7 +147,7 @@
         "targets": [
           "current"
         ],
-        "confidence": 0.9102
+        "confidence": 0.8883
       },
       "correct": true
     },
@@ -164,7 +164,7 @@
         "targets": [
           "current"
         ],
-        "confidence": 0.9522
+        "confidence": 0.968
       },
       "correct": true
     },
@@ -181,7 +181,7 @@
         "targets": [
           "figma"
         ],
-        "confidence": 0.9262
+        "confidence": 0.952
       },
       "correct": true
     },
@@ -198,7 +198,7 @@
         "targets": [
           "unreal_engine"
         ],
-        "confidence": 0.9119
+        "confidence": 0.9138
       },
       "correct": true
     },
@@ -215,7 +215,7 @@
         "targets": [
           "notepad"
         ],
-        "confidence": 0.884
+        "confidence": 0.8876
       },
       "correct": true
     },
@@ -232,7 +232,7 @@
         "targets": [
           "terminal"
         ],
-        "confidence": 0.8183
+        "confidence": 0.8202
       },
       "correct": true
     },
@@ -249,7 +249,7 @@
         "targets": [
           "chrome"
         ],
-        "confidence": 0.8654
+        "confidence": 0.7641
       },
       "correct": true
     },
@@ -266,7 +266,7 @@
         "targets": [
           "photoshop"
         ],
-        "confidence": 0.893
+        "confidence": 0.8156
       },
       "correct": true
     },
@@ -285,7 +285,7 @@
           "telegram",
           "vscode"
         ],
-        "confidence": 0.8484
+        "confidence": 0.8719
       },
       "correct": true
     },
@@ -302,7 +302,7 @@
           "layout",
           "targets"
         ],
-        "confidence": 0.9095
+        "confidence": 0.9404
       },
       "correct": true
     },
@@ -319,7 +319,7 @@
           "layout",
           "targets"
         ],
-        "confidence": 0.9706
+        "confidence": 0.9754
       },
       "correct": true
     },
@@ -336,7 +336,7 @@
           "layout",
           "targets"
         ],
-        "confidence": 0.8497
+        "confidence": 0.911
       },
       "correct": true
     },
@@ -353,7 +353,7 @@
           "layout",
           "targets"
         ],
-        "confidence": 0.9669
+        "confidence": 0.9775
       },
       "correct": true
     },
@@ -370,7 +370,7 @@
           "layout",
           "targets"
         ],
-        "confidence": 0.9435
+        "confidence": 0.9576
       },
       "correct": true
     },
@@ -387,7 +387,7 @@
         "targets": [
           "3ds_max_2025"
         ],
-        "confidence": 0.891
+        "confidence": 0.7824
       },
       "correct": true
     },
@@ -404,7 +404,7 @@
         "targets": [
           "3ds_max_2025"
         ],
-        "confidence": 0.839
+        "confidence": 0.7803
       },
       "correct": true
     },
@@ -421,7 +421,7 @@
         "targets": [
           "access"
         ],
-        "confidence": 0.9138
+        "confidence": 0.9232
       },
       "correct": true
     },
@@ -438,177 +438,7 @@
         "targets": [
           "access"
         ],
-        "confidence": 0.8634
-      },
-      "correct": true
-    },
-    {
-      "text": "adobe xd на весь экран",
-      "expected": {
-        "layout": "fullscreen",
-        "targets": [
-          "adobe_xd"
-        ]
-      },
-      "predicted": {
-        "layout": "fullscreen",
-        "targets": [
-          "adobe_xd"
-        ],
-        "confidence": 0.9102
-      },
-      "correct": true
-    },
-    {
-      "text": "поставь adobe xd слева",
-      "expected": {
-        "layout": "left_half",
-        "targets": [
-          "adobe_xd"
-        ]
-      },
-      "predicted": {
-        "layout": "left_half",
-        "targets": [
-          "adobe_xd"
-        ],
-        "confidence": 0.8425
-      },
-      "correct": true
-    },
-    {
-      "text": "animate на весь экран",
-      "expected": {
-        "layout": "fullscreen",
-        "targets": [
-          "animate"
-        ]
-      },
-      "predicted": {
-        "layout": "fullscreen",
-        "targets": [
-          "animate"
-        ],
-        "confidence": 0.9035
-      },
-      "correct": true
-    },
-    {
-      "text": "поставь animate слева",
-      "expected": {
-        "layout": "left_half",
-        "targets": [
-          "animate"
-        ]
-      },
-      "predicted": {
-        "layout": "left_half",
-        "targets": [
-          "animate"
-        ],
-        "confidence": 0.8831
-      },
-      "correct": true
-    },
-    {
-      "text": "audition на весь экран",
-      "expected": {
-        "layout": "fullscreen",
-        "targets": [
-          "audition"
-        ]
-      },
-      "predicted": {
-        "layout": "fullscreen",
-        "targets": [
-          "audition"
-        ],
-        "confidence": 0.8977
-      },
-      "correct": true
-    },
-    {
-      "text": "поставь audition слева",
-      "expected": {
-        "layout": "left_half",
-        "targets": [
-          "audition"
-        ]
-      },
-      "predicted": {
-        "layout": "left_half",
-        "targets": [
-          "audition"
-        ],
-        "confidence": 0.8577
-      },
-      "correct": true
-    },
-    {
-      "text": "bridge на весь экран",
-      "expected": {
-        "layout": "fullscreen",
-        "targets": [
-          "bridge"
-        ]
-      },
-      "predicted": {
-        "layout": "fullscreen",
-        "targets": [
-          "bridge"
-        ],
-        "confidence": 0.9123
-      },
-      "correct": true
-    },
-    {
-      "text": "поставь bridge слева",
-      "expected": {
-        "layout": "left_half",
-        "targets": [
-          "bridge"
-        ]
-      },
-      "predicted": {
-        "layout": "left_half",
-        "targets": [
-          "bridge"
-        ],
-        "confidence": 0.8658
-      },
-      "correct": true
-    },
-    {
-      "text": "camera на весь экран",
-      "expected": {
-        "layout": "fullscreen",
-        "targets": [
-          "camera"
-        ]
-      },
-      "predicted": {
-        "layout": "fullscreen",
-        "targets": [
-          "camera"
-        ],
-        "confidence": 0.8968
-      },
-      "correct": true
-    },
-    {
-      "text": "поставь camera слева",
-      "expected": {
-        "layout": "left_half",
-        "targets": [
-          "camera"
-        ]
-      },
-      "predicted": {
-        "layout": "left_half",
-        "targets": [
-          "camera"
-        ],
-        "confidence": 0.8664
+        "confidence": 0.8468
       },
       "correct": true
     },
@@ -625,7 +455,7 @@
         "targets": [
           "codex"
         ],
-        "confidence": 0.9017
+        "confidence": 0.9052
       },
       "correct": true
     },
@@ -642,7 +472,7 @@
         "targets": [
           "codex"
         ],
-        "confidence": 0.851
+        "confidence": 0.8502
       },
       "correct": true
     },
@@ -659,7 +489,7 @@
         "targets": [
           "control_panel"
         ],
-        "confidence": 0.885
+        "confidence": 0.877
       },
       "correct": true
     },
@@ -676,7 +506,7 @@
         "targets": [
           "control_panel"
         ],
-        "confidence": 0.8625
+        "confidence": 0.8307
       },
       "correct": true
     },
@@ -693,7 +523,7 @@
         "targets": [
           "cyberpunk_2077"
         ],
-        "confidence": 0.883
+        "confidence": 0.8204
       },
       "correct": true
     },
@@ -710,75 +540,7 @@
         "targets": [
           "cyberpunk_2077"
         ],
-        "confidence": 0.8519
-      },
-      "correct": true
-    },
-    {
-      "text": "datagrip на весь экран",
-      "expected": {
-        "layout": "fullscreen",
-        "targets": [
-          "datagrip"
-        ]
-      },
-      "predicted": {
-        "layout": "fullscreen",
-        "targets": [
-          "datagrip"
-        ],
-        "confidence": 0.8955
-      },
-      "correct": true
-    },
-    {
-      "text": "поставь datagrip слева",
-      "expected": {
-        "layout": "left_half",
-        "targets": [
-          "datagrip"
-        ]
-      },
-      "predicted": {
-        "layout": "left_half",
-        "targets": [
-          "datagrip"
-        ],
-        "confidence": 0.8658
-      },
-      "correct": true
-    },
-    {
-      "text": "dbeaver на весь экран",
-      "expected": {
-        "layout": "fullscreen",
-        "targets": [
-          "dbeaver"
-        ]
-      },
-      "predicted": {
-        "layout": "fullscreen",
-        "targets": [
-          "dbeaver"
-        ],
-        "confidence": 0.9059
-      },
-      "correct": true
-    },
-    {
-      "text": "поставь dbeaver слева",
-      "expected": {
-        "layout": "left_half",
-        "targets": [
-          "dbeaver"
-        ]
-      },
-      "predicted": {
-        "layout": "left_half",
-        "targets": [
-          "dbeaver"
-        ],
-        "confidence": 0.8628
+        "confidence": 0.7871
       },
       "correct": true
     },
@@ -795,7 +557,7 @@
         "targets": [
           "device_manager"
         ],
-        "confidence": 0.8823
+        "confidence": 0.8475
       },
       "correct": true
     },
@@ -812,7 +574,7 @@
         "targets": [
           "device_manager"
         ],
-        "confidence": 0.8495
+        "confidence": 0.8127
       },
       "correct": true
     },
@@ -829,7 +591,7 @@
         "targets": [
           "disk_management"
         ],
-        "confidence": 0.8789
+        "confidence": 0.8327
       },
       "correct": true
     },
@@ -846,7 +608,7 @@
         "targets": [
           "disk_management"
         ],
-        "confidence": 0.8484
+        "confidence": 0.8113
       },
       "correct": true
     },
@@ -863,7 +625,7 @@
         "targets": [
           "dota_2"
         ],
-        "confidence": 0.9016
+        "confidence": 0.8751
       },
       "correct": true
     },
@@ -880,7 +642,7 @@
         "targets": [
           "dota_2"
         ],
-        "confidence": 0.8539
+        "confidence": 0.8449
       },
       "correct": true
     },
@@ -897,7 +659,7 @@
         "targets": [
           "epic_games"
         ],
-        "confidence": 0.9076
+        "confidence": 0.8931
       },
       "correct": true
     },
@@ -914,7 +676,7 @@
         "targets": [
           "epic_games"
         ],
-        "confidence": 0.8589
+        "confidence": 0.8411
       },
       "correct": true
     },
@@ -931,7 +693,7 @@
         "targets": [
           "event_viewer"
         ],
-        "confidence": 0.8916
+        "confidence": 0.8833
       },
       "correct": true
     },
@@ -948,75 +710,7 @@
         "targets": [
           "event_viewer"
         ],
-        "confidence": 0.8449
-      },
-      "correct": true
-    },
-    {
-      "text": "github desktop на весь экран",
-      "expected": {
-        "layout": "fullscreen",
-        "targets": [
-          "github_desktop"
-        ]
-      },
-      "predicted": {
-        "layout": "fullscreen",
-        "targets": [
-          "github_desktop"
-        ],
-        "confidence": 0.8963
-      },
-      "correct": true
-    },
-    {
-      "text": "поставь github desktop слева",
-      "expected": {
-        "layout": "left_half",
-        "targets": [
-          "github_desktop"
-        ]
-      },
-      "predicted": {
-        "layout": "left_half",
-        "targets": [
-          "github_desktop"
-        ],
-        "confidence": 0.8559
-      },
-      "correct": true
-    },
-    {
-      "text": "indesign на весь экран",
-      "expected": {
-        "layout": "fullscreen",
-        "targets": [
-          "indesign"
-        ]
-      },
-      "predicted": {
-        "layout": "fullscreen",
-        "targets": [
-          "indesign"
-        ],
-        "confidence": 0.9085
-      },
-      "correct": true
-    },
-    {
-      "text": "поставь indesign слева",
-      "expected": {
-        "layout": "left_half",
-        "targets": [
-          "indesign"
-        ]
-      },
-      "predicted": {
-        "layout": "left_half",
-        "targets": [
-          "indesign"
-        ],
-        "confidence": 0.8777
+        "confidence": 0.834
       },
       "correct": true
     },
@@ -1033,7 +727,7 @@
         "targets": [
           "media_encoder"
         ],
-        "confidence": 0.8942
+        "confidence": 0.912
       },
       "correct": true
     },
@@ -1050,7 +744,7 @@
         "targets": [
           "media_encoder"
         ],
-        "confidence": 0.8532
+        "confidence": 0.8458
       },
       "correct": true
     },
@@ -1067,7 +761,7 @@
         "targets": [
           "microsoft_store"
         ],
-        "confidence": 0.8988
+        "confidence": 0.8751
       },
       "correct": true
     },
@@ -1084,7 +778,7 @@
         "targets": [
           "microsoft_store"
         ],
-        "confidence": 0.8485
+        "confidence": 0.8276
       },
       "correct": true
     },
@@ -1101,7 +795,7 @@
         "targets": [
           "mysql_workbench"
         ],
-        "confidence": 0.8879
+        "confidence": 0.8515
       },
       "correct": true
     },
@@ -1118,75 +812,7 @@
         "targets": [
           "mysql_workbench"
         ],
-        "confidence": 0.8626
-      },
-      "correct": true
-    },
-    {
-      "text": "notion на весь экран",
-      "expected": {
-        "layout": "fullscreen",
-        "targets": [
-          "notion"
-        ]
-      },
-      "predicted": {
-        "layout": "fullscreen",
-        "targets": [
-          "notion"
-        ],
-        "confidence": 0.9031
-      },
-      "correct": true
-    },
-    {
-      "text": "поставь notion слева",
-      "expected": {
-        "layout": "left_half",
-        "targets": [
-          "notion"
-        ]
-      },
-      "predicted": {
-        "layout": "left_half",
-        "targets": [
-          "notion"
-        ],
-        "confidence": 0.8643
-      },
-      "correct": true
-    },
-    {
-      "text": "obsidian на весь экран",
-      "expected": {
-        "layout": "fullscreen",
-        "targets": [
-          "obsidian"
-        ]
-      },
-      "predicted": {
-        "layout": "fullscreen",
-        "targets": [
-          "obsidian"
-        ],
-        "confidence": 0.9071
-      },
-      "correct": true
-    },
-    {
-      "text": "поставь obsidian слева",
-      "expected": {
-        "layout": "left_half",
-        "targets": [
-          "obsidian"
-        ]
-      },
-      "predicted": {
-        "layout": "left_half",
-        "targets": [
-          "obsidian"
-        ],
-        "confidence": 0.8547
+        "confidence": 0.8371
       },
       "correct": true
     },
@@ -1203,7 +829,7 @@
         "targets": [
           "pgadmin"
         ],
-        "confidence": 0.9042
+        "confidence": 0.8931
       },
       "correct": true
     },
@@ -1220,75 +846,7 @@
         "targets": [
           "pgadmin"
         ],
-        "confidence": 0.8607
-      },
-      "correct": true
-    },
-    {
-      "text": "photos на весь экран",
-      "expected": {
-        "layout": "fullscreen",
-        "targets": [
-          "photos"
-        ]
-      },
-      "predicted": {
-        "layout": "fullscreen",
-        "targets": [
-          "photos"
-        ],
-        "confidence": 0.8876
-      },
-      "correct": true
-    },
-    {
-      "text": "поставь photos слева",
-      "expected": {
-        "layout": "left_half",
-        "targets": [
-          "photos"
-        ]
-      },
-      "predicted": {
-        "layout": "left_half",
-        "targets": [
-          "photos"
-        ],
-        "confidence": 0.8468
-      },
-      "correct": true
-    },
-    {
-      "text": "phpstorm на весь экран",
-      "expected": {
-        "layout": "fullscreen",
-        "targets": [
-          "phpstorm"
-        ]
-      },
-      "predicted": {
-        "layout": "fullscreen",
-        "targets": [
-          "phpstorm"
-        ],
-        "confidence": 0.9008
-      },
-      "correct": true
-    },
-    {
-      "text": "поставь phpstorm слева",
-      "expected": {
-        "layout": "left_half",
-        "targets": [
-          "phpstorm"
-        ]
-      },
-      "predicted": {
-        "layout": "left_half",
-        "targets": [
-          "phpstorm"
-        ],
-        "confidence": 0.8758
+        "confidence": 0.8448
       },
       "correct": true
     },
@@ -1305,7 +863,7 @@
         "targets": [
           "planetvpn1"
         ],
-        "confidence": 0.8966
+        "confidence": 0.8545
       },
       "correct": true
     },
@@ -1322,7 +880,7 @@
         "targets": [
           "planetvpn1"
         ],
-        "confidence": 0.859
+        "confidence": 0.8339
       },
       "correct": true
     },
@@ -1339,7 +897,7 @@
         "targets": [
           "project"
         ],
-        "confidence": 0.8774
+        "confidence": 0.8604
       },
       "correct": true
     },
@@ -1356,7 +914,7 @@
         "targets": [
           "project"
         ],
-        "confidence": 0.8389
+        "confidence": 0.8114
       },
       "correct": true
     },
@@ -1373,7 +931,7 @@
         "targets": [
           "regedit"
         ],
-        "confidence": 0.9011
+        "confidence": 0.832
       },
       "correct": true
     },
@@ -1390,7 +948,7 @@
         "targets": [
           "regedit"
         ],
-        "confidence": 0.8633
+        "confidence": 0.828
       },
       "correct": true
     },
@@ -1407,7 +965,7 @@
         "targets": [
           "services"
         ],
-        "confidence": 0.8961
+        "confidence": 0.8625
       },
       "correct": true
     },
@@ -1424,7 +982,7 @@
         "targets": [
           "services"
         ],
-        "confidence": 0.855
+        "confidence": 0.8363
       },
       "correct": true
     },
@@ -1441,7 +999,7 @@
         "targets": [
           "seven_zip"
         ],
-        "confidence": 0.9088
+        "confidence": 0.8902
       },
       "correct": true
     },
@@ -1458,7 +1016,7 @@
         "targets": [
           "seven_zip"
         ],
-        "confidence": 0.8486
+        "confidence": 0.8265
       },
       "correct": true
     },
@@ -1475,7 +1033,7 @@
         "targets": [
           "snipping_tool"
         ],
-        "confidence": 0.8778
+        "confidence": 0.8176
       },
       "correct": true
     },
@@ -1492,7 +1050,7 @@
         "targets": [
           "snipping_tool"
         ],
-        "confidence": 0.8585
+        "confidence": 0.8253
       },
       "correct": true
     },
@@ -1509,7 +1067,7 @@
         "targets": [
           "spotify"
         ],
-        "confidence": 0.9028
+        "confidence": 0.8903
       },
       "correct": true
     },
@@ -1526,7 +1084,7 @@
         "targets": [
           "spotify"
         ],
-        "confidence": 0.8646
+        "confidence": 0.8321
       },
       "correct": true
     },
@@ -1543,7 +1101,7 @@
         "targets": [
           "steam"
         ],
-        "confidence": 0.9129
+        "confidence": 0.9061
       },
       "correct": true
     },
@@ -1560,7 +1118,7 @@
         "targets": [
           "steam"
         ],
-        "confidence": 0.8429
+        "confidence": 0.8267
       },
       "correct": true
     },
@@ -1577,7 +1135,7 @@
         "targets": [
           "substance_painter"
         ],
-        "confidence": 0.8846
+        "confidence": 0.8509
       },
       "correct": true
     },
@@ -1594,109 +1152,7 @@
         "targets": [
           "substance_painter"
         ],
-        "confidence": 0.8464
-      },
-      "correct": true
-    },
-    {
-      "text": "visio на весь экран",
-      "expected": {
-        "layout": "fullscreen",
-        "targets": [
-          "visio"
-        ]
-      },
-      "predicted": {
-        "layout": "fullscreen",
-        "targets": [
-          "visio"
-        ],
-        "confidence": 0.9188
-      },
-      "correct": true
-    },
-    {
-      "text": "поставь visio слева",
-      "expected": {
-        "layout": "left_half",
-        "targets": [
-          "visio"
-        ]
-      },
-      "predicted": {
-        "layout": "left_half",
-        "targets": [
-          "visio"
-        ],
-        "confidence": 0.8521
-      },
-      "correct": true
-    },
-    {
-      "text": "vlc на весь экран",
-      "expected": {
-        "layout": "fullscreen",
-        "targets": [
-          "vlc"
-        ]
-      },
-      "predicted": {
-        "layout": "fullscreen",
-        "targets": [
-          "vlc"
-        ],
-        "confidence": 0.9131
-      },
-      "correct": true
-    },
-    {
-      "text": "поставь vlc слева",
-      "expected": {
-        "layout": "left_half",
-        "targets": [
-          "vlc"
-        ]
-      },
-      "predicted": {
-        "layout": "left_half",
-        "targets": [
-          "vlc"
-        ],
-        "confidence": 0.8514
-      },
-      "correct": true
-    },
-    {
-      "text": "voice recorder на весь экран",
-      "expected": {
-        "layout": "fullscreen",
-        "targets": [
-          "voice_recorder"
-        ]
-      },
-      "predicted": {
-        "layout": "fullscreen",
-        "targets": [
-          "voice_recorder"
-        ],
-        "confidence": 0.8734
-      },
-      "correct": true
-    },
-    {
-      "text": "поставь voice recorder слева",
-      "expected": {
-        "layout": "left_half",
-        "targets": [
-          "voice_recorder"
-        ]
-      },
-      "predicted": {
-        "layout": "left_half",
-        "targets": [
-          "voice_recorder"
-        ],
-        "confidence": 0.8394
+        "confidence": 0.8289
       },
       "correct": true
     },
@@ -1713,7 +1169,7 @@
         "targets": [
           "winrar"
         ],
-        "confidence": 0.9098
+        "confidence": 0.9081
       },
       "correct": true
     },
@@ -1730,7 +1186,7 @@
         "targets": [
           "winrar"
         ],
-        "confidence": 0.8613
+        "confidence": 0.844
       },
       "correct": true
     },
@@ -1747,7 +1203,7 @@
         "targets": [
           "wireshark"
         ],
-        "confidence": 0.9005
+        "confidence": 0.8629
       },
       "correct": true
     },
@@ -1764,7 +1220,7 @@
         "targets": [
           "wireshark"
         ],
-        "confidence": 0.8461
+        "confidence": 0.8278
       },
       "correct": true
     },
@@ -1781,7 +1237,7 @@
         "targets": [
           "yandexmusic"
         ],
-        "confidence": 0.8553
+        "confidence": 0.8314
       },
       "correct": true
     },
@@ -1798,7 +1254,823 @@
         "targets": [
           "yandexmusic"
         ],
-        "confidence": 0.8339
+        "confidence": 0.8
+      },
+      "correct": true
+    },
+    {
+      "text": "adobe xd на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8151
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь adobe xd слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.7238
+      },
+      "correct": true
+    },
+    {
+      "text": "икс ди на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.6295
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь икс ди слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.5044
+      },
+      "correct": true
+    },
+    {
+      "text": "эдоб xd на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8451
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь эдоб xd слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.7857
+      },
+      "correct": true
+    },
+    {
+      "text": "adobe хд на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.7744
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь adobe хд слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.6204
+      },
+      "correct": true
+    },
+    {
+      "text": "android studio на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9263
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь android studio слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8832
+      },
+      "correct": true
+    },
+    {
+      "text": "андроид студио на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9114
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь андроид студио слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.878
+      },
+      "correct": true
+    },
+    {
+      "text": "студия android на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9292
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь студия android слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9022
+      },
+      "correct": true
+    },
+    {
+      "text": "андройд студио на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9034
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь андройд студио слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8677
+      },
+      "correct": true
+    },
+    {
+      "text": "android studo на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9448
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь android studo слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8958
+      },
+      "correct": true
+    },
+    {
+      "text": "андроид студия на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8585
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь андроид студия слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8928
+      },
+      "correct": true
+    },
+    {
+      "text": "adobe animate на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8806
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь adobe animate слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8614
+      },
+      "correct": true
+    },
+    {
+      "text": "audition на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9337
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь audition слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8873
+      },
+      "correct": true
+    },
+    {
+      "text": "adobe audition на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9623
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь adobe audition слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9328
+      },
+      "correct": true
+    },
+    {
+      "text": "адоб аудишн на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8623
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь адоб аудишн слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.855
+      },
+      "correct": true
+    },
+    {
+      "text": "brave browser на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9311
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь brave browser слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8745
+      },
+      "correct": true
+    },
+    {
+      "text": "браузер brave на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9266
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь браузер brave слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8431
+      },
+      "correct": true
+    },
+    {
+      "text": "adobe bridge на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9017
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь adobe bridge слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8589
+      },
+      "correct": true
+    },
+    {
+      "text": "адоб бридж на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8335
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь адоб бридж слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.6455
+      },
+      "correct": true
+    },
+    {
+      "text": "веб камера на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9422
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь веб камера слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9075
+      },
+      "correct": true
+    },
+    {
+      "text": "камера windows на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8857
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь камера windows слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.7916
+      },
+      "correct": true
+    },
+    {
+      "text": "cinema 4d на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9221
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь cinema 4d слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8738
+      },
+      "correct": true
+    },
+    {
+      "text": "синема 4d на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9281
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь синема 4d слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9004
+      },
+      "correct": true
+    },
+    {
+      "text": "cinema four d на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9255
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь cinema four d слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9008
+      },
+      "correct": true
+    },
+    {
+      "text": "синема фор ди на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9436
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь синема фор ди слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9194
       },
       "correct": true
     },
@@ -1815,7 +2087,7 @@
           "layout",
           "targets"
         ],
-        "confidence": 0.7673
+        "confidence": 0.8553
       },
       "correct": true
     },
@@ -1832,7 +2104,7 @@
           "layout",
           "targets"
         ],
-        "confidence": 0.7028
+        "confidence": 0.8432
       },
       "correct": true
     },
@@ -1849,7 +2121,7 @@
           "layout",
           "targets"
         ],
-        "confidence": 0.6971
+        "confidence": 0.8645
       },
       "correct": true
     },
@@ -1866,7 +2138,7 @@
         "missing": [
           "targets"
         ],
-        "confidence": 0.5666
+        "confidence": 0.5261
       },
       "correct": true
     },
@@ -1883,7 +2155,7 @@
           "layout",
           "targets"
         ],
-        "confidence": 0.7246
+        "confidence": 0.8299
       },
       "correct": true
     },
@@ -1896,11 +2168,11 @@
         ]
       },
       "predicted": {
-        "layout": "left_half",
         "missing": [
+          "layout",
           "targets"
         ],
-        "confidence": 0.5074
+        "confidence": 0.753
       },
       "correct": true
     },
@@ -1917,7 +2189,7 @@
           "layout",
           "targets"
         ],
-        "confidence": 0.8727
+        "confidence": 0.8633
       },
       "correct": true
     },
@@ -1934,7 +2206,2047 @@
           "layout",
           "targets"
         ],
-        "confidence": 0.6498
+        "confidence": 0.8027
+      },
+      "correct": true
+    },
+    {
+      "text": "datagrip на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9272
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь datagrip слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8816
+      },
+      "correct": true
+    },
+    {
+      "text": "data grip на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9188
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь data grip слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.872
+      },
+      "correct": true
+    },
+    {
+      "text": "датагрип на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9217
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь датагрип слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8779
+      },
+      "correct": true
+    },
+    {
+      "text": "дата грип на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8753
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь дата грип слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8171
+      },
+      "correct": true
+    },
+    {
+      "text": "дата грипп на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9246
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь дата грипп слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8626
+      },
+      "correct": true
+    },
+    {
+      "text": "датагрипп на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9171
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь датагрипп слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9168
+      },
+      "correct": true
+    },
+    {
+      "text": "davinci resolve на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9526
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь davinci resolve слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9332
+      },
+      "correct": true
+    },
+    {
+      "text": "да винчи на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8454
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь да винчи слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.7013
+      },
+      "correct": true
+    },
+    {
+      "text": "давинчи резолв на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9502
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь давинчи резолв слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8648
+      },
+      "correct": true
+    },
+    {
+      "text": "ди бивер на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.7199
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь ди бивер слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.7259
+      },
+      "correct": true
+    },
+    {
+      "text": "д бивер на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.6219
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь д бивер слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.5466
+      },
+      "correct": true
+    },
+    {
+      "text": "d beaver на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.6906
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь d beaver слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.7675
+      },
+      "correct": true
+    },
+    {
+      "text": "docker desktop на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9374
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь docker desktop слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9157
+      },
+      "correct": true
+    },
+    {
+      "text": "докер десктоп на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9103
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь докер десктоп слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.872
+      },
+      "correct": true
+    },
+    {
+      "text": "fusion 360 на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9615
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь fusion 360 слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9373
+      },
+      "correct": true
+    },
+    {
+      "text": "фьюжен 360 на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9461
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь фьюжен 360 слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8864
+      },
+      "correct": true
+    },
+    {
+      "text": "фужен 360 на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9192
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь фужен 360 слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8713
+      },
+      "correct": true
+    },
+    {
+      "text": "фьюжн триста шестьдесят на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9252
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь фьюжн триста шестьдесят слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9155
+      },
+      "correct": true
+    },
+    {
+      "text": "git bash на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9452
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь git bash слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9019
+      },
+      "correct": true
+    },
+    {
+      "text": "гит баш на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9197
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь гит баш слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8298
+      },
+      "correct": true
+    },
+    {
+      "text": "git terminal на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.7128
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь git terminal слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.763
+      },
+      "correct": true
+    },
+    {
+      "text": "баш гит на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9111
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь баш гит слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8422
+      },
+      "correct": true
+    },
+    {
+      "text": "github desktop на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9412
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь github desktop слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9195
+      },
+      "correct": true
+    },
+    {
+      "text": "гитхаб десктоп на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9478
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь гитхаб десктоп слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.916
+      },
+      "correct": true
+    },
+    {
+      "text": "гит хаб десктоп на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9494
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь гит хаб десктоп слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9022
+      },
+      "correct": true
+    },
+    {
+      "text": "гитхаб десктопп на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9472
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь гитхаб десктопп слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.925
+      },
+      "correct": true
+    },
+    {
+      "text": "git hub desktop на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9489
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь git hub desktop слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9157
+      },
+      "correct": true
+    },
+    {
+      "text": "indesign на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8604
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь indesign слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8562
+      },
+      "correct": true
+    },
+    {
+      "text": "adobe indesign на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9318
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь adobe indesign слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9087
+      },
+      "correct": true
+    },
+    {
+      "text": "индизайн на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8843
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь индизайн слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8294
+      },
+      "correct": true
+    },
+    {
+      "text": "ин дизайн на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8637
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь ин дизайн слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.6418
+      },
+      "correct": true
+    },
+    {
+      "text": "индизайин на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9242
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь индизайин слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8483
+      },
+      "correct": true
+    },
+    {
+      "text": "индезайн на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8847
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь индезайн слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8376
+      },
+      "correct": true
+    },
+    {
+      "text": "3ds max на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.7758
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь 3ds max слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.5104
+      },
+      "correct": true
+    },
+    {
+      "text": "3d max на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.7406
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь 3d max слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.5506
+      },
+      "correct": true
+    },
+    {
+      "text": "три дэ макс на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8043
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь три дэ макс слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.7527
+      },
+      "correct": true
+    },
+    {
+      "text": "3 ds max на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8875
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь 3 ds max слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8219
+      },
+      "correct": true
+    },
+    {
+      "text": "тридэ макс на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.815
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь тридэ макс слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.7789
+      },
+      "correct": true
+    },
+    {
+      "text": "notion app на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9282
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь notion app слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.849
+      },
+      "correct": true
+    },
+    {
+      "text": "obsidian на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9197
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь obsidian слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8747
+      },
+      "correct": true
+    },
+    {
+      "text": "обсидиан на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8814
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь обсидиан слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8819
+      },
+      "correct": true
+    },
+    {
+      "text": "obsidian notes на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9397
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь obsidian notes слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9134
+      },
+      "correct": true
+    },
+    {
+      "text": "обсидианн на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9163
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь обсидианн слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9044
+      },
+      "correct": true
+    },
+    {
+      "text": "обсидиен на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8918
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь обсидиен слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8832
+      },
+      "correct": true
+    },
+    {
+      "text": "obsidion на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9202
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь obsidion слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8693
+      },
+      "correct": true
+    },
+    {
+      "text": "фотографии на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8741
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь фотографии слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8266
+      },
+      "correct": true
+    },
+    {
+      "text": "просмотр фото на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8289
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь просмотр фото слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.61
+      },
+      "correct": true
+    },
+    {
+      "text": "фотаграфии на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.886
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь фотаграфии слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8815
+      },
+      "correct": true
+    },
+    {
+      "text": "phpstorm на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9253
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь phpstorm слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.891
+      },
+      "correct": true
+    },
+    {
+      "text": "php storm на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9298
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь php storm слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8458
+      },
+      "correct": true
+    },
+    {
+      "text": "пхп шторм на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9479
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь пхп шторм слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8957
+      },
+      "correct": true
+    },
+    {
+      "text": "пиэйчпи шторм на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9538
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь пиэйчпи шторм слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9236
+      },
+      "correct": true
+    },
+    {
+      "text": "пхпшторм на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.919
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь пхпшторм слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9024
+      },
+      "correct": true
+    },
+    {
+      "text": "пхп сторм на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9288
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь пхп сторм слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8476
+      },
+      "correct": true
+    },
+    {
+      "text": "signal messenger на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9204
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь signal messenger слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8984
+      },
+      "correct": true
+    },
+    {
+      "text": "sketchup на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9067
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь sketchup слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8924
+      },
+      "correct": true
+    },
+    {
+      "text": "скетч ап на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8292
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь скетч ап слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8215
+      },
+      "correct": true
+    },
+    {
+      "text": "sketch up на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8886
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь sketch up слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8673
+      },
+      "correct": true
+    },
+    {
+      "text": "скетчапп на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9204
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь скетчапп слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8405
+      },
+      "correct": true
+    },
+    {
+      "text": "рабочий чат на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9164
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь рабочий чат слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8021
       },
       "correct": true
     },
@@ -1951,7 +4263,7 @@
           "layout",
           "targets"
         ],
-        "confidence": 0.8509
+        "confidence": 0.8053
       },
       "correct": true
     },
@@ -1968,7 +4280,7 @@
           "layout",
           "targets"
         ],
-        "confidence": 0.5567
+        "confidence": 0.768
       },
       "correct": true
     },
@@ -1985,7 +4297,7 @@
           "layout",
           "targets"
         ],
-        "confidence": 0.8214
+        "confidence": 0.8587
       },
       "correct": true
     },
@@ -2002,7 +4314,551 @@
           "layout",
           "targets"
         ],
-        "confidence": 0.5555
+        "confidence": 0.6412
+      },
+      "correct": true
+    },
+    {
+      "text": "microsoft visio на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8731
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь microsoft visio слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.7743
+      },
+      "correct": true
+    },
+    {
+      "text": "схемы visio на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9617
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь схемы visio слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9227
+      },
+      "correct": true
+    },
+    {
+      "text": "vlc player на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9111
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь vlc player слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8652
+      },
+      "correct": true
+    },
+    {
+      "text": "вэ эл це на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.7173
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь вэ эл це слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.5442
+      },
+      "correct": true
+    },
+    {
+      "text": "плеер vlc на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9279
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь плеер vlc слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8708
+      },
+      "correct": true
+    },
+    {
+      "text": "voice recorder на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9177
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь voice recorder слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8802
+      },
+      "correct": true
+    },
+    {
+      "text": "звукозапись на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9314
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь звукозапись слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9279
+      },
+      "correct": true
+    },
+    {
+      "text": "диктофон на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9034
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь диктофон слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.889
+      },
+      "correct": true
+    },
+    {
+      "text": "запись голоса на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.916
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь запись голоса слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8698
+      },
+      "correct": true
+    },
+    {
+      "text": "звукозапис на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9516
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь звукозапис слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9159
+      },
+      "correct": true
+    },
+    {
+      "text": "диктофан на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9023
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь диктофан слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8226
+      },
+      "correct": true
+    },
+    {
+      "text": "webstorm на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9276
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь webstorm слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8786
+      },
+      "correct": true
+    },
+    {
+      "text": "вебшторм на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9222
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь вебшторм слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9014
+      },
+      "correct": true
+    },
+    {
+      "text": "веб сторм на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.916
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь веб сторм слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8609
+      },
+      "correct": true
+    },
+    {
+      "text": "вэбшторм на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9271
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь вэбшторм слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8876
+      },
+      "correct": true
+    },
+    {
+      "text": "web storm на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.9044
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь web storm слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8479
       },
       "correct": true
     },
@@ -2019,7 +4875,7 @@
           "layout",
           "targets"
         ],
-        "confidence": 0.8707
+        "confidence": 0.874
       },
       "correct": true
     },
@@ -2036,7 +4892,7 @@
           "layout",
           "targets"
         ],
-        "confidence": 0.7866
+        "confidence": 0.8386
       },
       "correct": true
     },
@@ -2053,7 +4909,7 @@
           "layout",
           "targets"
         ],
-        "confidence": 0.7939
+        "confidence": 0.8275
       },
       "correct": true
     },
@@ -2070,7 +4926,7 @@
           "layout",
           "targets"
         ],
-        "confidence": 0.6792
+        "confidence": 0.6757
       },
       "correct": true
     },
@@ -2087,7 +4943,7 @@
           "layout",
           "targets"
         ],
-        "confidence": 0.651
+        "confidence": 0.8161
       },
       "correct": true
     },
@@ -2104,7 +4960,109 @@
           "layout",
           "targets"
         ],
-        "confidence": 0.6668
+        "confidence": 0.7201
+      },
+      "correct": true
+    },
+    {
+      "text": "зи браш на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8402
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь зи браш слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.7352
+      },
+      "correct": true
+    },
+    {
+      "text": "з брасх на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8562
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь з брасх слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.7982
+      },
+      "correct": true
+    },
+    {
+      "text": "z brush на весь экран",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8586
+      },
+      "correct": true
+    },
+    {
+      "text": "поставь z brush слева",
+      "expected": {
+        "missing": [
+          "layout",
+          "targets"
+        ]
+      },
+      "predicted": {
+        "missing": [
+          "layout",
+          "targets"
+        ],
+        "confidence": 0.8333
       },
       "correct": true
     }

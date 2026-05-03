@@ -9,275 +9,72 @@ import re
 from collections import Counter
 from pathlib import Path
 
+from python_agent.resolvers.app_catalog_overrides import DEFAULT_APP_OVERRIDES_PATH, load_app_catalog_overrides
+from python_agent.resolvers.user_app_catalog import load_user_apps
+from python_agent.training.dataset_sources import dict_from_source, list_from_source, load_training_source
+
 
 RANDOM_SEED = 42
 
-APPS = {'access': ['access', 'аксес', 'microsoft access'],
- 'acrobat_reader': ['acrobat', 'acrobat reader', 'акробат', 'pdf reader', 'ридер'],
- 'adobe_xd': ['adobe xd', 'xd', 'икс ди', 'адоб иксди'],
- 'after_effects': ['after effects', 'афтер эффектс', 'афтэр', 'after', 'афтер'],
- 'anaconda_navigator': ['anaconda', 'анаконда', 'anaconda navigator'],
- 'android_studio': ['android studio', 'андроид студио', 'студия андроид'],
- 'audition': ['audition', 'аудишн', 'адоб аудишн'],
- 'autocad': ['autocad', 'автокад', 'auto cad'],
- 'blender': ['blender', 'блендер'],
- 'brave': ['brave', 'брейв', 'браве'],
- 'calculator': ['калькулятор', 'calculator', 'калкулятор', 'кальк', 'посчитай'],
- 'chrome': ['хром', 'chrome', 'google chrome', 'гугл хром', 'браузер', 'интернет', 'хромик', 'гугл браузер'],
- 'cinema_4d': ['cinema 4d', 'синема', 'синема 4д'],
- 'clion': ['clion', 'си лайон', 'клайон'],
- 'cmd': ['cmd', 'командная строка', 'консоль cmd', 'команда', 'цмд', 'си эм ди'],
- 'control_panel': ['панель управления', 'control panel', 'контрол панель'],
- 'creative_cloud': ['creative cloud', 'креатив клауд', 'adobe cloud'],
- 'datagrip': ['datagrip', 'дата грип', 'датагрип'],
- 'davinci_resolve': ['davinci resolve', 'давинчи', 'резолв'],
- 'device_manager': ['диспетчер устройств', 'device manager', 'девайс менеджер'],
- 'discord': ['discord', 'дискорд', 'дис', 'дискордик'],
- 'docker_desktop': ['docker', 'docker desktop', 'докер', 'докер десктоп'],
- 'edge': ['edge', 'эдж', 'майкрософт эдж', 'microsoft edge', 'край'],
- 'epic_games_launcher': ['epic games', 'эпик', 'эпик геймс', 'epic launcher'],
- 'excel': ['excel', 'эксель', 'microsoft excel', 'таблицы'],
- 'explorer': ['проводник', 'explorer', 'файлы', 'окно файлов', 'file explorer', 'эксплорер'],
- 'figma': ['figma', 'фигма'],
- 'firefox': ['firefox', 'фаерфокс', 'файрфокс', 'огнелис', 'mozilla', 'мозила'],
- 'fusion_360': ['fusion 360', 'фьюжн', 'фьюжн 360'],
- 'git_bash': ['git bash', 'гит баш', 'bash', 'баш'],
- 'github_desktop': ['github desktop', 'гитхаб десктоп', 'github'],
- 'godot': ['godot', 'годот'],
- 'illustrator': ['illustrator', 'иллюстратор', 'адоб иллюстратор'],
- 'indesign': ['indesign', 'индизайн', 'in design'],
- 'intellij_idea': ['intellij idea', 'идея', 'интелидж', 'intellij', 'интеллидж'],
- 'jupyter_lab': ['jupyter', 'jupyter lab', 'джупитер', 'юпитер'],
- 'lightroom': ['lightroom', 'лайтрум', 'адоб лайтрум'],
- 'max_3ds': ['3ds max', 'три д макс', 'макс', '3d max'],
- 'maya': ['maya', 'майя'],
- 'notepad': ['блокнот', 'notepad', 'ноутпад', 'текстовый редактор', 'заметки'],
- 'notepad_plus_plus': ['notepad++', 'ноутпад плюс плюс', 'блокнот плюс плюс', 'npp'],
- 'obs_studio': ['obs', 'obs studio', 'обс', 'обс студио'],
- 'onenote': ['onenote', 'ваннот', 'one note', 'заметки one note'],
- 'opera': ['opera', 'опера', 'опера браузер'],
- 'outlook': ['outlook', 'аутлук', 'почта outlook'],
- 'paint': ['paint', 'паинт', 'пейнт', 'рисовалка'],
- 'photoshop': ['photoshop', 'фотошоп', 'адоб фотошоп', 'ps', 'фш'],
- 'phpstorm': ['phpstorm', 'пхпшторм', 'php storm'],
- 'postman': ['postman', 'постман'],
- 'powerpoint': ['powerpoint', 'пауэрпоинт', 'power point', 'презентации'],
- 'powershell': ['powershell', 'павершелл', 'пауэршелл', 'power shell', 'павер шелл'],
- 'premiere_pro': ['premiere pro', 'премьер', 'премьер про', 'adobe premiere', 'премьера'],
- 'project': ['project', 'проджект', 'microsoft project'],
- 'pycharm': ['pycharm', 'пайчарм', 'пичарм', 'пайтчарм'],
- 'regedit': ['regedit', 'редактор реестра', 'реестр', 'регедит'],
- 'settings': ['настройки', 'параметры', 'settings', 'настройки винды', 'параметры windows'],
- 'signal': ['signal', 'сигнал'],
- 'sketchup': ['sketchup', 'скетчап'],
- 'skype': ['skype', 'скайп'],
- 'slack': ['slack', 'слак'],
- 'snipping_tool': ['ножницы', 'snipping tool', 'скриншотер', 'фрагмент экрана'],
- 'spotify': ['spotify', 'спотифай', 'спотик'],
- 'steam': ['steam', 'стим'],
- 'sublime_text': ['sublime', 'sublime text', 'саблайм'],
- 'substance_painter': ['substance painter', 'сабстенс', 'пейнтер'],
- 'task_manager': ['диспетчер задач', 'task manager', 'таск менеджер', 'диспетчер'],
- 'teams': ['teams', 'тимс', 'microsoft teams', 'команды'],
- 'telegram': ['telegram', 'телеграм', 'телега', 'тг', 'телиграм', 'телегу'],
- 'terminal': ['terminal', 'терминал', 'windows terminal', 'виндовс терминал'],
- 'tor_browser': ['tor', 'тор', 'тор браузер', 'tor browser'],
- 'unity': ['unity', 'юнити'],
- 'unreal_engine': ['unreal engine', 'анрил', 'анрил engine', 'ue', 'ue5'],
- 'viber': ['viber', 'вайбер', 'вибер'],
- 'visio': ['visio', 'визио', 'microsoft visio'],
- 'visual_studio': ['visual studio', 'вижуал студио', 'студия', 'vs studio'],
- 'vlc': ['vlc', 'влц', 'плеер vlc', 'видео плеер'],
- 'vscode': ['vscode', 'vs code', 'visual studio code', 'вс код', 'вис код', 'вэс код', 'код', 'где код пишу'],
- 'webstorm': ['webstorm', 'вебшторм', 'web storm'],
- 'whatsapp': ['whatsapp', 'ватсап', 'вацап', 'вотсап'],
- 'winrar': ['winrar', 'винрар', 'архиватор'],
- 'word': ['word', 'ворд', 'microsoft word', 'документ ворд'],
- 'wsl': ['wsl', 'дабл ю эс эл', 'линукс подсистема', 'ubuntu'],
- 'yandex_browser': ['яндекс браузер', 'yandex browser', 'яндекс', 'yandex'],
- 'zbrush': ['zbrush', 'збраш', 'зи браш'],
- 'zoom': ['zoom', 'зум', 'зуум']}
+_SOURCE = load_training_source("window_control.json")
 
-AGENT_PREFIXES = ['', 'бивис ', 'beavis ', 'эй бивис ', 'брух ', 'слушай ', 'алло ', 'ну ка ', 'дружище ']
+APPS = dict_from_source(_SOURCE, "apps")
+AGENT_PREFIXES = list_from_source(_SOURCE, "agent_prefixes")
+ACTION_TEMPLATES = dict_from_source(_SOURCE, "action_templates")
+CLOSE_TEMPLATES = list(ACTION_TEMPLATES["close"])
+MINIMIZE_TEMPLATES = list(ACTION_TEMPLATES["minimize"])
+MAXIMIZE_TEMPLATES = list(ACTION_TEMPLATES["maximize"])
+RESTORE_TEMPLATES = list(ACTION_TEMPLATES["restore"])
+CURRENT_ALIASES = list_from_source(_SOURCE, "current_aliases")
+CURRENT_TEMPLATES = dict_from_source(_SOURCE, "current_templates")
+UNKNOWN_PHRASES = list_from_source(_SOURCE, "unknown_phrases")
+NON_CONTROL_APP_TEMPLATES = list_from_source(_SOURCE, "non_control_app_templates")
+UNKNOWN_WRAPPERS = list_from_source(_SOURCE, "unknown_wrappers")
 
-CLOSE_TEMPLATES = ['{agent}закрой {alias}',
- '{agent}закрой пожалуйста {alias}',
- '{agent}закрой окно {alias}',
- '{agent}закрывай {alias}',
- '{agent}закрыть {alias}',
- '{agent}выйди из {alias}',
- '{agent}выключи {alias}',
- '{agent}заверши {alias}',
- '{agent}прибей {alias}',
- '{agent}убей процесс {alias}',
- '{agent}kill {alias}',
- '{agent}close {alias}',
- '{agent}снеси {alias}',
- '{agent}убери {alias} полностью',
- '{agent}заканчивай с {alias}',
- '{agent}хватит {alias}',
- '{agent}зактни {alias}',
- '{agent}зкрой {alias}',
- '{agent}закрой нафиг {alias}',
- '{agent}убери нахрен {alias}',
- '{agent}закрывай эту {alias}',
- '{agent}{alias} закрой',
- '{agent}{alias} выключи',
- '{agent}{alias} заверши']
-MINIMIZE_TEMPLATES = ['{agent}сверни {alias}',
- '{agent}сверни окно {alias}',
- '{agent}сверни пожалуйста {alias}',
- '{agent}сверний {alias}',
- '{agent}сврени {alias}',
- '{agent}убери {alias} с экрана',
- '{agent}убери окно {alias}',
- '{agent}спрячь {alias}',
- '{agent}скрой {alias}',
- '{agent}кинь вниз {alias}',
- '{agent}отправь {alias} вниз',
- '{agent}сверни в панель {alias}',
- '{agent}minimize {alias}',
- '{agent}убери {alias} с глаз',
- '{agent}{alias} сверни',
- '{agent}{alias} спрячь',
- '{agent}{alias} вниз']
-MAXIMIZE_TEMPLATES = ['{agent}разверни {alias}',
- '{agent}разверни окно {alias}',
- '{agent}разверни на весь экран {alias}',
- '{agent}на весь экран {alias}',
- '{agent}увеличь окно {alias}',
- '{agent}раскрой {alias}',
- '{agent}максимизируй {alias}',
- '{agent}сделай {alias} на весь экран',
- '{agent}fullscreen {alias}',
- '{agent}фулл скрин {alias}',
- '{agent}во весь экран {alias}',
- '{agent}{alias} разверни',
- '{agent}{alias} на весь экран']
-RESTORE_TEMPLATES = ['{agent}верни {alias}',
- '{agent}верни окно {alias}',
- '{agent}восстанови {alias}',
- '{agent}восстанови окно {alias}',
- '{agent}разверни обратно {alias}',
- '{agent}достань {alias}',
- '{agent}покажи обратно {alias}',
- '{agent}верни на экран {alias}',
- '{agent}открой обратно {alias}',
- '{agent}{alias} верни',
- '{agent}{alias} восстанови',
- '{agent}верни как было {alias}']
 
-CURRENT_ALIASES = ['это',
- 'это окно',
- 'текущее окно',
- 'активное окно',
- 'текущую программу',
- 'активную программу',
- 'программу',
- 'окно',
- 'его',
- 'её',
- 'ее',
- 'текущий экран',
- 'активное приложение',
- 'приложение']
-CURRENT_TEMPLATES = {'close': ['{agent}закрой {alias}',
-           '{agent}закрой пожалуйста {alias}',
-           '{agent}закрыть {alias}',
-           '{agent}закрывай {alias}',
-           '{agent}выйди отсюда',
-           '{agent}закрой тут',
-           '{agent}закрой текущее',
-           '{agent}закрой активное',
-           '{agent}зактни это',
-           '{agent}убери это полностью',
-           '{agent}kill current window',
-           '{agent}{alias} закрой',
-           '{agent}{alias} закрывай',
-           '{agent}закрой {alias} полностью'],
- 'maximize': ['{agent}разверни {alias}',
-              '{agent}разверни на весь экран',
-              '{agent}сделай на весь экран',
-              '{agent}раскрой {alias}',
-              '{agent}увеличь {alias}',
-              '{agent}во весь экран',
-              '{agent}фулл скрин',
-              '{agent}maximize current',
-              '{agent}разверни {alias} на весь экран',
-              '{agent}сделай {alias} на весь экран',
-              '{agent}{alias} фулл скрин',
-              '{agent}{alias} fullscreen',
-              '{agent}максимизируй {alias}',
-              '{agent}{alias} во весь экран'],
- 'minimize': ['{agent}сверни {alias}',
-              '{agent}сверни пожалуйста {alias}',
-              '{agent}убери {alias} с экрана',
-              '{agent}спрячь {alias}',
-              '{agent}кинь {alias} вниз',
-              '{agent}сверни текущее',
-              '{agent}убери вниз',
-              '{agent}minimize current',
-              '{agent}скрой это',
-              '{agent}сверни {alias} вниз',
-              '{agent}кинь вниз {alias}',
-              '{agent}{alias} спрячь'],
- 'restore': ['{agent}верни {alias}',
-             '{agent}восстанови {alias}',
-             '{agent}верни окно',
-             '{agent}достань обратно',
-             '{agent}покажи обратно',
-             '{agent}верни на экран',
-             '{agent}restore current',
-             '{agent}верни как было',
-             '{agent}{alias} верни',
-             '{agent}{alias} восстанови',
-             '{agent}верни {alias} на экран']}
-UNKNOWN_PHRASES = ['сделай громкость 20',
- 'убавь звук',
- 'прибавь громкость',
- 'бивис громкость на десять',
- 'динамики рвуться',
- 'заткнись',
- 'бивис зактни',
- 'громко слишком',
- 'сделавй громче',
- 'открой браузер',
- 'запусти блокнот',
- 'открой вс код',
- 'открой где код пишу',
- 'какая погода',
- 'поставь таймер',
- 'напомни мне завтра',
- 'найди в интернете',
- 'сделай скриншот',
- 'переключи трек',
- 'пауза музыку',
- 'следующая песня',
- 'что по времени',
- 'сколько время',
- 'найди файл',
- 'удали файл',
- 'создай папку',
- 'расскажи анекдот',
- 'напиши сообщение',
- 'отправь письмо',
- 'покажи календарь',
- 'открой окно',
- 'сверни браузер когда откроешь',
- 'закрой глаза',
- 'закрытый вопрос',
- 'погода минск',
- 'переведи текст',
- 'проснись',
- 'ты где',
- 'помолчи',
- 'брух сделай громче',
- 'сделай тихо',
- 'выруби звук',
- 'на максимум',
- 'перезагрузи компьютер',
- 'выключи компьютер',
- 'заблокируй экран']
+def is_spoken_form(value: str) -> bool:
+    text = value.strip()
+    if not text:
+        return False
+    if any(marker in text for marker in ("\\", "/", "://", "{", "}", "!", ".exe")):
+        return False
+    return True
+
+
+def build_apps(
+    user_apps_path: Path | None = None,
+    overrides_path: Path | None = DEFAULT_APP_OVERRIDES_PATH,
+) -> dict[str, list[str]]:
+    overrides = load_app_catalog_overrides(overrides_path)
+    apps = {
+        app_id: [
+            clean_text(alias)
+            for alias in [
+                *aliases,
+                *(overrides[app_id].speech_forms if app_id in overrides else []),
+            ]
+            if is_spoken_form(str(alias))
+        ]
+        for app_id, aliases in APPS.items()
+        if not (app_id in overrides and overrides[app_id].disabled)
+    }
+
+    for item in load_user_apps(user_apps_path):
+        forms = [
+            item.display_name,
+            Path(item.launch_target).stem,
+            *item.speech_forms,
+            *(overrides[item.app_id].speech_forms if item.app_id in overrides else []),
+        ]
+        cleaned = list(dict.fromkeys([
+            clean_text(form)
+            for form in forms
+            if is_spoken_form(str(form))
+        ]))
+        if cleaned:
+            apps[item.app_id] = cleaned
+
+    return apps
 
 
 def stable_seed(text: str) -> int:
@@ -318,10 +115,10 @@ def simple_typos(text: str) -> list[str]:
     return sorted(variants)
 
 
-def build_app_aliases(max_aliases_per_app: int) -> dict[str, list[str]]:
+def build_app_aliases(max_aliases_per_app: int, apps: dict[str, list[str]]) -> dict[str, list[str]]:
     result: dict[str, list[str]] = {}
 
-    for app_id, aliases in APPS.items():
+    for app_id, aliases in apps.items():
         original_aliases = []
         seen: set[str] = set()
 
@@ -378,10 +175,12 @@ def generate_dataset(
     current_samples_per_action: int,
     unknown_samples: int,
     max_aliases_per_app: int,
+    apps: dict[str, list[str]] | None = None,
 ) -> tuple[list[tuple[str, str]], list[tuple[str, str]], list[dict]]:
     random.seed(RANDOM_SEED)
 
-    app_aliases = build_app_aliases(max_aliases_per_app=max_aliases_per_app)
+    apps = apps or build_apps()
+    app_aliases = build_app_aliases(max_aliases_per_app=max_aliases_per_app, apps=apps)
 
     rows_action: list[tuple[str, str]] = []
     rows_target: list[tuple[str, str]] = []
@@ -425,36 +224,16 @@ def generate_dataset(
             add_example(text, action, "current", args, rows_action, rows_target, combined, seen)
 
     base_unknown = list(UNKNOWN_PHRASES)
-    open_templates = [
-        "открой {alias}",
-        "запусти {alias}",
-        "включи {alias}",
-        "open {alias}",
-        "start {alias}",
-        "найди {alias}",
-    ]
 
     for aliases in app_aliases.values():
         for alias in aliases[:4]:
-            for template in open_templates:
+            for template in NON_CONTROL_APP_TEMPLATES:
                 base_unknown.append(template.format(alias=alias))
-
-    unknown_wrappers = [
-        "бивис {text}",
-        "брух {text}",
-        "эй {text}",
-        "слушай {text}",
-        "{text} пожалуйста",
-        "{text}",
-        "ну ка {text}",
-        "давай {text}",
-        "{text} быстро",
-    ]
 
     unknown_commands = [
         wrapper.format(text=phrase)
         for phrase in base_unknown
-        for wrapper in unknown_wrappers
+        for wrapper in UNKNOWN_WRAPPERS
     ]
     random.shuffle(unknown_commands)
 
@@ -497,15 +276,19 @@ def main() -> None:
     parser.add_argument("--current-samples-per-action", type=int, default=1200)
     parser.add_argument("--unknown-samples", type=int, default=24000)
     parser.add_argument("--max-aliases-per-app", type=int, default=22)
+    parser.add_argument("--user-apps-path", type=Path, default=None)
+    parser.add_argument("--overrides-path", type=Path, default=DEFAULT_APP_OVERRIDES_PATH)
     args = parser.parse_args()
 
     out_dir = Path(args.out_dir)
+    apps = build_apps(args.user_apps_path, args.overrides_path)
 
     rows_action, rows_target, combined = generate_dataset(
         samples_per_app_action=args.samples_per_app_action,
         current_samples_per_action=args.current_samples_per_action,
         unknown_samples=args.unknown_samples,
         max_aliases_per_app=args.max_aliases_per_app,
+        apps=apps,
     )
 
     write_csv(out_dir / "action_train.csv", ["text", "action"], rows_action)
@@ -517,7 +300,7 @@ def main() -> None:
         "action_counts": dict(Counter(action for _, action in rows_action)),
         "target_classes": len(set(target for _, target in rows_target)),
         "target_top_counts": Counter(target for _, target in rows_target).most_common(20),
-        "app_classes": len(APPS),
+        "app_classes": len(apps),
     }
 
     (out_dir / "dataset_stats.json").write_text(

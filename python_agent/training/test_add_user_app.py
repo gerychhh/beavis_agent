@@ -13,12 +13,15 @@ from python_agent.resolvers.user_app_catalog import load_user_apps
 from python_agent.resolvers.app_catalog_overrides import load_app_catalog_overrides
 from python_agent.resolvers.windows_app_discovery import make_entry
 from python_agent.resolvers import app_indexer
-from python_agent.training import generate_open_app_dataset, generate_skill_classifier_dataset
+from python_agent.training import generate_open_app_dataset, generate_skill_classifier_dataset, generate_window_control_dataset
 from python_agent.training.add_user_app import (
     AddUserAppRequest,
+    AppCatalogChange,
+    ApplyUserAppChangesRequest,
     DeleteUserAppRequest,
     UpdateUserAppRequest,
     add_user_app,
+    apply_user_app_changes,
     delete_user_app,
     update_user_app,
 )
@@ -215,6 +218,7 @@ def main() -> int:
             generate_skill_classifier_dataset.random.Random(1),
             disabled_skill_catalog,
         )
+        window_control_catalog = generate_window_control_dataset.build_apps(catalog_path, overrides_path)
         overrides = load_app_catalog_overrides(overrides_path)
         checks.update({
             "builtin_delete_result_app_id": builtin_delete.app.app_id == "chrome",
@@ -229,6 +233,7 @@ def main() -> int:
                 label == generate_skill_classifier_dataset.SKILL_OPEN_APP and "хром" in text
                 for text, label in disabled_skill_rows
             ),
+            "builtin_removed_from_window_control_dataset": "chrome" not in window_control_catalog,
         })
 
         reused_builtin_id = add_user_app(
@@ -245,11 +250,84 @@ def main() -> int:
         )
         open_catalog = generate_open_app_dataset.build_app_catalog(catalog_path, overrides_path)
         disabled_open_catalog = generate_open_app_dataset.build_disabled_app_catalog(overrides_path, catalog_path)
+        window_control_catalog = generate_window_control_dataset.build_apps(catalog_path, overrides_path)
         checks.update({
             "disabled_builtin_id_is_reusable": reused_builtin_id.app.app_id == "chrome",
             "reused_builtin_id_is_active_user_dataset": "мой новый хром" in open_catalog["chrome"]["surface_forms"],
             "reused_builtin_id_removes_disabled_negatives": "chrome" not in disabled_open_catalog,
+            "reused_builtin_id_is_active_window_control_dataset": "мой новый хром" in window_control_catalog["chrome"],
         })
+
+        batch_catalog_path = root / "batch_apps.json"
+        batch_overrides_path = root / "batch_catalog_overrides.json"
+        batch_index_path = root / "batch_apps_index.json"
+        batch_app_path = root / "BatchTool.exe"
+        batch_app_path.write_text("placeholder", encoding="utf-8")
+        batch_result = apply_user_app_changes(
+            ApplyUserAppChangesRequest(
+                changes=[
+                    AppCatalogChange(
+                        operation="delete",
+                        source="builtin",
+                        app_id="edge",
+                    ),
+                    AppCatalogChange(
+                        operation="add",
+                        source="user",
+                        app_id="edge",
+                        display_name="Custom Edge",
+                        path=batch_app_path,
+                        launch_type="exe",
+                        speech_forms=["кастомный эдж"],
+                    ),
+                    AppCatalogChange(
+                        operation="update_speech_forms",
+                        source="builtin",
+                        app_id="firefox",
+                        speech_forms=["мой фаер"],
+                    ),
+                ],
+                retrain=False,
+                catalog_path=batch_catalog_path,
+                index_output_path=batch_index_path,
+                overrides_path=batch_overrides_path,
+            )
+        )
+        batch_apps = load_user_apps(batch_catalog_path)
+        batch_overrides = load_app_catalog_overrides(batch_overrides_path)
+        batch_open_catalog = generate_open_app_dataset.build_app_catalog(batch_catalog_path, batch_overrides_path)
+        batch_disabled_open_catalog = generate_open_app_dataset.build_disabled_app_catalog(batch_overrides_path, batch_catalog_path)
+        checks.update({
+            "batch_result_count": len(batch_result.changes) == 3,
+            "batch_add_written": any(item.app_id == "edge" and "кастомный эдж" in item.speech_forms for item in batch_apps),
+            "batch_delete_builtin_written": batch_overrides.get("edge") is not None and batch_overrides["edge"].disabled is True,
+            "batch_reused_disabled_builtin_id_active": "кастомный эдж" in batch_open_catalog["edge"]["surface_forms"],
+            "batch_reused_disabled_builtin_id_not_negative": "edge" not in batch_disabled_open_catalog,
+            "batch_builtin_update_written": batch_overrides.get("firefox") is not None and batch_overrides["firefox"].speech_forms == ["мой фаер"],
+            "batch_builtin_update_in_dataset": "мой фаер" in batch_open_catalog["firefox"]["surface_forms"],
+        })
+
+        try:
+            apply_user_app_changes(
+                ApplyUserAppChangesRequest(
+                    changes=[
+                        AppCatalogChange(
+                            operation="add",
+                            source="user",
+                            app_id="chrome",
+                            display_name="Duplicate Chrome",
+                            path=batch_app_path,
+                        ),
+                    ],
+                    retrain=False,
+                    catalog_path=root / "batch_conflict_apps.json",
+                    index_output_path=root / "batch_conflict_index.json",
+                    overrides_path=root / "batch_conflict_overrides.json",
+                )
+            )
+            checks["batch_conflict_rejected"] = False
+        except ValueError:
+            checks["batch_conflict_rejected"] = True
 
         failed = [name for name, ok in checks.items() if not ok]
         print(json.dumps({

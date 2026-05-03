@@ -87,6 +87,7 @@ class BeavisMainWindow(QMainWindow):
         self._active_app_dialog: QDialog | None = None
         self._last_user_app_action = ""
         self._editing_slang_index: int | None = None
+        self._pending_app_changes: dict[str, dict[str, object]] = {}
 
         self.setWindowTitle("Beavis Agent")
         self.setWindowIcon(beavis_icon())
@@ -674,6 +675,17 @@ class BeavisMainWindow(QMainWindow):
         self.new_app_button.setIcon(self.style().standardIcon(QStyle.StandardPixmap.SP_FileDialogNewFolder))
         self.new_app_button.clicked.connect(self._open_add_app_dialog)
 
+        self.apply_app_changes_button = QPushButton("Применить изменения", self)
+        self.apply_app_changes_button.setProperty("kind", "primary")
+        self.apply_app_changes_button.setIcon(self.style().standardIcon(QStyle.StandardPixmap.SP_DialogApplyButton))
+        self.apply_app_changes_button.clicked.connect(self._apply_pending_app_changes)
+        self.apply_app_changes_button.setEnabled(False)
+
+        self.discard_app_changes_button = QPushButton("Отменить", self)
+        self.discard_app_changes_button.setProperty("kind", "ghost")
+        self.discard_app_changes_button.clicked.connect(self._discard_pending_app_changes)
+        self.discard_app_changes_button.setEnabled(False)
+
         self.refresh_apps_catalog_button = QPushButton("Обновить", self)
         self.refresh_apps_catalog_button.setIcon(self.style().standardIcon(QStyle.StandardPixmap.SP_BrowserReload))
         self.refresh_apps_catalog_button.clicked.connect(self._refresh_apps_page)
@@ -689,12 +701,14 @@ class BeavisMainWindow(QMainWindow):
         toolbar.addWidget(integrated_filter)
         toolbar.addWidget(drafts_filter)
         toolbar.addWidget(self.new_app_button)
+        toolbar.addWidget(self.apply_app_changes_button)
+        toolbar.addWidget(self.discard_app_changes_button)
         toolbar.addWidget(self.refresh_apps_catalog_button)
 
-        self.app_training_status_label = QLabel("Переобучение модели и синхронизация каталога", self)
+        self.app_training_status_label = QLabel("Каталог приложений", self)
         self.app_training_status_label.setObjectName("sectionTitle")
         self.app_training_detail_label = QLabel(
-            "Добавление и редактирование приложений автоматически переобучает классификатор",
+            "Изменения сохраняются в черновик. Обучение запускается только после применения.",
             self,
         )
         self.app_training_detail_label.setObjectName("hintLabel")
@@ -1220,7 +1234,7 @@ class BeavisMainWindow(QMainWindow):
         self._load_user_apps()
         self._filter_apps_catalog()
 
-    def _build_apps_catalog_rows(self) -> list[dict[str, object]]:
+    def _build_base_apps_catalog_rows(self) -> list[dict[str, object]]:
         rows: list[dict[str, object]] = []
         overrides = load_app_catalog_overrides()
         for app_id, payload in BUILTIN_APP_CATALOG.items():
@@ -1260,6 +1274,79 @@ class BeavisMainWindow(QMainWindow):
             })
 
         return sorted(rows, key=lambda item: (str(item["source"]) != "user", str(item["display_name"]).lower()))
+
+    def _build_apps_catalog_rows(self) -> list[dict[str, object]]:
+        rows_by_id = {
+            str(row.get("app_id", "")): dict(row)
+            for row in self._build_base_apps_catalog_rows()
+            if str(row.get("app_id", ""))
+        }
+
+        for change in self._pending_app_changes.values():
+            app_id = str(change.get("app_id", "")).strip()
+            operation = str(change.get("operation", "")).strip()
+            if not app_id:
+                continue
+
+            if operation == "add":
+                speech_forms = [str(item) for item in change.get("speech_forms", [])]
+                rows_by_id[app_id] = {
+                    "display_name": str(change.get("display_name", "")),
+                    "app_id": app_id,
+                    "status": "Черновик · новое",
+                    "source": "user",
+                    "launch_type": str(change.get("launch_type", "")),
+                    "speech_forms": speech_forms,
+                    "custom_speech_forms": speech_forms,
+                    "record": change,
+                    "pending_change": change,
+                    "editable": True,
+                }
+                continue
+
+            row = rows_by_id.get(app_id)
+            if row is None:
+                row = {
+                    "display_name": str(change.get("display_name") or app_id),
+                    "app_id": app_id,
+                    "status": "Черновик",
+                    "source": str(change.get("source") or "user"),
+                    "speech_forms": [],
+                    "custom_speech_forms": [],
+                    "editable": True,
+                }
+
+            if operation == "update_speech_forms":
+                forms = [str(item) for item in change.get("speech_forms", [])]
+                if row.get("source") == "builtin":
+                    base_forms = [
+                        str(item)
+                        for item in row.get("speech_forms", [])
+                        if str(item) not in set(row.get("custom_speech_forms", []))
+                    ]
+                    row["speech_forms"] = list(dict.fromkeys([*base_forms, *forms]))
+                else:
+                    row["speech_forms"] = forms
+                row["custom_speech_forms"] = forms
+                row["status"] = "Черновик · изменено"
+                row["pending_change"] = change
+                row.pop("record", None)
+                rows_by_id[app_id] = row
+                continue
+
+            if operation == "delete":
+                row["status"] = "Черновик · будет удалено"
+                row["pending_deleted"] = True
+                row["pending_change"] = change
+                row.pop("record", None)
+                row["editable"] = True
+                rows_by_id[app_id] = row
+
+        return sorted(rows_by_id.values(), key=lambda item: (
+            bool(item.get("pending_deleted")),
+            str(item.get("source")) != "user",
+            str(item.get("display_name")).lower(),
+        ))
 
     def _filter_apps_catalog(self) -> None:
         if not hasattr(self, "apps_catalog_table"):
@@ -1449,11 +1536,11 @@ class BeavisMainWindow(QMainWindow):
         self.app_speech_forms_input.setPlaceholderText("Сленговые названия, по одному на строку")
         self.app_speech_forms_input.setFixedHeight(120)
 
-        self.add_app_button = QPushButton("Добавить и обучить", dialog)
+        self.add_app_button = QPushButton("Сохранить в черновик", dialog)
         self.add_app_button.setProperty("kind", "primary")
         self.add_app_button.clicked.connect(self._submit_user_app)
 
-        self.update_app_button = QPushButton("Сохранить и дообучить", dialog)
+        self.update_app_button = QPushButton("Сохранить в черновик", dialog)
         self.update_app_button.clicked.connect(self._submit_update_user_app)
 
         self.delete_app_button = QPushButton("Удалить", dialog)
@@ -1571,10 +1658,10 @@ class BeavisMainWindow(QMainWindow):
         self.app_path_input.hide()
         self.app_speech_forms_input.hide()
 
-        self.add_app_button = QPushButton("Добавить и обучить", dialog)
+        self.add_app_button = QPushButton("Добавить", dialog)
         self.add_app_button.hide()
 
-        self.update_app_button = QPushButton("Сохранить", dialog)
+        self.update_app_button = QPushButton("Сохранить в черновик", dialog)
         self.update_app_button.setProperty("kind", "primary")
         self.update_app_button.clicked.connect(self._submit_update_user_app)
 
@@ -1908,6 +1995,23 @@ class BeavisMainWindow(QMainWindow):
         self._set_slang_variants([str(item) for item in speech_forms])
         self._validate_app_form()
 
+    def _effective_app_ids_after_pending(self) -> set[str]:
+        app_ids = {
+            str(row.get("app_id", "")).strip()
+            for row in self._build_base_apps_catalog_rows()
+            if str(row.get("app_id", "")).strip()
+        }
+        for change in self._pending_app_changes.values():
+            app_id = str(change.get("app_id", "")).strip()
+            operation = str(change.get("operation", "")).strip()
+            if not app_id:
+                continue
+            if operation == "delete":
+                app_ids.discard(app_id)
+            elif operation == "add":
+                app_ids.add(app_id)
+        return app_ids
+
     def _validate_app_form(self) -> None:
         if not hasattr(self, "app_id_status_label"):
             return
@@ -1919,17 +2023,11 @@ class BeavisMainWindow(QMainWindow):
             self._refresh_widget_style(self.app_id_status_label)
             return
 
-        occupied_user_ids = {
-            str(app.get("app_id", "")).strip()
-            for app in self._user_apps
-            if str(app.get("app_id", "")).strip()
-        }
-        occupied_model_ids = set(BUILTIN_APP_CATALOG)
         if not app_id:
             self.app_id_status_label.setText("")
             self.add_app_button.setEnabled(False)
-        elif app_id in occupied_user_ids or app_id in occupied_model_ids:
-            self.app_id_status_label.setText(f"app_id уже занят в датасете: {app_id}")
+        elif app_id in self._effective_app_ids_after_pending():
+            self.app_id_status_label.setText(f"app_id уже занят в текущем датасете: {app_id}")
             self.app_id_status_label.setProperty("state", "error")
             self.add_app_button.setEnabled(False)
         else:
@@ -2102,65 +2200,152 @@ class BeavisMainWindow(QMainWindow):
         self.app_id_input.setText(suggest_app_id(display_name, path or None))
         self._validate_app_form()
 
+    def _queue_pending_app_change(self, change: dict[str, object], close_dialog: bool = True) -> None:
+        app_id = str(change.get("app_id", "")).strip()
+        operation = str(change.get("operation", "")).strip()
+        if not app_id or not operation:
+            self._set_status("Не хватает app_id или операции", "error")
+            return
+
+        add_key = f"add:{app_id}"
+        existing = self._pending_app_changes.get(add_key) or self._pending_app_changes.get(app_id)
+        if operation == "delete" and existing and existing.get("operation") == "add":
+            existing_key = add_key if add_key in self._pending_app_changes else app_id
+            del self._pending_app_changes[existing_key]
+            self._set_app_progress_text(f"Черновое добавление отменено: {app_id}")
+        elif operation == "update_speech_forms" and existing and existing.get("operation") == "add":
+            updated = dict(existing)
+            updated["speech_forms"] = list(change.get("speech_forms", []))
+            existing_key = add_key if add_key in self._pending_app_changes else app_id
+            self._pending_app_changes[existing_key] = updated
+            self._set_app_progress_text(f"Черновик обновлён: {app_id}")
+        else:
+            key = add_key if operation == "add" and self._pending_app_changes.get(app_id, {}).get("operation") == "delete" else app_id
+            self._pending_app_changes[key] = change
+            self._set_app_progress_text(f"Изменение добавлено в черновик: {app_id}")
+
+        self._refresh_pending_app_changes_ui()
+        self._filter_apps_catalog()
+        self._set_status("Изменение сохранено в черновик", "success")
+        if close_dialog and self._active_app_dialog is not None:
+            self._active_app_dialog.close()
+
+    def _refresh_pending_app_changes_ui(self) -> None:
+        count = len(self._pending_app_changes)
+        has_changes = count > 0
+        if hasattr(self, "apply_app_changes_button"):
+            self.apply_app_changes_button.setEnabled(has_changes)
+        if hasattr(self, "discard_app_changes_button"):
+            self.discard_app_changes_button.setEnabled(has_changes)
+        if hasattr(self, "app_training_status_label"):
+            if has_changes:
+                noun = "изменение" if count == 1 else "изменения" if 2 <= count <= 4 else "изменений"
+                self.app_training_status_label.setText(f"{count} {noun} ждёт применения")
+                self.app_training_status_label.setProperty("state", "running")
+                self.app_training_detail_label.setText("Проверь список и нажми «Применить изменения», чтобы переобучить модели.")
+                self.app_training_progress.setValue(0)
+            else:
+                self.app_training_status_label.setText("Каталог приложений")
+                self.app_training_status_label.setProperty("state", "idle")
+                self.app_training_detail_label.setText("Изменения сохраняются в черновик. Обучение запускается только после применения.")
+                self.app_training_progress.setValue(0)
+            self._refresh_widget_style(self.app_training_status_label)
+
+    def _discard_pending_app_changes(self) -> None:
+        self._pending_app_changes.clear()
+        self._refresh_pending_app_changes_ui()
+        self._filter_apps_catalog()
+        self._set_app_progress_text("Черновик очищен")
+        self._set_status("Черновые изменения отменены", "success")
+
+    def _apply_pending_app_changes(self) -> None:
+        changes = list(self._pending_app_changes.values())
+        if not changes:
+            self._set_status("Нет изменений для применения", "error")
+            return
+
+        if self.user_app_runner.apply_app_changes(changes):
+            self._last_user_app_action = "apply"
+            self.apply_app_changes_button.setEnabled(False)
+            self.discard_app_changes_button.setEnabled(False)
+            self.new_app_button.setEnabled(False)
+            self._set_app_progress_text("Применяю черновые изменения")
+            self._set_app_training_status("Проверяю изменения")
+            self._set_status("Применяю изменения приложений", "running")
+
     def _submit_user_app(self) -> None:
         speech_forms = self._speech_forms_from_input()
-        kwargs = {
-            "display_name": self.app_display_name_input.text(),
-            "app_id": self.app_id_input.text(),
+        display_name = self.app_display_name_input.text().strip()
+        app_id = self.app_id_input.text().strip()
+        if not display_name:
+            self._set_status("Укажи название приложения", "error")
+            return
+        if not app_id or app_id in self._effective_app_ids_after_pending():
+            self._validate_app_form()
+            self._set_status("app_id занят или пустой", "error")
+            return
+
+        change: dict[str, object] = {
+            "operation": "add",
+            "source": "user",
+            "display_name": display_name,
+            "app_id": app_id,
             "speech_forms": speech_forms,
         }
         if self.app_windows_mode_radio.isChecked():
             selected = self._selected_windows_app or {}
-            kwargs.update({
+            if not selected.get("windows_app_id"):
+                self._set_status("Выбери приложение Windows", "error")
+                return
+            change.update({
                 "windows_app_id": selected.get("windows_app_id", ""),
                 "launch_type": selected.get("launch_type", "apps_folder"),
                 "launch_target": selected.get("launch_target", ""),
                 "path": "",
             })
         else:
-            kwargs.update({
+            path = self.app_path_input.text().strip()
+            if not path:
+                self._set_status("Укажи путь к .exe", "error")
+                return
+            change.update({
                 "path": self.app_path_input.text(),
                 "windows_app_id": "",
                 "launch_type": "exe",
                 "launch_target": "",
             })
 
-        if self.user_app_runner.add_app(**kwargs):
-            self._last_user_app_action = "add"
-            self.add_app_button.setEnabled(False)
-            self._set_app_progress_text("Стартую добавление приложения")
-            self._set_app_training_status("Проверяю приложение")
-            self._set_status("Добавляю приложение", "running")
+        self._queue_pending_app_change(change)
 
     def _submit_update_user_app(self) -> None:
         if not self._selected_user_app:
-            self._set_status("Выбери добавленное приложение", "error")
+            self._set_status("Выбери приложение", "error")
             return
 
         app_id = str(self._selected_user_app.get("app_id", ""))
-        if self.user_app_runner.update_app_speech_forms(app_id, self._speech_forms_from_input()):
-            self._last_user_app_action = "update"
-            self.add_app_button.setEnabled(False)
-            self.update_app_button.setEnabled(False)
-            self.delete_app_button.setEnabled(False)
-            self._set_app_progress_text("Стартую обновление сленга")
-            self._set_app_training_status("Сохраняю сленг")
-            self._set_status("Обновляю сленг", "running")
+        source = str(self._selected_user_app.get("source", "user"))
+        self._queue_pending_app_change({
+            "operation": "update_speech_forms",
+            "source": source,
+            "app_id": app_id,
+            "display_name": str(self._selected_user_app.get("display_name", "")),
+            "speech_forms": self._speech_forms_from_input(),
+        })
 
     def _submit_delete_user_app(self) -> None:
         if not self._selected_user_app:
-            self._set_status("Выбери добавленное приложение", "error")
+            self._set_status("Выбери приложение", "error")
             return
 
         app_id = str(self._selected_user_app.get("app_id", ""))
-        if self.user_app_runner.delete_app(app_id):
-            self._last_user_app_action = "delete"
-            self.add_app_button.setEnabled(False)
-            self.update_app_button.setEnabled(False)
-            self.delete_app_button.setEnabled(False)
-            self._set_app_progress_text("Стартую удаление приложения")
-            self._set_app_training_status("Удаляю приложение")
-            self._set_status("Удаляю приложение", "running")
+        source = str(self._selected_user_app.get("source", "user"))
+        self._queue_pending_app_change({
+            "operation": "delete",
+            "source": source,
+            "app_id": app_id,
+            "display_name": str(self._selected_user_app.get("display_name", "")),
+            "speech_forms": self._speech_forms_from_input(),
+        })
 
     def _speech_forms_from_input(self) -> list[str]:
         raw = self.app_speech_forms_input.toPlainText().replace(",", "\n")
@@ -2185,15 +2370,19 @@ class BeavisMainWindow(QMainWindow):
     @Slot(object)
     def _handle_user_app_success(self, result) -> None:
         self.runner.reload_pipeline()
+        if self._last_user_app_action == "apply":
+            self._pending_app_changes.clear()
         self._load_user_apps()
         payload = result.to_dict() if hasattr(result, "to_dict") else result
         self._set_app_progress_text(json.dumps(payload, ensure_ascii=False, indent=2))
         self._set_app_training_status("Готово")
-        if self._last_user_app_action == "delete" and self._active_app_dialog is not None:
+        if self._active_app_dialog is not None:
             self._active_app_dialog.close()
         elif self._app_form_mode == "new" and hasattr(self, "app_display_name_input"):
             self._set_app_form_new()
-        self._set_status("Приложение сохранено и модели обновлены", "success")
+        self._refresh_pending_app_changes_ui()
+        self._filter_apps_catalog()
+        self._set_status("Изменения применены и модели обновлены", "success")
         if hasattr(self, "add_app_button"):
             self._pulse_widget(self.add_app_button)
 
@@ -2206,6 +2395,12 @@ class BeavisMainWindow(QMainWindow):
 
     @Slot()
     def _handle_user_app_finished(self) -> None:
+        if hasattr(self, "new_app_button"):
+            self.new_app_button.setEnabled(True)
+        if hasattr(self, "apply_app_changes_button"):
+            self.apply_app_changes_button.setEnabled(bool(self._pending_app_changes))
+        if hasattr(self, "discard_app_changes_button"):
+            self.discard_app_changes_button.setEnabled(bool(self._pending_app_changes))
         if hasattr(self, "add_app_button"):
             self.add_app_button.setEnabled(self._app_form_mode == "new")
         if hasattr(self, "update_app_button"):
@@ -2229,7 +2424,9 @@ class BeavisMainWindow(QMainWindow):
             return
 
         steps = [
+            "Проверяю изменения",
             "Проверяю приложение",
+            "Сохраняю изменения",
             "Сохраняю приложение",
             "Сохраняю сленг",
             "Удаляю приложение",
@@ -2240,6 +2437,9 @@ class BeavisMainWindow(QMainWindow):
             "Генерирую датасет skill_classifier",
             "Обучаю skill_classifier",
             "Тестирую skill_classifier",
+            "Генерирую датасет window_layout",
+            "Обучаю window_layout",
+            "Тестирую window_layout",
             "Проверяю новые фразы",
             "Готово",
         ]
@@ -2678,4 +2878,3 @@ class BeavisMainWindow(QMainWindow):
             }
             """
         )
-
