@@ -95,27 +95,12 @@ class WindowLayoutModelExtractor(ArgumentExtractor):
         if isinstance(layout, str) and layout in ALLOWED_LAYOUTS:
             args["layout"] = layout
 
-        if "layout" in args and self.app_search.find_disabled_app_ids_in_text(text):
-            active_text_matches = self.app_search.find_app_ids_in_text(
-                text,
-                limit=self._required_target_count(args["layout"]),
-            )
-            if not active_text_matches:
-                return ArgsPrediction(
-                    args=args,
-                    confidence=confidence,
-                    missing=["targets"],
-                    source="model_disabled_app_target",
-                )
-
         if isinstance(missing, list) and missing:
             if "layout" in args and "targets" in missing:
-                matches = self.app_search.find_app_ids_in_text(
-                    text,
-                    limit=self._required_target_count(args["layout"]),
-                )
-                if len(matches) >= self._required_target_count(args["layout"]):
-                    args["targets"] = matches[:self._required_target_count(args["layout"])]
+                required = self._required_target_count(args["layout"])
+                matches = self.app_search.find_app_ids_in_text(text, limit=required)
+                if len(matches) >= required:
+                    args["targets"] = matches[:required]
                     return ArgsPrediction(
                         args=args,
                         confidence=confidence,
@@ -143,6 +128,7 @@ class WindowLayoutModelExtractor(ArgumentExtractor):
 
         resolved_targets: list[str] = []
         unresolved_targets = 0
+
         for target in clean_targets:
             if target == "current":
                 resolved_targets.append(target)
@@ -152,6 +138,7 @@ class WindowLayoutModelExtractor(ArgumentExtractor):
             if resolved_app_id is None:
                 unresolved_targets += 1
                 continue
+
             if resolved_app_id not in resolved_targets:
                 resolved_targets.append(resolved_app_id)
 

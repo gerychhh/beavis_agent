@@ -82,16 +82,11 @@ class WindowControlModelExtractor(ArgumentExtractor):
         missing = payload.get("missing")
         if isinstance(missing, list) and missing:
             action = payload.get("action")
-            args = {}
+            args: dict[str, Any] = {}
+
             if isinstance(action, str) and action in ALLOWED_ACTIONS:
                 args["action"] = action
-                if self.app_search.find_disabled_app_ids_in_text(text) and not self.app_search.find_app_ids_in_text(text, limit=1):
-                    return ArgsPrediction(
-                        args=args,
-                        confidence=confidence,
-                        missing=["target"],
-                        source="model_disabled_app_target",
-                    )
+
                 if "target" in missing:
                     matches = self.app_search.find_app_ids_in_text(text, limit=1)
                     if matches:
@@ -130,14 +125,6 @@ class WindowControlModelExtractor(ArgumentExtractor):
         }
 
         if target_type == "app":
-            if self.app_search.find_disabled_app_ids_in_text(text) and not self.app_search.find_app_ids_in_text(text, limit=1):
-                return ArgsPrediction(
-                    args={"action": action},
-                    confidence=confidence,
-                    missing=["target"],
-                    source="model_disabled_app_target",
-                )
-
             app_id = payload.get("app_id")
             if not isinstance(app_id, str) or not app_id.strip() or app_id == "unknown":
                 return ArgsPrediction(
@@ -146,6 +133,7 @@ class WindowControlModelExtractor(ArgumentExtractor):
                     missing=["target"],
                     source="model_invalid_app_id",
                 )
+
             resolved_app_id = self.app_search.resolve_app_id(app_id)
             if resolved_app_id is None:
                 matches = self.app_search.find_app_ids_in_text(text, limit=1)
@@ -158,6 +146,7 @@ class WindowControlModelExtractor(ArgumentExtractor):
                     missing=["target"],
                     source="model_unknown_app_target",
                 )
+
             args["app_id"] = resolved_app_id
 
         return ArgsPrediction(args=args, confidence=confidence, missing=[], source="model_joblib")
