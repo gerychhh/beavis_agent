@@ -42,9 +42,7 @@ from python_agent.ui.icons import BEAVIS_LOGO_PATH, beavis_icon
 from python_agent.ui.liquid_widgets import LiquidBackground, NeonDivider, WaveformWidget, make_stat_card
 from python_agent.ui.settings_store import UiSettings
 from python_agent.ui.workers import CommandRunner, UserAppRunner
-from python_agent.resolvers.app_catalog_overrides import load_app_catalog_overrides
-from python_agent.resolvers.user_app_catalog import suggest_app_id
-from python_agent.training.generate_open_app_dataset import APP_CATALOG as BUILTIN_APP_CATALOG
+from python_agent.resolvers.app_catalog_utils import suggest_app_id
 from python_agent.voice.audio import list_input_devices
 from python_agent.voice.settings import (
     STT_COMPUTE_CHOICES,
@@ -1236,44 +1234,57 @@ class BeavisMainWindow(QMainWindow):
 
     def _build_base_apps_catalog_rows(self) -> list[dict[str, object]]:
         rows: list[dict[str, object]] = []
-        overrides = load_app_catalog_overrides()
-        for app_id, payload in BUILTIN_APP_CATALOG.items():
-            override = overrides.get(app_id)
-            if override is not None and override.disabled:
-                continue
-
-            surface_forms = payload.get("surface_forms", []) if isinstance(payload, dict) else []
-            if not isinstance(surface_forms, list):
-                surface_forms = []
-            custom_forms = override.speech_forms if override is not None else []
-            display_name = str(surface_forms[0]) if surface_forms else str(app_id)
-            rows.append({
-                "display_name": display_name,
-                "app_id": str(app_id),
-                "status": "Встроенное · изменено" if custom_forms else "Встроенное",
-                "source": "builtin",
-                "speech_forms": [str(item) for item in [*surface_forms[:8], *custom_forms]],
-                "custom_speech_forms": [str(item) for item in custom_forms],
-                "editable": True,
-            })
 
         for app in self._user_apps:
+            if not isinstance(app, dict):
+                continue
+
+            app_id = str(app.get("app_id", "")).strip()
+            if not app_id:
+                continue
+
+            source = str(app.get("source", "user") or "user").strip().lower()
+            enabled = bool(app.get("enabled", True))
             speech_forms = app.get("speech_forms", [])
             if not isinstance(speech_forms, list):
                 speech_forms = []
+
+            if not enabled:
+                status = "Отключено"
+            elif source == "builtin":
+                status = "Встроенное"
+            elif source == "default":
+                status = "Системное"
+            elif source == "user":
+                status = "Добавлено"
+            else:
+                status = source or "Приложение"
+
             rows.append({
                 "display_name": str(app.get("display_name", "")),
-                "app_id": str(app.get("app_id", "")),
-                "status": "Добавлено",
-                "source": "user",
+                "app_id": app_id,
+                "status": status,
+                "source": source,
+                "enabled": enabled,
                 "launch_type": str(app.get("launch_type", "")),
+                "launch_target": str(app.get("launch_target", "")),
+                "target_path": str(app.get("target_path", "")),
+                "working_directory": str(app.get("working_directory", "")),
                 "speech_forms": [str(item) for item in speech_forms],
                 "custom_speech_forms": [str(item) for item in speech_forms],
                 "record": app,
                 "editable": True,
             })
 
-        return sorted(rows, key=lambda item: (str(item["source"]) != "user", str(item["display_name"]).lower()))
+        return sorted(
+            rows,
+            key=lambda item: (
+                not bool(item.get("enabled", True)),
+                str(item.get("source", "")) != "user",
+                str(item.get("display_name", "")).lower(),
+            ),
+        )
+
 
     def _build_apps_catalog_rows(self) -> list[dict[str, object]]:
         rows_by_id = {

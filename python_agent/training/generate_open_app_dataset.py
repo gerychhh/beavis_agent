@@ -1,469 +1,700 @@
 ﻿from __future__ import annotations
 
 import argparse
-import csv
 import json
-import random
+import subprocess
 import sys
+from dataclasses import dataclass, field
 from pathlib import Path
+from typing import Any, Callable
+
+if __package__ is None or __package__ == "":
+    sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+
+from python_agent.core.pipeline import CommandPipeline
+from python_agent.resolvers import app_indexer
+from python_agent.resolvers.app_catalog_service import (
+    AppCatalogService,
+    AppRecord,
+    DEFAULT_APPS_CATALOG_PATH,
+)
+from python_agent.resolvers.app_catalog_utils import (
+    normalize_app_id,
+    normalize_speech_forms,
+    suggest_app_id,
+)
+from python_agent.resolvers.windows_app_discovery import discover_windows_apps
+
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-if str(PROJECT_ROOT) not in sys.path:
-    sys.path.insert(0, str(PROJECT_ROOT))
+DEFAULT_APP_OVERRIDES_PATH = PROJECT_ROOT / "python_agent" / "data" / "user_apps" / "catalog_overrides.json"
 
-from python_agent.nlu.normalizer import Normalizer
-from python_agent.resolvers.app_catalog_overrides import (
-    DEFAULT_APP_OVERRIDES_PATH,
-    load_app_catalog_overrides,
-)
-from python_agent.resolvers.user_app_catalog import load_user_apps
-from python_agent.training.dataset_sources import dict_from_source, list_from_source, load_training_source
+ProgressCallback = Callable[[str], None]
 
 
-RANDOM_SEED = 42
+@dataclass(frozen=True)
+class AddUserAppRequest:
+    display_name: str
+    path: Path | None = None
+    app_id: str | None = None
+    speech_forms: list[str] = field(default_factory=list)
+    windows_app_id: str | None = None
+    launch_type: str = "apps_folder"
+    launch_target: str | None = None
+    retrain: bool = True
+    catalog_path: Path = DEFAULT_APPS_CATALOG_PATH
+    index_output_path: Path = app_indexer.DEFAULT_OUTPUT_PATH
+    overrides_path: Path = DEFAULT_APP_OVERRIDES_PATH
 
 
-_SOURCE = load_training_source("open_app.json")
+@dataclass(frozen=True)
+class AddUserAppResult:
+    app: Any
+    index_summary: dict[str, Any]
+    commands: list[dict[str, Any]]
+    smoke_results: list[dict[str, Any]]
 
-APP_CATALOG = dict_from_source(_SOURCE, "app_catalog")
-OPEN_TEMPLATES = list_from_source(_SOURCE, "open_templates")
-EXACT_OPEN_TEMPLATES = list_from_source(_SOURCE, "exact_open_templates")
-WAKE_PREFIXES = list_from_source(_SOURCE, "wake_prefixes")
-NOISE_SUFFIXES = list_from_source(_SOURCE, "noise_suffixes")
-NON_OPEN_APP_TEMPLATES = list_from_source(_SOURCE, "non_open_app_templates")
-UNKNOWN_PHRASES = list_from_source(_SOURCE, "unknown_phrases")
-MANUAL_TESTS = list_from_source(_SOURCE, "manual_tests")
-CURATED_TRAIN_EXAMPLES = [tuple(item) for item in list_from_source(_SOURCE, "curated_train_examples")]
-
-
-def corrupt_token(token: str, rng: random.Random) -> str:
-    if len(token) < 4:
-        return token
-
-    ops = ["delete", "swap", "duplicate", "replace"]
-    op = rng.choice(ops)
-    chars = list(token)
-    i = rng.randrange(1, len(chars) - 1)
-
-    if op == "delete":
-        del chars[i]
-    elif op == "swap" and i + 1 < len(chars):
-        chars[i], chars[i + 1] = chars[i + 1], chars[i]
-    elif op == "duplicate":
-        chars.insert(i, chars[i])
-    elif op == "replace":
-        replacements = {
-            "о": "а", "а": "о", "е": "и", "и": "е", "э": "е",
-            "т": "д", "д": "т", "с": "з", "з": "с", "в": "ф", "ф": "в",
-            "p": "r", "r": "p", "o": "a", "a": "o", "e": "i", "i": "e",
+    def to_dict(self) -> dict[str, Any]:
+        app_payload = self.app.to_dict() if hasattr(self.app, "to_dict") else self.app
+        return {
+            "app": app_payload,
+            "index_summary": self.index_summary,
+            "commands": self.commands,
+            "smoke_results": self.smoke_results,
         }
-        chars[i] = replacements.get(chars[i].lower(), chars[i])
-
-    return "".join(chars)
 
 
-def corrupt_phrase(text: str, rng: random.Random, probability: float) -> str:
-    if rng.random() > probability:
-        return text
-
-    tokens = text.split()
-    if not tokens:
-        return text
-
-    # corrupt one or two non-trivial tokens
-    candidates = [i for i, t in enumerate(tokens) if len(t) >= 4]
-    if not candidates:
-        return text
-
-    for idx in rng.sample(candidates, k=min(len(candidates), rng.choice([1, 1, 2]))):
-        tokens[idx] = corrupt_token(tokens[idx], rng)
-
-    return " ".join(tokens)
+@dataclass(frozen=True)
+class UpdateUserAppRequest:
+    app_id: str
+    speech_forms: list[str] = field(default_factory=list)
+    retrain: bool = True
+    catalog_path: Path = DEFAULT_APPS_CATALOG_PATH
+    index_output_path: Path = app_indexer.DEFAULT_OUTPUT_PATH
+    overrides_path: Path = DEFAULT_APP_OVERRIDES_PATH
 
 
-def build_phrase(app_text: str, rng: random.Random, noisy: bool = True) -> str:
-    template = rng.choice(OPEN_TEMPLATES)
-    phrase = template.format(app=app_text)
-    phrase = rng.choice(WAKE_PREFIXES) + phrase + rng.choice(NOISE_SUFFIXES)
-
-    # Simulate typical ASR/noisy text artifacts. The final train CSV is
-    # normalized in main(), matching runtime input to the argument model.
-    if noisy:
-        phrase = corrupt_phrase(phrase, rng, probability=0.18)
-
-    return " ".join(phrase.split()).strip().lower()
+@dataclass(frozen=True)
+class DeleteUserAppRequest:
+    app_id: str
+    retrain: bool = True
+    catalog_path: Path = DEFAULT_APPS_CATALOG_PATH
+    index_output_path: Path = app_indexer.DEFAULT_OUTPUT_PATH
+    overrides_path: Path = DEFAULT_APP_OVERRIDES_PATH
 
 
-def build_app_catalog(
-    user_apps_path: Path | None = None,
-    overrides_path: Path | None = DEFAULT_APP_OVERRIDES_PATH,
-) -> dict[str, dict[str, list[str]]]:
-    overrides = load_app_catalog_overrides(overrides_path)
-    user_apps = load_user_apps(user_apps_path)
-    catalog = {
-        app_id: {
-            "surface_forms": list(dict.fromkeys([
-                *entry.get("surface_forms", []),
-                *(overrides[app_id].speech_forms if app_id in overrides else []),
-            ])),
-            "typos": list(entry.get("typos", [])),
-            "semantic": list(entry.get("semantic", [])),
+@dataclass(frozen=True)
+class AppCatalogChange:
+    operation: str
+    source: str
+    app_id: str
+    display_name: str = ""
+    speech_forms: list[str] = field(default_factory=list)
+    path: Path | None = None
+    windows_app_id: str | None = None
+    launch_type: str = "apps_folder"
+    launch_target: str | None = None
+
+
+@dataclass(frozen=True)
+class ApplyUserAppChangesRequest:
+    changes: list[AppCatalogChange]
+    retrain: bool = True
+    catalog_path: Path = DEFAULT_APPS_CATALOG_PATH
+    index_output_path: Path = app_indexer.DEFAULT_OUTPUT_PATH
+    overrides_path: Path = DEFAULT_APP_OVERRIDES_PATH
+
+
+@dataclass(frozen=True)
+class ApplyUserAppChangesResult:
+    changes: list[dict[str, Any]]
+    index_summary: dict[str, Any]
+    commands: list[dict[str, Any]]
+    smoke_results: list[dict[str, Any]]
+
+    def to_dict(self) -> dict[str, Any]:
+        return {
+            "changes": self.changes,
+            "index_summary": self.index_summary,
+            "commands": self.commands,
+            "smoke_results": self.smoke_results,
         }
-        for app_id, entry in APP_CATALOG.items()
-        if not (app_id in overrides and overrides[app_id].disabled)
+
+
+def add_user_app(
+    request: AddUserAppRequest,
+    progress: ProgressCallback | None = None,
+) -> AddUserAppResult:
+    progress = progress or (lambda _message: None)
+
+    progress("Проверяю приложение")
+    record = _build_record(request)
+
+    progress("Сохраняю приложение")
+    service = AppCatalogService(request.catalog_path)
+    service.add_app(record, replace_existing=False)
+
+    progress("Обновляю индекс")
+    index_summary = rebuild_apps_index(
+        request.catalog_path,
+        request.index_output_path,
+        request.overrides_path,
+    )
+
+    commands: list[dict[str, Any]] = []
+    smoke_results: list[dict[str, Any]] = []
+
+    if request.retrain:
+        commands.extend(_run_training(progress, request.catalog_path, request.overrides_path))
+
+    progress("Проверяю новые фразы")
+    smoke_results = smoke_check(record)
+    failed_smoke = [item for item in smoke_results if not item["ok"]]
+
+    if failed_smoke:
+        raise RuntimeError(
+            "New app smoke checks failed: "
+            + json.dumps(failed_smoke, ensure_ascii=False)
+        )
+
+    progress("Готово")
+
+    return AddUserAppResult(
+        app=record,
+        index_summary=index_summary,
+        commands=commands,
+        smoke_results=smoke_results,
+    )
+
+
+def apply_user_app_changes(
+    request: ApplyUserAppChangesRequest,
+    progress: ProgressCallback | None = None,
+) -> ApplyUserAppChangesResult:
+    progress = progress or (lambda _message: None)
+    progress("Проверяю изменения")
+
+    if not request.changes:
+        raise ValueError("No app catalog changes to apply")
+
+    service = AppCatalogService(request.catalog_path)
+    applied: list[dict[str, Any]] = []
+    smoke_records: list[AppRecord] = []
+
+    for raw_change in request.changes:
+        operation = raw_change.operation.strip().lower()
+        app_id = normalize_app_id(raw_change.app_id)
+
+        if operation not in {"add", "update_speech_forms", "delete", "enable", "disable"}:
+            raise ValueError(f"Unsupported app catalog operation: {raw_change.operation}")
+
+        if operation != "add" and not app_id:
+            raise ValueError("app_id is required")
+
+        if operation == "add":
+            record = _build_record(
+                AddUserAppRequest(
+                    path=raw_change.path,
+                    display_name=raw_change.display_name,
+                    app_id=app_id or None,
+                    speech_forms=raw_change.speech_forms,
+                    windows_app_id=raw_change.windows_app_id,
+                    launch_type=raw_change.launch_type,
+                    launch_target=raw_change.launch_target,
+                    retrain=False,
+                    catalog_path=request.catalog_path,
+                    index_output_path=request.index_output_path,
+                    overrides_path=request.overrides_path,
+                )
+            )
+
+            if service.get_app(record.app_id) is not None:
+                raise ValueError(f"app_id is already used: {record.app_id}")
+
+            service.add_app(record, replace_existing=False)
+            applied.append({"operation": "add", "source": "user", "app_id": record.app_id})
+            smoke_records.append(record)
+            continue
+
+        record = service.get_app(app_id)
+        if record is None:
+            raise ValueError(f"app not found: {app_id}")
+
+        if operation == "update_speech_forms":
+            forms = normalize_speech_forms(raw_change.speech_forms)
+            updated = service.update_app(app_id, speech_forms=forms)
+            applied.append({"operation": "update_speech_forms", "source": updated.source, "app_id": app_id})
+            if updated.enabled:
+                smoke_records.append(updated)
+            continue
+
+        if operation == "delete":
+            if record.source == "user":
+                deleted = service.delete_user_app(app_id)
+                applied.append({"operation": "delete", "source": deleted.source, "app_id": app_id})
+            else:
+                disabled = service.disable_app(app_id)
+                applied.append({"operation": "disable", "source": disabled.source, "app_id": app_id})
+            continue
+
+        if operation == "disable":
+            disabled = service.disable_app(app_id)
+            applied.append({"operation": "disable", "source": disabled.source, "app_id": app_id})
+            continue
+
+        if operation == "enable":
+            enabled = service.enable_app(app_id)
+            applied.append({"operation": "enable", "source": enabled.source, "app_id": app_id})
+            smoke_records.append(enabled)
+            continue
+
+    progress("Обновляю индекс")
+    index_summary = rebuild_apps_index(
+        request.catalog_path,
+        request.index_output_path,
+        request.overrides_path,
+    )
+
+    commands: list[dict[str, Any]] = []
+    smoke_results: list[dict[str, Any]] = []
+
+    if request.retrain:
+        commands.extend(_run_training(progress, request.catalog_path, request.overrides_path))
+
+        progress("Проверяю новые фразы")
+        checked_ids: set[str] = set()
+
+        for record in smoke_records:
+            if record.app_id in checked_ids:
+                continue
+            checked_ids.add(record.app_id)
+            smoke_results.extend(smoke_check(record))
+
+        failed_smoke = [item for item in smoke_results if not item["ok"]]
+        if failed_smoke:
+            raise RuntimeError(
+                "App catalog smoke checks failed: "
+                + json.dumps(failed_smoke, ensure_ascii=False)
+            )
+
+    progress("Готово")
+
+    return ApplyUserAppChangesResult(
+        changes=applied,
+        index_summary=index_summary,
+        commands=commands,
+        smoke_results=smoke_results,
+    )
+
+
+def delete_user_app(
+    request: DeleteUserAppRequest,
+    progress: ProgressCallback | None = None,
+) -> AddUserAppResult:
+    progress = progress or (lambda _message: None)
+
+    service = AppCatalogService(request.catalog_path)
+    record = service.get_app(request.app_id)
+
+    if record is None:
+        raise ValueError(f"app not found: {request.app_id}")
+
+    progress("Удаляю приложение")
+
+    if record.source == "user":
+        changed_record = service.delete_user_app(record.app_id)
+    else:
+        changed_record = service.disable_app(record.app_id)
+
+    progress("Обновляю индекс")
+    index_summary = rebuild_apps_index(
+        request.catalog_path,
+        request.index_output_path,
+        request.overrides_path,
+    )
+
+    commands: list[dict[str, Any]] = []
+
+    if request.retrain:
+        commands.extend(_run_training(progress, request.catalog_path, request.overrides_path))
+
+    progress("Готово")
+
+    return AddUserAppResult(
+        app=changed_record,
+        index_summary=index_summary,
+        commands=commands,
+        smoke_results=[],
+    )
+
+
+def update_user_app(
+    request: UpdateUserAppRequest,
+    progress: ProgressCallback | None = None,
+) -> AddUserAppResult:
+    progress = progress or (lambda _message: None)
+
+    progress("Сохраняю сленг")
+
+    service = AppCatalogService(request.catalog_path)
+    record = service.update_app(
+        request.app_id,
+        speech_forms=normalize_speech_forms(request.speech_forms),
+    )
+
+    progress("Обновляю индекс")
+    index_summary = rebuild_apps_index(
+        request.catalog_path,
+        request.index_output_path,
+        request.overrides_path,
+    )
+
+    commands: list[dict[str, Any]] = []
+    smoke_results: list[dict[str, Any]] = []
+
+    if request.retrain:
+        commands.extend(_run_training(progress, request.catalog_path, request.overrides_path))
+
+    if record.enabled:
+        progress("Проверяю новые фразы")
+        smoke_results = smoke_check(record)
+        failed_smoke = [item for item in smoke_results if not item["ok"]]
+
+        if failed_smoke:
+            raise RuntimeError(
+                "Updated app smoke checks failed: "
+                + json.dumps(failed_smoke, ensure_ascii=False)
+            )
+
+    progress("Готово")
+
+    return AddUserAppResult(
+        app=record,
+        index_summary=index_summary,
+        commands=commands,
+        smoke_results=smoke_results,
+    )
+
+
+def _build_record(request: AddUserAppRequest) -> AppRecord:
+    app_id = normalize_app_id(
+        request.app_id
+        or suggest_app_id(
+            request.display_name,
+            request.path or request.launch_target or request.windows_app_id,
+        )
+    )
+
+    if not request.display_name.strip():
+        raise ValueError("display_name is required")
+
+    if request.windows_app_id:
+        launch_type = request.launch_type or "apps_folder"
+        launch_target = request.launch_target or request.windows_app_id
+        target_path = request.windows_app_id
+        working_directory = ""
+    else:
+        if request.path is None:
+            raise ValueError("Application path or Windows app id is required")
+
+        app_path = request.path.expanduser()
+
+        if not app_path.exists() or not app_path.is_file():
+            raise ValueError(f"Application path does not exist: {app_path}")
+
+        if app_path.suffix.lower() != ".exe":
+            raise ValueError("Only .exe applications are supported for this flow")
+
+        launch_type = "exe"
+        launch_target = str(app_path)
+        target_path = str(app_path)
+        working_directory = str(app_path.parent)
+
+    return AppRecord(
+        app_id=app_id,
+        display_name=request.display_name.strip(),
+        source="user",
+        enabled=True,
+        launch_type=launch_type,
+        launch_target=launch_target,
+        target_path=target_path,
+        working_directory=working_directory,
+        speech_forms=normalize_speech_forms(
+            [
+                request.display_name,
+                Path(launch_target).stem if launch_target else "",
+                *request.speech_forms,
+            ]
+        ),
+        priority=300,
+    )
+
+
+def rebuild_apps_index(
+    user_catalog_path: Path = DEFAULT_APPS_CATALOG_PATH,
+    output_path: Path = app_indexer.DEFAULT_OUTPUT_PATH,
+    overrides_path: Path = DEFAULT_APP_OVERRIDES_PATH,
+) -> dict[str, Any]:
+    service = AppCatalogService(user_catalog_path)
+    apps = service.get_enabled_apps()
+
+    return {
+        "source": "apps_catalog",
+        "enabled_apps": len(apps),
+        "catalog_path": str(service.catalog_path),
     }
 
-    user_app_ids = {item.app_id for item in user_apps}
-    user_surface_keys: set[str] = set()
-    normalizer = Normalizer()
-    for item in user_apps:
-        forms = [
-            item.display_name,
-            Path(item.launch_target).stem,
-            *item.speech_forms,
-            *(overrides[item.app_id].speech_forms if item.app_id in overrides else []),
-        ]
-        for form in forms:
-            normalized = normalizer.normalize(form)
-            if normalized:
-                user_surface_keys.add(normalized)
 
-    # User-added apps have higher priority than the built-in catalog. If a
-    # builtin app and a local app share the same spoken form ("макс", for
-    # example), the training label must point to the local app the user chose.
-    for app_id, entry in list(catalog.items()):
-        if app_id in user_app_ids:
-            continue
-        for key in ("surface_forms", "typos", "semantic"):
-            entry[key] = [
-                form
-                for form in entry.get(key, [])
-                if normalizer.normalize(form) not in user_surface_keys
+def list_windows_apps() -> list[dict[str, str]]:
+    return [entry.to_dict() for entry in discover_windows_apps()]
+
+
+def list_user_app_records(catalog_path: Path = DEFAULT_APPS_CATALOG_PATH) -> list[dict[str, Any]]:
+    service = AppCatalogService(catalog_path)
+    return [record.to_dict() for record in service.get_all_apps()]
+
+
+def _is_user_app(app_id: str, catalog_path: Path = DEFAULT_APPS_CATALOG_PATH) -> bool:
+    service = AppCatalogService(catalog_path)
+    record = service.get_app(app_id)
+    return record is not None and record.source == "user"
+
+
+def _existing_app_ids(catalog_path: Path = DEFAULT_APPS_CATALOG_PATH) -> set[str]:
+    service = AppCatalogService(catalog_path)
+    return {record.app_id for record in service.get_all_apps()}
+
+
+def smoke_check(record: AppRecord) -> list[dict[str, Any]]:
+    pipeline = CommandPipeline()
+
+    surfaces = [record.display_name, *record.speech_forms]
+    surfaces = list(dict.fromkeys([item for item in surfaces if item]))[:5]
+
+    phrases: list[str] = []
+
+    for surface in surfaces:
+        phrases.extend(
+            [
+                f"открой {surface}",
+                f"запусти {surface}",
+                f"{surface} открой",
             ]
+        )
 
-    for item in user_apps:
-        forms = [
-            item.display_name,
-            Path(item.launch_target).stem,
-            *item.speech_forms,
-            *(overrides[item.app_id].speech_forms if item.app_id in overrides else []),
-        ]
-        catalog[item.app_id] = {
-            "surface_forms": list(dict.fromkeys([form.strip().lower() for form in forms if form.strip()])),
-            "typos": [],
-            "semantic": [],
-        }
+    results = []
 
-    return catalog
+    for phrase in phrases[:9]:
+        output = pipeline.run(phrase, execute=False, log=False)
+        got_skill = output.skill_prediction.skill
+        got_app_id = output.args_prediction.args.get("app_id")
+        ok = got_skill == "open_app" and got_app_id == record.app_id
 
+        results.append(
+            {
+                "text": phrase,
+                "skill": got_skill,
+                "app_id": got_app_id,
+                "ok": ok,
+            }
+        )
 
-def build_disabled_app_catalog(
-    overrides_path: Path | None = DEFAULT_APP_OVERRIDES_PATH,
-    user_apps_path: Path | None = None,
-) -> dict[str, dict[str, list[str]]]:
-    overrides = load_app_catalog_overrides(overrides_path)
-    user_app_ids = {item.app_id for item in load_user_apps(user_apps_path)}
-    disabled: dict[str, dict[str, list[str]]] = {}
-    for app_id, override in overrides.items():
-        if not override.disabled or app_id not in APP_CATALOG or app_id in user_app_ids:
-            continue
-
-        entry = APP_CATALOG[app_id]
-        disabled[app_id] = {
-            "surface_forms": list(dict.fromkeys([
-                *entry.get("surface_forms", []),
-                *override.speech_forms,
-            ])),
-            "typos": list(entry.get("typos", [])),
-            "semantic": list(entry.get("semantic", [])),
-        }
-
-    return disabled
+    return results
 
 
-def app_text_variants(app_id: str, catalog: dict[str, dict[str, list[str]]]) -> list[str]:
-    entry = catalog[app_id]
-    out = []
-    out.extend(entry.get("surface_forms", []))
-    out.extend(entry.get("typos", []))
-    out.extend(entry.get("semantic", []))
-    variants = list(dict.fromkeys([x.strip().lower() for x in out if x.strip()]))
-    return variants or [app_id]
+def _run_training(
+    progress: ProgressCallback,
+    user_apps_path: Path = DEFAULT_APPS_CATALOG_PATH,
+    overrides_path: Path = DEFAULT_APP_OVERRIDES_PATH,
+) -> list[dict[str, Any]]:
+    generated_root = PROJECT_ROOT / "python_agent" / "data" / "user_apps" / "generated"
 
+    open_app_dir = generated_root / "open_app"
+    skill_dir = generated_root / "skill_classifier"
 
-def generate_dataset(
-    samples_per_app: int,
-    unknown_samples: int,
-    seed: int,
-    catalog: dict[str, dict[str, list[str]]] | None = None,
-    disabled_catalog: dict[str, dict[str, list[str]]] | None = None,
-) -> tuple[list[dict], list[dict]]:
-    rng = random.Random(seed)
-    catalog = catalog or build_app_catalog()
-    disabled_catalog = disabled_catalog or {}
-    rows: list[dict] = []
-    combined: list[dict] = []
-
-    for app_id in sorted(catalog):
-        variants = app_text_variants(app_id, catalog)
-        seen_for_app = set()
-
-        # Ensure every explicit variant appears at least a few times.
-        for variant in variants:
-            for template in EXACT_OPEN_TEMPLATES:
-                text = template.format(app=variant).strip().lower()
-                if text not in seen_for_app:
-                    rows.append({"text": text, "app_id": app_id})
-                    combined.append({"text": text, "args": {"app_id": app_id}})
-                    seen_for_app.add(text)
-
-            for _ in range(3):
-                text = build_phrase(variant, rng, noisy=True)
-                if text not in seen_for_app:
-                    rows.append({"text": text, "app_id": app_id})
-                    combined.append({"text": text, "args": {"app_id": app_id}})
-                    seen_for_app.add(text)
-
-        # Fill to target.
-        attempts = 0
-        while len(seen_for_app) < samples_per_app and attempts < samples_per_app * 20:
-            attempts += 1
-            variant = rng.choice(variants)
-            text = build_phrase(variant, rng, noisy=True)
-            if text in seen_for_app:
-                continue
-            rows.append({"text": text, "app_id": app_id})
-            combined.append({"text": text, "args": {"app_id": app_id}})
-            seen_for_app.add(text)
-
-    unknown_seen = set()
-
-    # Add hard negative examples that contain real app names but are not open commands.
-    for app_id in sorted(catalog):
-        variants = app_text_variants(app_id, catalog)
-        for _ in range(12):
-            variant = rng.choice(variants)
-            phrase = rng.choice(NON_OPEN_APP_TEMPLATES).format(app=variant)
-            text = (rng.choice(WAKE_PREFIXES) + phrase + rng.choice(NOISE_SUFFIXES)).strip().lower()
-            text = corrupt_phrase(text, rng, probability=0.20)
-            text = " ".join(text.split())
-            if text not in unknown_seen:
-                rows.append({"text": text, "app_id": "unknown"})
-                combined.append({"text": text, "args": {}})
-                unknown_seen.add(text)
-
-    # Deleted app ids become explicit negatives, otherwise a removed class can
-    # drift into a neighboring app prediction.
-    for app_id in sorted(disabled_catalog):
-        variants = app_text_variants(app_id, disabled_catalog)
-        for variant in variants:
-            for template in EXACT_OPEN_TEMPLATES:
-                text = template.format(app=variant).strip().lower()
-                for _ in range(18):
-                    rows.append({"text": text, "app_id": "unknown"})
-                    combined.append({"text": text, "args": {}})
-
-            for _ in range(8):
-                text = build_phrase(variant, rng, noisy=True)
-                if text not in unknown_seen:
-                    rows.append({"text": text, "app_id": "unknown"})
-                    combined.append({"text": text, "args": {}})
-                    unknown_seen.add(text)
-
-    attempts = 0
-    while len(unknown_seen) < unknown_samples and attempts < unknown_samples * 30:
-        attempts += 1
-        phrase = rng.choice(UNKNOWN_PHRASES)
-        # Unknown phrases may also contain wake word/noise/corruptions.
-        text = (rng.choice(WAKE_PREFIXES) + phrase + rng.choice(NOISE_SUFFIXES)).strip().lower()
-        text = corrupt_phrase(text, rng, probability=0.25)
-        text = " ".join(text.split())
-        if text in unknown_seen:
-            continue
-        rows.append({"text": text, "app_id": "unknown"})
-        combined.append({"text": text, "args": {}})
-        unknown_seen.add(text)
-
-    # Add curated critical examples with extra weight.
-    for text, app_id in CURATED_TRAIN_EXAMPLES:
-        if app_id != "unknown" and app_id not in catalog:
-            continue
-
-        repeat = 12 if app_id != "unknown" else 16
-        for _ in range(repeat):
-            rows.append({"text": text, "app_id": app_id})
-            combined.append({"text": text, "args": {"app_id": app_id} if app_id != "unknown" else {}})
-
-    rng.shuffle(rows)
-    rng.shuffle(combined)
-    return rows, combined
-
-
-def build_manual_tests(
-    catalog: dict[str, dict[str, list[str]]],
-    disabled_catalog: dict[str, dict[str, list[str]]] | None = None,
-) -> list[dict]:
-    tests = [
-        item
-        for item in MANUAL_TESTS
-        if item.get("expected_app_id") == "unknown" or item.get("expected_app_id") in catalog
+    steps = [
+        (
+            "Генерирую датасет open_app",
+            [
+                "python_agent.training.generate_open_app_dataset",
+                "--output-dir", str(open_app_dir),
+                "--apps-catalog-path", str(user_apps_path),
+            ],
+        ),
+        (
+            "Обучаю open_app",
+            [
+                "python_agent.training.train_open_app_arg_model",
+                "--data-path", str(open_app_dir / "processed" / "app_train.csv"),
+                "--metrics-path", str(open_app_dir / "eval" / "train_metrics.json"),
+            ],
+        ),
+        (
+            "Тестирую open_app",
+            [
+                "python_agent.training.test_open_app_arg_model",
+                "--tests-path", str(open_app_dir / "eval" / "manual_tests.jsonl"),
+                "--results-path", str(open_app_dir / "eval" / "test_results.json"),
+            ],
+        ),
+        (
+            "Генерирую датасет window_control",
+            [
+                "python_agent.training.generate_window_control_dataset",
+                "--user-apps-path", str(user_apps_path),
+                "--overrides-path", str(overrides_path),
+            ],
+        ),
+        (
+            "Обучаю window_control",
+            [
+                "python_agent.training.train_window_control_arg_model",
+            ],
+        ),
+        (
+            "Тестирую window_control",
+            [
+                "python_agent.training.test_window_control_arg_model",
+            ],
+        ),
+        (
+            "Генерирую датасет window_layout",
+            [
+                "python_agent.training.generate_window_layout_dataset",
+                "--root", str(PROJECT_ROOT),
+                "--user-apps-path", str(user_apps_path),
+                "--overrides-path", str(overrides_path),
+            ],
+        ),
+        (
+            "Обучаю window_layout",
+            [
+                "python_agent.training.train_window_layout_arg_model",
+            ],
+        ),
+        (
+            "Тестирую window_layout",
+            [
+                "python_agent.training.test_window_layout_arg_model",
+            ],
+        ),
+        (
+            "Генерирую датасет skill_classifier",
+            [
+                "python_agent.training.generate_skill_classifier_dataset",
+                "--output-dir", str(skill_dir),
+                "--user-apps-path", str(user_apps_path),
+                "--overrides-path", str(overrides_path),
+            ],
+        ),
+        (
+            "Обучаю skill_classifier",
+            [
+                "python_agent.training.train_skill_classifier",
+                "--data-path", str(skill_dir / "processed" / "skill_train.csv"),
+                "--metrics-path", str(skill_dir / "eval" / "train_metrics.json"),
+            ],
+        ),
+        (
+            "Тестирую skill_classifier",
+            [
+                "python_agent.training.test_skill_classifier",
+                "--tests-path", str(skill_dir / "eval" / "manual_tests.jsonl"),
+                "--results-path", str(skill_dir / "eval" / "test_results.json"),
+            ],
+        ),
     ]
-    builtin_ids = set(APP_CATALOG)
 
-    for app_id in sorted(set(catalog) - builtin_ids):
-        variants = app_text_variants(app_id, catalog)[:4]
-        for variant in variants:
-            tests.append({"text": f"открой {variant}", "expected_app_id": app_id})
-            tests.append({"text": f"запусти {variant}", "expected_app_id": app_id})
+    results: list[dict[str, Any]] = []
 
-    for app_id in sorted(disabled_catalog or {}):
-        for variant in app_text_variants(app_id, disabled_catalog or {})[:4]:
-            tests.append({"text": f"открой {variant}", "expected_app_id": "unknown"})
-            tests.append({"text": f"запусти {variant}", "expected_app_id": "unknown"})
+    for message, module in steps:
+        progress(message)
 
-    return dedupe_manual_tests(tests, Normalizer())
+        completed = subprocess.run(
+            [sys.executable, "-m", *module],
+            cwd=PROJECT_ROOT,
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+            errors="replace",
+            check=False,
+        )
 
+        result = {
+            "step": message,
+            "returncode": completed.returncode,
+            "stdout": completed.stdout.strip(),
+            "stderr": completed.stderr.strip(),
+        }
+        results.append(result)
 
-def write_csv(path: Path, rows: list[dict]) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", encoding="utf-8", newline="") as f:
-        writer = csv.DictWriter(f, fieldnames=["text", "app_id"])
-        writer.writeheader()
-        writer.writerows(rows)
-
-
-def write_jsonl(path: Path, rows: list[dict]) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", encoding="utf-8") as f:
-        for row in rows:
-            f.write(json.dumps(row, ensure_ascii=False) + "\n")
-
-
-def normalize_rows(rows: list[dict], normalizer: Normalizer) -> list[dict]:
-    labels_by_text: dict[str, set[str]] = {}
-    rows_by_text: dict[str, list[dict]] = {}
-
-    for row in rows:
-        text = normalizer.normalize(str(row["text"]))
-        app_id = str(row["app_id"])
-        if not text:
-            continue
-        normalized = {"text": text, "app_id": app_id}
-        rows_by_text.setdefault(text, []).append(normalized)
-        labels_by_text.setdefault(text, set()).add(app_id)
-
-    resolved: list[dict] = []
-    dropped_conflicts = 0
-    for text in sorted(rows_by_text):
-        labels = labels_by_text[text]
-        if len(labels) == 1:
-            resolved.extend(rows_by_text[text])
-            continue
-
-        positive_labels = sorted(label for label in labels if label != "unknown")
-        if len(positive_labels) == 1:
-            resolved.extend(
-                row
-                for row in rows_by_text[text]
-                if row["app_id"] == positive_labels[0]
+        if completed.returncode != 0:
+            raise RuntimeError(
+                f"{message} failed: {completed.stderr or completed.stdout}"
             )
-            continue
 
-        dropped_conflicts += 1
-
-    if dropped_conflicts:
-        print(f"dropped conflicting open_app rows: {dropped_conflicts}", file=sys.stderr)
-
-    return resolved
+    return results
 
 
-def dedupe_manual_tests(rows: list[dict], normalizer: Normalizer) -> list[dict]:
-    tests_by_text: dict[str, list[dict]] = {}
-    labels_by_text: dict[str, set[str]] = {}
-    for row in rows:
-        text = normalizer.normalize(str(row.get("text", "")))
-        app_id = str(row.get("expected_app_id", "unknown"))
-        if not text:
-            continue
-        normalized = {"text": text, "expected_app_id": app_id}
-        tests_by_text.setdefault(text, []).append(normalized)
-        labels_by_text.setdefault(text, set()).add(app_id)
-
-    out: list[dict] = []
-    for text in sorted(tests_by_text):
-        labels = labels_by_text[text]
-        if len(labels) == 1:
-            out.append(tests_by_text[text][0])
-            continue
-
-        positive_labels = sorted(label for label in labels if label != "unknown")
-        if len(positive_labels) == 1:
-            out.append({"text": text, "expected_app_id": positive_labels[0]})
-
-    return out
+def _configure_stdio() -> None:
+    for stream in (sys.stdout, sys.stderr):
+        try:
+            stream.reconfigure(encoding="utf-8", errors="replace")
+        except Exception:
+            pass
 
 
-def build_combined_examples(rows: list[dict]) -> list[dict]:
-    combined = []
-    for row in rows:
-        app_id = row["app_id"]
-        args = {"app_id": app_id} if app_id != "unknown" else {}
-        combined.append({"text": row["text"], "args": args})
+def main() -> int:
+    _configure_stdio()
 
-    return combined
-
-
-def main() -> None:
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--samples-per-app", type=int, default=900)
-    parser.add_argument("--unknown-samples", type=int, default=9000)
-    parser.add_argument("--seed", type=int, default=RANDOM_SEED)
-    parser.add_argument("--output-dir", type=Path, default=Path("python_agent/data/open_app"))
-    parser.add_argument("--user-apps-path", type=Path, default=None)
-    parser.add_argument("--overrides-path", type=Path, default=DEFAULT_APP_OVERRIDES_PATH)
+    parser = argparse.ArgumentParser(description="Add a user application and retrain app models")
+    parser.add_argument("--update", action="store_true", help="Update speech forms for an existing app")
+    parser.add_argument("--delete", action="store_true", help="Delete or disable an existing app")
+    parser.add_argument("--path", type=Path)
+    parser.add_argument("--windows-app-id")
+    parser.add_argument("--launch-type", default="apps_folder")
+    parser.add_argument("--launch-target")
+    parser.add_argument("--display-name", default="")
+    parser.add_argument("--app-id")
+    parser.add_argument("--speech-form", action="append", default=[])
+    parser.add_argument("--no-retrain", action="store_true")
     args = parser.parse_args()
 
-    app_catalog = build_app_catalog(args.user_apps_path, args.overrides_path)
-    disabled_catalog = build_disabled_app_catalog(args.overrides_path, args.user_apps_path)
-    rows, _combined = generate_dataset(
-        samples_per_app=args.samples_per_app,
-        unknown_samples=args.unknown_samples,
-        seed=args.seed,
-        catalog=app_catalog,
-        disabled_catalog=disabled_catalog,
-    )
-    rows = normalize_rows(rows, Normalizer())
-    combined = build_combined_examples(rows)
+    if args.delete:
+        result = delete_user_app(
+            DeleteUserAppRequest(
+                app_id=args.app_id or "",
+                retrain=not args.no_retrain,
+            ),
+            progress=lambda message: print(message, flush=True),
+        )
+    elif args.update:
+        result = update_user_app(
+            UpdateUserAppRequest(
+                app_id=args.app_id or "",
+                speech_forms=args.speech_form,
+                retrain=not args.no_retrain,
+            ),
+            progress=lambda message: print(message, flush=True),
+        )
+    else:
+        result = add_user_app(
+            AddUserAppRequest(
+                path=args.path,
+                display_name=args.display_name,
+                app_id=args.app_id,
+                speech_forms=args.speech_form,
+                windows_app_id=args.windows_app_id,
+                launch_type=args.launch_type,
+                launch_target=args.launch_target,
+                retrain=not args.no_retrain,
+            ),
+            progress=lambda message: print(message, flush=True),
+        )
 
-    processed_dir = args.output_dir / "processed"
-    eval_dir = args.output_dir / "eval"
-    feedback_dir = args.output_dir / "feedback"
-
-    write_csv(processed_dir / "app_train.csv", rows)
-    write_jsonl(processed_dir / "combined_examples.jsonl", combined)
-    manual_tests = build_manual_tests(app_catalog, disabled_catalog)
-    write_jsonl(eval_dir / "manual_tests.jsonl", manual_tests)
-
-    corrections_path = feedback_dir / "corrections.jsonl"
-    corrections_path.parent.mkdir(parents=True, exist_ok=True)
-    if not corrections_path.exists():
-        corrections_path.write_text("", encoding="utf-8")
-
-    stats = {
-        "seed": args.seed,
-        "samples_per_app_target": args.samples_per_app,
-        "unknown_samples_target": args.unknown_samples,
-        "text_is_normalized": True,
-        "rows": len(rows),
-        "classes": len(set(row["app_id"] for row in rows)),
-        "app_ids": sorted(set(row["app_id"] for row in rows)),
-        "user_app_ids": sorted(set(app_catalog) - set(APP_CATALOG)),
-        "disabled_app_ids": sorted(set(APP_CATALOG) - set(app_catalog)),
-        "manual_test_rows": len(manual_tests),
-    }
-    (processed_dir / "dataset_stats.json").write_text(json.dumps(stats, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(json.dumps(stats, ensure_ascii=False, indent=2))
+    print(json.dumps(result.to_dict(), ensure_ascii=False, indent=2))
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

@@ -1,0 +1,3894 @@
+{
+  "schema_version": 1,
+  "apps": [
+    {
+      "app_id": "access",
+      "display_name": "access",
+      "source": "builtin",
+      "enabled": true,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "access",
+        "microsoft access",
+        "аксесс",
+        "база access",
+        "акцес",
+        "аксес",
+        "acess",
+        "базу данных access",
+        "офисную базу"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "acrobat_reader",
+      "display_name": "acrobat",
+      "source": "builtin",
+      "enabled": true,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "acrobat",
+        "adobe acrobat",
+        "acrobat reader",
+        "адоб ридер",
+        "pdf reader",
+        "акробат",
+        "акрабат",
+        "акробат ридер",
+        "адоб акробат",
+        "pdf открыть",
+        "читалка pdf",
+        "пдф ридер"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "adobe_xd",
+      "display_name": "adobe xd",
+      "source": "builtin",
+      "enabled": false,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "adobe xd",
+        "xd",
+        "икс ди",
+        "эдоб xd",
+        "иксди",
+        "adobe хд",
+        "икс дэ",
+        "прототип интерфейса adobe"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "after_effects",
+      "display_name": "after effects",
+      "source": "builtin",
+      "enabled": true,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "after effects",
+        "adobe after effects",
+        "афтэр",
+        "афтер эффектс",
+        "after",
+        "афтер ефектс",
+        "афтер эффекс",
+        "after efects",
+        "афтэр эффектс",
+        "моушн графика",
+        "эффекты для видео"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "android_studio",
+      "display_name": "android studio",
+      "source": "builtin",
+      "enabled": false,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "android studio",
+        "андроид студио",
+        "студия android",
+        "андройд студио",
+        "android studo",
+        "андроид студия",
+        "приложения android",
+        "разработка андроид"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "animate",
+      "display_name": "animate",
+      "source": "builtin",
+      "enabled": false,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "animate",
+        "adobe animate",
+        "анимейт",
+        "анимэйт",
+        "анимате",
+        "анемейт",
+        "adobe анимейт",
+        "анимация adobe"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "audition",
+      "display_name": "audition",
+      "source": "builtin",
+      "enabled": false,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "audition",
+        "adobe audition",
+        "аудишн",
+        "аудиция",
+        "аудишен",
+        "адоб аудишн",
+        "audishn",
+        "где звук редактировать",
+        "аудиоредактор adobe"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "autocad",
+      "display_name": "autocad",
+      "source": "builtin",
+      "enabled": false,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "autocad",
+        "auto cad",
+        "автокад",
+        "авто кад",
+        "автокадд",
+        "autocadд",
+        "автакад",
+        "чертежи открыть",
+        "cad чертеж"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "brave",
+      "display_name": "brave",
+      "source": "builtin",
+      "enabled": false,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "brave",
+        "брейв",
+        "brave browser",
+        "браузер brave",
+        "брэйв",
+        "браве",
+        "брейф",
+        "брэйф",
+        "приватный браузер",
+        "браузер с щитом"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "bridge",
+      "display_name": "bridge",
+      "source": "builtin",
+      "enabled": false,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "bridge",
+        "adobe bridge",
+        "бридж",
+        "адоб бридж",
+        "бриджж",
+        "brige",
+        "менеджер файлов adobe"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "camera",
+      "display_name": "camera",
+      "source": "builtin",
+      "enabled": false,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "camera",
+        "камера",
+        "веб камера",
+        "камера windows",
+        "камиру",
+        "камераа",
+        "вэб камера",
+        "включи вебку",
+        "проверить камеру"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "cinema_4d",
+      "display_name": "cinema 4d",
+      "source": "builtin",
+      "enabled": false,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "cinema 4d",
+        "синема 4d",
+        "cinema",
+        "синема",
+        "cinema four d",
+        "синема фор ди",
+        "синэма 4d",
+        "моушн 3д",
+        "синема открыть"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "clion",
+      "display_name": "clion",
+      "source": "builtin",
+      "enabled": false,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "clion",
+        "си лайон",
+        "си лев",
+        "c lion",
+        "клайон",
+        "си лаен",
+        "clion ide",
+        "ide для c++",
+        "плюсы писать"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "datagrip",
+      "display_name": "datagrip",
+      "source": "builtin",
+      "enabled": false,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "datagrip",
+        "data grip",
+        "датагрип",
+        "дата грип",
+        "дата грипп",
+        "датагрипп",
+        "ide для баз данных",
+        "sql ide"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "davinci_resolve",
+      "display_name": "davinci resolve",
+      "source": "builtin",
+      "enabled": false,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "davinci resolve",
+        "davinci",
+        "давинчи",
+        "резолв",
+        "да винчи",
+        "давинчи резолв",
+        "de vinci",
+        "монтаж в davinci",
+        "цветокор видео"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "dbeaver",
+      "display_name": "dbeaver",
+      "source": "builtin",
+      "enabled": false,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "dbeaver",
+        "дбивер",
+        "ди бивер",
+        "бивер",
+        "д бивер",
+        "d beaver",
+        "дбиверр",
+        "базы данных открыть",
+        "клиент базы данных"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "docker_desktop",
+      "display_name": "docker",
+      "source": "builtin",
+      "enabled": false,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "docker",
+        "docker desktop",
+        "докер",
+        "докер десктоп",
+        "доккер",
+        "докир",
+        "docker desctop",
+        "контейнеры открыть",
+        "докер запустить"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "figma",
+      "display_name": "figma",
+      "source": "builtin",
+      "enabled": true,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "figma",
+        "фигма",
+        "фигму",
+        "фигмаа",
+        "фигмуу",
+        "figmа",
+        "дизайн интерфейса",
+        "макеты ui",
+        "прототип сайта"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "firefox",
+      "display_name": "firefox",
+      "source": "builtin",
+      "enabled": true,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "firefox",
+        "mozilla firefox",
+        "фаерфокс",
+        "мозила",
+        "мозилла",
+        "лиса",
+        "фаер фокс",
+        "файрфокс",
+        "мазила",
+        "мозила фаерфокс",
+        "фаир фокс",
+        "браузер с лисой",
+        "мозилу открыть"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "fusion_360",
+      "display_name": "fusion 360",
+      "source": "builtin",
+      "enabled": false,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "fusion 360",
+        "фьюжн",
+        "фьюжен 360",
+        "fusion",
+        "фужен 360",
+        "фьюжн триста шестьдесят",
+        "fusion360",
+        "cad моделирование",
+        "инженерная модель"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "git_bash",
+      "display_name": "git bash",
+      "source": "builtin",
+      "enabled": false,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "git bash",
+        "гит баш",
+        "git terminal",
+        "баш гит",
+        "гитбаш",
+        "gitbush",
+        "гид баш",
+        "терминал git",
+        "bash на windows"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "github_desktop",
+      "display_name": "github desktop",
+      "source": "builtin",
+      "enabled": false,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "github desktop",
+        "гитхаб десктоп",
+        "github",
+        "гит хаб десктоп",
+        "гитхаб десктопп",
+        "git hub desktop",
+        "приложение github",
+        "коммиты через интерфейс"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "godot",
+      "display_name": "godot",
+      "source": "builtin",
+      "enabled": false,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "godot",
+        "годот",
+        "годо",
+        "годотт",
+        "godоt",
+        "гадот",
+        "движок godot"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "illustrator",
+      "display_name": "illustrator",
+      "source": "builtin",
+      "enabled": true,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "illustrator",
+        "adobe illustrator",
+        "иллюстратор",
+        "люстра",
+        "аи",
+        "илюстратор",
+        "иллюстратер",
+        "illustrater",
+        "адоб иллюстратор",
+        "векторный редактор",
+        "где логотип рисовать"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "indesign",
+      "display_name": "indesign",
+      "source": "builtin",
+      "enabled": false,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "indesign",
+        "adobe indesign",
+        "индизайн",
+        "ин дизайн",
+        "индизайин",
+        "индезайн",
+        "in design",
+        "верстка журнала",
+        "макеты страниц"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "lightroom",
+      "display_name": "lightroom",
+      "source": "builtin",
+      "enabled": true,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "lightroom",
+        "adobe lightroom",
+        "лайтрум",
+        "лайт рум",
+        "лайтрумм",
+        "light room",
+        "обработка фото lightroom",
+        "цветокор фото"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "max_3ds",
+      "display_name": "3ds max",
+      "source": "builtin",
+      "enabled": false,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "3ds max",
+        "3d max",
+        "три дэ макс",
+        "макс",
+        "3 ds max",
+        "тридэ макс",
+        "3дс макс",
+        "старый 3д макс",
+        "модели в максе"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "maya",
+      "display_name": "maya",
+      "source": "builtin",
+      "enabled": true,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "maya",
+        "autodesk maya",
+        "мая",
+        "майя",
+        "маяа",
+        "майаа",
+        "autodesk маия",
+        "анимация 3d maya"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "media_encoder",
+      "display_name": "media encoder",
+      "source": "builtin",
+      "enabled": true,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "media encoder",
+        "adobe media encoder",
+        "медиа энкодер",
+        "медиа енкодер",
+        "медиа энкодэр",
+        "media encоder",
+        "рендер adobe",
+        "кодировщик видео"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "mysql_workbench",
+      "display_name": "mysql workbench",
+      "source": "builtin",
+      "enabled": true,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "mysql workbench",
+        "mysql",
+        "воркбенч",
+        "май эс кью эл",
+        "mysql workbanch",
+        "майскл воркбенч",
+        "ворк бенч",
+        "mysql клиент",
+        "база mysql"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "notion",
+      "display_name": "notion",
+      "source": "builtin",
+      "enabled": false,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "notion",
+        "ноушен",
+        "ноушн",
+        "нотион",
+        "ноушенн",
+        "notion app",
+        "ношен",
+        "рабочие заметки",
+        "страницы notion"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "obsidian",
+      "display_name": "obsidian",
+      "source": "builtin",
+      "enabled": false,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "obsidian",
+        "обсидиан",
+        "obsidian notes",
+        "обсидианн",
+        "обсидиен",
+        "obsidion",
+        "база заметок",
+        "мои заметки markdown"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "onenote",
+      "display_name": "onenote",
+      "source": "builtin",
+      "enabled": true,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "onenote",
+        "one note",
+        "ваннот",
+        "ван ноут",
+        "заметки microsoft",
+        "уан нот",
+        "ван ноте",
+        "one not",
+        "уанноут",
+        "конспекты открыть",
+        "заметки офиса"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "opera",
+      "display_name": "opera",
+      "source": "builtin",
+      "enabled": true,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "opera",
+        "опера",
+        "opera gx",
+        "опера gx",
+        "браузер опера",
+        "опира",
+        "апера",
+        "опера джи икс",
+        "опера гх",
+        "игровой браузер",
+        "браузер gx"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "pgadmin",
+      "display_name": "pgadmin",
+      "source": "builtin",
+      "enabled": true,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "pgadmin",
+        "pg admin",
+        "пг админ",
+        "постгрес админ",
+        "пиджи админ",
+        "pg админ",
+        "pgadminn",
+        "postgres клиент",
+        "админка postgres"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "photos",
+      "display_name": "photos",
+      "source": "builtin",
+      "enabled": false,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "photos",
+        "фотографии",
+        "фото",
+        "просмотр фото",
+        "фотки",
+        "фотаграфии",
+        "фотографиии",
+        "photos windows",
+        "посмотреть картинку",
+        "открыть фотки"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "photoshop",
+      "display_name": "photoshop",
+      "source": "builtin",
+      "enabled": true,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "photoshop",
+        "adobe photoshop",
+        "фотошоп",
+        "шоп",
+        "фш",
+        "фотошопп",
+        "фотошопчик",
+        "фоташоп",
+        "photoshope",
+        "адоб фотошоп",
+        "где фотки редактировать",
+        "редактор фотографий adobe"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "phpstorm",
+      "display_name": "phpstorm",
+      "source": "builtin",
+      "enabled": false,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "phpstorm",
+        "php storm",
+        "пхп шторм",
+        "пиэйчпи шторм",
+        "пхпшторм",
+        "пхп сторм",
+        "php stоrm",
+        "ide для php"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "postman",
+      "display_name": "postman",
+      "source": "builtin",
+      "enabled": true,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "postman",
+        "постман",
+        "post man",
+        "пост мэн",
+        "постманн",
+        "postmen",
+        "тестировать api",
+        "запросы api"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "premiere_pro",
+      "display_name": "premiere pro",
+      "source": "builtin",
+      "enabled": true,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "premiere pro",
+        "adobe premiere",
+        "премьер",
+        "премьер про",
+        "премьера",
+        "премер про",
+        "премиер про",
+        "premier pro",
+        "адоб премьер",
+        "где видео монтировать",
+        "видеомонтаж adobe"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "project",
+      "display_name": "microsoft project",
+      "source": "builtin",
+      "enabled": true,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "microsoft project",
+        "ms project",
+        "проджект",
+        "проект офис",
+        "прожект",
+        "проджэкт",
+        "projeсt",
+        "план проекта",
+        "гант диаграмма"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "pycharm",
+      "display_name": "pycharm",
+      "source": "builtin",
+      "enabled": true,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "pycharm",
+        "пайчарм",
+        "пичарм",
+        "python ide",
+        "пай чарм",
+        "пайтчарм",
+        "py charm",
+        "пичар",
+        "где питон пишу",
+        "проект на python открыть"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "seven_zip",
+      "display_name": "7zip",
+      "source": "builtin",
+      "enabled": true,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "7zip",
+        "7 zip",
+        "seven zip",
+        "семь зип",
+        "семизип",
+        "7зип",
+        "семь zip",
+        "севен зип",
+        "архиватор 7zip",
+        "распаковщик 7zip"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "signal",
+      "display_name": "signal",
+      "source": "builtin",
+      "enabled": false,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "signal",
+        "сигнал",
+        "signal messenger",
+        "сигнл",
+        "сигналл",
+        "signl",
+        "безопасный мессенджер"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "sketchup",
+      "display_name": "sketchup",
+      "source": "builtin",
+      "enabled": false,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "sketchup",
+        "скетчап",
+        "скетч ап",
+        "скечап",
+        "sketch up",
+        "скетчапп",
+        "быстрое 3д моделирование"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "skype",
+      "display_name": "skype",
+      "source": "builtin",
+      "enabled": false,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "skype",
+        "скайп",
+        "скайпик",
+        "скаип",
+        "скайпп",
+        "skyp",
+        "старый видеозвонок"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "slack",
+      "display_name": "slack",
+      "source": "builtin",
+      "enabled": false,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "slack",
+        "слак",
+        "рабочий чат",
+        "слаак",
+        "слэк",
+        "slak",
+        "корпоративный чат"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "spotify",
+      "display_name": "spotify",
+      "source": "builtin",
+      "enabled": true,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "spotify",
+        "спотифай",
+        "музыка spotify",
+        "спотифайй",
+        "spotifyy",
+        "споти фай",
+        "музыку включить",
+        "где музыка"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "substance_painter",
+      "display_name": "substance painter",
+      "source": "builtin",
+      "enabled": true,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "substance painter",
+        "сабстанс",
+        "сабстанс пейнтер",
+        "substance painer",
+        "сабстенс",
+        "сабстанс пэйнтер",
+        "текстуры рисовать",
+        "покрасить 3д модель"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "teams",
+      "display_name": "teams",
+      "source": "builtin",
+      "enabled": false,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "teams",
+        "microsoft teams",
+        "тимс",
+        "майкрософт тимс",
+        "тимз",
+        "teamс",
+        "микрософт тимз",
+        "созвон microsoft",
+        "рабочий созвон"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "tor_browser",
+      "display_name": "tor",
+      "source": "builtin",
+      "enabled": true,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "tor",
+        "tor browser",
+        "тор",
+        "тор браузер",
+        "торр",
+        "tor брауер",
+        "тор броузер",
+        "анонимный браузер"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "unity",
+      "display_name": "unity",
+      "source": "builtin",
+      "enabled": true,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "unity",
+        "юнити",
+        "unity hub",
+        "юните",
+        "унити",
+        "unityy",
+        "движок unity",
+        "проект unity"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "visio",
+      "display_name": "visio",
+      "source": "builtin",
+      "enabled": false,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "visio",
+        "microsoft visio",
+        "визио",
+        "схемы visio",
+        "висио",
+        "визео",
+        "visyo",
+        "схемы рисовать",
+        "диаграммы visio"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "vlc",
+      "display_name": "vlc",
+      "source": "builtin",
+      "enabled": false,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "vlc",
+        "vlc player",
+        "влц",
+        "вэ эл це",
+        "плеер vlc",
+        "влс",
+        "vlс",
+        "ви эл си",
+        "видео плеер",
+        "открыть фильм"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "voice_recorder",
+      "display_name": "voice recorder",
+      "source": "builtin",
+      "enabled": false,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "voice recorder",
+        "звукозапись",
+        "диктофон",
+        "запись голоса",
+        "звукозапис",
+        "диктофан",
+        "диктофонн",
+        "войс рекордер",
+        "записать голос",
+        "запись аудио"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "webstorm",
+      "display_name": "webstorm",
+      "source": "builtin",
+      "enabled": false,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "webstorm",
+        "вебшторм",
+        "веб сторм",
+        "вэбшторм",
+        "web storm",
+        "вебштор",
+        "ide для javascript",
+        "фронтенд ide"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "whatsapp",
+      "display_name": "whatsapp",
+      "source": "builtin",
+      "enabled": true,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "whatsapp",
+        "ватсап",
+        "вотсап",
+        "вацап",
+        "вацапп",
+        "ватцап",
+        "ватс апп",
+        "whatapp",
+        "зеленый мессенджер"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "winrar",
+      "display_name": "winrar",
+      "source": "builtin",
+      "enabled": true,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "winrar",
+        "винрар",
+        "архиватор winrar",
+        "вин рар",
+        "win rar",
+        "винрарр",
+        "архивы открыть",
+        "распаковать архив"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "yandex_browser",
+      "display_name": "yandex",
+      "source": "builtin",
+      "enabled": false,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "yandex",
+        "yandex browser",
+        "яндекс",
+        "яндекс браузер",
+        "браузер яндекс",
+        "яндексс",
+        "ендекс",
+        "яндэкс",
+        "yandeks",
+        "yandex брауер",
+        "браузер от яндекса"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "zbrush",
+      "display_name": "zbrush",
+      "source": "builtin",
+      "enabled": false,
+      "launch_type": "builtin",
+      "launch_target": "",
+      "target_path": "",
+      "working_directory": "",
+      "speech_forms": [
+        "zbrush",
+        "збраш",
+        "зи браш",
+        "зибраш",
+        "з брасх",
+        "z brush",
+        "скульптинг открыть",
+        "лепить модель"
+      ],
+      "priority": 100
+    },
+    {
+      "app_id": "administrative_tools",
+      "display_name": "Administrative Tools",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\Users\\gerychhh_\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools.lnk",
+      "target_path": "C:\\WINDOWS\\system32\\control.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "administrative tools",
+        "control"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "antigravity",
+      "display_name": "Antigravity",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\Users\\gerychhh_\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Antigravity\\Antigravity.lnk",
+      "target_path": "C:\\Users\\gerychhh_\\AppData\\Local\\Programs\\Antigravity\\Antigravity.exe",
+      "working_directory": "C:\\Users\\gerychhh_\\AppData\\Local\\Programs\\Antigravity",
+      "speech_forms": [
+        "antigravity"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "app",
+      "display_name": "Яндекс Музыка",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\Users\\gerychhh_\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Яндекс Музыка.lnk",
+      "target_path": "C:\\Users\\gerychhh_\\AppData\\Local\\Programs\\YandexMusic\\Яндекс Музыка.exe",
+      "working_directory": "C:\\Users\\gerychhh_\\AppData\\Local\\Programs\\YandexMusic",
+      "speech_forms": [
+        "яндекс музыка"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "application_verifier_help",
+      "display_name": "Application Verifier Help",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Windows Kits\\Application Verifier (X64)\\Application Verifier Help.lnk",
+      "target_path": "C:\\Windows\\System32\\appverif.chm",
+      "working_directory": "C:\\WINDOWS\\system32\\",
+      "speech_forms": [
+        "application verifier help",
+        "appverif"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "application_verifier_wow",
+      "display_name": "Application Verifier (WOW)",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Windows Kits\\Application Verifier (X86)\\Application Verifier (WOW).lnk",
+      "target_path": "C:\\Windows\\SysWOW64\\appverif.exe",
+      "working_directory": "C:\\WINDOWS\\SysWOW64\\",
+      "speech_forms": [
+        "application verifier (wow)",
+        "appverif"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "application_verifier_x64",
+      "display_name": "Application Verifier (X64)",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Windows Kits\\Application Verifier (X64)\\Application Verifier (X64).lnk",
+      "target_path": "C:\\Windows\\System32\\appverif.exe",
+      "working_directory": "C:\\WINDOWS\\system32\\",
+      "speech_forms": [
+        "application verifier (x64)",
+        "appverif"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "autodesk_access",
+      "display_name": "Autodesk Access",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Autodesk\\Autodesk Access\\Autodesk Access.lnk",
+      "target_path": "C:\\Program Files\\Autodesk\\AdODIS\\V1\\Access\\AdskAccessCore.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "autodesk access",
+        "adskaccesscore"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "blend_for_visual_studio_2022",
+      "display_name": "Blend for Visual Studio 2022",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Blend for Visual Studio 2022.lnk",
+      "target_path": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\Blend.exe",
+      "working_directory": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\",
+      "speech_forms": [
+        "blend for visual studio 2022",
+        "blend"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "blender",
+      "display_name": "blender",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\Users\\gerychhh_\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Blender\\blender.lnk",
+      "target_path": "C:\\Program Files\\Blender Foundation\\Blender 2.93\\blender.exe",
+      "working_directory": "C:\\Program Files\\Blender Foundation\\Blender 2.93\\",
+      "speech_forms": [
+        "blender"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "calculator",
+      "display_name": "Calculator",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "exe",
+      "launch_target": "C:\\WINDOWS\\system32\\calc.exe",
+      "target_path": "C:\\WINDOWS\\system32\\calc.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "calculator",
+        "calc"
+      ],
+      "priority": 60
+    },
+    {
+      "app_id": "ccbservice",
+      "display_name": "CCBService",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\CCBService.lnk",
+      "target_path": "C:\\Program Files\\Chaos Group\\Chaos Cosmos\\cbservice.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "ccbservice",
+        "cbservice"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "change_graphics_mode_3ds_max_2025",
+      "display_name": "Change Graphics Mode - 3ds Max 2025",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Autodesk\\Autodesk 3ds Max 2025\\Change Graphics Mode - 3ds Max 2025.lnk",
+      "target_path": "C:\\Program Files\\Autodesk\\3ds Max 2025\\3dsmax.exe",
+      "working_directory": "C:\\Program Files\\Autodesk\\3ds Max 2025\\",
+      "speech_forms": [
+        "change graphics mode - 3ds max 2025",
+        "3dsmax"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "chaosunifiedlogin",
+      "display_name": "ChaosUnifiedLogin",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\ChaosUnifiedLogin.lnk",
+      "target_path": "C:\\Program Files\\Chaos\\UnifiedLogin\\ulasupervisor.exe",
+      "working_directory": "C:\\Program Files\\Chaos\\UnifiedLogin",
+      "speech_forms": [
+        "chaosunifiedlogin",
+        "ulasupervisor"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "character_map",
+      "display_name": "Character Map",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Accessories\\System Tools\\Character Map.lnk",
+      "target_path": "C:\\WINDOWS\\system32\\charmap.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "character map",
+        "charmap"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "chrome",
+      "display_name": "Google Chrome",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Google Chrome.lnk",
+      "target_path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "working_directory": "C:\\Program Files\\Google\\Chrome\\Application",
+      "speech_forms": [
+        "google chrome",
+        "chrome"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "cmd",
+      "display_name": "Command Prompt",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "exe",
+      "launch_target": "C:\\WINDOWS\\system32\\cmd.exe",
+      "target_path": "C:\\WINDOWS\\system32\\cmd.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "command prompt",
+        "cmd"
+      ],
+      "priority": 60
+    },
+    {
+      "app_id": "component_services",
+      "display_name": "Component Services",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\Component Services.lnk",
+      "target_path": "C:\\WINDOWS\\system32\\comexp.msc",
+      "working_directory": "",
+      "speech_forms": [
+        "component services",
+        "comexp"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "computer_management",
+      "display_name": "Computer Management",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\Computer Management.lnk",
+      "target_path": "C:\\WINDOWS\\system32\\compmgmt.msc",
+      "working_directory": "C:\\Users\\gerychhh_",
+      "speech_forms": [
+        "computer management",
+        "compmgmt"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "connectify_hotspot_23",
+      "display_name": "Connectify Hotspot 23",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Connectify Hotspot 23\\Connectify Hotspot 23.lnk",
+      "target_path": "C:\\Program Files (x86)\\Connectify\\Connectify.exe",
+      "working_directory": "C:\\Users\\GERYCH~1\\AppData\\Local\\Temp\\nsy5CF0.tmp\\Slides",
+      "speech_forms": [
+        "connectify hotspot 23",
+        "connectify"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "console",
+      "display_name": "Console",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Tesseract-OCR\\Console.lnk",
+      "target_path": "C:\\Program Files\\Tesseract-OCR\\winpath.exe",
+      "working_directory": "C:\\Program Files\\Tesseract-OCR",
+      "speech_forms": [
+        "console",
+        "winpath"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "control_center",
+      "display_name": "Control Center",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "apps_folder",
+      "launch_target": "shell:AppsFolder\\ControlCenter3_h329z55cwnj8g!App",
+      "target_path": "ControlCenter3_h329z55cwnj8g!App",
+      "working_directory": "",
+      "speech_forms": [
+        "control center",
+        "controlcenter3_h329z55cwnj8g!app"
+      ],
+      "priority": 75
+    },
+    {
+      "app_id": "control_panel",
+      "display_name": "Control Panel",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "exe",
+      "launch_target": "C:\\WINDOWS\\system32\\control.exe",
+      "target_path": "C:\\WINDOWS\\system32\\control.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "control panel",
+        "control"
+      ],
+      "priority": 60
+    },
+    {
+      "app_id": "counter_strike_2",
+      "display_name": "Counter-Strike 2",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "uri",
+      "launch_target": "steam://rungameid/730",
+      "target_path": "steam://rungameid/730",
+      "working_directory": "",
+      "speech_forms": [
+        "counter-strike 2",
+        "730"
+      ],
+      "priority": 75
+    },
+    {
+      "app_id": "database_compare",
+      "display_name": "Database Compare",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Средства Microsoft Office\\Database Compare.lnk",
+      "target_path": "C:\\Program Files\\Microsoft Office\\root\\Client\\AppVLP.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "database compare",
+        "appvlp"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "debuggable_package_manager",
+      "display_name": "Debuggable Package Manager",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Visual Studio 2022\\Visual Studio Tools\\Debuggable Package Manager.lnk",
+      "target_path": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "working_directory": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\Remote Debugger\\Appx\\",
+      "speech_forms": [
+        "debuggable package manager",
+        "powershell"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "developer_command_prompt_for_vs_2022",
+      "display_name": "Developer Command Prompt for VS 2022",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Visual Studio 2022\\Visual Studio Tools\\Developer Command Prompt for VS 2022.lnk",
+      "target_path": "C:\\Windows\\System32\\cmd.exe",
+      "working_directory": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\",
+      "speech_forms": [
+        "developer command prompt for vs 2022",
+        "cmd"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "developer_powershell_for_vs_2022",
+      "display_name": "Developer PowerShell for VS 2022",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Visual Studio 2022\\Visual Studio Tools\\Developer PowerShell for VS 2022.lnk",
+      "target_path": "C:\\Windows\\SysWOW64\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "working_directory": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\",
+      "speech_forms": [
+        "developer powershell for vs 2022",
+        "powershell"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "devenv",
+      "display_name": "devenv",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "exe",
+      "launch_target": "\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\common7\\ide\\devenv.exe\"",
+      "target_path": "\"C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\common7\\ide\\devenv.exe\"",
+      "working_directory": "",
+      "speech_forms": [
+        "devenv"
+      ],
+      "priority": 80
+    },
+    {
+      "app_id": "device_manager",
+      "display_name": "Device Manager",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "exe",
+      "launch_target": "C:\\WINDOWS\\system32\\devmgmt.msc",
+      "target_path": "C:\\WINDOWS\\system32\\devmgmt.msc",
+      "working_directory": "",
+      "speech_forms": [
+        "device manager",
+        "devmgmt"
+      ],
+      "priority": 60
+    },
+    {
+      "app_id": "dfrgui",
+      "display_name": "dfrgui",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\dfrgui.lnk",
+      "target_path": "C:\\WINDOWS\\system32\\dfrgui.exe",
+      "working_directory": "C:\\WINDOWS\\system32",
+      "speech_forms": [
+        "dfrgui"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "discord",
+      "display_name": "Discord",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "apps_folder",
+      "launch_target": "shell:AppsFolder\\com.squirrel.Discord.Discord",
+      "target_path": "com.squirrel.Discord.Discord",
+      "working_directory": "",
+      "speech_forms": [
+        "discord",
+        "com.squirrel.discord"
+      ],
+      "priority": 75
+    },
+    {
+      "app_id": "disk_cleanup",
+      "display_name": "Disk Cleanup",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\Disk Cleanup.lnk",
+      "target_path": "C:\\WINDOWS\\system32\\cleanmgr.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "disk cleanup",
+        "cleanmgr"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "disk_management",
+      "display_name": "Disk Management",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "exe",
+      "launch_target": "C:\\WINDOWS\\system32\\diskmgmt.msc",
+      "target_path": "C:\\WINDOWS\\system32\\diskmgmt.msc",
+      "working_directory": "",
+      "speech_forms": [
+        "disk management",
+        "diskmgmt"
+      ],
+      "priority": 60
+    },
+    {
+      "app_id": "documentation_for_desktop_apps",
+      "display_name": "Documentation for Desktop Apps",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Windows Kits\\Windows Software Development Kit\\Documentation for Desktop Apps.lnk",
+      "target_path": "C:\\Program Files (x86)\\Windows Kits\\10\\Shortcuts\\DesktopAppsDocumentation.url",
+      "working_directory": "C:\\Program Files (x86)\\Windows Kits\\10\\",
+      "speech_forms": [
+        "documentation for desktop apps",
+        "desktopappsdocumentation"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "documentation_for_uwp_apps",
+      "display_name": "Documentation for UWP Apps",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Windows Kits\\Windows Software Development Kit\\Documentation for UWP Apps.lnk",
+      "target_path": "C:\\Program Files (x86)\\Windows Kits\\10\\Shortcuts\\UWPAppsDocumentation.url",
+      "working_directory": "C:\\Program Files (x86)\\Windows Kits\\10\\",
+      "speech_forms": [
+        "documentation for uwp apps",
+        "uwpappsdocumentation"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "dokumentation",
+      "display_name": "Dokumentation",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Tesseract-OCR\\Dokumentation.lnk",
+      "target_path": "C:\\Program Files\\Tesseract-OCR\\tesseract.1.html",
+      "working_directory": "C:\\Program Files\\Tesseract-OCR",
+      "speech_forms": [
+        "dokumentation",
+        "tesseract.1"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "edge",
+      "display_name": "Microsoft Edge",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Microsoft Edge.lnk",
+      "target_path": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+      "working_directory": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application",
+      "speech_forms": [
+        "microsoft edge",
+        "msedge"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "epic_games",
+      "display_name": "Epic Games Launcher",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Epic Games Launcher.lnk",
+      "target_path": "C:\\Program Files\\Epic Games\\Launcher\\Portal\\Binaries\\Win64\\EpicGamesLauncher.exe",
+      "working_directory": "C:\\Program Files\\Epic Games\\",
+      "speech_forms": [
+        "epic games launcher",
+        "epicgameslauncher"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "event_viewer",
+      "display_name": "Event Viewer",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "exe",
+      "launch_target": "C:\\WINDOWS\\system32\\eventvwr.msc",
+      "target_path": "C:\\WINDOWS\\system32\\eventvwr.msc",
+      "working_directory": "",
+      "speech_forms": [
+        "event viewer",
+        "eventvwr"
+      ],
+      "priority": 60
+    },
+    {
+      "app_id": "excel",
+      "display_name": "Excel",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Excel.lnk",
+      "target_path": "C:\\Program Files\\Microsoft Office\\root\\Office16\\EXCEL.EXE",
+      "working_directory": "",
+      "speech_forms": [
+        "excel"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "explorer",
+      "display_name": "File Explorer",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "exe",
+      "launch_target": "C:\\WINDOWS\\explorer.exe",
+      "target_path": "C:\\WINDOWS\\explorer.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "file explorer",
+        "explorer"
+      ],
+      "priority": 60
+    },
+    {
+      "app_id": "faq",
+      "display_name": "FAQ",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Tesseract-OCR\\FAQ.lnk",
+      "target_path": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Tesseract-OCR\\FAQ.lnk",
+      "working_directory": "C:\\Program Files\\Tesseract-OCR",
+      "speech_forms": [
+        "faq"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "fps_monitor",
+      "display_name": "FPS Monitor",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\FPS Monitor\\FPS Monitor.lnk",
+      "target_path": "C:\\Program Files (x86)\\FPS Monitor\\FPSMonitor.exe",
+      "working_directory": "C:\\Program Files (x86)\\FPS Monitor",
+      "speech_forms": [
+        "fps monitor",
+        "fpsmonitor"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "game_bar",
+      "display_name": "Game Bar",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "apps_folder",
+      "launch_target": "shell:AppsFolder\\Microsoft.XboxGamingOverlay_8wekyb3d8bbwe!App",
+      "target_path": "Microsoft.XboxGamingOverlay_8wekyb3d8bbwe!App",
+      "working_directory": "",
+      "speech_forms": [
+        "game bar",
+        "microsoft"
+      ],
+      "priority": 75
+    },
+    {
+      "app_id": "gethelp",
+      "display_name": "GetHelp",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "exe",
+      "launch_target": "C:\\Program Files\\WindowsApps\\Microsoft.GetHelp_10.2409.41132.0_x64__8wekyb3d8bbwe\\GetHelp.exe",
+      "target_path": "C:\\Program Files\\WindowsApps\\Microsoft.GetHelp_10.2409.41132.0_x64__8wekyb3d8bbwe\\GetHelp.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "gethelp"
+      ],
+      "priority": 80
+    },
+    {
+      "app_id": "git_cmd",
+      "display_name": "Git CMD",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Git\\Git CMD.lnk",
+      "target_path": "C:\\Program Files\\Git\\git-cmd.exe",
+      "working_directory": "C:\\Users\\gerychhh_",
+      "speech_forms": [
+        "git cmd",
+        "git-cmd"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "git_gui",
+      "display_name": "Git GUI",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Git\\Git GUI.lnk",
+      "target_path": "C:\\Program Files\\Git\\cmd\\git-gui.exe",
+      "working_directory": "C:\\Users\\gerychhh_",
+      "speech_forms": [
+        "git gui",
+        "git-gui"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "git_release_notes",
+      "display_name": "Git Release Notes",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Git\\Git Release Notes.lnk",
+      "target_path": "C:\\Program Files\\Git\\ReleaseNotes.html",
+      "working_directory": "C:\\Users\\gerychhh_",
+      "speech_forms": [
+        "git release notes",
+        "releasenotes"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "gpuview",
+      "display_name": "GPUView",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Windows Kits\\Windows Performance Toolkit\\GPUView.lnk",
+      "target_path": "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\gpuview\\GPUView.exe",
+      "working_directory": "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\",
+      "speech_forms": [
+        "gpuview"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "hearts_of_iron_iv",
+      "display_name": "Hearts of Iron IV",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "uri",
+      "launch_target": "steam://rungameid/394360",
+      "target_path": "steam://rungameid/394360",
+      "working_directory": "",
+      "speech_forms": [
+        "hearts of iron iv",
+        "394360"
+      ],
+      "priority": 75
+    },
+    {
+      "app_id": "homepage",
+      "display_name": "Homepage",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Tesseract-OCR\\Homepage.lnk",
+      "target_path": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Tesseract-OCR\\Homepage.lnk",
+      "working_directory": "C:\\Program Files\\Tesseract-OCR",
+      "speech_forms": [
+        "homepage"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "idle_python_3_10_64_bit",
+      "display_name": "IDLE (Python 3.10 64-bit)",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\Users\\gerychhh_\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Python 3.10\\IDLE (Python 3.10 64-bit).lnk",
+      "target_path": "C:\\Users\\gerychhh_\\AppData\\Local\\Programs\\Python\\Python310\\pythonw.exe",
+      "working_directory": "C:\\Users\\gerychhh_\\AppData\\Local\\Programs\\Python\\Python310\\",
+      "speech_forms": [
+        "idle (python 3.10 64-bit)",
+        "pythonw"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "iediag",
+      "display_name": "IEDIAG",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "exe",
+      "launch_target": "C:\\Program Files\\Internet Explorer\\IEDIAGCMD.EXE",
+      "target_path": "C:\\Program Files\\Internet Explorer\\IEDIAGCMD.EXE",
+      "working_directory": "",
+      "speech_forms": [
+        "iediag",
+        "iediagcmd"
+      ],
+      "priority": 80
+    },
+    {
+      "app_id": "iediagcmd",
+      "display_name": "IEDIAGCMD",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "exe",
+      "launch_target": "C:\\Program Files\\Internet Explorer\\IEDIAGCMD.EXE",
+      "target_path": "C:\\Program Files\\Internet Explorer\\IEDIAGCMD.EXE",
+      "working_directory": "",
+      "speech_forms": [
+        "iediagcmd"
+      ],
+      "priority": 80
+    },
+    {
+      "app_id": "iexplore",
+      "display_name": "IEXPLORE",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "exe",
+      "launch_target": "C:\\Program Files\\Internet Explorer\\IEXPLORE.EXE",
+      "target_path": "C:\\Program Files\\Internet Explorer\\IEXPLORE.EXE",
+      "working_directory": "",
+      "speech_forms": [
+        "iexplore"
+      ],
+      "priority": 80
+    },
+    {
+      "app_id": "intellij_idea",
+      "display_name": "IntelliJ IDEA Ultimate",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Sitego Repack\\JetBrains\\IntelliJ IDEA Ultimate.lnk",
+      "target_path": "C:\\Program Files\\JetBrains\\IntelliJIdea2025.3\\bin\\idea64.exe",
+      "working_directory": "C:\\Program Files\\JetBrains\\IntelliJIdea2025.3\\bin",
+      "speech_forms": [
+        "intellij idea ultimate",
+        "idea64"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "iscsi",
+      "display_name": "Инициатор iSCSI",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "exe",
+      "launch_target": "{1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}\\iscsicpl.exe",
+      "target_path": "{1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}\\iscsicpl.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "инициатор iscsi",
+        "iscsicpl"
+      ],
+      "priority": 75
+    },
+    {
+      "app_id": "iscsi_initiator",
+      "display_name": "iSCSI Initiator",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\iSCSI Initiator.lnk",
+      "target_path": "C:\\WINDOWS\\system32\\iscsicpl.exe",
+      "working_directory": "C:\\WINDOWS\\system32",
+      "speech_forms": [
+        "iscsi initiator",
+        "iscsicpl"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "licensemanagershellext",
+      "display_name": "licensemanagershellext",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "exe",
+      "launch_target": "C:\\WINDOWS\\System32\\licensemanagershellext.exe",
+      "target_path": "C:\\WINDOWS\\System32\\licensemanagershellext.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "licensemanagershellext"
+      ],
+      "priority": 80
+    },
+    {
+      "app_id": "livecaptions",
+      "display_name": "LiveCaptions",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\Users\\gerychhh_\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Accessibility\\LiveCaptions.lnk",
+      "target_path": "C:\\WINDOWS\\system32\\LiveCaptions.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "livecaptions"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "magnify",
+      "display_name": "Magnify",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\Users\\gerychhh_\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Accessibility\\Magnify.lnk",
+      "target_path": "C:\\WINDOWS\\system32\\magnify.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "magnify"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "manage_chaos_license_server",
+      "display_name": "Manage Chaos License Server",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Chaos\\Chaos License Server\\Manage Chaos License Server.lnk",
+      "target_path": "C:\\Program Files\\Chaos\\VRLService\\vrlctl.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "manage chaos license server",
+        "vrlctl"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "maxfind_2025",
+      "display_name": "MaxFind 2025",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Autodesk\\Autodesk 3ds Max 2025\\MaxFind 2025.lnk",
+      "target_path": "C:\\Program Files\\Autodesk\\3ds Max 2025\\MaxFind.exe",
+      "working_directory": "C:\\Program Files\\Autodesk\\3ds Max 2025\\",
+      "speech_forms": [
+        "maxfind 2025",
+        "maxfind"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "memory_diagnostics_tool",
+      "display_name": "Memory Diagnostics Tool",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\Memory Diagnostics Tool.lnk",
+      "target_path": "C:\\WINDOWS\\system32\\MdSched.exe",
+      "working_directory": "C:\\WINDOWS\\system32",
+      "speech_forms": [
+        "memory diagnostics tool",
+        "mdsched"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "microsoft_store",
+      "display_name": "Microsoft Store",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "uri",
+      "launch_target": "ms-windows-store:",
+      "target_path": "ms-windows-store:",
+      "working_directory": "",
+      "speech_forms": [
+        "microsoft store",
+        "ms-windows-store:"
+      ],
+      "priority": 60
+    },
+    {
+      "app_id": "mplayer2",
+      "display_name": "mplayer2",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "exe",
+      "launch_target": "C:\\Program Files (x86)\\Windows Media Player\\wmplayer.exe",
+      "target_path": "C:\\Program Files (x86)\\Windows Media Player\\wmplayer.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "mplayer2",
+        "wmplayer"
+      ],
+      "priority": 80
+    },
+    {
+      "app_id": "msoadfsb",
+      "display_name": "msoadfsb",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "exe",
+      "launch_target": "C:\\Program Files\\Microsoft Office\\Root\\Office16\\msoadfsb.exe",
+      "target_path": "C:\\Program Files\\Microsoft Office\\Root\\Office16\\msoadfsb.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "msoadfsb"
+      ],
+      "priority": 80
+    },
+    {
+      "app_id": "msoasb",
+      "display_name": "msoasb",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "exe",
+      "launch_target": "C:\\Program Files\\Microsoft Office\\Root\\Office16\\msoasb.exe",
+      "target_path": "C:\\Program Files\\Microsoft Office\\Root\\Office16\\msoasb.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "msoasb"
+      ],
+      "priority": 80
+    },
+    {
+      "app_id": "msoxmled",
+      "display_name": "msoxmled",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "exe",
+      "launch_target": "C:\\Program Files\\Microsoft Office\\Root\\VFS\\ProgramFilesCommonX64\\Microsoft Shared\\OFFICE16\\MSOXMLED.EXE",
+      "target_path": "C:\\Program Files\\Microsoft Office\\Root\\VFS\\ProgramFilesCommonX64\\Microsoft Shared\\OFFICE16\\MSOXMLED.EXE",
+      "working_directory": "",
+      "speech_forms": [
+        "msoxmled"
+      ],
+      "priority": 80
+    },
+    {
+      "app_id": "narrator",
+      "display_name": "Narrator",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\Users\\gerychhh_\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Accessibility\\Narrator.lnk",
+      "target_path": "C:\\WINDOWS\\system32\\narrator.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "narrator"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "no_i_m_not_a_human",
+      "display_name": "No, I'm not a Human",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "uri",
+      "launch_target": "steam://rungameid/3180070",
+      "target_path": "steam://rungameid/3180070",
+      "working_directory": "",
+      "speech_forms": [
+        "no, i'm not a human",
+        "3180070"
+      ],
+      "priority": 75
+    },
+    {
+      "app_id": "node_js",
+      "display_name": "Node.js",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Node.js\\Node.js.lnk",
+      "target_path": "C:\\Program Files\\nodejs\\node.exe",
+      "working_directory": "C:\\Program Files\\nodejs\\",
+      "speech_forms": [
+        "node.js",
+        "node"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "node_js_command_prompt",
+      "display_name": "Node.js command prompt",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Node.js\\Node.js command prompt.lnk",
+      "target_path": "C:\\Windows\\System32\\cmd.exe",
+      "working_directory": "C:\\Program Files\\nodejs\\",
+      "speech_forms": [
+        "node.js command prompt",
+        "cmd"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "notepad",
+      "display_name": "Notepad",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "exe",
+      "launch_target": "C:\\WINDOWS\\system32\\notepad.exe",
+      "target_path": "C:\\WINDOWS\\system32\\notepad.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "notepad"
+      ],
+      "priority": 60
+    },
+    {
+      "app_id": "nvidia_app",
+      "display_name": "NVIDIA App",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\NVIDIA Corporation\\NVIDIA App.lnk",
+      "target_path": "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App\\CEF\\NVIDIA App.exe",
+      "working_directory": "C:\\Program Files\\NVIDIA Corporation\\NVIDIA App",
+      "speech_forms": [
+        "nvidia app"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "nvidia_control_panel",
+      "display_name": "NVIDIA Control Panel",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "apps_folder",
+      "launch_target": "shell:AppsFolder\\NVIDIACorp.NVIDIAControlPanel_56jybvy8sckqj!NVIDIACorp.NVIDIAControlPanel",
+      "target_path": "NVIDIACorp.NVIDIAControlPanel_56jybvy8sckqj!NVIDIACorp.NVIDIAControlPanel",
+      "working_directory": "",
+      "speech_forms": [
+        "nvidia control panel",
+        "nvidiacorp.nvidiacontrolpanel_56jybvy8sckqj!nvidiacorp"
+      ],
+      "priority": 75
+    },
+    {
+      "app_id": "obs_studio",
+      "display_name": "OBS Studio",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\OBS Studio.lnk",
+      "target_path": "C:\\Program Files\\obs-studio\\bin\\64bit\\obs64.exe",
+      "working_directory": "C:\\Program Files\\obs-studio\\bin\\64bit",
+      "speech_forms": [
+        "obs studio",
+        "obs64"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "odbc_32",
+      "display_name": "Источники данных ODBC (32-разрядная версия)",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "exe",
+      "launch_target": "{D65231B0-B2F1-4857-A4CE-A8E7C6EA7D27}\\odbcad32.exe",
+      "target_path": "{D65231B0-B2F1-4857-A4CE-A8E7C6EA7D27}\\odbcad32.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "источники данных odbc (32-разрядная версия)",
+        "odbcad32"
+      ],
+      "priority": 75
+    },
+    {
+      "app_id": "odbc_64",
+      "display_name": "Источники данных ODBC (64-разрядная версия)",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "exe",
+      "launch_target": "{1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}\\odbcad32.exe",
+      "target_path": "{1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}\\odbcad32.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "источники данных odbc (64-разрядная версия)",
+        "odbcad32"
+      ],
+      "priority": 75
+    },
+    {
+      "app_id": "odbc_data_sources_32_bit",
+      "display_name": "ODBC Data Sources (32-bit)",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\ODBC Data Sources (32-bit).lnk",
+      "target_path": "C:\\WINDOWS\\syswow64\\odbcad32.exe",
+      "working_directory": "C:\\WINDOWS\\syswow64",
+      "speech_forms": [
+        "odbc data sources (32-bit)",
+        "odbcad32"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "odbc_data_sources_64_bit",
+      "display_name": "ODBC Data Sources (64-bit)",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\ODBC Data Sources (64-bit).lnk",
+      "target_path": "C:\\WINDOWS\\system32\\odbcad32.exe",
+      "working_directory": "C:\\WINDOWS\\system32",
+      "speech_forms": [
+        "odbc data sources (64-bit)",
+        "odbcad32"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "office",
+      "display_name": "Языковые параметры Office",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Средства Microsoft Office\\Языковые параметры Office.lnk",
+      "target_path": "C:\\Program Files\\Microsoft Office\\root\\Office16\\SETLANG.EXE",
+      "working_directory": "",
+      "speech_forms": [
+        "языковые параметры office",
+        "setlang"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "olk",
+      "display_name": "olk",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "exe",
+      "launch_target": "C:\\Program Files\\WindowsApps\\Microsoft.OutlookForWindows_1.2026.120.300_x64__8wekyb3d8bbwe\\olk.exe",
+      "target_path": "C:\\Program Files\\WindowsApps\\Microsoft.OutlookForWindows_1.2026.120.300_x64__8wekyb3d8bbwe\\olk.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "olk"
+      ],
+      "priority": 80
+    },
+    {
+      "app_id": "ollama",
+      "display_name": "Ollama",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\Users\\gerychhh_\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\Ollama.lnk",
+      "target_path": "C:\\Users\\gerychhh_\\AppData\\Local\\Programs\\Ollama\\ollama app.exe",
+      "working_directory": "C:\\Users\\gerychhh_\\AppData\\Local\\Programs\\Ollama",
+      "speech_forms": [
+        "ollama",
+        "ollama app"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "on_screen_keyboard",
+      "display_name": "On-Screen Keyboard",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\Users\\gerychhh_\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Accessibility\\On-Screen Keyboard.lnk",
+      "target_path": "C:\\WINDOWS\\system32\\osk.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "on-screen keyboard",
+        "osk"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "outlook",
+      "display_name": "Outlook",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "apps_folder",
+      "launch_target": "shell:AppsFolder\\Microsoft.OutlookForWindows_8wekyb3d8bbwe!Microsoft.OutlookforWindows",
+      "target_path": "Microsoft.OutlookForWindows_8wekyb3d8bbwe!Microsoft.OutlookforWindows",
+      "working_directory": "",
+      "speech_forms": [
+        "outlook",
+        "microsoft.outlookforwindows_8wekyb3d8bbwe!microsoft"
+      ],
+      "priority": 75
+    },
+    {
+      "app_id": "paint",
+      "display_name": "Paint",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "exe",
+      "launch_target": "C:\\Users\\gerychhh_\\AppData\\Local\\Microsoft\\WindowsApps\\mspaint.exe",
+      "target_path": "C:\\Users\\gerychhh_\\AppData\\Local\\Microsoft\\WindowsApps\\mspaint.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "paint",
+        "mspaint"
+      ],
+      "priority": 60
+    },
+    {
+      "app_id": "paradox_launcher_v2",
+      "display_name": "Paradox Launcher v2",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\Users\\gerychhh_\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Paradox Interactive\\Paradox Launcher v2.lnk",
+      "target_path": "C:\\Users\\gerychhh_\\AppData\\Local\\Programs\\Paradox Interactive\\launcher\\bootstrapper-v2.exe",
+      "working_directory": "C:\\Users\\gerychhh_\\AppData\\Local\\Programs\\Paradox Interactive\\launcher\\",
+      "speech_forms": [
+        "paradox launcher v2",
+        "bootstrapper-v2"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "performance_monitor",
+      "display_name": "Performance Monitor",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\Performance Monitor.lnk",
+      "target_path": "C:\\WINDOWS\\system32\\perfmon.msc",
+      "working_directory": "",
+      "speech_forms": [
+        "performance monitor",
+        "perfmon"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "planetvpn",
+      "display_name": "PlanetVPN",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "apps_folder",
+      "launch_target": "shell:AppsFolder\\FreeVPNPlanet.PlanetVPN_b2qrq2z57ppd2!PlanetVPN",
+      "target_path": "FreeVPNPlanet.PlanetVPN_b2qrq2z57ppd2!PlanetVPN",
+      "working_directory": "",
+      "speech_forms": [
+        "planetvpn",
+        "freevpnplanet"
+      ],
+      "priority": 75
+    },
+    {
+      "app_id": "portal_2",
+      "display_name": "Portal 2",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "uri",
+      "launch_target": "steam://rungameid/620",
+      "target_path": "steam://rungameid/620",
+      "working_directory": "",
+      "speech_forms": [
+        "portal 2",
+        "620"
+      ],
+      "priority": 75
+    },
+    {
+      "app_id": "portal_2_community_edition",
+      "display_name": "Portal 2 Community Edition",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "uri",
+      "launch_target": "steam://rungameid/440000",
+      "target_path": "steam://rungameid/440000",
+      "working_directory": "",
+      "speech_forms": [
+        "portal 2 community edition",
+        "440000"
+      ],
+      "priority": 75
+    },
+    {
+      "app_id": "power_automate",
+      "display_name": "Power Automate",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "apps_folder",
+      "launch_target": "shell:AppsFolder\\Microsoft.PowerAutomateDesktop_8wekyb3d8bbwe!PAD.Console",
+      "target_path": "Microsoft.PowerAutomateDesktop_8wekyb3d8bbwe!PAD.Console",
+      "working_directory": "",
+      "speech_forms": [
+        "power automate",
+        "microsoft.powerautomatedesktop_8wekyb3d8bbwe!pad"
+      ],
+      "priority": 75
+    },
+    {
+      "app_id": "powerpoint",
+      "display_name": "PowerPoint",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\PowerPoint.lnk",
+      "target_path": "C:\\Program Files\\Microsoft Office\\root\\Office16\\POWERPNT.EXE",
+      "working_directory": "",
+      "speech_forms": [
+        "powerpoint",
+        "powerpnt"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "powershell",
+      "display_name": "Windows PowerShell ISE (x86)",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Windows PowerShell\\Windows PowerShell ISE (x86).lnk",
+      "target_path": "C:\\WINDOWS\\syswow64\\WindowsPowerShell\\v1.0\\PowerShell_ISE.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "windows powershell ise (x86)",
+        "powershell_ise"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "print_management",
+      "display_name": "Print Management",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\Print Management.lnk",
+      "target_path": "C:\\WINDOWS\\system32\\printmanagement.msc",
+      "working_directory": "",
+      "speech_forms": [
+        "print management",
+        "printmanagement"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "proton_vpn",
+      "display_name": "Proton VPN",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Proton\\Proton VPN.lnk",
+      "target_path": "C:\\Program Files\\Proton\\VPN\\ProtonVPN.Launcher.exe",
+      "working_directory": "C:\\Program Files\\Proton\\VPN",
+      "speech_forms": [
+        "proton vpn",
+        "protonvpn.launcher"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "python_3_10_64_bit",
+      "display_name": "Python 3.10 (64-bit)",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\Users\\gerychhh_\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Python 3.10\\Python 3.10 (64-bit).lnk",
+      "target_path": "C:\\Users\\gerychhh_\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+      "working_directory": "C:\\Users\\gerychhh_\\AppData\\Local\\Programs\\Python\\Python310\\",
+      "speech_forms": [
+        "python 3.10 (64-bit)",
+        "python"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "python_3_10_manuals_64_bit",
+      "display_name": "Python 3.10 Manuals (64-bit)",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\Users\\gerychhh_\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Python 3.10\\Python 3.10 Manuals (64-bit).lnk",
+      "target_path": "C:\\WINDOWS\\hh.exe",
+      "working_directory": "C:\\Users\\gerychhh_\\AppData\\Local\\Programs\\Python\\Python310\\",
+      "speech_forms": [
+        "python 3.10 manuals (64-bit)",
+        "hh"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "python_3_10_module_docs_64_bit",
+      "display_name": "Python 3.10 Module Docs (64-bit)",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\Users\\gerychhh_\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Python 3.10\\Python 3.10 Module Docs (64-bit).lnk",
+      "target_path": "C:\\Users\\gerychhh_\\AppData\\Local\\Programs\\Python\\Python310\\python.exe",
+      "working_directory": "C:\\Users\\gerychhh_\\AppData\\Local\\Programs\\Python\\Python310\\",
+      "speech_forms": [
+        "python 3.10 module docs (64-bit)",
+        "python"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "qbittorrent",
+      "display_name": "qBittorrent",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\qBittorrent\\qBittorrent.lnk",
+      "target_path": "C:\\Program Files\\qBittorrent\\qbittorrent.exe",
+      "working_directory": "C:\\Program Files\\qBittorrent",
+      "speech_forms": [
+        "qbittorrent"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "r_e_p_o",
+      "display_name": "R.E.P.O.",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "uri",
+      "launch_target": "steam://rungameid/3241660",
+      "target_path": "steam://rungameid/3241660",
+      "working_directory": "",
+      "speech_forms": [
+        "r.e.p.o.",
+        "3241660"
+      ],
+      "priority": 75
+    },
+    {
+      "app_id": "readme",
+      "display_name": "ReadMe",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Tesseract-OCR\\ReadMe.lnk",
+      "target_path": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Tesseract-OCR\\ReadMe.lnk",
+      "working_directory": "C:\\Program Files\\Tesseract-OCR",
+      "speech_forms": [
+        "readme"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "recoverydrive",
+      "display_name": "RecoveryDrive",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\RecoveryDrive.lnk",
+      "target_path": "C:\\WINDOWS\\system32\\RecoveryDrive.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "recoverydrive"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "redragon_m916_pro_4k",
+      "display_name": "Redragon M916-PRO-4K",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Redragon M916-PRO-4K.lnk",
+      "target_path": "C:\\Program Files (x86)\\Redragon M916-PRO-4K\\Mouse Drive Beta.exe",
+      "working_directory": "C:\\Program Files (x86)\\Redragon M916-PRO-4K",
+      "speech_forms": [
+        "redragon m916-pro-4k",
+        "mouse drive beta"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "regedit",
+      "display_name": "Registry Editor",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "exe",
+      "launch_target": "C:\\WINDOWS\\regedit.exe",
+      "target_path": "C:\\WINDOWS\\regedit.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "registry editor",
+        "regedit"
+      ],
+      "priority": 60
+    },
+    {
+      "app_id": "remote_desktop_connection",
+      "display_name": "Remote Desktop Connection",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Accessories\\Remote Desktop Connection.lnk",
+      "target_path": "C:\\WINDOWS\\system32\\mstsc.exe",
+      "working_directory": "C:\\WINDOWS\\system32\\",
+      "speech_forms": [
+        "remote desktop connection",
+        "mstsc"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "resource_monitor",
+      "display_name": "Resource Monitor",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\Resource Monitor.lnk",
+      "target_path": "C:\\WINDOWS\\system32\\perfmon.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "resource monitor",
+        "perfmon"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "run",
+      "display_name": "Run",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\Users\\gerychhh_\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\System Tools\\Run.lnk",
+      "target_path": "C:\\Users\\gerychhh_\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\System Tools\\Run.lnk",
+      "working_directory": "",
+      "speech_forms": [
+        "run"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "sample_desktop_apps",
+      "display_name": "Sample Desktop Apps",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Windows Kits\\Windows Software Development Kit\\Sample Desktop Apps.lnk",
+      "target_path": "C:\\Program Files (x86)\\Windows Kits\\10\\Shortcuts\\DesktopAppsSamples.url",
+      "working_directory": "C:\\Program Files (x86)\\Windows Kits\\10\\",
+      "speech_forms": [
+        "sample desktop apps",
+        "desktopappssamples"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "sample_uwp_apps",
+      "display_name": "Sample UWP Apps",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Windows Kits\\Windows Software Development Kit\\Sample UWP Apps.lnk",
+      "target_path": "C:\\Program Files (x86)\\Windows Kits\\10\\Shortcuts\\UWPAppsSamples.url",
+      "working_directory": "C:\\Program Files (x86)\\Windows Kits\\10\\",
+      "speech_forms": [
+        "sample uwp apps",
+        "uwpappssamples"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "sdxhelper",
+      "display_name": "sdxhelper",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "exe",
+      "launch_target": "C:\\Program Files\\Microsoft Office\\Root\\Office16\\SDXHelper.exe",
+      "target_path": "C:\\Program Files\\Microsoft Office\\Root\\Office16\\SDXHelper.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "sdxhelper"
+      ],
+      "priority": 80
+    },
+    {
+      "app_id": "security_configuration_management",
+      "display_name": "Security Configuration Management",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\Security Configuration Management.lnk",
+      "target_path": "C:\\WINDOWS\\system32\\secpol.msc",
+      "working_directory": "",
+      "speech_forms": [
+        "security configuration management",
+        "secpol"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "services",
+      "display_name": "Services",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "exe",
+      "launch_target": "C:\\WINDOWS\\system32\\services.msc",
+      "target_path": "C:\\WINDOWS\\system32\\services.msc",
+      "working_directory": "",
+      "speech_forms": [
+        "services"
+      ],
+      "priority": 60
+    },
+    {
+      "app_id": "settings",
+      "display_name": "Settings",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "uri",
+      "launch_target": "ms-settings:",
+      "target_path": "ms-settings:",
+      "working_directory": "",
+      "speech_forms": [
+        "settings",
+        "ms-settings:"
+      ],
+      "priority": 60
+    },
+    {
+      "app_id": "snipping_tool",
+      "display_name": "Snipping Tool",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "exe",
+      "launch_target": "C:\\Users\\gerychhh_\\AppData\\Local\\Microsoft\\WindowsApps\\SnippingTool.exe",
+      "target_path": "C:\\Users\\gerychhh_\\AppData\\Local\\Microsoft\\WindowsApps\\SnippingTool.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "snipping tool",
+        "snippingtool"
+      ],
+      "priority": 60
+    },
+    {
+      "app_id": "solitaire_casual_games",
+      "display_name": "Solitaire & Casual Games",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "apps_folder",
+      "launch_target": "shell:AppsFolder\\Microsoft.MicrosoftSolitaireCollection_8wekyb3d8bbwe!App",
+      "target_path": "Microsoft.MicrosoftSolitaireCollection_8wekyb3d8bbwe!App",
+      "working_directory": "",
+      "speech_forms": [
+        "solitaire & casual games",
+        "microsoft"
+      ],
+      "priority": 75
+    },
+    {
+      "app_id": "soundpad",
+      "display_name": "Soundpad",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "uri",
+      "launch_target": "steam://rungameid/629520",
+      "target_path": "steam://rungameid/629520",
+      "working_directory": "",
+      "speech_forms": [
+        "soundpad",
+        "629520"
+      ],
+      "priority": 75
+    },
+    {
+      "app_id": "spreadsheet_compare",
+      "display_name": "Spreadsheet Compare",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Средства Microsoft Office\\Spreadsheet Compare.lnk",
+      "target_path": "C:\\Program Files\\Microsoft Office\\root\\Client\\AppVLP.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "spreadsheet compare",
+        "appvlp"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "start_chaos_cosmos_browser",
+      "display_name": "Start Chaos Cosmos Browser",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Chaos Group\\Chaos Cosmos Browser\\Start Chaos Cosmos Browser.lnk",
+      "target_path": "C:\\Program Files\\Chaos Group\\Chaos Cosmos\\cbservice.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "start chaos cosmos browser",
+        "cbservice"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "start_chaos_license_server",
+      "display_name": "Start Chaos License Server",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\Start Chaos License Server.lnk",
+      "target_path": "C:\\Program Files\\Chaos\\VRLService\\vrlsupervisor.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "start chaos license server",
+        "vrlsupervisor"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "start_chaos_unified_login",
+      "display_name": "Start Chaos Unified Login",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Chaos\\Chaos Unified Login\\Start Chaos Unified Login.lnk",
+      "target_path": "C:\\Program Files\\Chaos\\UnifiedLogin\\ulasupervisor.exe",
+      "working_directory": "C:\\Program Files\\Chaos\\UnifiedLogin",
+      "speech_forms": [
+        "start chaos unified login",
+        "ulasupervisor"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "steam",
+      "display_name": "Steam",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\Users\\gerychhh_\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Steam\\Steam.lnk",
+      "target_path": "C:\\Program Files (x86)\\Steam\\steam.exe",
+      "working_directory": "C:\\Program Files (x86)\\Steam",
+      "speech_forms": [
+        "steam"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "steps_recorder",
+      "display_name": "Steps Recorder",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Accessories\\Steps Recorder.lnk",
+      "target_path": "C:\\WINDOWS\\system32\\psr.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "steps recorder",
+        "psr"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "stop_chaos_cosmos_browser",
+      "display_name": "Stop Chaos Cosmos Browser",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Chaos Group\\Chaos Cosmos Browser\\Stop Chaos Cosmos Browser.lnk",
+      "target_path": "C:\\Program Files\\Chaos Group\\Chaos Cosmos\\cbservice.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "stop chaos cosmos browser",
+        "cbservice"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "stop_chaos_license_server",
+      "display_name": "Stop Chaos License Server",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Chaos\\Chaos License Server\\Stop Chaos License Server.lnk",
+      "target_path": "C:\\Program Files\\Chaos\\VRLService\\vrlsupervisor.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "stop chaos license server",
+        "vrlsupervisor"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "stop_chaos_unified_login",
+      "display_name": "Stop Chaos Unified Login",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Chaos\\Chaos Unified Login\\Stop Chaos Unified Login.lnk",
+      "target_path": "C:\\Program Files\\Chaos\\UnifiedLogin\\ulasupervisor.exe",
+      "working_directory": "C:\\Program Files\\Chaos\\UnifiedLogin",
+      "speech_forms": [
+        "stop chaos unified login",
+        "ulasupervisor"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "store",
+      "display_name": "store",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "exe",
+      "launch_target": "C:\\Program Files\\WindowsApps\\Microsoft.WindowsStore_22603.1401.15.0_x64__8wekyb3d8bbwe\\store.exe",
+      "target_path": "C:\\Program Files\\WindowsApps\\Microsoft.WindowsStore_22603.1401.15.0_x64__8wekyb3d8bbwe\\store.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "store"
+      ],
+      "priority": 80
+    },
+    {
+      "app_id": "system_configuration",
+      "display_name": "System Configuration",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\System Configuration.lnk",
+      "target_path": "C:\\WINDOWS\\system32\\msconfig.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "system configuration",
+        "msconfig"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "system_information",
+      "display_name": "System Information",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\System Information.lnk",
+      "target_path": "C:\\WINDOWS\\system32\\msinfo32.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "system information",
+        "msinfo32"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "tabtip",
+      "display_name": "TabTip",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "exe",
+      "launch_target": "C:\\Program Files\\Common Files\\microsoft shared\\ink\\TabTip.exe",
+      "target_path": "C:\\Program Files\\Common Files\\microsoft shared\\ink\\TabTip.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "tabtip"
+      ],
+      "priority": 80
+    },
+    {
+      "app_id": "task_manager",
+      "display_name": "Task Manager",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "exe",
+      "launch_target": "C:\\WINDOWS\\system32\\taskmgr.exe",
+      "target_path": "C:\\WINDOWS\\system32\\taskmgr.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "task manager",
+        "taskmgr"
+      ],
+      "priority": 60
+    },
+    {
+      "app_id": "task_scheduler",
+      "display_name": "Task Scheduler",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\Task Scheduler.lnk",
+      "target_path": "C:\\WINDOWS\\system32\\taskschd.msc",
+      "working_directory": "",
+      "speech_forms": [
+        "task scheduler",
+        "taskschd"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "telegram",
+      "display_name": "Telegram",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\Users\\gerychhh_\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Telegram Desktop\\Telegram.lnk",
+      "target_path": "C:\\Users\\gerychhh_\\AppData\\Roaming\\Telegram Desktop\\Telegram.exe",
+      "working_directory": "C:\\Users\\gerychhh_\\AppData\\Roaming\\Telegram Desktop",
+      "speech_forms": [
+        "telegram"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "terminal",
+      "display_name": "Windows Terminal",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "exe",
+      "launch_target": "C:\\Users\\gerychhh_\\AppData\\Local\\Microsoft\\WindowsApps\\wt.exe",
+      "target_path": "C:\\Users\\gerychhh_\\AppData\\Local\\Microsoft\\WindowsApps\\wt.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "windows terminal",
+        "wt"
+      ],
+      "priority": 60
+    },
+    {
+      "app_id": "tools_for_desktop_apps",
+      "display_name": "Tools for Desktop Apps",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Windows Kits\\Windows Software Development Kit\\Tools for Desktop Apps.lnk",
+      "target_path": "C:\\Program Files (x86)\\Windows Kits\\10\\Shortcuts\\DesktopAppsToolsDocumentation.url",
+      "working_directory": "C:\\Program Files (x86)\\Windows Kits\\10\\",
+      "speech_forms": [
+        "tools for desktop apps",
+        "desktopappstoolsdocumentation"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "tools_for_uwp_apps",
+      "display_name": "Tools for UWP Apps",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Windows Kits\\Windows Software Development Kit\\Tools for UWP Apps.lnk",
+      "target_path": "C:\\Program Files (x86)\\Windows Kits\\10\\Shortcuts\\UWPAppsToolsDocumentation.url",
+      "working_directory": "C:\\Program Files (x86)\\Windows Kits\\10\\",
+      "speech_forms": [
+        "tools for uwp apps",
+        "uwpappstoolsdocumentation"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "viber",
+      "display_name": "Viber(Compatibility Mode)",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\Users\\gerychhh_\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Viber\\Viber(Compatibility Mode).lnk",
+      "target_path": "C:\\Users\\gerychhh_\\AppData\\Local\\Viber\\Viber.exe",
+      "working_directory": "C:\\Users\\gerychhh_\\AppData\\Local\\Viber\\",
+      "speech_forms": [
+        "viber(compatibility mode)",
+        "viber"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "victoria_3",
+      "display_name": "Victoria 3",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "uri",
+      "launch_target": "steam://rungameid/529340",
+      "target_path": "steam://rungameid/529340",
+      "working_directory": "",
+      "speech_forms": [
+        "victoria 3",
+        "529340"
+      ],
+      "priority": 75
+    },
+    {
+      "app_id": "visual_studio",
+      "display_name": "Visual Studio 2022",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Visual Studio 2022.lnk",
+      "target_path": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\devenv.exe",
+      "working_directory": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\Common7\\IDE\\",
+      "speech_forms": [
+        "visual studio 2022",
+        "devenv"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "voiceaccess",
+      "display_name": "VoiceAccess",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\Users\\gerychhh_\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Accessibility\\VoiceAccess.lnk",
+      "target_path": "C:\\WINDOWS\\system32\\voiceaccess.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "voiceaccess"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "vscode",
+      "display_name": "Visual Studio Code",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\Users\\gerychhh_\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Visual Studio Code\\Visual Studio Code.lnk",
+      "target_path": "C:\\Users\\gerychhh_\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+      "working_directory": "C:\\Users\\gerychhh_\\AppData\\Local\\Programs\\Microsoft VS Code",
+      "speech_forms": [
+        "visual studio code",
+        "code"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "wab",
+      "display_name": "wab",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "exe",
+      "launch_target": "C:\\Program Files\\Windows Mail\\wab.exe",
+      "target_path": "C:\\Program Files\\Windows Mail\\wab.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "wab"
+      ],
+      "priority": 80
+    },
+    {
+      "app_id": "wabmig",
+      "display_name": "wabmig",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "exe",
+      "launch_target": "C:\\Program Files\\Windows Mail\\wabmig.exe",
+      "target_path": "C:\\Program Files\\Windows Mail\\wabmig.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "wabmig"
+      ],
+      "priority": 80
+    },
+    {
+      "app_id": "windows",
+      "display_name": "Средство проверки памяти Windows",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "exe",
+      "launch_target": "{1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}\\MdSched.exe",
+      "target_path": "{1AC14E77-02E7-4E5D-B744-2EB1AE5198B7}\\MdSched.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "средство проверки памяти windows",
+        "mdsched"
+      ],
+      "priority": 75
+    },
+    {
+      "app_id": "windows_app_cert_kit",
+      "display_name": "Windows App Cert Kit",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Windows Kits\\Windows App Certification Kit\\Windows App Cert Kit.lnk",
+      "target_path": "C:\\Program Files (x86)\\Windows Kits\\10\\App Certification Kit\\appcertui.exe",
+      "working_directory": "C:\\Program Files (x86)\\Windows Kits\\10\\App Certification Kit\\",
+      "speech_forms": [
+        "windows app cert kit",
+        "appcertui"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "windows_defender_firewall_with_advanced_security",
+      "display_name": "Windows Defender Firewall with Advanced Security",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Administrative Tools\\Windows Defender Firewall with Advanced Security.lnk",
+      "target_path": "C:\\WINDOWS\\system32\\WF.msc",
+      "working_directory": "C:\\WINDOWS\\system32",
+      "speech_forms": [
+        "windows defender firewall with advanced security",
+        "wf"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "windows_media_player_legacy",
+      "display_name": "Windows Media Player Legacy",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Accessories\\Windows Media Player Legacy.lnk",
+      "target_path": "C:\\Program Files (x86)\\Windows Media Player\\wmplayer.exe",
+      "working_directory": "C:\\Program Files (x86)\\Windows Media Player",
+      "speech_forms": [
+        "windows media player legacy",
+        "wmplayer"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "windows_performance_analyzer",
+      "display_name": "Windows Performance Analyzer",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Windows Kits\\Windows Performance Toolkit\\Windows Performance Analyzer.lnk",
+      "target_path": "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\wpa.exe",
+      "working_directory": "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\",
+      "speech_forms": [
+        "windows performance analyzer",
+        "wpa"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "windows_performance_recorder",
+      "display_name": "Windows Performance Recorder",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Windows Kits\\Windows Performance Toolkit\\Windows Performance Recorder.lnk",
+      "target_path": "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\WPRUI.exe",
+      "working_directory": "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\",
+      "speech_forms": [
+        "windows performance recorder",
+        "wprui"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "windows_software_development_kit",
+      "display_name": "Windows Software Development Kit",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Windows Kits\\Windows Software Development Kit\\Windows Software Development Kit.lnk",
+      "target_path": "C:\\WINDOWS\\explorer.exe",
+      "working_directory": "C:\\Program Files (x86)\\Windows Kits\\10\\",
+      "speech_forms": [
+        "windows software development kit",
+        "explorer"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "windowspackagemanagerserver",
+      "display_name": "WindowsPackageManagerServer",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "exe",
+      "launch_target": "C:\\Program Files\\WindowsApps\\Microsoft.DesktopAppInstaller_1.28.239.0_x64__8wekyb3d8bbwe\\WindowsPackageManagerServer.exe",
+      "target_path": "C:\\Program Files\\WindowsApps\\Microsoft.DesktopAppInstaller_1.28.239.0_x64__8wekyb3d8bbwe\\WindowsPackageManagerServer.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "windowspackagemanagerserver"
+      ],
+      "priority": 80
+    },
+    {
+      "app_id": "winget",
+      "display_name": "winget",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "exe",
+      "launch_target": "C:\\Program Files\\WindowsApps\\Microsoft.DesktopAppInstaller_1.28.239.0_x64__8wekyb3d8bbwe\\winget.exe",
+      "target_path": "C:\\Program Files\\WindowsApps\\Microsoft.DesktopAppInstaller_1.28.239.0_x64__8wekyb3d8bbwe\\winget.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "winget"
+      ],
+      "priority": 80
+    },
+    {
+      "app_id": "wmplayer",
+      "display_name": "wmplayer",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "exe",
+      "launch_target": "C:\\Program Files (x86)\\Windows Media Player\\wmplayer.exe",
+      "target_path": "C:\\Program Files (x86)\\Windows Media Player\\wmplayer.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "wmplayer"
+      ],
+      "priority": 80
+    },
+    {
+      "app_id": "word",
+      "display_name": "Word",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Word.lnk",
+      "target_path": "C:\\Program Files\\Microsoft Office\\root\\Office16\\WINWORD.EXE",
+      "working_directory": "",
+      "speech_forms": [
+        "word",
+        "winword"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "x64_native_tools_command_prompt_for_vs_2022",
+      "display_name": "x64 Native Tools Command Prompt for VS 2022",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Visual Studio 2022\\Visual Studio Tools\\VC\\x64 Native Tools Command Prompt for VS 2022.lnk",
+      "target_path": "C:\\Windows\\System32\\cmd.exe",
+      "working_directory": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\",
+      "speech_forms": [
+        "x64 native tools command prompt for vs 2022",
+        "cmd"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "x64_x86_cross_tools_command_prompt_for_vs_2022",
+      "display_name": "x64_x86 Cross Tools Command Prompt for VS 2022",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Visual Studio 2022\\Visual Studio Tools\\VC\\x64_x86 Cross Tools Command Prompt for VS 2022.lnk",
+      "target_path": "C:\\Windows\\System32\\cmd.exe",
+      "working_directory": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\",
+      "speech_forms": [
+        "x64_x86 cross tools command prompt for vs 2022",
+        "cmd"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "x86_native_tools_command_prompt_for_vs_2022",
+      "display_name": "x86 Native Tools Command Prompt for VS 2022",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Visual Studio 2022\\Visual Studio Tools\\VC\\x86 Native Tools Command Prompt for VS 2022.lnk",
+      "target_path": "C:\\Windows\\System32\\cmd.exe",
+      "working_directory": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\",
+      "speech_forms": [
+        "x86 native tools command prompt for vs 2022",
+        "cmd"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "x86_x64_cross_tools_command_prompt_for_vs_2022",
+      "display_name": "x86_x64 Cross Tools Command Prompt for VS 2022",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Visual Studio 2022\\Visual Studio Tools\\VC\\x86_x64 Cross Tools Command Prompt for VS 2022.lnk",
+      "target_path": "C:\\Windows\\System32\\cmd.exe",
+      "working_directory": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Professional\\",
+      "speech_forms": [
+        "x86_x64 cross tools command prompt for vs 2022",
+        "cmd"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "xbox",
+      "display_name": "Xbox",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "apps_folder",
+      "launch_target": "shell:AppsFolder\\Microsoft.GamingApp_8wekyb3d8bbwe!Microsoft.Xbox.App",
+      "target_path": "Microsoft.GamingApp_8wekyb3d8bbwe!Microsoft.Xbox.App",
+      "working_directory": "",
+      "speech_forms": [
+        "xbox",
+        "microsoft.gamingapp_8wekyb3d8bbwe!microsoft.xbox"
+      ],
+      "priority": 75
+    },
+    {
+      "app_id": "xboxpcappadminserver",
+      "display_name": "XboxPcAppAdminServer",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "exe",
+      "launch_target": "C:\\Program Files\\WindowsApps\\Microsoft.GamingApp_2604.1001.9.0_x64__8wekyb3d8bbwe\\XboxPcAppAdminServer.exe",
+      "target_path": "C:\\Program Files\\WindowsApps\\Microsoft.GamingApp_2604.1001.9.0_x64__8wekyb3d8bbwe\\XboxPcAppAdminServer.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "xboxpcappadminserver"
+      ],
+      "priority": 80
+    },
+    {
+      "app_id": "xboxpcappce",
+      "display_name": "XboxPcAppCE",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "exe",
+      "launch_target": "C:\\Program Files\\WindowsApps\\Microsoft.GamingApp_2604.1001.9.0_x64__8wekyb3d8bbwe\\XboxPcAppCE.exe",
+      "target_path": "C:\\Program Files\\WindowsApps\\Microsoft.GamingApp_2604.1001.9.0_x64__8wekyb3d8bbwe\\XboxPcAppCE.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "xboxpcappce"
+      ],
+      "priority": 80
+    },
+    {
+      "app_id": "zoom",
+      "display_name": "Zoom Workplace",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\Users\\gerychhh_\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Zoom\\Zoom Workplace.lnk",
+      "target_path": "C:\\Users\\gerychhh_\\AppData\\Roaming\\Zoom\\bin\\Zoom.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "zoom workplace",
+        "zoom"
+      ],
+      "priority": 70
+    },
+    {
+      "app_id": "3ds_max_2025",
+      "display_name": "3ds Max 2025",
+      "source": "user",
+      "enabled": true,
+      "launch_type": "exe",
+      "launch_target": "{6D809377-6AF0-444B-8957-A3773F02200E}\\Autodesk\\3ds Max 2025\\3dsmax.exe",
+      "target_path": "{6D809377-6AF0-444B-8957-A3773F02200E}\\Autodesk\\3ds Max 2025\\3dsmax.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "3ds max 2025",
+        "3dsmax",
+        "макс",
+        "три де макс",
+        "тридемакс",
+        "тредесмакс"
+      ],
+      "priority": 300
+    },
+    {
+      "app_id": "codex",
+      "display_name": "Codex",
+      "source": "user",
+      "enabled": true,
+      "launch_type": "apps_folder",
+      "launch_target": "shell:AppsFolder\\OpenAI.Codex_2p2nqsd0c76g0!App",
+      "target_path": "OpenAI.Codex_2p2nqsd0c76g0!App",
+      "working_directory": "",
+      "speech_forms": [
+        "codex",
+        "openai",
+        "кодекс",
+        "кдекс",
+        "codx",
+        "cdex",
+        "кодкс"
+      ],
+      "priority": 300
+    },
+    {
+      "app_id": "cyberpunk_2077",
+      "display_name": "Cyberpunk 2077",
+      "source": "user",
+      "enabled": true,
+      "launch_type": "uri",
+      "launch_target": "steam://rungameid/1091500",
+      "target_path": "steam://rungameid/1091500",
+      "working_directory": "",
+      "speech_forms": [
+        "cyberpunk 2077",
+        "1091500",
+        "кибер пунк",
+        "сайберпанк",
+        "кибер панк",
+        "киберпанк",
+        "cyberpunk"
+      ],
+      "priority": 300
+    },
+    {
+      "app_id": "dota_2",
+      "display_name": "Dota 2",
+      "source": "user",
+      "enabled": true,
+      "launch_type": "uri",
+      "launch_target": "steam://rungameid/570",
+      "target_path": "steam://rungameid/570",
+      "working_directory": "",
+      "speech_forms": [
+        "dota 2",
+        "570",
+        "steam://rungameid/570",
+        "дота",
+        "дотан",
+        "дота два",
+        "dota",
+        "доточка"
+      ],
+      "priority": 300
+    },
+    {
+      "app_id": "planetvpn1",
+      "display_name": "PlanetVPN",
+      "source": "user",
+      "enabled": true,
+      "launch_type": "apps_folder",
+      "launch_target": "shell:AppsFolder\\FreeVPNPlanet.PlanetVPN_b2qrq2z57ppd2!PlanetVPN",
+      "target_path": "FreeVPNPlanet.PlanetVPN_b2qrq2z57ppd2!PlanetVPN",
+      "working_directory": "",
+      "speech_forms": [
+        "planetvpn",
+        "freevpnplanet",
+        "freevpnplanet.planetvpn_b2qrq2z57ppd2!planetvpn",
+        "впн",
+        "вэпэн",
+        "вэпн",
+        "vpn"
+      ],
+      "priority": 300
+    },
+    {
+      "app_id": "unreal_engine",
+      "display_name": "Unreal Engine",
+      "source": "user",
+      "enabled": false,
+      "launch_type": "exe",
+      "launch_target": "C:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Binaries\\Win64\\UnrealEditor.exe",
+      "target_path": "C:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Binaries\\Win64\\UnrealEditor.exe",
+      "working_directory": "C:\\Program Files\\Epic Games\\UE_5.7\\Engine\\Binaries\\Win64",
+      "speech_forms": [
+        "unreal engine",
+        "unrealeditor",
+        "анриал",
+        "анриал енджн",
+        "анриаленджжн",
+        "анрил",
+        "анил енджн",
+        "анриленджн",
+        "unreal",
+        "unrealengine",
+        "unrel"
+      ],
+      "priority": 300
+    },
+    {
+      "app_id": "wireshark",
+      "display_name": "Wireshark",
+      "source": "user",
+      "enabled": true,
+      "launch_type": "exe",
+      "launch_target": "{6D809377-6AF0-444B-8957-A3773F02200E}\\Wireshark\\Wireshark.exe",
+      "target_path": "{6D809377-6AF0-444B-8957-A3773F02200E}\\Wireshark\\Wireshark.exe",
+      "working_directory": "",
+      "speech_forms": [
+        "wireshark",
+        "{6d809377-6af0-444b-8957-a3773f02200e}\\wireshark\\wireshark.exe",
+        "вайершарк",
+        "вайршарк"
+      ],
+      "priority": 300
+    },
+    {
+      "app_id": "yandexmusic",
+      "display_name": "Яндекс Музыка",
+      "source": "user",
+      "enabled": true,
+      "launch_type": "exe",
+      "launch_target": "C:\\Users\\gerychhh_\\AppData\\Local\\Programs\\YandexMusic\\Яндекс Музыка.exe",
+      "target_path": "C:\\Users\\gerychhh_\\AppData\\Local\\Programs\\YandexMusic\\Яндекс Музыка.exe",
+      "working_directory": "C:\\Users\\gerychhh_\\AppData\\Local\\Programs\\YandexMusic",
+      "speech_forms": [
+        "яндекс музыка",
+        "музыка",
+        "мзыка",
+        "янмузыка",
+        "яндекс мьюзик",
+        "яндекс мюзик",
+        "yandexmusic",
+        "yandex music",
+        "music",
+        "мьюзик",
+        "дай муызку",
+        "музыку дай"
+      ],
+      "priority": 300
+    }
+  ]
+}
