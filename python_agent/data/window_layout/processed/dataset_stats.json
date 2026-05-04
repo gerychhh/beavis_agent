@@ -1,16 +1,16 @@
 {
-  "total_rows": 169455,
+  "total_rows": 169498,
   "layout_counts": {
-    "split_2_vertical": 28240,
-    "unknown": 19885,
-    "top_half": 15510,
     "grid_2x2": 14180,
-    "bottom_half": 15424,
+    "split_2_vertical": 28240,
+    "unknown": 20015,
+    "left_half": 15665,
     "split_2_horizontal": 14180,
-    "center": 15346,
-    "fullscreen": 15426,
-    "right_half": 15597,
-    "left_half": 15667
+    "center": 15319,
+    "top_half": 15516,
+    "bottom_half": 15414,
+    "right_half": 15558,
+    "fullscreen": 15411
   },
   "target_classes": [
     "3ds_max_2025",
@@ -18,7 +18,6 @@
     "access",
     "acrobat_reader",
     "after_effects",
-    "autocad",
     "blender",
     "calculator",
     "chrome",

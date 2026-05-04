@@ -1,7 +1,7 @@
 {
   "total": 47,
-  "correct": 47,
-  "accuracy": 1.0,
+  "correct": 46,
+  "accuracy": 0.9787234042553191,
   "rows": [
     {
       "text": "закрой хром",
@@ -14,7 +14,7 @@
         "action": "close",
         "target_type": "app",
         "app_id": "chrome",
-        "confidence": 0.8659
+        "confidence": 0.8699
       },
       "ok": true
     },
@@ -29,7 +29,7 @@
         "action": "close",
         "target_type": "app",
         "app_id": "chrome",
-        "confidence": 0.8118
+        "confidence": 0.832
       },
       "ok": true
     },
@@ -44,7 +44,7 @@
         "action": "close",
         "target_type": "app",
         "app_id": "notepad",
-        "confidence": 0.8372
+        "confidence": 0.8584
       },
       "ok": true
     },
@@ -59,7 +59,7 @@
         "action": "close",
         "target_type": "app",
         "app_id": "telegram",
-        "confidence": 0.5922
+        "confidence": 0.5568
       },
       "ok": true
     },
@@ -74,7 +74,7 @@
         "action": "close",
         "target_type": "app",
         "app_id": "discord",
-        "confidence": 0.7814
+        "confidence": 0.8555
       },
       "ok": true
     },
@@ -89,7 +89,7 @@
         "action": "close",
         "target_type": "app",
         "app_id": "vscode",
-        "confidence": 0.903
+        "confidence": 0.9166
       },
       "ok": true
     },
@@ -104,7 +104,7 @@
         "action": "close",
         "target_type": "app",
         "app_id": "vscode",
-        "confidence": 0.917
+        "confidence": 0.9238
       },
       "ok": true
     },
@@ -119,7 +119,7 @@
         "action": "close",
         "target_type": "app",
         "app_id": "photoshop",
-        "confidence": 0.9044
+        "confidence": 0.908
       },
       "ok": true
     },
@@ -134,7 +134,7 @@
         "action": "close",
         "target_type": "app",
         "app_id": "premiere_pro",
-        "confidence": 0.9167
+        "confidence": 0.9386
       },
       "ok": true
     },
@@ -149,7 +149,7 @@
         "action": "close",
         "target_type": "app",
         "app_id": "explorer",
-        "confidence": 0.8521
+        "confidence": 0.8718
       },
       "ok": true
     },
@@ -164,7 +164,7 @@
         "action": "close",
         "target_type": "app",
         "app_id": "chrome",
-        "confidence": 0.4734
+        "confidence": 0.507
       },
       "ok": true
     },
@@ -179,7 +179,7 @@
         "action": "minimize",
         "target_type": "app",
         "app_id": "chrome",
-        "confidence": 0.8394
+        "confidence": 0.8605
       },
       "ok": true
     },
@@ -194,7 +194,7 @@
         "action": "minimize",
         "target_type": "app",
         "app_id": "vscode",
-        "confidence": 0.897
+        "confidence": 0.9075
       },
       "ok": true
     },
@@ -209,7 +209,7 @@
         "action": "minimize",
         "target_type": "app",
         "app_id": "telegram",
-        "confidence": 0.8169
+        "confidence": 0.8595
       },
       "ok": true
     },
@@ -224,7 +224,7 @@
         "action": "minimize",
         "target_type": "app",
         "app_id": "photoshop",
-        "confidence": 0.8687
+        "confidence": 0.8884
       },
       "ok": true
     },
@@ -239,7 +239,7 @@
         "action": "minimize",
         "target_type": "app",
         "app_id": "blender",
-        "confidence": 0.861
+        "confidence": 0.8894
       },
       "ok": true
     },
@@ -254,7 +254,7 @@
         "action": "minimize",
         "target_type": "app",
         "app_id": "explorer",
-        "confidence": 0.8153
+        "confidence": 0.8472
       },
       "ok": true
     },
@@ -269,7 +269,7 @@
         "action": "minimize",
         "target_type": "app",
         "app_id": "figma",
-        "confidence": 0.4043
+        "confidence": 0.5504
       },
       "ok": true
     },
@@ -284,7 +284,7 @@
         "action": "maximize",
         "target_type": "app",
         "app_id": "chrome",
-        "confidence": 0.7904
+        "confidence": 0.8418
       },
       "ok": true
     },
@@ -299,7 +299,7 @@
         "action": "maximize",
         "target_type": "app",
         "app_id": "blender",
-        "confidence": 0.855
+        "confidence": 0.8743
       },
       "ok": true
     },
@@ -314,7 +314,7 @@
         "action": "maximize",
         "target_type": "app",
         "app_id": "unreal_engine",
-        "confidence": 0.7721
+        "confidence": 0.8531
       },
       "ok": true
     },
@@ -329,7 +329,7 @@
         "action": "maximize",
         "target_type": "app",
         "app_id": "photoshop",
-        "confidence": 0.82
+        "confidence": 0.79
       },
       "ok": true
     },
@@ -344,7 +344,7 @@
         "action": "maximize",
         "target_type": "app",
         "app_id": "telegram",
-        "confidence": 0.888
+        "confidence": 0.909
       },
       "ok": true
     },
@@ -359,7 +359,7 @@
         "action": "restore",
         "target_type": "app",
         "app_id": "chrome",
-        "confidence": 0.8576
+        "confidence": 0.8791
       },
       "ok": true
     },
@@ -374,7 +374,7 @@
         "action": "restore",
         "target_type": "app",
         "app_id": "terminal",
-        "confidence": 0.8323
+        "confidence": 0.8748
       },
       "ok": true
     },
@@ -389,7 +389,7 @@
         "action": "restore",
         "target_type": "app",
         "app_id": "photoshop",
-        "confidence": 0.8903
+        "confidence": 0.9108
       },
       "ok": true
     },
@@ -404,7 +404,7 @@
         "action": "restore",
         "target_type": "app",
         "app_id": "discord",
-        "confidence": 0.6361
+        "confidence": 0.7812
       },
       "ok": true
     },
@@ -419,7 +419,7 @@
         "action": "restore",
         "target_type": "app",
         "app_id": "blender",
-        "confidence": 0.8431
+        "confidence": 0.8591
       },
       "ok": true
     },
@@ -432,7 +432,7 @@
       "predicted": {
         "action": "close",
         "target_type": "current",
-        "confidence": 0.9309
+        "confidence": 0.9466
       },
       "ok": true
     },
@@ -445,7 +445,7 @@
       "predicted": {
         "action": "close",
         "target_type": "current",
-        "confidence": 0.9326
+        "confidence": 0.9525
       },
       "ok": true
     },
@@ -458,7 +458,7 @@
       "predicted": {
         "action": "close",
         "target_type": "current",
-        "confidence": 0.8405
+        "confidence": 0.8735
       },
       "ok": true
     },
@@ -471,7 +471,7 @@
       "predicted": {
         "action": "minimize",
         "target_type": "current",
-        "confidence": 0.5189
+        "confidence": 0.6184
       },
       "ok": true
     },
@@ -484,7 +484,7 @@
       "predicted": {
         "action": "minimize",
         "target_type": "current",
-        "confidence": 0.7995
+        "confidence": 0.8355
       },
       "ok": true
     },
@@ -497,7 +497,7 @@
       "predicted": {
         "action": "maximize",
         "target_type": "current",
-        "confidence": 0.0808
+        "confidence": 0.1125
       },
       "ok": true
     },
@@ -510,7 +510,7 @@
       "predicted": {
         "action": "maximize",
         "target_type": "current",
-        "confidence": 0.0842
+        "confidence": 0.1351
       },
       "ok": true
     },
@@ -523,7 +523,7 @@
       "predicted": {
         "action": "restore",
         "target_type": "current",
-        "confidence": 0.8745
+        "confidence": 0.9021
       },
       "ok": true
     },
@@ -536,7 +536,7 @@
       "predicted": {
         "action": "restore",
         "target_type": "current",
-        "confidence": 0.6246
+        "confidence": 0.7262
       },
       "ok": true
     },
@@ -551,7 +551,7 @@
         "missing": [
           "action"
         ],
-        "confidence": 0.9883
+        "confidence": 0.9881
       },
       "ok": true
     },
@@ -566,7 +566,7 @@
         "missing": [
           "action"
         ],
-        "confidence": 0.9947
+        "confidence": 0.9951
       },
       "ok": true
     },
@@ -581,7 +581,7 @@
         "missing": [
           "action"
         ],
-        "confidence": 0.9296
+        "confidence": 0.9434
       },
       "ok": true
     },
@@ -596,7 +596,7 @@
         "missing": [
           "action"
         ],
-        "confidence": 0.8691
+        "confidence": 0.8915
       },
       "ok": true
     },
@@ -611,7 +611,7 @@
         "missing": [
           "action"
         ],
-        "confidence": 0.8908
+        "confidence": 0.9045
       },
       "ok": true
     },
@@ -625,12 +625,10 @@
       },
       "predicted": {
         "action": "close",
-        "missing": [
-          "target"
-        ],
-        "confidence": 0.0297
+        "target_type": "current",
+        "confidence": 0.0423
       },
-      "ok": true
+      "ok": false
     },
     {
       "text": "громко слишком",
@@ -643,7 +641,7 @@
         "missing": [
           "action"
         ],
-        "confidence": 0.9247
+        "confidence": 0.9302
       },
       "ok": true
     },
@@ -658,7 +656,7 @@
         "missing": [
           "action"
         ],
-        "confidence": 0.9021
+        "confidence": 0.9178
       },
       "ok": true
     },
@@ -673,7 +671,7 @@
         "missing": [
           "action"
         ],
-        "confidence": 0.8938
+        "confidence": 0.9106
       },
       "ok": true
     },
@@ -688,7 +686,7 @@
         "missing": [
           "action"
         ],
-        "confidence": 0.8614
+        "confidence": 0.8898
       },
       "ok": true
     }

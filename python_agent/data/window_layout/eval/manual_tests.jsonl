@@ -99,6 +99,14 @@
 {"text": "поставь adobe audition слева", "expected": {"missing": ["layout", "targets"]}}
 {"text": "адоб аудишн на весь экран", "expected": {"missing": ["layout", "targets"]}}
 {"text": "поставь адоб аудишн слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "auto cad на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь auto cad слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "авто кад на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь авто кад слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "автокадд на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь автокадд слева", "expected": {"missing": ["layout", "targets"]}}
+{"text": "autocadд на весь экран", "expected": {"missing": ["layout", "targets"]}}
+{"text": "поставь autocadд слева", "expected": {"missing": ["layout", "targets"]}}
 {"text": "brave browser на весь экран", "expected": {"missing": ["layout", "targets"]}}
 {"text": "поставь brave browser слева", "expected": {"missing": ["layout", "targets"]}}
 {"text": "браузер brave на весь экран", "expected": {"missing": ["layout", "targets"]}}

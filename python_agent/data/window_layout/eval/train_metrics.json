@@ -1,8 +1,8 @@
 {
   "layout_model": {
-    "accuracy": 0.9984951757103656,
-    "macro_f1": 0.9985465518662304,
-    "weighted_f1": 0.9984946595093614,
+    "accuracy": 0.9978761061946902,
+    "macro_f1": 0.9979326797560517,
+    "weighted_f1": 0.9978752555524647,
     "classes": [
       "bottom_half",
       "center",
@@ -18,16 +18,15 @@
   },
   "target_models": {
     "target_1": {
-      "accuracy": 0.8675164497949308,
-      "macro_f1": 0.8547761366784465,
-      "weighted_f1": 0.868067377389445,
+      "accuracy": 0.8720058997050147,
+      "macro_f1": 0.8595594483942458,
+      "weighted_f1": 0.8725289258548299,
       "classes": [
         "3ds_max_2025",
         "NO_TARGET",
         "access",
         "acrobat_reader",
         "after_effects",
-        "autocad",
         "blender",
         "calculator",
         "chrome",
@@ -95,16 +94,15 @@
       ]
     },
     "target_2": {
-      "accuracy": 0.8144935233542828,
-      "macro_f1": 0.5960782938607545,
-      "weighted_f1": 0.826775443458622,
+      "accuracy": 0.818023598820059,
+      "macro_f1": 0.6059834898733979,
+      "weighted_f1": 0.8299037170014683,
       "classes": [
         "3ds_max_2025",
         "NO_TARGET",
         "access",
         "acrobat_reader",
         "after_effects",
-        "autocad",
         "blender",
         "calculator",
         "chrome",
@@ -171,16 +169,15 @@
       ]
     },
     "target_3": {
-      "accuracy": 0.9372989879318994,
-      "macro_f1": 0.2848576430948889,
-      "weighted_f1": 0.9381268664691966,
+      "accuracy": 0.9374926253687316,
+      "macro_f1": 0.2774141025325487,
+      "weighted_f1": 0.9381536305545927,
       "classes": [
         "3ds_max_2025",
         "NO_TARGET",
         "access",
         "acrobat_reader",
         "after_effects",
-        "autocad",
         "blender",
         "calculator",
         "chrome",
@@ -247,16 +244,15 @@
       ]
     },
     "target_4": {
-      "accuracy": 0.9464164527455666,
-      "macro_f1": 0.3840978621705745,
-      "weighted_f1": 0.9470288804332082,
+      "accuracy": 0.9484365781710914,
+      "macro_f1": 0.3992590221376884,
+      "weighted_f1": 0.9489190001292531,
       "classes": [
         "3ds_max_2025",
         "NO_TARGET",
         "access",
         "acrobat_reader",
         "after_effects",
-        "autocad",
         "blender",
         "calculator",
         "chrome",
@@ -326,9 +322,9 @@
   "metadata": {
     "skill": "window_layout",
     "version": "0.1.0",
-    "dataset_rows": 169455,
-    "train_rows": 135564,
-    "validation_rows": 33891,
+    "dataset_rows": 169498,
+    "train_rows": 135598,
+    "validation_rows": 33900,
     "model_type": "FeatureUnion capped(Tfidf char_wb 2-5 max_features=30000 + word 1-4 max_features=30000) + 5 SGDClassifier(log_loss)",
     "runtime_rules": "none",
     "normalizer_inside_model": false

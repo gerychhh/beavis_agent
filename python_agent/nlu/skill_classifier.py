@@ -19,122 +19,11 @@ DEFAULT_ALLOWED_SKILLS = {
 }
 
 
-class RuleSkillClassifier:
-    def __init__(self) -> None:
-        self.open_app_keywords = {
-            "открой",
-            "открыть",
-            "открывай",
-            "запусти",
-            "запустить",
-            "включи",
-            "включить",
-            "стартуй",
-            "старт",
-            "open",
-            "run",
-            "launch",
-        }
-        self.non_open_keywords = {
-            "закрой",
-            "закрыть",
-            "сверни",
-            "свернуть",
-            "close",
-            "minimize",
-        }
-        self.window_control_keywords = {
-            "\u0437\u0430\u043a\u0440\u043e\u0439",
-            "\u0437\u0430\u043a\u0440\u044b\u0442\u044c",
-            "\u0437\u0430\u043a\u0440\u044b\u0432\u0430\u0439",
-            "\u0437\u0430\u043a\u0442\u043d\u0438",
-            "\u0441\u0432\u0435\u0440\u043d\u0438",
-            "\u0441\u0432\u0435\u0440\u043d\u0443\u0442\u044c",
-            "\u0441\u043f\u0440\u044f\u0447\u044c",
-            "\u0440\u0430\u0437\u0432\u0435\u0440\u043d\u0438",
-            "\u0440\u0430\u0437\u0432\u0435\u0440\u043d\u0443\u0442\u044c",
-            "\u043c\u0430\u043a\u0441\u0438\u043c\u0438\u0437\u0438\u0440\u0443\u0439",
-            "\u0432\u043e\u0441\u0441\u0442\u0430\u043d\u043e\u0432\u0438",
-            "\u0432\u0435\u0440\u043d\u0438",
-            "close",
-            "minimize",
-            "maximize",
-            "restore",
-            "fullscreen",
-        }
-        self.window_layout_keywords = {
-            "слева",
-            "слево",
-            "влево",
-            "справа",
-            "справо",
-            "вправо",
-            "сверху",
-            "снизу",
-            "центр",
-            "пополам",
-            "половину",
-            "палавину",
-            "экран",
-            "сеткой",
-            "fullscreen",
-        }
-        self.volume_keywords = {
-            "громкость",
-            "звук",
-            "музыка",
-            "аудио",
-            "volume",
-            "громче",
-            "погромче",
-            "тише",
-            "потише",
-            "убавь",
-            "прибавь",
-            "добавь",
-            "увеличь",
-            "уменьши",
-            "понизь",
-            "повысь",
-            "сбавь",
-            "приглуши",
-            "громко",
-            "тихо",
-            "слышно",
-            "заткнись",
-            "зактни",
-            "выруби",
-            "отключи",
-            "комфортно",
-            "нормально",
-            "максимум",
-            "половину",
-        }
-
-    def predict(self, text: str) -> SkillPrediction:
-        tokens = set(text.split())
-
-        if tokens & self.volume_keywords:
-            return SkillPrediction(skill="volume_set", confidence=0.92)
-
-        if tokens & self.window_layout_keywords:
-            return SkillPrediction(skill="window_layout", confidence=0.82)
-
-        if tokens & self.window_control_keywords:
-            return SkillPrediction(skill="window_control", confidence=0.82)
-
-        if (tokens & self.open_app_keywords) and not (tokens & self.non_open_keywords):
-            return SkillPrediction(skill="open_app", confidence=0.82)
-
-        return SkillPrediction(skill="unknown", confidence=0.0)
-
-
 class ModelSkillClassifier:
     def __init__(
         self,
         model_path: str | Path | None = None,
         enabled: bool = True,
-        fallback_classifier: RuleSkillClassifier | None = None,
         allowed_skills: set[str] | None = None,
     ) -> None:
         self.model_path = Path(model_path) if model_path else DEFAULT_MODEL_PATH
@@ -142,7 +31,6 @@ class ModelSkillClassifier:
             self.model_path = PROJECT_ROOT / self.model_path
 
         self.enabled = enabled
-        self.fallback_classifier = fallback_classifier or RuleSkillClassifier()
         self.allowed_skills = allowed_skills or DEFAULT_ALLOWED_SKILLS
         self._model: Any | None = None
 
@@ -150,19 +38,19 @@ class ModelSkillClassifier:
         if not text.strip():
             return SkillPrediction(skill="unknown", confidence=0.0, source="empty_text")
 
-        if not self.enabled or not self.model_path.exists():
-            return self._fallback(text)
+        if not self.enabled:
+            raise RuntimeError("Skill classifier model is disabled")
+
+        if not self.model_path.exists():
+            raise FileNotFoundError(f"Skill classifier model not found: {self.model_path}")
 
         try:
             model = self._load_model()
             prediction = model.predict([text])[0]
         except Exception as error:
-            fallback = self._fallback(text)
-            return SkillPrediction(
-                skill=fallback.skill,
-                confidence=fallback.confidence,
-                source=f"model_error:{type(error).__name__}->fallback",
-            )
+            raise RuntimeError(
+                f"Skill classifier model failed: {type(error).__name__}: {error}"
+            ) from error
 
         parsed = self._coerce_prediction(prediction)
         skill = parsed.get("skill", "unknown")
@@ -171,12 +59,7 @@ class ModelSkillClassifier:
             confidence = self._predict_confidence(model, text, skill)
 
         if skill not in self.allowed_skills:
-            fallback = self._fallback(text)
-            return SkillPrediction(
-                skill=fallback.skill,
-                confidence=fallback.confidence,
-                source=f"model_invalid_skill:{skill}->fallback",
-            )
+            raise RuntimeError(f"Model returned invalid skill: {skill}")
 
         if skill == "unknown":
             return SkillPrediction(skill="unknown", confidence=confidence, source="model_joblib")
@@ -261,5 +144,3 @@ class ModelSkillClassifier:
         except Exception:
             return 0.0
 
-    def _fallback(self, text: str) -> SkillPrediction:
-        return self.fallback_classifier.predict(text)

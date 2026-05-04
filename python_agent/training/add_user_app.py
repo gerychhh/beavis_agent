@@ -485,10 +485,12 @@ def _run_training(
     overrides_path: Path = DEFAULT_APP_OVERRIDES_PATH,
 ) -> list[dict[str, Any]]:
     generated_root = PROJECT_ROOT / "python_agent" / "data" / "user_apps" / "generated"
+
     open_app_dir = generated_root / "open_app"
     skill_dir = generated_root / "skill_classifier"
 
     steps = [
+        # 1. open_app: учим распознавать новое приложение как app_id
         (
             "Генерирую датасет open_app",
             [
@@ -514,6 +516,56 @@ def _run_training(
                 "--results-path", str(open_app_dir / "eval" / "test_results.json"),
             ],
         ),
+
+        # 2. window_control: ВАЖНО
+        # Раньше этого блока не было, поэтому close/minimize/maximize/restore
+        # не узнавали новые приложения.
+        (
+            "Генерирую датасет window_control",
+            [
+                "python_agent.training.generate_window_control_dataset",
+                "--user-apps-path", str(user_apps_path),
+                "--overrides-path", str(overrides_path),
+            ],
+        ),
+        (
+            "Обучаю window_control",
+            [
+                "python_agent.training.train_window_control_arg_model",
+            ],
+        ),
+        (
+            "Тестирую window_control",
+            [
+                "python_agent.training.test_window_control_arg_model",
+            ],
+        ),
+
+        # 3. window_layout: раскладка окон тоже должна быть свежей
+        (
+            "Генерирую датасет window_layout",
+            [
+                "python_agent.training.generate_window_layout_dataset",
+                "--root", str(PROJECT_ROOT),
+                "--user-apps-path", str(user_apps_path),
+                "--overrides-path", str(overrides_path),
+            ],
+        ),
+        (
+            "Обучаю window_layout",
+            [
+                "python_agent.training.train_window_layout_arg_model",
+            ],
+        ),
+        (
+            "Тестирую window_layout",
+            [
+                "python_agent.training.test_window_layout_arg_model",
+            ],
+        ),
+
+        # 4. skill_classifier должен идти ПОСЛЕДНИМ
+        # потому что его генератор берёт данные из window_control/window_layout.
         (
             "Генерирую датасет skill_classifier",
             [
@@ -539,32 +591,13 @@ def _run_training(
                 "--results-path", str(skill_dir / "eval" / "test_results.json"),
             ],
         ),
-        (
-            "Генерирую датасет window_layout",
-            [
-                "python_agent.training.generate_window_layout_dataset",
-                "--root", str(PROJECT_ROOT),
-                "--user-apps-path", str(user_apps_path),
-                "--overrides-path", str(overrides_path),
-            ],
-        ),
-        (
-            "Обучаю window_layout",
-            [
-                "python_agent.training.train_window_layout_arg_model",
-            ],
-        ),
-        (
-            "Тестирую window_layout",
-            [
-                "python_agent.training.test_window_layout_arg_model",
-            ],
-        ),
     ]
 
     results: list[dict[str, Any]] = []
+
     for message, module in steps:
         progress(message)
+
         completed = subprocess.run(
             [sys.executable, "-m", *module],
             cwd=PROJECT_ROOT,
@@ -574,6 +607,7 @@ def _run_training(
             errors="replace",
             check=False,
         )
+
         result = {
             "step": message,
             "returncode": completed.returncode,
@@ -581,11 +615,13 @@ def _run_training(
             "stderr": completed.stderr.strip(),
         }
         results.append(result)
+
         if completed.returncode != 0:
-            raise RuntimeError(f"{message} failed: {completed.stderr or completed.stdout}")
+            raise RuntimeError(
+                f"{message} failed: {completed.stderr or completed.stdout}"
+            )
 
     return results
-
 
 def _configure_stdio() -> None:
     for stream in (sys.stdout, sys.stderr):
