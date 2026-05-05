@@ -1349,7 +1349,7 @@
       "priority": 70
     },
     {
-      "app_id": "app",
+      "app_id": "yandeks_muzyka",
       "display_name": "Яндекс Музыка",
       "source": "default",
       "enabled": true,

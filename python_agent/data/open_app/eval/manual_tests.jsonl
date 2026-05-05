@@ -1,73 +1,828 @@
-{"text": "открой браузер", "expected_app_id": "chrome"}
-{"text": "запусти блокнот", "expected_app_id": "notepad"}
-{"text": "открой где код пишу", "expected_app_id": "vscode"}
-{"text": "бивис открой вс код", "expected_app_id": "vscode"}
-{"text": "бивис запусти visual studio code", "expected_app_id": "vscode"}
-{"text": "брух открой хром", "expected_app_id": "chrome"}
-{"text": "браузер включи", "expected_app_id": "chrome"}
-{"text": "открой интернет", "expected_app_id": "chrome"}
-{"text": "запусти калькулятор", "expected_app_id": "calculator"}
-{"text": "посчитай открой калькулятор", "expected_app_id": "calculator"}
-{"text": "открой проводник", "expected_app_id": "explorer"}
-{"text": "открой файлы", "expected_app_id": "explorer"}
-{"text": "командную строку", "expected_app_id": "cmd"}
-{"text": "открой cmd", "expected_app_id": "cmd"}
-{"text": "запусти павершелл", "expected_app_id": "powershell"}
-{"text": "открой настройки винды", "expected_app_id": "settings"}
-{"text": "параметры windows", "expected_app_id": "settings"}
-{"text": "открой телегу", "expected_app_id": "telegram"}
-{"text": "запусти телеграмм", "expected_app_id": "telegram"}
-{"text": "тг открой", "expected_app_id": "telegram"}
-{"text": "открой дискорд брух", "expected_app_id": "discord"}
-{"text": "запусти дс", "expected_app_id": "discord"}
-{"text": "открой ватсап", "expected_app_id": "whatsapp"}
-{"text": "открой вайбер", "expected_app_id": "viber"}
-{"text": "скайп запусти", "expected_app_id": "skype"}
-{"text": "открой слак", "expected_app_id": "slack"}
-{"text": "тимс запусти", "expected_app_id": "teams"}
-{"text": "зум открой", "expected_app_id": "zoom"}
-{"text": "открой ворд", "expected_app_id": "word"}
-{"text": "где документ пишу", "expected_app_id": "word"}
-{"text": "открой эксель", "expected_app_id": "excel"}
-{"text": "таблицу открыть", "expected_app_id": "excel"}
-{"text": "пауэрпоинт запусти", "expected_app_id": "powerpoint"}
-{"text": "презентацию открыть", "expected_app_id": "powerpoint"}
-{"text": "почту outlook открой", "expected_app_id": "outlook"}
-{"text": "ван нот открой", "expected_app_id": "onenote"}
-{"text": "открой фотошоп", "expected_app_id": "photoshop"}
-{"text": "фотошопчик запусти", "expected_app_id": "photoshop"}
-{"text": "редактор фотографий adobe открой", "expected_app_id": "photoshop"}
-{"text": "иллюстратор открой", "expected_app_id": "illustrator"}
-{"text": "векторный редактор запусти", "expected_app_id": "illustrator"}
-{"text": "премьер про открой", "expected_app_id": "premiere_pro"}
-{"text": "где видео монтировать", "expected_app_id": "premiere_pro"}
-{"text": "афтер эффектс запусти", "expected_app_id": "after_effects"}
-{"text": "аудишн открой", "expected_app_id": "audition"}
-{"text": "лайтрум открой", "expected_app_id": "lightroom"}
-{"text": "пдф ридер открой", "expected_app_id": "acrobat_reader"}
-{"text": "индизайн запусти", "expected_app_id": "indesign"}
-{"text": "пайчарм открой", "expected_app_id": "pycharm"}
-{"text": "где питон пишу", "expected_app_id": "pycharm"}
-{"text": "открой идею", "expected_app_id": "intellij_idea"}
 {"text": "java ide запусти", "expected_app_id": "intellij_idea"}
-{"text": "вебшторм открой", "expected_app_id": "webstorm"}
-{"text": "постман запусти", "expected_app_id": "postman"}
-{"text": "докер десктоп открой", "expected_app_id": "docker_desktop"}
-{"text": "гит баш открой", "expected_app_id": "git_bash"}
+{"text": "афтер эффектс запусти", "expected_app_id": "after_effects"}
 {"text": "блендер открой", "expected_app_id": "blender"}
+{"text": "браузер включи", "expected_app_id": "chrome"}
+{"text": "ван нот открой", "expected_app_id": "onenote"}
+{"text": "векторный редактор запусти", "expected_app_id": "illustrator"}
 {"text": "где 3d делаю", "expected_app_id": "blender"}
-{"text": "фигму открой", "expected_app_id": "figma"}
+{"text": "где видео монтировать", "expected_app_id": "premiere_pro"}
+{"text": "где документ пишу", "expected_app_id": "word"}
+{"text": "где питон пишу", "expected_app_id": "pycharm"}
 {"text": "дизайн интерфейса открой", "expected_app_id": "figma"}
-{"text": "анрил запусти", "expected_app_id": "unreal_engine"}
-{"text": "юнити открой", "expected_app_id": "unity"}
-{"text": "обс студио открой", "expected_app_id": "obs_studio"}
-{"text": "сделай громкость 20", "expected_app_id": "unknown"}
-{"text": "убавь звук", "expected_app_id": "unknown"}
-{"text": "какая погода", "expected_app_id": "unknown"}
-{"text": "поставь таймер", "expected_app_id": "unknown"}
-{"text": "открой окно", "expected_app_id": "unknown"}
-{"text": "сверни браузер", "expected_app_id": "unknown"}
-{"text": "закрой хром", "expected_app_id": "unknown"}
-{"text": "бивис сделай громче", "expected_app_id": "unknown"}
 {"text": "динамики рвуться", "expected_app_id": "unknown"}
+{"text": "закрой хром", "expected_app_id": "unknown"}
+{"text": "запусти 1091500", "expected_app_id": "cyberpunk_2077"}
+{"text": "запусти 3180070", "expected_app_id": "no_i_m_not_a_human"}
+{"text": "запусти 3241660", "expected_app_id": "r_e_p_o"}
+{"text": "запусти 394360", "expected_app_id": "hearts_of_iron_iv"}
+{"text": "запусти 3ds max 2025", "expected_app_id": "3ds_max_2025"}
+{"text": "запусти 440000", "expected_app_id": "portal_2_community_edition"}
+{"text": "запусти 529340", "expected_app_id": "victoria_3"}
+{"text": "запусти 570", "expected_app_id": "dota_2"}
+{"text": "запусти 620", "expected_app_id": "portal_2"}
+{"text": "запусти 629520", "expected_app_id": "soundpad"}
+{"text": "запусти 6d809377-6af0-444b-8957-a3773f02200e \\wireshark\\wireshark exe", "expected_app_id": "wireshark"}
+{"text": "запусти 7 zip", "expected_app_id": "seven_zip"}
+{"text": "запусти 730", "expected_app_id": "counter_strike_2"}
+{"text": "запусти 7zip", "expected_app_id": "seven_zip"}
+{"text": "запусти access", "expected_app_id": "access"}
+{"text": "запусти acrobat", "expected_app_id": "acrobat_reader"}
+{"text": "запусти acrobat reader", "expected_app_id": "acrobat_reader"}
+{"text": "запусти administrative tools", "expected_app_id": "administrative_tools"}
+{"text": "запусти adobe acrobat", "expected_app_id": "acrobat_reader"}
+{"text": "запусти adobe after effects", "expected_app_id": "after_effects"}
+{"text": "запусти adobe illustrator", "expected_app_id": "illustrator"}
+{"text": "запусти adobe lightroom", "expected_app_id": "lightroom"}
+{"text": "запусти adobe media encoder", "expected_app_id": "media_encoder"}
+{"text": "запусти adobe photoshop", "expected_app_id": "photoshop"}
+{"text": "запусти adobe premiere", "expected_app_id": "premiere_pro"}
+{"text": "запусти adskaccesscore", "expected_app_id": "autodesk_access"}
+{"text": "запусти after effects", "expected_app_id": "after_effects"}
+{"text": "запусти antigravity", "expected_app_id": "antigravity"}
+{"text": "запусти appcertui", "expected_app_id": "windows_app_cert_kit"}
+{"text": "запусти application verifier help", "expected_app_id": "application_verifier_help"}
+{"text": "запусти application verifier wow", "expected_app_id": "application_verifier_wow"}
+{"text": "запусти application verifier x64", "expected_app_id": "application_verifier_x64"}
+{"text": "запусти autodesk access", "expected_app_id": "autodesk_access"}
+{"text": "запусти autodesk maya", "expected_app_id": "maya"}
+{"text": "запусти blend", "expected_app_id": "blend_for_visual_studio_2022"}
+{"text": "запусти blend for visual studio 2022", "expected_app_id": "blend_for_visual_studio_2022"}
+{"text": "запусти blender", "expected_app_id": "blender"}
+{"text": "запусти bootstrapper-v2", "expected_app_id": "paradox_launcher_v2"}
+{"text": "запусти calc", "expected_app_id": "calculator"}
+{"text": "запусти calculator", "expected_app_id": "calculator"}
+{"text": "запусти ccbservice", "expected_app_id": "ccbservice"}
+{"text": "запусти change graphics mode - 3ds max 2025", "expected_app_id": "change_graphics_mode_3ds_max_2025"}
+{"text": "запусти change graphics mode 3ds max 2025", "expected_app_id": "change_graphics_mode_3ds_max_2025"}
+{"text": "запусти chaosunifiedlogin", "expected_app_id": "chaosunifiedlogin"}
+{"text": "запусти character map", "expected_app_id": "character_map"}
+{"text": "запусти charmap", "expected_app_id": "character_map"}
+{"text": "запусти chrome", "expected_app_id": "chrome"}
+{"text": "запусти cleanmgr", "expected_app_id": "disk_cleanup"}
+{"text": "запусти code", "expected_app_id": "vscode"}
+{"text": "запусти codex", "expected_app_id": "codex"}
+{"text": "запусти com squirrel discord", "expected_app_id": "discord"}
+{"text": "запусти comexp", "expected_app_id": "component_services"}
+{"text": "запусти command prompt", "expected_app_id": "cmd"}
+{"text": "запусти compmgmt", "expected_app_id": "computer_management"}
+{"text": "запусти component services", "expected_app_id": "component_services"}
+{"text": "запусти computer management", "expected_app_id": "computer_management"}
+{"text": "запусти connectify", "expected_app_id": "connectify_hotspot_23"}
+{"text": "запусти connectify hotspot 23", "expected_app_id": "connectify_hotspot_23"}
+{"text": "запусти console", "expected_app_id": "console"}
+{"text": "запусти control center", "expected_app_id": "control_center"}
+{"text": "запусти control panel", "expected_app_id": "control_panel"}
+{"text": "запусти controlcenter3_h329z55cwnj8g app", "expected_app_id": "control_center"}
+{"text": "запусти counter strike 2", "expected_app_id": "counter_strike_2"}
+{"text": "запусти counter-strike 2", "expected_app_id": "counter_strike_2"}
+{"text": "запусти cyberpunk 2077", "expected_app_id": "cyberpunk_2077"}
+{"text": "запусти database compare", "expected_app_id": "database_compare"}
+{"text": "запусти debuggable package manager", "expected_app_id": "debuggable_package_manager"}
+{"text": "запусти desktopappsdocumentation", "expected_app_id": "documentation_for_desktop_apps"}
+{"text": "запусти desktopappssamples", "expected_app_id": "sample_desktop_apps"}
+{"text": "запусти desktopappstoolsdocumentation", "expected_app_id": "tools_for_desktop_apps"}
+{"text": "запусти developer command prompt for vs 2022", "expected_app_id": "developer_command_prompt_for_vs_2022"}
+{"text": "запусти developer powershell for vs 2022", "expected_app_id": "developer_powershell_for_vs_2022"}
+{"text": "запусти device manager", "expected_app_id": "device_manager"}
+{"text": "запусти devmgmt", "expected_app_id": "device_manager"}
+{"text": "запусти dfrgui", "expected_app_id": "dfrgui"}
+{"text": "запусти discord", "expected_app_id": "discord"}
+{"text": "запусти disk cleanup", "expected_app_id": "disk_cleanup"}
+{"text": "запусти disk management", "expected_app_id": "disk_management"}
+{"text": "запусти diskmgmt", "expected_app_id": "disk_management"}
+{"text": "запусти documentation for desktop apps", "expected_app_id": "documentation_for_desktop_apps"}
+{"text": "запусти documentation for uwp apps", "expected_app_id": "documentation_for_uwp_apps"}
+{"text": "запусти dokumentation", "expected_app_id": "dokumentation"}
+{"text": "запусти dota 2", "expected_app_id": "dota_2"}
+{"text": "запусти edge", "expected_app_id": "edge"}
+{"text": "запусти epic games", "expected_app_id": "epic_games"}
+{"text": "запусти epic games launcher", "expected_app_id": "epic_games"}
+{"text": "запусти epicgameslauncher", "expected_app_id": "epic_games"}
+{"text": "запусти event viewer", "expected_app_id": "event_viewer"}
+{"text": "запусти eventvwr", "expected_app_id": "event_viewer"}
+{"text": "запусти excel", "expected_app_id": "excel"}
+{"text": "запусти faq", "expected_app_id": "faq"}
+{"text": "запусти figma", "expected_app_id": "figma"}
+{"text": "запусти file explorer", "expected_app_id": "explorer"}
+{"text": "запусти firefox", "expected_app_id": "firefox"}
+{"text": "запусти fps monitor", "expected_app_id": "fps_monitor"}
+{"text": "запусти fpsmonitor", "expected_app_id": "fps_monitor"}
+{"text": "запусти freevpnplanet planetvpn_b2qrq2z57ppd2 planetvpn", "expected_app_id": "planetvpn1"}
+{"text": "запусти game bar", "expected_app_id": "game_bar"}
+{"text": "запусти gethelp", "expected_app_id": "gethelp"}
+{"text": "запусти git cmd", "expected_app_id": "git_cmd"}
+{"text": "запусти git gui", "expected_app_id": "git_gui"}
+{"text": "запусти git release notes", "expected_app_id": "git_release_notes"}
+{"text": "запусти git-cmd", "expected_app_id": "git_cmd"}
+{"text": "запусти git-gui", "expected_app_id": "git_gui"}
+{"text": "запусти google chrome", "expected_app_id": "chrome"}
+{"text": "запусти gpuview", "expected_app_id": "gpuview"}
+{"text": "запусти hearts of iron iv", "expected_app_id": "hearts_of_iron_iv"}
+{"text": "запусти hh", "expected_app_id": "python_3_10_manuals_64_bit"}
+{"text": "запусти homepage", "expected_app_id": "homepage"}
+{"text": "запусти idea64", "expected_app_id": "intellij_idea"}
+{"text": "запусти idle python 3 10 64 bit", "expected_app_id": "idle_python_3_10_64_bit"}
+{"text": "запусти idle python 3 10 64-bit", "expected_app_id": "idle_python_3_10_64_bit"}
+{"text": "запусти iediag", "expected_app_id": "iediag"}
+{"text": "запусти iexplore", "expected_app_id": "iexplore"}
+{"text": "запусти illustrator", "expected_app_id": "illustrator"}
+{"text": "запусти intellij idea", "expected_app_id": "intellij_idea"}
+{"text": "запусти intellij idea ultimate", "expected_app_id": "intellij_idea"}
+{"text": "запусти iscsi", "expected_app_id": "iscsi"}
+{"text": "запусти iscsi initiator", "expected_app_id": "iscsi_initiator"}
+{"text": "запусти licensemanagershellext", "expected_app_id": "licensemanagershellext"}
+{"text": "запусти lightroom", "expected_app_id": "lightroom"}
+{"text": "запусти livecaptions", "expected_app_id": "livecaptions"}
+{"text": "запусти magnify", "expected_app_id": "magnify"}
+{"text": "запусти manage chaos license server", "expected_app_id": "manage_chaos_license_server"}
+{"text": "запусти maxfind", "expected_app_id": "maxfind_2025"}
+{"text": "запусти maxfind 2025", "expected_app_id": "maxfind_2025"}
+{"text": "запусти maya", "expected_app_id": "maya"}
+{"text": "запусти media encoder", "expected_app_id": "media_encoder"}
+{"text": "запусти memory diagnostics tool", "expected_app_id": "memory_diagnostics_tool"}
+{"text": "запусти microsoft access", "expected_app_id": "access"}
+{"text": "запусти microsoft edge", "expected_app_id": "edge"}
+{"text": "запусти microsoft gamingapp_8wekyb3d8bbwe microsoft xbox", "expected_app_id": "xbox"}
+{"text": "запусти microsoft outlookforwindows_8wekyb3d8bbwe microsoft", "expected_app_id": "outlook"}
+{"text": "запусти microsoft powerautomatedesktop_8wekyb3d8bbwe pad", "expected_app_id": "power_automate"}
+{"text": "запусти microsoft project", "expected_app_id": "project"}
+{"text": "запусти microsoft store", "expected_app_id": "microsoft_store"}
+{"text": "запусти mouse drive beta", "expected_app_id": "redragon_m916_pro_4k"}
+{"text": "запусти mozilla firefox", "expected_app_id": "firefox"}
+{"text": "запусти mplayer2", "expected_app_id": "mplayer2"}
+{"text": "запусти ms project", "expected_app_id": "project"}
+{"text": "запусти ms-settings", "expected_app_id": "settings"}
+{"text": "запусти ms-windows-store", "expected_app_id": "microsoft_store"}
+{"text": "запусти msconfig", "expected_app_id": "system_configuration"}
+{"text": "запусти msedge", "expected_app_id": "edge"}
+{"text": "запусти msinfo32", "expected_app_id": "system_information"}
+{"text": "запусти msoadfsb", "expected_app_id": "msoadfsb"}
+{"text": "запусти msoasb", "expected_app_id": "msoasb"}
+{"text": "запусти msoxmled", "expected_app_id": "msoxmled"}
+{"text": "запусти mspaint", "expected_app_id": "paint"}
+{"text": "запусти mstsc", "expected_app_id": "remote_desktop_connection"}
+{"text": "запусти mysql", "expected_app_id": "mysql_workbench"}
+{"text": "запусти mysql workbench", "expected_app_id": "mysql_workbench"}
+{"text": "запусти narrator", "expected_app_id": "narrator"}
+{"text": "запусти no i m not a human", "expected_app_id": "no_i_m_not_a_human"}
+{"text": "запусти node", "expected_app_id": "node_js"}
+{"text": "запусти node js", "expected_app_id": "node_js"}
+{"text": "запусти node js command prompt", "expected_app_id": "node_js_command_prompt"}
+{"text": "запусти notepad", "expected_app_id": "notepad"}
+{"text": "запусти nvidia app", "expected_app_id": "nvidia_app"}
+{"text": "запусти nvidia control panel", "expected_app_id": "nvidia_control_panel"}
+{"text": "запусти nvidiacorp nvidiacontrolpanel_56jybvy8sckqj nvidiacorp", "expected_app_id": "nvidia_control_panel"}
+{"text": "запусти obs studio", "expected_app_id": "obs_studio"}
+{"text": "запусти obs64", "expected_app_id": "obs_studio"}
+{"text": "запусти odbc 32", "expected_app_id": "odbc_32"}
+{"text": "запусти odbc 64", "expected_app_id": "odbc_64"}
+{"text": "запусти odbc data sources 32 bit", "expected_app_id": "odbc_data_sources_32_bit"}
+{"text": "запусти odbc data sources 32-bit", "expected_app_id": "odbc_data_sources_32_bit"}
+{"text": "запусти odbc data sources 64 bit", "expected_app_id": "odbc_data_sources_64_bit"}
+{"text": "запусти odbc data sources 64-bit", "expected_app_id": "odbc_data_sources_64_bit"}
+{"text": "запусти office", "expected_app_id": "office"}
+{"text": "запусти olk", "expected_app_id": "olk"}
+{"text": "запусти ollama", "expected_app_id": "ollama"}
+{"text": "запусти ollama app", "expected_app_id": "ollama"}
+{"text": "запусти on screen keyboard", "expected_app_id": "on_screen_keyboard"}
+{"text": "запусти on-screen keyboard", "expected_app_id": "on_screen_keyboard"}
+{"text": "запусти one note", "expected_app_id": "onenote"}
+{"text": "запусти onenote", "expected_app_id": "onenote"}
+{"text": "запусти openai", "expected_app_id": "codex"}
+{"text": "запусти opera", "expected_app_id": "opera"}
+{"text": "запусти opera gx", "expected_app_id": "opera"}
+{"text": "запусти osk", "expected_app_id": "on_screen_keyboard"}
+{"text": "запусти outlook", "expected_app_id": "outlook"}
+{"text": "запусти paint", "expected_app_id": "paint"}
+{"text": "запусти paradox launcher v2", "expected_app_id": "paradox_launcher_v2"}
+{"text": "запусти performance monitor", "expected_app_id": "performance_monitor"}
+{"text": "запусти pg admin", "expected_app_id": "pgadmin"}
+{"text": "запусти pgadmin", "expected_app_id": "pgadmin"}
+{"text": "запусти photoshop", "expected_app_id": "photoshop"}
+{"text": "запусти planetvpn1", "expected_app_id": "planetvpn1"}
+{"text": "запусти portal 2", "expected_app_id": "portal_2"}
+{"text": "запусти portal 2 community edition", "expected_app_id": "portal_2_community_edition"}
+{"text": "запусти post man", "expected_app_id": "postman"}
+{"text": "запусти postman", "expected_app_id": "postman"}
+{"text": "запусти power automate", "expected_app_id": "power_automate"}
+{"text": "запусти powerpnt", "expected_app_id": "powerpoint"}
+{"text": "запусти powerpoint", "expected_app_id": "powerpoint"}
+{"text": "запусти powershell_ise", "expected_app_id": "powershell"}
+{"text": "запусти premiere pro", "expected_app_id": "premiere_pro"}
+{"text": "запусти print management", "expected_app_id": "print_management"}
+{"text": "запусти printmanagement", "expected_app_id": "print_management"}
+{"text": "запусти project", "expected_app_id": "project"}
+{"text": "запусти proton vpn", "expected_app_id": "proton_vpn"}
+{"text": "запусти protonvpn launcher", "expected_app_id": "proton_vpn"}
+{"text": "запусти psr", "expected_app_id": "steps_recorder"}
+{"text": "запусти pycharm", "expected_app_id": "pycharm"}
+{"text": "запусти python 3 10 64 bit", "expected_app_id": "python_3_10_64_bit"}
+{"text": "запусти python 3 10 64-bit", "expected_app_id": "python_3_10_64_bit"}
+{"text": "запусти python 3 10 manuals 64 bit", "expected_app_id": "python_3_10_manuals_64_bit"}
+{"text": "запусти python 3 10 manuals 64-bit", "expected_app_id": "python_3_10_manuals_64_bit"}
+{"text": "запусти python 3 10 module docs 64 bit", "expected_app_id": "python_3_10_module_docs_64_bit"}
+{"text": "запусти python 3 10 module docs 64-bit", "expected_app_id": "python_3_10_module_docs_64_bit"}
+{"text": "запусти python ide", "expected_app_id": "pycharm"}
+{"text": "запусти pythonw", "expected_app_id": "idle_python_3_10_64_bit"}
+{"text": "запусти qbittorrent", "expected_app_id": "qbittorrent"}
+{"text": "запусти r e p o", "expected_app_id": "r_e_p_o"}
+{"text": "запусти readme", "expected_app_id": "readme"}
+{"text": "запусти recoverydrive", "expected_app_id": "recoverydrive"}
+{"text": "запусти redragon m916 pro 4k", "expected_app_id": "redragon_m916_pro_4k"}
+{"text": "запусти redragon m916-pro-4k", "expected_app_id": "redragon_m916_pro_4k"}
+{"text": "запусти regedit", "expected_app_id": "regedit"}
+{"text": "запусти registry editor", "expected_app_id": "regedit"}
+{"text": "запусти releasenotes", "expected_app_id": "git_release_notes"}
+{"text": "запусти remote desktop connection", "expected_app_id": "remote_desktop_connection"}
+{"text": "запусти resource monitor", "expected_app_id": "resource_monitor"}
+{"text": "запусти run", "expected_app_id": "run"}
+{"text": "запусти sample desktop apps", "expected_app_id": "sample_desktop_apps"}
+{"text": "запусти sample uwp apps", "expected_app_id": "sample_uwp_apps"}
+{"text": "запусти sdxhelper", "expected_app_id": "sdxhelper"}
+{"text": "запусти secpol", "expected_app_id": "security_configuration_management"}
+{"text": "запусти security configuration management", "expected_app_id": "security_configuration_management"}
+{"text": "запусти services", "expected_app_id": "services"}
+{"text": "запусти setlang", "expected_app_id": "office"}
+{"text": "запусти settings", "expected_app_id": "settings"}
+{"text": "запусти seven zip", "expected_app_id": "seven_zip"}
+{"text": "запусти snipping tool", "expected_app_id": "snipping_tool"}
+{"text": "запусти snippingtool", "expected_app_id": "snipping_tool"}
+{"text": "запусти solitaire & casual games", "expected_app_id": "solitaire_casual_games"}
+{"text": "запусти solitaire casual games", "expected_app_id": "solitaire_casual_games"}
+{"text": "запусти soundpad", "expected_app_id": "soundpad"}
+{"text": "запусти spotify", "expected_app_id": "spotify"}
+{"text": "запусти spreadsheet compare", "expected_app_id": "spreadsheet_compare"}
+{"text": "запусти start chaos cosmos browser", "expected_app_id": "start_chaos_cosmos_browser"}
+{"text": "запусти start chaos license server", "expected_app_id": "start_chaos_license_server"}
+{"text": "запусти start chaos unified login", "expected_app_id": "start_chaos_unified_login"}
+{"text": "запусти steam", "expected_app_id": "steam"}
+{"text": "запусти steam //rungameid/570", "expected_app_id": "dota_2"}
+{"text": "запусти steps recorder", "expected_app_id": "steps_recorder"}
+{"text": "запусти stop chaos cosmos browser", "expected_app_id": "stop_chaos_cosmos_browser"}
+{"text": "запусти stop chaos license server", "expected_app_id": "stop_chaos_license_server"}
+{"text": "запусти stop chaos unified login", "expected_app_id": "stop_chaos_unified_login"}
+{"text": "запусти store", "expected_app_id": "store"}
+{"text": "запусти substance painer", "expected_app_id": "substance_painter"}
+{"text": "запусти substance painter", "expected_app_id": "substance_painter"}
+{"text": "запусти system configuration", "expected_app_id": "system_configuration"}
+{"text": "запусти system information", "expected_app_id": "system_information"}
+{"text": "запусти tabtip", "expected_app_id": "tabtip"}
+{"text": "запусти task manager", "expected_app_id": "task_manager"}
+{"text": "запусти task scheduler", "expected_app_id": "task_scheduler"}
+{"text": "запусти taskmgr", "expected_app_id": "task_manager"}
+{"text": "запусти taskschd", "expected_app_id": "task_scheduler"}
+{"text": "запусти telegram", "expected_app_id": "telegram"}
+{"text": "запусти terminal", "expected_app_id": "terminal"}
+{"text": "запусти tesseract 1", "expected_app_id": "dokumentation"}
+{"text": "запусти tools for desktop apps", "expected_app_id": "tools_for_desktop_apps"}
+{"text": "запусти tools for uwp apps", "expected_app_id": "tools_for_uwp_apps"}
+{"text": "запусти tor", "expected_app_id": "tor_browser"}
+{"text": "запусти tor browser", "expected_app_id": "tor_browser"}
+{"text": "запусти unity", "expected_app_id": "unity"}
+{"text": "запусти unity hub", "expected_app_id": "unity"}
+{"text": "запусти uwpappsdocumentation", "expected_app_id": "documentation_for_uwp_apps"}
+{"text": "запусти uwpappssamples", "expected_app_id": "sample_uwp_apps"}
+{"text": "запусти uwpappstoolsdocumentation", "expected_app_id": "tools_for_uwp_apps"}
+{"text": "запусти viber", "expected_app_id": "viber"}
+{"text": "запусти viber compatibility mode", "expected_app_id": "viber"}
+{"text": "запусти victoria 3", "expected_app_id": "victoria_3"}
+{"text": "запусти visual studio", "expected_app_id": "visual_studio"}
+{"text": "запусти visual studio 2022", "expected_app_id": "visual_studio"}
+{"text": "запусти visual studio code", "expected_app_id": "vscode"}
+{"text": "запусти voiceaccess", "expected_app_id": "voiceaccess"}
+{"text": "запусти vrlctl", "expected_app_id": "manage_chaos_license_server"}
+{"text": "запусти vscode", "expected_app_id": "vscode"}
+{"text": "запусти wab", "expected_app_id": "wab"}
+{"text": "запусти wabmig", "expected_app_id": "wabmig"}
+{"text": "запусти wf", "expected_app_id": "windows_defender_firewall_with_advanced_security"}
+{"text": "запусти whatsapp", "expected_app_id": "whatsapp"}
+{"text": "запусти windows", "expected_app_id": "windows"}
+{"text": "запусти windows app cert kit", "expected_app_id": "windows_app_cert_kit"}
+{"text": "запусти windows defender firewall with advanced security", "expected_app_id": "windows_defender_firewall_with_advanced_security"}
+{"text": "запусти windows media player legacy", "expected_app_id": "windows_media_player_legacy"}
+{"text": "запусти windows performance analyzer", "expected_app_id": "windows_performance_analyzer"}
+{"text": "запусти windows performance recorder", "expected_app_id": "windows_performance_recorder"}
+{"text": "запусти windows powershell ise x86", "expected_app_id": "powershell"}
+{"text": "запусти windows software development kit", "expected_app_id": "windows_software_development_kit"}
+{"text": "запусти windows terminal", "expected_app_id": "terminal"}
+{"text": "запусти windowspackagemanagerserver", "expected_app_id": "windowspackagemanagerserver"}
+{"text": "запусти winget", "expected_app_id": "winget"}
+{"text": "запусти winpath", "expected_app_id": "console"}
+{"text": "запусти winrar", "expected_app_id": "winrar"}
+{"text": "запусти winword", "expected_app_id": "word"}
+{"text": "запусти wireshark", "expected_app_id": "wireshark"}
+{"text": "запусти word", "expected_app_id": "word"}
+{"text": "запусти wpa", "expected_app_id": "windows_performance_analyzer"}
+{"text": "запусти wprui", "expected_app_id": "windows_performance_recorder"}
+{"text": "запусти wt", "expected_app_id": "terminal"}
+{"text": "запусти x64 native tools command prompt for vs 2022", "expected_app_id": "x64_native_tools_command_prompt_for_vs_2022"}
+{"text": "запусти x64 x86 cross tools command prompt for vs 2022", "expected_app_id": "x64_x86_cross_tools_command_prompt_for_vs_2022"}
+{"text": "запусти x64_x86 cross tools command prompt for vs 2022", "expected_app_id": "x64_x86_cross_tools_command_prompt_for_vs_2022"}
+{"text": "запусти x86 native tools command prompt for vs 2022", "expected_app_id": "x86_native_tools_command_prompt_for_vs_2022"}
+{"text": "запусти x86 x64 cross tools command prompt for vs 2022", "expected_app_id": "x86_x64_cross_tools_command_prompt_for_vs_2022"}
+{"text": "запусти x86_x64 cross tools command prompt for vs 2022", "expected_app_id": "x86_x64_cross_tools_command_prompt_for_vs_2022"}
+{"text": "запусти xbox", "expected_app_id": "xbox"}
+{"text": "запусти xboxpcappadminserver", "expected_app_id": "xboxpcappadminserver"}
+{"text": "запусти xboxpcappce", "expected_app_id": "xboxpcappce"}
+{"text": "запусти yandeks muzyka", "expected_app_id": "yandeks_muzyka"}
+{"text": "запусти yandexmusic", "expected_app_id": "yandexmusic"}
+{"text": "запусти zoom", "expected_app_id": "zoom"}
+{"text": "запусти zoom workplace", "expected_app_id": "zoom"}
+{"text": "запусти адоб ридер", "expected_app_id": "acrobat_reader"}
+{"text": "запусти аксесс", "expected_app_id": "access"}
+{"text": "запусти архиватор winrar", "expected_app_id": "winrar"}
+{"text": "запусти афтер эффектс", "expected_app_id": "after_effects"}
+{"text": "запусти афтэр", "expected_app_id": "after_effects"}
+{"text": "запусти база access", "expected_app_id": "access"}
+{"text": "запусти блокнот", "expected_app_id": "notepad"}
+{"text": "запусти вайершарк", "expected_app_id": "wireshark"}
+{"text": "запусти вайршарк", "expected_app_id": "wireshark"}
+{"text": "запусти ван ноут", "expected_app_id": "onenote"}
+{"text": "запусти ваннот", "expected_app_id": "onenote"}
+{"text": "запусти ватсап", "expected_app_id": "whatsapp"}
+{"text": "запусти вацап", "expected_app_id": "whatsapp"}
+{"text": "запусти вин рар", "expected_app_id": "winrar"}
+{"text": "запусти винрар", "expected_app_id": "winrar"}
+{"text": "запусти воркбенч", "expected_app_id": "mysql_workbench"}
+{"text": "запусти вотсап", "expected_app_id": "whatsapp"}
+{"text": "запусти дота", "expected_app_id": "dota_2"}
+{"text": "запусти дс", "expected_app_id": "discord"}
+{"text": "запусти иллюстратор", "expected_app_id": "illustrator"}
+{"text": "запусти инициатор iscsi", "expected_app_id": "iscsi"}
+{"text": "запусти источники данных odbc 32-разрядная версия", "expected_app_id": "odbc_32"}
+{"text": "запусти источники данных odbc 64-разрядная версия", "expected_app_id": "odbc_64"}
+{"text": "запусти калькулятор", "expected_app_id": "calculator"}
+{"text": "запусти кдекс", "expected_app_id": "codex"}
+{"text": "запусти кибер пунк", "expected_app_id": "cyberpunk_2077"}
+{"text": "запусти кодекс", "expected_app_id": "codex"}
+{"text": "запусти лайт рум", "expected_app_id": "lightroom"}
+{"text": "запусти лайтрум", "expected_app_id": "lightroom"}
+{"text": "запусти люстра", "expected_app_id": "illustrator"}
+{"text": "запусти май эс кью эл", "expected_app_id": "mysql_workbench"}
+{"text": "запусти майя", "expected_app_id": "maya"}
+{"text": "запусти макс", "expected_app_id": "3ds_max_2025"}
+{"text": "запусти мая", "expected_app_id": "maya"}
+{"text": "запусти медиа енкодер", "expected_app_id": "media_encoder"}
+{"text": "запусти медиа энкодер", "expected_app_id": "media_encoder"}
+{"text": "запусти мзыка", "expected_app_id": "yandexmusic"}
+{"text": "запусти мозила", "expected_app_id": "firefox"}
+{"text": "запусти музыка", "expected_app_id": "yandexmusic"}
+{"text": "запусти музыка spotify", "expected_app_id": "spotify"}
+{"text": "запусти опера", "expected_app_id": "opera"}
+{"text": "запусти опера gx", "expected_app_id": "opera"}
+{"text": "запусти павершелл", "expected_app_id": "powershell"}
+{"text": "запусти пайчарм", "expected_app_id": "pycharm"}
+{"text": "запусти пг админ", "expected_app_id": "pgadmin"}
+{"text": "запусти пичарм", "expected_app_id": "pycharm"}
+{"text": "запусти пост мэн", "expected_app_id": "postman"}
+{"text": "запусти постгрес админ", "expected_app_id": "pgadmin"}
+{"text": "запусти постман", "expected_app_id": "postman"}
+{"text": "запусти премьер", "expected_app_id": "premiere_pro"}
+{"text": "запусти премьер про", "expected_app_id": "premiere_pro"}
+{"text": "запусти проджект", "expected_app_id": "project"}
+{"text": "запусти сабстанс", "expected_app_id": "substance_painter"}
+{"text": "запусти сабстанс пейнтер", "expected_app_id": "substance_painter"}
+{"text": "запусти сайберпанк", "expected_app_id": "cyberpunk_2077"}
+{"text": "запусти семь зип", "expected_app_id": "seven_zip"}
+{"text": "запусти спотифай", "expected_app_id": "spotify"}
+{"text": "запусти спотифайй", "expected_app_id": "spotify"}
+{"text": "запусти средство проверки памяти windows", "expected_app_id": "windows"}
+{"text": "запусти телеграмм", "expected_app_id": "telegram"}
+{"text": "запусти тор", "expected_app_id": "tor_browser"}
+{"text": "запусти тор браузер", "expected_app_id": "tor_browser"}
+{"text": "запусти три де макс", "expected_app_id": "3ds_max_2025"}
+{"text": "запусти фаерфокс", "expected_app_id": "firefox"}
+{"text": "запусти фигма", "expected_app_id": "figma"}
+{"text": "запусти фигмаа", "expected_app_id": "figma"}
+{"text": "запусти фигму", "expected_app_id": "figma"}
+{"text": "запусти фотошоп", "expected_app_id": "photoshop"}
+{"text": "запусти шоп", "expected_app_id": "photoshop"}
+{"text": "запусти юните", "expected_app_id": "unity"}
+{"text": "запусти юнити", "expected_app_id": "unity"}
+{"text": "запусти языковые параметры office", "expected_app_id": "office"}
 {"text": "заткнись", "expected_app_id": "unknown"}
+{"text": "зум открой", "expected_app_id": "zoom"}
+{"text": "иллюстратор открой", "expected_app_id": "illustrator"}
+{"text": "какая погода", "expected_app_id": "unknown"}
+{"text": "командную строку", "expected_app_id": "cmd"}
+{"text": "лайтрум открой", "expected_app_id": "lightroom"}
+{"text": "обс студио открой", "expected_app_id": "obs_studio"}
+{"text": "открой 1091500", "expected_app_id": "cyberpunk_2077"}
+{"text": "открой 3180070", "expected_app_id": "no_i_m_not_a_human"}
+{"text": "открой 3241660", "expected_app_id": "r_e_p_o"}
+{"text": "открой 394360", "expected_app_id": "hearts_of_iron_iv"}
+{"text": "открой 3ds max 2025", "expected_app_id": "3ds_max_2025"}
+{"text": "открой 440000", "expected_app_id": "portal_2_community_edition"}
+{"text": "открой 529340", "expected_app_id": "victoria_3"}
+{"text": "открой 570", "expected_app_id": "dota_2"}
+{"text": "открой 620", "expected_app_id": "portal_2"}
+{"text": "открой 629520", "expected_app_id": "soundpad"}
+{"text": "открой 6d809377-6af0-444b-8957-a3773f02200e \\wireshark\\wireshark exe", "expected_app_id": "wireshark"}
+{"text": "открой 7 zip", "expected_app_id": "seven_zip"}
+{"text": "открой 730", "expected_app_id": "counter_strike_2"}
+{"text": "открой 7zip", "expected_app_id": "seven_zip"}
+{"text": "открой access", "expected_app_id": "access"}
+{"text": "открой acrobat", "expected_app_id": "acrobat_reader"}
+{"text": "открой acrobat reader", "expected_app_id": "acrobat_reader"}
+{"text": "открой administrative tools", "expected_app_id": "administrative_tools"}
+{"text": "открой adobe acrobat", "expected_app_id": "acrobat_reader"}
+{"text": "открой adobe after effects", "expected_app_id": "after_effects"}
+{"text": "открой adobe illustrator", "expected_app_id": "illustrator"}
+{"text": "открой adobe lightroom", "expected_app_id": "lightroom"}
+{"text": "открой adobe media encoder", "expected_app_id": "media_encoder"}
+{"text": "открой adobe photoshop", "expected_app_id": "photoshop"}
+{"text": "открой adobe premiere", "expected_app_id": "premiere_pro"}
+{"text": "открой adskaccesscore", "expected_app_id": "autodesk_access"}
+{"text": "открой after effects", "expected_app_id": "after_effects"}
+{"text": "открой antigravity", "expected_app_id": "antigravity"}
+{"text": "открой appcertui", "expected_app_id": "windows_app_cert_kit"}
+{"text": "открой application verifier help", "expected_app_id": "application_verifier_help"}
+{"text": "открой application verifier wow", "expected_app_id": "application_verifier_wow"}
+{"text": "открой application verifier x64", "expected_app_id": "application_verifier_x64"}
+{"text": "открой autodesk access", "expected_app_id": "autodesk_access"}
+{"text": "открой autodesk maya", "expected_app_id": "maya"}
+{"text": "открой blend", "expected_app_id": "blend_for_visual_studio_2022"}
+{"text": "открой blend for visual studio 2022", "expected_app_id": "blend_for_visual_studio_2022"}
+{"text": "открой blender", "expected_app_id": "blender"}
+{"text": "открой bootstrapper-v2", "expected_app_id": "paradox_launcher_v2"}
+{"text": "открой calc", "expected_app_id": "calculator"}
+{"text": "открой calculator", "expected_app_id": "calculator"}
+{"text": "открой ccbservice", "expected_app_id": "ccbservice"}
+{"text": "открой change graphics mode - 3ds max 2025", "expected_app_id": "change_graphics_mode_3ds_max_2025"}
+{"text": "открой change graphics mode 3ds max 2025", "expected_app_id": "change_graphics_mode_3ds_max_2025"}
+{"text": "открой chaosunifiedlogin", "expected_app_id": "chaosunifiedlogin"}
+{"text": "открой character map", "expected_app_id": "character_map"}
+{"text": "открой charmap", "expected_app_id": "character_map"}
+{"text": "открой chrome", "expected_app_id": "chrome"}
+{"text": "открой cleanmgr", "expected_app_id": "disk_cleanup"}
+{"text": "открой code", "expected_app_id": "vscode"}
+{"text": "открой codex", "expected_app_id": "codex"}
+{"text": "открой com squirrel discord", "expected_app_id": "discord"}
+{"text": "открой comexp", "expected_app_id": "component_services"}
+{"text": "открой command prompt", "expected_app_id": "cmd"}
+{"text": "открой compmgmt", "expected_app_id": "computer_management"}
+{"text": "открой component services", "expected_app_id": "component_services"}
+{"text": "открой computer management", "expected_app_id": "computer_management"}
+{"text": "открой connectify", "expected_app_id": "connectify_hotspot_23"}
+{"text": "открой connectify hotspot 23", "expected_app_id": "connectify_hotspot_23"}
+{"text": "открой console", "expected_app_id": "console"}
+{"text": "открой control center", "expected_app_id": "control_center"}
+{"text": "открой control panel", "expected_app_id": "control_panel"}
+{"text": "открой controlcenter3_h329z55cwnj8g app", "expected_app_id": "control_center"}
+{"text": "открой counter strike 2", "expected_app_id": "counter_strike_2"}
+{"text": "открой counter-strike 2", "expected_app_id": "counter_strike_2"}
+{"text": "открой cyberpunk 2077", "expected_app_id": "cyberpunk_2077"}
+{"text": "открой database compare", "expected_app_id": "database_compare"}
+{"text": "открой debuggable package manager", "expected_app_id": "debuggable_package_manager"}
+{"text": "открой desktopappsdocumentation", "expected_app_id": "documentation_for_desktop_apps"}
+{"text": "открой desktopappssamples", "expected_app_id": "sample_desktop_apps"}
+{"text": "открой desktopappstoolsdocumentation", "expected_app_id": "tools_for_desktop_apps"}
+{"text": "открой developer command prompt for vs 2022", "expected_app_id": "developer_command_prompt_for_vs_2022"}
+{"text": "открой developer powershell for vs 2022", "expected_app_id": "developer_powershell_for_vs_2022"}
+{"text": "открой device manager", "expected_app_id": "device_manager"}
+{"text": "открой devmgmt", "expected_app_id": "device_manager"}
+{"text": "открой dfrgui", "expected_app_id": "dfrgui"}
+{"text": "открой discord", "expected_app_id": "discord"}
+{"text": "открой disk cleanup", "expected_app_id": "disk_cleanup"}
+{"text": "открой disk management", "expected_app_id": "disk_management"}
+{"text": "открой diskmgmt", "expected_app_id": "disk_management"}
+{"text": "открой documentation for desktop apps", "expected_app_id": "documentation_for_desktop_apps"}
+{"text": "открой documentation for uwp apps", "expected_app_id": "documentation_for_uwp_apps"}
+{"text": "открой dokumentation", "expected_app_id": "dokumentation"}
+{"text": "открой dota 2", "expected_app_id": "dota_2"}
+{"text": "открой edge", "expected_app_id": "edge"}
+{"text": "открой epic games", "expected_app_id": "epic_games"}
+{"text": "открой epic games launcher", "expected_app_id": "epic_games"}
+{"text": "открой epicgameslauncher", "expected_app_id": "epic_games"}
+{"text": "открой event viewer", "expected_app_id": "event_viewer"}
+{"text": "открой eventvwr", "expected_app_id": "event_viewer"}
+{"text": "открой excel", "expected_app_id": "excel"}
+{"text": "открой faq", "expected_app_id": "faq"}
+{"text": "открой figma", "expected_app_id": "figma"}
+{"text": "открой file explorer", "expected_app_id": "explorer"}
+{"text": "открой firefox", "expected_app_id": "firefox"}
+{"text": "открой fps monitor", "expected_app_id": "fps_monitor"}
+{"text": "открой fpsmonitor", "expected_app_id": "fps_monitor"}
+{"text": "открой freevpnplanet planetvpn_b2qrq2z57ppd2 planetvpn", "expected_app_id": "planetvpn1"}
+{"text": "открой game bar", "expected_app_id": "game_bar"}
+{"text": "открой gethelp", "expected_app_id": "gethelp"}
+{"text": "открой git cmd", "expected_app_id": "git_cmd"}
+{"text": "открой git gui", "expected_app_id": "git_gui"}
+{"text": "открой git release notes", "expected_app_id": "git_release_notes"}
+{"text": "открой git-cmd", "expected_app_id": "git_cmd"}
+{"text": "открой git-gui", "expected_app_id": "git_gui"}
+{"text": "открой google chrome", "expected_app_id": "chrome"}
+{"text": "открой gpuview", "expected_app_id": "gpuview"}
+{"text": "открой hearts of iron iv", "expected_app_id": "hearts_of_iron_iv"}
+{"text": "открой hh", "expected_app_id": "python_3_10_manuals_64_bit"}
+{"text": "открой homepage", "expected_app_id": "homepage"}
+{"text": "открой idea64", "expected_app_id": "intellij_idea"}
+{"text": "открой idle python 3 10 64 bit", "expected_app_id": "idle_python_3_10_64_bit"}
+{"text": "открой idle python 3 10 64-bit", "expected_app_id": "idle_python_3_10_64_bit"}
+{"text": "открой iediag", "expected_app_id": "iediag"}
+{"text": "открой iexplore", "expected_app_id": "iexplore"}
+{"text": "открой illustrator", "expected_app_id": "illustrator"}
+{"text": "открой intellij idea", "expected_app_id": "intellij_idea"}
+{"text": "открой intellij idea ultimate", "expected_app_id": "intellij_idea"}
+{"text": "открой iscsi", "expected_app_id": "iscsi"}
+{"text": "открой iscsi initiator", "expected_app_id": "iscsi_initiator"}
+{"text": "открой licensemanagershellext", "expected_app_id": "licensemanagershellext"}
+{"text": "открой lightroom", "expected_app_id": "lightroom"}
+{"text": "открой livecaptions", "expected_app_id": "livecaptions"}
+{"text": "открой magnify", "expected_app_id": "magnify"}
+{"text": "открой manage chaos license server", "expected_app_id": "manage_chaos_license_server"}
+{"text": "открой maxfind", "expected_app_id": "maxfind_2025"}
+{"text": "открой maxfind 2025", "expected_app_id": "maxfind_2025"}
+{"text": "открой maya", "expected_app_id": "maya"}
+{"text": "открой media encoder", "expected_app_id": "media_encoder"}
+{"text": "открой memory diagnostics tool", "expected_app_id": "memory_diagnostics_tool"}
+{"text": "открой microsoft access", "expected_app_id": "access"}
+{"text": "открой microsoft edge", "expected_app_id": "edge"}
+{"text": "открой microsoft gamingapp_8wekyb3d8bbwe microsoft xbox", "expected_app_id": "xbox"}
+{"text": "открой microsoft outlookforwindows_8wekyb3d8bbwe microsoft", "expected_app_id": "outlook"}
+{"text": "открой microsoft powerautomatedesktop_8wekyb3d8bbwe pad", "expected_app_id": "power_automate"}
+{"text": "открой microsoft project", "expected_app_id": "project"}
+{"text": "открой microsoft store", "expected_app_id": "microsoft_store"}
+{"text": "открой mouse drive beta", "expected_app_id": "redragon_m916_pro_4k"}
+{"text": "открой mozilla firefox", "expected_app_id": "firefox"}
+{"text": "открой mplayer2", "expected_app_id": "mplayer2"}
+{"text": "открой ms project", "expected_app_id": "project"}
+{"text": "открой ms-settings", "expected_app_id": "settings"}
+{"text": "открой ms-windows-store", "expected_app_id": "microsoft_store"}
+{"text": "открой msconfig", "expected_app_id": "system_configuration"}
+{"text": "открой msedge", "expected_app_id": "edge"}
+{"text": "открой msinfo32", "expected_app_id": "system_information"}
+{"text": "открой msoadfsb", "expected_app_id": "msoadfsb"}
+{"text": "открой msoasb", "expected_app_id": "msoasb"}
+{"text": "открой msoxmled", "expected_app_id": "msoxmled"}
+{"text": "открой mspaint", "expected_app_id": "paint"}
+{"text": "открой mstsc", "expected_app_id": "remote_desktop_connection"}
+{"text": "открой mysql", "expected_app_id": "mysql_workbench"}
+{"text": "открой mysql workbench", "expected_app_id": "mysql_workbench"}
+{"text": "открой narrator", "expected_app_id": "narrator"}
+{"text": "открой no i m not a human", "expected_app_id": "no_i_m_not_a_human"}
+{"text": "открой node", "expected_app_id": "node_js"}
+{"text": "открой node js", "expected_app_id": "node_js"}
+{"text": "открой node js command prompt", "expected_app_id": "node_js_command_prompt"}
+{"text": "открой notepad", "expected_app_id": "notepad"}
+{"text": "открой nvidia app", "expected_app_id": "nvidia_app"}
+{"text": "открой nvidia control panel", "expected_app_id": "nvidia_control_panel"}
+{"text": "открой nvidiacorp nvidiacontrolpanel_56jybvy8sckqj nvidiacorp", "expected_app_id": "nvidia_control_panel"}
+{"text": "открой obs studio", "expected_app_id": "obs_studio"}
+{"text": "открой obs64", "expected_app_id": "obs_studio"}
+{"text": "открой odbc 32", "expected_app_id": "odbc_32"}
+{"text": "открой odbc 64", "expected_app_id": "odbc_64"}
+{"text": "открой odbc data sources 32 bit", "expected_app_id": "odbc_data_sources_32_bit"}
+{"text": "открой odbc data sources 32-bit", "expected_app_id": "odbc_data_sources_32_bit"}
+{"text": "открой odbc data sources 64 bit", "expected_app_id": "odbc_data_sources_64_bit"}
+{"text": "открой odbc data sources 64-bit", "expected_app_id": "odbc_data_sources_64_bit"}
+{"text": "открой office", "expected_app_id": "office"}
+{"text": "открой olk", "expected_app_id": "olk"}
+{"text": "открой ollama", "expected_app_id": "ollama"}
+{"text": "открой ollama app", "expected_app_id": "ollama"}
+{"text": "открой on screen keyboard", "expected_app_id": "on_screen_keyboard"}
+{"text": "открой on-screen keyboard", "expected_app_id": "on_screen_keyboard"}
+{"text": "открой one note", "expected_app_id": "onenote"}
+{"text": "открой onenote", "expected_app_id": "onenote"}
+{"text": "открой openai", "expected_app_id": "codex"}
+{"text": "открой opera", "expected_app_id": "opera"}
+{"text": "открой opera gx", "expected_app_id": "opera"}
+{"text": "открой osk", "expected_app_id": "on_screen_keyboard"}
+{"text": "открой outlook", "expected_app_id": "outlook"}
+{"text": "открой paint", "expected_app_id": "paint"}
+{"text": "открой paradox launcher v2", "expected_app_id": "paradox_launcher_v2"}
+{"text": "открой performance monitor", "expected_app_id": "performance_monitor"}
+{"text": "открой pg admin", "expected_app_id": "pgadmin"}
+{"text": "открой pgadmin", "expected_app_id": "pgadmin"}
+{"text": "открой photoshop", "expected_app_id": "photoshop"}
+{"text": "открой planetvpn1", "expected_app_id": "planetvpn1"}
+{"text": "открой portal 2", "expected_app_id": "portal_2"}
+{"text": "открой portal 2 community edition", "expected_app_id": "portal_2_community_edition"}
+{"text": "открой post man", "expected_app_id": "postman"}
+{"text": "открой postman", "expected_app_id": "postman"}
+{"text": "открой power automate", "expected_app_id": "power_automate"}
+{"text": "открой powerpnt", "expected_app_id": "powerpoint"}
+{"text": "открой powerpoint", "expected_app_id": "powerpoint"}
+{"text": "открой powershell_ise", "expected_app_id": "powershell"}
+{"text": "открой premiere pro", "expected_app_id": "premiere_pro"}
+{"text": "открой print management", "expected_app_id": "print_management"}
+{"text": "открой printmanagement", "expected_app_id": "print_management"}
+{"text": "открой project", "expected_app_id": "project"}
+{"text": "открой proton vpn", "expected_app_id": "proton_vpn"}
+{"text": "открой protonvpn launcher", "expected_app_id": "proton_vpn"}
+{"text": "открой psr", "expected_app_id": "steps_recorder"}
+{"text": "открой pycharm", "expected_app_id": "pycharm"}
+{"text": "открой python 3 10 64 bit", "expected_app_id": "python_3_10_64_bit"}
+{"text": "открой python 3 10 64-bit", "expected_app_id": "python_3_10_64_bit"}
+{"text": "открой python 3 10 manuals 64 bit", "expected_app_id": "python_3_10_manuals_64_bit"}
+{"text": "открой python 3 10 manuals 64-bit", "expected_app_id": "python_3_10_manuals_64_bit"}
+{"text": "открой python 3 10 module docs 64 bit", "expected_app_id": "python_3_10_module_docs_64_bit"}
+{"text": "открой python 3 10 module docs 64-bit", "expected_app_id": "python_3_10_module_docs_64_bit"}
+{"text": "открой python ide", "expected_app_id": "pycharm"}
+{"text": "открой pythonw", "expected_app_id": "idle_python_3_10_64_bit"}
+{"text": "открой qbittorrent", "expected_app_id": "qbittorrent"}
+{"text": "открой r e p o", "expected_app_id": "r_e_p_o"}
+{"text": "открой readme", "expected_app_id": "readme"}
+{"text": "открой recoverydrive", "expected_app_id": "recoverydrive"}
+{"text": "открой redragon m916 pro 4k", "expected_app_id": "redragon_m916_pro_4k"}
+{"text": "открой redragon m916-pro-4k", "expected_app_id": "redragon_m916_pro_4k"}
+{"text": "открой regedit", "expected_app_id": "regedit"}
+{"text": "открой registry editor", "expected_app_id": "regedit"}
+{"text": "открой releasenotes", "expected_app_id": "git_release_notes"}
+{"text": "открой remote desktop connection", "expected_app_id": "remote_desktop_connection"}
+{"text": "открой resource monitor", "expected_app_id": "resource_monitor"}
+{"text": "открой run", "expected_app_id": "run"}
+{"text": "открой sample desktop apps", "expected_app_id": "sample_desktop_apps"}
+{"text": "открой sample uwp apps", "expected_app_id": "sample_uwp_apps"}
+{"text": "открой sdxhelper", "expected_app_id": "sdxhelper"}
+{"text": "открой secpol", "expected_app_id": "security_configuration_management"}
+{"text": "открой security configuration management", "expected_app_id": "security_configuration_management"}
+{"text": "открой services", "expected_app_id": "services"}
+{"text": "открой setlang", "expected_app_id": "office"}
+{"text": "открой settings", "expected_app_id": "settings"}
+{"text": "открой seven zip", "expected_app_id": "seven_zip"}
+{"text": "открой snipping tool", "expected_app_id": "snipping_tool"}
+{"text": "открой snippingtool", "expected_app_id": "snipping_tool"}
+{"text": "открой solitaire & casual games", "expected_app_id": "solitaire_casual_games"}
+{"text": "открой solitaire casual games", "expected_app_id": "solitaire_casual_games"}
+{"text": "открой soundpad", "expected_app_id": "soundpad"}
+{"text": "открой spotify", "expected_app_id": "spotify"}
+{"text": "открой spreadsheet compare", "expected_app_id": "spreadsheet_compare"}
+{"text": "открой start chaos cosmos browser", "expected_app_id": "start_chaos_cosmos_browser"}
+{"text": "открой start chaos license server", "expected_app_id": "start_chaos_license_server"}
+{"text": "открой start chaos unified login", "expected_app_id": "start_chaos_unified_login"}
+{"text": "открой steam", "expected_app_id": "steam"}
+{"text": "открой steam //rungameid/570", "expected_app_id": "dota_2"}
+{"text": "открой steps recorder", "expected_app_id": "steps_recorder"}
+{"text": "открой stop chaos cosmos browser", "expected_app_id": "stop_chaos_cosmos_browser"}
+{"text": "открой stop chaos license server", "expected_app_id": "stop_chaos_license_server"}
+{"text": "открой stop chaos unified login", "expected_app_id": "stop_chaos_unified_login"}
+{"text": "открой store", "expected_app_id": "store"}
+{"text": "открой substance painer", "expected_app_id": "substance_painter"}
+{"text": "открой substance painter", "expected_app_id": "substance_painter"}
+{"text": "открой system configuration", "expected_app_id": "system_configuration"}
+{"text": "открой system information", "expected_app_id": "system_information"}
+{"text": "открой tabtip", "expected_app_id": "tabtip"}
+{"text": "открой task manager", "expected_app_id": "task_manager"}
+{"text": "открой task scheduler", "expected_app_id": "task_scheduler"}
+{"text": "открой taskmgr", "expected_app_id": "task_manager"}
+{"text": "открой taskschd", "expected_app_id": "task_scheduler"}
+{"text": "открой telegram", "expected_app_id": "telegram"}
+{"text": "открой terminal", "expected_app_id": "terminal"}
+{"text": "открой tesseract 1", "expected_app_id": "dokumentation"}
+{"text": "открой tools for desktop apps", "expected_app_id": "tools_for_desktop_apps"}
+{"text": "открой tools for uwp apps", "expected_app_id": "tools_for_uwp_apps"}
+{"text": "открой tor", "expected_app_id": "tor_browser"}
+{"text": "открой tor browser", "expected_app_id": "tor_browser"}
+{"text": "открой unity", "expected_app_id": "unity"}
+{"text": "открой unity hub", "expected_app_id": "unity"}
+{"text": "открой uwpappsdocumentation", "expected_app_id": "documentation_for_uwp_apps"}
+{"text": "открой uwpappssamples", "expected_app_id": "sample_uwp_apps"}
+{"text": "открой uwpappstoolsdocumentation", "expected_app_id": "tools_for_uwp_apps"}
+{"text": "открой viber", "expected_app_id": "viber"}
+{"text": "открой viber compatibility mode", "expected_app_id": "viber"}
+{"text": "открой victoria 3", "expected_app_id": "victoria_3"}
+{"text": "открой visual studio", "expected_app_id": "visual_studio"}
+{"text": "открой visual studio 2022", "expected_app_id": "visual_studio"}
+{"text": "открой visual studio code", "expected_app_id": "vscode"}
+{"text": "открой voiceaccess", "expected_app_id": "voiceaccess"}
+{"text": "открой vrlctl", "expected_app_id": "manage_chaos_license_server"}
+{"text": "открой vscode", "expected_app_id": "vscode"}
+{"text": "открой wab", "expected_app_id": "wab"}
+{"text": "открой wabmig", "expected_app_id": "wabmig"}
+{"text": "открой wf", "expected_app_id": "windows_defender_firewall_with_advanced_security"}
+{"text": "открой whatsapp", "expected_app_id": "whatsapp"}
+{"text": "открой windows", "expected_app_id": "windows"}
+{"text": "открой windows app cert kit", "expected_app_id": "windows_app_cert_kit"}
+{"text": "открой windows defender firewall with advanced security", "expected_app_id": "windows_defender_firewall_with_advanced_security"}
+{"text": "открой windows media player legacy", "expected_app_id": "windows_media_player_legacy"}
+{"text": "открой windows performance analyzer", "expected_app_id": "windows_performance_analyzer"}
+{"text": "открой windows performance recorder", "expected_app_id": "windows_performance_recorder"}
+{"text": "открой windows powershell ise x86", "expected_app_id": "powershell"}
+{"text": "открой windows software development kit", "expected_app_id": "windows_software_development_kit"}
+{"text": "открой windows terminal", "expected_app_id": "terminal"}
+{"text": "открой windowspackagemanagerserver", "expected_app_id": "windowspackagemanagerserver"}
+{"text": "открой winget", "expected_app_id": "winget"}
+{"text": "открой winpath", "expected_app_id": "console"}
+{"text": "открой winrar", "expected_app_id": "winrar"}
+{"text": "открой winword", "expected_app_id": "word"}
+{"text": "открой wireshark", "expected_app_id": "wireshark"}
+{"text": "открой word", "expected_app_id": "word"}
+{"text": "открой wpa", "expected_app_id": "windows_performance_analyzer"}
+{"text": "открой wprui", "expected_app_id": "windows_performance_recorder"}
+{"text": "открой wt", "expected_app_id": "terminal"}
+{"text": "открой x64 native tools command prompt for vs 2022", "expected_app_id": "x64_native_tools_command_prompt_for_vs_2022"}
+{"text": "открой x64 x86 cross tools command prompt for vs 2022", "expected_app_id": "x64_x86_cross_tools_command_prompt_for_vs_2022"}
+{"text": "открой x64_x86 cross tools command prompt for vs 2022", "expected_app_id": "x64_x86_cross_tools_command_prompt_for_vs_2022"}
+{"text": "открой x86 native tools command prompt for vs 2022", "expected_app_id": "x86_native_tools_command_prompt_for_vs_2022"}
+{"text": "открой x86 x64 cross tools command prompt for vs 2022", "expected_app_id": "x86_x64_cross_tools_command_prompt_for_vs_2022"}
+{"text": "открой x86_x64 cross tools command prompt for vs 2022", "expected_app_id": "x86_x64_cross_tools_command_prompt_for_vs_2022"}
+{"text": "открой xbox", "expected_app_id": "xbox"}
+{"text": "открой xboxpcappadminserver", "expected_app_id": "xboxpcappadminserver"}
+{"text": "открой xboxpcappce", "expected_app_id": "xboxpcappce"}
+{"text": "открой yandeks muzyka", "expected_app_id": "yandeks_muzyka"}
+{"text": "открой yandexmusic", "expected_app_id": "yandexmusic"}
+{"text": "открой zoom", "expected_app_id": "zoom"}
+{"text": "открой zoom workplace", "expected_app_id": "zoom"}
+{"text": "открой адоб ридер", "expected_app_id": "acrobat_reader"}
+{"text": "открой аксесс", "expected_app_id": "access"}
+{"text": "открой архиватор winrar", "expected_app_id": "winrar"}
+{"text": "открой афтер эффектс", "expected_app_id": "after_effects"}
+{"text": "открой афтэр", "expected_app_id": "after_effects"}
+{"text": "открой база access", "expected_app_id": "access"}
+{"text": "открой браузер", "expected_app_id": "chrome"}
+{"text": "открой вайбер", "expected_app_id": "viber"}
+{"text": "открой вайершарк", "expected_app_id": "wireshark"}
+{"text": "открой вайршарк", "expected_app_id": "wireshark"}
+{"text": "открой ван ноут", "expected_app_id": "onenote"}
+{"text": "открой ваннот", "expected_app_id": "onenote"}
+{"text": "открой ватсап", "expected_app_id": "whatsapp"}
+{"text": "открой вацап", "expected_app_id": "whatsapp"}
+{"text": "открой вин рар", "expected_app_id": "winrar"}
+{"text": "открой винрар", "expected_app_id": "winrar"}
+{"text": "открой ворд", "expected_app_id": "word"}
+{"text": "открой воркбенч", "expected_app_id": "mysql_workbench"}
+{"text": "открой вотсап", "expected_app_id": "whatsapp"}
+{"text": "открой вс код", "expected_app_id": "vscode"}
+{"text": "открой где код пишу", "expected_app_id": "vscode"}
+{"text": "открой дискорд", "expected_app_id": "discord"}
+{"text": "открой дота", "expected_app_id": "dota_2"}
+{"text": "открой идею", "expected_app_id": "intellij_idea"}
+{"text": "открой иллюстратор", "expected_app_id": "illustrator"}
+{"text": "открой инициатор iscsi", "expected_app_id": "iscsi"}
+{"text": "открой интернет", "expected_app_id": "chrome"}
+{"text": "открой источники данных odbc 32-разрядная версия", "expected_app_id": "odbc_32"}
+{"text": "открой источники данных odbc 64-разрядная версия", "expected_app_id": "odbc_64"}
+{"text": "открой кдекс", "expected_app_id": "codex"}
+{"text": "открой кибер пунк", "expected_app_id": "cyberpunk_2077"}
+{"text": "открой кодекс", "expected_app_id": "codex"}
+{"text": "открой лайт рум", "expected_app_id": "lightroom"}
+{"text": "открой лайтрум", "expected_app_id": "lightroom"}
+{"text": "открой люстра", "expected_app_id": "illustrator"}
+{"text": "открой май эс кью эл", "expected_app_id": "mysql_workbench"}
+{"text": "открой майя", "expected_app_id": "maya"}
+{"text": "открой макс", "expected_app_id": "3ds_max_2025"}
+{"text": "открой мая", "expected_app_id": "maya"}
+{"text": "открой медиа енкодер", "expected_app_id": "media_encoder"}
+{"text": "открой медиа энкодер", "expected_app_id": "media_encoder"}
+{"text": "открой мзыка", "expected_app_id": "yandexmusic"}
+{"text": "открой мозила", "expected_app_id": "firefox"}
+{"text": "открой музыка", "expected_app_id": "yandexmusic"}
+{"text": "открой музыка spotify", "expected_app_id": "spotify"}
+{"text": "открой настройки винды", "expected_app_id": "settings"}
+{"text": "открой окно", "expected_app_id": "unknown"}
+{"text": "открой опера", "expected_app_id": "opera"}
+{"text": "открой опера gx", "expected_app_id": "opera"}
+{"text": "открой пайчарм", "expected_app_id": "pycharm"}
+{"text": "открой пг админ", "expected_app_id": "pgadmin"}
+{"text": "открой пичарм", "expected_app_id": "pycharm"}
+{"text": "открой пост мэн", "expected_app_id": "postman"}
+{"text": "открой постгрес админ", "expected_app_id": "pgadmin"}
+{"text": "открой постман", "expected_app_id": "postman"}
+{"text": "открой премьер", "expected_app_id": "premiere_pro"}
+{"text": "открой премьер про", "expected_app_id": "premiere_pro"}
+{"text": "открой проводник", "expected_app_id": "explorer"}
+{"text": "открой проджект", "expected_app_id": "project"}
+{"text": "открой сабстанс", "expected_app_id": "substance_painter"}
+{"text": "открой сабстанс пейнтер", "expected_app_id": "substance_painter"}
+{"text": "открой сайберпанк", "expected_app_id": "cyberpunk_2077"}
+{"text": "открой семь зип", "expected_app_id": "seven_zip"}
+{"text": "открой спотифай", "expected_app_id": "spotify"}
+{"text": "открой спотифайй", "expected_app_id": "spotify"}
+{"text": "открой средство проверки памяти windows", "expected_app_id": "windows"}
+{"text": "открой телегу", "expected_app_id": "telegram"}
+{"text": "открой тор", "expected_app_id": "tor_browser"}
+{"text": "открой тор браузер", "expected_app_id": "tor_browser"}
+{"text": "открой три де макс", "expected_app_id": "3ds_max_2025"}
+{"text": "открой фаерфокс", "expected_app_id": "firefox"}
+{"text": "открой файлы", "expected_app_id": "explorer"}
+{"text": "открой фигма", "expected_app_id": "figma"}
+{"text": "открой фигмаа", "expected_app_id": "figma"}
+{"text": "открой фигму", "expected_app_id": "figma"}
+{"text": "открой фотошоп", "expected_app_id": "photoshop"}
+{"text": "открой хром", "expected_app_id": "chrome"}
+{"text": "открой шоп", "expected_app_id": "photoshop"}
+{"text": "открой эксель", "expected_app_id": "excel"}
+{"text": "открой юните", "expected_app_id": "unity"}
+{"text": "открой юнити", "expected_app_id": "unity"}
+{"text": "открой языковые параметры office", "expected_app_id": "office"}
+{"text": "пайчарм открой", "expected_app_id": "pycharm"}
+{"text": "параметры windows", "expected_app_id": "settings"}
+{"text": "пауэрпоинт запусти", "expected_app_id": "powerpoint"}
+{"text": "пдф ридер открой", "expected_app_id": "acrobat_reader"}
+{"text": "поставь таймер", "expected_app_id": "unknown"}
+{"text": "постман запусти", "expected_app_id": "postman"}
+{"text": "посчитай открой калькулятор", "expected_app_id": "calculator"}
+{"text": "почту outlook открой", "expected_app_id": "outlook"}
+{"text": "презентацию открыть", "expected_app_id": "powerpoint"}
+{"text": "премьер про открой", "expected_app_id": "premiere_pro"}
+{"text": "редактор фотографий adobe открой", "expected_app_id": "photoshop"}
+{"text": "сверни браузер", "expected_app_id": "unknown"}
+{"text": "сделай громкость 20", "expected_app_id": "unknown"}
+{"text": "сделай громче", "expected_app_id": "unknown"}
+{"text": "таблицу открыть", "expected_app_id": "excel"}
+{"text": "тг открой", "expected_app_id": "telegram"}
+{"text": "убавь звук", "expected_app_id": "unknown"}
+{"text": "фигму открой", "expected_app_id": "figma"}
+{"text": "фотошопчик запусти", "expected_app_id": "photoshop"}
+{"text": "юнити открой", "expected_app_id": "unity"}

@@ -1,4 +1,3 @@
-
 from __future__ import annotations
 
 import argparse
@@ -15,12 +14,9 @@ if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
 from python_agent.nlu.normalizer import Normalizer
-from python_agent.resolvers.app_catalog_overrides import (
-    DEFAULT_APP_OVERRIDES_PATH,
-    load_app_catalog_overrides,
-)
-from python_agent.resolvers.user_app_catalog import load_user_apps
-from python_agent.training.dataset_sources import dict_from_source, int_key_dict_from_source, list_from_source, load_training_source
+from python_agent.resolvers.app_catalog_service import AppCatalogService
+from python_agent.training.dataset_sources import int_key_dict_from_source, list_from_source, load_training_source
+
 
 DATA_DIR = ROOT / "data" / "skill_classifier"
 PROCESSED_DIR = DATA_DIR / "processed"
@@ -39,7 +35,6 @@ _SOURCE = load_training_source("skill_classifier.json")
 
 AGENT_PREFIXES = list_from_source(_SOURCE, "agent_prefixes")
 SUFFIXES = list_from_source(_SOURCE, "suffixes")
-APP_CATALOG = dict_from_source(_SOURCE, "app_catalog")
 OPEN_TEMPLATES = list_from_source(_SOURCE, "open_templates")
 TYPO_PAIRS = [tuple(item) for item in list_from_source(_SOURCE, "typo_pairs")]
 NUMBER_WORDS = int_key_dict_from_source(_SOURCE, "number_words")
@@ -57,6 +52,7 @@ MANUAL_TESTS = list_from_source(_SOURCE, "manual_tests")
 def norm(text: str) -> str:
     return " ".join(str(text).lower().split())
 
+
 def unique(items):
     seen, out = set(), []
     for item in items:
@@ -65,6 +61,7 @@ def unique(items):
             out.append(item)
             seen.add(item)
     return out
+
 
 def unique_pairs(rows):
     seen, out = set(), []
@@ -76,8 +73,10 @@ def unique_pairs(rows):
             seen.add(key)
     return out
 
+
 def wrap(text: str, rng: random.Random) -> str:
     return norm(f"{rng.choice(AGENT_PREFIXES)}{text}{rng.choice(SUFFIXES)}")
+
 
 def typos(text: str, rng: random.Random, max_items: int = 2) -> list[str]:
     out = []
@@ -90,6 +89,7 @@ def typos(text: str, rng: random.Random, max_items: int = 2) -> list[str]:
         out.append(text.replace(" ", "  ", 1))
     return unique(out)[:max_items]
 
+
 def add(rows, text, label, rng, wrap_prob=0.6):
     rows.append((norm(text), label))
     if rng.random() < wrap_prob:
@@ -99,61 +99,40 @@ def add(rows, text, label, rng, wrap_prob=0.6):
         if rng.random() < 0.35:
             rows.append((wrap(t, rng), label))
 
+
 def number_surfaces(n: int) -> list[str]:
-    vals = [str(n), f"{n} процентов", f"{n} процент"]
+    values = [str(n), f"{n} процентов", f"{n} процент"]
     if n in NUMBER_WORDS:
-        vals.extend(NUMBER_WORDS[n])
+        values.extend(NUMBER_WORDS[n])
     elif 20 < n < 100:
         tens, unit = (n // 10) * 10, n % 10
         for t in NUMBER_WORDS.get(tens, [str(tens)]):
             for u in NUMBER_WORDS.get(unit, [str(unit)]):
-                vals.extend([f"{t} {u}", f"{t} {unit}", f"{tens} {u}"])
-    return unique(vals)
+                values.extend([f"{t} {u}", f"{t} {unit}", f"{tens} {u}"])
+    return unique(values)
 
-def build_app_catalog(
-    user_apps_path: Path | None = None,
-    overrides_path: Path | None = DEFAULT_APP_OVERRIDES_PATH,
-) -> dict[str, list[str]]:
-    overrides = load_app_catalog_overrides(overrides_path)
-    catalog = {
-        app_id: unique([
-            *surface_forms,
-            *(overrides[app_id].speech_forms if app_id in overrides else []),
-        ])
-        for app_id, surface_forms in APP_CATALOG.items()
-        if not (app_id in overrides and overrides[app_id].disabled)
-    }
-    for item in load_user_apps(user_apps_path):
+
+def build_app_catalog(apps_catalog_path: Path | None = None) -> dict[str, list[str]]:
+    service = AppCatalogService(apps_catalog_path)
+    catalog: dict[str, list[str]] = {}
+
+    for app in service.get_enabled_apps():
         forms = [
-            item.display_name,
-            Path(item.launch_target).stem,
-            *item.speech_forms,
-            *(overrides[item.app_id].speech_forms if item.app_id in overrides else []),
+            app.display_name,
+            Path(app.launch_target).stem if app.launch_target else "",
+            Path(app.target_path).stem if app.target_path else "",
+            app.app_id.replace("_", " "),
+            *app.speech_forms,
         ]
-        catalog[item.app_id] = list(dict.fromkeys([
-            " ".join(form.strip().lower().split())
+        cleaned = unique([
+            " ".join(str(form).strip().lower().split())
             for form in forms
-            if form.strip()
-        ])) or [item.app_id]
+            if str(form).strip()
+        ])
+        if cleaned:
+            catalog[app.app_id] = cleaned
 
     return catalog
-
-
-def build_disabled_app_catalog(
-    overrides_path: Path | None = DEFAULT_APP_OVERRIDES_PATH,
-    user_apps_path: Path | None = None,
-) -> dict[str, list[str]]:
-    overrides = load_app_catalog_overrides(overrides_path)
-    user_app_ids = {item.app_id for item in load_user_apps(user_apps_path)}
-    disabled: dict[str, list[str]] = {}
-    for app_id, override in overrides.items():
-        if not override.disabled or app_id not in APP_CATALOG or app_id in user_app_ids:
-            continue
-        disabled[app_id] = unique([
-            *APP_CATALOG[app_id],
-            *override.speech_forms,
-        ])
-    return disabled
 
 
 def generate_open_app_rows(rng, samples_per_app, app_catalog):
@@ -161,9 +140,11 @@ def generate_open_app_rows(rng, samples_per_app, app_catalog):
     for app_id, surface_forms in app_catalog.items():
         candidates = []
         for surface in surface_forms:
-            for tpl in OPEN_TEMPLATES:
-                candidates.append(tpl.format(app=surface))
+            for template in OPEN_TEMPLATES:
+                candidates.append(template.format(app=surface))
         candidates = unique(candidates)
+        if not candidates:
+            continue
         rng.shuffle(candidates)
         while len(candidates) < samples_per_app:
             candidates.append(rng.choice(candidates))
@@ -172,22 +153,14 @@ def generate_open_app_rows(rng, samples_per_app, app_catalog):
     return rows
 
 
-def generate_disabled_open_app_unknown_rows(rng, disabled_app_catalog):
-    rows = []
-    for surface_forms in disabled_app_catalog.values():
-        for surface in surface_forms:
-            for tpl in OPEN_TEMPLATES:
-                add(rows, tpl.format(app=surface), SKILL_OPEN_APP, rng, wrap_prob=0.35)
-    return unique_pairs(rows)
-
 def generate_volume_rows(rng, target_count):
     rows = []
     for phrase in VOLUME_FIXED:
         add(rows, phrase, SKILL_VOLUME_SET, rng, wrap_prob=0.75)
     for n in range(0, 101):
         for surface in number_surfaces(n)[:7]:
-            for tpl in VOLUME_SET_TEMPLATES + VOLUME_PLUS_TEMPLATES + VOLUME_MINUS_TEMPLATES:
-                add(rows, tpl.format(n=surface), SKILL_VOLUME_SET, rng, wrap_prob=0.35)
+            for template in VOLUME_SET_TEMPLATES + VOLUME_PLUS_TEMPLATES + VOLUME_MINUS_TEMPLATES:
+                add(rows, template.format(n=surface), SKILL_VOLUME_SET, rng, wrap_prob=0.35)
     rows = unique_pairs(rows)
     if len(rows) > target_count:
         rng.shuffle(rows)
@@ -199,12 +172,29 @@ def generate_volume_rows(rng, target_count):
         rows = unique_pairs(rows)
     return rows
 
+
+def looks_like_window_layout_command(text: str) -> bool:
+    text = norm(text)
+    layout_cues = (
+        "слева", "слево", "влево", "левую", "левый",
+        "справа", "справо", "вправо", "правую", "правый",
+        "сверху", "вверх", "верхнюю",
+        "снизу", "вниз", "нижнюю",
+        "центр", "середин",
+        "пополам", "палавину", "половин", "поровну",
+        "рядом", "друг под другом",
+        "на весь экран", "во весь экран", "фулл", "fullscreen", "максимум экрана",
+        "сетк", "2 на 2", "два на два", "углам", "плитк",
+    )
+    return any(cue in text for cue in layout_cues)
+
+
 def generate_window_control_rows(rng, target_count):
     source_path = ROOT / "data" / "window_control" / "processed" / "action_train.csv"
     if not source_path.exists():
         raise FileNotFoundError(
             "window_control dataset is missing. Run: "
-            "python python_agent/training/generate_window_control_dataset.py"
+            "python -m python_agent.training.generate_window_control_dataset"
         )
 
     rows = []
@@ -222,59 +212,20 @@ def generate_window_control_rows(rng, target_count):
         return rows[:target_count]
 
     base = list(rows)
-    while len(rows) < target_count:
+    while len(rows) < target_count and base:
         text, label = rng.choice(base)
         rows.append((wrap(text, rng), label))
         rows = unique_pairs(rows)
 
     return rows
 
-def looks_like_window_layout_command(text: str) -> bool:
-    text = norm(text)
-    layout_cues = (
-        "слева",
-        "слево",
-        "влево",
-        "левую",
-        "левый",
-        "справа",
-        "справо",
-        "вправо",
-        "правую",
-        "правый",
-        "сверху",
-        "вверх",
-        "верхнюю",
-        "снизу",
-        "вниз",
-        "нижнюю",
-        "центр",
-        "середин",
-        "пополам",
-        "палавину",
-        "половин",
-        "поровну",
-        "рядом",
-        "друг под другом",
-        "на весь экран",
-        "во весь экран",
-        "фулл",
-        "fullscreen",
-        "максимум экрана",
-        "сетк",
-        "2 на 2",
-        "два на два",
-        "углам",
-        "плитк",
-    )
-    return any(cue in text for cue in layout_cues)
 
 def generate_window_layout_rows(rng, target_count):
     source_path = ROOT / "data" / "window_layout" / "processed" / "window_layout_train.csv"
     if not source_path.exists():
         raise FileNotFoundError(
             "window_layout dataset is missing. Run: "
-            "python python_agent/training/generate_window_layout_dataset.py"
+            "python -m python_agent.training.generate_window_layout_dataset"
         )
 
     rows = []
@@ -292,18 +243,19 @@ def generate_window_layout_rows(rng, target_count):
         return rows[:target_count]
 
     base = list(rows)
-    while len(rows) < target_count:
+    while len(rows) < target_count and base:
         text, label = rng.choice(base)
         rows.append((wrap(text, rng), label))
         rows = unique_pairs(rows)
 
     return rows
 
+
 def generate_unknown_rows(rng, count):
     candidates = []
     for phrase in UNKNOWN_PHRASES:
-        for tpl in UNKNOWN_TEMPLATES:
-            candidates.append(tpl.format(phrase=phrase))
+        for template in UNKNOWN_TEMPLATES:
+            candidates.append(template.format(phrase=phrase))
     candidates = unique(candidates)
 
     seen = set()
@@ -329,7 +281,7 @@ def generate_unknown_rows(rng, count):
     if len(rows) < count:
         base = list(rows)
         i = 0
-        while len(rows) < count:
+        while len(rows) < count and base:
             text, label = rng.choice(base)
             candidate = norm(f"{text} вариант {i}")
             key = (candidate, label)
@@ -340,190 +292,158 @@ def generate_unknown_rows(rng, count):
 
     return rows[:count]
 
-def manual_tests():
-    return [dict(item) for item in MANUAL_TESTS]
+
+def manual_tests(app_catalog: dict[str, list[str]]):
+    tests = []
+    for item in MANUAL_TESTS:
+        expected = item.get("expected_skill")
+        text = str(item.get("text", ""))
+        if expected != SKILL_OPEN_APP:
+            tests.append(dict(item))
+            continue
+
+        if any(surface in norm(text) for forms in app_catalog.values() for surface in forms):
+            tests.append(dict(item))
+    return tests
 
 
-def build_manual_tests(app_catalog, disabled_app_catalog=None):
-    disabled_app_catalog = disabled_app_catalog or {}
-    tests = [
-        item
-        for item in manual_tests()
-        if item["expected_skill"] != SKILL_OPEN_APP
-        or not _mentions_disabled_app(item["text"], disabled_app_catalog)
-    ]
+def build_manual_tests(app_catalog):
+    tests = manual_tests(app_catalog)
+
     window_layout_tests = ROOT / "data" / "window_layout" / "eval" / "manual_tests.jsonl"
     if window_layout_tests.exists():
         with window_layout_tests.open("r", encoding="utf-8") as file:
             for line in file:
-                line = line.strip()
-                if not line:
+                if not line.strip():
                     continue
-
                 row = json.loads(line)
-                expected = row.get("expected", {})
-                if isinstance(expected, dict) and "layout" in expected:
-                    tests.append({"text": str(row.get("text", "")), "expected_skill": SKILL_WINDOW_LAYOUT})
+                if row.get("expected_layout") and row.get("text"):
+                    tests.append({"text": row["text"], "expected_skill": SKILL_WINDOW_LAYOUT})
 
-    for app_id in sorted(set(app_catalog) - set(APP_CATALOG)):
-        for surface in app_catalog[app_id][:4]:
-            tests.append({"text": f"открой {surface}", "expected_skill": SKILL_OPEN_APP})
-            tests.append({"text": f"запусти {surface}", "expected_skill": SKILL_OPEN_APP})
+    window_control_tests = ROOT / "data" / "window_control" / "processed" / "combined_examples.jsonl"
+    if window_control_tests.exists():
+        with window_control_tests.open("r", encoding="utf-8") as file:
+            for index, line in enumerate(file):
+                if index >= 120:
+                    break
+                if not line.strip():
+                    continue
+                row = json.loads(line)
+                args = row.get("args") if isinstance(row.get("args"), dict) else {}
+                if args.get("action") and row.get("text"):
+                    tests.append({"text": row["text"], "expected_skill": SKILL_WINDOW_CONTROL})
 
-    for app_id in sorted(disabled_app_catalog):
-        for surface in disabled_app_catalog[app_id][:4]:
-            tests.append({"text": f"открой {surface}", "expected_skill": SKILL_OPEN_APP})
-            tests.append({"text": f"запусти {surface}", "expected_skill": SKILL_OPEN_APP})
-    return dedupe_manual_tests(tests, Normalizer())
-
-
-def _mentions_disabled_app(text: str, disabled_app_catalog) -> bool:
-    value = norm(text)
-    for forms in disabled_app_catalog.values():
-        for surface in forms:
-            surface = norm(surface)
-            if surface and surface in value:
-                return True
-    return False
+    return tests
 
 
-def normalize_pairs(rows, normalizer):
-    labels_by_text = {}
-    rows_by_text = {}
-    for text, skill_id in rows:
-        normalized_text = normalizer.normalize(text)
-        if not normalized_text:
-            continue
+def normalize_and_resolve(rows):
+    normalizer = Normalizer()
+    labels_by_text: dict[str, set[str]] = {}
+    rows_by_text: dict[str, list[tuple[str, str]]] = {}
 
-        labels_by_text.setdefault(normalized_text, set()).add(skill_id)
-        rows_by_text.setdefault(normalized_text, []).append((normalized_text, skill_id))
+    priority = {
+        SKILL_WINDOW_LAYOUT: 5,
+        SKILL_WINDOW_CONTROL: 4,
+        SKILL_OPEN_APP: 3,
+        SKILL_VOLUME_SET: 2,
+        SKILL_UNKNOWN: 1,
+    }
 
-    resolved = []
-    dropped_conflicts = 0
-    for text in sorted(rows_by_text):
-        labels = labels_by_text[text]
-        if len(labels) == 1:
-            resolved.append(rows_by_text[text][0])
-            continue
-
-        non_unknown = sorted(label for label in labels if label != SKILL_UNKNOWN)
-        if len(non_unknown) == 1:
-            resolved.append((text, non_unknown[0]))
-            continue
-
-        dropped_conflicts += 1
-
-    if dropped_conflicts:
-        print(f"dropped conflicting skill rows: {dropped_conflicts}", file=sys.stderr)
-
-    return resolved
-
-
-def dedupe_manual_tests(rows, normalizer):
-    labels_by_text = {}
-    rows_by_text = {}
-    for row in rows:
-        text = normalizer.normalize(str(row.get("text", "")))
-        skill_id = str(row.get("expected_skill", SKILL_UNKNOWN))
+    for text, label in rows:
+        text = normalizer.normalize(text)
         if not text:
             continue
-        normalized = {"text": text, "expected_skill": skill_id}
-        labels_by_text.setdefault(text, set()).add(skill_id)
-        rows_by_text.setdefault(text, []).append(normalized)
+        rows_by_text.setdefault(text, []).append((text, label))
+        labels_by_text.setdefault(text, set()).add(label)
 
-    out = []
+    resolved = []
+    conflicts = 0
     for text in sorted(rows_by_text):
         labels = labels_by_text[text]
         if len(labels) == 1:
-            out.append(rows_by_text[text][0])
+            resolved.extend(rows_by_text[text])
             continue
 
-        non_unknown = sorted(label for label in labels if label != SKILL_UNKNOWN)
-        if len(non_unknown) == 1:
-            out.append({"text": text, "expected_skill": non_unknown[0]})
+        selected = max(labels, key=lambda label: priority.get(label, 0))
+        resolved.extend(row for row in rows_by_text[text] if row[1] == selected)
+        conflicts += 1
 
-    return out
+    if conflicts:
+        print(f"resolved skill conflicts: {conflicts}", file=sys.stderr)
 
-def write_csv(rows, path):
-    with path.open("w", encoding="utf-8", newline="") as f:
-        w = csv.writer(f)
-        w.writerow(["text", "skill"])
-        w.writerows(rows)
+    return unique_pairs(resolved)
 
-def write_jsonl(rows, path):
-    with path.open("w", encoding="utf-8") as f:
-        for text, skill_id in rows:
-            args = {"missing": ["skill"]} if skill_id == SKILL_UNKNOWN else {"skill": skill_id}
-            f.write(json.dumps({"text": text, "args": args}, ensure_ascii=False) + "\n")
+
+def write_csv(path: Path, rows):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", encoding="utf-8", newline="") as file:
+        writer = csv.writer(file)
+        writer.writerow(["text", "skill"])
+        writer.writerows(rows)
+
+
+def write_jsonl(path: Path, rows):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", encoding="utf-8") as file:
+        for row in rows:
+            file.write(json.dumps(row, ensure_ascii=False) + "\n")
+
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--samples-per-app", type=int, default=260)
-    parser.add_argument("--volume-samples", type=int, default=28000)
-    parser.add_argument("--window-control-samples", type=int, default=22000)
-    parser.add_argument("--window-layout-samples", type=int, default=22000)
-    parser.add_argument("--unknown-samples", type=int, default=18000)
     parser.add_argument("--output-dir", type=Path, default=DATA_DIR)
-    parser.add_argument("--user-apps-path", type=Path, default=None)
-    parser.add_argument("--overrides-path", type=Path, default=DEFAULT_APP_OVERRIDES_PATH)
+    parser.add_argument("--apps-catalog-path", type=Path, default=None)
+    parser.add_argument("--samples-per-open-app", type=int, default=380)
+    parser.add_argument("--volume-samples", type=int, default=14000)
+    parser.add_argument("--window-control-samples", type=int, default=14000)
+    parser.add_argument("--window-layout-samples", type=int, default=14000)
+    parser.add_argument("--unknown-samples", type=int, default=14000)
+    parser.add_argument("--seed", type=int, default=RANDOM_SEED)
     args = parser.parse_args()
 
-    rng = random.Random(RANDOM_SEED)
-    normalizer = Normalizer()
-    app_catalog = build_app_catalog(args.user_apps_path, args.overrides_path)
-    disabled_app_catalog = build_disabled_app_catalog(args.overrides_path, args.user_apps_path)
-    processed_dir = args.output_dir / "processed"
-    eval_dir = args.output_dir / "eval"
-    feedback_dir = args.output_dir / "feedback"
-    processed_dir.mkdir(parents=True, exist_ok=True)
-    eval_dir.mkdir(parents=True, exist_ok=True)
-    feedback_dir.mkdir(parents=True, exist_ok=True)
-
-    tests = build_manual_tests(app_catalog, disabled_app_catalog)
-    manual_texts = {normalizer.normalize(x["text"]) for x in tests}
+    rng = random.Random(args.seed)
+    app_catalog = build_app_catalog(args.apps_catalog_path)
 
     rows = []
-    rows.extend(generate_open_app_rows(rng, args.samples_per_app, app_catalog))
-    rows.extend(generate_disabled_open_app_unknown_rows(rng, disabled_app_catalog))
+    rows.extend(generate_open_app_rows(rng, args.samples_per_open_app, app_catalog))
     rows.extend(generate_volume_rows(rng, args.volume_samples))
     rows.extend(generate_window_control_rows(rng, args.window_control_samples))
     rows.extend(generate_window_layout_rows(rng, args.window_layout_samples))
     rows.extend(generate_unknown_rows(rng, args.unknown_samples))
-    rows = unique_pairs(rows)
-    rows = normalize_pairs(rows, normalizer)
-    rows = [(t, y) for t, y in rows if t not in manual_texts]
-    for text, skill_id in CURATED_HARD_EXAMPLES:
-        normalized_text = normalizer.normalize(text)
-        if normalized_text:
-            rows.extend((normalized_text, skill_id) for _ in range(160))
+
+    for text, label in CURATED_HARD_EXAMPLES:
+        if label == SKILL_OPEN_APP:
+            if not any(surface in norm(text) for forms in app_catalog.values() for surface in forms):
+                continue
+        add(rows, text, label, rng, wrap_prob=0.6)
+
+    rows = normalize_and_resolve(rows)
     rng.shuffle(rows)
 
-    write_csv(rows, processed_dir / "skill_train.csv")
-    write_jsonl(rows, processed_dir / "combined_examples.jsonl")
+    processed_dir = args.output_dir / "processed"
+    eval_dir = args.output_dir / "eval"
+    feedback_dir = args.output_dir / "feedback"
+
+    write_csv(processed_dir / "skill_train.csv", rows)
+    write_jsonl(eval_dir / "manual_tests.jsonl", build_manual_tests(app_catalog))
+
+    corrections_path = feedback_dir / "corrections.jsonl"
+    corrections_path.parent.mkdir(parents=True, exist_ok=True)
+    if not corrections_path.exists():
+        corrections_path.write_text("", encoding="utf-8")
 
     stats = {
-        "random_seed": RANDOM_SEED,
-        "text_is_normalized": True,
-        "total_rows": len(rows),
-        "class_counts": dict(Counter(y for _, y in rows)),
-        "manual_test_rows": len(tests),
-        "app_surface_form_classes_in_generator": len(app_catalog),
-        "user_app_ids": sorted(set(app_catalog) - set(APP_CATALOG)),
-        "disabled_app_ids": sorted(set(APP_CATALOG) - set(app_catalog)),
-        "note": "Synthetic dataset. Runtime model has no normalizer, dictionaries or manual shortcuts.",
+        "seed": args.seed,
+        "rows": len(rows),
+        "label_counts": dict(Counter(label for _text, label in rows)),
+        "enabled_app_ids": sorted(app_catalog),
     }
-    (processed_dir / "dataset_stats.json").write_text(json.dumps(stats, ensure_ascii=False, indent=2), encoding="utf-8")
+    (processed_dir / "dataset_stats.json").write_text(
+        json.dumps(stats, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    print(json.dumps(stats, ensure_ascii=False, indent=2))
 
-    with (eval_dir / "manual_tests.jsonl").open("w", encoding="utf-8") as f:
-        for item in tests:
-            f.write(json.dumps(item, ensure_ascii=False) + "\n")
-
-    corrections = feedback_dir / "corrections.jsonl"
-    if not corrections.exists():
-        corrections.write_text("", encoding="utf-8")
-
-    print(f"wrote train rows: {len(rows)}")
-    print(f"wrote manual tests: {len(tests)}")
 
 if __name__ == "__main__":
     main()

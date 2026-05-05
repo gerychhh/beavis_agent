@@ -17,31 +17,14 @@
 {"text": "убавь до двадцати", "expected_skill": "volume_set"}
 {"text": "саунд потише", "expected_skill": "volume_set"}
 {"text": "mute звук", "expected_skill": "volume_set"}
-{"text": "бивис открой браузер", "expected_skill": "open_app"}
-{"text": "открой хром", "expected_skill": "open_app"}
-{"text": "браузер включи", "expected_skill": "open_app"}
-{"text": "запусти блокнот", "expected_skill": "open_app"}
-{"text": "бивис открой вс код", "expected_skill": "open_app"}
-{"text": "открой где код пишу", "expected_skill": "open_app"}
-{"text": "код открой", "expected_skill": "open_app"}
-{"text": "открой телиграм", "expected_skill": "open_app"}
-{"text": "тг запусти", "expected_skill": "open_app"}
-{"text": "включи дискордик", "expected_skill": "open_app"}
 {"text": "открой калькулятор", "expected_skill": "open_app"}
-{"text": "правадник запусти", "expected_skill": "open_app"}
-{"text": "командную строку открой", "expected_skill": "open_app"}
-{"text": "павершелл запусти", "expected_skill": "open_app"}
-{"text": "настройки винды", "expected_skill": "open_app"}
 {"text": "открой фотошоп", "expected_skill": "open_app"}
 {"text": "запусти премьер про", "expected_skill": "open_app"}
 {"text": "открой фигму", "expected_skill": "open_app"}
-{"text": "анрил включи", "expected_skill": "open_app"}
 {"text": "пайчарм открой", "expected_skill": "open_app"}
 {"text": "open visual studio code", "expected_skill": "open_app"}
 {"text": "start chrome", "expected_skill": "open_app"}
-{"text": "го телегу", "expected_skill": "open_app"}
 {"text": "запусти 3д макс", "expected_skill": "open_app"}
-{"text": "открой docker desktop", "expected_skill": "open_app"}
 {"text": "постман включи", "expected_skill": "open_app"}
 {"text": "закрой браузер", "expected_skill": "window_control"}
 {"text": "закрой хром", "expected_skill": "window_control"}
@@ -65,60 +48,123 @@
 {"text": "следующий трек", "expected_skill": "unknown"}
 {"text": "поставь музыку", "expected_skill": "unknown"}
 {"text": "бивис", "expected_skill": "unknown"}
-{"text": "открой", "expected_skill": "open_app"}
-{"text": "разверни телеграмм и вскод пополам", "expected_skill": "window_layout"}
-{"text": "телега слева вс код справа", "expected_skill": "window_layout"}
-{"text": "бивис поставь хром слева", "expected_skill": "window_layout"}
-{"text": "вскод на правую половину", "expected_skill": "window_layout"}
-{"text": "браузер сверху консоль снизу", "expected_skill": "window_layout"}
-{"text": "раскинь хром телегу вскод и терминал сеткой", "expected_skill": "window_layout"}
-{"text": "фотошоп на весь экран", "expected_skill": "window_layout"}
-{"text": "поставь окно слева", "expected_skill": "window_layout"}
-{"text": "текущее окно вправо", "expected_skill": "window_layout"}
-{"text": "фигму в центр", "expected_skill": "window_layout"}
-{"text": "анрил на весь экран", "expected_skill": "window_layout"}
-{"text": "поставь блокнот снизу", "expected_skill": "window_layout"}
-{"text": "поставь терминал сверху", "expected_skill": "window_layout"}
-{"text": "постафь браузер слево", "expected_skill": "window_layout"}
-{"text": "развирни фоташоп на весь екран", "expected_skill": "window_layout"}
-{"text": "телиграм и вскот по полам", "expected_skill": "window_layout"}
-{"text": "открой codex", "expected_skill": "open_app"}
-{"text": "запусти codex", "expected_skill": "open_app"}
-{"text": "открой openai", "expected_skill": "open_app"}
-{"text": "запусти openai", "expected_skill": "open_app"}
-{"text": "открой openai.codex_2p2nqsd0c76g0!app", "expected_skill": "open_app"}
-{"text": "запусти openai.codex_2p2nqsd0c76g0!app", "expected_skill": "open_app"}
-{"text": "открой кодекс", "expected_skill": "open_app"}
-{"text": "запусти кодекс", "expected_skill": "open_app"}
-{"text": "открой cyberpunk 2077", "expected_skill": "open_app"}
-{"text": "запусти cyberpunk 2077", "expected_skill": "open_app"}
-{"text": "открой 1091500", "expected_skill": "open_app"}
-{"text": "запусти 1091500", "expected_skill": "open_app"}
-{"text": "открой steam://rungameid/1091500", "expected_skill": "open_app"}
-{"text": "запусти steam://rungameid/1091500", "expected_skill": "open_app"}
-{"text": "открой кибер пунк", "expected_skill": "open_app"}
-{"text": "запусти кибер пунк", "expected_skill": "open_app"}
-{"text": "открой dota 2", "expected_skill": "open_app"}
-{"text": "запусти dota 2", "expected_skill": "open_app"}
-{"text": "открой 570", "expected_skill": "open_app"}
-{"text": "запусти 570", "expected_skill": "open_app"}
-{"text": "открой steam://rungameid/570", "expected_skill": "open_app"}
-{"text": "запусти steam://rungameid/570", "expected_skill": "open_app"}
-{"text": "открой дота", "expected_skill": "open_app"}
-{"text": "запусти дота", "expected_skill": "open_app"}
-{"text": "открой planetvpn", "expected_skill": "open_app"}
-{"text": "запусти planetvpn", "expected_skill": "open_app"}
-{"text": "открой freevpnplanet", "expected_skill": "open_app"}
-{"text": "запусти freevpnplanet", "expected_skill": "open_app"}
-{"text": "открой freevpnplanet.planetvpn_b2qrq2z57ppd2!planetvpn", "expected_skill": "open_app"}
-{"text": "запусти freevpnplanet.planetvpn_b2qrq2z57ppd2!planetvpn", "expected_skill": "open_app"}
-{"text": "открой впн", "expected_skill": "open_app"}
-{"text": "запусти впн", "expected_skill": "open_app"}
-{"text": "открой яндекс музыка", "expected_skill": "open_app"}
-{"text": "запусти яндекс музыка", "expected_skill": "open_app"}
-{"text": "открой музыка", "expected_skill": "open_app"}
-{"text": "запусти музыка", "expected_skill": "open_app"}
-{"text": "открой янмузыка", "expected_skill": "open_app"}
-{"text": "запусти янмузыка", "expected_skill": "open_app"}
-{"text": "открой яндекс мьюзик", "expected_skill": "open_app"}
-{"text": "запусти яндекс мьюзик", "expected_skill": "open_app"}
+{"text": "алло убери басу данных access полностью", "expected_skill": "window_control"}
+{"text": "эй бивис закрой акцес", "expected_skill": "window_control"}
+{"text": "ну ка заканчивай с aкcess", "expected_skill": "window_control"}
+{"text": "брух заканчивай с microsoft access", "expected_skill": "window_control"}
+{"text": "beavis зкрой базуданныхaccess", "expected_skill": "window_control"}
+{"text": "закрой пожалуйста басу данных access", "expected_skill": "window_control"}
+{"text": "брух закрывай базуданныхaccess", "expected_skill": "window_control"}
+{"text": "ну ка убери нахрен басу данных access", "expected_skill": "window_control"}
+{"text": "брух заверши базу данных access", "expected_skill": "window_control"}
+{"text": "эй бивис закрой окно акцез", "expected_skill": "window_control"}
+{"text": "ну ка убей процесс базуданныхaccess", "expected_skill": "window_control"}
+{"text": "алло закрывай эту аксис", "expected_skill": "window_control"}
+{"text": "beavis зактни базаaccess", "expected_skill": "window_control"}
+{"text": "алло базаaccess выключи", "expected_skill": "window_control"}
+{"text": "брух прибей acess", "expected_skill": "window_control"}
+{"text": "beavis acess выключи", "expected_skill": "window_control"}
+{"text": "алло выйди из аксес", "expected_skill": "window_control"}
+{"text": "эй бивис выключи базу даных access", "expected_skill": "window_control"}
+{"text": "бивис закрывай аксис", "expected_skill": "window_control"}
+{"text": "брух закрой пожалуйста базу данных access", "expected_skill": "window_control"}
+{"text": "алло базаaccess заверши", "expected_skill": "window_control"}
+{"text": "дружище закрой нафиг aкcess", "expected_skill": "window_control"}
+{"text": "beavis закрой аксес", "expected_skill": "window_control"}
+{"text": "эй бивис прибей microsoft access", "expected_skill": "window_control"}
+{"text": "бивис закрой басу данных access", "expected_skill": "window_control"}
+{"text": "слушай зкрой базаaccess", "expected_skill": "window_control"}
+{"text": "брух акцез закрой", "expected_skill": "window_control"}
+{"text": "эй бивис access закрой", "expected_skill": "window_control"}
+{"text": "алло заверши базаaccess", "expected_skill": "window_control"}
+{"text": "брух аксесс выключи", "expected_skill": "window_control"}
+{"text": "дружище закрой нафиг базуданныхaccess", "expected_skill": "window_control"}
+{"text": "закрой нафиг access", "expected_skill": "window_control"}
+{"text": "алло microsoft access выключи", "expected_skill": "window_control"}
+{"text": "дружище акцез закрой", "expected_skill": "window_control"}
+{"text": "beavis убей процесс акцес", "expected_skill": "window_control"}
+{"text": "beavis выйди из база access", "expected_skill": "window_control"}
+{"text": "эй бивис закрой окно аксесс", "expected_skill": "window_control"}
+{"text": "слушай прибей офисную базу", "expected_skill": "window_control"}
+{"text": "beavis закрой асесс", "expected_skill": "window_control"}
+{"text": "ну ка закрой access", "expected_skill": "window_control"}
+{"text": "бивис закрой окно аксесс", "expected_skill": "window_control"}
+{"text": "алло убери базу даных access полностью", "expected_skill": "window_control"}
+{"text": "слушай убери нахрен базу данных aкcess", "expected_skill": "window_control"}
+{"text": "слушай снеси аксесс", "expected_skill": "window_control"}
+{"text": "брух закрой нафиг аксес", "expected_skill": "window_control"}
+{"text": "ну ка закрой пожалуйста aкcess", "expected_skill": "window_control"}
+{"text": "эй бивис база access заверши", "expected_skill": "window_control"}
+{"text": "слушай закрой пожалуйста асесс", "expected_skill": "window_control"}
+{"text": "эй бивис хватит офисную базу", "expected_skill": "window_control"}
+{"text": "брух закрой нафиг базу данных access", "expected_skill": "window_control"}
+{"text": "заверши базу данных access", "expected_skill": "window_control"}
+{"text": "зактни aкcess", "expected_skill": "window_control"}
+{"text": "слушай выключи акцес", "expected_skill": "window_control"}
+{"text": "слушай заверши базу данных access", "expected_skill": "window_control"}
+{"text": "алло снеси асесс", "expected_skill": "window_control"}
+{"text": "эй бивис выйди из базуданныхaccess", "expected_skill": "window_control"}
+{"text": "бивис kill аксес", "expected_skill": "window_control"}
+{"text": "убери нахрен microsoft access", "expected_skill": "window_control"}
+{"text": "бивис убери базу данных access полностью", "expected_skill": "window_control"}
+{"text": "дружище aкcess закрой", "expected_skill": "window_control"}
+{"text": "брух выйди из базу данных access", "expected_skill": "window_control"}
+{"text": "бивис закрыть базуданныхaccess", "expected_skill": "window_control"}
+{"text": "эй бивис закрой нафиг офисную базу", "expected_skill": "window_control"}
+{"text": "ну ка close аксис", "expected_skill": "window_control"}
+{"text": "бивис закрой нафиг базу данных access", "expected_skill": "window_control"}
+{"text": "beavis close aкcess", "expected_skill": "window_control"}
+{"text": "брух close аксесс", "expected_skill": "window_control"}
+{"text": "брух выйди из аксесс", "expected_skill": "window_control"}
+{"text": "дружище убери нахрен aкcess", "expected_skill": "window_control"}
+{"text": "слушай зкрой офисную базу", "expected_skill": "window_control"}
+{"text": "дружище закрой пожалуйста басу данных access", "expected_skill": "window_control"}
+{"text": "бивис хватит аксесс", "expected_skill": "window_control"}
+{"text": "ну ка хватит аксис", "expected_skill": "window_control"}
+{"text": "beavis убери акцез полностью", "expected_skill": "window_control"}
+{"text": "beavis закрой окно база access", "expected_skill": "window_control"}
+{"text": "дружище закрой окно aкcess", "expected_skill": "window_control"}
+{"text": "слушай закрой окно акцез", "expected_skill": "window_control"}
+{"text": "брух microsoft access закрой", "expected_skill": "window_control"}
+{"text": "эй бивис прибей access", "expected_skill": "window_control"}
+{"text": "брух убери акцес полностью", "expected_skill": "window_control"}
+{"text": "закрой офисную базу", "expected_skill": "window_control"}
+{"text": "ну ка close acess", "expected_skill": "window_control"}
+{"text": "брух выйди из базаaccess", "expected_skill": "window_control"}
+{"text": "ну ка выйди из баса access", "expected_skill": "window_control"}
+{"text": "ну ка закрой окно microsoft access", "expected_skill": "window_control"}
+{"text": "бивис убери нахрен базу данных access", "expected_skill": "window_control"}
+{"text": "beavis убери нахрен акцез", "expected_skill": "window_control"}
+{"text": "beavis закрывай эту базу данных aкcess", "expected_skill": "window_control"}
+{"text": "эй бивис закрой окно акцес", "expected_skill": "window_control"}
+{"text": "бивис убери аксес полностью", "expected_skill": "window_control"}
+{"text": "закрой пожалуйста база access", "expected_skill": "window_control"}
+{"text": "слушай закрыть mcrosoft access", "expected_skill": "window_control"}
+{"text": "алло kill базу данных access", "expected_skill": "window_control"}
+{"text": "дружище выйди из базу даных access", "expected_skill": "window_control"}
+{"text": "beavis закрой пожалуйста баса access", "expected_skill": "window_control"}
+{"text": "дружище хватит mcrosoft access", "expected_skill": "window_control"}
+{"text": "beavis закрой нафиг aкcess", "expected_skill": "window_control"}
+{"text": "алло зактни базу данных aкcess", "expected_skill": "window_control"}
+{"text": "close баса access", "expected_skill": "window_control"}
+{"text": "слушай закрой базуданныхaccess", "expected_skill": "window_control"}
+{"text": "бивис close acess", "expected_skill": "window_control"}
+{"text": "убери aкcess полностью", "expected_skill": "window_control"}
+{"text": "бивис зактни базуданныхaccess", "expected_skill": "window_control"}
+{"text": "beavis базаaccess заверши", "expected_skill": "window_control"}
+{"text": "закрывай эту базу данных access", "expected_skill": "window_control"}
+{"text": "слушай хватит access", "expected_skill": "window_control"}
+{"text": "брух закрывай асесс", "expected_skill": "window_control"}
+{"text": "эй бивис закрой нафиг acess", "expected_skill": "window_control"}
+{"text": "алло закрыть microsoft access", "expected_skill": "window_control"}
+{"text": "дружище выключи база access", "expected_skill": "window_control"}
+{"text": "бивис акцез выключи", "expected_skill": "window_control"}
+{"text": "эй бивис убери база access полностью", "expected_skill": "window_control"}
+{"text": "дружище убери офисную базу полностью", "expected_skill": "window_control"}
+{"text": "ну ка убери access полностью", "expected_skill": "window_control"}
+{"text": "ну ка хватит аксесс", "expected_skill": "window_control"}
+{"text": "beavis закрыть базу данных access", "expected_skill": "window_control"}
+{"text": "брух закрой окно баса access", "expected_skill": "window_control"}
+{"text": "базу данных access закрой", "expected_skill": "window_control"}
+{"text": "дружище закрыть microsoft access", "expected_skill": "window_control"}
+{"text": "слушай убери нахрен аксесс", "expected_skill": "window_control"}

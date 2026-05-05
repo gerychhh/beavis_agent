@@ -6,11 +6,15 @@ import hashlib
 import json
 import random
 import re
+import sys
 from collections import Counter
 from pathlib import Path
 
-from python_agent.resolvers.app_catalog_overrides import DEFAULT_APP_OVERRIDES_PATH, load_app_catalog_overrides
-from python_agent.resolvers.user_app_catalog import load_user_apps
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
+from python_agent.resolvers.app_catalog_service import AppCatalogService
 from python_agent.training.dataset_sources import dict_from_source, list_from_source, load_training_source
 
 
@@ -18,7 +22,6 @@ RANDOM_SEED = 42
 
 _SOURCE = load_training_source("window_control.json")
 
-APPS = dict_from_source(_SOURCE, "apps")
 AGENT_PREFIXES = list_from_source(_SOURCE, "agent_prefixes")
 ACTION_TEMPLATES = dict_from_source(_SOURCE, "action_templates")
 CLOSE_TEMPLATES = list(ACTION_TEMPLATES["close"])
@@ -33,7 +36,7 @@ UNKNOWN_WRAPPERS = list_from_source(_SOURCE, "unknown_wrappers")
 
 
 def is_spoken_form(value: str) -> bool:
-    text = value.strip()
+    text = str(value).strip()
     if not text:
         return False
     if any(marker in text for marker in ("\\", "/", "://", "{", "}", "!", ".exe")):
@@ -41,50 +44,39 @@ def is_spoken_form(value: str) -> bool:
     return True
 
 
-def build_apps(
-    user_apps_path: Path | None = None,
-    overrides_path: Path | None = DEFAULT_APP_OVERRIDES_PATH,
-) -> dict[str, list[str]]:
-    overrides = load_app_catalog_overrides(overrides_path)
-    apps = {
-        app_id: [
-            clean_text(alias)
-            for alias in [
-                *aliases,
-                *(overrides[app_id].speech_forms if app_id in overrides else []),
-            ]
-            if is_spoken_form(str(alias))
-        ]
-        for app_id, aliases in APPS.items()
-        if not (app_id in overrides and overrides[app_id].disabled)
-    }
+def clean_text(text: str) -> str:
+    text = str(text).lower().strip()
+    text = re.sub(r"\s+", " ", text)
+    return text
 
-    for item in load_user_apps(user_apps_path):
+
+def build_apps(apps_catalog_path: Path | None = None) -> dict[str, list[str]]:
+    service = AppCatalogService(apps_catalog_path)
+    apps: dict[str, list[str]] = {}
+
+    for app in service.get_enabled_apps():
         forms = [
-            item.display_name,
-            Path(item.launch_target).stem,
-            *item.speech_forms,
-            *(overrides[item.app_id].speech_forms if item.app_id in overrides else []),
+            app.display_name,
+            Path(app.launch_target).stem if app.launch_target else "",
+            Path(app.target_path).stem if app.target_path else "",
+            app.app_id.replace("_", " "),
+            *app.speech_forms,
         ]
+
         cleaned = list(dict.fromkeys([
             clean_text(form)
             for form in forms
             if is_spoken_form(str(form))
         ]))
+
         if cleaned:
-            apps[item.app_id] = cleaned
+            apps[app.app_id] = cleaned
 
     return apps
 
 
 def stable_seed(text: str) -> int:
     return int(hashlib.md5(text.encode("utf-8")).hexdigest()[:8], 16)
-
-
-def clean_text(text: str) -> str:
-    text = str(text).lower().strip()
-    text = re.sub(r"\s+", " ", text)
-    return text
 
 
 def simple_typos(text: str) -> list[str]:
@@ -119,12 +111,12 @@ def build_app_aliases(max_aliases_per_app: int, apps: dict[str, list[str]]) -> d
     result: dict[str, list[str]] = {}
 
     for app_id, aliases in apps.items():
-        original_aliases = []
+        original_aliases: list[str] = []
         seen: set[str] = set()
 
         for alias in aliases:
-            alias = alias.lower()
-            if alias not in seen:
+            alias = clean_text(alias)
+            if alias and alias not in seen:
                 original_aliases.append(alias)
                 seen.add(alias)
 
@@ -132,7 +124,7 @@ def build_app_aliases(max_aliases_per_app: int, apps: dict[str, list[str]]) -> d
         for alias in original_aliases:
             typo_variants.update(simple_typos(alias))
 
-        typo_variants = typo_variants - seen
+        typo_variants -= seen
         typo_variants_list = sorted(typo_variants)
 
         local_random = random.Random(stable_seed(app_id))
@@ -276,12 +268,11 @@ def main() -> None:
     parser.add_argument("--current-samples-per-action", type=int, default=1200)
     parser.add_argument("--unknown-samples", type=int, default=24000)
     parser.add_argument("--max-aliases-per-app", type=int, default=22)
-    parser.add_argument("--user-apps-path", type=Path, default=None)
-    parser.add_argument("--overrides-path", type=Path, default=DEFAULT_APP_OVERRIDES_PATH)
+    parser.add_argument("--apps-catalog-path", type=Path, default=None)
     args = parser.parse_args()
 
     out_dir = Path(args.out_dir)
-    apps = build_apps(args.user_apps_path, args.overrides_path)
+    apps = build_apps(args.apps_catalog_path)
 
     rows_action, rows_target, combined = generate_dataset(
         samples_per_app_action=args.samples_per_app_action,
@@ -301,6 +292,7 @@ def main() -> None:
         "target_classes": len(set(target for _, target in rows_target)),
         "target_top_counts": Counter(target for _, target in rows_target).most_common(20),
         "app_classes": len(apps),
+        "enabled_app_ids": sorted(apps),
     }
 
     (out_dir / "dataset_stats.json").write_text(

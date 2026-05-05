@@ -72,7 +72,6 @@ class WindowLayoutModelExtractor(ArgumentExtractor):
         with warnings.catch_warnings():
             try:
                 from sklearn.exceptions import InconsistentVersionWarning
-
                 warnings.simplefilter("ignore", InconsistentVersionWarning)
             except Exception:
                 pass
@@ -97,10 +96,12 @@ class WindowLayoutModelExtractor(ArgumentExtractor):
 
         if isinstance(missing, list) and missing:
             if "layout" in args and "targets" in missing:
-                required = self._required_target_count(args["layout"])
-                matches = self.app_search.find_app_ids_in_text(text, limit=required)
-                if len(matches) >= required:
-                    args["targets"] = matches[:required]
+                matches = self.app_search.find_app_ids_in_text(
+                    text,
+                    limit=self._required_target_count(args["layout"]),
+                )
+                if len(matches) >= self._required_target_count(args["layout"]):
+                    args["targets"] = matches[:self._required_target_count(args["layout"])]
                     return ArgsPrediction(
                         args=args,
                         confidence=confidence,
@@ -187,5 +188,4 @@ class WindowLayoutModelExtractor(ArgumentExtractor):
                 return float(payload["confidence"])
             except (TypeError, ValueError):
                 pass
-
         return 0.0

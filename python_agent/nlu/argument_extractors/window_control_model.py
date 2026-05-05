@@ -1,9 +1,9 @@
 from __future__ import annotations
 
 import json
+import warnings
 from pathlib import Path
 from typing import Any
-import warnings
 
 from python_agent.core.schemas import ArgsPrediction
 from python_agent.nlu.argument_extractors.base import ArgumentExtractor
@@ -63,7 +63,6 @@ class WindowControlModelExtractor(ArgumentExtractor):
         with warnings.catch_warnings():
             try:
                 from sklearn.exceptions import InconsistentVersionWarning
-
                 warnings.simplefilter("ignore", InconsistentVersionWarning)
             except Exception:
                 pass
@@ -82,11 +81,9 @@ class WindowControlModelExtractor(ArgumentExtractor):
         missing = payload.get("missing")
         if isinstance(missing, list) and missing:
             action = payload.get("action")
-            args: dict[str, Any] = {}
-
+            args = {}
             if isinstance(action, str) and action in ALLOWED_ACTIONS:
                 args["action"] = action
-
                 if "target" in missing:
                     matches = self.app_search.find_app_ids_in_text(text, limit=1)
                     if matches:
@@ -146,7 +143,6 @@ class WindowControlModelExtractor(ArgumentExtractor):
                     missing=["target"],
                     source="model_unknown_app_target",
                 )
-
             args["app_id"] = resolved_app_id
 
         return ArgsPrediction(args=args, confidence=confidence, missing=[], source="model_joblib")
@@ -173,5 +169,4 @@ class WindowControlModelExtractor(ArgumentExtractor):
                 return float(payload["confidence"])
             except (TypeError, ValueError):
                 pass
-
         return 0.0
