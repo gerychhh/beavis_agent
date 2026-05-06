@@ -47,7 +47,8 @@ class BridgeRouter:
             if method == "settings.load":
                 return self.api.settings.load()
             if method == "settings.save":
-                return self.api.settings.save(**params)
+                # settings.save receives the whole settings object as params.
+                return self.api.settings.save(params)
 
             if method == "history.list":
                 return self.api.history.list(**params)

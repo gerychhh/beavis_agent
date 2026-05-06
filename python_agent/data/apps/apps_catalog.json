@@ -1349,20 +1349,6 @@
       "priority": 70
     },
     {
-      "app_id": "yandeks_muzyka",
-      "display_name": "Яндекс Музыка",
-      "source": "default",
-      "enabled": true,
-      "launch_type": "shortcut",
-      "launch_target": "C:\\Users\\gerychhh_\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Яндекс Музыка.lnk",
-      "target_path": "C:\\Users\\gerychhh_\\AppData\\Local\\Programs\\YandexMusic\\Яндекс Музыка.exe",
-      "working_directory": "C:\\Users\\gerychhh_\\AppData\\Local\\Programs\\YandexMusic",
-      "speech_forms": [
-        "яндекс музыка"
-      ],
-      "priority": 70
-    },
-    {
       "app_id": "application_verifier_help",
       "display_name": "Application Verifier Help",
       "source": "default",
@@ -3708,6 +3694,20 @@
         "xboxpcappce"
       ],
       "priority": 80
+    },
+    {
+      "app_id": "yandeks_muzyka",
+      "display_name": "Яндекс Музыка",
+      "source": "default",
+      "enabled": true,
+      "launch_type": "shortcut",
+      "launch_target": "C:\\Users\\gerychhh_\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Яндекс Музыка.lnk",
+      "target_path": "C:\\Users\\gerychhh_\\AppData\\Local\\Programs\\YandexMusic\\Яндекс Музыка.exe",
+      "working_directory": "C:\\Users\\gerychhh_\\AppData\\Local\\Programs\\YandexMusic",
+      "speech_forms": [
+        "яндекс музыка"
+      ],
+      "priority": 70
     },
     {
       "app_id": "zoom",
