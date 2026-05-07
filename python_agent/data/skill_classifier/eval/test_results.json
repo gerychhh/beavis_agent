@@ -1,0 +1,1495 @@
+{
+  "model_path": "C:\\Users\\gerychhh_\\beavis_agent\\python_agent\\models\\skill_classifier.joblib",
+  "model_exists": true,
+  "total": 165,
+  "correct": 165,
+  "accuracy": 1.0,
+  "errors": [],
+  "results": [
+    {
+      "text": "брух сделай громче",
+      "normalized_text": "сделай громче",
+      "expected_skill": "volume_set",
+      "predicted_skill": "volume_set",
+      "confidence": 0.9631,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "сделавй громче",
+      "normalized_text": "сделавй громче",
+      "expected_skill": "volume_set",
+      "predicted_skill": "volume_set",
+      "confidence": 0.9147,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "бивис громкость на десять",
+      "normalized_text": "громкость на десять",
+      "expected_skill": "volume_set",
+      "predicted_skill": "volume_set",
+      "confidence": 0.9979,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "динамики рвуться",
+      "normalized_text": "динамики рвуться",
+      "expected_skill": "volume_set",
+      "predicted_skill": "volume_set",
+      "confidence": 0.9555,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "заткнись",
+      "normalized_text": "заткнись",
+      "expected_skill": "volume_set",
+      "predicted_skill": "volume_set",
+      "confidence": 0.9421,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "бивис зактни",
+      "normalized_text": "зактни",
+      "expected_skill": "volume_set",
+      "predicted_skill": "volume_set",
+      "confidence": 0.9271,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "громко слишком",
+      "normalized_text": "громко слишком",
+      "expected_skill": "volume_set",
+      "predicted_skill": "volume_set",
+      "confidence": 0.8628,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "поставь звук на семдесят пять",
+      "normalized_text": "поставь звук на семдесят пять",
+      "expected_skill": "volume_set",
+      "predicted_skill": "volume_set",
+      "confidence": 0.9905,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "сделай на 20 тише",
+      "normalized_text": "сделай на 20 тише",
+      "expected_skill": "volume_set",
+      "predicted_skill": "volume_set",
+      "confidence": 0.9756,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "прибавь на пятнадцать",
+      "normalized_text": "прибавь на пятнадцать",
+      "expected_skill": "volume_set",
+      "predicted_skill": "volume_set",
+      "confidence": 0.9862,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "еле слышно",
+      "normalized_text": "еле слышно",
+      "expected_skill": "volume_set",
+      "predicted_skill": "volume_set",
+      "confidence": 0.9508,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "сделай еле слышно",
+      "normalized_text": "сделай еле слышно",
+      "expected_skill": "volume_set",
+      "predicted_skill": "volume_set",
+      "confidence": 0.8932,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "на мксимум громкость",
+      "normalized_text": "на мксимум громкость",
+      "expected_skill": "volume_set",
+      "predicted_skill": "volume_set",
+      "confidence": 0.9287,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "поставь на палавину",
+      "normalized_text": "поставь на палавину",
+      "expected_skill": "volume_set",
+      "predicted_skill": "volume_set",
+      "confidence": 0.7021,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "колонки орут сделай тише",
+      "normalized_text": "колонки орут сделай тише",
+      "expected_skill": "volume_set",
+      "predicted_skill": "volume_set",
+      "confidence": 0.9698,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "звук на восимьдесят",
+      "normalized_text": "звук на восимьдесят",
+      "expected_skill": "volume_set",
+      "predicted_skill": "volume_set",
+      "confidence": 0.9966,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "убавь до двадцати",
+      "normalized_text": "убавь до двадцати",
+      "expected_skill": "volume_set",
+      "predicted_skill": "volume_set",
+      "confidence": 0.9819,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "саунд потише",
+      "normalized_text": "саунд потише",
+      "expected_skill": "volume_set",
+      "predicted_skill": "volume_set",
+      "confidence": 0.9668,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "mute звук",
+      "normalized_text": "mute звук",
+      "expected_skill": "volume_set",
+      "predicted_skill": "volume_set",
+      "confidence": 0.8821,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "запусти блокнот",
+      "normalized_text": "запусти блокнот",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9942,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "открой фотошоп",
+      "normalized_text": "открой фотошоп",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9752,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "запусти премьер про",
+      "normalized_text": "запусти премьер про",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9932,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "запусти 3д макс",
+      "normalized_text": "запусти 3д макс",
+      "expected_skill": "open_app",
+      "predicted_skill": "open_app",
+      "confidence": 0.9932,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "закрой браузер",
+      "normalized_text": "закрой браузер",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.6257,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "закрой хром",
+      "normalized_text": "закрой хром",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.977,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "сверни окно",
+      "normalized_text": "сверни окно",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9588,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "сверни блокнот",
+      "normalized_text": "сверни блокнот",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9877,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "разверни окно",
+      "normalized_text": "разверни окно",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9355,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "восстанови текущее окно",
+      "normalized_text": "восстанови текущее окно",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9644,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "верни телеграм",
+      "normalized_text": "верни телеграм",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.8229,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "close chrome",
+      "normalized_text": "close chrome",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9666,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "minimize current window",
+      "normalized_text": "minimize current window",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9466,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "какая погода завтра",
+      "normalized_text": "какая погода завтра",
+      "expected_skill": "unknown",
+      "predicted_skill": "unknown",
+      "confidence": 0.9701,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "поставь таймер на десять минут",
+      "normalized_text": "поставь таймер на десять минут",
+      "expected_skill": "unknown",
+      "predicted_skill": "unknown",
+      "confidence": 0.9413,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "создай заметку про проект",
+      "normalized_text": "создай заметку про проект",
+      "expected_skill": "unknown",
+      "predicted_skill": "unknown",
+      "confidence": 0.8806,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "сделай скриншот",
+      "normalized_text": "сделай скриншот",
+      "expected_skill": "unknown",
+      "predicted_skill": "unknown",
+      "confidence": 0.9505,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "напиши сообщение в телеграм",
+      "normalized_text": "напиши сообщение в телеграм",
+      "expected_skill": "unknown",
+      "predicted_skill": "unknown",
+      "confidence": 0.9867,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "найди файл отчет",
+      "normalized_text": "найди файл отчет",
+      "expected_skill": "unknown",
+      "predicted_skill": "unknown",
+      "confidence": 0.9729,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "расскажи анекдот",
+      "normalized_text": "расскажи анекдот",
+      "expected_skill": "unknown",
+      "predicted_skill": "unknown",
+      "confidence": 0.9447,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "что такое random forest",
+      "normalized_text": "что такое random forest",
+      "expected_skill": "unknown",
+      "predicted_skill": "unknown",
+      "confidence": 0.9869,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "введи текст привет",
+      "normalized_text": "введи текст привет",
+      "expected_skill": "unknown",
+      "predicted_skill": "unknown",
+      "confidence": 0.9197,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "перезагрузи компьютер",
+      "normalized_text": "перезагрузи компьютер",
+      "expected_skill": "unknown",
+      "predicted_skill": "unknown",
+      "confidence": 0.9725,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "следующий трек",
+      "normalized_text": "следующий трек",
+      "expected_skill": "unknown",
+      "predicted_skill": "unknown",
+      "confidence": 0.9513,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "поставь музыку",
+      "normalized_text": "поставь музыку",
+      "expected_skill": "unknown",
+      "predicted_skill": "unknown",
+      "confidence": 0.952,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "бивис",
+      "normalized_text": "",
+      "expected_skill": "unknown",
+      "predicted_skill": "unknown",
+      "confidence": 0.0,
+      "source": "empty_text",
+      "ok": true
+    },
+    {
+      "text": "close акробат ридер",
+      "normalized_text": "close акробат ридер",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.8546,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "алло акробат ридер заверши",
+      "normalized_text": "алло акробат ридер заверши",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9531,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "эй бивис закрывай адоб акробат",
+      "normalized_text": "закрывай адоб акробат",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9676,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "ну ка адоб ридер заверши",
+      "normalized_text": "ка адоб ридер заверши",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9683,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "ну ка pdf откыть выключи",
+      "normalized_text": "ка pdf откыть выключи",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.916,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "бивис закрыть acrobat",
+      "normalized_text": "закрыть acrobat",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.914,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "алло выйди из pdf открыть",
+      "normalized_text": "алло выйди из pdf открыть",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9171,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "алло close адобридер",
+      "normalized_text": "алло close адобридер",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9398,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "брух закрой читалка pdf",
+      "normalized_text": "закрой читалка pdf",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9657,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "beavis close пдф ридер",
+      "normalized_text": "close пдф ридер",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9086,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "дружище закрывай эту акробат ридер",
+      "normalized_text": "дружище закрывай эту акробат ридер",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9889,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "слушай закрой окно акробат рыдер",
+      "normalized_text": "закрой окно акробат рыдер",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9715,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "слушай выключи pdf reader",
+      "normalized_text": "выключи pdf reader",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9105,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "закрыть читалка pdf",
+      "normalized_text": "закрыть читалка pdf",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9087,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "алло прибей читалкаpdf",
+      "normalized_text": "алло прибей читалкаpdf",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9051,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "ну ка заверши акрабат",
+      "normalized_text": "ка заверши акрабат",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9656,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "ну ка выключи акрабат",
+      "normalized_text": "ка выключи акрабат",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9155,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "брух убери нахрен читалка pdf",
+      "normalized_text": "убери нахрен читалка pdf",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9687,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "ну ка закрой пожалуйста adobe acrobat",
+      "normalized_text": "ка закрой adobe acrobat",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.976,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "beavis убери нахрен pdf открыть",
+      "normalized_text": "убери нахрен pdf открыть",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9032,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "ну ка pdf открыть закрой",
+      "normalized_text": "ка pdf открыть закрой",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9572,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "алло kill читалка pdf",
+      "normalized_text": "алло kill читалка pdf",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9259,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "дружище убери arobat полностью",
+      "normalized_text": "дружище убери arobat полностью",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9903,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "дружище убери читалкаpdf полностью",
+      "normalized_text": "дружище убери читалкаpdf полностью",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9863,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "слушай adobe acrbat закрой",
+      "normalized_text": "adobe acrbat закрой",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9527,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "дружище выключи акробат",
+      "normalized_text": "дружище выключи акробат",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9862,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "брух закрой нафиг pdf открыть",
+      "normalized_text": "закрой нафиг pdf открыть",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9394,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "бивис pdf открыть выключи",
+      "normalized_text": "pdf открыть выключи",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.707,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "adobe acrobat закрой",
+      "normalized_text": "adobe acrobat закрой",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9351,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "эй бивис kill адобридер",
+      "normalized_text": "kill адобридер",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9294,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "бивис убери нахрен acrobat",
+      "normalized_text": "убери нахрен acrobat",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9732,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "брух закрой окно шиталка pdf",
+      "normalized_text": "закрой окно шиталка pdf",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9706,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "алло хватит адобридер",
+      "normalized_text": "алло хватит адобридер",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.931,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "ну ка close шиталка pdf",
+      "normalized_text": "ка close шиталка pdf",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9558,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "слушай заверши adobe acrobat",
+      "normalized_text": "заверши adobe acrobat",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9335,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "алло закрывай эту читалка pdf",
+      "normalized_text": "алло закрывай эту читалка pdf",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9745,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "beavis прибей adobe acrobat",
+      "normalized_text": "прибей adobe acrobat",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.8679,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "алло заверши пдф ридер",
+      "normalized_text": "алло заверши пдф ридер",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9471,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "бивис закрывай эту акробат рыдер",
+      "normalized_text": "закрывай эту акробат рыдер",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.967,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "ну ка close пдф ридер",
+      "normalized_text": "ка close пдф ридер",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9563,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "алло закрывай arobat",
+      "normalized_text": "алло закрывай arobat",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9778,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "алло закрой pdf reader",
+      "normalized_text": "алло закрой pdf reader",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9739,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "эй бивис зкрой акробат рыдер",
+      "normalized_text": "зкрой акробат рыдер",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9083,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "слушай читалкаpdf заверши",
+      "normalized_text": "читалкаpdf заверши",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9413,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "дружище снеси адобридер",
+      "normalized_text": "дружище снеси адобридер",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9793,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "закрой нафиг шиталка pdf",
+      "normalized_text": "закрой нафиг шиталка pdf",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9746,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "алло закрой пожалуйста адобридер",
+      "normalized_text": "алло закрой адобридер",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9619,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "эй бивис читалка pdf выключи",
+      "normalized_text": "читалка pdf выключи",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9105,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "алло закрывай адоб ридер",
+      "normalized_text": "алло закрывай адоб ридер",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9785,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "ну ка заканчивай с читалкаpdf",
+      "normalized_text": "ка заканчивай с читалкаpdf",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9455,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "бивис закрывай адобридер",
+      "normalized_text": "закрывай адобридер",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9731,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "beavis заверши адоб акробат",
+      "normalized_text": "заверши адоб акробат",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9616,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "дружище закрыть читалкаpdf",
+      "normalized_text": "дружище закрыть читалкаpdf",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9783,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "beavis закрой нафиг adobe acrobat",
+      "normalized_text": "закрой нафиг adobe acrobat",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.961,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "брух закрой окно adobe acrbat",
+      "normalized_text": "закрой окно adobe acrbat",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9777,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "бивис выйди из акробат ридер",
+      "normalized_text": "выйди из акробат ридер",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9152,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "алло адоб акробат выключи",
+      "normalized_text": "алло адоб акробат выключи",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.924,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "бивис прибей шиталка pdf",
+      "normalized_text": "прибей шиталка pdf",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9318,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "ну ка хватит pdf reader",
+      "normalized_text": "ка хватит pdf reader",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9608,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "ну ка закрывай шиталка pdf",
+      "normalized_text": "ка закрывай шиталка pdf",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9786,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "бивис закрой нафиг акробат рыдер",
+      "normalized_text": "закрой нафиг акробат рыдер",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.966,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "эй бивис убери нахрен акробат",
+      "normalized_text": "убери нахрен акробат",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.979,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "слушай закрой нафиг адоб ридер",
+      "normalized_text": "закрой нафиг адоб ридер",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9748,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "ну ка заканчивай с адоб ридер",
+      "normalized_text": "ка заканчивай с адоб ридер",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9674,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "эй бивис закрывай pdf откыть",
+      "normalized_text": "закрывай pdf откыть",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9688,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "ну ка зкрой читалка pdf",
+      "normalized_text": "ка зкрой читалка pdf",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9408,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "брух хватит читалка pdf",
+      "normalized_text": "хватит читалка pdf",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9231,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "beavis закрывай эту acrobat",
+      "normalized_text": "закрывай эту acrobat",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9758,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "эй бивис закрой pdf откыть",
+      "normalized_text": "закрой pdf откыть",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9621,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "брух выключи адоб акробат",
+      "normalized_text": "выключи адоб акробат",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9248,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "close aкrobat reader",
+      "normalized_text": "close aкrobat reader",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.8536,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "слушай закрывай читалкаpdf",
+      "normalized_text": "закрывай читалкаpdf",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9633,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "слушай закрывай эту адоб ридер",
+      "normalized_text": "закрывай эту адоб ридер",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9708,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "ну ка pdf откыть заверши",
+      "normalized_text": "ка pdf откыть заверши",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9635,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "закрывай акробат ридер",
+      "normalized_text": "закрывай акробат ридер",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9481,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "beavis закрой читалкаpdf",
+      "normalized_text": "закрой читалкаpdf",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.953,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "эй бивис close адоб ридер",
+      "normalized_text": "close адоб ридер",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9082,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "ну ка убей процесс акробат",
+      "normalized_text": "ка убей процесс акробат",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9794,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "эй бивис kill pdf reader",
+      "normalized_text": "kill pdf reader",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.887,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "ну ка читалкаpdf заверши",
+      "normalized_text": "ка читалкаpdf заверши",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9343,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "заканчивай с шиталка pdf",
+      "normalized_text": "заканчивай с шиталка pdf",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9574,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "бивис закрой пдф ридер",
+      "normalized_text": "закрой пдф ридер",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9685,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "дружище выйди из адоб акробат",
+      "normalized_text": "дружище выйди из адоб акробат",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.983,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "beavis закрой окно pdf откыть",
+      "normalized_text": "закрой окно pdf откыть",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.979,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "слушай закрыть adobe acrbat",
+      "normalized_text": "закрыть adobe acrbat",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.8759,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "бивис закрой пожалуйста адобридер",
+      "normalized_text": "закрой адобридер",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9696,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "beavis прибей адоб акробат",
+      "normalized_text": "прибей адоб акробат",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9236,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "эй бивис aкrobat reader выключи",
+      "normalized_text": "aкrobat reader выключи",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.8689,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "эй бивис хватит акробат ридер",
+      "normalized_text": "хватит акробат ридер",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.8897,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "эй бивис pdf откыть выключи",
+      "normalized_text": "pdf откыть выключи",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9019,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "бивис хватит акробат",
+      "normalized_text": "хватит акробат",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9499,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "ну ка закрой акробат",
+      "normalized_text": "ка закрой акробат",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9835,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "beavis убери arobat полностью",
+      "normalized_text": "убери arobat полностью",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9759,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "слушай kill читалка pdf",
+      "normalized_text": "kill читалка pdf",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9155,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "beavis закрой окно arobat",
+      "normalized_text": "закрой окно arobat",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9758,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "алло адоб акробат заверши",
+      "normalized_text": "алло адоб акробат заверши",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9646,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "слушай закрой пожалуйста adobe acrobat",
+      "normalized_text": "закрой adobe acrobat",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9351,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "эй бивис закрой окно читалка pdf",
+      "normalized_text": "закрой окно читалка pdf",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9711,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "ну ка заканчивай с адоб акробат",
+      "normalized_text": "ка заканчивай с адоб акробат",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.972,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "эй бивис pdf открыть закрой",
+      "normalized_text": "pdf открыть закрой",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.8412,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "ну ка выйди из acrobat reader",
+      "normalized_text": "ка выйди из acrobat reader",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9346,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "слушай убей процесс pdf открыть",
+      "normalized_text": "убей процесс pdf открыть",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.8767,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "beavis закрывай adobe acrobat",
+      "normalized_text": "закрывай adobe acrobat",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9465,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "слушай снеси acrobat",
+      "normalized_text": "снеси acrobat",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9349,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "beavis закрой пожалуйста pdf reader",
+      "normalized_text": "закрой pdf reader",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9608,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "бивис адобридер заверши",
+      "normalized_text": "адобридер заверши",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9564,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "закрой окно aкrobat reader",
+      "normalized_text": "закрой окно aкrobat reader",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9736,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "алло kill акробат",
+      "normalized_text": "алло kill акробат",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9553,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "брух arobat закрой",
+      "normalized_text": "arobat закрой",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9762,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "beavis закрыть акробат ридер",
+      "normalized_text": "закрыть акробат ридер",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.8122,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "брух закрывай эту pdf reader",
+      "normalized_text": "закрывай эту pdf reader",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9681,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "алло закрывай эту акробат",
+      "normalized_text": "алло закрывай эту акробат",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9824,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "ну ка выключи acrobat reader",
+      "normalized_text": "ка выключи acrobat reader",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9199,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "алло снеси pdf reader",
+      "normalized_text": "алло снеси pdf reader",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.943,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "алло kill адоб ридер",
+      "normalized_text": "алло kill адоб ридер",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9378,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "дружище зкрой адобридер",
+      "normalized_text": "дружище зкрой адобридер",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9828,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "алло убери pdf reader полностью",
+      "normalized_text": "алло убери pdf reader полностью",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.979,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "брух закрой пожалуйста акрабат",
+      "normalized_text": "закрой акрабат",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9752,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "слушай заканчивай с adobe acrbat",
+      "normalized_text": "заканчивай с adobe acrbat",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.9481,
+      "source": "model_joblib",
+      "ok": true
+    },
+    {
+      "text": "beavis снеси acrobat reader",
+      "normalized_text": "снеси acrobat reader",
+      "expected_skill": "window_control",
+      "predicted_skill": "window_control",
+      "confidence": 0.8429,
+      "source": "model_joblib",
+      "ok": true
+    }
+  ]
+}

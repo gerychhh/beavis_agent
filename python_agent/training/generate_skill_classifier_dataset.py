@@ -14,7 +14,9 @@ if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
 from python_agent.nlu.normalizer import Normalizer
+from python_agent.resolvers.app_catalog_utils import is_spoken_form
 from python_agent.resolvers.app_catalog_service import AppCatalogService
+from python_agent.resolvers.app_visibility import is_user_visible_app
 from python_agent.training.dataset_sources import int_key_dict_from_source, list_from_source, load_training_source
 
 
@@ -117,6 +119,8 @@ def build_app_catalog(apps_catalog_path: Path | None = None) -> dict[str, list[s
     catalog: dict[str, list[str]] = {}
 
     for app in service.get_enabled_apps():
+        if not is_user_visible_app(app):
+            continue
         forms = [
             app.display_name,
             Path(app.launch_target).stem if app.launch_target else "",
@@ -127,7 +131,7 @@ def build_app_catalog(apps_catalog_path: Path | None = None) -> dict[str, list[s
         cleaned = unique([
             " ".join(str(form).strip().lower().split())
             for form in forms
-            if str(form).strip()
+            if is_spoken_form(str(form))
         ])
         if cleaned:
             catalog[app.app_id] = cleaned
@@ -175,6 +179,16 @@ def generate_volume_rows(rng, target_count):
 
 def looks_like_window_layout_command(text: str) -> bool:
     text = norm(text)
+    control_down_cues = (
+        "кинь вниз",
+        "скинь вниз",
+        "сбрось вниз",
+        "опусти вниз",
+        "убери вниз",
+    )
+    if any(cue in text for cue in control_down_cues):
+        return False
+
     layout_cues = (
         "слева", "слево", "влево", "левую", "левый",
         "справа", "справо", "вправо", "правую", "правый",
@@ -342,10 +356,10 @@ def normalize_and_resolve(rows):
     rows_by_text: dict[str, list[tuple[str, str]]] = {}
 
     priority = {
-        SKILL_WINDOW_LAYOUT: 5,
-        SKILL_WINDOW_CONTROL: 4,
+        SKILL_VOLUME_SET: 6,
+        SKILL_WINDOW_CONTROL: 5,
+        SKILL_WINDOW_LAYOUT: 4,
         SKILL_OPEN_APP: 3,
-        SKILL_VOLUME_SET: 2,
         SKILL_UNKNOWN: 1,
     }
 
@@ -371,7 +385,7 @@ def normalize_and_resolve(rows):
     if conflicts:
         print(f"resolved skill conflicts: {conflicts}", file=sys.stderr)
 
-    return unique_pairs(resolved)
+    return resolved
 
 
 def write_csv(path: Path, rows):
@@ -415,7 +429,9 @@ def main():
         if label == SKILL_OPEN_APP:
             if not any(surface in norm(text) for forms in app_catalog.values() for surface in forms):
                 continue
-        add(rows, text, label, rng, wrap_prob=0.6)
+        repeat = 36 if label == SKILL_VOLUME_SET else 12
+        for _ in range(repeat):
+            add(rows, text, label, rng, wrap_prob=0.6)
 
     rows = normalize_and_resolve(rows)
     rng.shuffle(rows)

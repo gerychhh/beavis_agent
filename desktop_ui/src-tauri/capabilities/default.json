@@ -2,9 +2,12 @@
   "identifier": "default",
   "description": "Default desktop UI capability",
   "windows": [
-    "main"
+    "main",
+    "beavis_overlay",
+    "beavis_toasts"
   ],
   "permissions": [
-    "core:default"
+    "core:default",
+    "global-shortcut:default"
   ]
 }

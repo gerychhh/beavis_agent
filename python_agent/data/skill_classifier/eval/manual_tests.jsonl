@@ -17,15 +17,10 @@
 {"text": "убавь до двадцати", "expected_skill": "volume_set"}
 {"text": "саунд потише", "expected_skill": "volume_set"}
 {"text": "mute звук", "expected_skill": "volume_set"}
-{"text": "открой калькулятор", "expected_skill": "open_app"}
+{"text": "запусти блокнот", "expected_skill": "open_app"}
 {"text": "открой фотошоп", "expected_skill": "open_app"}
 {"text": "запусти премьер про", "expected_skill": "open_app"}
-{"text": "открой фигму", "expected_skill": "open_app"}
-{"text": "пайчарм открой", "expected_skill": "open_app"}
-{"text": "open visual studio code", "expected_skill": "open_app"}
-{"text": "start chrome", "expected_skill": "open_app"}
 {"text": "запусти 3д макс", "expected_skill": "open_app"}
-{"text": "постман включи", "expected_skill": "open_app"}
 {"text": "закрой браузер", "expected_skill": "window_control"}
 {"text": "закрой хром", "expected_skill": "window_control"}
 {"text": "сверни окно", "expected_skill": "window_control"}
@@ -48,123 +43,123 @@
 {"text": "следующий трек", "expected_skill": "unknown"}
 {"text": "поставь музыку", "expected_skill": "unknown"}
 {"text": "бивис", "expected_skill": "unknown"}
-{"text": "алло убери басу данных access полностью", "expected_skill": "window_control"}
-{"text": "эй бивис закрой акцес", "expected_skill": "window_control"}
-{"text": "ну ка заканчивай с aкcess", "expected_skill": "window_control"}
-{"text": "брух заканчивай с microsoft access", "expected_skill": "window_control"}
-{"text": "beavis зкрой базуданныхaccess", "expected_skill": "window_control"}
-{"text": "закрой пожалуйста басу данных access", "expected_skill": "window_control"}
-{"text": "брух закрывай базуданныхaccess", "expected_skill": "window_control"}
-{"text": "ну ка убери нахрен басу данных access", "expected_skill": "window_control"}
-{"text": "брух заверши базу данных access", "expected_skill": "window_control"}
-{"text": "эй бивис закрой окно акцез", "expected_skill": "window_control"}
-{"text": "ну ка убей процесс базуданныхaccess", "expected_skill": "window_control"}
-{"text": "алло закрывай эту аксис", "expected_skill": "window_control"}
-{"text": "beavis зактни базаaccess", "expected_skill": "window_control"}
-{"text": "алло базаaccess выключи", "expected_skill": "window_control"}
-{"text": "брух прибей acess", "expected_skill": "window_control"}
-{"text": "beavis acess выключи", "expected_skill": "window_control"}
-{"text": "алло выйди из аксес", "expected_skill": "window_control"}
-{"text": "эй бивис выключи базу даных access", "expected_skill": "window_control"}
-{"text": "бивис закрывай аксис", "expected_skill": "window_control"}
-{"text": "брух закрой пожалуйста базу данных access", "expected_skill": "window_control"}
-{"text": "алло базаaccess заверши", "expected_skill": "window_control"}
-{"text": "дружище закрой нафиг aкcess", "expected_skill": "window_control"}
-{"text": "beavis закрой аксес", "expected_skill": "window_control"}
-{"text": "эй бивис прибей microsoft access", "expected_skill": "window_control"}
-{"text": "бивис закрой басу данных access", "expected_skill": "window_control"}
-{"text": "слушай зкрой базаaccess", "expected_skill": "window_control"}
-{"text": "брух акцез закрой", "expected_skill": "window_control"}
-{"text": "эй бивис access закрой", "expected_skill": "window_control"}
-{"text": "алло заверши базаaccess", "expected_skill": "window_control"}
-{"text": "брух аксесс выключи", "expected_skill": "window_control"}
-{"text": "дружище закрой нафиг базуданныхaccess", "expected_skill": "window_control"}
-{"text": "закрой нафиг access", "expected_skill": "window_control"}
-{"text": "алло microsoft access выключи", "expected_skill": "window_control"}
-{"text": "дружище акцез закрой", "expected_skill": "window_control"}
-{"text": "beavis убей процесс акцес", "expected_skill": "window_control"}
-{"text": "beavis выйди из база access", "expected_skill": "window_control"}
-{"text": "эй бивис закрой окно аксесс", "expected_skill": "window_control"}
-{"text": "слушай прибей офисную базу", "expected_skill": "window_control"}
-{"text": "beavis закрой асесс", "expected_skill": "window_control"}
-{"text": "ну ка закрой access", "expected_skill": "window_control"}
-{"text": "бивис закрой окно аксесс", "expected_skill": "window_control"}
-{"text": "алло убери базу даных access полностью", "expected_skill": "window_control"}
-{"text": "слушай убери нахрен базу данных aкcess", "expected_skill": "window_control"}
-{"text": "слушай снеси аксесс", "expected_skill": "window_control"}
-{"text": "брух закрой нафиг аксес", "expected_skill": "window_control"}
-{"text": "ну ка закрой пожалуйста aкcess", "expected_skill": "window_control"}
-{"text": "эй бивис база access заверши", "expected_skill": "window_control"}
-{"text": "слушай закрой пожалуйста асесс", "expected_skill": "window_control"}
-{"text": "эй бивис хватит офисную базу", "expected_skill": "window_control"}
-{"text": "брух закрой нафиг базу данных access", "expected_skill": "window_control"}
-{"text": "заверши базу данных access", "expected_skill": "window_control"}
-{"text": "зактни aкcess", "expected_skill": "window_control"}
-{"text": "слушай выключи акцес", "expected_skill": "window_control"}
-{"text": "слушай заверши базу данных access", "expected_skill": "window_control"}
-{"text": "алло снеси асесс", "expected_skill": "window_control"}
-{"text": "эй бивис выйди из базуданныхaccess", "expected_skill": "window_control"}
-{"text": "бивис kill аксес", "expected_skill": "window_control"}
-{"text": "убери нахрен microsoft access", "expected_skill": "window_control"}
-{"text": "бивис убери базу данных access полностью", "expected_skill": "window_control"}
-{"text": "дружище aкcess закрой", "expected_skill": "window_control"}
-{"text": "брух выйди из базу данных access", "expected_skill": "window_control"}
-{"text": "бивис закрыть базуданныхaccess", "expected_skill": "window_control"}
-{"text": "эй бивис закрой нафиг офисную базу", "expected_skill": "window_control"}
-{"text": "ну ка close аксис", "expected_skill": "window_control"}
-{"text": "бивис закрой нафиг базу данных access", "expected_skill": "window_control"}
-{"text": "beavis close aкcess", "expected_skill": "window_control"}
-{"text": "брух close аксесс", "expected_skill": "window_control"}
-{"text": "брух выйди из аксесс", "expected_skill": "window_control"}
-{"text": "дружище убери нахрен aкcess", "expected_skill": "window_control"}
-{"text": "слушай зкрой офисную базу", "expected_skill": "window_control"}
-{"text": "дружище закрой пожалуйста басу данных access", "expected_skill": "window_control"}
-{"text": "бивис хватит аксесс", "expected_skill": "window_control"}
-{"text": "ну ка хватит аксис", "expected_skill": "window_control"}
-{"text": "beavis убери акцез полностью", "expected_skill": "window_control"}
-{"text": "beavis закрой окно база access", "expected_skill": "window_control"}
-{"text": "дружище закрой окно aкcess", "expected_skill": "window_control"}
-{"text": "слушай закрой окно акцез", "expected_skill": "window_control"}
-{"text": "брух microsoft access закрой", "expected_skill": "window_control"}
-{"text": "эй бивис прибей access", "expected_skill": "window_control"}
-{"text": "брух убери акцес полностью", "expected_skill": "window_control"}
-{"text": "закрой офисную базу", "expected_skill": "window_control"}
-{"text": "ну ка close acess", "expected_skill": "window_control"}
-{"text": "брух выйди из базаaccess", "expected_skill": "window_control"}
-{"text": "ну ка выйди из баса access", "expected_skill": "window_control"}
-{"text": "ну ка закрой окно microsoft access", "expected_skill": "window_control"}
-{"text": "бивис убери нахрен базу данных access", "expected_skill": "window_control"}
-{"text": "beavis убери нахрен акцез", "expected_skill": "window_control"}
-{"text": "beavis закрывай эту базу данных aкcess", "expected_skill": "window_control"}
-{"text": "эй бивис закрой окно акцес", "expected_skill": "window_control"}
-{"text": "бивис убери аксес полностью", "expected_skill": "window_control"}
-{"text": "закрой пожалуйста база access", "expected_skill": "window_control"}
-{"text": "слушай закрыть mcrosoft access", "expected_skill": "window_control"}
-{"text": "алло kill базу данных access", "expected_skill": "window_control"}
-{"text": "дружище выйди из базу даных access", "expected_skill": "window_control"}
-{"text": "beavis закрой пожалуйста баса access", "expected_skill": "window_control"}
-{"text": "дружище хватит mcrosoft access", "expected_skill": "window_control"}
-{"text": "beavis закрой нафиг aкcess", "expected_skill": "window_control"}
-{"text": "алло зактни базу данных aкcess", "expected_skill": "window_control"}
-{"text": "close баса access", "expected_skill": "window_control"}
-{"text": "слушай закрой базуданныхaccess", "expected_skill": "window_control"}
-{"text": "бивис close acess", "expected_skill": "window_control"}
-{"text": "убери aкcess полностью", "expected_skill": "window_control"}
-{"text": "бивис зактни базуданныхaccess", "expected_skill": "window_control"}
-{"text": "beavis базаaccess заверши", "expected_skill": "window_control"}
-{"text": "закрывай эту базу данных access", "expected_skill": "window_control"}
-{"text": "слушай хватит access", "expected_skill": "window_control"}
-{"text": "брух закрывай асесс", "expected_skill": "window_control"}
-{"text": "эй бивис закрой нафиг acess", "expected_skill": "window_control"}
-{"text": "алло закрыть microsoft access", "expected_skill": "window_control"}
-{"text": "дружище выключи база access", "expected_skill": "window_control"}
-{"text": "бивис акцез выключи", "expected_skill": "window_control"}
-{"text": "эй бивис убери база access полностью", "expected_skill": "window_control"}
-{"text": "дружище убери офисную базу полностью", "expected_skill": "window_control"}
-{"text": "ну ка убери access полностью", "expected_skill": "window_control"}
-{"text": "ну ка хватит аксесс", "expected_skill": "window_control"}
-{"text": "beavis закрыть базу данных access", "expected_skill": "window_control"}
-{"text": "брух закрой окно баса access", "expected_skill": "window_control"}
-{"text": "базу данных access закрой", "expected_skill": "window_control"}
-{"text": "дружище закрыть microsoft access", "expected_skill": "window_control"}
-{"text": "слушай убери нахрен аксесс", "expected_skill": "window_control"}
+{"text": "close акробат ридер", "expected_skill": "window_control"}
+{"text": "алло акробат ридер заверши", "expected_skill": "window_control"}
+{"text": "эй бивис закрывай адоб акробат", "expected_skill": "window_control"}
+{"text": "ну ка адоб ридер заверши", "expected_skill": "window_control"}
+{"text": "ну ка pdf откыть выключи", "expected_skill": "window_control"}
+{"text": "бивис закрыть acrobat", "expected_skill": "window_control"}
+{"text": "алло выйди из pdf открыть", "expected_skill": "window_control"}
+{"text": "алло close адобридер", "expected_skill": "window_control"}
+{"text": "брух закрой читалка pdf", "expected_skill": "window_control"}
+{"text": "beavis close пдф ридер", "expected_skill": "window_control"}
+{"text": "дружище закрывай эту акробат ридер", "expected_skill": "window_control"}
+{"text": "слушай закрой окно акробат рыдер", "expected_skill": "window_control"}
+{"text": "слушай выключи pdf reader", "expected_skill": "window_control"}
+{"text": "закрыть читалка pdf", "expected_skill": "window_control"}
+{"text": "алло прибей читалкаpdf", "expected_skill": "window_control"}
+{"text": "ну ка заверши акрабат", "expected_skill": "window_control"}
+{"text": "ну ка выключи акрабат", "expected_skill": "window_control"}
+{"text": "брух убери нахрен читалка pdf", "expected_skill": "window_control"}
+{"text": "ну ка закрой пожалуйста adobe acrobat", "expected_skill": "window_control"}
+{"text": "beavis убери нахрен pdf открыть", "expected_skill": "window_control"}
+{"text": "ну ка pdf открыть закрой", "expected_skill": "window_control"}
+{"text": "алло kill читалка pdf", "expected_skill": "window_control"}
+{"text": "дружище убери arobat полностью", "expected_skill": "window_control"}
+{"text": "дружище убери читалкаpdf полностью", "expected_skill": "window_control"}
+{"text": "слушай adobe acrbat закрой", "expected_skill": "window_control"}
+{"text": "дружище выключи акробат", "expected_skill": "window_control"}
+{"text": "брух закрой нафиг pdf открыть", "expected_skill": "window_control"}
+{"text": "бивис pdf открыть выключи", "expected_skill": "window_control"}
+{"text": "adobe acrobat закрой", "expected_skill": "window_control"}
+{"text": "эй бивис kill адобридер", "expected_skill": "window_control"}
+{"text": "бивис убери нахрен acrobat", "expected_skill": "window_control"}
+{"text": "брух закрой окно шиталка pdf", "expected_skill": "window_control"}
+{"text": "алло хватит адобридер", "expected_skill": "window_control"}
+{"text": "ну ка close шиталка pdf", "expected_skill": "window_control"}
+{"text": "слушай заверши adobe acrobat", "expected_skill": "window_control"}
+{"text": "алло закрывай эту читалка pdf", "expected_skill": "window_control"}
+{"text": "beavis прибей adobe acrobat", "expected_skill": "window_control"}
+{"text": "алло заверши пдф ридер", "expected_skill": "window_control"}
+{"text": "бивис закрывай эту акробат рыдер", "expected_skill": "window_control"}
+{"text": "ну ка close пдф ридер", "expected_skill": "window_control"}
+{"text": "алло закрывай arobat", "expected_skill": "window_control"}
+{"text": "алло закрой pdf reader", "expected_skill": "window_control"}
+{"text": "эй бивис зкрой акробат рыдер", "expected_skill": "window_control"}
+{"text": "слушай читалкаpdf заверши", "expected_skill": "window_control"}
+{"text": "дружище снеси адобридер", "expected_skill": "window_control"}
+{"text": "закрой нафиг шиталка pdf", "expected_skill": "window_control"}
+{"text": "алло закрой пожалуйста адобридер", "expected_skill": "window_control"}
+{"text": "эй бивис читалка pdf выключи", "expected_skill": "window_control"}
+{"text": "алло закрывай адоб ридер", "expected_skill": "window_control"}
+{"text": "ну ка заканчивай с читалкаpdf", "expected_skill": "window_control"}
+{"text": "бивис закрывай адобридер", "expected_skill": "window_control"}
+{"text": "beavis заверши адоб акробат", "expected_skill": "window_control"}
+{"text": "дружище закрыть читалкаpdf", "expected_skill": "window_control"}
+{"text": "beavis закрой нафиг adobe acrobat", "expected_skill": "window_control"}
+{"text": "брух закрой окно adobe acrbat", "expected_skill": "window_control"}
+{"text": "бивис выйди из акробат ридер", "expected_skill": "window_control"}
+{"text": "алло адоб акробат выключи", "expected_skill": "window_control"}
+{"text": "бивис прибей шиталка pdf", "expected_skill": "window_control"}
+{"text": "ну ка хватит pdf reader", "expected_skill": "window_control"}
+{"text": "ну ка закрывай шиталка pdf", "expected_skill": "window_control"}
+{"text": "бивис закрой нафиг акробат рыдер", "expected_skill": "window_control"}
+{"text": "эй бивис убери нахрен акробат", "expected_skill": "window_control"}
+{"text": "слушай закрой нафиг адоб ридер", "expected_skill": "window_control"}
+{"text": "ну ка заканчивай с адоб ридер", "expected_skill": "window_control"}
+{"text": "эй бивис закрывай pdf откыть", "expected_skill": "window_control"}
+{"text": "ну ка зкрой читалка pdf", "expected_skill": "window_control"}
+{"text": "брух хватит читалка pdf", "expected_skill": "window_control"}
+{"text": "beavis закрывай эту acrobat", "expected_skill": "window_control"}
+{"text": "эй бивис закрой pdf откыть", "expected_skill": "window_control"}
+{"text": "брух выключи адоб акробат", "expected_skill": "window_control"}
+{"text": "close aкrobat reader", "expected_skill": "window_control"}
+{"text": "слушай закрывай читалкаpdf", "expected_skill": "window_control"}
+{"text": "слушай закрывай эту адоб ридер", "expected_skill": "window_control"}
+{"text": "ну ка pdf откыть заверши", "expected_skill": "window_control"}
+{"text": "закрывай акробат ридер", "expected_skill": "window_control"}
+{"text": "beavis закрой читалкаpdf", "expected_skill": "window_control"}
+{"text": "эй бивис close адоб ридер", "expected_skill": "window_control"}
+{"text": "ну ка убей процесс акробат", "expected_skill": "window_control"}
+{"text": "эй бивис kill pdf reader", "expected_skill": "window_control"}
+{"text": "ну ка читалкаpdf заверши", "expected_skill": "window_control"}
+{"text": "заканчивай с шиталка pdf", "expected_skill": "window_control"}
+{"text": "бивис закрой пдф ридер", "expected_skill": "window_control"}
+{"text": "дружище выйди из адоб акробат", "expected_skill": "window_control"}
+{"text": "beavis закрой окно pdf откыть", "expected_skill": "window_control"}
+{"text": "слушай закрыть adobe acrbat", "expected_skill": "window_control"}
+{"text": "бивис закрой пожалуйста адобридер", "expected_skill": "window_control"}
+{"text": "beavis прибей адоб акробат", "expected_skill": "window_control"}
+{"text": "эй бивис aкrobat reader выключи", "expected_skill": "window_control"}
+{"text": "эй бивис хватит акробат ридер", "expected_skill": "window_control"}
+{"text": "эй бивис pdf откыть выключи", "expected_skill": "window_control"}
+{"text": "бивис хватит акробат", "expected_skill": "window_control"}
+{"text": "ну ка закрой акробат", "expected_skill": "window_control"}
+{"text": "beavis убери arobat полностью", "expected_skill": "window_control"}
+{"text": "слушай kill читалка pdf", "expected_skill": "window_control"}
+{"text": "beavis закрой окно arobat", "expected_skill": "window_control"}
+{"text": "алло адоб акробат заверши", "expected_skill": "window_control"}
+{"text": "слушай закрой пожалуйста adobe acrobat", "expected_skill": "window_control"}
+{"text": "эй бивис закрой окно читалка pdf", "expected_skill": "window_control"}
+{"text": "ну ка заканчивай с адоб акробат", "expected_skill": "window_control"}
+{"text": "эй бивис pdf открыть закрой", "expected_skill": "window_control"}
+{"text": "ну ка выйди из acrobat reader", "expected_skill": "window_control"}
+{"text": "слушай убей процесс pdf открыть", "expected_skill": "window_control"}
+{"text": "beavis закрывай adobe acrobat", "expected_skill": "window_control"}
+{"text": "слушай снеси acrobat", "expected_skill": "window_control"}
+{"text": "beavis закрой пожалуйста pdf reader", "expected_skill": "window_control"}
+{"text": "бивис адобридер заверши", "expected_skill": "window_control"}
+{"text": "закрой окно aкrobat reader", "expected_skill": "window_control"}
+{"text": "алло kill акробат", "expected_skill": "window_control"}
+{"text": "брух arobat закрой", "expected_skill": "window_control"}
+{"text": "beavis закрыть акробат ридер", "expected_skill": "window_control"}
+{"text": "брух закрывай эту pdf reader", "expected_skill": "window_control"}
+{"text": "алло закрывай эту акробат", "expected_skill": "window_control"}
+{"text": "ну ка выключи acrobat reader", "expected_skill": "window_control"}
+{"text": "алло снеси pdf reader", "expected_skill": "window_control"}
+{"text": "алло kill адоб ридер", "expected_skill": "window_control"}
+{"text": "дружище зкрой адобридер", "expected_skill": "window_control"}
+{"text": "алло убери pdf reader полностью", "expected_skill": "window_control"}
+{"text": "брух закрой пожалуйста акрабат", "expected_skill": "window_control"}
+{"text": "слушай заканчивай с adobe acrbat", "expected_skill": "window_control"}
+{"text": "beavis снеси acrobat reader", "expected_skill": "window_control"}

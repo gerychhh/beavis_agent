@@ -6,6 +6,7 @@ import json
 import random
 import re
 import sys
+from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -13,6 +14,8 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from python_agent.resolvers.app_catalog_service import AppCatalogService
+from python_agent.resolvers.app_catalog_utils import is_spoken_form
+from python_agent.resolvers.app_visibility import is_user_visible_app
 from python_agent.training.dataset_sources import dict_from_source, list_from_source, load_training_source
 
 
@@ -37,15 +40,6 @@ GRID_WORDS = list(POSITION_WORDS["grid"])
 UNKNOWN_PHRASES = list_from_source(_SOURCE, "unknown_phrases")
 
 
-def is_spoken_form(value: str) -> bool:
-    text = str(value).strip()
-    if not text:
-        return False
-    if any(marker in text for marker in ("\\", "/", "://", "{", "}", "!", ".exe")):
-        return False
-    return True
-
-
 def clean_text(text: str) -> str:
     return re.sub(r"\s+", " ", str(text).strip().lower())
 
@@ -55,6 +49,8 @@ def build_apps(apps_catalog_path: Path | None = None) -> dict[str, list[str]]:
     apps: dict[str, list[str]] = {}
 
     for app in service.get_enabled_apps():
+        if not is_user_visible_app(app):
+            continue
         forms = [
             app.display_name,
             Path(app.launch_target).stem if app.launch_target else "",
@@ -282,6 +278,25 @@ def build_combined_examples(rows: list[tuple[str, str, str, str, str, str]]) -> 
     return combined
 
 
+def build_manual_tests(combined: list[dict], limit_per_layout: int = 24) -> list[dict]:
+    manual_tests: list[dict] = []
+    counts: Counter[str] = Counter()
+
+    for row in combined:
+        text = str(row.get("text") or "").strip()
+        args = row.get("args") if isinstance(row.get("args"), dict) else {}
+        expected = args if args else {"missing": ["layout"]}
+        layout = str(expected.get("layout") or "missing")
+
+        if not text or counts[layout] >= limit_per_layout:
+            continue
+
+        manual_tests.append({"text": text, "expected": expected})
+        counts[layout] += 1
+
+    return manual_tests
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--out-dir", default="python_agent/data/window_layout/processed")
@@ -299,7 +314,13 @@ def main() -> None:
 
     out_dir = Path(args.out_dir)
     write_csv(out_dir / "window_layout_train.csv", rows)
-    write_jsonl(out_dir / "combined_examples.jsonl", build_combined_examples(rows))
+    (out_dir / "app_surface_forms.json").write_text(
+        json.dumps(apps, ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    combined = build_combined_examples(rows)
+    write_jsonl(out_dir / "combined_examples.jsonl", combined)
+    write_jsonl(out_dir.parent / "eval" / "manual_tests.jsonl", build_manual_tests(combined))
 
     layout_counts: dict[str, int] = {}
     for _text, layout, *_targets in rows:

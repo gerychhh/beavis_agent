@@ -1,0 +1,240 @@
+{"text": "3ds max 2025 в центр", "expected": {"layout": "center", "targets": ["3ds_max_2025"]}}
+{"text": "3ds max 2025 во весь экран", "expected": {"layout": "fullscreen", "targets": ["3ds_max_2025"]}}
+{"text": "3ds max 2025 во весь экран пожалуйста", "expected": {"layout": "fullscreen", "targets": ["3ds_max_2025"]}}
+{"text": "3ds max 2025 громко уведомляет", "expected": {"missing": ["layout"]}}
+{"text": "3ds max 2025 завис", "expected": {"missing": ["layout"]}}
+{"text": "3ds max 2025 завис почему", "expected": {"missing": ["layout"]}}
+{"text": "3ds max 2025 на весь экран", "expected": {"layout": "fullscreen", "targets": ["3ds_max_2025"]}}
+{"text": "3ds max 2025 на весь экрран", "expected": {"layout": "fullscreen", "targets": ["3ds_max_2025"]}}
+{"text": "3ds max 2025 на вниз", "expected": {"layout": "bottom_half", "targets": ["3ds_max_2025"]}}
+{"text": "3ds max 2025 на сверху на экране", "expected": {"layout": "top_half", "targets": ["3ds_max_2025"]}}
+{"text": "3ds max 2025 на слева быстро", "expected": {"layout": "left_half", "targets": ["3ds_max_2025"]}}
+{"text": "3ds max 2025 над премиер про давай", "expected": {"layout": "split_2_horizontal", "targets": ["3ds_max_2025", "premiere_pro"]}}
+{"text": "3ds max 2025 открыт уже", "expected": {"missing": ["layout"]}}
+{"text": "3ds max 2025 под light room пожалуйста", "expected": {"layout": "split_2_horizontal", "targets": ["lightroom", "3ds_max_2025"]}}
+{"text": "3ds max 2025 посередине быстро", "expected": {"layout": "center", "targets": ["3ds_max_2025"]}}
+{"text": "3ds max 2025 с верху давай", "expected": {"layout": "top_half", "targets": ["3ds_max_2025"]}}
+{"text": "3ds max 2025 сверху", "expected": {"layout": "top_half", "targets": ["3ds_max_2025"]}}
+{"text": "3ds max 2025 сверху написано", "expected": {"missing": ["layout"]}}
+{"text": "3ds max 2025 сделай на максимум экрана на экране", "expected": {"layout": "fullscreen", "targets": ["3ds_max_2025"]}}
+{"text": "3ds max 2025 слева", "expected": {"layout": "left_half", "targets": ["3ds_max_2025"]}}
+{"text": "3ds max 2025 слева winword справа пожалуйста", "expected": {"layout": "split_2_vertical", "targets": ["3ds_max_2025", "word"]}}
+{"text": "3ds max 2025 снизу", "expected": {"layout": "bottom_half", "targets": ["3ds_max_2025"]}}
+{"text": "3ds max 2025 снизу мелькает", "expected": {"missing": ["layout"]}}
+{"text": "3ds max 2025 справа", "expected": {"layout": "right_half", "targets": ["3ds_max_2025"]}}
+{"text": "3ds max 2025 справо", "expected": {"layout": "right_half", "targets": ["3ds_max_2025"]}}
+{"text": "3ds max 2025 тупит", "expected": {"missing": ["layout"]}}
+{"text": "3dsmax а потом excel палавину плиз", "expected": {"layout": "split_2_vertical", "targets": ["3ds_max_2025", "excel"]}}
+{"text": "3dsmax в центр", "expected": {"layout": "center", "targets": ["3ds_max_2025"]}}
+{"text": "3dsmax во весь экран нормально", "expected": {"layout": "fullscreen", "targets": ["3ds_max_2025"]}}
+{"text": "3dsmax завис", "expected": {"missing": ["layout"]}}
+{"text": "3dsmax на весь екран", "expected": {"layout": "fullscreen", "targets": ["3ds_max_2025"]}}
+{"text": "3dsmax на весь экран", "expected": {"layout": "fullscreen", "targets": ["3ds_max_2025"]}}
+{"text": "3dsmax на на левый бок щас", "expected": {"layout": "left_half", "targets": ["3ds_max_2025"]}}
+{"text": "3dsmax на по середине пожалуйста", "expected": {"layout": "center", "targets": ["3ds_max_2025"]}}
+{"text": "3dsmax на с низу быстро", "expected": {"layout": "bottom_half", "targets": ["3ds_max_2025"]}}
+{"text": "3dsmax не работает", "expected": {"missing": ["layout"]}}
+{"text": "3dsmax рядом с perfmon по полам у меня", "expected": {"layout": "split_2_vertical", "targets": ["3ds_max_2025", "performance_monitor"]}}
+{"text": "3dsmax сверху", "expected": {"layout": "top_half", "targets": ["3ds_max_2025"]}}
+{"text": "3dsmax сверху msinfo32 снизу у меня", "expected": {"layout": "split_2_horizontal", "targets": ["3ds_max_2025", "system_information"]}}
+{"text": "3dsmax сверху впн снизу давай", "expected": {"layout": "split_2_horizontal", "targets": ["3ds_max_2025", "planetvpn1"]}}
+{"text": "3dsmax сделай на максимум экрана быстро", "expected": {"layout": "fullscreen", "targets": ["3ds_max_2025"]}}
+{"text": "3dsmax слева", "expected": {"layout": "left_half", "targets": ["3ds_max_2025"]}}
+{"text": "3dsmax слева device manager справа щас", "expected": {"layout": "split_2_vertical", "targets": ["3ds_max_2025", "device_manager"]}}
+{"text": "3dsmax слева remote desktop connection справа щас", "expected": {"layout": "split_2_vertical", "targets": ["3ds_max_2025", "remote_desktop_connection"]}}
+{"text": "3dsmax слева красиво", "expected": {"missing": ["layout"]}}
+{"text": "3dsmax слево", "expected": {"layout": "left_half", "targets": ["3ds_max_2025"]}}
+{"text": "3dsmax сллева", "expected": {"layout": "left_half", "targets": ["3ds_max_2025"]}}
+{"text": "3dsmax снизу", "expected": {"layout": "bottom_half", "targets": ["3ds_max_2025"]}}
+{"text": "3dsmax снизу мелькает как обычно", "expected": {"missing": ["layout"]}}
+{"text": "3dsmax справа", "expected": {"layout": "right_half", "targets": ["3ds_max_2025"]}}
+{"text": "3dsmax тупит опять", "expected": {"missing": ["layout"]}}
+{"text": "3dsmx справа", "expected": {"layout": "right_half", "targets": ["3ds_max_2025"]}}
+{"text": "acobat reader на весь экран", "expected": {"layout": "fullscreen", "targets": ["acrobat_reader"]}}
+{"text": "acrobat rader слева красиво", "expected": {"missing": ["layout"]}}
+{"text": "acrobat rader справа", "expected": {"layout": "right_half", "targets": ["acrobat_reader"]}}
+{"text": "acrobat reader в центр", "expected": {"layout": "center", "targets": ["acrobat_reader"]}}
+{"text": "acrobat reader максимально", "expected": {"layout": "fullscreen", "targets": ["acrobat_reader"]}}
+{"text": "acrobat reader на весь экран", "expected": {"layout": "fullscreen", "targets": ["acrobat_reader"]}}
+{"text": "acrobat reader на с верху на экране", "expected": {"layout": "top_half", "targets": ["acrobat_reader"]}}
+{"text": "acrobat reader потом премиер про пополам экрана пожалуйста", "expected": {"layout": "split_2_vertical", "targets": ["acrobat_reader", "premiere_pro"]}}
+{"text": "acrobat reader сверху", "expected": {"layout": "top_half", "targets": ["acrobat_reader"]}}
+{"text": "acrobat reader сделай во весь экран щас", "expected": {"layout": "fullscreen", "targets": ["acrobat_reader"]}}
+{"text": "acrobat reader слева", "expected": {"layout": "left_half", "targets": ["acrobat_reader"]}}
+{"text": "acrobat reader слева windows media player legacy справа давай", "expected": {"layout": "split_2_vertical", "targets": ["acrobat_reader", "windows_media_player_legacy"]}}
+{"text": "acrobat reader снизу", "expected": {"layout": "bottom_half", "targets": ["acrobat_reader"]}}
+{"text": "acrobat reader сннизу", "expected": {"layout": "bottom_half", "targets": ["acrobat_reader"]}}
+{"text": "acrobat reader спправа", "expected": {"layout": "right_half", "targets": ["acrobat_reader"]}}
+{"text": "acrobat reader спраа", "expected": {"layout": "right_half", "targets": ["acrobat_reader"]}}
+{"text": "acrobat reader справа", "expected": {"layout": "right_half", "targets": ["acrobat_reader"]}}
+{"text": "acrobat readr справа", "expected": {"layout": "right_half", "targets": ["acrobat_reader"]}}
+{"text": "acrobat в центр", "expected": {"layout": "center", "targets": ["acrobat_reader"]}}
+{"text": "acrobat на в левую чаасть", "expected": {"layout": "left_half", "targets": ["acrobat_reader"]}}
+{"text": "acrobat на вверх", "expected": {"layout": "top_half", "targets": ["acrobat_reader"]}}
+{"text": "acrobat на весь экран", "expected": {"layout": "fullscreen", "targets": ["acrobat_reader"]}}
+{"text": "acrobat на весь экрн", "expected": {"layout": "fullscreen", "targets": ["acrobat_reader"]}}
+{"text": "acrobat на весь эран", "expected": {"layout": "fullscreen", "targets": ["acrobat_reader"]}}
+{"text": "acrobat на на правый бок давай", "expected": {"layout": "right_half", "targets": ["acrobat_reader"]}}
+{"text": "acrobat на по середине пожалуйста", "expected": {"layout": "center", "targets": ["acrobat_reader"]}}
+{"text": "acrobat на правый бок плиз", "expected": {"layout": "right_half", "targets": ["acrobat_reader"]}}
+{"text": "acrobat над charmap быстро", "expected": {"layout": "split_2_horizontal", "targets": ["acrobat_reader", "character_map"]}}
+{"text": "acrobat над три де макс плиз", "expected": {"layout": "split_2_horizontal", "targets": ["acrobat_reader", "3ds_max_2025"]}}
+{"text": "acrobat сверу", "expected": {"layout": "top_half", "targets": ["acrobat_reader"]}}
+{"text": "acrobat сверху", "expected": {"layout": "top_half", "targets": ["acrobat_reader"]}}
+{"text": "acrobat сверху напсано", "expected": {"missing": ["layout"]}}
+{"text": "acrobat сделай во весь экран щас", "expected": {"layout": "fullscreen", "targets": ["acrobat_reader"]}}
+{"text": "acrobat слева", "expected": {"layout": "left_half", "targets": ["acrobat_reader"]}}
+{"text": "acrobat слева msconfig справа плиз", "expected": {"layout": "split_2_vertical", "targets": ["acrobat_reader", "system_configuration"]}}
+{"text": "acrobat сллева", "expected": {"layout": "left_half", "targets": ["acrobat_reader"]}}
+{"text": "acrobat снизу", "expected": {"layout": "bottom_half", "targets": ["acrobat_reader"]}}
+{"text": "acrobat сниизу", "expected": {"layout": "bottom_half", "targets": ["acrobat_reader"]}}
+{"text": "acrobat сннизу", "expected": {"layout": "bottom_half", "targets": ["acrobat_reader"]}}
+{"text": "acrobat спправа", "expected": {"layout": "right_half", "targets": ["acrobat_reader"]}}
+{"text": "acrobat спраава", "expected": {"layout": "right_half", "targets": ["acrobat_reader"]}}
+{"text": "acrobat справа", "expected": {"layout": "right_half", "targets": ["acrobat_reader"]}}
+{"text": "acrobat тупит", "expected": {"missing": ["layout"]}}
+{"text": "acrrobat справа", "expected": {"layout": "right_half", "targets": ["acrobat_reader"]}}
+{"text": "adbe media encoder справа", "expected": {"layout": "right_half", "targets": ["media_encoder"]}}
+{"text": "adbe premiere слева", "expected": {"layout": "left_half", "targets": ["premiere_pro"]}}
+{"text": "addobe acrobat слева", "expected": {"layout": "left_half", "targets": ["acrobat_reader"]}}
+{"text": "adobbe acrobat на весь экран", "expected": {"layout": "fullscreen", "targets": ["acrobat_reader"]}}
+{"text": "adobbe acrobat справа", "expected": {"layout": "right_half", "targets": ["acrobat_reader"]}}
+{"text": "adobbe photoshop сверху", "expected": {"layout": "top_half", "targets": ["photoshop"]}}
+{"text": "adobe acroat сверху", "expected": {"layout": "top_half", "targets": ["acrobat_reader"]}}
+{"text": "adobe acrobat в центр", "expected": {"layout": "center", "targets": ["acrobat_reader"]}}
+{"text": "adobe acrobat громко уведомляет", "expected": {"missing": ["layout"]}}
+{"text": "adobe acrobat затем winword на две половины плиз", "expected": {"layout": "split_2_vertical", "targets": ["acrobat_reader", "word"]}}
+{"text": "adobe acrobat на весь экран", "expected": {"layout": "fullscreen", "targets": ["acrobat_reader"]}}
+{"text": "adobe acrobat на на низ пожалуйста", "expected": {"layout": "bottom_half", "targets": ["acrobat_reader"]}}
+{"text": "adobe acrobat на с право давай", "expected": {"layout": "right_half", "targets": ["acrobat_reader"]}}
+{"text": "adobe acrobat на справа у меня", "expected": {"layout": "right_half", "targets": ["acrobat_reader"]}}
+{"text": "adobe acrobat над services нормально", "expected": {"layout": "split_2_horizontal", "targets": ["acrobat_reader", "services"]}}
+{"text": "adobe acrobat не работает", "expected": {"missing": ["layout"]}}
+{"text": "adobe acrobat сверрху", "expected": {"layout": "top_half", "targets": ["acrobat_reader"]}}
+{"text": "adobe acrobat сверху", "expected": {"layout": "top_half", "targets": ["acrobat_reader"]}}
+{"text": "adobe acrobat сверху написано", "expected": {"missing": ["layout"]}}
+{"text": "adobe acrobat сделай максимально нормально", "expected": {"layout": "fullscreen", "targets": ["acrobat_reader"]}}
+{"text": "adobe acrobat слева", "expected": {"layout": "left_half", "targets": ["acrobat_reader"]}}
+{"text": "adobe acrobat снизу", "expected": {"layout": "bottom_half", "targets": ["acrobat_reader"]}}
+{"text": "adobe acrobat снизу мелькает", "expected": {"missing": ["layout"]}}
+{"text": "adobe acrobat справа", "expected": {"layout": "right_half", "targets": ["acrobat_reader"]}}
+{"text": "adobe affter effects на весь экран", "expected": {"layout": "fullscreen", "targets": ["after_effects"]}}
+{"text": "adobe affter effects справа", "expected": {"layout": "right_half", "targets": ["after_effects"]}}
+{"text": "adobe after effects fullscreen", "expected": {"layout": "fullscreen", "targets": ["after_effects"]}}
+{"text": "adobe after effects в правую часть на экране", "expected": {"layout": "right_half", "targets": ["after_effects"]}}
+{"text": "adobe after effects в центр", "expected": {"layout": "center", "targets": ["after_effects"]}}
+{"text": "adobe after effects лагает", "expected": {"missing": ["layout"]}}
+{"text": "adobe after effects на весь экран", "expected": {"layout": "fullscreen", "targets": ["after_effects"]}}
+{"text": "adobe after effects потом regedit палавину на экране", "expected": {"layout": "split_2_vertical", "targets": ["after_effects", "regedit"]}}
+{"text": "adobe after effects развернутым щас", "expected": {"layout": "fullscreen", "targets": ["after_effects"]}}
+{"text": "adobe after effects сверху", "expected": {"layout": "top_half", "targets": ["after_effects"]}}
+{"text": "adobe after effects сврху", "expected": {"layout": "top_half", "targets": ["after_effects"]}}
+{"text": "adobe after effects слева", "expected": {"layout": "left_half", "targets": ["after_effects"]}}
+{"text": "adobe after effects слева one note спава щас", "expected": {"layout": "split_2_vertical", "targets": ["after_effects", "onenote"]}}
+{"text": "adobe after effects слева run справа нормально", "expected": {"layout": "split_2_vertical", "targets": ["after_effects", "run"]}}
+{"text": "adobe after effects слево windows powershell ise (x86) справа быстро", "expected": {"layout": "split_2_vertical", "targets": ["after_effects", "powershell"]}}
+{"text": "adobe after effects снизу", "expected": {"layout": "bottom_half", "targets": ["after_effects"]}}
+{"text": "adobe after effects справа", "expected": {"layout": "right_half", "targets": ["after_effects"]}}
+{"text": "adobe after effectts снизу", "expected": {"layout": "bottom_half", "targets": ["after_effects"]}}
+{"text": "adobe after effets в центр", "expected": {"layout": "center", "targets": ["after_effects"]}}
+{"text": "adobe illustrator в центр", "expected": {"layout": "center", "targets": ["illustrator"]}}
+{"text": "adobe illustrator и terminal друг под другом быстро", "expected": {"layout": "split_2_horizontal", "targets": ["illustrator", "terminal"]}}
+{"text": "adobe illustrator на в верх плиз", "expected": {"layout": "top_half", "targets": ["illustrator"]}}
+{"text": "adobe illustrator открыт уже", "expected": {"missing": ["layout"]}}
+{"text": "adobe illustrator сверху", "expected": {"layout": "top_half", "targets": ["illustrator"]}}
+{"text": "adobe illustrator сверху regedit снизу щас", "expected": {"layout": "split_2_horizontal", "targets": ["illustrator", "regedit"]}}
+{"text": "adobe illustrator слева", "expected": {"layout": "left_half", "targets": ["illustrator"]}}
+{"text": "adobe illustrator слева крсиво опять", "expected": {"missing": ["layout"]}}
+{"text": "adobe illustrator снизу", "expected": {"layout": "bottom_half", "targets": ["illustrator"]}}
+{"text": "adobe illustrator справа", "expected": {"layout": "right_half", "targets": ["illustrator"]}}
+{"text": "adobe illustrator тупит опяь", "expected": {"missing": ["layout"]}}
+{"text": "adobe lightroom в центр", "expected": {"layout": "center", "targets": ["lightroom"]}}
+{"text": "adobe lightroom завис", "expected": {"missing": ["layout"]}}
+{"text": "adobe lightroom и премиер про друг под другом нормально", "expected": {"layout": "split_2_horizontal", "targets": ["lightroom", "premiere_pro"]}}
+{"text": "adobe lightroom на по середине", "expected": {"layout": "center", "targets": ["lightroom"]}}
+{"text": "adobe lightroom на сниу нормально", "expected": {"layout": "bottom_half", "targets": ["lightroom"]}}
+{"text": "adobe lightroom плюс ваннот на две половины пожалуйста", "expected": {"layout": "split_2_vertical", "targets": ["lightroom", "onenote"]}}
+{"text": "adobe lightroom с лева давай", "expected": {"layout": "left_half", "targets": ["lightroom"]}}
+{"text": "adobe lightroom сверу", "expected": {"layout": "top_half", "targets": ["lightroom"]}}
+{"text": "adobe lightroom сверху", "expected": {"layout": "top_half", "targets": ["lightroom"]}}
+{"text": "adobe lightroom сизу", "expected": {"layout": "bottom_half", "targets": ["lightroom"]}}
+{"text": "adobe lightroom слеа", "expected": {"layout": "left_half", "targets": ["lightroom"]}}
+{"text": "adobe lightroom слева", "expected": {"layout": "left_half", "targets": ["lightroom"]}}
+{"text": "adobe lightroom слева charmap справа быстро", "expected": {"layout": "split_2_vertical", "targets": ["lightroom", "character_map"]}}
+{"text": "adobe lightroom слево нормально", "expected": {"layout": "left_half", "targets": ["lightroom"]}}
+{"text": "adobe lightroom снизу", "expected": {"layout": "bottom_half", "targets": ["lightroom"]}}
+{"text": "adobe media encoder в низ нормально", "expected": {"layout": "bottom_half", "targets": ["media_encoder"]}}
+{"text": "adobe media encoder в центр", "expected": {"layout": "center", "targets": ["media_encoder"]}}
+{"text": "adobe media encoder влево", "expected": {"layout": "left_half", "targets": ["media_encoder"]}}
+{"text": "adobe media encoder и excel друг под другом нормально", "expected": {"layout": "split_2_horizontal", "targets": ["media_encoder", "excel"]}}
+{"text": "adobe media encoder над видеомонтаж adobe у меня", "expected": {"layout": "split_2_horizontal", "targets": ["media_encoder", "premiere_pro"]}}
+{"text": "adobe media encoder под terminal давай", "expected": {"layout": "split_2_horizontal", "targets": ["terminal", "media_encoder"]}}
+{"text": "adobe media encoder сверху", "expected": {"layout": "top_half", "targets": ["media_encoder"]}}
+{"text": "adobe media encoder слева", "expected": {"layout": "left_half", "targets": ["media_encoder"]}}
+{"text": "adobe media encoder слева appvlp справа на экране", "expected": {"layout": "split_2_vertical", "targets": ["media_encoder", "database_compare"]}}
+{"text": "adobe media encoder снизу", "expected": {"layout": "bottom_half", "targets": ["media_encoder"]}}
+{"text": "adobe photoshhop в центр", "expected": {"layout": "center", "targets": ["photoshop"]}}
+{"text": "adobe photoshhop сверху", "expected": {"layout": "top_half", "targets": ["photoshop"]}}
+{"text": "adobe photoshop в центр", "expected": {"layout": "center", "targets": ["photoshop"]}}
+{"text": "adobe photoshop и on screen keyboard друг под другом на экране", "expected": {"layout": "split_2_horizontal", "targets": ["photoshop", "on_screen_keyboard"]}}
+{"text": "adobe photoshop по середине плиз", "expected": {"layout": "center", "targets": ["photoshop"]}}
+{"text": "adobe photoshop сверху", "expected": {"layout": "top_half", "targets": ["photoshop"]}}
+{"text": "adobe photoshop слева", "expected": {"layout": "left_half", "targets": ["photoshop"]}}
+{"text": "adobe photoshop снизу", "expected": {"layout": "bottom_half", "targets": ["photoshop"]}}
+{"text": "adobe potoshop снизу", "expected": {"layout": "bottom_half", "targets": ["photoshop"]}}
+{"text": "adobe premiere а потом microsoft store палавину на экране", "expected": {"layout": "split_2_vertical", "targets": ["premiere_pro", "microsoft_store"]}}
+{"text": "adobe premiere в центр", "expected": {"layout": "center", "targets": ["premiere_pro"]}}
+{"text": "adobe premiere на в верх быстро", "expected": {"layout": "top_half", "targets": ["premiere_pro"]}}
+{"text": "adobe premiere на верх быстро", "expected": {"layout": "top_half", "targets": ["premiere_pro"]}}
+{"text": "adobe premiere плюс wmplayer поровну пожалуйста", "expected": {"layout": "split_2_vertical", "targets": ["premiere_pro", "windows_media_player_legacy"]}}
+{"text": "adobe premiere под disk cleanup пожалуйста", "expected": {"layout": "split_2_horizontal", "targets": ["disk_cleanup", "premiere_pro"]}}
+{"text": "adobe premiere сева", "expected": {"layout": "left_half", "targets": ["premiere_pro"]}}
+{"text": "adobe premiere слева", "expected": {"layout": "left_half", "targets": ["premiere_pro"]}}
+{"text": "adobe premiere слева кибер пунк справа быстро", "expected": {"layout": "split_2_vertical", "targets": ["premiere_pro", "cyberpunk_2077"]}}
+{"text": "adobe premiere снизу", "expected": {"layout": "bottom_half", "targets": ["premiere_pro"]}}
+{"text": "adobe premiere сннизу", "expected": {"layout": "bottom_half", "targets": ["premiere_pro"]}}
+{"text": "adoe premiere в центр", "expected": {"layout": "center", "targets": ["premiere_pro"]}}
+{"text": "adoobe photoshop в центр", "expected": {"layout": "center", "targets": ["photoshop"]}}
+{"text": "after efects слева ноутпад справа давай", "expected": {"layout": "split_2_vertical", "targets": ["after_effects", "notepad"]}}
+{"text": "after effects в центр", "expected": {"layout": "center", "targets": ["after_effects"]}}
+{"text": "after effects в центтр", "expected": {"layout": "center", "targets": ["after_effects"]}}
+{"text": "after effects затем music на две полоовины щас", "expected": {"layout": "split_2_vertical", "targets": ["after_effects", "yandexmusic"]}}
+{"text": "after effects на в центр пожалуйста", "expected": {"layout": "center", "targets": ["after_effects"]}}
+{"text": "after effects плюс calculator на две половины у меня", "expected": {"layout": "split_2_vertical", "targets": ["after_effects", "calculator"]}}
+{"text": "after effects по центру", "expected": {"layout": "center", "targets": ["after_effects"]}}
+{"text": "after effects сверху powerpoint снизу щас", "expected": {"layout": "split_2_horizontal", "targets": ["after_effects", "powerpoint"]}}
+{"text": "after effects снизу", "expected": {"layout": "bottom_half", "targets": ["after_effects"]}}
+{"text": "appvlp и edge по половинам", "expected": {"layout": "split_2_vertical", "targets": ["database_compare", "edge"]}}
+{"text": "appvlp и vpn друг под другом щас", "expected": {"layout": "split_2_horizontal", "targets": ["spreadsheet_compare", "planetvpn1"]}}
+{"text": "appvlp и вайршарк друг под другом быстро", "expected": {"layout": "split_2_horizontal", "targets": ["database_compare", "wireshark"]}}
+{"text": "appvlp над character map", "expected": {"layout": "split_2_horizontal", "targets": ["database_compare", "character_map"]}}
+{"text": "appvlp над media encoder плиз", "expected": {"layout": "split_2_horizontal", "targets": ["spreadsheet_compare", "media_encoder"]}}
+{"text": "appvlp под regedit щас", "expected": {"layout": "split_2_horizontal", "targets": ["regedit", "database_compare"]}}
+{"text": "appvlp под три де макс быстро", "expected": {"layout": "split_2_horizontal", "targets": ["3ds_max_2025", "database_compare"]}}
+{"text": "appvlp под яндекс мьюзик быстро", "expected": {"layout": "split_2_horizontal", "targets": ["yandexmusic", "spreadsheet_compare"]}}
+{"text": "appvlp рядом с settings пополам", "expected": {"layout": "split_2_vertical", "targets": ["database_compare", "settings"]}}
+{"text": "appvlp сверху calculator снизу давай", "expected": {"layout": "split_2_horizontal", "targets": ["spreadsheet_compare", "calculator"]}}
+{"text": "bavis разложи disk management msinfo32 дота и performance monitor плиткой у меня", "expected": {"layout": "grid_2x2", "targets": ["disk_management", "system_information", "dota_2", "performance_monitor"]}}
+{"text": "beais разложи тредесмакс powerpnt покрасить 3д модель и powershell 2 на 2", "expected": {"layout": "grid_2x2", "targets": ["3ds_max_2025", "powerpoint", "substance_painter", "powershell"]}}
+{"text": "beaviis размести calc powerpoint settings print management 2 на 2 щас", "expected": {"layout": "grid_2x2", "targets": ["calculator", "powerpoint", "settings", "print_management"]}}
+{"text": "beaviis сделай сетку из on-screen keyboard powerpnt mspaint и psr давай", "expected": {"layout": "grid_2x2", "targets": ["on_screen_keyboard", "powerpoint", "paint", "steps_recorder"]}}
+{"text": "beavis рааскинь appvlp wmplayer microsoft store openai сеткой быстро", "expected": {"layout": "grid_2x2", "targets": ["database_compare", "windows_media_player_legacy", "microsoft_store", "codex"]}}
+{"text": "beavis разложи adobe acrobat покрасить 3д модель media encоder и powerpnt плиткой", "expected": {"layout": "grid_2x2", "targets": ["acrobat_reader", "substance_painter", "media_encoder", "powerpoint"]}}
+{"text": "beavis разложи adobe after effects microsoft store database compare и taskmgr плиткой щас", "expected": {"layout": "grid_2x2", "targets": ["after_effects", "microsoft_store", "database_compare", "task_manager"]}}
+{"text": "beavis разложи appvlp print management codx и powershell 2 на 2 плиз", "expected": {"layout": "grid_2x2", "targets": ["spreadsheet_compare", "print_management", "codex", "powershell"]}}
+{"text": "beavis разложи appvlp windows terminal блокнот и cleanmgr два на два", "expected": {"layout": "grid_2x2", "targets": ["database_compare", "terminal", "notepad", "disk_cleanup"]}}
+{"text": "beavis разложи appvlp киберпанк лайтрумм и word плиткой пожалуйста", "expected": {"layout": "grid_2x2", "targets": ["database_compare", "cyberpunk_2077", "lightroom", "word"]}}
+{"text": "beavis разложи appvlp медиа енкодер adobe premiere и device manager по углам пожалуйста", "expected": {"layout": "grid_2x2", "targets": ["database_compare", "media_encoder", "premiere_pro", "device_manager"]}}
+{"text": "beavis разложи calc msconfig lightroom и microsoft project два на два", "expected": {"layout": "grid_2x2", "targets": ["calculator", "system_configuration", "lightroom", "project"]}}
+{"text": "beavis разложи calculator system information task manager и device manager квадратом у меня", "expected": {"layout": "grid_2x2", "targets": ["calculator", "system_information", "task_manager", "device_manager"]}}
+{"text": "beavis разложи calculator winwrd psr и magnify плиткой", "expected": {"layout": "grid_2x2", "targets": ["calculator", "word", "steps_recorder", "magnify"]}}
+{"text": "beavis разложи character map блокнот outlook и cleanmgr 2 на 2 на экране", "expected": {"layout": "grid_2x2", "targets": ["character_map", "notepad", "outlook", "disk_cleanup"]}}
+{"text": "beavis разложи cleanmgr powerpoint performance monitor и taskmgr сеткой на экране", "expected": {"layout": "grid_2x2", "targets": ["disk_cleanup", "powerpoint", "performance_monitor", "task_manager"]}}
+{"text": "beavis разложи cmd perfmon афтер эффектс и office два на два пожалуйста", "expected": {"layout": "grid_2x2", "targets": ["cmd", "performance_monitor", "after_effects", "office"]}}
+{"text": "beavis разложи cntrol word event viewer и terminal два на два плиз", "expected": {"layout": "grid_2x2", "targets": ["control_panel", "word", "event_viewer", "terminal"]}}
+{"text": "beavis разложи codex языковые параметры office проект офис и taskschd плиткой", "expected": {"layout": "grid_2x2", "targets": ["codex", "office", "project", "task_scheduler"]}}
+{"text": "beavis разложи command prompt system information powerpoint и wt плиткой нормально", "expected": {"layout": "grid_2x2", "targets": ["cmd", "system_information", "powerpoint", "terminal"]}}
+{"text": "beavis разложи command prompt акробат ридер services и edge четыре окна сеткой быстро", "expected": {"layout": "grid_2x2", "targets": ["cmd", "acrobat_reader", "services", "edge"]}}
+{"text": "beavis разложи compmgmt diskmgmt appvlp и character map 2 на 2 плиз", "expected": {"layout": "grid_2x2", "targets": ["computer_management", "disk_management", "spreadsheet_compare", "character_map"]}}
+{"text": "beavis разложи compmgmt дай муызку task manager и openai квадратом на экране", "expected": {"layout": "grid_2x2", "targets": ["computer_management", "yandexmusic", "task_manager", "codex"]}}
+{"text": "beavis разложи computer management devmgmt one not и yandexmusic плиткой", "expected": {"layout": "grid_2x2", "targets": ["computer_management", "device_manager", "onenote", "yandexmusic"]}}

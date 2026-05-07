@@ -1,7 +1,12 @@
 from __future__ import annotations
 
+import threading
+import time
+import traceback
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Callable
+from uuid import uuid4
 
 from python_agent.api.result import ok, fail
 from python_agent.training.add_user_app import (
@@ -14,6 +19,7 @@ from python_agent.training.add_user_app import (
     update_user_app,
     delete_user_app,
     apply_user_app_changes,
+    retrain_apps_pipeline,
     list_windows_apps,
     list_user_app_records,
 )
@@ -30,6 +36,89 @@ class AppsApi:
     be moved from training/add_user_app.py into services/app_service.py without
     changing the UI contract.
     """
+
+    def __init__(self) -> None:
+        self._training_lock = threading.Lock()
+        self._training_job: dict[str, Any] | None = None
+
+    def _training_snapshot(self) -> dict[str, Any]:
+        with self._training_lock:
+            return dict(self._training_job or {"running": False, "status": "idle"})
+
+    def retrain_start(self) -> dict[str, Any]:
+        try:
+            with self._training_lock:
+                if self._training_job and self._training_job.get("running"):
+                    return ok(dict(self._training_job))
+
+                job = {
+                    "id": f"train_{uuid4().hex[:12]}",
+                    "running": True,
+                    "status": "running",
+                    "started_at": datetime.now(timezone.utc).isoformat(),
+                    "finished_at": None,
+                    "last_message": "Queued",
+                    "progress": [],
+                    "error": None,
+                    "result": None,
+                }
+                self._training_job = job
+
+            def progress(message: str) -> None:
+                with self._training_lock:
+                    if not self._training_job:
+                        return
+                    entry = {
+                        "at": datetime.now(timezone.utc).isoformat(),
+                        "message": str(message),
+                    }
+                    self._training_job["last_message"] = str(message)
+                    self._training_job["progress"] = [
+                        *self._training_job.get("progress", [])[-24:],
+                        entry,
+                    ]
+
+            def run() -> None:
+                try:
+                    progress("Starting training")
+                    result = retrain_apps_pipeline(progress=progress)
+                    with self._training_lock:
+                        if self._training_job:
+                            self._training_job.update(
+                                {
+                                    "running": False,
+                                    "status": "completed",
+                                    "finished_at": datetime.now(timezone.utc).isoformat(),
+                                    "last_message": "Completed",
+                                    "result": result,
+                                }
+                            )
+                except Exception as error:
+                    with self._training_lock:
+                        if self._training_job:
+                            self._training_job.update(
+                                {
+                                    "running": False,
+                                    "status": "failed",
+                                    "finished_at": datetime.now(timezone.utc).isoformat(),
+                                    "last_message": "Failed",
+                                    "error": str(error),
+                                    "traceback": traceback.format_exc()[-6000:],
+                                }
+                            )
+
+            thread = threading.Thread(target=run, name="beavis-training", daemon=True)
+            thread.start()
+            time.sleep(0.01)
+            return ok(self._training_snapshot())
+        except Exception as error:
+            return fail(error, code="TRAINING_START_ERROR")
+
+    def retrain_status(self) -> dict[str, Any]:
+        try:
+            return ok(self._training_snapshot())
+        except Exception as error:
+            return fail(error, code="TRAINING_STATUS_ERROR")
 
     def list_windows_apps(self) -> dict[str, Any]:
         try:

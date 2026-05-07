@@ -1,0 +1,1831 @@
+{
+  "total": 120,
+  "correct": 120,
+  "accuracy": 1.0,
+  "rows": [
+    {
+      "text": "close акробат ридер",
+      "expected": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.9122
+      },
+      "ok": true
+    },
+    {
+      "text": "алло акробат ридер заверши",
+      "expected": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.9118
+      },
+      "ok": true
+    },
+    {
+      "text": "эй бивис закрывай адоб акробат",
+      "expected": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.8819
+      },
+      "ok": true
+    },
+    {
+      "text": "ну ка адоб ридер заверши",
+      "expected": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.8658
+      },
+      "ok": true
+    },
+    {
+      "text": "ну ка pdf откыть выключи",
+      "expected": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.9294
+      },
+      "ok": true
+    },
+    {
+      "text": "бивис закрыть acrobat",
+      "expected": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.8905
+      },
+      "ok": true
+    },
+    {
+      "text": "алло выйди из pdf открыть",
+      "expected": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.9261
+      },
+      "ok": true
+    },
+    {
+      "text": "алло close адобридер",
+      "expected": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.8567
+      },
+      "ok": true
+    },
+    {
+      "text": "брух закрой читалка pdf",
+      "expected": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.9401
+      },
+      "ok": true
+    },
+    {
+      "text": "beavis close пдф ридер",
+      "expected": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.8583
+      },
+      "ok": true
+    },
+    {
+      "text": "дружище закрывай эту акробат ридер",
+      "expected": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.8871
+      },
+      "ok": true
+    },
+    {
+      "text": "слушай закрой окно акробат рыдер",
+      "expected": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.9109
+      },
+      "ok": true
+    },
+    {
+      "text": "слушай выключи pdf reader",
+      "expected": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.9389
+      },
+      "ok": true
+    },
+    {
+      "text": "закрыть читалка pdf",
+      "expected": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.9141
+      },
+      "ok": true
+    },
+    {
+      "text": "алло прибей читалкаpdf",
+      "expected": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.878
+      },
+      "ok": true
+    },
+    {
+      "text": "ну ка заверши акрабат",
+      "expected": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.9011
+      },
+      "ok": true
+    },
+    {
+      "text": "ну ка выключи акрабат",
+      "expected": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.9303
+      },
+      "ok": true
+    },
+    {
+      "text": "брух убери нахрен читалка pdf",
+      "expected": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.8995
+      },
+      "ok": true
+    },
+    {
+      "text": "ну ка закрой пожалуйста adobe acrobat",
+      "expected": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.9374
+      },
+      "ok": true
+    },
+    {
+      "text": "beavis убери нахрен pdf открыть",
+      "expected": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.8984
+      },
+      "ok": true
+    },
+    {
+      "text": "ну ка pdf открыть закрой",
+      "expected": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.9305
+      },
+      "ok": true
+    },
+    {
+      "text": "алло kill читалка pdf",
+      "expected": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.9117
+      },
+      "ok": true
+    },
+    {
+      "text": "дружище убери arobat полностью",
+      "expected": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.7363
+      },
+      "ok": true
+    },
+    {
+      "text": "дружище убери читалкаpdf полностью",
+      "expected": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "close",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.8107
+      },
+      "ok": true
+    },
+    {
+      "text": "ну ка сверни пожалуйста шиталка pdf",
+      "expected": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.9417
+      },
+      "ok": true
+    },
+    {
+      "text": "слушай сверни читалка pdf",
+      "expected": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.9329
+      },
+      "ok": true
+    },
+    {
+      "text": "слушай убери адобридер с экрана",
+      "expected": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.8472
+      },
+      "ok": true
+    },
+    {
+      "text": "бивис скрой acrobat reader",
+      "expected": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.932
+      },
+      "ok": true
+    },
+    {
+      "text": "слушай pdf reader спрячь",
+      "expected": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.9155
+      },
+      "ok": true
+    },
+    {
+      "text": "дружище скрой акробат ридер",
+      "expected": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.9226
+      },
+      "ok": true
+    },
+    {
+      "text": "дружище кинь вниз pdf reader",
+      "expected": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.8889
+      },
+      "ok": true
+    },
+    {
+      "text": "слушай убери акробат ридер с глаз",
+      "expected": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.9027
+      },
+      "ok": true
+    },
+    {
+      "text": "дружище сверни пожалуйста акрабат",
+      "expected": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.8695
+      },
+      "ok": true
+    },
+    {
+      "text": "beavis сврени адоб ридер",
+      "expected": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.8316
+      },
+      "ok": true
+    },
+    {
+      "text": "дружище шиталка pdf сверни",
+      "expected": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.9061
+      },
+      "ok": true
+    },
+    {
+      "text": "брух сверни пожалуйста adobe acrbat",
+      "expected": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.9095
+      },
+      "ok": true
+    },
+    {
+      "text": "алло minimize pdf reader",
+      "expected": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.8836
+      },
+      "ok": true
+    },
+    {
+      "text": "эй бивис кинь вниз acrobat",
+      "expected": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.8782
+      },
+      "ok": true
+    },
+    {
+      "text": "слушай сверни акробат рыдер",
+      "expected": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.9101
+      },
+      "ok": true
+    },
+    {
+      "text": "бивис убери окно читалка pdf",
+      "expected": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.9097
+      },
+      "ok": true
+    },
+    {
+      "text": "бивис спрячь акробат",
+      "expected": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.8986
+      },
+      "ok": true
+    },
+    {
+      "text": "дружище сверни в панель акрабат",
+      "expected": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.8213
+      },
+      "ok": true
+    },
+    {
+      "text": "beavis сверни пожалуйста adobe acrobat",
+      "expected": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.9217
+      },
+      "ok": true
+    },
+    {
+      "text": "дружище minimize акробат ридер",
+      "expected": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.888
+      },
+      "ok": true
+    },
+    {
+      "text": "брух адоб акробат спрячь",
+      "expected": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.8891
+      },
+      "ok": true
+    },
+    {
+      "text": "дружище сврени arobat",
+      "expected": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.8678
+      },
+      "ok": true
+    },
+    {
+      "text": "дружище убери окно adobe acrbat",
+      "expected": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.8573
+      },
+      "ok": true
+    },
+    {
+      "text": "сверни пожалуйста акрабат",
+      "expected": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "minimize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.896
+      },
+      "ok": true
+    },
+    {
+      "text": "эй бивис увеличь окно акробат рыдер",
+      "expected": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.8595
+      },
+      "ok": true
+    },
+    {
+      "text": "beavis adobe acrbat на весь экран",
+      "expected": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.8898
+      },
+      "ok": true
+    },
+    {
+      "text": "ну ка acrobat на весь экран",
+      "expected": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.9093
+      },
+      "ok": true
+    },
+    {
+      "text": "бивис разверни на весь экран acrobat",
+      "expected": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.8927
+      },
+      "ok": true
+    },
+    {
+      "text": "эй бивис acrobat на весь экран",
+      "expected": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.885
+      },
+      "ok": true
+    },
+    {
+      "text": "брух на весь экран adobe acrobat",
+      "expected": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.9022
+      },
+      "ok": true
+    },
+    {
+      "text": "алло на весь экран pdf reader",
+      "expected": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.9069
+      },
+      "ok": true
+    },
+    {
+      "text": "брух разверни на весь экран adobe acrobat",
+      "expected": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.9175
+      },
+      "ok": true
+    },
+    {
+      "text": "слушай на весь экран адоб акробат",
+      "expected": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.8821
+      },
+      "ok": true
+    },
+    {
+      "text": "сделай pdf открыть на весь экран",
+      "expected": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.8987
+      },
+      "ok": true
+    },
+    {
+      "text": "ну ка увеличь окно адоб акробат",
+      "expected": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.8852
+      },
+      "ok": true
+    },
+    {
+      "text": "эй бивис fullscreen адобридер",
+      "expected": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.8242
+      },
+      "ok": true
+    },
+    {
+      "text": "эй бивис разверни pdf reader",
+      "expected": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.9248
+      },
+      "ok": true
+    },
+    {
+      "text": "дружище разверни окно акробат ридер",
+      "expected": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.9087
+      },
+      "ok": true
+    },
+    {
+      "text": "beavis максимизируй читалкаpdf",
+      "expected": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.8411
+      },
+      "ok": true
+    },
+    {
+      "text": "на весь экран pdf откыть",
+      "expected": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.9202
+      },
+      "ok": true
+    },
+    {
+      "text": "бивис фулл скрин читалка pdf",
+      "expected": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.8983
+      },
+      "ok": true
+    },
+    {
+      "text": "ну ка фулл скрин adobe acrobat",
+      "expected": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.891
+      },
+      "ok": true
+    },
+    {
+      "text": "алло во весь экран pdf откыть",
+      "expected": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.9088
+      },
+      "ok": true
+    },
+    {
+      "text": "увеличь окно pdf reader",
+      "expected": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.8765
+      },
+      "ok": true
+    },
+    {
+      "text": "дружище раскрой pdf reader",
+      "expected": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.9097
+      },
+      "ok": true
+    },
+    {
+      "text": "beavis акробат ридер на весь экран",
+      "expected": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.9122
+      },
+      "ok": true
+    },
+    {
+      "text": "алло разверни пдф ридер",
+      "expected": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.8765
+      },
+      "ok": true
+    },
+    {
+      "text": "эй бивис на весь экран acrobat",
+      "expected": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.885
+      },
+      "ok": true
+    },
+    {
+      "text": "алло разверни обратно акрабат",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.7894
+      },
+      "ok": true
+    },
+    {
+      "text": "ну ка верни pdf открыть",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.946
+      },
+      "ok": true
+    },
+    {
+      "text": "beavis верни окно адоб ридер",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.8685
+      },
+      "ok": true
+    },
+    {
+      "text": "бивис восстанови окно pdf откыть",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.9088
+      },
+      "ok": true
+    },
+    {
+      "text": "восстанови читалка pdf",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.9099
+      },
+      "ok": true
+    },
+    {
+      "text": "beavis разверни обратно pdf откыть",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.8792
+      },
+      "ok": true
+    },
+    {
+      "text": "бивис разверни обратно aкrobat reader",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.8703
+      },
+      "ok": true
+    },
+    {
+      "text": "бивис восстанови окно aкrobat reader",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.9019
+      },
+      "ok": true
+    },
+    {
+      "text": "бивис восстанови окно акробат ридер",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.9098
+      },
+      "ok": true
+    },
+    {
+      "text": "дружище разверни обратно читалкаpdf",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.8193
+      },
+      "ok": true
+    },
+    {
+      "text": "слушай достань arobat",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.8878
+      },
+      "ok": true
+    },
+    {
+      "text": "beavis пдф ридер восстанови",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.8506
+      },
+      "ok": true
+    },
+    {
+      "text": "слушай arobat верни",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.9254
+      },
+      "ok": true
+    },
+    {
+      "text": "бивис открой обратно акробат",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.9463
+      },
+      "ok": true
+    },
+    {
+      "text": "дружище покажи обратно адоб ридер",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.7133
+      },
+      "ok": true
+    },
+    {
+      "text": "алло восстанови адоб акробат",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.8766
+      },
+      "ok": true
+    },
+    {
+      "text": "бивис покажи обратно pdf открыть",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.8938
+      },
+      "ok": true
+    },
+    {
+      "text": "ну ка верни читалкаpdf",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.9292
+      },
+      "ok": true
+    },
+    {
+      "text": "adobe acrobat верни",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.9197
+      },
+      "ok": true
+    },
+    {
+      "text": "алло покажи обратно пдф ридер",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.7835
+      },
+      "ok": true
+    },
+    {
+      "text": "дружище восстанови шиталка pdf",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.8789
+      },
+      "ok": true
+    },
+    {
+      "text": "алло акробат верни",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.9126
+      },
+      "ok": true
+    },
+    {
+      "text": "ну ка достань акробат ридер",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.9361
+      },
+      "ok": true
+    },
+    {
+      "text": "слушай восстанови читалкаpdf",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "acrobat_reader",
+        "confidence": 0.8813
+      },
+      "ok": true
+    },
+    {
+      "text": "открой acrobat пожалуйста",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.972
+      },
+      "ok": true
+    },
+    {
+      "text": "открой terminal быстро",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.9758
+      },
+      "ok": true
+    },
+    {
+      "text": "включи otlook",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.9797
+      },
+      "ok": true
+    },
+    {
+      "text": "давай включи wireshark",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.9712
+      },
+      "ok": true
+    },
+    {
+      "text": "брух open calc",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.9889
+      },
+      "ok": true
+    },
+    {
+      "text": "включи cntrol пожалуйста",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.9823
+      },
+      "ok": true
+    },
+    {
+      "text": "брух start tskschd",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.9818
+      },
+      "ok": true
+    },
+    {
+      "text": "бивис поставь таймер",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.793
+      },
+      "ok": true
+    },
+    {
+      "text": "брух найди lightroom",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.9629
+      },
+      "ok": true
+    },
+    {
+      "text": "открой perfmon пожалуйста",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.9754
+      },
+      "ok": true
+    },
+    {
+      "text": "найди after effects",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.9674
+      },
+      "ok": true
+    },
+    {
+      "text": "брух найди sstem configuration",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.9552
+      },
+      "ok": true
+    },
+    {
+      "text": "открой adobe acrobat",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.9611
+      },
+      "ok": true
+    },
+    {
+      "text": "ну ка найди msinfo32",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.9817
+      },
+      "ok": true
+    },
+    {
+      "text": "ну ка open adobe acrobat",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.9773
+      },
+      "ok": true
+    },
+    {
+      "text": "давай открой snippingtool",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.9554
+      },
+      "ok": true
+    },
+    {
+      "text": "слушай запусти disk management",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.986
+      },
+      "ok": true
+    },
+    {
+      "text": "брух start performance monitor",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.9662
+      },
+      "ok": true
+    },
+    {
+      "text": "бивис найди remote desktop connetion",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.9408
+      },
+      "ok": true
+    },
+    {
+      "text": "start on-screen keyboard",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.9585
+      },
+      "ok": true
+    },
+    {
+      "text": "open windows defeder firewall with advanced security пожалуйста",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.876
+      },
+      "ok": true
+    },
+    {
+      "text": "open perfmon пожалуйста",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.9817
+      },
+      "ok": true
+    },
+    {
+      "text": "давай запусти кдекс",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.9885
+      },
+      "ok": true
+    },
+    {
+      "text": "брух запусти regdit",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.9869
+      },
+      "ok": true
+    }
+  ]
+}

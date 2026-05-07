@@ -2,9 +2,11 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import subprocess
 import sys
 from dataclasses import dataclass, field
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Callable
 
@@ -22,11 +24,86 @@ from python_agent.resolvers.app_catalog_utils import (
     normalize_speech_forms,
     suggest_app_id,
 )
+from python_agent.resolvers.app_visibility import is_user_visible_app
 from python_agent.resolvers.windows_app_discovery import discover_windows_apps
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
+DEFAULT_APPS_INDEX_PATH = PROJECT_ROOT / "python_agent" / "data" / "cache" / "apps_index.json"
 ProgressCallback = Callable[[str], None]
+STANDARD_DEFAULT_APP_IDS = {
+    # Microsoft Office
+    "access",
+    "database_compare",
+    "excel",
+    "office",
+    "onenote",
+    "outlook",
+    "powerpoint",
+    "project",
+    "spreadsheet_compare",
+    "visio",
+    "word",
+    # Adobe
+    "acrobat_reader",
+    "adobe_xd",
+    "after_effects",
+    "animate",
+    "audition",
+    "bridge",
+    "illustrator",
+    "indesign",
+    "lightroom",
+    "media_encoder",
+    "photoshop",
+    "premiere_pro",
+    "substance_painter",
+    # Windows shell/tools
+    "calculator",
+    "camera",
+    "character_map",
+    "cmd",
+    "computer_management",
+    "control_panel",
+    "device_manager",
+    "disk_cleanup",
+    "disk_management",
+    "edge",
+    "event_viewer",
+    "explorer",
+    "game_bar",
+    "magnify",
+    "microsoft_store",
+    "narrator",
+    "notepad",
+    "on_screen_keyboard",
+    "paint",
+    "performance_monitor",
+    "photos",
+    "powershell",
+    "print_management",
+    "regedit",
+    "remote_desktop_connection",
+    "resource_monitor",
+    "run",
+    "services",
+    "settings",
+    "snipping_tool",
+    "steps_recorder",
+    "system_configuration",
+    "system_information",
+    "task_manager",
+    "task_scheduler",
+    "terminal",
+    "voice_recorder",
+    "windows_defender_firewall_with_advanced_security",
+    "windows_media_player_legacy",
+    "wmplayer",
+}
+
+
+def _is_user_visible_app(record: AppRecord) -> bool:
+    return is_user_visible_app(record)
 
 
 @dataclass(frozen=True)
@@ -40,6 +117,7 @@ class AddUserAppRequest:
     launch_target: str | None = None
     retrain: bool = True
     catalog_path: Path = DEFAULT_APPS_CATALOG_PATH
+    index_output_path: Path = DEFAULT_APPS_INDEX_PATH
 
 
 @dataclass(frozen=True)
@@ -65,6 +143,7 @@ class UpdateUserAppRequest:
     speech_forms: list[str] = field(default_factory=list)
     retrain: bool = True
     catalog_path: Path = DEFAULT_APPS_CATALOG_PATH
+    index_output_path: Path = DEFAULT_APPS_INDEX_PATH
 
 
 @dataclass(frozen=True)
@@ -72,6 +151,7 @@ class DeleteUserAppRequest:
     app_id: str
     retrain: bool = True
     catalog_path: Path = DEFAULT_APPS_CATALOG_PATH
+    index_output_path: Path = DEFAULT_APPS_INDEX_PATH
 
 
 @dataclass(frozen=True)
@@ -92,6 +172,7 @@ class ApplyUserAppChangesRequest:
     changes: list[AppCatalogChange]
     retrain: bool = True
     catalog_path: Path = DEFAULT_APPS_CATALOG_PATH
+    index_output_path: Path = DEFAULT_APPS_INDEX_PATH
 
 
 @dataclass(frozen=True)
@@ -110,6 +191,23 @@ class ApplyUserAppChangesResult:
         }
 
 
+def retrain_apps_pipeline(
+    catalog_path: Path = DEFAULT_APPS_CATALOG_PATH,
+    index_output_path: Path = DEFAULT_APPS_INDEX_PATH,
+    progress: ProgressCallback | None = None,
+) -> dict[str, Any]:
+    progress = progress or (lambda _message: None)
+    progress("Rebuilding runtime app index")
+    index_summary = rebuild_apps_index(catalog_path, index_output_path)
+    progress("Training command pipeline")
+    commands = _run_training(progress, catalog_path)
+    progress("Training finished")
+    return {
+        "index_summary": index_summary,
+        "commands": commands,
+    }
+
+
 def add_user_app(
     request: AddUserAppRequest,
     progress: ProgressCallback | None = None,
@@ -121,10 +219,17 @@ def add_user_app(
 
     progress("Сохраняю приложение")
     service = AppCatalogService(request.catalog_path)
-    service.add_app(record, replace_existing=False)
+    existing = service.get_app(record.app_id)
+    replace_existing = False
+    if existing is not None:
+        replace_existing = existing.source != "user" and not existing.enabled
+        if not replace_existing:
+            raise ValueError(f"app_id is already used: {record.app_id}")
+
+    service.add_app(record, replace_existing=replace_existing)
 
     progress("Обновляю каталог")
-    index_summary = rebuild_apps_index(request.catalog_path)
+    index_summary = rebuild_apps_index(request.catalog_path, request.index_output_path)
 
     commands: list[dict[str, Any]] = []
     smoke_results: list[dict[str, Any]] = []
@@ -184,10 +289,14 @@ def apply_user_app_changes(
                 )
             )
 
-            if service.get_app(record.app_id) is not None:
-                raise ValueError(f"app_id is already used: {record.app_id}")
+            existing = service.get_app(record.app_id)
+            replace_existing = False
+            if existing is not None:
+                replace_existing = existing.source != "user" and not existing.enabled
+                if not replace_existing:
+                    raise ValueError(f"app_id is already used: {record.app_id}")
 
-            service.add_app(record, replace_existing=False)
+            service.add_app(record, replace_existing=replace_existing)
             applied.append({"operation": "add", "source": "user", "app_id": record.app_id})
             smoke_records.append(record)
             continue
@@ -231,7 +340,7 @@ def apply_user_app_changes(
             continue
 
     progress("Обновляю каталог")
-    index_summary = rebuild_apps_index(request.catalog_path)
+    index_summary = rebuild_apps_index(request.catalog_path, request.index_output_path)
 
     commands: list[dict[str, Any]] = []
     smoke_results: list[dict[str, Any]] = []
@@ -278,7 +387,7 @@ def delete_user_app(
         changed_record = service.disable_app(record.app_id)
 
     progress("Обновляю каталог")
-    index_summary = rebuild_apps_index(request.catalog_path)
+    index_summary = rebuild_apps_index(request.catalog_path, request.index_output_path)
 
     commands: list[dict[str, Any]] = []
     if request.retrain:
@@ -307,7 +416,7 @@ def update_user_app(
     )
 
     progress("Обновляю каталог")
-    index_summary = rebuild_apps_index(request.catalog_path)
+    index_summary = rebuild_apps_index(request.catalog_path, request.index_output_path)
 
     commands: list[dict[str, Any]] = []
     smoke_results: list[dict[str, Any]] = []
@@ -389,21 +498,90 @@ def _build_record(request: AddUserAppRequest) -> AppRecord:
     )
 
 
-def rebuild_apps_index(catalog_path: Path = DEFAULT_APPS_CATALOG_PATH) -> dict[str, Any]:
+def rebuild_apps_index(
+    catalog_path: Path = DEFAULT_APPS_CATALOG_PATH,
+    output_path: Path = DEFAULT_APPS_INDEX_PATH,
+) -> dict[str, Any]:
     service = AppCatalogService(catalog_path)
     apps = service.get_all_apps()
-    enabled = [app for app in apps if app.enabled]
+    enabled = [app for app in apps if app.enabled and _is_user_visible_app(app)]
+
+    records: list[dict[str, Any]] = []
+    for app in enabled:
+        if not app.launch_target:
+            continue
+
+        records.append({
+            "app_id": app.app_id,
+            "display_name": app.display_name,
+            "display_names": list(dict.fromkeys([app.display_name, *app.speech_forms])),
+            "launch_type": app.launch_type,
+            "launch_target": app.launch_target,
+            "target_path": app.target_path or app.launch_target,
+            "arguments": "",
+            "working_directory": app.working_directory,
+            "source": app.source,
+            "exists": _index_target_exists(app.launch_type, app.launch_target),
+            "priority": app.priority,
+        })
+
+    records.sort(key=lambda item: (
+        str(item.get("app_id", "")),
+        -int(item.get("priority", 0)),
+        str(item.get("display_name", "")),
+    ))
+
+    output_path = Path(output_path)
+    if not output_path.is_absolute():
+        output_path = PROJECT_ROOT / output_path
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    index = {
+        "schema_version": 1,
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "source": "apps_catalog",
+        "catalog_path": str(service.catalog_path),
+        "records": records,
+        "summary": {
+            "records_total": len(records),
+            "records_existing": sum(1 for record in records if record.get("exists")),
+            "app_ids_total": len({record.get("app_id") for record in records}),
+            "enabled_apps": len(enabled),
+            "disabled_apps": len(apps) - len(enabled),
+        },
+    }
+    output_path.write_text(json.dumps(index, ensure_ascii=False, indent=2), encoding="utf-8")
+
     return {
         "source": "apps_catalog",
         "catalog_path": str(service.catalog_path),
+        "index_path": str(output_path),
         "total_apps": len(apps),
         "enabled_apps": len(enabled),
         "disabled_apps": len(apps) - len(enabled),
+        "runtime_records": len(records),
+        "runtime_existing_records": index["summary"]["records_existing"],
     }
+
+
+def _index_target_exists(launch_type: str, launch_target: str) -> bool:
+    if not launch_target:
+        return False
+    if launch_type in {"apps_folder", "uri"}:
+        return True
+    return Path(launch_target).expanduser().exists()
 
 
 def _run_training(progress: ProgressCallback, apps_catalog_path: Path) -> list[dict[str, Any]]:
     apps_catalog_path = Path(apps_catalog_path)
+    worker_count = max(1, min(32, (os.cpu_count() or 4) - 1))
+    training_env = {
+        **os.environ,
+        "OMP_NUM_THREADS": str(worker_count),
+        "MKL_NUM_THREADS": str(worker_count),
+        "OPENBLAS_NUM_THREADS": str(worker_count),
+        "NUMEXPR_NUM_THREADS": str(worker_count),
+        "BEAVIS_TRAINING_WORKERS": str(worker_count),
+    }
     commands: list[tuple[str, list[str]]] = [
         (
             "Генерирую датасет open_app",
@@ -475,6 +653,7 @@ def _run_training(progress: ProgressCallback, apps_catalog_path: Path) -> list[d
         completed = subprocess.run(
             cmd,
             cwd=PROJECT_ROOT,
+            env=training_env,
             capture_output=True,
             text=True,
             encoding="utf-8",
@@ -538,7 +717,16 @@ def _raise_if_smoke_failed(smoke_results: list[dict[str, Any]], message: str) ->
 
 def list_user_app_records(catalog_path: Path = DEFAULT_APPS_CATALOG_PATH) -> list[dict[str, Any]]:
     service = AppCatalogService(catalog_path)
-    return [record.to_dict() for record in service.get_all_apps()]
+    records: list[dict[str, Any]] = []
+    for record in service.get_all_apps():
+        if not record.enabled:
+            continue
+        if not _is_user_visible_app(record):
+            continue
+        payload = record.to_dict()
+        payload["source"] = "user"
+        records.append(payload)
+    return records
 
 
 def list_windows_apps() -> list[dict[str, str]]:

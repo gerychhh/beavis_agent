@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass
 from typing import Any
 
@@ -39,7 +40,7 @@ class WindowLayoutArgModel:
 
         results: list[dict] = []
 
-        for i, _ in enumerate(texts):
+        for i, text in enumerate(texts):
             layout = str(layout_preds[i])
             layout_conf = self._pred_conf(self.layout_model, layout_probas, i, layout)
 
@@ -93,6 +94,15 @@ class WindowLayoutArgModel:
                     if len(targets) >= required_targets:
                         break
 
+            mentioned_targets = self._targets_by_text_order(str(text), max_targets)
+            if mentioned_targets:
+                merged = list(mentioned_targets)
+                for target in targets:
+                    if target not in mentioned_targets:
+                        merged.append(target)
+                targets = merged[:max_targets]
+                target_confs = [float(layout_conf)] * len(targets)
+
             if len(targets) < required_targets:
                 results.append({
                     "layout": layout,
@@ -143,3 +153,45 @@ class WindowLayoutArgModel:
         except ValueError:
             return 0.0
         return float(proba[row_idx][idx])
+
+    def _targets_by_text_order(self, text: str, max_targets: int) -> list[str]:
+        metadata = self.metadata or {}
+        surfaces = metadata.get("app_surface_forms")
+        if not isinstance(surfaces, dict):
+            return []
+
+        normalized = " ".join(str(text).lower().split())
+        matches: list[tuple[int, int, int, str]] = []
+        for app_id, values in surfaces.items():
+            if not isinstance(values, list):
+                continue
+            best: tuple[int, int, int, str] | None = None
+            for raw_surface in values:
+                surface = " ".join(str(raw_surface).lower().split())
+                if len(surface) < 3:
+                    continue
+                pattern = rf"(?<![\wа-яё]){re.escape(surface)}(?![\wа-яё])"
+                found = re.search(pattern, normalized, flags=re.IGNORECASE)
+                if not found:
+                    continue
+                candidate = (found.start(), found.end(), -len(surface), str(app_id))
+                if best is None or candidate < best:
+                    best = candidate
+            if best is not None:
+                matches.append(best)
+
+        matches.sort()
+        if max_targets == 2 and len(matches) >= 2:
+            first = matches[0]
+            second = matches[1]
+            between = normalized[first[1]:second[0]]
+            if re.search(r"(?<![\wа-яё])под(?![\wа-яё])", between, flags=re.IGNORECASE):
+                return [second[3], first[3]]
+
+        ordered: list[str] = []
+        for _start, _end, _length, app_id in matches:
+            if app_id not in ordered:
+                ordered.append(app_id)
+            if len(ordered) >= max_targets:
+                break
+        return ordered

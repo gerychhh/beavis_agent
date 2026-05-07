@@ -36,6 +36,10 @@ class BridgeRouter:
                 return self.api.apps.delete(**params)
             if method == "apps.apply_changes":
                 return self.api.apps.apply_changes(**params)
+            if method == "apps.retrain_start":
+                return self.api.apps.retrain_start()
+            if method == "apps.retrain_status":
+                return self.api.apps.retrain_status()
 
             if method == "voice.preload":
                 return self.api.voice.preload(**params)
@@ -43,6 +47,8 @@ class BridgeRouter:
                 return self.api.voice.listen_once(**params)
             if method == "voice.test_microphone":
                 return self.api.voice.test_microphone(**params)
+            if method == "voice.list_microphones":
+                return self.api.voice.list_microphones()
 
             if method == "settings.load":
                 return self.api.settings.load()

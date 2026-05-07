@@ -20,6 +20,7 @@ from python_agent.ml_models.window_layout_arg_model import WindowLayoutArgModel
 
 
 DATA_PATH = ROOT / "python_agent" / "data" / "window_layout" / "processed" / "window_layout_train.csv"
+APP_SURFACES_PATH = ROOT / "python_agent" / "data" / "window_layout" / "processed" / "app_surface_forms.json"
 MODEL_PATH = ROOT / "python_agent" / "models" / "window_layout_arg_model.joblib"
 METRICS_PATH = ROOT / "python_agent" / "data" / "window_layout" / "eval" / "train_metrics.json"
 
@@ -72,6 +73,9 @@ def train_one(col: str, x_train_vec, x_test_vec, train_df, test_df):
 
 def main():
     df = pd.read_csv(DATA_PATH)
+    app_surface_forms = {}
+    if APP_SURFACES_PATH.exists():
+        app_surface_forms = json.loads(APP_SURFACES_PATH.read_text(encoding="utf-8"))
 
     train_df, test_df = train_test_split(
         df,
@@ -103,8 +107,9 @@ def main():
         "train_rows": int(len(train_df)),
         "validation_rows": int(len(test_df)),
         "model_type": "FeatureUnion capped(Tfidf char_wb 2-5 max_features=30000 + word 1-4 max_features=30000) + 5 SGDClassifier(log_loss)",
-        "runtime_rules": "none",
+        "runtime_rules": "metadata app-surface target ordering",
         "normalizer_inside_model": False,
+        "app_surface_forms": app_surface_forms,
     }
 
     wrapper = WindowLayoutArgModel(

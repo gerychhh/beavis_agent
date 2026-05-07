@@ -13,6 +13,7 @@ if __package__ is None or __package__ == "":
 from python_agent.ui.main_window import BeavisMainWindow
 from python_agent.ui.settings_store import UiSettings
 from python_agent.ui.workers import CommandRunner, UserAppRunner
+from python_agent.training.add_user_app import list_user_app_records
 
 
 def main() -> int:
@@ -25,6 +26,8 @@ def main() -> int:
         hotkey_locked=True,
         autoload=False,
     )
+    window._handle_user_apps_loaded(list_user_app_records())
+    app.processEvents()
 
     labels = [button.text() for button in window.nav_buttons]
     checks = {

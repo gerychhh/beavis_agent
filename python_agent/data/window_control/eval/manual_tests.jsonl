@@ -1,0 +1,120 @@
+{"text": "бивис убери нахрен calcuator", "expected": {"action": "close", "target_type": "app", "app_id": "calculator"}}
+{"text": "слушай закрой нафиг calc", "expected": {"action": "close", "target_type": "app", "app_id": "calculator"}}
+{"text": "убери кalculator полностью", "expected": {"action": "close", "target_type": "app", "app_id": "calculator"}}
+{"text": "ну ка заканчивай с кalc", "expected": {"action": "close", "target_type": "app", "app_id": "calculator"}}
+{"text": "эй бивис close calc", "expected": {"action": "close", "target_type": "app", "app_id": "calculator"}}
+{"text": "calc закрой", "expected": {"action": "close", "target_type": "app", "app_id": "calculator"}}
+{"text": "бивис заканчивай с calculator", "expected": {"action": "close", "target_type": "app", "app_id": "calculator"}}
+{"text": "дружище прибей кalc", "expected": {"action": "close", "target_type": "app", "app_id": "calculator"}}
+{"text": "beavis хватит clculator", "expected": {"action": "close", "target_type": "app", "app_id": "calculator"}}
+{"text": "бивис закрой нафиг calcuator", "expected": {"action": "close", "target_type": "app", "app_id": "calculator"}}
+{"text": "дружище закрой пожалуйста кalc", "expected": {"action": "close", "target_type": "app", "app_id": "calculator"}}
+{"text": "слушай закрой кalculator", "expected": {"action": "close", "target_type": "app", "app_id": "calculator"}}
+{"text": "алло зкрой кalc", "expected": {"action": "close", "target_type": "app", "app_id": "calculator"}}
+{"text": "брух закрыть calculator", "expected": {"action": "close", "target_type": "app", "app_id": "calculator"}}
+{"text": "убей процесс кalculator", "expected": {"action": "close", "target_type": "app", "app_id": "calculator"}}
+{"text": "убей процесс clculator", "expected": {"action": "close", "target_type": "app", "app_id": "calculator"}}
+{"text": "брух убери calc полностью", "expected": {"action": "close", "target_type": "app", "app_id": "calculator"}}
+{"text": "алло убери нахрен calcuator", "expected": {"action": "close", "target_type": "app", "app_id": "calculator"}}
+{"text": "beavis закрыть кalc", "expected": {"action": "close", "target_type": "app", "app_id": "calculator"}}
+{"text": "брух снеси clculator", "expected": {"action": "close", "target_type": "app", "app_id": "calculator"}}
+{"text": "слушай прибей кalculator", "expected": {"action": "close", "target_type": "app", "app_id": "calculator"}}
+{"text": "beavis зкрой calcuator", "expected": {"action": "close", "target_type": "app", "app_id": "calculator"}}
+{"text": "слушай выключи calcuator", "expected": {"action": "close", "target_type": "app", "app_id": "calculator"}}
+{"text": "слушай кalculator заверши", "expected": {"action": "close", "target_type": "app", "app_id": "calculator"}}
+{"text": "слушай сверни окно calculator", "expected": {"action": "minimize", "target_type": "app", "app_id": "calculator"}}
+{"text": "эй бивис убери окно clculator", "expected": {"action": "minimize", "target_type": "app", "app_id": "calculator"}}
+{"text": "сверни в панель calcuator", "expected": {"action": "minimize", "target_type": "app", "app_id": "calculator"}}
+{"text": "слушай сверни кalculator", "expected": {"action": "minimize", "target_type": "app", "app_id": "calculator"}}
+{"text": "beavis спрячь clculator", "expected": {"action": "minimize", "target_type": "app", "app_id": "calculator"}}
+{"text": "алло кalculator вниз", "expected": {"action": "minimize", "target_type": "app", "app_id": "calculator"}}
+{"text": "эй бивис убери кalc с экрана", "expected": {"action": "minimize", "target_type": "app", "app_id": "calculator"}}
+{"text": "дружище кalculator вниз", "expected": {"action": "minimize", "target_type": "app", "app_id": "calculator"}}
+{"text": "ну ка убери calculator с экрана", "expected": {"action": "minimize", "target_type": "app", "app_id": "calculator"}}
+{"text": "алло сверни окно кalc", "expected": {"action": "minimize", "target_type": "app", "app_id": "calculator"}}
+{"text": "дружище кalc вниз", "expected": {"action": "minimize", "target_type": "app", "app_id": "calculator"}}
+{"text": "слушай сверний calc", "expected": {"action": "minimize", "target_type": "app", "app_id": "calculator"}}
+{"text": "эй бивис убери calc с глаз", "expected": {"action": "minimize", "target_type": "app", "app_id": "calculator"}}
+{"text": "beavis убери calculator с глаз", "expected": {"action": "minimize", "target_type": "app", "app_id": "calculator"}}
+{"text": "дружище убери кalculator с глаз", "expected": {"action": "minimize", "target_type": "app", "app_id": "calculator"}}
+{"text": "бивис кalculator спрячь", "expected": {"action": "minimize", "target_type": "app", "app_id": "calculator"}}
+{"text": "брух сверни пожалуйста calcuator", "expected": {"action": "minimize", "target_type": "app", "app_id": "calculator"}}
+{"text": "ну ка убери кalc с экрана", "expected": {"action": "minimize", "target_type": "app", "app_id": "calculator"}}
+{"text": "брух сврени кalc", "expected": {"action": "minimize", "target_type": "app", "app_id": "calculator"}}
+{"text": "эй бивис calc спрячь", "expected": {"action": "minimize", "target_type": "app", "app_id": "calculator"}}
+{"text": "ну ка скрой calcuator", "expected": {"action": "minimize", "target_type": "app", "app_id": "calculator"}}
+{"text": "ну ка спрячь кalculator", "expected": {"action": "minimize", "target_type": "app", "app_id": "calculator"}}
+{"text": "эй бивис calcuator сверни", "expected": {"action": "minimize", "target_type": "app", "app_id": "calculator"}}
+{"text": "убери окно кalc", "expected": {"action": "minimize", "target_type": "app", "app_id": "calculator"}}
+{"text": "бивис на весь экран кalculator", "expected": {"action": "maximize", "target_type": "app", "app_id": "calculator"}}
+{"text": "бивис разверни calculator", "expected": {"action": "maximize", "target_type": "app", "app_id": "calculator"}}
+{"text": "дружище максимизируй кalculator", "expected": {"action": "maximize", "target_type": "app", "app_id": "calculator"}}
+{"text": "слушай calcuator на весь экран", "expected": {"action": "maximize", "target_type": "app", "app_id": "calculator"}}
+{"text": "бивис увеличь окно кalc", "expected": {"action": "maximize", "target_type": "app", "app_id": "calculator"}}
+{"text": "слушай кalc на весь экран", "expected": {"action": "maximize", "target_type": "app", "app_id": "calculator"}}
+{"text": "слушай во весь экран calc", "expected": {"action": "maximize", "target_type": "app", "app_id": "calculator"}}
+{"text": "beavis на весь экран calcuator", "expected": {"action": "maximize", "target_type": "app", "app_id": "calculator"}}
+{"text": "ну ка максимизируй clculator", "expected": {"action": "maximize", "target_type": "app", "app_id": "calculator"}}
+{"text": "разверни окно calcuator", "expected": {"action": "maximize", "target_type": "app", "app_id": "calculator"}}
+{"text": "слушай разверни кalc", "expected": {"action": "maximize", "target_type": "app", "app_id": "calculator"}}
+{"text": "бивис разверни окно clculator", "expected": {"action": "maximize", "target_type": "app", "app_id": "calculator"}}
+{"text": "ну ка calc на весь экран", "expected": {"action": "maximize", "target_type": "app", "app_id": "calculator"}}
+{"text": "разверни clculator", "expected": {"action": "maximize", "target_type": "app", "app_id": "calculator"}}
+{"text": "алло fullscreen calc", "expected": {"action": "maximize", "target_type": "app", "app_id": "calculator"}}
+{"text": "фулл скрин calcuator", "expected": {"action": "maximize", "target_type": "app", "app_id": "calculator"}}
+{"text": "алло clculator разверни", "expected": {"action": "maximize", "target_type": "app", "app_id": "calculator"}}
+{"text": "бивис разверни окно кalculator", "expected": {"action": "maximize", "target_type": "app", "app_id": "calculator"}}
+{"text": "эй бивис сделай calc на весь экран", "expected": {"action": "maximize", "target_type": "app", "app_id": "calculator"}}
+{"text": "слушай clculator на весь экран", "expected": {"action": "maximize", "target_type": "app", "app_id": "calculator"}}
+{"text": "слушай максимизируй calc", "expected": {"action": "maximize", "target_type": "app", "app_id": "calculator"}}
+{"text": "бивис максимизируй calcuator", "expected": {"action": "maximize", "target_type": "app", "app_id": "calculator"}}
+{"text": "алло фулл скрин кalc", "expected": {"action": "maximize", "target_type": "app", "app_id": "calculator"}}
+{"text": "брух максимизируй кalculator", "expected": {"action": "maximize", "target_type": "app", "app_id": "calculator"}}
+{"text": "дружище покажи обратно calculator", "expected": {"action": "restore", "target_type": "app", "app_id": "calculator"}}
+{"text": "эй бивис calc верни", "expected": {"action": "restore", "target_type": "app", "app_id": "calculator"}}
+{"text": "дружище восстанови окно clculator", "expected": {"action": "restore", "target_type": "app", "app_id": "calculator"}}
+{"text": "бивис верни calcuator", "expected": {"action": "restore", "target_type": "app", "app_id": "calculator"}}
+{"text": "брух верни на экран calc", "expected": {"action": "restore", "target_type": "app", "app_id": "calculator"}}
+{"text": "эй бивис достань кalculator", "expected": {"action": "restore", "target_type": "app", "app_id": "calculator"}}
+{"text": "верни на экран кalculator", "expected": {"action": "restore", "target_type": "app", "app_id": "calculator"}}
+{"text": "алло кalc верни", "expected": {"action": "restore", "target_type": "app", "app_id": "calculator"}}
+{"text": "ну ка верни окно calcuator", "expected": {"action": "restore", "target_type": "app", "app_id": "calculator"}}
+{"text": "брух clculator восстанови", "expected": {"action": "restore", "target_type": "app", "app_id": "calculator"}}
+{"text": "восстанови clculator", "expected": {"action": "restore", "target_type": "app", "app_id": "calculator"}}
+{"text": "слушай восстанови окно calcuator", "expected": {"action": "restore", "target_type": "app", "app_id": "calculator"}}
+{"text": "кalculator верни", "expected": {"action": "restore", "target_type": "app", "app_id": "calculator"}}
+{"text": "слушай верни calc", "expected": {"action": "restore", "target_type": "app", "app_id": "calculator"}}
+{"text": "beavis восстанови calc", "expected": {"action": "restore", "target_type": "app", "app_id": "calculator"}}
+{"text": "бивис покажи обратно calculator", "expected": {"action": "restore", "target_type": "app", "app_id": "calculator"}}
+{"text": "верни окно calc", "expected": {"action": "restore", "target_type": "app", "app_id": "calculator"}}
+{"text": "дружище восстанови окно calc", "expected": {"action": "restore", "target_type": "app", "app_id": "calculator"}}
+{"text": "beavis верни на экран кalc", "expected": {"action": "restore", "target_type": "app", "app_id": "calculator"}}
+{"text": "алло calcuator верни", "expected": {"action": "restore", "target_type": "app", "app_id": "calculator"}}
+{"text": "алло открой обратно calcuator", "expected": {"action": "restore", "target_type": "app", "app_id": "calculator"}}
+{"text": "ну ка открой обратно calc", "expected": {"action": "restore", "target_type": "app", "app_id": "calculator"}}
+{"text": "бивис покажи обратно calcuator", "expected": {"action": "restore", "target_type": "app", "app_id": "calculator"}}
+{"text": "ну ка кalc восстанови", "expected": {"action": "restore", "target_type": "app", "app_id": "calculator"}}
+{"text": "бивис открой resourcemonitor", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "start resourcemonitor", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "start excel быстро", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "слушай запусти resourкe monitor", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "эй start registry editor", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "слушай включи registry editor", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "включи print management пожалуйста", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "включи дота", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "отправь письмо пожалуйста", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "включи planetvpn1 пожалуйста", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "включи printmanagement пожалуйста", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "ну ка напомни мне завтра", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "ну ка запусти microsoft edge", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "открой explorer пожалуйста", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "ну ка создай папку", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "давай включи disk managment", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "давай start resource monitor", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "найди devce manager", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "запусти openai", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "брух запусти resourcemonitor", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "давай open event viewer", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "ну ка поставь таймер", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "давай открой device manager", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "найди event vieer быстро", "expected": {"missing": ["action"], "confidence": 0.0}}

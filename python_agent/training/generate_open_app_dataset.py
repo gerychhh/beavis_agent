@@ -12,8 +12,10 @@ if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
 from python_agent.nlu.normalizer import Normalizer
+from python_agent.resolvers.app_catalog_utils import is_spoken_form
 from python_agent.resolvers.app_catalog_service import AppCatalogService
-from python_agent.training.dataset_sources import list_from_source, load_training_source
+from python_agent.resolvers.app_visibility import is_user_visible_app
+from python_agent.training.dataset_sources import dict_from_source, list_from_source, load_training_source
 
 
 RANDOM_SEED = 42
@@ -28,6 +30,7 @@ NON_OPEN_APP_TEMPLATES = list_from_source(_SOURCE, "non_open_app_templates")
 UNKNOWN_PHRASES = list_from_source(_SOURCE, "unknown_phrases")
 MANUAL_TESTS = list_from_source(_SOURCE, "manual_tests")
 CURATED_TRAIN_EXAMPLES = [tuple(item) for item in list_from_source(_SOURCE, "curated_train_examples")]
+CURATED_APP_CATALOG = dict_from_source(_SOURCE, "app_catalog")
 
 
 def clean_text(text: str) -> str:
@@ -90,25 +93,40 @@ def build_app_catalog(catalog_path: Path | None = None) -> dict[str, dict[str, l
     catalog: dict[str, dict[str, list[str]]] = {}
 
     for app in service.get_enabled_apps():
+        if not is_user_visible_app(app):
+            continue
+        curated = CURATED_APP_CATALOG.get(app.app_id, {})
+        if not isinstance(curated, dict):
+            curated = {}
+
         forms = [
             app.display_name,
             Path(app.launch_target).stem if app.launch_target else "",
             Path(app.target_path).stem if app.target_path else "",
             app.app_id.replace("_", " "),
             *app.speech_forms,
+            *list(curated.get("surface_forms", [])),
         ]
 
         surface_forms = list(dict.fromkeys([
             clean_text(form)
             for form in forms
-            if str(form).strip()
+            if is_spoken_form(str(form))
         ]))
 
         if surface_forms:
             catalog[app.app_id] = {
                 "surface_forms": surface_forms,
-                "typos": [],
-                "semantic": [],
+                "typos": list(dict.fromkeys(
+                    clean_text(item)
+                    for item in curated.get("typos", [])
+                    if str(item).strip()
+                )),
+                "semantic": list(dict.fromkeys(
+                    clean_text(item)
+                    for item in curated.get("semantic", [])
+                    if str(item).strip()
+                )),
             }
 
     return catalog

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+from collections import deque
 from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
@@ -98,6 +99,27 @@ class HistoryEntry:
 
     def to_display_dict(self) -> dict[str, Any]:
         payload = dict(self.record)
+        status = self.feedback_status
+        if status == "candidate":
+            status = "pending"
+
+        skill_confidence = 0.0
+        nlu = self.record.get("nlu")
+        if isinstance(nlu, dict):
+            parsed = _float_or_none(nlu.get("skill_confidence"))
+            if parsed is not None:
+                skill_confidence = parsed
+
+        payload["id"] = self.request_id
+        payload["date"] = self.timestamp
+        payload["raw_text"] = self.raw_text
+        payload["normalized_text"] = self.normalized_text
+        payload["skill"] = self.skill
+        payload["confidence"] = skill_confidence
+        payload["result"] = self.result
+        payload["status"] = status
+        payload["source"] = self.source
+        payload["args"] = self.args
         payload["raw_text_display"] = self.raw_text
         payload["normalized_text_display"] = self.normalized_text
         payload["feedback"] = self.feedback
@@ -115,7 +137,7 @@ class CommandHistoryStore:
 
     def load_entries(self, limit: int = 120) -> list[HistoryEntry]:
         feedback = self._load_feedback_by_request_id()
-        records = _read_jsonl(self.log_path)
+        records = _read_jsonl(self.log_path, limit=limit)
         entries = [
             HistoryEntry(record=record, feedback=feedback.get(str(record.get("request_id") or "")))
             for record in records
@@ -161,16 +183,20 @@ class CommandHistoryStore:
         return feedback_by_id
 
 
-def _read_jsonl(path: Path) -> list[dict[str, Any]]:
+def _read_jsonl(path: Path, limit: int | None = None) -> list[dict[str, Any]]:
     if not path.exists():
         return []
 
-    records: list[dict[str, Any]] = []
     try:
-        lines = path.read_text(encoding="utf-8").splitlines()
+        if limit is not None and limit > 0:
+            lines = _read_recent_lines(path, int(limit))
+        else:
+            lines = path.read_text(encoding="utf-8").splitlines()
     except OSError:
-        return records
+        return []
 
+    records: list[dict[str, Any]] | deque[dict[str, Any]]
+    records = deque(maxlen=max(1, int(limit))) if limit is not None and limit > 0 else []
     for line in lines:
         if not line.strip():
             continue
@@ -181,7 +207,32 @@ def _read_jsonl(path: Path) -> list[dict[str, Any]]:
         if isinstance(payload, dict):
             records.append(payload)
 
-    return records
+    return list(records)
+
+
+def _read_recent_lines(path: Path, limit: int, block_size: int = 8192) -> list[str]:
+    if limit <= 0:
+        return []
+
+    chunks: list[bytes] = []
+    line_breaks = 0
+    with path.open("rb") as file:
+        file.seek(0, 2)
+        position = file.tell()
+
+        while position > 0 and line_breaks <= limit:
+            read_size = min(block_size, position)
+            position -= read_size
+            file.seek(position)
+            chunk = file.read(read_size)
+            chunks.append(chunk)
+            line_breaks += chunk.count(b"\n")
+
+    if not chunks:
+        return []
+
+    text = b"".join(reversed(chunks)).decode("utf-8", errors="replace")
+    return text.splitlines()[-limit:]
 
 
 def readable_text(value: str) -> str:

@@ -1,0 +1,2239 @@
+{
+  "total": 201,
+  "correct": 201,
+  "accuracy": 1.0,
+  "errors": [],
+  "results": [
+    {
+      "text": "где документ пишу",
+      "normalized_text": "где документ пишу",
+      "expected_app_id": "word",
+      "prediction": {
+        "app_id": "word",
+        "confidence": 0.9199
+      },
+      "predicted_app_id": "word",
+      "ok": true
+    },
+    {
+      "text": "динамики рвуться",
+      "normalized_text": "динамики рвуться",
+      "expected_app_id": "unknown",
+      "prediction": {
+        "missing": [
+          "app_id"
+        ],
+        "confidence": 0.946
+      },
+      "predicted_app_id": "unknown",
+      "ok": true
+    },
+    {
+      "text": "закрой хром",
+      "normalized_text": "закрой хром",
+      "expected_app_id": "unknown",
+      "prediction": {
+        "missing": [
+          "app_id"
+        ],
+        "confidence": 0.9895
+      },
+      "predicted_app_id": "unknown",
+      "ok": true
+    },
+    {
+      "text": "запусти 3ds max 2025",
+      "normalized_text": "запусти 3ds max 2025",
+      "expected_app_id": "3ds_max_2025",
+      "prediction": {
+        "app_id": "3ds_max_2025",
+        "confidence": 0.9644
+      },
+      "predicted_app_id": "3ds_max_2025",
+      "ok": true
+    },
+    {
+      "text": "запусти 3dsmax",
+      "normalized_text": "запусти 3dsmax",
+      "expected_app_id": "3ds_max_2025",
+      "prediction": {
+        "app_id": "3ds_max_2025",
+        "confidence": 0.9642
+      },
+      "predicted_app_id": "3ds_max_2025",
+      "ok": true
+    },
+    {
+      "text": "запусти calc",
+      "normalized_text": "запусти calc",
+      "expected_app_id": "calculator",
+      "prediction": {
+        "app_id": "calculator",
+        "confidence": 0.9591
+      },
+      "predicted_app_id": "calculator",
+      "ok": true
+    },
+    {
+      "text": "запусти calculator",
+      "normalized_text": "запусти calculator",
+      "expected_app_id": "calculator",
+      "prediction": {
+        "app_id": "calculator",
+        "confidence": 0.9617
+      },
+      "predicted_app_id": "calculator",
+      "ok": true
+    },
+    {
+      "text": "запусти cleanmgr",
+      "normalized_text": "запусти cleanmgr",
+      "expected_app_id": "disk_cleanup",
+      "prediction": {
+        "app_id": "disk_cleanup",
+        "confidence": 0.9797
+      },
+      "predicted_app_id": "disk_cleanup",
+      "ok": true
+    },
+    {
+      "text": "запусти codex",
+      "normalized_text": "запусти codex",
+      "expected_app_id": "codex",
+      "prediction": {
+        "app_id": "codex",
+        "confidence": 0.9658
+      },
+      "predicted_app_id": "codex",
+      "ok": true
+    },
+    {
+      "text": "запусти control",
+      "normalized_text": "запусти control",
+      "expected_app_id": "control_panel",
+      "prediction": {
+        "app_id": "control_panel",
+        "confidence": 0.9632
+      },
+      "predicted_app_id": "control_panel",
+      "ok": true
+    },
+    {
+      "text": "запусти control panel",
+      "normalized_text": "запусти control panel",
+      "expected_app_id": "control_panel",
+      "prediction": {
+        "app_id": "control_panel",
+        "confidence": 0.9639
+      },
+      "predicted_app_id": "control_panel",
+      "ok": true
+    },
+    {
+      "text": "запусти cyberpunk 2077",
+      "normalized_text": "запусти cyberpunk 2077",
+      "expected_app_id": "cyberpunk_2077",
+      "prediction": {
+        "app_id": "cyberpunk_2077",
+        "confidence": 0.9668
+      },
+      "predicted_app_id": "cyberpunk_2077",
+      "ok": true
+    },
+    {
+      "text": "запусти device manager",
+      "normalized_text": "запусти device manager",
+      "expected_app_id": "device_manager",
+      "prediction": {
+        "app_id": "device_manager",
+        "confidence": 0.956
+      },
+      "predicted_app_id": "device_manager",
+      "ok": true
+    },
+    {
+      "text": "запусти devmgmt",
+      "normalized_text": "запусти devmgmt",
+      "expected_app_id": "device_manager",
+      "prediction": {
+        "app_id": "device_manager",
+        "confidence": 0.9524
+      },
+      "predicted_app_id": "device_manager",
+      "ok": true
+    },
+    {
+      "text": "запусти disk cleanup",
+      "normalized_text": "запусти disk cleanup",
+      "expected_app_id": "disk_cleanup",
+      "prediction": {
+        "app_id": "disk_cleanup",
+        "confidence": 0.9768
+      },
+      "predicted_app_id": "disk_cleanup",
+      "ok": true
+    },
+    {
+      "text": "запусти disk management",
+      "normalized_text": "запусти disk management",
+      "expected_app_id": "disk_management",
+      "prediction": {
+        "app_id": "disk_management",
+        "confidence": 0.9039
+      },
+      "predicted_app_id": "disk_management",
+      "ok": true
+    },
+    {
+      "text": "запусти diskmgmt",
+      "normalized_text": "запусти diskmgmt",
+      "expected_app_id": "disk_management",
+      "prediction": {
+        "app_id": "disk_management",
+        "confidence": 0.9513
+      },
+      "predicted_app_id": "disk_management",
+      "ok": true
+    },
+    {
+      "text": "запусти dota 2",
+      "normalized_text": "запусти dota 2",
+      "expected_app_id": "dota_2",
+      "prediction": {
+        "app_id": "dota_2",
+        "confidence": 0.9713
+      },
+      "predicted_app_id": "dota_2",
+      "ok": true
+    },
+    {
+      "text": "запусти edge",
+      "normalized_text": "запусти edge",
+      "expected_app_id": "edge",
+      "prediction": {
+        "app_id": "edge",
+        "confidence": 0.9642
+      },
+      "predicted_app_id": "edge",
+      "ok": true
+    },
+    {
+      "text": "запусти event viewer",
+      "normalized_text": "запусти event viewer",
+      "expected_app_id": "event_viewer",
+      "prediction": {
+        "app_id": "event_viewer",
+        "confidence": 0.9582
+      },
+      "predicted_app_id": "event_viewer",
+      "ok": true
+    },
+    {
+      "text": "запусти eventvwr",
+      "normalized_text": "запусти eventvwr",
+      "expected_app_id": "event_viewer",
+      "prediction": {
+        "app_id": "event_viewer",
+        "confidence": 0.9581
+      },
+      "predicted_app_id": "event_viewer",
+      "ok": true
+    },
+    {
+      "text": "запусти excel",
+      "normalized_text": "запусти excel",
+      "expected_app_id": "excel",
+      "prediction": {
+        "app_id": "excel",
+        "confidence": 0.9623
+      },
+      "predicted_app_id": "excel",
+      "ok": true
+    },
+    {
+      "text": "запусти explorer",
+      "normalized_text": "запусти explorer",
+      "expected_app_id": "explorer",
+      "prediction": {
+        "app_id": "explorer",
+        "confidence": 0.9541
+      },
+      "predicted_app_id": "explorer",
+      "ok": true
+    },
+    {
+      "text": "запусти file explorer",
+      "normalized_text": "запусти file explorer",
+      "expected_app_id": "explorer",
+      "prediction": {
+        "app_id": "explorer",
+        "confidence": 0.9521
+      },
+      "predicted_app_id": "explorer",
+      "ok": true
+    },
+    {
+      "text": "запусти freevpnplanet",
+      "normalized_text": "запусти freevpnplanet",
+      "expected_app_id": "planetvpn1",
+      "prediction": {
+        "app_id": "planetvpn1",
+        "confidence": 0.9619
+      },
+      "predicted_app_id": "planetvpn1",
+      "ok": true
+    },
+    {
+      "text": "запусти microsoft edge",
+      "normalized_text": "запусти microsoft edge",
+      "expected_app_id": "edge",
+      "prediction": {
+        "app_id": "edge",
+        "confidence": 0.9279
+      },
+      "predicted_app_id": "edge",
+      "ok": true
+    },
+    {
+      "text": "запусти microsoft excel",
+      "normalized_text": "запусти microsoft excel",
+      "expected_app_id": "excel",
+      "prediction": {
+        "app_id": "excel",
+        "confidence": 0.941
+      },
+      "predicted_app_id": "excel",
+      "ok": true
+    },
+    {
+      "text": "запусти microsoft word",
+      "normalized_text": "запусти microsoft word",
+      "expected_app_id": "word",
+      "prediction": {
+        "app_id": "word",
+        "confidence": 0.9412
+      },
+      "predicted_app_id": "word",
+      "ok": true
+    },
+    {
+      "text": "запусти msedge",
+      "normalized_text": "запусти msedge",
+      "expected_app_id": "edge",
+      "prediction": {
+        "app_id": "edge",
+        "confidence": 0.9576
+      },
+      "predicted_app_id": "edge",
+      "ok": true
+    },
+    {
+      "text": "запусти mspaint",
+      "normalized_text": "запусти mspaint",
+      "expected_app_id": "paint",
+      "prediction": {
+        "app_id": "paint",
+        "confidence": 0.9614
+      },
+      "predicted_app_id": "paint",
+      "ok": true
+    },
+    {
+      "text": "запусти notepad",
+      "normalized_text": "запусти notepad",
+      "expected_app_id": "notepad",
+      "prediction": {
+        "app_id": "notepad",
+        "confidence": 0.9403
+      },
+      "predicted_app_id": "notepad",
+      "ok": true
+    },
+    {
+      "text": "запусти openai",
+      "normalized_text": "запусти openai",
+      "expected_app_id": "codex",
+      "prediction": {
+        "app_id": "codex",
+        "confidence": 0.955
+      },
+      "predicted_app_id": "codex",
+      "ok": true
+    },
+    {
+      "text": "запусти paint",
+      "normalized_text": "запусти paint",
+      "expected_app_id": "paint",
+      "prediction": {
+        "app_id": "paint",
+        "confidence": 0.9631
+      },
+      "predicted_app_id": "paint",
+      "ok": true
+    },
+    {
+      "text": "запусти performance monitor",
+      "normalized_text": "запусти performance monitor",
+      "expected_app_id": "performance_monitor",
+      "prediction": {
+        "app_id": "performance_monitor",
+        "confidence": 0.9743
+      },
+      "predicted_app_id": "performance_monitor",
+      "ok": true
+    },
+    {
+      "text": "запусти planetvpn",
+      "normalized_text": "запусти planetvpn",
+      "expected_app_id": "planetvpn1",
+      "prediction": {
+        "app_id": "planetvpn1",
+        "confidence": 0.9731
+      },
+      "predicted_app_id": "planetvpn1",
+      "ok": true
+    },
+    {
+      "text": "запусти planetvpn1",
+      "normalized_text": "запусти planetvpn1",
+      "expected_app_id": "planetvpn1",
+      "prediction": {
+        "app_id": "planetvpn1",
+        "confidence": 0.9689
+      },
+      "predicted_app_id": "planetvpn1",
+      "ok": true
+    },
+    {
+      "text": "запусти power point",
+      "normalized_text": "запусти power point",
+      "expected_app_id": "powerpoint",
+      "prediction": {
+        "app_id": "powerpoint",
+        "confidence": 0.9619
+      },
+      "predicted_app_id": "powerpoint",
+      "ok": true
+    },
+    {
+      "text": "запусти powerpnt",
+      "normalized_text": "запусти powerpnt",
+      "expected_app_id": "powerpoint",
+      "prediction": {
+        "app_id": "powerpoint",
+        "confidence": 0.9633
+      },
+      "predicted_app_id": "powerpoint",
+      "ok": true
+    },
+    {
+      "text": "запусти powerpoint",
+      "normalized_text": "запусти powerpoint",
+      "expected_app_id": "powerpoint",
+      "prediction": {
+        "app_id": "powerpoint",
+        "confidence": 0.9639
+      },
+      "predicted_app_id": "powerpoint",
+      "ok": true
+    },
+    {
+      "text": "запусти print management",
+      "normalized_text": "запусти print management",
+      "expected_app_id": "print_management",
+      "prediction": {
+        "app_id": "print_management",
+        "confidence": 0.9772
+      },
+      "predicted_app_id": "print_management",
+      "ok": true
+    },
+    {
+      "text": "запусти printmanagement",
+      "normalized_text": "запусти printmanagement",
+      "expected_app_id": "print_management",
+      "prediction": {
+        "app_id": "print_management",
+        "confidence": 0.982
+      },
+      "predicted_app_id": "print_management",
+      "ok": true
+    },
+    {
+      "text": "запусти regedit",
+      "normalized_text": "запусти regedit",
+      "expected_app_id": "regedit",
+      "prediction": {
+        "app_id": "regedit",
+        "confidence": 0.9541
+      },
+      "predicted_app_id": "regedit",
+      "ok": true
+    },
+    {
+      "text": "запусти registry editor",
+      "normalized_text": "запусти registry editor",
+      "expected_app_id": "regedit",
+      "prediction": {
+        "app_id": "regedit",
+        "confidence": 0.9527
+      },
+      "predicted_app_id": "regedit",
+      "ok": true
+    },
+    {
+      "text": "запусти resource monitor",
+      "normalized_text": "запусти resource monitor",
+      "expected_app_id": "resource_monitor",
+      "prediction": {
+        "app_id": "resource_monitor",
+        "confidence": 0.9774
+      },
+      "predicted_app_id": "resource_monitor",
+      "ok": true
+    },
+    {
+      "text": "запусти task manager",
+      "normalized_text": "запусти task manager",
+      "expected_app_id": "task_manager",
+      "prediction": {
+        "app_id": "task_manager",
+        "confidence": 0.9554
+      },
+      "predicted_app_id": "task_manager",
+      "ok": true
+    },
+    {
+      "text": "запусти taskmgr",
+      "normalized_text": "запусти taskmgr",
+      "expected_app_id": "task_manager",
+      "prediction": {
+        "app_id": "task_manager",
+        "confidence": 0.9557
+      },
+      "predicted_app_id": "task_manager",
+      "ok": true
+    },
+    {
+      "text": "запусти terminal",
+      "normalized_text": "запусти terminal",
+      "expected_app_id": "terminal",
+      "prediction": {
+        "app_id": "terminal",
+        "confidence": 0.9641
+      },
+      "predicted_app_id": "terminal",
+      "ok": true
+    },
+    {
+      "text": "запусти windows terminal",
+      "normalized_text": "запусти windows terminal",
+      "expected_app_id": "terminal",
+      "prediction": {
+        "app_id": "terminal",
+        "confidence": 0.9561
+      },
+      "predicted_app_id": "terminal",
+      "ok": true
+    },
+    {
+      "text": "запусти winword",
+      "normalized_text": "запусти winword",
+      "expected_app_id": "word",
+      "prediction": {
+        "app_id": "word",
+        "confidence": 0.9595
+      },
+      "predicted_app_id": "word",
+      "ok": true
+    },
+    {
+      "text": "запусти wireshark",
+      "normalized_text": "запусти wireshark",
+      "expected_app_id": "wireshark",
+      "prediction": {
+        "app_id": "wireshark",
+        "confidence": 0.9695
+      },
+      "predicted_app_id": "wireshark",
+      "ok": true
+    },
+    {
+      "text": "запусти word",
+      "normalized_text": "запусти word",
+      "expected_app_id": "word",
+      "prediction": {
+        "app_id": "word",
+        "confidence": 0.9666
+      },
+      "predicted_app_id": "word",
+      "ok": true
+    },
+    {
+      "text": "запусти wt",
+      "normalized_text": "запусти wt",
+      "expected_app_id": "terminal",
+      "prediction": {
+        "app_id": "terminal",
+        "confidence": 0.9502
+      },
+      "predicted_app_id": "terminal",
+      "ok": true
+    },
+    {
+      "text": "запусти yandexmusic",
+      "normalized_text": "запусти yandexmusic",
+      "expected_app_id": "yandexmusic",
+      "prediction": {
+        "app_id": "yandexmusic",
+        "confidence": 0.9581
+      },
+      "predicted_app_id": "yandexmusic",
+      "ok": true
+    },
+    {
+      "text": "запусти блакнот",
+      "normalized_text": "запусти блакнот",
+      "expected_app_id": "notepad",
+      "prediction": {
+        "app_id": "notepad",
+        "confidence": 0.9563
+      },
+      "predicted_app_id": "notepad",
+      "ok": true
+    },
+    {
+      "text": "запусти блокнгт",
+      "normalized_text": "запусти блокнгт",
+      "expected_app_id": "notepad",
+      "prediction": {
+        "app_id": "notepad",
+        "confidence": 0.9571
+      },
+      "predicted_app_id": "notepad",
+      "ok": true
+    },
+    {
+      "text": "запусти блокнот",
+      "normalized_text": "запусти блокнот",
+      "expected_app_id": "notepad",
+      "prediction": {
+        "app_id": "notepad",
+        "confidence": 0.9762
+      },
+      "predicted_app_id": "notepad",
+      "ok": true
+    },
+    {
+      "text": "запусти вайершарк",
+      "normalized_text": "запусти вайершарк",
+      "expected_app_id": "wireshark",
+      "prediction": {
+        "app_id": "wireshark",
+        "confidence": 0.9783
+      },
+      "predicted_app_id": "wireshark",
+      "ok": true
+    },
+    {
+      "text": "запусти вайршарк",
+      "normalized_text": "запусти вайршарк",
+      "expected_app_id": "wireshark",
+      "prediction": {
+        "app_id": "wireshark",
+        "confidence": 0.977
+      },
+      "predicted_app_id": "wireshark",
+      "ok": true
+    },
+    {
+      "text": "запусти ворд",
+      "normalized_text": "запусти ворд",
+      "expected_app_id": "word",
+      "prediction": {
+        "app_id": "word",
+        "confidence": 0.9657
+      },
+      "predicted_app_id": "word",
+      "ok": true
+    },
+    {
+      "text": "запусти впн",
+      "normalized_text": "запусти впн",
+      "expected_app_id": "planetvpn1",
+      "prediction": {
+        "app_id": "planetvpn1",
+        "confidence": 0.9623
+      },
+      "predicted_app_id": "planetvpn1",
+      "ok": true
+    },
+    {
+      "text": "запусти диски windows",
+      "normalized_text": "запусти диски windows",
+      "expected_app_id": "disk_management",
+      "prediction": {
+        "app_id": "disk_management",
+        "confidence": 0.9377
+      },
+      "predicted_app_id": "disk_management",
+      "ok": true
+    },
+    {
+      "text": "запусти диспетчер задач",
+      "normalized_text": "запусти диспетчер задач",
+      "expected_app_id": "task_manager",
+      "prediction": {
+        "app_id": "task_manager",
+        "confidence": 0.9662
+      },
+      "predicted_app_id": "task_manager",
+      "ok": true
+    },
+    {
+      "text": "запусти диспетчер устройств",
+      "normalized_text": "запусти диспетчер устройств",
+      "expected_app_id": "device_manager",
+      "prediction": {
+        "app_id": "device_manager",
+        "confidence": 0.9725
+      },
+      "predicted_app_id": "device_manager",
+      "ok": true
+    },
+    {
+      "text": "запусти дота",
+      "normalized_text": "запусти дота",
+      "expected_app_id": "dota_2",
+      "prediction": {
+        "app_id": "dota_2",
+        "confidence": 0.9701
+      },
+      "predicted_app_id": "dota_2",
+      "ok": true
+    },
+    {
+      "text": "запусти дота два",
+      "normalized_text": "запусти дота два",
+      "expected_app_id": "dota_2",
+      "prediction": {
+        "app_id": "dota_2",
+        "confidence": 0.9705
+      },
+      "predicted_app_id": "dota_2",
+      "ok": true
+    },
+    {
+      "text": "запусти дотан",
+      "normalized_text": "запусти дотан",
+      "expected_app_id": "dota_2",
+      "prediction": {
+        "app_id": "dota_2",
+        "confidence": 0.9711
+      },
+      "predicted_app_id": "dota_2",
+      "ok": true
+    },
+    {
+      "text": "запусти ексель",
+      "normalized_text": "запусти ексель",
+      "expected_app_id": "excel",
+      "prediction": {
+        "app_id": "excel",
+        "confidence": 0.9656
+      },
+      "predicted_app_id": "excel",
+      "ok": true
+    },
+    {
+      "text": "запусти журнал событий",
+      "normalized_text": "запусти журнал событий",
+      "expected_app_id": "event_viewer",
+      "prediction": {
+        "app_id": "event_viewer",
+        "confidence": 0.9731
+      },
+      "predicted_app_id": "event_viewer",
+      "ok": true
+    },
+    {
+      "text": "запусти кальк",
+      "normalized_text": "запусти кальк",
+      "expected_app_id": "calculator",
+      "prediction": {
+        "app_id": "calculator",
+        "confidence": 0.9683
+      },
+      "predicted_app_id": "calculator",
+      "ok": true
+    },
+    {
+      "text": "запусти калькулятор",
+      "normalized_text": "запусти калькулятор",
+      "expected_app_id": "calculator",
+      "prediction": {
+        "app_id": "calculator",
+        "confidence": 0.976
+      },
+      "predicted_app_id": "calculator",
+      "ok": true
+    },
+    {
+      "text": "запусти кдекс",
+      "normalized_text": "запусти кдекс",
+      "expected_app_id": "codex",
+      "prediction": {
+        "app_id": "codex",
+        "confidence": 0.9661
+      },
+      "predicted_app_id": "codex",
+      "ok": true
+    },
+    {
+      "text": "запусти кибер панк",
+      "normalized_text": "запусти кибер панк",
+      "expected_app_id": "cyberpunk_2077",
+      "prediction": {
+        "app_id": "cyberpunk_2077",
+        "confidence": 0.9792
+      },
+      "predicted_app_id": "cyberpunk_2077",
+      "ok": true
+    },
+    {
+      "text": "запусти кибер пунк",
+      "normalized_text": "запусти кибер пунк",
+      "expected_app_id": "cyberpunk_2077",
+      "prediction": {
+        "app_id": "cyberpunk_2077",
+        "confidence": 0.9742
+      },
+      "predicted_app_id": "cyberpunk_2077",
+      "ok": true
+    },
+    {
+      "text": "запусти кодекс",
+      "normalized_text": "запусти кодекс",
+      "expected_app_id": "codex",
+      "prediction": {
+        "app_id": "codex",
+        "confidence": 0.9682
+      },
+      "predicted_app_id": "codex",
+      "ok": true
+    },
+    {
+      "text": "запусти контроль панель",
+      "normalized_text": "запусти контроль панель",
+      "expected_app_id": "control_panel",
+      "prediction": {
+        "app_id": "control_panel",
+        "confidence": 0.9705
+      },
+      "predicted_app_id": "control_panel",
+      "ok": true
+    },
+    {
+      "text": "запусти макс",
+      "normalized_text": "запусти макс",
+      "expected_app_id": "3ds_max_2025",
+      "prediction": {
+        "app_id": "3ds_max_2025",
+        "confidence": 0.9739
+      },
+      "predicted_app_id": "3ds_max_2025",
+      "ok": true
+    },
+    {
+      "text": "запусти мзыка",
+      "normalized_text": "запусти мзыка",
+      "expected_app_id": "yandexmusic",
+      "prediction": {
+        "app_id": "yandexmusic",
+        "confidence": 0.9623
+      },
+      "predicted_app_id": "yandexmusic",
+      "ok": true
+    },
+    {
+      "text": "запусти музыка",
+      "normalized_text": "запусти музыка",
+      "expected_app_id": "yandexmusic",
+      "prediction": {
+        "app_id": "yandexmusic",
+        "confidence": 0.9732
+      },
+      "predicted_app_id": "yandexmusic",
+      "ok": true
+    },
+    {
+      "text": "запусти паинт",
+      "normalized_text": "запусти паинт",
+      "expected_app_id": "paint",
+      "prediction": {
+        "app_id": "paint",
+        "confidence": 0.9565
+      },
+      "predicted_app_id": "paint",
+      "ok": true
+    },
+    {
+      "text": "запусти панель управления",
+      "normalized_text": "запусти панель управления",
+      "expected_app_id": "control_panel",
+      "prediction": {
+        "app_id": "control_panel",
+        "confidence": 0.9763
+      },
+      "predicted_app_id": "control_panel",
+      "ok": true
+    },
+    {
+      "text": "запусти пауэрпоинт",
+      "normalized_text": "запусти пауэрпоинт",
+      "expected_app_id": "powerpoint",
+      "prediction": {
+        "app_id": "powerpoint",
+        "confidence": 0.9571
+      },
+      "predicted_app_id": "powerpoint",
+      "ok": true
+    },
+    {
+      "text": "запусти пейнт",
+      "normalized_text": "запусти пейнт",
+      "expected_app_id": "paint",
+      "prediction": {
+        "app_id": "paint",
+        "confidence": 0.9582
+      },
+      "predicted_app_id": "paint",
+      "ok": true
+    },
+    {
+      "text": "запусти проводник",
+      "normalized_text": "запусти проводник",
+      "expected_app_id": "explorer",
+      "prediction": {
+        "app_id": "explorer",
+        "confidence": 0.9691
+      },
+      "predicted_app_id": "explorer",
+      "ok": true
+    },
+    {
+      "text": "запусти просмотр событий",
+      "normalized_text": "запусти просмотр событий",
+      "expected_app_id": "event_viewer",
+      "prediction": {
+        "app_id": "event_viewer",
+        "confidence": 0.9749
+      },
+      "predicted_app_id": "event_viewer",
+      "ok": true
+    },
+    {
+      "text": "запусти редактор реестра",
+      "normalized_text": "запусти редактор реестра",
+      "expected_app_id": "regedit",
+      "prediction": {
+        "app_id": "regedit",
+        "confidence": 0.9581
+      },
+      "predicted_app_id": "regedit",
+      "ok": true
+    },
+    {
+      "text": "запусти реестр",
+      "normalized_text": "запусти реестр",
+      "expected_app_id": "regedit",
+      "prediction": {
+        "app_id": "regedit",
+        "confidence": 0.9779
+      },
+      "predicted_app_id": "regedit",
+      "ok": true
+    },
+    {
+      "text": "запусти сайберпанк",
+      "normalized_text": "запусти сайберпанк",
+      "expected_app_id": "cyberpunk_2077",
+      "prediction": {
+        "app_id": "cyberpunk_2077",
+        "confidence": 0.9736
+      },
+      "predicted_app_id": "cyberpunk_2077",
+      "ok": true
+    },
+    {
+      "text": "запусти таск менеджер",
+      "normalized_text": "запусти таск менеджер",
+      "expected_app_id": "task_manager",
+      "prediction": {
+        "app_id": "task_manager",
+        "confidence": 0.9388
+      },
+      "predicted_app_id": "task_manager",
+      "ok": true
+    },
+    {
+      "text": "запусти терминал",
+      "normalized_text": "запусти терминал",
+      "expected_app_id": "terminal",
+      "prediction": {
+        "app_id": "terminal",
+        "confidence": 0.9814
+      },
+      "predicted_app_id": "terminal",
+      "ok": true
+    },
+    {
+      "text": "запусти три де макс",
+      "normalized_text": "запусти три де макс",
+      "expected_app_id": "3ds_max_2025",
+      "prediction": {
+        "app_id": "3ds_max_2025",
+        "confidence": 0.9806
+      },
+      "predicted_app_id": "3ds_max_2025",
+      "ok": true
+    },
+    {
+      "text": "запусти управление дисками",
+      "normalized_text": "запусти управление дисками",
+      "expected_app_id": "disk_management",
+      "prediction": {
+        "app_id": "disk_management",
+        "confidence": 0.9675
+      },
+      "predicted_app_id": "disk_management",
+      "ok": true
+    },
+    {
+      "text": "запусти устройства",
+      "normalized_text": "запусти устройства",
+      "expected_app_id": "device_manager",
+      "prediction": {
+        "app_id": "device_manager",
+        "confidence": 0.9714
+      },
+      "predicted_app_id": "device_manager",
+      "ok": true
+    },
+    {
+      "text": "запусти файлы",
+      "normalized_text": "запусти файлы",
+      "expected_app_id": "explorer",
+      "prediction": {
+        "app_id": "explorer",
+        "confidence": 0.9662
+      },
+      "predicted_app_id": "explorer",
+      "ok": true
+    },
+    {
+      "text": "запусти эдж",
+      "normalized_text": "запусти эдж",
+      "expected_app_id": "edge",
+      "prediction": {
+        "app_id": "edge",
+        "confidence": 0.9664
+      },
+      "predicted_app_id": "edge",
+      "ok": true
+    },
+    {
+      "text": "запусти эксель",
+      "normalized_text": "запусти эксель",
+      "expected_app_id": "excel",
+      "prediction": {
+        "app_id": "excel",
+        "confidence": 0.9667
+      },
+      "predicted_app_id": "excel",
+      "ok": true
+    },
+    {
+      "text": "запусти яндекс музыка",
+      "normalized_text": "запусти яндекс музыка",
+      "expected_app_id": "yandexmusic",
+      "prediction": {
+        "app_id": "yandexmusic",
+        "confidence": 0.9749
+      },
+      "predicted_app_id": "yandexmusic",
+      "ok": true
+    },
+    {
+      "text": "заткнись",
+      "normalized_text": "заткнись",
+      "expected_app_id": "unknown",
+      "prediction": {
+        "missing": [
+          "app_id"
+        ],
+        "confidence": 0.9629
+      },
+      "predicted_app_id": "unknown",
+      "ok": true
+    },
+    {
+      "text": "какая погода",
+      "normalized_text": "какая погода",
+      "expected_app_id": "unknown",
+      "prediction": {
+        "missing": [
+          "app_id"
+        ],
+        "confidence": 0.9624
+      },
+      "predicted_app_id": "unknown",
+      "ok": true
+    },
+    {
+      "text": "открой 3ds max 2025",
+      "normalized_text": "открой 3ds max 2025",
+      "expected_app_id": "3ds_max_2025",
+      "prediction": {
+        "app_id": "3ds_max_2025",
+        "confidence": 0.9681
+      },
+      "predicted_app_id": "3ds_max_2025",
+      "ok": true
+    },
+    {
+      "text": "открой 3dsmax",
+      "normalized_text": "открой 3dsmax",
+      "expected_app_id": "3ds_max_2025",
+      "prediction": {
+        "app_id": "3ds_max_2025",
+        "confidence": 0.9693
+      },
+      "predicted_app_id": "3ds_max_2025",
+      "ok": true
+    },
+    {
+      "text": "открой calc",
+      "normalized_text": "открой calc",
+      "expected_app_id": "calculator",
+      "prediction": {
+        "app_id": "calculator",
+        "confidence": 0.9669
+      },
+      "predicted_app_id": "calculator",
+      "ok": true
+    },
+    {
+      "text": "открой calculator",
+      "normalized_text": "открой calculator",
+      "expected_app_id": "calculator",
+      "prediction": {
+        "app_id": "calculator",
+        "confidence": 0.9655
+      },
+      "predicted_app_id": "calculator",
+      "ok": true
+    },
+    {
+      "text": "открой cleanmgr",
+      "normalized_text": "открой cleanmgr",
+      "expected_app_id": "disk_cleanup",
+      "prediction": {
+        "app_id": "disk_cleanup",
+        "confidence": 0.9838
+      },
+      "predicted_app_id": "disk_cleanup",
+      "ok": true
+    },
+    {
+      "text": "открой codex",
+      "normalized_text": "открой codex",
+      "expected_app_id": "codex",
+      "prediction": {
+        "app_id": "codex",
+        "confidence": 0.9722
+      },
+      "predicted_app_id": "codex",
+      "ok": true
+    },
+    {
+      "text": "открой control",
+      "normalized_text": "открой control",
+      "expected_app_id": "control_panel",
+      "prediction": {
+        "app_id": "control_panel",
+        "confidence": 0.9678
+      },
+      "predicted_app_id": "control_panel",
+      "ok": true
+    },
+    {
+      "text": "открой control panel",
+      "normalized_text": "открой control panel",
+      "expected_app_id": "control_panel",
+      "prediction": {
+        "app_id": "control_panel",
+        "confidence": 0.9673
+      },
+      "predicted_app_id": "control_panel",
+      "ok": true
+    },
+    {
+      "text": "открой cyberpunk 2077",
+      "normalized_text": "открой cyberpunk 2077",
+      "expected_app_id": "cyberpunk_2077",
+      "prediction": {
+        "app_id": "cyberpunk_2077",
+        "confidence": 0.9696
+      },
+      "predicted_app_id": "cyberpunk_2077",
+      "ok": true
+    },
+    {
+      "text": "открой device manager",
+      "normalized_text": "открой device manager",
+      "expected_app_id": "device_manager",
+      "prediction": {
+        "app_id": "device_manager",
+        "confidence": 0.9604
+      },
+      "predicted_app_id": "device_manager",
+      "ok": true
+    },
+    {
+      "text": "открой devmgmt",
+      "normalized_text": "открой devmgmt",
+      "expected_app_id": "device_manager",
+      "prediction": {
+        "app_id": "device_manager",
+        "confidence": 0.9581
+      },
+      "predicted_app_id": "device_manager",
+      "ok": true
+    },
+    {
+      "text": "открой disk cleanup",
+      "normalized_text": "открой disk cleanup",
+      "expected_app_id": "disk_cleanup",
+      "prediction": {
+        "app_id": "disk_cleanup",
+        "confidence": 0.9805
+      },
+      "predicted_app_id": "disk_cleanup",
+      "ok": true
+    },
+    {
+      "text": "открой disk management",
+      "normalized_text": "открой disk management",
+      "expected_app_id": "disk_management",
+      "prediction": {
+        "app_id": "disk_management",
+        "confidence": 0.9085
+      },
+      "predicted_app_id": "disk_management",
+      "ok": true
+    },
+    {
+      "text": "открой diskmgmt",
+      "normalized_text": "открой diskmgmt",
+      "expected_app_id": "disk_management",
+      "prediction": {
+        "app_id": "disk_management",
+        "confidence": 0.9562
+      },
+      "predicted_app_id": "disk_management",
+      "ok": true
+    },
+    {
+      "text": "открой dota 2",
+      "normalized_text": "открой dota 2",
+      "expected_app_id": "dota_2",
+      "prediction": {
+        "app_id": "dota_2",
+        "confidence": 0.978
+      },
+      "predicted_app_id": "dota_2",
+      "ok": true
+    },
+    {
+      "text": "открой edge",
+      "normalized_text": "открой edge",
+      "expected_app_id": "edge",
+      "prediction": {
+        "app_id": "edge",
+        "confidence": 0.9722
+      },
+      "predicted_app_id": "edge",
+      "ok": true
+    },
+    {
+      "text": "открой event viewer",
+      "normalized_text": "открой event viewer",
+      "expected_app_id": "event_viewer",
+      "prediction": {
+        "app_id": "event_viewer",
+        "confidence": 0.9619
+      },
+      "predicted_app_id": "event_viewer",
+      "ok": true
+    },
+    {
+      "text": "открой eventvwr",
+      "normalized_text": "открой eventvwr",
+      "expected_app_id": "event_viewer",
+      "prediction": {
+        "app_id": "event_viewer",
+        "confidence": 0.9627
+      },
+      "predicted_app_id": "event_viewer",
+      "ok": true
+    },
+    {
+      "text": "открой excel",
+      "normalized_text": "открой excel",
+      "expected_app_id": "excel",
+      "prediction": {
+        "app_id": "excel",
+        "confidence": 0.9686
+      },
+      "predicted_app_id": "excel",
+      "ok": true
+    },
+    {
+      "text": "открой explorer",
+      "normalized_text": "открой explorer",
+      "expected_app_id": "explorer",
+      "prediction": {
+        "app_id": "explorer",
+        "confidence": 0.9589
+      },
+      "predicted_app_id": "explorer",
+      "ok": true
+    },
+    {
+      "text": "открой file explorer",
+      "normalized_text": "открой file explorer",
+      "expected_app_id": "explorer",
+      "prediction": {
+        "app_id": "explorer",
+        "confidence": 0.9553
+      },
+      "predicted_app_id": "explorer",
+      "ok": true
+    },
+    {
+      "text": "открой freevpnplanet",
+      "normalized_text": "открой freevpnplanet",
+      "expected_app_id": "planetvpn1",
+      "prediction": {
+        "app_id": "planetvpn1",
+        "confidence": 0.9649
+      },
+      "predicted_app_id": "planetvpn1",
+      "ok": true
+    },
+    {
+      "text": "открой microsoft edge",
+      "normalized_text": "открой microsoft edge",
+      "expected_app_id": "edge",
+      "prediction": {
+        "app_id": "edge",
+        "confidence": 0.9294
+      },
+      "predicted_app_id": "edge",
+      "ok": true
+    },
+    {
+      "text": "открой microsoft excel",
+      "normalized_text": "открой microsoft excel",
+      "expected_app_id": "excel",
+      "prediction": {
+        "app_id": "excel",
+        "confidence": 0.9441
+      },
+      "predicted_app_id": "excel",
+      "ok": true
+    },
+    {
+      "text": "открой microsoft word",
+      "normalized_text": "открой microsoft word",
+      "expected_app_id": "word",
+      "prediction": {
+        "app_id": "word",
+        "confidence": 0.9455
+      },
+      "predicted_app_id": "word",
+      "ok": true
+    },
+    {
+      "text": "открой msedge",
+      "normalized_text": "открой msedge",
+      "expected_app_id": "edge",
+      "prediction": {
+        "app_id": "edge",
+        "confidence": 0.9633
+      },
+      "predicted_app_id": "edge",
+      "ok": true
+    },
+    {
+      "text": "открой mspaint",
+      "normalized_text": "открой mspaint",
+      "expected_app_id": "paint",
+      "prediction": {
+        "app_id": "paint",
+        "confidence": 0.9668
+      },
+      "predicted_app_id": "paint",
+      "ok": true
+    },
+    {
+      "text": "открой notepad",
+      "normalized_text": "открой notepad",
+      "expected_app_id": "notepad",
+      "prediction": {
+        "app_id": "notepad",
+        "confidence": 0.9438
+      },
+      "predicted_app_id": "notepad",
+      "ok": true
+    },
+    {
+      "text": "открой openai",
+      "normalized_text": "открой openai",
+      "expected_app_id": "codex",
+      "prediction": {
+        "app_id": "codex",
+        "confidence": 0.961
+      },
+      "predicted_app_id": "codex",
+      "ok": true
+    },
+    {
+      "text": "открой paint",
+      "normalized_text": "открой paint",
+      "expected_app_id": "paint",
+      "prediction": {
+        "app_id": "paint",
+        "confidence": 0.9701
+      },
+      "predicted_app_id": "paint",
+      "ok": true
+    },
+    {
+      "text": "открой performance monitor",
+      "normalized_text": "открой performance monitor",
+      "expected_app_id": "performance_monitor",
+      "prediction": {
+        "app_id": "performance_monitor",
+        "confidence": 0.9792
+      },
+      "predicted_app_id": "performance_monitor",
+      "ok": true
+    },
+    {
+      "text": "открой planetvpn",
+      "normalized_text": "открой planetvpn",
+      "expected_app_id": "planetvpn1",
+      "prediction": {
+        "app_id": "planetvpn1",
+        "confidence": 0.9768
+      },
+      "predicted_app_id": "planetvpn1",
+      "ok": true
+    },
+    {
+      "text": "открой planetvpn1",
+      "normalized_text": "открой planetvpn1",
+      "expected_app_id": "planetvpn1",
+      "prediction": {
+        "app_id": "planetvpn1",
+        "confidence": 0.9723
+      },
+      "predicted_app_id": "planetvpn1",
+      "ok": true
+    },
+    {
+      "text": "открой power point",
+      "normalized_text": "открой power point",
+      "expected_app_id": "powerpoint",
+      "prediction": {
+        "app_id": "powerpoint",
+        "confidence": 0.9667
+      },
+      "predicted_app_id": "powerpoint",
+      "ok": true
+    },
+    {
+      "text": "открой powerpnt",
+      "normalized_text": "открой powerpnt",
+      "expected_app_id": "powerpoint",
+      "prediction": {
+        "app_id": "powerpoint",
+        "confidence": 0.9678
+      },
+      "predicted_app_id": "powerpoint",
+      "ok": true
+    },
+    {
+      "text": "открой powerpoint",
+      "normalized_text": "открой powerpoint",
+      "expected_app_id": "powerpoint",
+      "prediction": {
+        "app_id": "powerpoint",
+        "confidence": 0.9679
+      },
+      "predicted_app_id": "powerpoint",
+      "ok": true
+    },
+    {
+      "text": "открой print management",
+      "normalized_text": "открой print management",
+      "expected_app_id": "print_management",
+      "prediction": {
+        "app_id": "print_management",
+        "confidence": 0.9807
+      },
+      "predicted_app_id": "print_management",
+      "ok": true
+    },
+    {
+      "text": "открой printmanagement",
+      "normalized_text": "открой printmanagement",
+      "expected_app_id": "print_management",
+      "prediction": {
+        "app_id": "print_management",
+        "confidence": 0.9847
+      },
+      "predicted_app_id": "print_management",
+      "ok": true
+    },
+    {
+      "text": "открой regedit",
+      "normalized_text": "открой regedit",
+      "expected_app_id": "regedit",
+      "prediction": {
+        "app_id": "regedit",
+        "confidence": 0.9602
+      },
+      "predicted_app_id": "regedit",
+      "ok": true
+    },
+    {
+      "text": "открой registry editor",
+      "normalized_text": "открой registry editor",
+      "expected_app_id": "regedit",
+      "prediction": {
+        "app_id": "regedit",
+        "confidence": 0.9559
+      },
+      "predicted_app_id": "regedit",
+      "ok": true
+    },
+    {
+      "text": "открой resource monitor",
+      "normalized_text": "открой resource monitor",
+      "expected_app_id": "resource_monitor",
+      "prediction": {
+        "app_id": "resource_monitor",
+        "confidence": 0.9783
+      },
+      "predicted_app_id": "resource_monitor",
+      "ok": true
+    },
+    {
+      "text": "открой task manager",
+      "normalized_text": "открой task manager",
+      "expected_app_id": "task_manager",
+      "prediction": {
+        "app_id": "task_manager",
+        "confidence": 0.9603
+      },
+      "predicted_app_id": "task_manager",
+      "ok": true
+    },
+    {
+      "text": "открой taskmgr",
+      "normalized_text": "открой taskmgr",
+      "expected_app_id": "task_manager",
+      "prediction": {
+        "app_id": "task_manager",
+        "confidence": 0.961
+      },
+      "predicted_app_id": "task_manager",
+      "ok": true
+    },
+    {
+      "text": "открой terminal",
+      "normalized_text": "открой terminal",
+      "expected_app_id": "terminal",
+      "prediction": {
+        "app_id": "terminal",
+        "confidence": 0.9682
+      },
+      "predicted_app_id": "terminal",
+      "ok": true
+    },
+    {
+      "text": "открой windows terminal",
+      "normalized_text": "открой windows terminal",
+      "expected_app_id": "terminal",
+      "prediction": {
+        "app_id": "terminal",
+        "confidence": 0.9601
+      },
+      "predicted_app_id": "terminal",
+      "ok": true
+    },
+    {
+      "text": "открой winword",
+      "normalized_text": "открой winword",
+      "expected_app_id": "word",
+      "prediction": {
+        "app_id": "word",
+        "confidence": 0.9649
+      },
+      "predicted_app_id": "word",
+      "ok": true
+    },
+    {
+      "text": "открой wireshark",
+      "normalized_text": "открой wireshark",
+      "expected_app_id": "wireshark",
+      "prediction": {
+        "app_id": "wireshark",
+        "confidence": 0.9739
+      },
+      "predicted_app_id": "wireshark",
+      "ok": true
+    },
+    {
+      "text": "открой word",
+      "normalized_text": "открой word",
+      "expected_app_id": "word",
+      "prediction": {
+        "app_id": "word",
+        "confidence": 0.9743
+      },
+      "predicted_app_id": "word",
+      "ok": true
+    },
+    {
+      "text": "открой wt",
+      "normalized_text": "открой wt",
+      "expected_app_id": "terminal",
+      "prediction": {
+        "app_id": "terminal",
+        "confidence": 0.9628
+      },
+      "predicted_app_id": "terminal",
+      "ok": true
+    },
+    {
+      "text": "открой yandexmusic",
+      "normalized_text": "открой yandexmusic",
+      "expected_app_id": "yandexmusic",
+      "prediction": {
+        "app_id": "yandexmusic",
+        "confidence": 0.9612
+      },
+      "predicted_app_id": "yandexmusic",
+      "ok": true
+    },
+    {
+      "text": "открой блакнот",
+      "normalized_text": "открой блакнот",
+      "expected_app_id": "notepad",
+      "prediction": {
+        "app_id": "notepad",
+        "confidence": 0.9592
+      },
+      "predicted_app_id": "notepad",
+      "ok": true
+    },
+    {
+      "text": "открой блокнгт",
+      "normalized_text": "открой блокнгт",
+      "expected_app_id": "notepad",
+      "prediction": {
+        "app_id": "notepad",
+        "confidence": 0.9611
+      },
+      "predicted_app_id": "notepad",
+      "ok": true
+    },
+    {
+      "text": "открой блокнот",
+      "normalized_text": "открой блокнот",
+      "expected_app_id": "notepad",
+      "prediction": {
+        "app_id": "notepad",
+        "confidence": 0.9804
+      },
+      "predicted_app_id": "notepad",
+      "ok": true
+    },
+    {
+      "text": "открой вайершарк",
+      "normalized_text": "открой вайершарк",
+      "expected_app_id": "wireshark",
+      "prediction": {
+        "app_id": "wireshark",
+        "confidence": 0.9821
+      },
+      "predicted_app_id": "wireshark",
+      "ok": true
+    },
+    {
+      "text": "открой вайршарк",
+      "normalized_text": "открой вайршарк",
+      "expected_app_id": "wireshark",
+      "prediction": {
+        "app_id": "wireshark",
+        "confidence": 0.9814
+      },
+      "predicted_app_id": "wireshark",
+      "ok": true
+    },
+    {
+      "text": "открой ворд",
+      "normalized_text": "открой ворд",
+      "expected_app_id": "word",
+      "prediction": {
+        "app_id": "word",
+        "confidence": 0.9742
+      },
+      "predicted_app_id": "word",
+      "ok": true
+    },
+    {
+      "text": "открой впн",
+      "normalized_text": "открой впн",
+      "expected_app_id": "planetvpn1",
+      "prediction": {
+        "app_id": "planetvpn1",
+        "confidence": 0.9715
+      },
+      "predicted_app_id": "planetvpn1",
+      "ok": true
+    },
+    {
+      "text": "открой диски windows",
+      "normalized_text": "открой диски windows",
+      "expected_app_id": "disk_management",
+      "prediction": {
+        "app_id": "disk_management",
+        "confidence": 0.9415
+      },
+      "predicted_app_id": "disk_management",
+      "ok": true
+    },
+    {
+      "text": "открой диспетчер задач",
+      "normalized_text": "открой диспетчер задач",
+      "expected_app_id": "task_manager",
+      "prediction": {
+        "app_id": "task_manager",
+        "confidence": 0.9712
+      },
+      "predicted_app_id": "task_manager",
+      "ok": true
+    },
+    {
+      "text": "открой диспетчер устройств",
+      "normalized_text": "открой диспетчер устройств",
+      "expected_app_id": "device_manager",
+      "prediction": {
+        "app_id": "device_manager",
+        "confidence": 0.9759
+      },
+      "predicted_app_id": "device_manager",
+      "ok": true
+    },
+    {
+      "text": "открой дота",
+      "normalized_text": "открой дота",
+      "expected_app_id": "dota_2",
+      "prediction": {
+        "app_id": "dota_2",
+        "confidence": 0.9787
+      },
+      "predicted_app_id": "dota_2",
+      "ok": true
+    },
+    {
+      "text": "открой дота два",
+      "normalized_text": "открой дота два",
+      "expected_app_id": "dota_2",
+      "prediction": {
+        "app_id": "dota_2",
+        "confidence": 0.9764
+      },
+      "predicted_app_id": "dota_2",
+      "ok": true
+    },
+    {
+      "text": "открой дотан",
+      "normalized_text": "открой дотан",
+      "expected_app_id": "dota_2",
+      "prediction": {
+        "app_id": "dota_2",
+        "confidence": 0.9779
+      },
+      "predicted_app_id": "dota_2",
+      "ok": true
+    },
+    {
+      "text": "открой ексель",
+      "normalized_text": "открой ексель",
+      "expected_app_id": "excel",
+      "prediction": {
+        "app_id": "excel",
+        "confidence": 0.9712
+      },
+      "predicted_app_id": "excel",
+      "ok": true
+    },
+    {
+      "text": "открой журнал событий",
+      "normalized_text": "открой журнал событий",
+      "expected_app_id": "event_viewer",
+      "prediction": {
+        "app_id": "event_viewer",
+        "confidence": 0.9756
+      },
+      "predicted_app_id": "event_viewer",
+      "ok": true
+    },
+    {
+      "text": "открой кальк",
+      "normalized_text": "открой кальк",
+      "expected_app_id": "calculator",
+      "prediction": {
+        "app_id": "calculator",
+        "confidence": 0.9749
+      },
+      "predicted_app_id": "calculator",
+      "ok": true
+    },
+    {
+      "text": "открой калькулятор",
+      "normalized_text": "открой калькулятор",
+      "expected_app_id": "calculator",
+      "prediction": {
+        "app_id": "calculator",
+        "confidence": 0.9791
+      },
+      "predicted_app_id": "calculator",
+      "ok": true
+    },
+    {
+      "text": "открой кдекс",
+      "normalized_text": "открой кдекс",
+      "expected_app_id": "codex",
+      "prediction": {
+        "app_id": "codex",
+        "confidence": 0.9733
+      },
+      "predicted_app_id": "codex",
+      "ok": true
+    },
+    {
+      "text": "открой кибер панк",
+      "normalized_text": "открой кибер панк",
+      "expected_app_id": "cyberpunk_2077",
+      "prediction": {
+        "app_id": "cyberpunk_2077",
+        "confidence": 0.9831
+      },
+      "predicted_app_id": "cyberpunk_2077",
+      "ok": true
+    },
+    {
+      "text": "открой кибер пунк",
+      "normalized_text": "открой кибер пунк",
+      "expected_app_id": "cyberpunk_2077",
+      "prediction": {
+        "app_id": "cyberpunk_2077",
+        "confidence": 0.9786
+      },
+      "predicted_app_id": "cyberpunk_2077",
+      "ok": true
+    },
+    {
+      "text": "открой кодекс",
+      "normalized_text": "открой кодекс",
+      "expected_app_id": "codex",
+      "prediction": {
+        "app_id": "codex",
+        "confidence": 0.9745
+      },
+      "predicted_app_id": "codex",
+      "ok": true
+    },
+    {
+      "text": "открой контроль панель",
+      "normalized_text": "открой контроль панель",
+      "expected_app_id": "control_panel",
+      "prediction": {
+        "app_id": "control_panel",
+        "confidence": 0.973
+      },
+      "predicted_app_id": "control_panel",
+      "ok": true
+    },
+    {
+      "text": "открой макс",
+      "normalized_text": "открой макс",
+      "expected_app_id": "3ds_max_2025",
+      "prediction": {
+        "app_id": "3ds_max_2025",
+        "confidence": 0.9812
+      },
+      "predicted_app_id": "3ds_max_2025",
+      "ok": true
+    },
+    {
+      "text": "открой мзыка",
+      "normalized_text": "открой мзыка",
+      "expected_app_id": "yandexmusic",
+      "prediction": {
+        "app_id": "yandexmusic",
+        "confidence": 0.9692
+      },
+      "predicted_app_id": "yandexmusic",
+      "ok": true
+    },
+    {
+      "text": "открой музыка",
+      "normalized_text": "открой музыка",
+      "expected_app_id": "yandexmusic",
+      "prediction": {
+        "app_id": "yandexmusic",
+        "confidence": 0.9793
+      },
+      "predicted_app_id": "yandexmusic",
+      "ok": true
+    },
+    {
+      "text": "открой окно",
+      "normalized_text": "открой окно",
+      "expected_app_id": "unknown",
+      "prediction": {
+        "missing": [
+          "app_id"
+        ],
+        "confidence": 0.9677
+      },
+      "predicted_app_id": "unknown",
+      "ok": true
+    },
+    {
+      "text": "открой паинт",
+      "normalized_text": "открой паинт",
+      "expected_app_id": "paint",
+      "prediction": {
+        "app_id": "paint",
+        "confidence": 0.9616
+      },
+      "predicted_app_id": "paint",
+      "ok": true
+    },
+    {
+      "text": "открой панель управления",
+      "normalized_text": "открой панель управления",
+      "expected_app_id": "control_panel",
+      "prediction": {
+        "app_id": "control_panel",
+        "confidence": 0.9793
+      },
+      "predicted_app_id": "control_panel",
+      "ok": true
+    },
+    {
+      "text": "открой пауэрпоинт",
+      "normalized_text": "открой пауэрпоинт",
+      "expected_app_id": "powerpoint",
+      "prediction": {
+        "app_id": "powerpoint",
+        "confidence": 0.9616
+      },
+      "predicted_app_id": "powerpoint",
+      "ok": true
+    },
+    {
+      "text": "открой пейнт",
+      "normalized_text": "открой пейнт",
+      "expected_app_id": "paint",
+      "prediction": {
+        "app_id": "paint",
+        "confidence": 0.9646
+      },
+      "predicted_app_id": "paint",
+      "ok": true
+    },
+    {
+      "text": "открой проводник",
+      "normalized_text": "открой проводник",
+      "expected_app_id": "explorer",
+      "prediction": {
+        "app_id": "explorer",
+        "confidence": 0.9725
+      },
+      "predicted_app_id": "explorer",
+      "ok": true
+    },
+    {
+      "text": "открой просмотр событий",
+      "normalized_text": "открой просмотр событий",
+      "expected_app_id": "event_viewer",
+      "prediction": {
+        "app_id": "event_viewer",
+        "confidence": 0.9772
+      },
+      "predicted_app_id": "event_viewer",
+      "ok": true
+    },
+    {
+      "text": "открой редактор реестра",
+      "normalized_text": "открой редактор реестра",
+      "expected_app_id": "regedit",
+      "prediction": {
+        "app_id": "regedit",
+        "confidence": 0.9583
+      },
+      "predicted_app_id": "regedit",
+      "ok": true
+    },
+    {
+      "text": "открой реестр",
+      "normalized_text": "открой реестр",
+      "expected_app_id": "regedit",
+      "prediction": {
+        "app_id": "regedit",
+        "confidence": 0.9838
+      },
+      "predicted_app_id": "regedit",
+      "ok": true
+    },
+    {
+      "text": "открой сайберпанк",
+      "normalized_text": "открой сайберпанк",
+      "expected_app_id": "cyberpunk_2077",
+      "prediction": {
+        "app_id": "cyberpunk_2077",
+        "confidence": 0.977
+      },
+      "predicted_app_id": "cyberpunk_2077",
+      "ok": true
+    },
+    {
+      "text": "открой таск менеджер",
+      "normalized_text": "открой таск менеджер",
+      "expected_app_id": "task_manager",
+      "prediction": {
+        "app_id": "task_manager",
+        "confidence": 0.9418
+      },
+      "predicted_app_id": "task_manager",
+      "ok": true
+    },
+    {
+      "text": "открой терминал",
+      "normalized_text": "открой терминал",
+      "expected_app_id": "terminal",
+      "prediction": {
+        "app_id": "terminal",
+        "confidence": 0.9854
+      },
+      "predicted_app_id": "terminal",
+      "ok": true
+    },
+    {
+      "text": "открой три де макс",
+      "normalized_text": "открой три де макс",
+      "expected_app_id": "3ds_max_2025",
+      "prediction": {
+        "app_id": "3ds_max_2025",
+        "confidence": 0.985
+      },
+      "predicted_app_id": "3ds_max_2025",
+      "ok": true
+    },
+    {
+      "text": "открой управление дисками",
+      "normalized_text": "открой управление дисками",
+      "expected_app_id": "disk_management",
+      "prediction": {
+        "app_id": "disk_management",
+        "confidence": 0.9696
+      },
+      "predicted_app_id": "disk_management",
+      "ok": true
+    },
+    {
+      "text": "открой устройства",
+      "normalized_text": "открой устройства",
+      "expected_app_id": "device_manager",
+      "prediction": {
+        "app_id": "device_manager",
+        "confidence": 0.9759
+      },
+      "predicted_app_id": "device_manager",
+      "ok": true
+    },
+    {
+      "text": "открой файлы",
+      "normalized_text": "открой файлы",
+      "expected_app_id": "explorer",
+      "prediction": {
+        "app_id": "explorer",
+        "confidence": 0.9726
+      },
+      "predicted_app_id": "explorer",
+      "ok": true
+    },
+    {
+      "text": "открой эдж",
+      "normalized_text": "открой эдж",
+      "expected_app_id": "edge",
+      "prediction": {
+        "app_id": "edge",
+        "confidence": 0.9754
+      },
+      "predicted_app_id": "edge",
+      "ok": true
+    },
+    {
+      "text": "открой эксель",
+      "normalized_text": "открой эксель",
+      "expected_app_id": "excel",
+      "prediction": {
+        "app_id": "excel",
+        "confidence": 0.972
+      },
+      "predicted_app_id": "excel",
+      "ok": true
+    },
+    {
+      "text": "открой яндекс музыка",
+      "normalized_text": "открой яндекс музыка",
+      "expected_app_id": "yandexmusic",
+      "prediction": {
+        "app_id": "yandexmusic",
+        "confidence": 0.9773
+      },
+      "predicted_app_id": "yandexmusic",
+      "ok": true
+    },
+    {
+      "text": "пауэрпоинт запусти",
+      "normalized_text": "пауэрпоинт запусти",
+      "expected_app_id": "powerpoint",
+      "prediction": {
+        "app_id": "powerpoint",
+        "confidence": 0.9571
+      },
+      "predicted_app_id": "powerpoint",
+      "ok": true
+    },
+    {
+      "text": "поставь таймер",
+      "normalized_text": "поставь таймер",
+      "expected_app_id": "unknown",
+      "prediction": {
+        "missing": [
+          "app_id"
+        ],
+        "confidence": 0.9757
+      },
+      "predicted_app_id": "unknown",
+      "ok": true
+    },
+    {
+      "text": "посчитай открой калькулятор",
+      "normalized_text": "посчитай открой калькулятор",
+      "expected_app_id": "calculator",
+      "prediction": {
+        "app_id": "calculator",
+        "confidence": 0.9748
+      },
+      "predicted_app_id": "calculator",
+      "ok": true
+    },
+    {
+      "text": "презентацию открыть",
+      "normalized_text": "презентацию открыть",
+      "expected_app_id": "powerpoint",
+      "prediction": {
+        "app_id": "powerpoint",
+        "confidence": 0.9507
+      },
+      "predicted_app_id": "powerpoint",
+      "ok": true
+    },
+    {
+      "text": "сверни браузер",
+      "normalized_text": "сверни браузер",
+      "expected_app_id": "unknown",
+      "prediction": {
+        "missing": [
+          "app_id"
+        ],
+        "confidence": 0.9851
+      },
+      "predicted_app_id": "unknown",
+      "ok": true
+    },
+    {
+      "text": "сделай громкость 20",
+      "normalized_text": "сделай громкость 20",
+      "expected_app_id": "unknown",
+      "prediction": {
+        "missing": [
+          "app_id"
+        ],
+        "confidence": 0.9804
+      },
+      "predicted_app_id": "unknown",
+      "ok": true
+    },
+    {
+      "text": "сделай громче",
+      "normalized_text": "сделай громче",
+      "expected_app_id": "unknown",
+      "prediction": {
+        "missing": [
+          "app_id"
+        ],
+        "confidence": 0.9771
+      },
+      "predicted_app_id": "unknown",
+      "ok": true
+    },
+    {
+      "text": "таблицу открыть",
+      "normalized_text": "таблицу открыть",
+      "expected_app_id": "excel",
+      "prediction": {
+        "app_id": "excel",
+        "confidence": 0.948
+      },
+      "predicted_app_id": "excel",
+      "ok": true
+    },
+    {
+      "text": "убавь звук",
+      "normalized_text": "убавь звук",
+      "expected_app_id": "unknown",
+      "prediction": {
+        "missing": [
+          "app_id"
+        ],
+        "confidence": 0.9727
+      },
+      "predicted_app_id": "unknown",
+      "ok": true
+    }
+  ]
+}

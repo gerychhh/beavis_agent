@@ -1,1398 +1,215 @@
 {
-  "rows_total": 171207,
-  "rows_train": 136965,
-  "rows_valid": 34242,
+  "rows_total": 33523,
+  "rows_train": 26818,
+  "rows_valid": 6705,
   "text_is_normalized": true,
   "classes": [
     "3ds_max_2025",
-    "access",
-    "acrobat_reader",
-    "administrative_tools",
-    "after_effects",
-    "antigravity",
-    "application_verifier_help",
-    "application_verifier_wow",
-    "application_verifier_x64",
-    "autodesk_access",
-    "blend_for_visual_studio_2022",
-    "blender",
     "calculator",
-    "ccbservice",
-    "change_graphics_mode_3ds_max_2025",
-    "chaosunifiedlogin",
-    "character_map",
-    "chrome",
-    "cmd",
     "codex",
-    "component_services",
-    "computer_management",
-    "connectify_hotspot_23",
-    "console",
-    "control_center",
     "control_panel",
-    "counter_strike_2",
     "cyberpunk_2077",
-    "database_compare",
-    "debuggable_package_manager",
-    "developer_command_prompt_for_vs_2022",
-    "developer_powershell_for_vs_2022",
-    "devenv",
     "device_manager",
-    "dfrgui",
-    "discord",
     "disk_cleanup",
     "disk_management",
-    "documentation_for_desktop_apps",
-    "documentation_for_uwp_apps",
-    "dokumentation",
     "dota_2",
     "edge",
-    "epic_games",
     "event_viewer",
     "excel",
     "explorer",
-    "faq",
-    "figma",
-    "firefox",
-    "fps_monitor",
-    "game_bar",
-    "gethelp",
-    "git_cmd",
-    "git_gui",
-    "git_release_notes",
-    "gpuview",
-    "hearts_of_iron_iv",
-    "homepage",
-    "idle_python_3_10_64_bit",
-    "iediag",
-    "iediagcmd",
-    "iexplore",
-    "illustrator",
-    "intellij_idea",
-    "iscsi",
-    "iscsi_initiator",
-    "licensemanagershellext",
-    "lightroom",
-    "livecaptions",
-    "magnify",
-    "manage_chaos_license_server",
-    "maxfind_2025",
-    "maya",
-    "media_encoder",
-    "memory_diagnostics_tool",
-    "microsoft_store",
-    "mplayer2",
-    "msoadfsb",
-    "msoasb",
-    "msoxmled",
-    "mysql_workbench",
-    "narrator",
-    "no_i_m_not_a_human",
-    "node_js",
-    "node_js_command_prompt",
     "notepad",
-    "nvidia_app",
-    "nvidia_control_panel",
-    "obs_studio",
-    "odbc_32",
-    "odbc_64",
-    "odbc_data_sources_32_bit",
-    "odbc_data_sources_64_bit",
-    "office",
-    "olk",
-    "ollama",
-    "on_screen_keyboard",
-    "onenote",
-    "opera",
-    "outlook",
     "paint",
-    "paradox_launcher_v2",
     "performance_monitor",
-    "pgadmin",
-    "photoshop",
-    "planetvpn",
     "planetvpn1",
-    "portal_2",
-    "portal_2_community_edition",
-    "postman",
-    "power_automate",
     "powerpoint",
-    "powershell",
-    "premiere_pro",
     "print_management",
-    "project",
-    "proton_vpn",
-    "pycharm",
-    "python_3_10_64_bit",
-    "python_3_10_manuals_64_bit",
-    "python_3_10_module_docs_64_bit",
-    "qbittorrent",
-    "r_e_p_o",
-    "readme",
-    "recoverydrive",
-    "redragon_m916_pro_4k",
     "regedit",
-    "remote_desktop_connection",
     "resource_monitor",
-    "run",
-    "sample_desktop_apps",
-    "sample_uwp_apps",
-    "sdxhelper",
-    "security_configuration_management",
-    "services",
-    "settings",
-    "seven_zip",
-    "snipping_tool",
-    "solitaire_casual_games",
-    "soundpad",
-    "spotify",
-    "spreadsheet_compare",
-    "start_chaos_cosmos_browser",
-    "start_chaos_license_server",
-    "start_chaos_unified_login",
-    "steam",
-    "steps_recorder",
-    "stop_chaos_cosmos_browser",
-    "stop_chaos_license_server",
-    "stop_chaos_unified_login",
-    "store",
-    "substance_painter",
-    "system_configuration",
-    "system_information",
-    "tabtip",
     "task_manager",
-    "task_scheduler",
-    "telegram",
     "terminal",
-    "tools_for_desktop_apps",
-    "tools_for_uwp_apps",
-    "tor_browser",
-    "unity",
     "unknown",
-    "viber",
-    "victoria_3",
-    "visual_studio",
-    "voiceaccess",
-    "vscode",
-    "wab",
-    "wabmig",
-    "whatsapp",
-    "windows",
-    "windows_app_cert_kit",
-    "windows_defender_firewall_with_advanced_security",
-    "windows_media_player_legacy",
-    "windows_performance_analyzer",
-    "windows_performance_recorder",
-    "windows_software_development_kit",
-    "windowspackagemanagerserver",
-    "winget",
-    "winrar",
     "wireshark",
-    "wmplayer",
     "word",
-    "x64_native_tools_command_prompt_for_vs_2022",
-    "x64_x86_cross_tools_command_prompt_for_vs_2022",
-    "x86_native_tools_command_prompt_for_vs_2022",
-    "x86_x64_cross_tools_command_prompt_for_vs_2022",
-    "xbox",
-    "xboxpcappadminserver",
-    "xboxpcappce",
-    "yandeks_muzyka",
-    "yandexmusic",
-    "zoom"
+    "yandexmusic"
   ],
-  "accuracy": 0.9699491852111443,
-  "macro_f1": 0.9659598131856084,
-  "weighted_f1": 0.9695353310524137,
+  "accuracy": 0.9882177479492916,
+  "macro_f1": 0.9864762883356339,
+  "weighted_f1": 0.9882210892675363,
   "classification_report": {
     "3ds_max_2025": {
-      "precision": 0.9813664596273292,
-      "recall": 0.9518072289156626,
-      "f1-score": 0.9663608562691132,
-      "support": 166.0
-    },
-    "access": {
-      "precision": 0.9947643979057592,
-      "recall": 0.9947643979057592,
-      "f1-score": 0.9947643979057592,
-      "support": 191.0
-    },
-    "acrobat_reader": {
-      "precision": 0.9948979591836735,
-      "recall": 1.0,
-      "f1-score": 0.9974424552429667,
-      "support": 195.0
-    },
-    "administrative_tools": {
-      "precision": 0.9532710280373832,
-      "recall": 0.8225806451612904,
-      "f1-score": 0.8831168831168831,
-      "support": 124.0
-    },
-    "after_effects": {
-      "precision": 0.9948453608247423,
-      "recall": 1.0,
-      "f1-score": 0.9974160206718347,
-      "support": 193.0
-    },
-    "antigravity": {
-      "precision": 0.9836956521739131,
-      "recall": 1.0,
-      "f1-score": 0.9917808219178083,
-      "support": 181.0
-    },
-    "application_verifier_help": {
-      "precision": 0.7969924812030075,
-      "recall": 0.9906542056074766,
-      "f1-score": 0.8833333333333333,
-      "support": 107.0
-    },
-    "application_verifier_wow": {
-      "precision": 0.9752066115702479,
-      "recall": 0.9007633587786259,
-      "f1-score": 0.9365079365079365,
-      "support": 131.0
-    },
-    "application_verifier_x64": {
-      "precision": 0.968,
-      "recall": 0.9029850746268657,
-      "f1-score": 0.9343629343629344,
-      "support": 134.0
-    },
-    "autodesk_access": {
-      "precision": 0.9891304347826086,
-      "recall": 1.0,
-      "f1-score": 0.994535519125683,
-      "support": 182.0
-    },
-    "blend_for_visual_studio_2022": {
-      "precision": 0.9891891891891892,
-      "recall": 1.0,
-      "f1-score": 0.9945652173913043,
-      "support": 183.0
-    },
-    "blender": {
-      "precision": 0.989010989010989,
-      "recall": 0.994475138121547,
-      "f1-score": 0.9917355371900827,
-      "support": 181.0
-    },
-    "calculator": {
-      "precision": 0.9946808510638298,
-      "recall": 1.0,
-      "f1-score": 0.9973333333333333,
+      "precision": 0.9946524064171123,
+      "recall": 0.9946524064171123,
+      "f1-score": 0.9946524064171123,
       "support": 187.0
     },
-    "ccbservice": {
-      "precision": 0.6933333333333334,
-      "recall": 0.9811320754716981,
-      "f1-score": 0.8125,
-      "support": 106.0
-    },
-    "change_graphics_mode_3ds_max_2025": {
-      "precision": 0.9487179487179487,
-      "recall": 0.9932885906040269,
-      "f1-score": 0.9704918032786886,
-      "support": 149.0
-    },
-    "chaosunifiedlogin": {
-      "precision": 0.8888888888888888,
-      "recall": 0.9122807017543859,
-      "f1-score": 0.9004329004329005,
-      "support": 114.0
-    },
-    "character_map": {
-      "precision": 0.9838709677419355,
-      "recall": 1.0,
-      "f1-score": 0.991869918699187,
-      "support": 183.0
-    },
-    "chrome": {
-      "precision": 0.9855072463768116,
-      "recall": 1.0,
-      "f1-score": 0.9927007299270073,
-      "support": 204.0
-    },
-    "cmd": {
-      "precision": 0.8114754098360656,
-      "recall": 0.9339622641509434,
-      "f1-score": 0.868421052631579,
-      "support": 106.0
+    "calculator": {
+      "precision": 0.9900990099009901,
+      "recall": 0.9950248756218906,
+      "f1-score": 0.9925558312655087,
+      "support": 201.0
     },
     "codex": {
-      "precision": 0.9947089947089947,
-      "recall": 0.9947089947089947,
+      "precision": 0.9894736842105263,
+      "recall": 1.0,
       "f1-score": 0.9947089947089947,
-      "support": 189.0
-    },
-    "component_services": {
-      "precision": 0.973404255319149,
-      "recall": 1.0,
-      "f1-score": 0.9865229110512129,
-      "support": 183.0
-    },
-    "computer_management": {
-      "precision": 0.9891304347826086,
-      "recall": 1.0,
-      "f1-score": 0.994535519125683,
-      "support": 182.0
-    },
-    "connectify_hotspot_23": {
-      "precision": 0.9837837837837838,
-      "recall": 1.0,
-      "f1-score": 0.9918256130790191,
-      "support": 182.0
-    },
-    "console": {
-      "precision": 0.9891891891891892,
-      "recall": 1.0,
-      "f1-score": 0.9945652173913043,
-      "support": 183.0
-    },
-    "control_center": {
-      "precision": 0.9731182795698925,
-      "recall": 0.9945054945054945,
-      "f1-score": 0.9836956521739131,
-      "support": 182.0
+      "support": 188.0
     },
     "control_panel": {
-      "precision": 0.8285714285714286,
-      "recall": 0.9747899159663865,
-      "f1-score": 0.8957528957528957,
-      "support": 119.0
-    },
-    "counter_strike_2": {
-      "precision": 0.989247311827957,
+      "precision": 0.9794871794871794,
       "recall": 1.0,
-      "f1-score": 0.9945945945945946,
-      "support": 184.0
+      "f1-score": 0.9896373056994818,
+      "support": 191.0
     },
     "cyberpunk_2077": {
-      "precision": 0.9947368421052631,
+      "precision": 0.9894179894179894,
       "recall": 1.0,
-      "f1-score": 0.9973614775725593,
-      "support": 189.0
-    },
-    "database_compare": {
-      "precision": 0.9791666666666666,
-      "recall": 0.8867924528301887,
-      "f1-score": 0.9306930693069307,
-      "support": 106.0
-    },
-    "debuggable_package_manager": {
-      "precision": 0.9306930693069307,
-      "recall": 0.8468468468468469,
-      "f1-score": 0.8867924528301887,
-      "support": 111.0
-    },
-    "developer_command_prompt_for_vs_2022": {
-      "precision": 0.9038461538461539,
-      "recall": 0.8952380952380953,
-      "f1-score": 0.8995215311004785,
-      "support": 105.0
-    },
-    "developer_powershell_for_vs_2022": {
-      "precision": 0.7803030303030303,
-      "recall": 0.944954128440367,
-      "f1-score": 0.8547717842323651,
-      "support": 109.0
-    },
-    "devenv": {
-      "precision": 0.8266666666666667,
-      "recall": 1.0,
-      "f1-score": 0.9051094890510949,
-      "support": 62.0
+      "f1-score": 0.9946808510638298,
+      "support": 187.0
     },
     "device_manager": {
-      "precision": 0.9838709677419355,
-      "recall": 1.0,
-      "f1-score": 0.991869918699187,
-      "support": 183.0
-    },
-    "dfrgui": {
-      "precision": 0.9890710382513661,
-      "recall": 1.0,
-      "f1-score": 0.9945054945054945,
-      "support": 181.0
-    },
-    "discord": {
-      "precision": 0.9732620320855615,
-      "recall": 1.0,
-      "f1-score": 0.986449864498645,
-      "support": 182.0
-    },
-    "disk_cleanup": {
-      "precision": 0.994535519125683,
-      "recall": 1.0,
-      "f1-score": 0.9972602739726028,
-      "support": 182.0
-    },
-    "disk_management": {
-      "precision": 0.9837837837837838,
-      "recall": 1.0,
-      "f1-score": 0.9918256130790191,
-      "support": 182.0
-    },
-    "documentation_for_desktop_apps": {
-      "precision": 0.9837837837837838,
-      "recall": 1.0,
-      "f1-score": 0.9918256130790191,
-      "support": 182.0
-    },
-    "documentation_for_uwp_apps": {
-      "precision": 0.9786096256684492,
-      "recall": 1.0,
-      "f1-score": 0.9891891891891892,
-      "support": 183.0
-    },
-    "dokumentation": {
-      "precision": 1.0,
-      "recall": 1.0,
-      "f1-score": 1.0,
-      "support": 182.0
-    },
-    "dota_2": {
-      "precision": 0.9947089947089947,
-      "recall": 0.9894736842105263,
-      "f1-score": 0.9920844327176781,
-      "support": 190.0
-    },
-    "edge": {
-      "precision": 0.9837837837837838,
-      "recall": 0.9891304347826086,
-      "f1-score": 0.986449864498645,
-      "support": 184.0
-    },
-    "epic_games": {
-      "precision": 0.9945945945945946,
-      "recall": 1.0,
-      "f1-score": 0.997289972899729,
-      "support": 184.0
-    },
-    "event_viewer": {
-      "precision": 0.9837837837837838,
-      "recall": 1.0,
-      "f1-score": 0.9918256130790191,
-      "support": 182.0
-    },
-    "excel": {
-      "precision": 0.9890710382513661,
-      "recall": 1.0,
-      "f1-score": 0.9945054945054945,
-      "support": 181.0
-    },
-    "explorer": {
-      "precision": 0.8368794326241135,
-      "recall": 0.9833333333333333,
-      "f1-score": 0.9042145593869731,
-      "support": 120.0
-    },
-    "faq": {
-      "precision": 0.9890710382513661,
-      "recall": 1.0,
-      "f1-score": 0.9945054945054945,
-      "support": 181.0
-    },
-    "figma": {
       "precision": 0.9896373056994818,
       "recall": 1.0,
       "f1-score": 0.9947916666666666,
       "support": 191.0
     },
-    "firefox": {
-      "precision": 0.9898477157360406,
-      "recall": 0.9948979591836735,
-      "f1-score": 0.9923664122137404,
+    "disk_cleanup": {
+      "precision": 0.9891304347826086,
+      "recall": 1.0,
+      "f1-score": 0.994535519125683,
+      "support": 182.0
+    },
+    "disk_management": {
+      "precision": 0.9947916666666666,
+      "recall": 1.0,
+      "f1-score": 0.9973890339425587,
+      "support": 191.0
+    },
+    "dota_2": {
+      "precision": 0.9790575916230366,
+      "recall": 1.0,
+      "f1-score": 0.9894179894179894,
+      "support": 187.0
+    },
+    "edge": {
+      "precision": 0.98989898989899,
+      "recall": 1.0,
+      "f1-score": 0.9949238578680203,
       "support": 196.0
     },
-    "fps_monitor": {
-      "precision": 0.9891304347826086,
+    "event_viewer": {
+      "precision": 0.9845360824742269,
       "recall": 1.0,
-      "f1-score": 0.994535519125683,
-      "support": 182.0
+      "f1-score": 0.9922077922077922,
+      "support": 191.0
     },
-    "game_bar": {
-      "precision": 0.8796992481203008,
+    "excel": {
+      "precision": 0.9949238578680203,
       "recall": 1.0,
-      "f1-score": 0.936,
-      "support": 117.0
+      "f1-score": 0.9974554707379135,
+      "support": 196.0
     },
-    "gethelp": {
-      "precision": 0.9836956521739131,
+    "explorer": {
+      "precision": 0.9951219512195122,
+      "recall": 0.9951219512195122,
+      "f1-score": 0.9951219512195122,
+      "support": 205.0
+    },
+    "notepad": {
+      "precision": 0.9808612440191388,
       "recall": 1.0,
-      "f1-score": 0.9917808219178083,
-      "support": 181.0
+      "f1-score": 0.9903381642512077,
+      "support": 205.0
     },
-    "git_cmd": {
-      "precision": 0.9891891891891892,
-      "recall": 1.0,
-      "f1-score": 0.9945652173913043,
-      "support": 183.0
-    },
-    "git_gui": {
-      "precision": 0.9891304347826086,
-      "recall": 1.0,
-      "f1-score": 0.994535519125683,
-      "support": 182.0
-    },
-    "git_release_notes": {
-      "precision": 0.9786096256684492,
-      "recall": 1.0,
-      "f1-score": 0.9891891891891892,
-      "support": 183.0
-    },
-    "gpuview": {
-      "precision": 0.9890710382513661,
-      "recall": 1.0,
-      "f1-score": 0.9945054945054945,
-      "support": 181.0
-    },
-    "hearts_of_iron_iv": {
-      "precision": 0.9891891891891892,
-      "recall": 1.0,
-      "f1-score": 0.9945652173913043,
-      "support": 183.0
-    },
-    "homepage": {
-      "precision": 0.9890710382513661,
-      "recall": 1.0,
-      "f1-score": 0.9945054945054945,
-      "support": 181.0
-    },
-    "idle_python_3_10_64_bit": {
-      "precision": 0.9945054945054945,
-      "recall": 0.9836956521739131,
-      "f1-score": 0.9890710382513661,
-      "support": 184.0
-    },
-    "iediag": {
-      "precision": 0.9368421052631579,
-      "recall": 0.8240740740740741,
-      "f1-score": 0.8768472906403941,
-      "support": 108.0
-    },
-    "iediagcmd": {
-      "precision": 0.6231884057971014,
-      "recall": 0.8775510204081632,
-      "f1-score": 0.7288135593220338,
-      "support": 49.0
-    },
-    "iexplore": {
-      "precision": 0.9890710382513661,
-      "recall": 1.0,
-      "f1-score": 0.9945054945054945,
-      "support": 181.0
-    },
-    "illustrator": {
+    "paint": {
       "precision": 0.9897435897435898,
       "recall": 1.0,
       "f1-score": 0.9948453608247423,
       "support": 193.0
     },
-    "intellij_idea": {
-      "precision": 0.989247311827957,
-      "recall": 1.0,
-      "f1-score": 0.9945945945945946,
-      "support": 184.0
-    },
-    "iscsi": {
-      "precision": 0.9612403100775194,
-      "recall": 0.8985507246376812,
-      "f1-score": 0.9288389513108615,
-      "support": 138.0
-    },
-    "iscsi_initiator": {
-      "precision": 0.8863636363636364,
-      "recall": 0.9669421487603306,
-      "f1-score": 0.924901185770751,
-      "support": 121.0
-    },
-    "licensemanagershellext": {
-      "precision": 0.9945054945054945,
-      "recall": 1.0,
-      "f1-score": 0.9972451790633609,
-      "support": 181.0
-    },
-    "lightroom": {
-      "precision": 0.9895833333333334,
-      "recall": 1.0,
-      "f1-score": 0.9947643979057592,
-      "support": 190.0
-    },
-    "livecaptions": {
-      "precision": 0.9836956521739131,
-      "recall": 1.0,
-      "f1-score": 0.9917808219178083,
-      "support": 181.0
-    },
-    "magnify": {
-      "precision": 0.9945054945054945,
-      "recall": 1.0,
-      "f1-score": 0.9972451790633609,
-      "support": 181.0
-    },
-    "manage_chaos_license_server": {
-      "precision": 0.9891304347826086,
-      "recall": 1.0,
-      "f1-score": 0.994535519125683,
-      "support": 182.0
-    },
-    "maxfind_2025": {
-      "precision": 0.9891304347826086,
-      "recall": 1.0,
-      "f1-score": 0.994535519125683,
-      "support": 182.0
-    },
-    "maya": {
-      "precision": 0.9895287958115183,
-      "recall": 0.9947368421052631,
-      "f1-score": 0.9921259842519685,
-      "support": 190.0
-    },
-    "media_encoder": {
-      "precision": 0.9743589743589743,
-      "recall": 1.0,
-      "f1-score": 0.987012987012987,
-      "support": 190.0
-    },
-    "memory_diagnostics_tool": {
-      "precision": 0.8571428571428571,
-      "recall": 1.0,
-      "f1-score": 0.9230769230769231,
-      "support": 120.0
-    },
-    "microsoft_store": {
-      "precision": 0.972972972972973,
-      "recall": 0.989010989010989,
-      "f1-score": 0.9809264305177112,
-      "support": 182.0
-    },
-    "mplayer2": {
-      "precision": 1.0,
-      "recall": 0.8446601941747572,
-      "f1-score": 0.9157894736842105,
-      "support": 103.0
-    },
-    "msoadfsb": {
-      "precision": 0.9836956521739131,
-      "recall": 1.0,
-      "f1-score": 0.9917808219178083,
-      "support": 181.0
-    },
-    "msoasb": {
-      "precision": 0.9836956521739131,
-      "recall": 1.0,
-      "f1-score": 0.9917808219178083,
-      "support": 181.0
-    },
-    "msoxmled": {
-      "precision": 0.9890710382513661,
-      "recall": 1.0,
-      "f1-score": 0.9945054945054945,
-      "support": 181.0
-    },
-    "mysql_workbench": {
-      "precision": 0.9947916666666666,
-      "recall": 1.0,
-      "f1-score": 0.9973890339425587,
-      "support": 191.0
-    },
-    "narrator": {
-      "precision": 0.9945054945054945,
-      "recall": 1.0,
-      "f1-score": 0.9972451790633609,
-      "support": 181.0
-    },
-    "no_i_m_not_a_human": {
-      "precision": 0.9735449735449735,
-      "recall": 1.0,
-      "f1-score": 0.9865951742627346,
-      "support": 184.0
-    },
-    "node_js": {
-      "precision": 0.9838709677419355,
-      "recall": 0.9945652173913043,
-      "f1-score": 0.9891891891891892,
-      "support": 184.0
-    },
-    "node_js_command_prompt": {
-      "precision": 1.0,
-      "recall": 0.9147286821705426,
-      "f1-score": 0.9554655870445344,
-      "support": 129.0
-    },
-    "notepad": {
-      "precision": 0.9738219895287958,
-      "recall": 1.0,
-      "f1-score": 0.986737400530504,
-      "support": 186.0
-    },
-    "nvidia_app": {
-      "precision": 0.9731182795698925,
-      "recall": 1.0,
-      "f1-score": 0.9863760217983651,
-      "support": 181.0
-    },
-    "nvidia_control_panel": {
-      "precision": 1.0,
-      "recall": 0.994535519125683,
-      "f1-score": 0.9972602739726028,
-      "support": 183.0
-    },
-    "obs_studio": {
-      "precision": 0.9891891891891892,
-      "recall": 1.0,
-      "f1-score": 0.9945652173913043,
-      "support": 183.0
-    },
-    "odbc_32": {
-      "precision": 0.8666666666666667,
-      "recall": 0.9558823529411765,
-      "f1-score": 0.9090909090909091,
-      "support": 136.0
-    },
-    "odbc_64": {
-      "precision": 0.9124087591240876,
-      "recall": 0.9541984732824428,
-      "f1-score": 0.9328358208955224,
-      "support": 131.0
-    },
-    "odbc_data_sources_32_bit": {
-      "precision": 0.9838709677419355,
-      "recall": 0.9104477611940298,
-      "f1-score": 0.9457364341085271,
-      "support": 134.0
-    },
-    "odbc_data_sources_64_bit": {
-      "precision": 0.9389312977099237,
-      "recall": 0.9318181818181818,
-      "f1-score": 0.935361216730038,
-      "support": 132.0
-    },
-    "office": {
-      "precision": 0.989247311827957,
-      "recall": 1.0,
-      "f1-score": 0.9945945945945946,
-      "support": 184.0
-    },
-    "olk": {
-      "precision": 0.9890710382513661,
-      "recall": 1.0,
-      "f1-score": 0.9945054945054945,
-      "support": 181.0
-    },
-    "ollama": {
-      "precision": 0.9837837837837838,
-      "recall": 1.0,
-      "f1-score": 0.9918256130790191,
-      "support": 182.0
-    },
-    "on_screen_keyboard": {
-      "precision": 0.983957219251337,
-      "recall": 1.0,
-      "f1-score": 0.9919137466307277,
-      "support": 184.0
-    },
-    "onenote": {
-      "precision": 1.0,
-      "recall": 1.0,
-      "f1-score": 1.0,
-      "support": 193.0
-    },
-    "opera": {
-      "precision": 0.9846153846153847,
-      "recall": 0.9948186528497409,
-      "f1-score": 0.9896907216494846,
-      "support": 193.0
-    },
-    "outlook": {
-      "precision": 0.9945652173913043,
-      "recall": 1.0,
-      "f1-score": 0.997275204359673,
-      "support": 183.0
-    },
-    "paint": {
-      "precision": 0.9890710382513661,
-      "recall": 0.9945054945054945,
-      "f1-score": 0.9917808219178083,
-      "support": 182.0
-    },
-    "paradox_launcher_v2": {
-      "precision": 0.9891304347826086,
-      "recall": 1.0,
-      "f1-score": 0.994535519125683,
-      "support": 182.0
-    },
     "performance_monitor": {
-      "precision": 0.9285714285714286,
-      "recall": 0.8888888888888888,
-      "f1-score": 0.9082969432314411,
-      "support": 117.0
-    },
-    "pgadmin": {
-      "precision": 0.9947916666666666,
-      "recall": 1.0,
-      "f1-score": 0.9973890339425587,
-      "support": 191.0
-    },
-    "photoshop": {
-      "precision": 0.975,
-      "recall": 1.0,
-      "f1-score": 0.9873417721518988,
-      "support": 195.0
-    },
-    "planetvpn": {
-      "precision": 0.8817204301075269,
-      "recall": 1.0,
-      "f1-score": 0.9371428571428572,
-      "support": 82.0
+      "precision": 0.8582677165354331,
+      "recall": 0.923728813559322,
+      "f1-score": 0.889795918367347,
+      "support": 118.0
     },
     "planetvpn1": {
-      "precision": 0.9736842105263158,
-      "recall": 0.9487179487179487,
-      "f1-score": 0.961038961038961,
-      "support": 156.0
-    },
-    "portal_2": {
-      "precision": 0.9891304347826086,
+      "precision": 0.9947089947089947,
       "recall": 1.0,
-      "f1-score": 0.994535519125683,
-      "support": 182.0
-    },
-    "portal_2_community_edition": {
-      "precision": 0.9891304347826086,
-      "recall": 1.0,
-      "f1-score": 0.994535519125683,
-      "support": 182.0
-    },
-    "postman": {
-      "precision": 0.9792746113989638,
-      "recall": 0.9947368421052631,
-      "f1-score": 0.9869451697127938,
-      "support": 190.0
-    },
-    "power_automate": {
-      "precision": 0.9891304347826086,
-      "recall": 1.0,
-      "f1-score": 0.994535519125683,
-      "support": 182.0
+      "f1-score": 0.9973474801061007,
+      "support": 188.0
     },
     "powerpoint": {
-      "precision": 0.9891304347826086,
-      "recall": 1.0,
-      "f1-score": 0.994535519125683,
-      "support": 182.0
-    },
-    "powershell": {
-      "precision": 0.9621212121212122,
-      "recall": 0.9136690647482014,
-      "f1-score": 0.9372693726937269,
-      "support": 139.0
-    },
-    "premiere_pro": {
-      "precision": 0.9846938775510204,
-      "recall": 1.0,
-      "f1-score": 0.9922879177377892,
-      "support": 193.0
+      "precision": 0.9948717948717949,
+      "recall": 0.9897959183673469,
+      "f1-score": 0.9923273657289002,
+      "support": 196.0
     },
     "print_management": {
-      "precision": 1.0,
-      "recall": 1.0,
-      "f1-score": 1.0,
-      "support": 182.0
-    },
-    "project": {
-      "precision": 0.9182692307692307,
-      "recall": 0.9947916666666666,
-      "f1-score": 0.955,
-      "support": 192.0
-    },
-    "proton_vpn": {
-      "precision": 0.9891304347826086,
-      "recall": 1.0,
-      "f1-score": 0.994535519125683,
-      "support": 182.0
-    },
-    "pycharm": {
-      "precision": 0.9896907216494846,
-      "recall": 1.0,
-      "f1-score": 0.9948186528497409,
-      "support": 192.0
-    },
-    "python_3_10_64_bit": {
-      "precision": 0.844311377245509,
-      "recall": 0.9929577464788732,
-      "f1-score": 0.912621359223301,
-      "support": 142.0
-    },
-    "python_3_10_manuals_64_bit": {
-      "precision": 0.978494623655914,
-      "recall": 0.9891304347826086,
-      "f1-score": 0.9837837837837838,
-      "support": 184.0
-    },
-    "python_3_10_module_docs_64_bit": {
-      "precision": 0.9761904761904762,
-      "recall": 0.8785714285714286,
-      "f1-score": 0.924812030075188,
-      "support": 140.0
-    },
-    "qbittorrent": {
-      "precision": 0.9945054945054945,
-      "recall": 1.0,
-      "f1-score": 0.9972451790633609,
-      "support": 181.0
-    },
-    "r_e_p_o": {
-      "precision": 0.989247311827957,
-      "recall": 1.0,
-      "f1-score": 0.9945945945945946,
-      "support": 184.0
-    },
-    "readme": {
-      "precision": 0.9731182795698925,
-      "recall": 1.0,
-      "f1-score": 0.9863760217983651,
-      "support": 181.0
-    },
-    "recoverydrive": {
-      "precision": 0.9890710382513661,
-      "recall": 1.0,
-      "f1-score": 0.9945054945054945,
-      "support": 181.0
-    },
-    "redragon_m916_pro_4k": {
-      "precision": 0.983957219251337,
-      "recall": 1.0,
-      "f1-score": 0.9919137466307277,
-      "support": 184.0
-    },
-    "regedit": {
-      "precision": 0.9945652173913043,
-      "recall": 1.0,
-      "f1-score": 0.997275204359673,
-      "support": 183.0
-    },
-    "remote_desktop_connection": {
-      "precision": 0.994535519125683,
-      "recall": 1.0,
-      "f1-score": 0.9972602739726028,
-      "support": 182.0
-    },
-    "resource_monitor": {
-      "precision": 0.8709677419354839,
-      "recall": 0.9391304347826087,
-      "f1-score": 0.9037656903765691,
-      "support": 115.0
-    },
-    "run": {
-      "precision": 0.9836956521739131,
-      "recall": 1.0,
-      "f1-score": 0.9917808219178083,
-      "support": 181.0
-    },
-    "sample_desktop_apps": {
-      "precision": 0.9838709677419355,
-      "recall": 1.0,
-      "f1-score": 0.991869918699187,
-      "support": 183.0
-    },
-    "sample_uwp_apps": {
       "precision": 0.9837837837837838,
       "recall": 1.0,
       "f1-score": 0.9918256130790191,
       "support": 182.0
     },
-    "sdxhelper": {
-      "precision": 0.9945054945054945,
-      "recall": 1.0,
-      "f1-score": 0.9972451790633609,
-      "support": 181.0
-    },
-    "security_configuration_management": {
-      "precision": 0.9891304347826086,
-      "recall": 1.0,
-      "f1-score": 0.994535519125683,
-      "support": 182.0
-    },
-    "services": {
-      "precision": 0.9890710382513661,
-      "recall": 1.0,
-      "f1-score": 0.9945054945054945,
-      "support": 181.0
-    },
-    "settings": {
-      "precision": 0.9945945945945946,
-      "recall": 0.983957219251337,
-      "f1-score": 0.989247311827957,
-      "support": 187.0
-    },
-    "seven_zip": {
-      "precision": 0.9896907216494846,
-      "recall": 1.0,
-      "f1-score": 0.9948186528497409,
+    "regedit": {
+      "precision": 0.9947916666666666,
+      "recall": 0.9947916666666666,
+      "f1-score": 0.9947916666666666,
       "support": 192.0
     },
-    "snipping_tool": {
-      "precision": 1.0,
-      "recall": 1.0,
-      "f1-score": 1.0,
-      "support": 182.0
-    },
-    "solitaire_casual_games": {
-      "precision": 0.9772727272727273,
-      "recall": 0.9280575539568345,
-      "f1-score": 0.9520295202952029,
-      "support": 139.0
-    },
-    "soundpad": {
-      "precision": 0.994535519125683,
-      "recall": 1.0,
-      "f1-score": 0.9972602739726028,
-      "support": 182.0
-    },
-    "spotify": {
-      "precision": 0.9947643979057592,
-      "recall": 1.0,
-      "f1-score": 0.9973753280839895,
-      "support": 190.0
-    },
-    "spreadsheet_compare": {
-      "precision": 0.8805970149253731,
-      "recall": 0.9915966386554622,
-      "f1-score": 0.932806324110672,
-      "support": 119.0
-    },
-    "start_chaos_cosmos_browser": {
-      "precision": 0.9764705882352941,
-      "recall": 0.7757009345794392,
-      "f1-score": 0.8645833333333334,
-      "support": 107.0
-    },
-    "start_chaos_license_server": {
-      "precision": 0.9583333333333334,
-      "recall": 0.8,
-      "f1-score": 0.8720379146919431,
-      "support": 115.0
-    },
-    "start_chaos_unified_login": {
-      "precision": 0.8290598290598291,
-      "recall": 0.9065420560747663,
-      "f1-score": 0.8660714285714286,
-      "support": 107.0
-    },
-    "steam": {
-      "precision": 0.9945054945054945,
-      "recall": 1.0,
-      "f1-score": 0.9972451790633609,
-      "support": 181.0
-    },
-    "steps_recorder": {
-      "precision": 0.978494623655914,
-      "recall": 1.0,
-      "f1-score": 0.9891304347826086,
-      "support": 182.0
-    },
-    "stop_chaos_cosmos_browser": {
-      "precision": 0.967741935483871,
-      "recall": 0.8181818181818182,
-      "f1-score": 0.8866995073891626,
-      "support": 110.0
-    },
-    "stop_chaos_license_server": {
-      "precision": 0.8181818181818182,
-      "recall": 0.9642857142857143,
-      "f1-score": 0.8852459016393442,
-      "support": 112.0
-    },
-    "stop_chaos_unified_login": {
-      "precision": 0.9134615384615384,
-      "recall": 0.8962264150943396,
-      "f1-score": 0.9047619047619048,
-      "support": 106.0
-    },
-    "store": {
-      "precision": 0.9890710382513661,
-      "recall": 1.0,
-      "f1-score": 0.9945054945054945,
-      "support": 181.0
-    },
-    "substance_painter": {
-      "precision": 0.9895833333333334,
-      "recall": 1.0,
-      "f1-score": 0.9947643979057592,
-      "support": 190.0
-    },
-    "system_configuration": {
-      "precision": 0.978494623655914,
-      "recall": 1.0,
-      "f1-score": 0.9891304347826086,
-      "support": 182.0
-    },
-    "system_information": {
-      "precision": 0.9680851063829787,
-      "recall": 1.0,
-      "f1-score": 0.9837837837837838,
-      "support": 182.0
-    },
-    "tabtip": {
-      "precision": 0.9836956521739131,
-      "recall": 1.0,
-      "f1-score": 0.9917808219178083,
-      "support": 181.0
+    "resource_monitor": {
+      "precision": 0.9224137931034483,
+      "recall": 0.8770491803278688,
+      "f1-score": 0.8991596638655462,
+      "support": 122.0
     },
     "task_manager": {
-      "precision": 0.9891304347826086,
+      "precision": 0.9847715736040609,
       "recall": 1.0,
-      "f1-score": 0.994535519125683,
-      "support": 182.0
-    },
-    "task_scheduler": {
-      "precision": 0.978494623655914,
-      "recall": 1.0,
-      "f1-score": 0.9891304347826086,
-      "support": 182.0
-    },
-    "telegram": {
-      "precision": 0.9946524064171123,
-      "recall": 1.0,
-      "f1-score": 0.9973190348525469,
-      "support": 186.0
+      "f1-score": 0.9923273657289002,
+      "support": 194.0
     },
     "terminal": {
+      "precision": 0.9948453608247423,
+      "recall": 1.0,
+      "f1-score": 0.9974160206718347,
+      "support": 193.0
+    },
+    "unknown": {
+      "precision": 0.9972406181015453,
+      "recall": 0.9741239892183289,
+      "f1-score": 0.9855467684755931,
+      "support": 1855.0
+    },
+    "wireshark": {
       "precision": 0.9945945945945946,
       "recall": 1.0,
       "f1-score": 0.997289972899729,
       "support": 184.0
     },
-    "tools_for_desktop_apps": {
-      "precision": 0.9891304347826086,
-      "recall": 1.0,
-      "f1-score": 0.994535519125683,
-      "support": 182.0
-    },
-    "tools_for_uwp_apps": {
-      "precision": 0.9890710382513661,
-      "recall": 0.9945054945054945,
-      "f1-score": 0.9917808219178083,
-      "support": 182.0
-    },
-    "tor_browser": {
-      "precision": 0.984375,
-      "recall": 0.9947368421052631,
-      "f1-score": 0.9895287958115183,
-      "support": 190.0
-    },
-    "unity": {
-      "precision": 0.9792746113989638,
-      "recall": 0.9947368421052631,
-      "f1-score": 0.9869451697127938,
-      "support": 190.0
-    },
-    "unknown": {
-      "precision": 0.9915611814345991,
-      "recall": 0.7601078167115903,
-      "f1-score": 0.8605431797375649,
-      "support": 1855.0
-    },
-    "viber": {
-      "precision": 0.9945652173913043,
-      "recall": 1.0,
-      "f1-score": 0.997275204359673,
-      "support": 183.0
-    },
-    "victoria_3": {
-      "precision": 0.9732620320855615,
-      "recall": 1.0,
-      "f1-score": 0.986449864498645,
-      "support": 182.0
-    },
-    "visual_studio": {
-      "precision": 0.9481481481481482,
-      "recall": 0.9343065693430657,
-      "f1-score": 0.9411764705882353,
-      "support": 137.0
-    },
-    "voiceaccess": {
-      "precision": 0.9945054945054945,
-      "recall": 1.0,
-      "f1-score": 0.9972451790633609,
-      "support": 181.0
-    },
-    "vscode": {
-      "precision": 0.9844559585492227,
-      "recall": 0.9844559585492227,
-      "f1-score": 0.9844559585492227,
-      "support": 193.0
-    },
-    "wab": {
-      "precision": 0.9783783783783784,
-      "recall": 1.0,
-      "f1-score": 0.9890710382513661,
-      "support": 181.0
-    },
-    "wabmig": {
-      "precision": 0.9945054945054945,
-      "recall": 1.0,
-      "f1-score": 0.9972451790633609,
-      "support": 181.0
-    },
-    "whatsapp": {
-      "precision": 0.9896373056994818,
-      "recall": 1.0,
-      "f1-score": 0.9947916666666666,
-      "support": 191.0
-    },
-    "windows": {
-      "precision": 0.952,
-      "recall": 0.875,
-      "f1-score": 0.9118773946360154,
-      "support": 136.0
-    },
-    "windows_app_cert_kit": {
-      "precision": 0.9945652173913043,
-      "recall": 1.0,
-      "f1-score": 0.997275204359673,
-      "support": 183.0
-    },
-    "windows_defender_firewall_with_advanced_security": {
-      "precision": 0.9891304347826086,
-      "recall": 1.0,
-      "f1-score": 0.994535519125683,
-      "support": 182.0
-    },
-    "windows_media_player_legacy": {
-      "precision": 1.0,
-      "recall": 0.8425925925925926,
-      "f1-score": 0.914572864321608,
-      "support": 108.0
-    },
-    "windows_performance_analyzer": {
-      "precision": 0.9891891891891892,
-      "recall": 1.0,
-      "f1-score": 0.9945652173913043,
-      "support": 183.0
-    },
-    "windows_performance_recorder": {
-      "precision": 0.9891304347826086,
-      "recall": 1.0,
-      "f1-score": 0.994535519125683,
-      "support": 182.0
-    },
-    "windows_software_development_kit": {
-      "precision": 0.9787234042553191,
-      "recall": 0.8288288288288288,
-      "f1-score": 0.8975609756097561,
-      "support": 111.0
-    },
-    "windowspackagemanagerserver": {
-      "precision": 1.0,
-      "recall": 1.0,
-      "f1-score": 1.0,
-      "support": 181.0
-    },
-    "winget": {
-      "precision": 0.9945054945054945,
-      "recall": 1.0,
-      "f1-score": 0.9972451790633609,
-      "support": 181.0
-    },
-    "winrar": {
-      "precision": 0.979381443298969,
-      "recall": 1.0,
-      "f1-score": 0.9895833333333334,
-      "support": 190.0
-    },
-    "wireshark": {
-      "precision": 0.9946236559139785,
-      "recall": 1.0,
-      "f1-score": 0.9973045822102425,
-      "support": 185.0
-    },
-    "wmplayer": {
-      "precision": 0.4583333333333333,
-      "recall": 1.0,
-      "f1-score": 0.6285714285714286,
-      "support": 33.0
-    },
     "word": {
-      "precision": 0.9837837837837838,
-      "recall": 0.994535519125683,
-      "f1-score": 0.9891304347826086,
-      "support": 183.0
-    },
-    "x64_native_tools_command_prompt_for_vs_2022": {
-      "precision": 0.7647058823529411,
-      "recall": 0.900990099009901,
-      "f1-score": 0.8272727272727273,
-      "support": 101.0
-    },
-    "x64_x86_cross_tools_command_prompt_for_vs_2022": {
-      "precision": 0.8241758241758241,
-      "recall": 0.5952380952380952,
-      "f1-score": 0.6912442396313364,
-      "support": 126.0
-    },
-    "x86_native_tools_command_prompt_for_vs_2022": {
-      "precision": 0.9158878504672897,
-      "recall": 0.9423076923076923,
-      "f1-score": 0.9289099526066351,
-      "support": 104.0
-    },
-    "x86_x64_cross_tools_command_prompt_for_vs_2022": {
-      "precision": 0.7236842105263158,
-      "recall": 0.8333333333333334,
-      "f1-score": 0.7746478873239436,
-      "support": 132.0
-    },
-    "xbox": {
-      "precision": 1.0,
-      "recall": 1.0,
-      "f1-score": 1.0,
-      "support": 182.0
-    },
-    "xboxpcappadminserver": {
-      "precision": 0.9945054945054945,
-      "recall": 1.0,
-      "f1-score": 0.9972451790633609,
-      "support": 181.0
-    },
-    "xboxpcappce": {
-      "precision": 0.9890710382513661,
-      "recall": 1.0,
-      "f1-score": 0.9945054945054945,
-      "support": 181.0
-    },
-    "yandeks_muzyka": {
-      "precision": 0.95,
-      "recall": 0.9851851851851852,
-      "f1-score": 0.9672727272727273,
-      "support": 135.0
+      "precision": 0.9948979591836735,
+      "recall": 0.9948979591836735,
+      "f1-score": 0.9948979591836735,
+      "support": 196.0
     },
     "yandexmusic": {
-      "precision": 0.9722222222222222,
-      "recall": 0.9668508287292817,
-      "f1-score": 0.9695290858725761,
-      "support": 181.0
-    },
-    "zoom": {
-      "precision": 0.994535519125683,
+      "precision": 0.9897959183673469,
       "recall": 1.0,
-      "f1-score": 0.9972602739726028,
-      "support": 182.0
+      "f1-score": 0.9948717948717949,
+      "support": 194.0
     },
-    "accuracy": 0.9699491852111443,
+    "accuracy": 0.9882177479492916,
     "macro avg": {
-      "precision": 0.9613310911961179,
-      "recall": 0.9741374566594962,
-      "f1-score": 0.9659598131856084,
-      "support": 34242.0
+      "precision": 0.9828080280657465,
+      "recall": 0.9903402503919158,
+      "f1-score": 0.9864762883356339,
+      "support": 6705.0
     },
     "weighted avg": {
-      "precision": 0.9724514357827329,
-      "recall": 0.9699491852111443,
-      "f1-score": 0.9695353310524137,
-      "support": 34242.0
+      "precision": 0.9884043600289533,
+      "recall": 0.9882177479492916,
+      "f1-score": 0.9882210892675363,
+      "support": 6705.0
     }
   }
 }

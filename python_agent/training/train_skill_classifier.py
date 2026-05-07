@@ -81,7 +81,7 @@ def main() -> int:
     parser.add_argument("--data-path", type=Path, default=DEFAULT_DATA_PATH)
     parser.add_argument("--model-path", type=Path, default=DEFAULT_MODEL_PATH)
     parser.add_argument("--metrics-path", type=Path, default=DEFAULT_METRICS_PATH)
-    parser.add_argument("--min-confidence", type=float, default=0.50)
+    parser.add_argument("--min-confidence", type=float, default=0.49)
     parser.add_argument("--test-size", type=float, default=0.25)
     parser.add_argument("--random-state", type=int, default=42)
     args = parser.parse_args()

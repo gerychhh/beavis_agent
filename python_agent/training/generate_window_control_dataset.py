@@ -15,6 +15,9 @@ if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
 from python_agent.resolvers.app_catalog_service import AppCatalogService
+from python_agent.resolvers.app_catalog_utils import is_spoken_form
+from python_agent.nlu.normalizer import Normalizer
+from python_agent.resolvers.app_visibility import is_user_visible_app
 from python_agent.training.dataset_sources import dict_from_source, list_from_source, load_training_source
 
 
@@ -33,15 +36,7 @@ CURRENT_TEMPLATES = dict_from_source(_SOURCE, "current_templates")
 UNKNOWN_PHRASES = list_from_source(_SOURCE, "unknown_phrases")
 NON_CONTROL_APP_TEMPLATES = list_from_source(_SOURCE, "non_control_app_templates")
 UNKNOWN_WRAPPERS = list_from_source(_SOURCE, "unknown_wrappers")
-
-
-def is_spoken_form(value: str) -> bool:
-    text = str(value).strip()
-    if not text:
-        return False
-    if any(marker in text for marker in ("\\", "/", "://", "{", "}", "!", ".exe")):
-        return False
-    return True
+_NORMALIZER = Normalizer()
 
 
 def clean_text(text: str) -> str:
@@ -55,6 +50,8 @@ def build_apps(apps_catalog_path: Path | None = None) -> dict[str, list[str]]:
     apps: dict[str, list[str]] = {}
 
     for app in service.get_enabled_apps():
+        if not is_user_visible_app(app):
+            continue
         forms = [
             app.display_name,
             Path(app.launch_target).stem if app.launch_target else "",
@@ -148,15 +145,16 @@ def add_example(
     rows_action: list[tuple[str, str]],
     rows_target: list[tuple[str, str]],
     combined: list[dict],
-    seen: set[tuple[str, str, str]],
+    seen: dict[str, tuple[str, str]],
 ) -> None:
     text = clean_text(text)
-    key = (text, action, target)
+    key = _NORMALIZER.normalize(text)
+    label = (action, target)
 
-    if key in seen:
+    if not key or key in seen:
         return
 
-    seen.add(key)
+    seen[key] = label
     rows_action.append((text, action))
     rows_target.append((text, target))
     combined.append({"text": text, "args": args})
@@ -177,7 +175,7 @@ def generate_dataset(
     rows_action: list[tuple[str, str]] = []
     rows_target: list[tuple[str, str]] = []
     combined: list[dict] = []
-    seen: set[tuple[str, str, str]] = set()
+    seen: dict[str, tuple[str, str]] = {}
 
     action_templates = {
         "close": CLOSE_TEMPLATES,
@@ -261,6 +259,26 @@ def write_jsonl(path: Path, rows: list[dict]) -> None:
             file.write(json.dumps(row, ensure_ascii=False) + "\n")
 
 
+def build_manual_tests(combined: list[dict], limit_per_action: int = 24) -> list[dict]:
+    manual_tests: list[dict] = []
+    counts: Counter[str] = Counter()
+
+    for row in combined:
+        text = str(row.get("text") or "").strip()
+        args = row.get("args") if isinstance(row.get("args"), dict) else {}
+        if not text or not args:
+            continue
+
+        action = str(args.get("action") or "missing")
+        if counts[action] >= limit_per_action:
+            continue
+
+        manual_tests.append({"text": text, "expected": args})
+        counts[action] += 1
+
+    return manual_tests
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--out-dir", default="python_agent/data/window_control/processed")
@@ -285,6 +303,7 @@ def main() -> None:
     write_csv(out_dir / "action_train.csv", ["text", "action"], rows_action)
     write_csv(out_dir / "target_train.csv", ["text", "target"], rows_target)
     write_jsonl(out_dir / "combined_examples.jsonl", combined)
+    write_jsonl(out_dir.parent / "eval" / "manual_tests.jsonl", build_manual_tests(combined))
 
     stats = {
         "total_rows": len(combined),

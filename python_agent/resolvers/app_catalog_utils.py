@@ -14,6 +14,8 @@ _CYR_TO_LAT = {
 }
 
 _RESERVED_APP_IDS = {"", "app", "custom_app"}
+_GUID_RE = re.compile(r"\{?[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\}?", re.I)
+_PACKAGE_FAMILY_RE = re.compile(r"^[a-z0-9_.-]+_[a-z0-9]{8,}![a-z0-9_.-]+$", re.I)
 
 
 def transliterate(value: str) -> str:
@@ -31,6 +33,28 @@ def normalize_app_id(value: str) -> str:
 
 def ascii_slug(value: str) -> str:
     return normalize_app_id(value)
+
+
+def is_spoken_form(value: str) -> bool:
+    text = " ".join(str(value).strip().lower().split())
+    if not text:
+        return False
+    if len(text) > 48:
+        return False
+    if text.isdigit() and len(text) >= 3:
+        return False
+    if "?" in text or "�" in text:
+        return False
+    if ":" in text or "\\" in text or "/" in text or "!" in text or "_" in text:
+        return False
+    if text.endswith((".exe", ".lnk", ".url", ".appref-ms")):
+        return False
+    if _GUID_RE.search(text) or _PACKAGE_FAMILY_RE.match(text):
+        return False
+    punctuation = sum(1 for char in text if char in "._:-{}[]()")
+    if punctuation >= 3:
+        return False
+    return True
 
 
 def _path_candidates(value: str | Path | None) -> list[str]:
@@ -84,7 +108,7 @@ def normalize_speech_forms(value: Any) -> list[str]:
 
     for item in raw:
         cleaned = " ".join(str(item).strip().lower().split())
-        if cleaned and cleaned not in seen:
+        if is_spoken_form(cleaned) and cleaned not in seen:
             seen.add(cleaned)
             out.append(cleaned)
 
