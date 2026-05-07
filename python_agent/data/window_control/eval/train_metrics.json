@@ -1,12 +1,12 @@
 {
-  "dataset_rows": 29469,
-  "train_rows": 23575,
-  "validation_rows": 5894,
-  "train_seconds": 2.78,
+  "dataset_rows": 2312,
+  "train_rows": 1849,
+  "validation_rows": 463,
+  "train_seconds": 0.19,
   "action": {
-    "accuracy": 0.999830335934849,
-    "macro_f1": 0.9997525843496293,
-    "weighted_f1": 0.9998302924412092,
+    "accuracy": 1.0,
+    "macro_f1": 1.0,
+    "weighted_f1": 1.0,
     "classes": [
       "close",
       "maximize",
@@ -16,9 +16,9 @@
     ]
   },
   "target": {
-    "accuracy": 0.9804886325076348,
-    "macro_f1": 0.9818637285023961,
-    "weighted_f1": 0.9804170527833334,
-    "num_classes": 63
+    "accuracy": 1.0,
+    "macro_f1": 1.0,
+    "weighted_f1": 1.0,
+    "num_classes": 4
   }
 }

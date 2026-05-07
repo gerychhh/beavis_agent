@@ -227,6 +227,25 @@ class AppCatalogService:
         self.save(out)
         return deleted
 
+    def delete_app(self, app_id: str) -> AppRecord:
+        normalized = normalize_app_id(app_id)
+        records = self.load()
+
+        deleted: AppRecord | None = None
+        out: list[AppRecord] = []
+
+        for record in records:
+            if record.app_id != normalized:
+                out.append(record)
+                continue
+            deleted = record
+
+        if deleted is None:
+            raise ValueError(f"app not found: {normalized}")
+
+        self.save(out)
+        return deleted
+
     def _clean_record(self, record: AppRecord) -> AppRecord:
         return AppRecord(
             app_id=normalize_app_id(record.app_id),

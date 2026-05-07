@@ -143,7 +143,7 @@ def generate(
         "fullscreen": FULL_WORDS,
     }
     verbs = ["поставь", "перемести", "перекинь", "закинь", "размести", "закрепи", "сделай", "отправь"]
-    full_verbs = ["разверни", "сделай", "растяни", "максимизируй", "поставь", "открой"]
+    full_verbs = ["разверни", "сделай", "растяни", "максимизируй", "поставь"]
 
     if app_ids:
         for layout, pos_words in single_layouts.items():
@@ -156,7 +156,6 @@ def generate(
                         f"{random.choice(full_verbs)} {target_text} {word}",
                         f"{target_text} {word}",
                         f"{target_text} сделай {word}",
-                        f"{random.choice(full_verbs)} {target_text}",
                     ])
                 else:
                     core = random.choice([

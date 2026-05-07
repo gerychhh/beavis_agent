@@ -1,122 +1,34 @@
 {
-  "total_rows": 13488,
+  "total_rows": 2312,
   "action_counts": {
-    "close": 3134,
-    "minimize": 3088,
-    "maximize": 3046,
-    "restore": 2918,
-    "unknown": 1302
+    "close": 511,
+    "minimize": 541,
+    "maximize": 597,
+    "restore": 475,
+    "unknown": 188
   },
-  "target_classes": 28,
+  "target_classes": 4,
   "target_top_counts": [
     [
-      "unknown",
-      1302
-    ],
-    [
       "current",
-      1250
+      1244
     ],
     [
-      "3ds_max_2025",
-      466
+      "telegram",
+      462
     ],
     [
-      "notepad",
-      465
-    ],
-    [
-      "planetvpn1",
-      465
-    ],
-    [
-      "yandexmusic",
-      465
-    ],
-    [
-      "codex",
-      461
-    ],
-    [
-      "cyberpunk_2077",
-      457
-    ],
-    [
-      "dota_2",
-      457
-    ],
-    [
-      "wireshark",
-      447
-    ],
-    [
-      "performance_monitor",
-      438
-    ],
-    [
-      "event_viewer",
-      434
-    ],
-    [
-      "terminal",
-      432
-    ],
-    [
-      "device_manager",
-      426
-    ],
-    [
-      "edge",
-      421
-    ],
-    [
-      "powerpoint",
-      419
-    ],
-    [
-      "regedit",
+      "excel",
       418
     ],
     [
-      "disk_cleanup",
-      413
-    ],
-    [
-      "explorer",
-      413
-    ],
-    [
-      "control_panel",
-      409
+      "unknown",
+      188
     ]
   ],
-  "app_classes": 26,
+  "app_classes": 2,
   "enabled_app_ids": [
-    "3ds_max_2025",
-    "calculator",
-    "codex",
-    "control_panel",
-    "cyberpunk_2077",
-    "device_manager",
-    "disk_cleanup",
-    "disk_management",
-    "dota_2",
-    "edge",
-    "event_viewer",
     "excel",
-    "explorer",
-    "notepad",
-    "paint",
-    "performance_monitor",
-    "planetvpn1",
-    "powerpoint",
-    "print_management",
-    "regedit",
-    "resource_monitor",
-    "task_manager",
-    "terminal",
-    "wireshark",
-    "word",
-    "yandexmusic"
+    "telegram"
   ]
 }

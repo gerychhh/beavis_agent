@@ -11,9 +11,9 @@
     {
       "name": "combined_first_500",
       "total": 500,
-      "passed": 496,
-      "failed": 4,
-      "accuracy": 0.992
+      "passed": 500,
+      "failed": 0,
+      "accuracy": 1.0
     }
   ],
   "manual_results": [
@@ -50,13 +50,13 @@
         "percent": 80
       },
       "ok": true,
-      "confidence": 0.5856,
+      "confidence": 0.9946,
       "debug": {
-        "source": "value_model",
+        "source": "rule_value",
         "action": "set",
         "action_conf": 0.9893,
         "value": "80",
-        "value_conf": 0.1818
+        "value_conf": 1.0
       }
     },
     {
@@ -211,90 +211,5 @@
       }
     }
   ],
-  "combined_failures": [
-    {
-      "text": "ну опусти звук до деисть",
-      "normalized_text": "опусти звук до деисть",
-      "expected": {
-        "mode": "set",
-        "percent": 10
-      },
-      "predicted": {
-        "mode": "set",
-        "percent": 9
-      },
-      "ok": false,
-      "confidence": 0.4753,
-      "debug": {
-        "source": "value_model",
-        "action": "set",
-        "action_conf": 0.8984,
-        "value": "9",
-        "value_conf": 0.0521
-      }
-    },
-    {
-      "text": "слушай еле слышно быстро",
-      "normalized_text": "еле слышно",
-      "expected": {
-        "mode": "delta",
-        "delta": 15
-      },
-      "predicted": {
-        "mode": "delta",
-        "delta": 10
-      },
-      "ok": false,
-      "confidence": 0.6504,
-      "debug": {
-        "source": "value_model",
-        "action": "increase",
-        "action_conf": 0.9065,
-        "value": "10",
-        "value_conf": 0.3944
-      }
-    },
-    {
-      "text": "короче сделай громкость на пятьдесят плиз",
-      "normalized_text": "сделай громкость на пятьдесят",
-      "expected": {
-        "mode": "set",
-        "percent": 50
-      },
-      "predicted": {
-        "mode": "set",
-        "percent": 55
-      },
-      "ok": false,
-      "confidence": 0.5555,
-      "debug": {
-        "source": "value_model",
-        "action": "set",
-        "action_conf": 0.9687,
-        "value": "55",
-        "value_conf": 0.1423
-      }
-    },
-    {
-      "text": "эй бивис прибери громкость на девяноста быстро",
-      "normalized_text": "прибери громкость на девяноста",
-      "expected": {
-        "mode": "delta",
-        "delta": -90
-      },
-      "predicted": {
-        "mode": "delta",
-        "delta": -95
-      },
-      "ok": false,
-      "confidence": 0.5447,
-      "debug": {
-        "source": "value_model",
-        "action": "decrease",
-        "action_conf": 0.9884,
-        "value": "95",
-        "value_conf": 0.101
-      }
-    }
-  ]
+  "combined_failures": []
 }

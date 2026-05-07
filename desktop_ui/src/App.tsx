@@ -501,7 +501,8 @@ function normalizeHotkeyForTauri(value: string) {
     .filter(Boolean)
     .map((part) => {
       const lower = part.toLowerCase();
-      if (lower === "control") return "Ctrl";
+      if (lower === "ctrl" || lower === "control") return "CommandOrControl";
+      if (lower === "cmdorcontrol" || lower === "commandorcontrol") return "CommandOrControl";
       if (lower === "cmd" || lower === "command" || lower === "meta") return "Command";
       if (lower === "escape") return "Esc";
       if (lower === " ") return "Space";
@@ -534,9 +535,19 @@ const TOAST_WINDOW_LABEL = "beavis_toasts";
 
 type OverlayMode = "command" | "voice";
 
+function hasTauriRuntime() {
+  const candidate = window as unknown as {
+    __TAURI_INTERNALS__?: unknown;
+    __TAURI__?: unknown;
+  };
+  return Boolean(candidate.__TAURI_INTERNALS__ || candidate.__TAURI__);
+}
+
 function overlayUrl(kind: OverlayMode | "toast") {
-  const path = window.location.pathname || "/";
-  return `${path}?overlay=${encodeURIComponent(kind)}`;
+  const url = new URL(window.location.href);
+  url.search = `?overlay=${encodeURIComponent(kind)}`;
+  url.hash = "";
+  return url.toString();
 }
 
 async function getWorkAreaBounds() {
@@ -579,13 +590,26 @@ async function waitForWindowCreation(windowRef: WebviewWindow) {
   });
 }
 
+function getOverlayGeometry(mode: OverlayMode, bounds: Awaited<ReturnType<typeof getWorkAreaBounds>>) {
+  const width = mode === "command" ? Math.min(760, bounds.width - 32) : 360;
+  const height = mode === "command" ? 132 : 260;
+  return {
+    x: Math.round(bounds.x + (bounds.width - width) / 2),
+    y: Math.round(bounds.y + Math.max(48, bounds.height * 0.22)),
+    width,
+    height,
+  };
+}
+
 async function openGlobalOverlay(mode: OverlayMode) {
   const bounds = await getWorkAreaBounds();
+  const overlayBounds = getOverlayGeometry(mode, bounds);
   const existing = await WebviewWindow.getByLabel(OVERLAY_WINDOW_LABEL);
   if (existing) {
-    await existing.setPosition(new LogicalPosition(bounds.x, bounds.y));
-    await existing.setSize(new LogicalSize(bounds.width, bounds.height));
+    await existing.setPosition(new LogicalPosition(overlayBounds.x, overlayBounds.y));
+    await existing.setSize(new LogicalSize(overlayBounds.width, overlayBounds.height));
     await existing.setAlwaysOnTop(true);
+    await existing.setVisibleOnAllWorkspaces(true).catch(() => {});
     await existing.show();
     await emitTo(OVERLAY_WINDOW_LABEL, "beavis-overlay-mode", { mode });
     await existing.setFocus();
@@ -595,19 +619,23 @@ async function openGlobalOverlay(mode: OverlayMode) {
   const overlay = new WebviewWindow(OVERLAY_WINDOW_LABEL, {
     url: overlayUrl(mode),
     title: "Beavis Overlay",
-    x: bounds.x,
-    y: bounds.y,
-    width: bounds.width,
-    height: bounds.height,
+    x: overlayBounds.x,
+    y: overlayBounds.y,
+    width: overlayBounds.width,
+    height: overlayBounds.height,
     decorations: false,
     resizable: false,
     skipTaskbar: true,
     alwaysOnTop: true,
     focus: true,
     visible: true,
-    backgroundColor: "#050505",
+    transparent: true,
+    shadow: false,
+    backgroundColor: "transparent",
   });
   await waitForWindowCreation(overlay);
+  await overlay.setAlwaysOnTop(true).catch(() => {});
+  await overlay.setVisibleOnAllWorkspaces(true).catch(() => {});
   await emitTo(OVERLAY_WINDOW_LABEL, "beavis-overlay-mode", { mode }).catch(
     () => {},
   );
@@ -648,6 +676,7 @@ async function showGlobalToast(message: string, type: ToastType = "info") {
     await existing.setPosition(new LogicalPosition(x, y));
     await existing.setSize(new LogicalSize(width, height));
     await existing.setAlwaysOnTop(true);
+    await existing.setVisibleOnAllWorkspaces(true).catch(() => {});
     await existing.show();
     await emitTo(TOAST_WINDOW_LABEL, "beavis-toast", payload);
     return;
@@ -673,6 +702,8 @@ async function showGlobalToast(message: string, type: ToastType = "info") {
     shadow: false,
   });
   await waitForWindowCreation(toastWindow);
+  await toastWindow.setAlwaysOnTop(true).catch(() => {});
+  await toastWindow.setVisibleOnAllWorkspaces(true).catch(() => {});
   await emitTo(TOAST_WINDOW_LABEL, "beavis-toast", payload).catch(() => {});
 }
 
@@ -798,6 +829,8 @@ function GlobalToastWindow() {
       }
     }
 
+    if (!hasTauriRuntime()) return;
+
     let unlisten: (() => void) | undefined;
     void getCurrentWebviewWindow()
       .listen<Toast>("beavis-toast", (event) => addToast(event.payload))
@@ -836,9 +869,11 @@ function GlobalToastWindow() {
 }
 
 function SystemOverlayWindow({ initialMode }: { initialMode: OverlayMode }) {
-  const [mode, setMode] = useState<OverlayMode>(initialMode);
+  const [mode, setMode] = useState<OverlayMode | null>(initialMode);
 
   useEffect(() => {
+    if (!hasTauriRuntime()) return;
+
     let unlisten: (() => void) | undefined;
     void getCurrentWebviewWindow()
       .listen<{ mode: OverlayMode }>("beavis-overlay-mode", (event) => {
@@ -854,12 +889,16 @@ function SystemOverlayWindow({ initialMode }: { initialMode: OverlayMode }) {
   }, []);
 
   const close = () => {
+    setMode(null);
     void hideCurrentWindow();
   };
 
   return (
     <ToastHost>
       <GlobalStyles />
+      <style>{`
+        html, body, #root { background: transparent !important; overflow: hidden !important; }
+      `}</style>
       <CommandOverlay isOpen={mode === "command"} onClose={close} />
       <VoiceOverlay isOpen={mode === "voice"} onClose={close} />
     </ToastHost>
@@ -1906,6 +1945,7 @@ function AppsPage() {
     setApplying(true);
     const res = await beavisCall("apps.apply_changes", {
       changes: pendingChanges,
+      desired_apps: draftApps.map(buildAddAppChange),
       retrain: false,
     });
     if (res.ok) {
@@ -2835,17 +2875,17 @@ function CommandOverlay({
   if (!isOpen) return null;
   return (
     <div
-      className="fixed inset-0 z-[500] flex items-center justify-center bg-black/60 px-4 backdrop-blur-xl transition-opacity page-enter"
+      className="fixed inset-0 z-[500] flex items-center justify-center bg-transparent p-3 transition-opacity page-enter"
       onClick={onClose}
     >
       <form
         onSubmit={submit}
         onClick={(e) => e.stopPropagation()}
-        className="relative w-full max-w-3xl"
+        className="relative w-full"
       >
-        <div className="relative flex items-center rounded-3xl border border-white/[0.18] bg-[#111] p-3 shadow-[0_40px_100px_rgba(0,0,0,0.8),inset_0_1px_1px_rgba(255,255,255,.12)] transition-all focus-within:shadow-[0_40px_120px_rgba(255,255,255,0.1),inset_0_1px_1px_rgba(255,255,255,.2)] focus-within:border-white/30">
-          <div className="pl-5 pr-2 text-white/50">
-            <Icon name="zap" size={28} />
+        <div className="relative flex items-center rounded-[28px] border border-white/[0.18] bg-black/55 p-2 shadow-[0_24px_70px_rgba(0,0,0,0.55),inset_0_1px_1px_rgba(255,255,255,.14)] backdrop-blur-2xl transition-all focus-within:border-white/35 focus-within:bg-black/65">
+          <div className="pl-4 pr-1 text-white/55">
+            <Icon name="zap" size={22} />
           </div>
           <input
             ref={inputRef}
@@ -2853,11 +2893,11 @@ function CommandOverlay({
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={(e) => e.key === "Escape" && onClose()}
             placeholder="Что нужно сделать?"
-            className="flex-1 border-none bg-transparent px-3 py-5 text-2xl font-light text-white outline-none placeholder:text-white/25"
+            className="min-w-0 flex-1 border-none bg-transparent px-3 py-4 text-xl font-light text-white outline-none placeholder:text-white/30"
           />
-          <div className="pr-4 hidden sm:block">
-            <span className="rounded border border-white/10 bg-white/5 px-2 py-1 text-[10px] text-white/30 font-mono">
-              ESC to cancel
+          <div className="hidden pr-3 sm:block">
+            <span className="rounded-lg border border-white/10 bg-white/8 px-2 py-1 text-[10px] font-mono text-white/35">
+              ESC
             </span>
           </div>
         </div>
@@ -2921,14 +2961,14 @@ function VoiceOverlay({
   if (!isOpen) return null;
   return (
     <div
-      className="fixed inset-0 z-[500] flex items-center justify-center bg-black/80 backdrop-blur-2xl transition-opacity page-enter"
+      className="fixed inset-0 z-[500] flex items-center justify-center bg-transparent p-3 transition-opacity page-enter"
       onClick={onClose}
     >
       <div
-        className="flex flex-col items-center gap-10"
+        className="flex w-full flex-col items-center gap-4 rounded-[30px] border border-white/[0.16] bg-black/55 px-6 py-5 shadow-[0_24px_70px_rgba(0,0,0,0.55),inset_0_1px_1px_rgba(255,255,255,.14)] backdrop-blur-2xl"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="relative flex h-48 w-48 items-center justify-center">
+        <div className="relative flex h-24 w-24 items-center justify-center">
           {status === "listening" && (
             <>
               <div className="absolute inset-0 animate-[ping_2s_cubic-bezier(0,0,0.2,1)_infinite] rounded-full border border-white/20 opacity-100" />
@@ -2936,10 +2976,10 @@ function VoiceOverlay({
             </>
           )}
           <div
-            className={`relative flex h-28 w-28 items-center justify-center rounded-full border border-white bg-white/90 text-black shadow-[0_0_55px_rgba(255,255,255,.65)] backdrop-blur-md transition-all duration-500 ${status === "listening" ? "scale-110 shadow-[0_0_80px_rgba(255,255,255,.8)]" : ""}`}
+            className={`relative flex h-16 w-16 items-center justify-center rounded-full border border-white/45 bg-white/85 text-black shadow-[0_0_38px_rgba(255,255,255,.45)] backdrop-blur-md transition-all duration-500 ${status === "listening" ? "scale-110 shadow-[0_0_60px_rgba(255,255,255,.65)]" : ""}`}
           >
             {status === "listening" ? (
-              <div className="flex items-center justify-center gap-[3px] h-10 mt-1">
+              <div className="mt-1 flex h-8 items-center justify-center gap-[3px]">
                 {[0, 0.2, 0.4, 0.1, 0.5].map((delay, i) => (
                   <div
                     key={i}
@@ -2949,21 +2989,21 @@ function VoiceOverlay({
                 ))}
               </div>
             ) : status === "processing" ? (
-              <Spinner size={40} />
+              <Spinner size={30} />
             ) : (
-              <Icon name="mic" size={40} />
+              <Icon name="mic" size={30} />
             )}
           </div>
         </div>
         <div className="text-center">
-          <h3 className="mb-4 text-3xl font-light tracking-wide text-white">
+          <h3 className="mb-2 text-lg font-medium text-white">
             {status === "listening"
               ? "Слушаю..."
               : status === "processing"
                 ? "Выполняю..."
                 : "Готов"}
           </h3>
-          <p className="min-h-[32px] max-w-lg text-xl font-light text-white/40">
+          <p className="min-h-[24px] max-w-[280px] text-sm font-light text-white/45">
             {status === "processing"
               ? displayedTranscript
               : status === "listening"
@@ -2973,7 +3013,7 @@ function VoiceOverlay({
         </div>
         <button
           onClick={onClose}
-          className="mt-4 rounded-full border border-white/10 bg-white/5 px-6 py-2 text-sm text-white/40 hover:bg-white/10 hover:text-white transition-colors active:scale-95"
+          className="rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs text-white/45 transition-colors hover:bg-white/10 hover:text-white active:scale-95"
         >
           Отмена
         </button>
@@ -3048,6 +3088,7 @@ function AppShell() {
     const registered: string[] = [];
     let cancelled = false;
     const bind = async () => {
+      if (!hasTauriRuntime()) return;
       const shortcuts: { key: string; action: () => void }[] = [];
       if (shellSettings.text_hotkey_enabled && shellSettings.text_hotkey_sequence) {
         shortcuts.push({

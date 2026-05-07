@@ -1,201 +1,29 @@
-{"text": "где документ пишу", "expected_app_id": "word"}
 {"text": "динамики рвуться", "expected_app_id": "unknown"}
 {"text": "закрой хром", "expected_app_id": "unknown"}
-{"text": "запусти 3ds max 2025", "expected_app_id": "3ds_max_2025"}
-{"text": "запусти 3dsmax", "expected_app_id": "3ds_max_2025"}
-{"text": "запусти calc", "expected_app_id": "calculator"}
-{"text": "запусти calculator", "expected_app_id": "calculator"}
-{"text": "запусти cleanmgr", "expected_app_id": "disk_cleanup"}
-{"text": "запусти codex", "expected_app_id": "codex"}
-{"text": "запусти control", "expected_app_id": "control_panel"}
-{"text": "запусти control panel", "expected_app_id": "control_panel"}
-{"text": "запусти cyberpunk 2077", "expected_app_id": "cyberpunk_2077"}
-{"text": "запусти device manager", "expected_app_id": "device_manager"}
-{"text": "запусти devmgmt", "expected_app_id": "device_manager"}
-{"text": "запусти disk cleanup", "expected_app_id": "disk_cleanup"}
-{"text": "запусти disk management", "expected_app_id": "disk_management"}
-{"text": "запусти diskmgmt", "expected_app_id": "disk_management"}
-{"text": "запусти dota 2", "expected_app_id": "dota_2"}
-{"text": "запусти edge", "expected_app_id": "edge"}
-{"text": "запусти event viewer", "expected_app_id": "event_viewer"}
-{"text": "запусти eventvwr", "expected_app_id": "event_viewer"}
 {"text": "запусти excel", "expected_app_id": "excel"}
-{"text": "запусти explorer", "expected_app_id": "explorer"}
-{"text": "запусти file explorer", "expected_app_id": "explorer"}
-{"text": "запусти freevpnplanet", "expected_app_id": "planetvpn1"}
-{"text": "запусти microsoft edge", "expected_app_id": "edge"}
 {"text": "запусти microsoft excel", "expected_app_id": "excel"}
-{"text": "запусти microsoft word", "expected_app_id": "word"}
-{"text": "запусти msedge", "expected_app_id": "edge"}
-{"text": "запусти mspaint", "expected_app_id": "paint"}
-{"text": "запусти notepad", "expected_app_id": "notepad"}
-{"text": "запусти openai", "expected_app_id": "codex"}
-{"text": "запусти paint", "expected_app_id": "paint"}
-{"text": "запусти performance monitor", "expected_app_id": "performance_monitor"}
-{"text": "запусти planetvpn", "expected_app_id": "planetvpn1"}
-{"text": "запусти planetvpn1", "expected_app_id": "planetvpn1"}
-{"text": "запусти power point", "expected_app_id": "powerpoint"}
-{"text": "запусти powerpnt", "expected_app_id": "powerpoint"}
-{"text": "запусти powerpoint", "expected_app_id": "powerpoint"}
-{"text": "запусти print management", "expected_app_id": "print_management"}
-{"text": "запусти printmanagement", "expected_app_id": "print_management"}
-{"text": "запусти regedit", "expected_app_id": "regedit"}
-{"text": "запусти registry editor", "expected_app_id": "regedit"}
-{"text": "запусти resource monitor", "expected_app_id": "resource_monitor"}
-{"text": "запусти task manager", "expected_app_id": "task_manager"}
-{"text": "запусти taskmgr", "expected_app_id": "task_manager"}
-{"text": "запусти terminal", "expected_app_id": "terminal"}
-{"text": "запусти windows terminal", "expected_app_id": "terminal"}
-{"text": "запусти winword", "expected_app_id": "word"}
-{"text": "запусти wireshark", "expected_app_id": "wireshark"}
-{"text": "запусти word", "expected_app_id": "word"}
-{"text": "запусти wt", "expected_app_id": "terminal"}
-{"text": "запусти yandexmusic", "expected_app_id": "yandexmusic"}
-{"text": "запусти блакнот", "expected_app_id": "notepad"}
-{"text": "запусти блокнгт", "expected_app_id": "notepad"}
-{"text": "запусти блокнот", "expected_app_id": "notepad"}
-{"text": "запусти вайершарк", "expected_app_id": "wireshark"}
-{"text": "запусти вайршарк", "expected_app_id": "wireshark"}
-{"text": "запусти ворд", "expected_app_id": "word"}
-{"text": "запусти впн", "expected_app_id": "planetvpn1"}
-{"text": "запусти диски windows", "expected_app_id": "disk_management"}
-{"text": "запусти диспетчер задач", "expected_app_id": "task_manager"}
-{"text": "запусти диспетчер устройств", "expected_app_id": "device_manager"}
-{"text": "запусти дота", "expected_app_id": "dota_2"}
-{"text": "запусти дота два", "expected_app_id": "dota_2"}
-{"text": "запусти дотан", "expected_app_id": "dota_2"}
+{"text": "запусти telegram", "expected_app_id": "telegram"}
 {"text": "запусти ексель", "expected_app_id": "excel"}
-{"text": "запусти журнал событий", "expected_app_id": "event_viewer"}
-{"text": "запусти кальк", "expected_app_id": "calculator"}
-{"text": "запусти калькулятор", "expected_app_id": "calculator"}
-{"text": "запусти кдекс", "expected_app_id": "codex"}
-{"text": "запусти кибер панк", "expected_app_id": "cyberpunk_2077"}
-{"text": "запусти кибер пунк", "expected_app_id": "cyberpunk_2077"}
-{"text": "запусти кодекс", "expected_app_id": "codex"}
-{"text": "запусти контроль панель", "expected_app_id": "control_panel"}
-{"text": "запусти макс", "expected_app_id": "3ds_max_2025"}
-{"text": "запусти мзыка", "expected_app_id": "yandexmusic"}
-{"text": "запусти музыка", "expected_app_id": "yandexmusic"}
-{"text": "запусти паинт", "expected_app_id": "paint"}
-{"text": "запусти панель управления", "expected_app_id": "control_panel"}
-{"text": "запусти пауэрпоинт", "expected_app_id": "powerpoint"}
-{"text": "запусти пейнт", "expected_app_id": "paint"}
-{"text": "запусти проводник", "expected_app_id": "explorer"}
-{"text": "запусти просмотр событий", "expected_app_id": "event_viewer"}
-{"text": "запусти редактор реестра", "expected_app_id": "regedit"}
-{"text": "запусти реестр", "expected_app_id": "regedit"}
-{"text": "запусти сайберпанк", "expected_app_id": "cyberpunk_2077"}
-{"text": "запусти таск менеджер", "expected_app_id": "task_manager"}
-{"text": "запусти терминал", "expected_app_id": "terminal"}
-{"text": "запусти три де макс", "expected_app_id": "3ds_max_2025"}
-{"text": "запусти управление дисками", "expected_app_id": "disk_management"}
-{"text": "запусти устройства", "expected_app_id": "device_manager"}
-{"text": "запусти файлы", "expected_app_id": "explorer"}
-{"text": "запусти эдж", "expected_app_id": "edge"}
+{"text": "запусти тг", "expected_app_id": "telegram"}
+{"text": "запусти телега", "expected_app_id": "telegram"}
+{"text": "запусти телеграмм", "expected_app_id": "telegram"}
 {"text": "запусти эксель", "expected_app_id": "excel"}
-{"text": "запусти яндекс музыка", "expected_app_id": "yandexmusic"}
 {"text": "заткнись", "expected_app_id": "unknown"}
 {"text": "какая погода", "expected_app_id": "unknown"}
-{"text": "открой 3ds max 2025", "expected_app_id": "3ds_max_2025"}
-{"text": "открой 3dsmax", "expected_app_id": "3ds_max_2025"}
-{"text": "открой calc", "expected_app_id": "calculator"}
-{"text": "открой calculator", "expected_app_id": "calculator"}
-{"text": "открой cleanmgr", "expected_app_id": "disk_cleanup"}
-{"text": "открой codex", "expected_app_id": "codex"}
-{"text": "открой control", "expected_app_id": "control_panel"}
-{"text": "открой control panel", "expected_app_id": "control_panel"}
-{"text": "открой cyberpunk 2077", "expected_app_id": "cyberpunk_2077"}
-{"text": "открой device manager", "expected_app_id": "device_manager"}
-{"text": "открой devmgmt", "expected_app_id": "device_manager"}
-{"text": "открой disk cleanup", "expected_app_id": "disk_cleanup"}
-{"text": "открой disk management", "expected_app_id": "disk_management"}
-{"text": "открой diskmgmt", "expected_app_id": "disk_management"}
-{"text": "открой dota 2", "expected_app_id": "dota_2"}
-{"text": "открой edge", "expected_app_id": "edge"}
-{"text": "открой event viewer", "expected_app_id": "event_viewer"}
-{"text": "открой eventvwr", "expected_app_id": "event_viewer"}
 {"text": "открой excel", "expected_app_id": "excel"}
-{"text": "открой explorer", "expected_app_id": "explorer"}
-{"text": "открой file explorer", "expected_app_id": "explorer"}
-{"text": "открой freevpnplanet", "expected_app_id": "planetvpn1"}
-{"text": "открой microsoft edge", "expected_app_id": "edge"}
 {"text": "открой microsoft excel", "expected_app_id": "excel"}
-{"text": "открой microsoft word", "expected_app_id": "word"}
-{"text": "открой msedge", "expected_app_id": "edge"}
-{"text": "открой mspaint", "expected_app_id": "paint"}
-{"text": "открой notepad", "expected_app_id": "notepad"}
-{"text": "открой openai", "expected_app_id": "codex"}
-{"text": "открой paint", "expected_app_id": "paint"}
-{"text": "открой performance monitor", "expected_app_id": "performance_monitor"}
-{"text": "открой planetvpn", "expected_app_id": "planetvpn1"}
-{"text": "открой planetvpn1", "expected_app_id": "planetvpn1"}
-{"text": "открой power point", "expected_app_id": "powerpoint"}
-{"text": "открой powerpnt", "expected_app_id": "powerpoint"}
-{"text": "открой powerpoint", "expected_app_id": "powerpoint"}
-{"text": "открой print management", "expected_app_id": "print_management"}
-{"text": "открой printmanagement", "expected_app_id": "print_management"}
-{"text": "открой regedit", "expected_app_id": "regedit"}
-{"text": "открой registry editor", "expected_app_id": "regedit"}
-{"text": "открой resource monitor", "expected_app_id": "resource_monitor"}
-{"text": "открой task manager", "expected_app_id": "task_manager"}
-{"text": "открой taskmgr", "expected_app_id": "task_manager"}
-{"text": "открой terminal", "expected_app_id": "terminal"}
-{"text": "открой windows terminal", "expected_app_id": "terminal"}
-{"text": "открой winword", "expected_app_id": "word"}
-{"text": "открой wireshark", "expected_app_id": "wireshark"}
-{"text": "открой word", "expected_app_id": "word"}
-{"text": "открой wt", "expected_app_id": "terminal"}
-{"text": "открой yandexmusic", "expected_app_id": "yandexmusic"}
-{"text": "открой блакнот", "expected_app_id": "notepad"}
-{"text": "открой блокнгт", "expected_app_id": "notepad"}
-{"text": "открой блокнот", "expected_app_id": "notepad"}
-{"text": "открой вайершарк", "expected_app_id": "wireshark"}
-{"text": "открой вайршарк", "expected_app_id": "wireshark"}
-{"text": "открой ворд", "expected_app_id": "word"}
-{"text": "открой впн", "expected_app_id": "planetvpn1"}
-{"text": "открой диски windows", "expected_app_id": "disk_management"}
-{"text": "открой диспетчер задач", "expected_app_id": "task_manager"}
-{"text": "открой диспетчер устройств", "expected_app_id": "device_manager"}
-{"text": "открой дота", "expected_app_id": "dota_2"}
-{"text": "открой дота два", "expected_app_id": "dota_2"}
-{"text": "открой дотан", "expected_app_id": "dota_2"}
+{"text": "открой telegram", "expected_app_id": "telegram"}
 {"text": "открой ексель", "expected_app_id": "excel"}
-{"text": "открой журнал событий", "expected_app_id": "event_viewer"}
-{"text": "открой кальк", "expected_app_id": "calculator"}
-{"text": "открой калькулятор", "expected_app_id": "calculator"}
-{"text": "открой кдекс", "expected_app_id": "codex"}
-{"text": "открой кибер панк", "expected_app_id": "cyberpunk_2077"}
-{"text": "открой кибер пунк", "expected_app_id": "cyberpunk_2077"}
-{"text": "открой кодекс", "expected_app_id": "codex"}
-{"text": "открой контроль панель", "expected_app_id": "control_panel"}
-{"text": "открой макс", "expected_app_id": "3ds_max_2025"}
-{"text": "открой мзыка", "expected_app_id": "yandexmusic"}
-{"text": "открой музыка", "expected_app_id": "yandexmusic"}
 {"text": "открой окно", "expected_app_id": "unknown"}
-{"text": "открой паинт", "expected_app_id": "paint"}
-{"text": "открой панель управления", "expected_app_id": "control_panel"}
-{"text": "открой пауэрпоинт", "expected_app_id": "powerpoint"}
-{"text": "открой пейнт", "expected_app_id": "paint"}
-{"text": "открой проводник", "expected_app_id": "explorer"}
-{"text": "открой просмотр событий", "expected_app_id": "event_viewer"}
-{"text": "открой редактор реестра", "expected_app_id": "regedit"}
-{"text": "открой реестр", "expected_app_id": "regedit"}
-{"text": "открой сайберпанк", "expected_app_id": "cyberpunk_2077"}
-{"text": "открой таск менеджер", "expected_app_id": "task_manager"}
-{"text": "открой терминал", "expected_app_id": "terminal"}
-{"text": "открой три де макс", "expected_app_id": "3ds_max_2025"}
-{"text": "открой управление дисками", "expected_app_id": "disk_management"}
-{"text": "открой устройства", "expected_app_id": "device_manager"}
-{"text": "открой файлы", "expected_app_id": "explorer"}
-{"text": "открой эдж", "expected_app_id": "edge"}
+{"text": "открой тг", "expected_app_id": "telegram"}
+{"text": "открой телега", "expected_app_id": "telegram"}
+{"text": "открой телеграмм", "expected_app_id": "telegram"}
+{"text": "открой телегу", "expected_app_id": "telegram"}
 {"text": "открой эксель", "expected_app_id": "excel"}
-{"text": "открой яндекс музыка", "expected_app_id": "yandexmusic"}
-{"text": "пауэрпоинт запусти", "expected_app_id": "powerpoint"}
 {"text": "поставь таймер", "expected_app_id": "unknown"}
-{"text": "посчитай открой калькулятор", "expected_app_id": "calculator"}
-{"text": "презентацию открыть", "expected_app_id": "powerpoint"}
 {"text": "сверни браузер", "expected_app_id": "unknown"}
 {"text": "сделай громкость 20", "expected_app_id": "unknown"}
 {"text": "сделай громче", "expected_app_id": "unknown"}
 {"text": "таблицу открыть", "expected_app_id": "excel"}
+{"text": "тг открой", "expected_app_id": "telegram"}
 {"text": "убавь звук", "expected_app_id": "unknown"}

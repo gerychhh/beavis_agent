@@ -2,11 +2,18 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 
 from python_agent.bridge.router import BridgeRouter
 
 
 def main() -> int:
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+        sys.stderr.reconfigure(encoding="utf-8")
+    except AttributeError:
+        pass
+
     parser = argparse.ArgumentParser(description="One-shot Beavis API bridge")
     parser.add_argument("method", help="API method, e.g. commands.run")
     parser.add_argument("params", nargs="?", default="{}", help="JSON params object")

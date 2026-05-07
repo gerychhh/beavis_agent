@@ -14,12 +14,15 @@ from python_agent.training.add_user_app import (
     UpdateUserAppRequest,
     DeleteUserAppRequest,
     ApplyUserAppChangesRequest,
+    SyncVisibleAppsRequest,
     AppCatalogChange,
     add_user_app,
     update_user_app,
     delete_user_app,
     apply_user_app_changes,
+    sync_visible_user_apps,
     retrain_apps_pipeline,
+    TrainingCancelled,
     list_windows_apps,
     list_user_app_records,
 )
@@ -39,6 +42,7 @@ class AppsApi:
 
     def __init__(self) -> None:
         self._training_lock = threading.Lock()
+        self._training_run_lock = threading.Lock()
         self._training_job: dict[str, Any] | None = None
 
     def _training_snapshot(self) -> dict[str, Any]:
@@ -49,7 +53,8 @@ class AppsApi:
         try:
             with self._training_lock:
                 if self._training_job and self._training_job.get("running"):
-                    return ok(dict(self._training_job))
+                    self._training_job["cancel_requested"] = True
+                    self._training_job["last_message"] = "Cancelling previous training"
 
                 job = {
                     "id": f"train_{uuid4().hex[:12]}",
@@ -61,12 +66,23 @@ class AppsApi:
                     "progress": [],
                     "error": None,
                     "result": None,
+                    "cancel_requested": False,
                 }
                 self._training_job = job
 
+            job_id = str(job["id"])
+
+            def is_cancelled() -> bool:
+                with self._training_lock:
+                    current = self._training_job or {}
+                    return (
+                        current.get("id") != job_id
+                        or bool(current.get("cancel_requested"))
+                    )
+
             def progress(message: str) -> None:
                 with self._training_lock:
-                    if not self._training_job:
+                    if not self._training_job or self._training_job.get("id") != job_id:
                         return
                     entry = {
                         "at": datetime.now(timezone.utc).isoformat(),
@@ -81,9 +97,15 @@ class AppsApi:
             def run() -> None:
                 try:
                     progress("Starting training")
-                    result = retrain_apps_pipeline(progress=progress)
+                    with self._training_run_lock:
+                        if is_cancelled():
+                            raise TrainingCancelled("Training superseded before start")
+                        result = retrain_apps_pipeline(
+                            progress=progress,
+                            should_cancel=is_cancelled,
+                        )
                     with self._training_lock:
-                        if self._training_job:
+                        if self._training_job and self._training_job.get("id") == job_id:
                             self._training_job.update(
                                 {
                                     "running": False,
@@ -91,11 +113,25 @@ class AppsApi:
                                     "finished_at": datetime.now(timezone.utc).isoformat(),
                                     "last_message": "Completed",
                                     "result": result,
+                                    "cancel_requested": False,
+                                }
+                            )
+                except TrainingCancelled as error:
+                    with self._training_lock:
+                        if self._training_job and self._training_job.get("id") == job_id:
+                            self._training_job.update(
+                                {
+                                    "running": False,
+                                    "status": "cancelled",
+                                    "finished_at": datetime.now(timezone.utc).isoformat(),
+                                    "last_message": "Cancelled",
+                                    "error": str(error),
+                                    "cancel_requested": False,
                                 }
                             )
                 except Exception as error:
                     with self._training_lock:
-                        if self._training_job:
+                        if self._training_job and self._training_job.get("id") == job_id:
                             self._training_job.update(
                                 {
                                     "running": False,
@@ -104,6 +140,7 @@ class AppsApi:
                                     "last_message": "Failed",
                                     "error": str(error),
                                     "traceback": traceback.format_exc()[-6000:],
+                                    "cancel_requested": False,
                                 }
                             )
 
@@ -203,39 +240,45 @@ class AppsApi:
     def apply_changes(
         self,
         changes: list[dict[str, Any]],
+        desired_apps: list[dict[str, Any]] | None = None,
         retrain: bool = True,
         progress: ProgressCallback | None = None,
     ) -> dict[str, Any]:
         try:
-            request_changes: list[AppCatalogChange] = []
-
-            for item in changes:
+            def parse_change(item: dict[str, Any]) -> AppCatalogChange:
                 path_value = str(item.get("path") or "").strip()
-
-                request_changes.append(
-                    AppCatalogChange(
-                        operation=str(item.get("operation") or ""),
-                        source=str(item.get("source") or ""),
-                        app_id=str(item.get("app_id") or ""),
-                        display_name=str(item.get("display_name") or ""),
-                        speech_forms=[
-                            str(value)
-                            for value in item.get("speech_forms") or []
-                        ],
-                        path=Path(path_value) if path_value else None,
-                        windows_app_id=str(item.get("windows_app_id") or "") or None,
-                        launch_type=str(item.get("launch_type") or "apps_folder"),
-                        launch_target=str(item.get("launch_target") or "") or None,
-                    )
+                return AppCatalogChange(
+                    operation=str(item.get("operation") or ""),
+                    source=str(item.get("source") or ""),
+                    app_id=str(item.get("app_id") or ""),
+                    display_name=str(item.get("display_name") or ""),
+                    speech_forms=[
+                        str(value)
+                        for value in item.get("speech_forms") or []
+                    ],
+                    path=Path(path_value) if path_value else None,
+                    windows_app_id=str(item.get("windows_app_id") or "") or None,
+                    launch_type=str(item.get("launch_type") or "apps_folder"),
+                    launch_target=str(item.get("launch_target") or "") or None,
                 )
 
-            result = apply_user_app_changes(
-                ApplyUserAppChangesRequest(
-                    changes=request_changes,
-                    retrain=retrain,
-                ),
-                progress=progress,
-            )
+            if desired_apps is not None:
+                result = sync_visible_user_apps(
+                    SyncVisibleAppsRequest(
+                        apps=[parse_change(item) for item in desired_apps],
+                        retrain=retrain,
+                    ),
+                    progress=progress,
+                )
+            else:
+                request_changes = [parse_change(item) for item in changes]
+                result = apply_user_app_changes(
+                    ApplyUserAppChangesRequest(
+                        changes=request_changes,
+                        retrain=retrain,
+                    ),
+                    progress=progress,
+                )
             return ok(result.to_dict())
         except Exception as error:
             return fail(error, code="APPLY_APP_CHANGES_ERROR")

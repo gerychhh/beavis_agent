@@ -1,215 +1,47 @@
 {
-  "rows_total": 33523,
-  "rows_train": 26818,
-  "rows_valid": 6705,
+  "rows_total": 11252,
+  "rows_train": 9001,
+  "rows_valid": 2251,
   "text_is_normalized": true,
   "classes": [
-    "3ds_max_2025",
-    "calculator",
-    "codex",
-    "control_panel",
-    "cyberpunk_2077",
-    "device_manager",
-    "disk_cleanup",
-    "disk_management",
-    "dota_2",
-    "edge",
-    "event_viewer",
     "excel",
-    "explorer",
-    "notepad",
-    "paint",
-    "performance_monitor",
-    "planetvpn1",
-    "powerpoint",
-    "print_management",
-    "regedit",
-    "resource_monitor",
-    "task_manager",
-    "terminal",
-    "unknown",
-    "wireshark",
-    "word",
-    "yandexmusic"
+    "telegram",
+    "unknown"
   ],
-  "accuracy": 0.9882177479492916,
-  "macro_f1": 0.9864762883356339,
-  "weighted_f1": 0.9882210892675363,
+  "accuracy": 0.9986672589960017,
+  "macro_f1": 0.9972029162832854,
+  "weighted_f1": 0.9986687776933021,
   "classification_report": {
-    "3ds_max_2025": {
-      "precision": 0.9946524064171123,
-      "recall": 0.9946524064171123,
-      "f1-score": 0.9946524064171123,
-      "support": 187.0
-    },
-    "calculator": {
-      "precision": 0.9900990099009901,
-      "recall": 0.9950248756218906,
-      "f1-score": 0.9925558312655087,
-      "support": 201.0
-    },
-    "codex": {
-      "precision": 0.9894736842105263,
-      "recall": 1.0,
-      "f1-score": 0.9947089947089947,
-      "support": 188.0
-    },
-    "control_panel": {
-      "precision": 0.9794871794871794,
-      "recall": 1.0,
-      "f1-score": 0.9896373056994818,
-      "support": 191.0
-    },
-    "cyberpunk_2077": {
-      "precision": 0.9894179894179894,
-      "recall": 1.0,
-      "f1-score": 0.9946808510638298,
-      "support": 187.0
-    },
-    "device_manager": {
-      "precision": 0.9896373056994818,
-      "recall": 1.0,
-      "f1-score": 0.9947916666666666,
-      "support": 191.0
-    },
-    "disk_cleanup": {
-      "precision": 0.9891304347826086,
-      "recall": 1.0,
-      "f1-score": 0.994535519125683,
-      "support": 182.0
-    },
-    "disk_management": {
-      "precision": 0.9947916666666666,
-      "recall": 1.0,
-      "f1-score": 0.9973890339425587,
-      "support": 191.0
-    },
-    "dota_2": {
-      "precision": 0.9790575916230366,
-      "recall": 1.0,
-      "f1-score": 0.9894179894179894,
-      "support": 187.0
-    },
-    "edge": {
+    "excel": {
       "precision": 0.98989898989899,
       "recall": 1.0,
       "f1-score": 0.9949238578680203,
       "support": 196.0
     },
-    "event_viewer": {
-      "precision": 0.9845360824742269,
-      "recall": 1.0,
-      "f1-score": 0.9922077922077922,
-      "support": 191.0
-    },
-    "excel": {
-      "precision": 0.9949238578680203,
-      "recall": 1.0,
-      "f1-score": 0.9974554707379135,
-      "support": 196.0
-    },
-    "explorer": {
-      "precision": 0.9951219512195122,
-      "recall": 0.9951219512195122,
-      "f1-score": 0.9951219512195122,
-      "support": 205.0
-    },
-    "notepad": {
-      "precision": 0.9808612440191388,
-      "recall": 1.0,
-      "f1-score": 0.9903381642512077,
-      "support": 205.0
-    },
-    "paint": {
-      "precision": 0.9897435897435898,
-      "recall": 1.0,
-      "f1-score": 0.9948453608247423,
-      "support": 193.0
-    },
-    "performance_monitor": {
-      "precision": 0.8582677165354331,
-      "recall": 0.923728813559322,
-      "f1-score": 0.889795918367347,
-      "support": 118.0
-    },
-    "planetvpn1": {
-      "precision": 0.9947089947089947,
-      "recall": 1.0,
-      "f1-score": 0.9973474801061007,
-      "support": 188.0
-    },
-    "powerpoint": {
-      "precision": 0.9948717948717949,
-      "recall": 0.9897959183673469,
-      "f1-score": 0.9923273657289002,
-      "support": 196.0
-    },
-    "print_management": {
-      "precision": 0.9837837837837838,
-      "recall": 1.0,
-      "f1-score": 0.9918256130790191,
-      "support": 182.0
-    },
-    "regedit": {
-      "precision": 0.9947916666666666,
-      "recall": 0.9947916666666666,
-      "f1-score": 0.9947916666666666,
-      "support": 192.0
-    },
-    "resource_monitor": {
-      "precision": 0.9224137931034483,
-      "recall": 0.8770491803278688,
-      "f1-score": 0.8991596638655462,
-      "support": 122.0
-    },
-    "task_manager": {
-      "precision": 0.9847715736040609,
-      "recall": 1.0,
-      "f1-score": 0.9923273657289002,
-      "support": 194.0
-    },
-    "terminal": {
-      "precision": 0.9948453608247423,
-      "recall": 1.0,
-      "f1-score": 0.9974160206718347,
-      "support": 193.0
+    "telegram": {
+      "precision": 1.0,
+      "recall": 0.995,
+      "f1-score": 0.9974937343358395,
+      "support": 200.0
     },
     "unknown": {
-      "precision": 0.9972406181015453,
-      "recall": 0.9741239892183289,
-      "f1-score": 0.9855467684755931,
+      "precision": 0.9994606256742179,
+      "recall": 0.9989218328840971,
+      "f1-score": 0.9991911566459962,
       "support": 1855.0
     },
-    "wireshark": {
-      "precision": 0.9945945945945946,
-      "recall": 1.0,
-      "f1-score": 0.997289972899729,
-      "support": 184.0
-    },
-    "word": {
-      "precision": 0.9948979591836735,
-      "recall": 0.9948979591836735,
-      "f1-score": 0.9948979591836735,
-      "support": 196.0
-    },
-    "yandexmusic": {
-      "precision": 0.9897959183673469,
-      "recall": 1.0,
-      "f1-score": 0.9948717948717949,
-      "support": 194.0
-    },
-    "accuracy": 0.9882177479492916,
+    "accuracy": 0.9986672589960017,
     "macro avg": {
-      "precision": 0.9828080280657465,
-      "recall": 0.9903402503919158,
-      "f1-score": 0.9864762883356339,
-      "support": 6705.0
+      "precision": 0.9964532051910693,
+      "recall": 0.997973944294699,
+      "f1-score": 0.9972029162832854,
+      "support": 2251.0
     },
     "weighted avg": {
-      "precision": 0.9884043600289533,
-      "recall": 0.9882177479492916,
-      "f1-score": 0.9882210892675363,
-      "support": 6705.0
+      "precision": 0.9986759940674704,
+      "recall": 0.9986672589960017,
+      "f1-score": 0.9986687776933021,
+      "support": 2251.0
     }
   }
 }

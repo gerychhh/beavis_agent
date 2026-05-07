@@ -4,1815 +4,1447 @@
   "accuracy": 1.0,
   "rows": [
     {
-      "text": "close акробат ридер",
+      "text": "закрой эксиль",
       "expected": {
         "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader"
-      },
-      "predicted": {
-        "action": "close",
-        "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.9122
-      },
-      "ok": true
-    },
-    {
-      "text": "алло акробат ридер заверши",
-      "expected": {
-        "action": "close",
-        "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
         "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.9118
+        "app_id": "excel",
+        "confidence": 0.9966
       },
       "ok": true
     },
     {
-      "text": "эй бивис закрывай адоб акробат",
+      "text": "бивис экзель заверши",
       "expected": {
         "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader"
-      },
-      "predicted": {
-        "action": "close",
-        "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.8819
-      },
-      "ok": true
-    },
-    {
-      "text": "ну ка адоб ридер заверши",
-      "expected": {
-        "action": "close",
-        "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
         "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.8658
+        "app_id": "excel",
+        "confidence": 0.9866
       },
       "ok": true
     },
     {
-      "text": "ну ка pdf откыть выключи",
+      "text": "дружище эсель закрой",
       "expected": {
         "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader"
-      },
-      "predicted": {
-        "action": "close",
-        "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.9294
-      },
-      "ok": true
-    },
-    {
-      "text": "бивис закрыть acrobat",
-      "expected": {
-        "action": "close",
-        "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
         "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.8905
+        "app_id": "excel",
+        "confidence": 0.9968
       },
       "ok": true
     },
     {
-      "text": "алло выйди из pdf открыть",
+      "text": "эй бивис закрой нафиг эсель",
       "expected": {
         "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader"
-      },
-      "predicted": {
-        "action": "close",
-        "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.9261
-      },
-      "ok": true
-    },
-    {
-      "text": "алло close адобридер",
-      "expected": {
-        "action": "close",
-        "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
         "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.8567
+        "app_id": "excel",
+        "confidence": 0.9801
       },
       "ok": true
     },
     {
-      "text": "брух закрой читалка pdf",
+      "text": "закрывай eксcel",
       "expected": {
         "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader"
-      },
-      "predicted": {
-        "action": "close",
-        "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.9401
-      },
-      "ok": true
-    },
-    {
-      "text": "beavis close пдф ридер",
-      "expected": {
-        "action": "close",
-        "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
         "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.8583
+        "app_id": "excel",
+        "confidence": 0.9909
       },
       "ok": true
     },
     {
-      "text": "дружище закрывай эту акробат ридер",
+      "text": "брух выйди из эсель",
       "expected": {
         "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader"
-      },
-      "predicted": {
-        "action": "close",
-        "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.8871
-      },
-      "ok": true
-    },
-    {
-      "text": "слушай закрой окно акробат рыдер",
-      "expected": {
-        "action": "close",
-        "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
         "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.9109
+        "app_id": "excel",
+        "confidence": 0.981
       },
       "ok": true
     },
     {
-      "text": "слушай выключи pdf reader",
+      "text": "выключи eксcel",
       "expected": {
         "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader"
-      },
-      "predicted": {
-        "action": "close",
-        "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.9389
-      },
-      "ok": true
-    },
-    {
-      "text": "закрыть читалка pdf",
-      "expected": {
-        "action": "close",
-        "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
         "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.9141
+        "app_id": "excel",
+        "confidence": 0.9666
       },
       "ok": true
     },
     {
-      "text": "алло прибей читалкаpdf",
+      "text": "убей процесс excel",
       "expected": {
         "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader"
-      },
-      "predicted": {
-        "action": "close",
-        "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.878
-      },
-      "ok": true
-    },
-    {
-      "text": "ну ка заверши акрабат",
-      "expected": {
-        "action": "close",
-        "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
         "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.9011
+        "app_id": "excel",
+        "confidence": 0.9704
       },
       "ok": true
     },
     {
-      "text": "ну ка выключи акрабат",
+      "text": "эй бивис хватит эксель",
       "expected": {
         "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader"
-      },
-      "predicted": {
-        "action": "close",
-        "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.9303
-      },
-      "ok": true
-    },
-    {
-      "text": "брух убери нахрен читалка pdf",
-      "expected": {
-        "action": "close",
-        "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
         "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.8995
+        "app_id": "excel",
+        "confidence": 0.9349
       },
       "ok": true
     },
     {
-      "text": "ну ка закрой пожалуйста adobe acrobat",
+      "text": "слушай закрой эсель",
       "expected": {
         "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader"
-      },
-      "predicted": {
-        "action": "close",
-        "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.9374
-      },
-      "ok": true
-    },
-    {
-      "text": "beavis убери нахрен pdf открыть",
-      "expected": {
-        "action": "close",
-        "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
         "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.8984
+        "app_id": "excel",
+        "confidence": 0.9976
       },
       "ok": true
     },
     {
-      "text": "ну ка pdf открыть закрой",
+      "text": "beavis эксель выключи",
       "expected": {
         "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader"
-      },
-      "predicted": {
-        "action": "close",
-        "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.9305
-      },
-      "ok": true
-    },
-    {
-      "text": "алло kill читалка pdf",
-      "expected": {
-        "action": "close",
-        "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
         "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.9117
+        "app_id": "excel",
+        "confidence": 0.9764
       },
       "ok": true
     },
     {
-      "text": "дружище убери arobat полностью",
+      "text": "закрой эксель",
       "expected": {
         "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader"
-      },
-      "predicted": {
-        "action": "close",
-        "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.7363
-      },
-      "ok": true
-    },
-    {
-      "text": "дружище убери читалкаpdf полностью",
-      "expected": {
-        "action": "close",
-        "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
         "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.8107
+        "app_id": "excel",
+        "confidence": 0.9965
       },
       "ok": true
     },
     {
-      "text": "ну ка сверни пожалуйста шиталка pdf",
+      "text": "снеси эсель",
       "expected": {
-        "action": "minimize",
+        "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "minimize",
+        "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.9417
+        "app_id": "excel",
+        "confidence": 0.9809
       },
       "ok": true
     },
     {
-      "text": "слушай сверни читалка pdf",
+      "text": "ну ка выйди из экзель",
       "expected": {
-        "action": "minimize",
+        "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "minimize",
+        "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.9329
+        "app_id": "excel",
+        "confidence": 0.964
       },
       "ok": true
     },
     {
-      "text": "слушай убери адобридер с экрана",
+      "text": "excel заверши",
       "expected": {
-        "action": "minimize",
+        "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "minimize",
+        "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.8472
+        "app_id": "excel",
+        "confidence": 0.9884
       },
       "ok": true
     },
     {
-      "text": "бивис скрой acrobat reader",
+      "text": "закрыть экзель",
       "expected": {
-        "action": "minimize",
+        "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "minimize",
+        "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.932
+        "app_id": "excel",
+        "confidence": 0.9909
       },
       "ok": true
     },
     {
-      "text": "слушай pdf reader спрячь",
+      "text": "слушай убей процесс эксиль",
       "expected": {
-        "action": "minimize",
+        "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "minimize",
+        "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.9155
+        "app_id": "excel",
+        "confidence": 0.9695
       },
       "ok": true
     },
     {
-      "text": "дружище скрой акробат ридер",
+      "text": "ну ка закрывай exкel",
       "expected": {
-        "action": "minimize",
+        "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "minimize",
+        "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.9226
+        "app_id": "excel",
+        "confidence": 0.9941
       },
       "ok": true
     },
     {
-      "text": "дружище кинь вниз pdf reader",
+      "text": "брух закрой окно exкel",
       "expected": {
-        "action": "minimize",
+        "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "minimize",
+        "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.8889
+        "app_id": "excel",
+        "confidence": 0.9931
       },
       "ok": true
     },
     {
-      "text": "слушай убери акробат ридер с глаз",
+      "text": "beavis close exкel",
       "expected": {
-        "action": "minimize",
+        "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "minimize",
+        "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.9027
+        "app_id": "excel",
+        "confidence": 0.9711
       },
       "ok": true
     },
     {
-      "text": "дружище сверни пожалуйста акрабат",
+      "text": "бивис закрой пожалуйста eксcel",
       "expected": {
-        "action": "minimize",
+        "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "minimize",
+        "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.8695
+        "app_id": "excel",
+        "confidence": 0.9924
       },
       "ok": true
     },
     {
-      "text": "beavis сврени адоб ридер",
+      "text": "закрой exкel",
       "expected": {
-        "action": "minimize",
+        "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "minimize",
+        "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.8316
+        "app_id": "excel",
+        "confidence": 0.9971
       },
       "ok": true
     },
     {
-      "text": "дружище шиталка pdf сверни",
+      "text": "брух kill эсель",
       "expected": {
-        "action": "minimize",
+        "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "minimize",
+        "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.9061
+        "app_id": "excel",
+        "confidence": 0.9801
       },
       "ok": true
     },
     {
-      "text": "брух сверни пожалуйста adobe acrbat",
+      "text": "бивис eксcel выключи",
       "expected": {
-        "action": "minimize",
+        "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "minimize",
+        "action": "close",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.9095
+        "app_id": "excel",
+        "confidence": 0.9666
       },
       "ok": true
     },
     {
-      "text": "алло minimize pdf reader",
+      "text": "ну ка спрячь эксль",
       "expected": {
         "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader"
-      },
-      "predicted": {
-        "action": "minimize",
-        "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.8836
-      },
-      "ok": true
-    },
-    {
-      "text": "эй бивис кинь вниз acrobat",
-      "expected": {
-        "action": "minimize",
-        "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
         "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.8782
+        "app_id": "excel",
+        "confidence": 0.9957
       },
       "ok": true
     },
     {
-      "text": "слушай сверни акробат рыдер",
+      "text": "бивис отправь эксиль вниз",
       "expected": {
         "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader"
-      },
-      "predicted": {
-        "action": "minimize",
-        "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.9101
-      },
-      "ok": true
-    },
-    {
-      "text": "бивис убери окно читалка pdf",
-      "expected": {
-        "action": "minimize",
-        "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
         "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.9097
+        "app_id": "excel",
+        "confidence": 0.9478
       },
       "ok": true
     },
     {
-      "text": "бивис спрячь акробат",
+      "text": "слушай отправь эксль вниз",
       "expected": {
         "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader"
-      },
-      "predicted": {
-        "action": "minimize",
-        "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.8986
-      },
-      "ok": true
-    },
-    {
-      "text": "дружище сверни в панель акрабат",
-      "expected": {
-        "action": "minimize",
-        "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
         "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.8213
+        "app_id": "excel",
+        "confidence": 0.9686
       },
       "ok": true
     },
     {
-      "text": "beavis сверни пожалуйста adobe acrobat",
+      "text": "бивис убери эксель с глаз",
       "expected": {
         "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader"
-      },
-      "predicted": {
-        "action": "minimize",
-        "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.9217
-      },
-      "ok": true
-    },
-    {
-      "text": "дружище minimize акробат ридер",
-      "expected": {
-        "action": "minimize",
-        "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
         "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.888
+        "app_id": "excel",
+        "confidence": 0.9783
       },
       "ok": true
     },
     {
-      "text": "брух адоб акробат спрячь",
+      "text": "дружище minimize эсель",
       "expected": {
         "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader"
-      },
-      "predicted": {
-        "action": "minimize",
-        "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.8891
-      },
-      "ok": true
-    },
-    {
-      "text": "дружище сврени arobat",
-      "expected": {
-        "action": "minimize",
-        "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
         "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.8678
+        "app_id": "excel",
+        "confidence": 0.9768
       },
       "ok": true
     },
     {
-      "text": "дружище убери окно adobe acrbat",
+      "text": "дружище сврени эксель",
       "expected": {
         "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader"
-      },
-      "predicted": {
-        "action": "minimize",
-        "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.8573
-      },
-      "ok": true
-    },
-    {
-      "text": "сверни пожалуйста акрабат",
-      "expected": {
-        "action": "minimize",
-        "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
         "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.896
+        "app_id": "excel",
+        "confidence": 0.9838
       },
       "ok": true
     },
     {
-      "text": "эй бивис увеличь окно акробат рыдер",
+      "text": "beavis убери eксcel с экрана",
       "expected": {
-        "action": "maximize",
+        "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "maximize",
+        "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.8595
+        "app_id": "excel",
+        "confidence": 0.9947
       },
       "ok": true
     },
     {
-      "text": "beavis adobe acrbat на весь экран",
+      "text": "дружище убери excel с экрана",
       "expected": {
-        "action": "maximize",
+        "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "maximize",
+        "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.8898
+        "app_id": "excel",
+        "confidence": 0.9894
       },
       "ok": true
     },
     {
-      "text": "ну ка acrobat на весь экран",
+      "text": "эй бивис сверний эсель",
       "expected": {
-        "action": "maximize",
+        "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "maximize",
+        "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.9093
+        "app_id": "excel",
+        "confidence": 0.994
       },
       "ok": true
     },
     {
-      "text": "бивис разверни на весь экран acrobat",
+      "text": "алло сверний эксель",
       "expected": {
-        "action": "maximize",
+        "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "maximize",
+        "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.8927
+        "app_id": "excel",
+        "confidence": 0.9942
       },
       "ok": true
     },
     {
-      "text": "эй бивис acrobat на весь экран",
+      "text": "алло сверний экзель",
       "expected": {
-        "action": "maximize",
+        "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "maximize",
+        "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.885
+        "app_id": "excel",
+        "confidence": 0.9946
       },
       "ok": true
     },
     {
-      "text": "брух на весь экран adobe acrobat",
+      "text": "алло убери окно exкel",
       "expected": {
-        "action": "maximize",
+        "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "maximize",
+        "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.9022
+        "app_id": "excel",
+        "confidence": 0.9537
       },
       "ok": true
     },
     {
-      "text": "алло на весь экран pdf reader",
+      "text": "слушай сверни эксиль",
       "expected": {
-        "action": "maximize",
+        "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "maximize",
+        "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.9069
+        "app_id": "excel",
+        "confidence": 0.994
       },
       "ok": true
     },
     {
-      "text": "брух разверни на весь экран adobe acrobat",
+      "text": "алло эсель сверни",
       "expected": {
-        "action": "maximize",
+        "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "maximize",
+        "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.9175
+        "app_id": "excel",
+        "confidence": 0.9945
       },
       "ok": true
     },
     {
-      "text": "слушай на весь экран адоб акробат",
+      "text": "эй бивис сврени эксиль",
       "expected": {
-        "action": "maximize",
+        "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "maximize",
+        "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.8821
+        "app_id": "excel",
+        "confidence": 0.9743
       },
       "ok": true
     },
     {
-      "text": "сделай pdf открыть на весь экран",
+      "text": "ну ка эксель спрячь",
       "expected": {
-        "action": "maximize",
+        "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "maximize",
+        "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.8987
+        "app_id": "excel",
+        "confidence": 0.9931
       },
       "ok": true
     },
     {
-      "text": "ну ка увеличь окно адоб акробат",
+      "text": "брух кинь вниз exкel",
       "expected": {
-        "action": "maximize",
+        "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "maximize",
+        "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.8852
+        "app_id": "excel",
+        "confidence": 0.9952
       },
       "ok": true
     },
     {
-      "text": "эй бивис fullscreen адобридер",
+      "text": "брух спрячь эксиль",
       "expected": {
-        "action": "maximize",
+        "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "maximize",
+        "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.8242
+        "app_id": "excel",
+        "confidence": 0.9939
       },
       "ok": true
     },
     {
-      "text": "эй бивис разверни pdf reader",
+      "text": "слушай сверни окно эксель",
       "expected": {
-        "action": "maximize",
+        "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "maximize",
+        "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.9248
+        "app_id": "excel",
+        "confidence": 0.9938
       },
       "ok": true
     },
     {
-      "text": "дружище разверни окно акробат ридер",
+      "text": "алло сврени excel",
       "expected": {
-        "action": "maximize",
+        "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "maximize",
+        "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.9087
+        "app_id": "excel",
+        "confidence": 0.9835
       },
       "ok": true
     },
     {
-      "text": "beavis максимизируй читалкаpdf",
+      "text": "брух отправь excel вниз",
       "expected": {
-        "action": "maximize",
+        "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "maximize",
+        "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.8411
+        "app_id": "excel",
+        "confidence": 0.9285
       },
       "ok": true
     },
     {
-      "text": "на весь экран pdf откыть",
+      "text": "слушай убери окно эсель",
       "expected": {
-        "action": "maximize",
+        "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "maximize",
+        "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.9202
+        "app_id": "excel",
+        "confidence": 0.9702
       },
       "ok": true
     },
     {
-      "text": "бивис фулл скрин читалка pdf",
+      "text": "beavis exкel спрячь",
       "expected": {
-        "action": "maximize",
+        "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "maximize",
+        "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.8983
+        "app_id": "excel",
+        "confidence": 0.9951
       },
       "ok": true
     },
     {
-      "text": "ну ка фулл скрин adobe acrobat",
+      "text": "брух убери эсель с экрана",
       "expected": {
-        "action": "maximize",
+        "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "maximize",
+        "action": "minimize",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.891
+        "app_id": "excel",
+        "confidence": 0.9955
       },
       "ok": true
     },
     {
-      "text": "алло во весь экран pdf откыть",
+      "text": "beavis эксиль на весь экран",
       "expected": {
         "action": "maximize",
         "target_type": "app",
-        "app_id": "acrobat_reader"
-      },
-      "predicted": {
-        "action": "maximize",
-        "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.9088
-      },
-      "ok": true
-    },
-    {
-      "text": "увеличь окно pdf reader",
-      "expected": {
-        "action": "maximize",
-        "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
         "action": "maximize",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.8765
+        "app_id": "excel",
+        "confidence": 0.9935
       },
       "ok": true
     },
     {
-      "text": "дружище раскрой pdf reader",
+      "text": "алло эсель разверни",
       "expected": {
         "action": "maximize",
         "target_type": "app",
-        "app_id": "acrobat_reader"
-      },
-      "predicted": {
-        "action": "maximize",
-        "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.9097
-      },
-      "ok": true
-    },
-    {
-      "text": "beavis акробат ридер на весь экран",
-      "expected": {
-        "action": "maximize",
-        "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
         "action": "maximize",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.9122
+        "app_id": "excel",
+        "confidence": 0.9928
       },
       "ok": true
     },
     {
-      "text": "алло разверни пдф ридер",
+      "text": "эй бивис увеличь окно экзель",
       "expected": {
         "action": "maximize",
         "target_type": "app",
-        "app_id": "acrobat_reader"
-      },
-      "predicted": {
-        "action": "maximize",
-        "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.8765
-      },
-      "ok": true
-    },
-    {
-      "text": "эй бивис на весь экран acrobat",
-      "expected": {
-        "action": "maximize",
-        "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
         "action": "maximize",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.885
+        "app_id": "excel",
+        "confidence": 0.9897
       },
       "ok": true
     },
     {
-      "text": "алло разверни обратно акрабат",
+      "text": "алло разверни на весь экран эксель",
       "expected": {
-        "action": "restore",
+        "action": "maximize",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "restore",
+        "action": "maximize",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.7894
+        "app_id": "excel",
+        "confidence": 0.9855
       },
       "ok": true
     },
     {
-      "text": "ну ка верни pdf открыть",
+      "text": "бивис eксcel на весь экран",
       "expected": {
-        "action": "restore",
+        "action": "maximize",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "restore",
+        "action": "maximize",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.946
+        "app_id": "excel",
+        "confidence": 0.9921
       },
       "ok": true
     },
     {
-      "text": "beavis верни окно адоб ридер",
+      "text": "дружище во весь экран эксель",
       "expected": {
-        "action": "restore",
+        "action": "maximize",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "restore",
+        "action": "maximize",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.8685
+        "app_id": "excel",
+        "confidence": 0.99
       },
       "ok": true
     },
     {
-      "text": "бивис восстанови окно pdf откыть",
+      "text": "брух разверни окно экзель",
       "expected": {
-        "action": "restore",
+        "action": "maximize",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "restore",
+        "action": "maximize",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.9088
+        "app_id": "excel",
+        "confidence": 0.9919
       },
       "ok": true
     },
     {
-      "text": "восстанови читалка pdf",
+      "text": "брух разверни exкel",
       "expected": {
-        "action": "restore",
+        "action": "maximize",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "restore",
+        "action": "maximize",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.9099
+        "app_id": "excel",
+        "confidence": 0.992
       },
       "ok": true
     },
     {
-      "text": "beavis разверни обратно pdf откыть",
+      "text": "эй бивис fullscreen экзель",
       "expected": {
-        "action": "restore",
+        "action": "maximize",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "restore",
+        "action": "maximize",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.8792
+        "app_id": "excel",
+        "confidence": 0.9856
       },
       "ok": true
     },
     {
-      "text": "бивис разверни обратно aкrobat reader",
+      "text": "разверни на весь экран экзель",
       "expected": {
-        "action": "restore",
+        "action": "maximize",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "restore",
+        "action": "maximize",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.8703
+        "app_id": "excel",
+        "confidence": 0.9924
       },
       "ok": true
     },
     {
-      "text": "бивис восстанови окно aкrobat reader",
+      "text": "дружище раскрой exкel",
       "expected": {
-        "action": "restore",
+        "action": "maximize",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "restore",
+        "action": "maximize",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.9019
+        "app_id": "excel",
+        "confidence": 0.9842
       },
       "ok": true
     },
     {
-      "text": "бивис восстанови окно акробат ридер",
+      "text": "брух на весь экран exкel",
       "expected": {
-        "action": "restore",
+        "action": "maximize",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "restore",
+        "action": "maximize",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.9098
+        "app_id": "excel",
+        "confidence": 0.9935
       },
       "ok": true
     },
     {
-      "text": "дружище разверни обратно читалкаpdf",
+      "text": "ну ка максимизируй exкel",
       "expected": {
-        "action": "restore",
+        "action": "maximize",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "restore",
+        "action": "maximize",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.8193
+        "app_id": "excel",
+        "confidence": 0.983
       },
       "ok": true
     },
     {
-      "text": "слушай достань arobat",
+      "text": "бивис экзель на весь экран",
       "expected": {
-        "action": "restore",
+        "action": "maximize",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "restore",
+        "action": "maximize",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.8878
+        "app_id": "excel",
+        "confidence": 0.9935
       },
       "ok": true
     },
     {
-      "text": "beavis пдф ридер восстанови",
+      "text": "алло увеличь окно эсель",
       "expected": {
-        "action": "restore",
+        "action": "maximize",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "restore",
+        "action": "maximize",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.8506
+        "app_id": "excel",
+        "confidence": 0.9762
       },
       "ok": true
     },
     {
-      "text": "слушай arobat верни",
+      "text": "beavis fullscreen exкel",
       "expected": {
-        "action": "restore",
+        "action": "maximize",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "restore",
+        "action": "maximize",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.9254
+        "app_id": "excel",
+        "confidence": 0.9859
       },
       "ok": true
     },
     {
-      "text": "бивис открой обратно акробат",
+      "text": "эй бивис fullscreen эксель",
       "expected": {
-        "action": "restore",
+        "action": "maximize",
         "target_type": "app",
-        "app_id": "acrobat_reader"
+        "app_id": "excel"
       },
       "predicted": {
-        "action": "restore",
+        "action": "maximize",
         "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.9463
-      },
-      "ok": true
-    },
-    {
-      "text": "дружище покажи обратно адоб ридер",
-      "expected": {
-        "action": "restore",
-        "target_type": "app",
-        "app_id": "acrobat_reader"
-      },
-      "predicted": {
-        "action": "restore",
-        "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.7133
-      },
-      "ok": true
-    },
-    {
-      "text": "алло восстанови адоб акробат",
-      "expected": {
-        "action": "restore",
-        "target_type": "app",
-        "app_id": "acrobat_reader"
-      },
-      "predicted": {
-        "action": "restore",
-        "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.8766
-      },
-      "ok": true
-    },
-    {
-      "text": "бивис покажи обратно pdf открыть",
-      "expected": {
-        "action": "restore",
-        "target_type": "app",
-        "app_id": "acrobat_reader"
-      },
-      "predicted": {
-        "action": "restore",
-        "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.8938
-      },
-      "ok": true
-    },
-    {
-      "text": "ну ка верни читалкаpdf",
-      "expected": {
-        "action": "restore",
-        "target_type": "app",
-        "app_id": "acrobat_reader"
-      },
-      "predicted": {
-        "action": "restore",
-        "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.9292
-      },
-      "ok": true
-    },
-    {
-      "text": "adobe acrobat верни",
-      "expected": {
-        "action": "restore",
-        "target_type": "app",
-        "app_id": "acrobat_reader"
-      },
-      "predicted": {
-        "action": "restore",
-        "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.9197
-      },
-      "ok": true
-    },
-    {
-      "text": "алло покажи обратно пдф ридер",
-      "expected": {
-        "action": "restore",
-        "target_type": "app",
-        "app_id": "acrobat_reader"
-      },
-      "predicted": {
-        "action": "restore",
-        "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.7835
-      },
-      "ok": true
-    },
-    {
-      "text": "дружище восстанови шиталка pdf",
-      "expected": {
-        "action": "restore",
-        "target_type": "app",
-        "app_id": "acrobat_reader"
-      },
-      "predicted": {
-        "action": "restore",
-        "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.8789
-      },
-      "ok": true
-    },
-    {
-      "text": "алло акробат верни",
-      "expected": {
-        "action": "restore",
-        "target_type": "app",
-        "app_id": "acrobat_reader"
-      },
-      "predicted": {
-        "action": "restore",
-        "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.9126
-      },
-      "ok": true
-    },
-    {
-      "text": "ну ка достань акробат ридер",
-      "expected": {
-        "action": "restore",
-        "target_type": "app",
-        "app_id": "acrobat_reader"
-      },
-      "predicted": {
-        "action": "restore",
-        "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.9361
-      },
-      "ok": true
-    },
-    {
-      "text": "слушай восстанови читалкаpdf",
-      "expected": {
-        "action": "restore",
-        "target_type": "app",
-        "app_id": "acrobat_reader"
-      },
-      "predicted": {
-        "action": "restore",
-        "target_type": "app",
-        "app_id": "acrobat_reader",
-        "confidence": 0.8813
-      },
-      "ok": true
-    },
-    {
-      "text": "открой acrobat пожалуйста",
-      "expected": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.0
-      },
-      "predicted": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.972
-      },
-      "ok": true
-    },
-    {
-      "text": "открой terminal быстро",
-      "expected": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.0
-      },
-      "predicted": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.9758
-      },
-      "ok": true
-    },
-    {
-      "text": "включи otlook",
-      "expected": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.0
-      },
-      "predicted": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.9797
-      },
-      "ok": true
-    },
-    {
-      "text": "давай включи wireshark",
-      "expected": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.0
-      },
-      "predicted": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.9712
-      },
-      "ok": true
-    },
-    {
-      "text": "брух open calc",
-      "expected": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.0
-      },
-      "predicted": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.9889
-      },
-      "ok": true
-    },
-    {
-      "text": "включи cntrol пожалуйста",
-      "expected": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.0
-      },
-      "predicted": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.9823
-      },
-      "ok": true
-    },
-    {
-      "text": "брух start tskschd",
-      "expected": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.0
-      },
-      "predicted": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.9818
-      },
-      "ok": true
-    },
-    {
-      "text": "бивис поставь таймер",
-      "expected": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.0
-      },
-      "predicted": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.793
-      },
-      "ok": true
-    },
-    {
-      "text": "брух найди lightroom",
-      "expected": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.0
-      },
-      "predicted": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.9629
-      },
-      "ok": true
-    },
-    {
-      "text": "открой perfmon пожалуйста",
-      "expected": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.0
-      },
-      "predicted": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.9754
-      },
-      "ok": true
-    },
-    {
-      "text": "найди after effects",
-      "expected": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.0
-      },
-      "predicted": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.9674
-      },
-      "ok": true
-    },
-    {
-      "text": "брух найди sstem configuration",
-      "expected": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.0
-      },
-      "predicted": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.9552
-      },
-      "ok": true
-    },
-    {
-      "text": "открой adobe acrobat",
-      "expected": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.0
-      },
-      "predicted": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.9611
-      },
-      "ok": true
-    },
-    {
-      "text": "ну ка найди msinfo32",
-      "expected": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.0
-      },
-      "predicted": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.9817
-      },
-      "ok": true
-    },
-    {
-      "text": "ну ка open adobe acrobat",
-      "expected": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.0
-      },
-      "predicted": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.9773
-      },
-      "ok": true
-    },
-    {
-      "text": "давай открой snippingtool",
-      "expected": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.0
-      },
-      "predicted": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.9554
-      },
-      "ok": true
-    },
-    {
-      "text": "слушай запусти disk management",
-      "expected": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.0
-      },
-      "predicted": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.986
-      },
-      "ok": true
-    },
-    {
-      "text": "брух start performance monitor",
-      "expected": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.0
-      },
-      "predicted": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.9662
-      },
-      "ok": true
-    },
-    {
-      "text": "бивис найди remote desktop connetion",
-      "expected": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.0
-      },
-      "predicted": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.9408
-      },
-      "ok": true
-    },
-    {
-      "text": "start on-screen keyboard",
-      "expected": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.0
-      },
-      "predicted": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.9585
-      },
-      "ok": true
-    },
-    {
-      "text": "open windows defeder firewall with advanced security пожалуйста",
-      "expected": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.0
-      },
-      "predicted": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.876
-      },
-      "ok": true
-    },
-    {
-      "text": "open perfmon пожалуйста",
-      "expected": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.0
-      },
-      "predicted": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.9817
-      },
-      "ok": true
-    },
-    {
-      "text": "давай запусти кдекс",
-      "expected": {
-        "missing": [
-          "action"
-        ],
-        "confidence": 0.0
-      },
-      "predicted": {
-        "missing": [
-          "action"
-        ],
+        "app_id": "excel",
         "confidence": 0.9885
       },
       "ok": true
     },
     {
-      "text": "брух запусти regdit",
+      "text": "бивис максимизируй эксиль",
+      "expected": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "excel"
+      },
+      "predicted": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "excel",
+        "confidence": 0.9848
+      },
+      "ok": true
+    },
+    {
+      "text": "дружище эксль разверни",
+      "expected": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "excel"
+      },
+      "predicted": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "excel",
+        "confidence": 0.9871
+      },
+      "ok": true
+    },
+    {
+      "text": "брух фулл скрин exкel",
+      "expected": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "excel"
+      },
+      "predicted": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "excel",
+        "confidence": 0.9879
+      },
+      "ok": true
+    },
+    {
+      "text": "эй бивис увеличь окно eксcel",
+      "expected": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "excel"
+      },
+      "predicted": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "excel",
+        "confidence": 0.9875
+      },
+      "ok": true
+    },
+    {
+      "text": "дружище эксиль на весь экран",
+      "expected": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "excel"
+      },
+      "predicted": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "excel",
+        "confidence": 0.9898
+      },
+      "ok": true
+    },
+    {
+      "text": "брух фулл скрин eксcel",
+      "expected": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "excel"
+      },
+      "predicted": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "excel",
+        "confidence": 0.9843
+      },
+      "ok": true
+    },
+    {
+      "text": "ну ка на весь экран экзель",
+      "expected": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "excel"
+      },
+      "predicted": {
+        "action": "maximize",
+        "target_type": "app",
+        "app_id": "excel",
+        "confidence": 0.9946
+      },
+      "ok": true
+    },
+    {
+      "text": "слушай открой обратно эксиль",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel",
+        "confidence": 0.9772
+      },
+      "ok": true
+    },
+    {
+      "text": "beavis разверни обратно экзель",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel",
+        "confidence": 0.9747
+      },
+      "ok": true
+    },
+    {
+      "text": "верни окно эксль",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel",
+        "confidence": 0.9924
+      },
+      "ok": true
+    },
+    {
+      "text": "ну ка восстанови окно excel",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel",
+        "confidence": 0.9858
+      },
+      "ok": true
+    },
+    {
+      "text": "дружище верни эсель",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel",
+        "confidence": 0.9897
+      },
+      "ok": true
+    },
+    {
+      "text": "beavis разверни обратно эсель",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel",
+        "confidence": 0.9716
+      },
+      "ok": true
+    },
+    {
+      "text": "бивис верни окно эксель",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel",
+        "confidence": 0.9946
+      },
+      "ok": true
+    },
+    {
+      "text": "beavis покажи обратно эксль",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel",
+        "confidence": 0.9852
+      },
+      "ok": true
+    },
+    {
+      "text": "верни как было excel",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel",
+        "confidence": 0.9904
+      },
+      "ok": true
+    },
+    {
+      "text": "эй бивис разверни обратно eксcel",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel",
+        "confidence": 0.9759
+      },
+      "ok": true
+    },
+    {
+      "text": "слушай восстанови окно эксль",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel",
+        "confidence": 0.9855
+      },
+      "ok": true
+    },
+    {
+      "text": "эй бивис верни на экран эксиль",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel",
+        "confidence": 0.9877
+      },
+      "ok": true
+    },
+    {
+      "text": "открой обратно эксель",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel",
+        "confidence": 0.9714
+      },
+      "ok": true
+    },
+    {
+      "text": "верни на экран эксль",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel",
+        "confidence": 0.9944
+      },
+      "ok": true
+    },
+    {
+      "text": "эй бивис восстанови excel",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel",
+        "confidence": 0.9928
+      },
+      "ok": true
+    },
+    {
+      "text": "beavis верни эсель",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel",
+        "confidence": 0.9958
+      },
+      "ok": true
+    },
+    {
+      "text": "алло восстанови окно эксель",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel",
+        "confidence": 0.9844
+      },
+      "ok": true
+    },
+    {
+      "text": "алло excel восстанови",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel",
+        "confidence": 0.994
+      },
+      "ok": true
+    },
+    {
+      "text": "разверни обратно эксель",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel",
+        "confidence": 0.9739
+      },
+      "ok": true
+    },
+    {
+      "text": "дружище верни как было eксcel",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel",
+        "confidence": 0.9833
+      },
+      "ok": true
+    },
+    {
+      "text": "алло верни как было экзель",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel",
+        "confidence": 0.9893
+      },
+      "ok": true
+    },
+    {
+      "text": "алло покажи обратно эксль",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel",
+        "confidence": 0.9757
+      },
+      "ok": true
+    },
+    {
+      "text": "восстанови окно эксиль",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel",
+        "confidence": 0.9916
+      },
+      "ok": true
+    },
+    {
+      "text": "алло разверни обратно excel",
+      "expected": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel"
+      },
+      "predicted": {
+        "action": "restore",
+        "target_type": "app",
+        "app_id": "excel",
+        "confidence": 0.9726
+      },
+      "ok": true
+    },
+    {
+      "text": "напомни мне завтра быстро",
       "expected": {
         "missing": [
           "action"
@@ -1823,7 +1455,375 @@
         "missing": [
           "action"
         ],
-        "confidence": 0.9869
+        "confidence": 0.9424
+      },
+      "ok": true
+    },
+    {
+      "text": "эй поставь таймер",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.926
+      },
+      "ok": true
+    },
+    {
+      "text": "переключи трек быстро",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.962
+      },
+      "ok": true
+    },
+    {
+      "text": "ну ка бивис громкость на десять",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.975
+      },
+      "ok": true
+    },
+    {
+      "text": "слушай бивис громкость на десять",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.9695
+      },
+      "ok": true
+    },
+    {
+      "text": "эй динамики рвуться",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.9452
+      },
+      "ok": true
+    },
+    {
+      "text": "найди эксель быстро",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.9802
+      },
+      "ok": true
+    },
+    {
+      "text": "эй покажи календарь",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.9342
+      },
+      "ok": true
+    },
+    {
+      "text": "ну ка бивис зактни",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.7153
+      },
+      "ok": true
+    },
+    {
+      "text": "бивис start экзель",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.9759
+      },
+      "ok": true
+    },
+    {
+      "text": "эй start telegram",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.9661
+      },
+      "ok": true
+    },
+    {
+      "text": "давай сделай тихо",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.9338
+      },
+      "ok": true
+    },
+    {
+      "text": "бивис найди файл",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.98
+      },
+      "ok": true
+    },
+    {
+      "text": "эй open тг",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.9853
+      },
+      "ok": true
+    },
+    {
+      "text": "переведи текст",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.9341
+      },
+      "ok": true
+    },
+    {
+      "text": "слушай выключи компьютер",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.9357
+      },
+      "ok": true
+    },
+    {
+      "text": "давай открой экзель",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.9777
+      },
+      "ok": true
+    },
+    {
+      "text": "брух открой где код пишу",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.9768
+      },
+      "ok": true
+    },
+    {
+      "text": "давай запусти eксcel",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.9778
+      },
+      "ok": true
+    },
+    {
+      "text": "брух включи eксcel",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.9679
+      },
+      "ok": true
+    },
+    {
+      "text": "ну ка найди тг",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.991
+      },
+      "ok": true
+    },
+    {
+      "text": "открой телега пожалуйста",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.9819
+      },
+      "ok": true
+    },
+    {
+      "text": "ну ка громко слишком",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.9587
+      },
+      "ok": true
+    },
+    {
+      "text": "слушай запусти телеграмм",
+      "expected": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.0
+      },
+      "predicted": {
+        "missing": [
+          "action"
+        ],
+        "confidence": 0.9802
       },
       "ok": true
     }

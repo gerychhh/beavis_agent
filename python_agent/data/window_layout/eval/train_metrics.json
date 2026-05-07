@@ -1,8 +1,8 @@
 {
   "layout_model": {
-    "accuracy": 0.9989139115157323,
-    "macro_f1": 0.9987510810890127,
-    "weighted_f1": 0.9989129075775536,
+    "accuracy": 0.999768870104999,
+    "macro_f1": 0.9997129076540373,
+    "weighted_f1": 0.9997687608682447,
     "classes": [
       "bottom_half",
       "center",
@@ -18,23 +18,17 @@
   },
   "target_models": {
     "target_1": {
-      "accuracy": 0.9301070116594793,
-      "macro_f1": 0.926190264679925,
-      "weighted_f1": 0.9294979652971623,
+      "accuracy": 0.9747408043320346,
+      "macro_f1": 0.970107056263777,
+      "weighted_f1": 0.974496726645942,
       "classes": [
         "3ds_max_2025",
         "NO_TARGET",
-        "acrobat_reader",
-        "after_effects",
         "calculator",
-        "character_map",
-        "cmd",
         "codex",
-        "computer_management",
         "control_panel",
         "current",
         "cyberpunk_2077",
-        "database_compare",
         "device_manager",
         "disk_cleanup",
         "disk_management",
@@ -43,67 +37,32 @@
         "event_viewer",
         "excel",
         "explorer",
-        "game_bar",
-        "illustrator",
-        "lightroom",
-        "magnify",
-        "media_encoder",
-        "microsoft_store",
-        "narrator",
         "notepad",
-        "office",
-        "on_screen_keyboard",
-        "onenote",
-        "outlook",
         "paint",
         "performance_monitor",
-        "photoshop",
         "planetvpn1",
         "powerpoint",
-        "powershell",
-        "premiere_pro",
         "print_management",
-        "project",
         "regedit",
-        "remote_desktop_connection",
         "resource_monitor",
-        "run",
-        "services",
-        "settings",
-        "snipping_tool",
-        "spreadsheet_compare",
-        "steps_recorder",
-        "substance_painter",
-        "system_configuration",
-        "system_information",
         "task_manager",
-        "task_scheduler",
         "terminal",
-        "windows_defender_firewall_with_advanced_security",
-        "windows_media_player_legacy",
         "wireshark",
-        "wmplayer",
         "word",
         "yandexmusic"
       ]
     },
     "target_2": {
-      "accuracy": 0.8658680721929404,
-      "macro_f1": 0.7248137059287915,
-      "weighted_f1": 0.8721550087038559,
+      "accuracy": 0.9162319223403553,
+      "macro_f1": 0.8136636115309687,
+      "weighted_f1": 0.9178186548189222,
       "classes": [
         "3ds_max_2025",
         "NO_TARGET",
-        "acrobat_reader",
-        "after_effects",
         "calculator",
-        "character_map",
-        "cmd",
         "codex",
-        "computer_management",
         "control_panel",
         "cyberpunk_2077",
-        "database_compare",
         "device_manager",
         "disk_cleanup",
         "disk_management",
@@ -112,67 +71,32 @@
         "event_viewer",
         "excel",
         "explorer",
-        "game_bar",
-        "illustrator",
-        "lightroom",
-        "magnify",
-        "media_encoder",
-        "microsoft_store",
-        "narrator",
         "notepad",
-        "office",
-        "on_screen_keyboard",
-        "onenote",
-        "outlook",
         "paint",
         "performance_monitor",
-        "photoshop",
         "planetvpn1",
         "powerpoint",
-        "powershell",
-        "premiere_pro",
         "print_management",
-        "project",
         "regedit",
-        "remote_desktop_connection",
         "resource_monitor",
-        "run",
-        "services",
-        "settings",
-        "snipping_tool",
-        "spreadsheet_compare",
-        "steps_recorder",
-        "substance_painter",
-        "system_configuration",
-        "system_information",
         "task_manager",
-        "task_scheduler",
         "terminal",
-        "windows_defender_firewall_with_advanced_security",
-        "windows_media_player_legacy",
         "wireshark",
-        "wmplayer",
         "word",
         "yandexmusic"
       ]
     },
     "target_3": {
-      "accuracy": 0.9406165149337167,
-      "macro_f1": 0.3492676858257238,
-      "weighted_f1": 0.9409274544901085,
+      "accuracy": 0.9486231261969227,
+      "macro_f1": 0.45824418986850657,
+      "weighted_f1": 0.9481378315401362,
       "classes": [
         "3ds_max_2025",
         "NO_TARGET",
-        "acrobat_reader",
-        "after_effects",
         "calculator",
-        "character_map",
-        "cmd",
         "codex",
-        "computer_management",
         "control_panel",
         "cyberpunk_2077",
-        "database_compare",
         "device_manager",
         "disk_cleanup",
         "disk_management",
@@ -181,67 +105,32 @@
         "event_viewer",
         "excel",
         "explorer",
-        "game_bar",
-        "illustrator",
-        "lightroom",
-        "magnify",
-        "media_encoder",
-        "microsoft_store",
-        "narrator",
         "notepad",
-        "office",
-        "on_screen_keyboard",
-        "onenote",
-        "outlook",
         "paint",
         "performance_monitor",
-        "photoshop",
         "planetvpn1",
         "powerpoint",
-        "powershell",
-        "premiere_pro",
         "print_management",
-        "project",
         "regedit",
-        "remote_desktop_connection",
         "resource_monitor",
-        "run",
-        "services",
-        "settings",
-        "snipping_tool",
-        "spreadsheet_compare",
-        "steps_recorder",
-        "substance_painter",
-        "system_configuration",
-        "system_information",
         "task_manager",
-        "task_scheduler",
         "terminal",
-        "windows_defender_firewall_with_advanced_security",
-        "windows_media_player_legacy",
         "wireshark",
-        "wmplayer",
         "word",
         "yandexmusic"
       ]
     },
     "target_4": {
-      "accuracy": 0.9609647021242613,
-      "macro_f1": 0.58079361601694,
-      "weighted_f1": 0.9614031846855837,
+      "accuracy": 0.9823680908670673,
+      "macro_f1": 0.8187705758014588,
+      "weighted_f1": 0.982411970582012,
       "classes": [
         "3ds_max_2025",
         "NO_TARGET",
-        "acrobat_reader",
-        "after_effects",
         "calculator",
-        "character_map",
-        "cmd",
         "codex",
-        "computer_management",
         "control_panel",
         "cyberpunk_2077",
-        "database_compare",
         "device_manager",
         "disk_cleanup",
         "disk_management",
@@ -250,46 +139,17 @@
         "event_viewer",
         "excel",
         "explorer",
-        "game_bar",
-        "illustrator",
-        "lightroom",
-        "magnify",
-        "media_encoder",
-        "microsoft_store",
-        "narrator",
         "notepad",
-        "office",
-        "on_screen_keyboard",
-        "onenote",
-        "outlook",
         "paint",
         "performance_monitor",
-        "photoshop",
         "planetvpn1",
         "powerpoint",
-        "powershell",
-        "premiere_pro",
         "print_management",
-        "project",
         "regedit",
-        "remote_desktop_connection",
         "resource_monitor",
-        "run",
-        "services",
-        "settings",
-        "snipping_tool",
-        "spreadsheet_compare",
-        "steps_recorder",
-        "substance_painter",
-        "system_configuration",
-        "system_information",
         "task_manager",
-        "task_scheduler",
         "terminal",
-        "windows_defender_firewall_with_advanced_security",
-        "windows_media_player_legacy",
         "wireshark",
-        "wmplayer",
         "word",
         "yandexmusic"
       ]
@@ -298,158 +158,20 @@
   "metadata": {
     "skill": "window_layout",
     "version": "0.1.0",
-    "dataset_rows": 156521,
-    "train_rows": 125216,
-    "validation_rows": 31305,
+    "dataset_rows": 151429,
+    "train_rows": 121143,
+    "validation_rows": 30286,
     "model_type": "FeatureUnion capped(Tfidf char_wb 2-5 max_features=30000 + word 1-4 max_features=30000) + 5 SGDClassifier(log_loss)",
     "runtime_rules": "metadata app-surface target ordering",
     "normalizer_inside_model": false,
     "app_surface_forms": {
-      "acrobat_reader": [
-        "acrobat",
-        "acrobat reader",
-        "adobe acrobat",
-        "адоб ридер",
-        "pdf reader",
-        "акробат",
-        "акрабат",
-        "акробат ридер",
-        "адоб акробат",
-        "pdf открыть",
-        "читалка pdf",
-        "пдф ридер"
-      ],
-      "after_effects": [
-        "after effects",
-        "adobe after effects",
-        "афтэр",
-        "афтер эффектс",
-        "after",
-        "афтер ефектс",
-        "афтер эффекс",
-        "after efects",
-        "афтэр эффектс",
-        "моушн графика",
-        "эффекты для видео"
-      ],
-      "illustrator": [
-        "illustrator",
-        "adobe illustrator",
-        "иллюстратор",
-        "люстра",
-        "аи",
-        "илюстратор",
-        "иллюстратер",
-        "illustrater",
-        "адоб иллюстратор",
-        "векторный редактор",
-        "где логотип рисовать"
-      ],
-      "lightroom": [
-        "lightroom",
-        "adobe lightroom",
-        "лайтрум",
-        "лайт рум",
-        "лайтрумм",
-        "light room",
-        "обработка фото lightroom",
-        "цветокор фото"
-      ],
-      "media_encoder": [
-        "media encoder",
-        "adobe media encoder",
-        "медиа энкодер",
-        "медиа енкодер",
-        "медиа энкодэр",
-        "media encоder",
-        "рендер adobe",
-        "кодировщик видео"
-      ],
-      "onenote": [
-        "onenote",
-        "one note",
-        "ваннот",
-        "ван ноут",
-        "заметки microsoft",
-        "уан нот",
-        "ван ноте",
-        "one not",
-        "уанноут",
-        "конспекты открыть",
-        "заметки офиса"
-      ],
-      "photoshop": [
-        "photoshop",
-        "adobe photoshop",
-        "фотошоп",
-        "шоп",
-        "фш",
-        "фотошопп",
-        "фотошопчик",
-        "фоташоп",
-        "photoshope",
-        "адоб фотошоп",
-        "где фотки редактировать",
-        "редактор фотографий adobe"
-      ],
-      "premiere_pro": [
-        "premiere pro",
-        "adobe premiere",
-        "премьер",
-        "премьер про",
-        "премьера",
-        "премер про",
-        "премиер про",
-        "premier pro",
-        "адоб премьер",
-        "где видео монтировать",
-        "видеомонтаж adobe"
-      ],
-      "project": [
-        "microsoft project",
-        "project",
-        "ms project",
-        "проджект",
-        "проект офис",
-        "прожект",
-        "проджэкт",
-        "projeсt",
-        "план проекта",
-        "гант диаграмма"
-      ],
-      "substance_painter": [
-        "substance painter",
-        "сабстанс",
-        "сабстанс пейнтер",
-        "substance painer",
-        "сабстенс",
-        "сабстанс пэйнтер",
-        "текстуры рисовать",
-        "покрасить 3д модель"
-      ],
       "calculator": [
         "calculator",
         "calc"
       ],
-      "character_map": [
-        "character map",
-        "charmap"
-      ],
-      "cmd": [
-        "command prompt",
-        "cmd"
-      ],
-      "computer_management": [
-        "computer management",
-        "compmgmt"
-      ],
       "control_panel": [
         "control panel",
         "control"
-      ],
-      "database_compare": [
-        "database compare",
-        "appvlp"
       ],
       "device_manager": [
         "device manager",
@@ -479,19 +201,6 @@
         "file explorer",
         "explorer"
       ],
-      "game_bar": [
-        "game bar",
-        "microsoft"
-      ],
-      "magnify": [
-        "magnify"
-      ],
-      "microsoft_store": [
-        "microsoft store"
-      ],
-      "narrator": [
-        "narrator"
-      ],
       "notepad": [
         "notepad",
         "блокнот",
@@ -499,19 +208,6 @@
         "блакнот",
         "блокнотик",
         "ноутпад"
-      ],
-      "office": [
-        "языковые параметры office",
-        "setlang",
-        "office"
-      ],
-      "on_screen_keyboard": [
-        "on-screen keyboard",
-        "osk",
-        "on screen keyboard"
-      ],
-      "outlook": [
-        "outlook"
       ],
       "paint": [
         "paint",
@@ -525,10 +221,6 @@
         "powerpoint",
         "powerpnt"
       ],
-      "powershell": [
-        "windows powershell ise (x86)",
-        "powershell"
-      ],
       "print_management": [
         "print management",
         "printmanagement"
@@ -537,66 +229,18 @@
         "registry editor",
         "regedit"
       ],
-      "remote_desktop_connection": [
-        "remote desktop connection",
-        "mstsc"
-      ],
       "resource_monitor": [
         "resource monitor",
         "perfmon"
-      ],
-      "run": [
-        "run"
-      ],
-      "services": [
-        "services"
-      ],
-      "settings": [
-        "settings"
-      ],
-      "snipping_tool": [
-        "snipping tool",
-        "snippingtool"
-      ],
-      "spreadsheet_compare": [
-        "spreadsheet compare",
-        "appvlp"
-      ],
-      "steps_recorder": [
-        "steps recorder",
-        "psr"
-      ],
-      "system_configuration": [
-        "system configuration",
-        "msconfig"
-      ],
-      "system_information": [
-        "system information",
-        "msinfo32"
       ],
       "task_manager": [
         "task manager",
         "taskmgr"
       ],
-      "task_scheduler": [
-        "task scheduler",
-        "taskschd"
-      ],
       "terminal": [
         "windows terminal",
         "wt",
         "terminal"
-      ],
-      "windows_defender_firewall_with_advanced_security": [
-        "windows defender firewall with advanced security",
-        "wf"
-      ],
-      "windows_media_player_legacy": [
-        "windows media player legacy",
-        "wmplayer"
-      ],
-      "wmplayer": [
-        "wmplayer"
       ],
       "word": [
         "word",

@@ -1,240 +1,216 @@
-{"text": "3ds max 2025 в центр", "expected": {"layout": "center", "targets": ["3ds_max_2025"]}}
-{"text": "3ds max 2025 во весь экран", "expected": {"layout": "fullscreen", "targets": ["3ds_max_2025"]}}
-{"text": "3ds max 2025 во весь экран пожалуйста", "expected": {"layout": "fullscreen", "targets": ["3ds_max_2025"]}}
-{"text": "3ds max 2025 громко уведомляет", "expected": {"missing": ["layout"]}}
-{"text": "3ds max 2025 завис", "expected": {"missing": ["layout"]}}
-{"text": "3ds max 2025 завис почему", "expected": {"missing": ["layout"]}}
-{"text": "3ds max 2025 на весь экран", "expected": {"layout": "fullscreen", "targets": ["3ds_max_2025"]}}
-{"text": "3ds max 2025 на весь экрран", "expected": {"layout": "fullscreen", "targets": ["3ds_max_2025"]}}
-{"text": "3ds max 2025 на вниз", "expected": {"layout": "bottom_half", "targets": ["3ds_max_2025"]}}
-{"text": "3ds max 2025 на сверху на экране", "expected": {"layout": "top_half", "targets": ["3ds_max_2025"]}}
-{"text": "3ds max 2025 на слева быстро", "expected": {"layout": "left_half", "targets": ["3ds_max_2025"]}}
-{"text": "3ds max 2025 над премиер про давай", "expected": {"layout": "split_2_horizontal", "targets": ["3ds_max_2025", "premiere_pro"]}}
-{"text": "3ds max 2025 открыт уже", "expected": {"missing": ["layout"]}}
-{"text": "3ds max 2025 под light room пожалуйста", "expected": {"layout": "split_2_horizontal", "targets": ["lightroom", "3ds_max_2025"]}}
-{"text": "3ds max 2025 посередине быстро", "expected": {"layout": "center", "targets": ["3ds_max_2025"]}}
-{"text": "3ds max 2025 с верху давай", "expected": {"layout": "top_half", "targets": ["3ds_max_2025"]}}
-{"text": "3ds max 2025 сверху", "expected": {"layout": "top_half", "targets": ["3ds_max_2025"]}}
-{"text": "3ds max 2025 сверху написано", "expected": {"missing": ["layout"]}}
-{"text": "3ds max 2025 сделай на максимум экрана на экране", "expected": {"layout": "fullscreen", "targets": ["3ds_max_2025"]}}
-{"text": "3ds max 2025 слева", "expected": {"layout": "left_half", "targets": ["3ds_max_2025"]}}
-{"text": "3ds max 2025 слева winword справа пожалуйста", "expected": {"layout": "split_2_vertical", "targets": ["3ds_max_2025", "word"]}}
-{"text": "3ds max 2025 снизу", "expected": {"layout": "bottom_half", "targets": ["3ds_max_2025"]}}
-{"text": "3ds max 2025 снизу мелькает", "expected": {"missing": ["layout"]}}
-{"text": "3ds max 2025 справа", "expected": {"layout": "right_half", "targets": ["3ds_max_2025"]}}
-{"text": "3ds max 2025 справо", "expected": {"layout": "right_half", "targets": ["3ds_max_2025"]}}
-{"text": "3ds max 2025 тупит", "expected": {"missing": ["layout"]}}
-{"text": "3dsmax а потом excel палавину плиз", "expected": {"layout": "split_2_vertical", "targets": ["3ds_max_2025", "excel"]}}
-{"text": "3dsmax в центр", "expected": {"layout": "center", "targets": ["3ds_max_2025"]}}
-{"text": "3dsmax во весь экран нормально", "expected": {"layout": "fullscreen", "targets": ["3ds_max_2025"]}}
-{"text": "3dsmax завис", "expected": {"missing": ["layout"]}}
-{"text": "3dsmax на весь екран", "expected": {"layout": "fullscreen", "targets": ["3ds_max_2025"]}}
-{"text": "3dsmax на весь экран", "expected": {"layout": "fullscreen", "targets": ["3ds_max_2025"]}}
-{"text": "3dsmax на на левый бок щас", "expected": {"layout": "left_half", "targets": ["3ds_max_2025"]}}
-{"text": "3dsmax на по середине пожалуйста", "expected": {"layout": "center", "targets": ["3ds_max_2025"]}}
-{"text": "3dsmax на с низу быстро", "expected": {"layout": "bottom_half", "targets": ["3ds_max_2025"]}}
-{"text": "3dsmax не работает", "expected": {"missing": ["layout"]}}
-{"text": "3dsmax рядом с perfmon по полам у меня", "expected": {"layout": "split_2_vertical", "targets": ["3ds_max_2025", "performance_monitor"]}}
-{"text": "3dsmax сверху", "expected": {"layout": "top_half", "targets": ["3ds_max_2025"]}}
-{"text": "3dsmax сверху msinfo32 снизу у меня", "expected": {"layout": "split_2_horizontal", "targets": ["3ds_max_2025", "system_information"]}}
-{"text": "3dsmax сверху впн снизу давай", "expected": {"layout": "split_2_horizontal", "targets": ["3ds_max_2025", "planetvpn1"]}}
-{"text": "3dsmax сделай на максимум экрана быстро", "expected": {"layout": "fullscreen", "targets": ["3ds_max_2025"]}}
-{"text": "3dsmax слева", "expected": {"layout": "left_half", "targets": ["3ds_max_2025"]}}
-{"text": "3dsmax слева device manager справа щас", "expected": {"layout": "split_2_vertical", "targets": ["3ds_max_2025", "device_manager"]}}
-{"text": "3dsmax слева remote desktop connection справа щас", "expected": {"layout": "split_2_vertical", "targets": ["3ds_max_2025", "remote_desktop_connection"]}}
-{"text": "3dsmax слева красиво", "expected": {"missing": ["layout"]}}
-{"text": "3dsmax слево", "expected": {"layout": "left_half", "targets": ["3ds_max_2025"]}}
-{"text": "3dsmax сллева", "expected": {"layout": "left_half", "targets": ["3ds_max_2025"]}}
-{"text": "3dsmax снизу", "expected": {"layout": "bottom_half", "targets": ["3ds_max_2025"]}}
-{"text": "3dsmax снизу мелькает как обычно", "expected": {"missing": ["layout"]}}
-{"text": "3dsmax справа", "expected": {"layout": "right_half", "targets": ["3ds_max_2025"]}}
-{"text": "3dsmax тупит опять", "expected": {"missing": ["layout"]}}
-{"text": "3dsmx справа", "expected": {"layout": "right_half", "targets": ["3ds_max_2025"]}}
-{"text": "acobat reader на весь экран", "expected": {"layout": "fullscreen", "targets": ["acrobat_reader"]}}
-{"text": "acrobat rader слева красиво", "expected": {"missing": ["layout"]}}
-{"text": "acrobat rader справа", "expected": {"layout": "right_half", "targets": ["acrobat_reader"]}}
-{"text": "acrobat reader в центр", "expected": {"layout": "center", "targets": ["acrobat_reader"]}}
-{"text": "acrobat reader максимально", "expected": {"layout": "fullscreen", "targets": ["acrobat_reader"]}}
-{"text": "acrobat reader на весь экран", "expected": {"layout": "fullscreen", "targets": ["acrobat_reader"]}}
-{"text": "acrobat reader на с верху на экране", "expected": {"layout": "top_half", "targets": ["acrobat_reader"]}}
-{"text": "acrobat reader потом премиер про пополам экрана пожалуйста", "expected": {"layout": "split_2_vertical", "targets": ["acrobat_reader", "premiere_pro"]}}
-{"text": "acrobat reader сверху", "expected": {"layout": "top_half", "targets": ["acrobat_reader"]}}
-{"text": "acrobat reader сделай во весь экран щас", "expected": {"layout": "fullscreen", "targets": ["acrobat_reader"]}}
-{"text": "acrobat reader слева", "expected": {"layout": "left_half", "targets": ["acrobat_reader"]}}
-{"text": "acrobat reader слева windows media player legacy справа давай", "expected": {"layout": "split_2_vertical", "targets": ["acrobat_reader", "windows_media_player_legacy"]}}
-{"text": "acrobat reader снизу", "expected": {"layout": "bottom_half", "targets": ["acrobat_reader"]}}
-{"text": "acrobat reader сннизу", "expected": {"layout": "bottom_half", "targets": ["acrobat_reader"]}}
-{"text": "acrobat reader спправа", "expected": {"layout": "right_half", "targets": ["acrobat_reader"]}}
-{"text": "acrobat reader спраа", "expected": {"layout": "right_half", "targets": ["acrobat_reader"]}}
-{"text": "acrobat reader справа", "expected": {"layout": "right_half", "targets": ["acrobat_reader"]}}
-{"text": "acrobat readr справа", "expected": {"layout": "right_half", "targets": ["acrobat_reader"]}}
-{"text": "acrobat в центр", "expected": {"layout": "center", "targets": ["acrobat_reader"]}}
-{"text": "acrobat на в левую чаасть", "expected": {"layout": "left_half", "targets": ["acrobat_reader"]}}
-{"text": "acrobat на вверх", "expected": {"layout": "top_half", "targets": ["acrobat_reader"]}}
-{"text": "acrobat на весь экран", "expected": {"layout": "fullscreen", "targets": ["acrobat_reader"]}}
-{"text": "acrobat на весь экрн", "expected": {"layout": "fullscreen", "targets": ["acrobat_reader"]}}
-{"text": "acrobat на весь эран", "expected": {"layout": "fullscreen", "targets": ["acrobat_reader"]}}
-{"text": "acrobat на на правый бок давай", "expected": {"layout": "right_half", "targets": ["acrobat_reader"]}}
-{"text": "acrobat на по середине пожалуйста", "expected": {"layout": "center", "targets": ["acrobat_reader"]}}
-{"text": "acrobat на правый бок плиз", "expected": {"layout": "right_half", "targets": ["acrobat_reader"]}}
-{"text": "acrobat над charmap быстро", "expected": {"layout": "split_2_horizontal", "targets": ["acrobat_reader", "character_map"]}}
-{"text": "acrobat над три де макс плиз", "expected": {"layout": "split_2_horizontal", "targets": ["acrobat_reader", "3ds_max_2025"]}}
-{"text": "acrobat сверу", "expected": {"layout": "top_half", "targets": ["acrobat_reader"]}}
-{"text": "acrobat сверху", "expected": {"layout": "top_half", "targets": ["acrobat_reader"]}}
-{"text": "acrobat сверху напсано", "expected": {"missing": ["layout"]}}
-{"text": "acrobat сделай во весь экран щас", "expected": {"layout": "fullscreen", "targets": ["acrobat_reader"]}}
-{"text": "acrobat слева", "expected": {"layout": "left_half", "targets": ["acrobat_reader"]}}
-{"text": "acrobat слева msconfig справа плиз", "expected": {"layout": "split_2_vertical", "targets": ["acrobat_reader", "system_configuration"]}}
-{"text": "acrobat сллева", "expected": {"layout": "left_half", "targets": ["acrobat_reader"]}}
-{"text": "acrobat снизу", "expected": {"layout": "bottom_half", "targets": ["acrobat_reader"]}}
-{"text": "acrobat сниизу", "expected": {"layout": "bottom_half", "targets": ["acrobat_reader"]}}
-{"text": "acrobat сннизу", "expected": {"layout": "bottom_half", "targets": ["acrobat_reader"]}}
-{"text": "acrobat спправа", "expected": {"layout": "right_half", "targets": ["acrobat_reader"]}}
-{"text": "acrobat спраава", "expected": {"layout": "right_half", "targets": ["acrobat_reader"]}}
-{"text": "acrobat справа", "expected": {"layout": "right_half", "targets": ["acrobat_reader"]}}
-{"text": "acrobat тупит", "expected": {"missing": ["layout"]}}
-{"text": "acrrobat справа", "expected": {"layout": "right_half", "targets": ["acrobat_reader"]}}
-{"text": "adbe media encoder справа", "expected": {"layout": "right_half", "targets": ["media_encoder"]}}
-{"text": "adbe premiere слева", "expected": {"layout": "left_half", "targets": ["premiere_pro"]}}
-{"text": "addobe acrobat слева", "expected": {"layout": "left_half", "targets": ["acrobat_reader"]}}
-{"text": "adobbe acrobat на весь экран", "expected": {"layout": "fullscreen", "targets": ["acrobat_reader"]}}
-{"text": "adobbe acrobat справа", "expected": {"layout": "right_half", "targets": ["acrobat_reader"]}}
-{"text": "adobbe photoshop сверху", "expected": {"layout": "top_half", "targets": ["photoshop"]}}
-{"text": "adobe acroat сверху", "expected": {"layout": "top_half", "targets": ["acrobat_reader"]}}
-{"text": "adobe acrobat в центр", "expected": {"layout": "center", "targets": ["acrobat_reader"]}}
-{"text": "adobe acrobat громко уведомляет", "expected": {"missing": ["layout"]}}
-{"text": "adobe acrobat затем winword на две половины плиз", "expected": {"layout": "split_2_vertical", "targets": ["acrobat_reader", "word"]}}
-{"text": "adobe acrobat на весь экран", "expected": {"layout": "fullscreen", "targets": ["acrobat_reader"]}}
-{"text": "adobe acrobat на на низ пожалуйста", "expected": {"layout": "bottom_half", "targets": ["acrobat_reader"]}}
-{"text": "adobe acrobat на с право давай", "expected": {"layout": "right_half", "targets": ["acrobat_reader"]}}
-{"text": "adobe acrobat на справа у меня", "expected": {"layout": "right_half", "targets": ["acrobat_reader"]}}
-{"text": "adobe acrobat над services нормально", "expected": {"layout": "split_2_horizontal", "targets": ["acrobat_reader", "services"]}}
-{"text": "adobe acrobat не работает", "expected": {"missing": ["layout"]}}
-{"text": "adobe acrobat сверрху", "expected": {"layout": "top_half", "targets": ["acrobat_reader"]}}
-{"text": "adobe acrobat сверху", "expected": {"layout": "top_half", "targets": ["acrobat_reader"]}}
-{"text": "adobe acrobat сверху написано", "expected": {"missing": ["layout"]}}
-{"text": "adobe acrobat сделай максимально нормально", "expected": {"layout": "fullscreen", "targets": ["acrobat_reader"]}}
-{"text": "adobe acrobat слева", "expected": {"layout": "left_half", "targets": ["acrobat_reader"]}}
-{"text": "adobe acrobat снизу", "expected": {"layout": "bottom_half", "targets": ["acrobat_reader"]}}
-{"text": "adobe acrobat снизу мелькает", "expected": {"missing": ["layout"]}}
-{"text": "adobe acrobat справа", "expected": {"layout": "right_half", "targets": ["acrobat_reader"]}}
-{"text": "adobe affter effects на весь экран", "expected": {"layout": "fullscreen", "targets": ["after_effects"]}}
-{"text": "adobe affter effects справа", "expected": {"layout": "right_half", "targets": ["after_effects"]}}
-{"text": "adobe after effects fullscreen", "expected": {"layout": "fullscreen", "targets": ["after_effects"]}}
-{"text": "adobe after effects в правую часть на экране", "expected": {"layout": "right_half", "targets": ["after_effects"]}}
-{"text": "adobe after effects в центр", "expected": {"layout": "center", "targets": ["after_effects"]}}
-{"text": "adobe after effects лагает", "expected": {"missing": ["layout"]}}
-{"text": "adobe after effects на весь экран", "expected": {"layout": "fullscreen", "targets": ["after_effects"]}}
-{"text": "adobe after effects потом regedit палавину на экране", "expected": {"layout": "split_2_vertical", "targets": ["after_effects", "regedit"]}}
-{"text": "adobe after effects развернутым щас", "expected": {"layout": "fullscreen", "targets": ["after_effects"]}}
-{"text": "adobe after effects сверху", "expected": {"layout": "top_half", "targets": ["after_effects"]}}
-{"text": "adobe after effects сврху", "expected": {"layout": "top_half", "targets": ["after_effects"]}}
-{"text": "adobe after effects слева", "expected": {"layout": "left_half", "targets": ["after_effects"]}}
-{"text": "adobe after effects слева one note спава щас", "expected": {"layout": "split_2_vertical", "targets": ["after_effects", "onenote"]}}
-{"text": "adobe after effects слева run справа нормально", "expected": {"layout": "split_2_vertical", "targets": ["after_effects", "run"]}}
-{"text": "adobe after effects слево windows powershell ise (x86) справа быстро", "expected": {"layout": "split_2_vertical", "targets": ["after_effects", "powershell"]}}
-{"text": "adobe after effects снизу", "expected": {"layout": "bottom_half", "targets": ["after_effects"]}}
-{"text": "adobe after effects справа", "expected": {"layout": "right_half", "targets": ["after_effects"]}}
-{"text": "adobe after effectts снизу", "expected": {"layout": "bottom_half", "targets": ["after_effects"]}}
-{"text": "adobe after effets в центр", "expected": {"layout": "center", "targets": ["after_effects"]}}
-{"text": "adobe illustrator в центр", "expected": {"layout": "center", "targets": ["illustrator"]}}
-{"text": "adobe illustrator и terminal друг под другом быстро", "expected": {"layout": "split_2_horizontal", "targets": ["illustrator", "terminal"]}}
-{"text": "adobe illustrator на в верх плиз", "expected": {"layout": "top_half", "targets": ["illustrator"]}}
-{"text": "adobe illustrator открыт уже", "expected": {"missing": ["layout"]}}
-{"text": "adobe illustrator сверху", "expected": {"layout": "top_half", "targets": ["illustrator"]}}
-{"text": "adobe illustrator сверху regedit снизу щас", "expected": {"layout": "split_2_horizontal", "targets": ["illustrator", "regedit"]}}
-{"text": "adobe illustrator слева", "expected": {"layout": "left_half", "targets": ["illustrator"]}}
-{"text": "adobe illustrator слева крсиво опять", "expected": {"missing": ["layout"]}}
-{"text": "adobe illustrator снизу", "expected": {"layout": "bottom_half", "targets": ["illustrator"]}}
-{"text": "adobe illustrator справа", "expected": {"layout": "right_half", "targets": ["illustrator"]}}
-{"text": "adobe illustrator тупит опяь", "expected": {"missing": ["layout"]}}
-{"text": "adobe lightroom в центр", "expected": {"layout": "center", "targets": ["lightroom"]}}
-{"text": "adobe lightroom завис", "expected": {"missing": ["layout"]}}
-{"text": "adobe lightroom и премиер про друг под другом нормально", "expected": {"layout": "split_2_horizontal", "targets": ["lightroom", "premiere_pro"]}}
-{"text": "adobe lightroom на по середине", "expected": {"layout": "center", "targets": ["lightroom"]}}
-{"text": "adobe lightroom на сниу нормально", "expected": {"layout": "bottom_half", "targets": ["lightroom"]}}
-{"text": "adobe lightroom плюс ваннот на две половины пожалуйста", "expected": {"layout": "split_2_vertical", "targets": ["lightroom", "onenote"]}}
-{"text": "adobe lightroom с лева давай", "expected": {"layout": "left_half", "targets": ["lightroom"]}}
-{"text": "adobe lightroom сверу", "expected": {"layout": "top_half", "targets": ["lightroom"]}}
-{"text": "adobe lightroom сверху", "expected": {"layout": "top_half", "targets": ["lightroom"]}}
-{"text": "adobe lightroom сизу", "expected": {"layout": "bottom_half", "targets": ["lightroom"]}}
-{"text": "adobe lightroom слеа", "expected": {"layout": "left_half", "targets": ["lightroom"]}}
-{"text": "adobe lightroom слева", "expected": {"layout": "left_half", "targets": ["lightroom"]}}
-{"text": "adobe lightroom слева charmap справа быстро", "expected": {"layout": "split_2_vertical", "targets": ["lightroom", "character_map"]}}
-{"text": "adobe lightroom слево нормально", "expected": {"layout": "left_half", "targets": ["lightroom"]}}
-{"text": "adobe lightroom снизу", "expected": {"layout": "bottom_half", "targets": ["lightroom"]}}
-{"text": "adobe media encoder в низ нормально", "expected": {"layout": "bottom_half", "targets": ["media_encoder"]}}
-{"text": "adobe media encoder в центр", "expected": {"layout": "center", "targets": ["media_encoder"]}}
-{"text": "adobe media encoder влево", "expected": {"layout": "left_half", "targets": ["media_encoder"]}}
-{"text": "adobe media encoder и excel друг под другом нормально", "expected": {"layout": "split_2_horizontal", "targets": ["media_encoder", "excel"]}}
-{"text": "adobe media encoder над видеомонтаж adobe у меня", "expected": {"layout": "split_2_horizontal", "targets": ["media_encoder", "premiere_pro"]}}
-{"text": "adobe media encoder под terminal давай", "expected": {"layout": "split_2_horizontal", "targets": ["terminal", "media_encoder"]}}
-{"text": "adobe media encoder сверху", "expected": {"layout": "top_half", "targets": ["media_encoder"]}}
-{"text": "adobe media encoder слева", "expected": {"layout": "left_half", "targets": ["media_encoder"]}}
-{"text": "adobe media encoder слева appvlp справа на экране", "expected": {"layout": "split_2_vertical", "targets": ["media_encoder", "database_compare"]}}
-{"text": "adobe media encoder снизу", "expected": {"layout": "bottom_half", "targets": ["media_encoder"]}}
-{"text": "adobe photoshhop в центр", "expected": {"layout": "center", "targets": ["photoshop"]}}
-{"text": "adobe photoshhop сверху", "expected": {"layout": "top_half", "targets": ["photoshop"]}}
-{"text": "adobe photoshop в центр", "expected": {"layout": "center", "targets": ["photoshop"]}}
-{"text": "adobe photoshop и on screen keyboard друг под другом на экране", "expected": {"layout": "split_2_horizontal", "targets": ["photoshop", "on_screen_keyboard"]}}
-{"text": "adobe photoshop по середине плиз", "expected": {"layout": "center", "targets": ["photoshop"]}}
-{"text": "adobe photoshop сверху", "expected": {"layout": "top_half", "targets": ["photoshop"]}}
-{"text": "adobe photoshop слева", "expected": {"layout": "left_half", "targets": ["photoshop"]}}
-{"text": "adobe photoshop снизу", "expected": {"layout": "bottom_half", "targets": ["photoshop"]}}
-{"text": "adobe potoshop снизу", "expected": {"layout": "bottom_half", "targets": ["photoshop"]}}
-{"text": "adobe premiere а потом microsoft store палавину на экране", "expected": {"layout": "split_2_vertical", "targets": ["premiere_pro", "microsoft_store"]}}
-{"text": "adobe premiere в центр", "expected": {"layout": "center", "targets": ["premiere_pro"]}}
-{"text": "adobe premiere на в верх быстро", "expected": {"layout": "top_half", "targets": ["premiere_pro"]}}
-{"text": "adobe premiere на верх быстро", "expected": {"layout": "top_half", "targets": ["premiere_pro"]}}
-{"text": "adobe premiere плюс wmplayer поровну пожалуйста", "expected": {"layout": "split_2_vertical", "targets": ["premiere_pro", "windows_media_player_legacy"]}}
-{"text": "adobe premiere под disk cleanup пожалуйста", "expected": {"layout": "split_2_horizontal", "targets": ["disk_cleanup", "premiere_pro"]}}
-{"text": "adobe premiere сева", "expected": {"layout": "left_half", "targets": ["premiere_pro"]}}
-{"text": "adobe premiere слева", "expected": {"layout": "left_half", "targets": ["premiere_pro"]}}
-{"text": "adobe premiere слева кибер пунк справа быстро", "expected": {"layout": "split_2_vertical", "targets": ["premiere_pro", "cyberpunk_2077"]}}
-{"text": "adobe premiere снизу", "expected": {"layout": "bottom_half", "targets": ["premiere_pro"]}}
-{"text": "adobe premiere сннизу", "expected": {"layout": "bottom_half", "targets": ["premiere_pro"]}}
-{"text": "adoe premiere в центр", "expected": {"layout": "center", "targets": ["premiere_pro"]}}
-{"text": "adoobe photoshop в центр", "expected": {"layout": "center", "targets": ["photoshop"]}}
-{"text": "after efects слева ноутпад справа давай", "expected": {"layout": "split_2_vertical", "targets": ["after_effects", "notepad"]}}
-{"text": "after effects в центр", "expected": {"layout": "center", "targets": ["after_effects"]}}
-{"text": "after effects в центтр", "expected": {"layout": "center", "targets": ["after_effects"]}}
-{"text": "after effects затем music на две полоовины щас", "expected": {"layout": "split_2_vertical", "targets": ["after_effects", "yandexmusic"]}}
-{"text": "after effects на в центр пожалуйста", "expected": {"layout": "center", "targets": ["after_effects"]}}
-{"text": "after effects плюс calculator на две половины у меня", "expected": {"layout": "split_2_vertical", "targets": ["after_effects", "calculator"]}}
-{"text": "after effects по центру", "expected": {"layout": "center", "targets": ["after_effects"]}}
-{"text": "after effects сверху powerpoint снизу щас", "expected": {"layout": "split_2_horizontal", "targets": ["after_effects", "powerpoint"]}}
-{"text": "after effects снизу", "expected": {"layout": "bottom_half", "targets": ["after_effects"]}}
-{"text": "appvlp и edge по половинам", "expected": {"layout": "split_2_vertical", "targets": ["database_compare", "edge"]}}
-{"text": "appvlp и vpn друг под другом щас", "expected": {"layout": "split_2_horizontal", "targets": ["spreadsheet_compare", "planetvpn1"]}}
-{"text": "appvlp и вайршарк друг под другом быстро", "expected": {"layout": "split_2_horizontal", "targets": ["database_compare", "wireshark"]}}
-{"text": "appvlp над character map", "expected": {"layout": "split_2_horizontal", "targets": ["database_compare", "character_map"]}}
-{"text": "appvlp над media encoder плиз", "expected": {"layout": "split_2_horizontal", "targets": ["spreadsheet_compare", "media_encoder"]}}
-{"text": "appvlp под regedit щас", "expected": {"layout": "split_2_horizontal", "targets": ["regedit", "database_compare"]}}
-{"text": "appvlp под три де макс быстро", "expected": {"layout": "split_2_horizontal", "targets": ["3ds_max_2025", "database_compare"]}}
-{"text": "appvlp под яндекс мьюзик быстро", "expected": {"layout": "split_2_horizontal", "targets": ["yandexmusic", "spreadsheet_compare"]}}
-{"text": "appvlp рядом с settings пополам", "expected": {"layout": "split_2_vertical", "targets": ["database_compare", "settings"]}}
-{"text": "appvlp сверху calculator снизу давай", "expected": {"layout": "split_2_horizontal", "targets": ["spreadsheet_compare", "calculator"]}}
-{"text": "bavis разложи disk management msinfo32 дота и performance monitor плиткой у меня", "expected": {"layout": "grid_2x2", "targets": ["disk_management", "system_information", "dota_2", "performance_monitor"]}}
-{"text": "beais разложи тредесмакс powerpnt покрасить 3д модель и powershell 2 на 2", "expected": {"layout": "grid_2x2", "targets": ["3ds_max_2025", "powerpoint", "substance_painter", "powershell"]}}
-{"text": "beaviis размести calc powerpoint settings print management 2 на 2 щас", "expected": {"layout": "grid_2x2", "targets": ["calculator", "powerpoint", "settings", "print_management"]}}
-{"text": "beaviis сделай сетку из on-screen keyboard powerpnt mspaint и psr давай", "expected": {"layout": "grid_2x2", "targets": ["on_screen_keyboard", "powerpoint", "paint", "steps_recorder"]}}
-{"text": "beavis рааскинь appvlp wmplayer microsoft store openai сеткой быстро", "expected": {"layout": "grid_2x2", "targets": ["database_compare", "windows_media_player_legacy", "microsoft_store", "codex"]}}
-{"text": "beavis разложи adobe acrobat покрасить 3д модель media encоder и powerpnt плиткой", "expected": {"layout": "grid_2x2", "targets": ["acrobat_reader", "substance_painter", "media_encoder", "powerpoint"]}}
-{"text": "beavis разложи adobe after effects microsoft store database compare и taskmgr плиткой щас", "expected": {"layout": "grid_2x2", "targets": ["after_effects", "microsoft_store", "database_compare", "task_manager"]}}
-{"text": "beavis разложи appvlp print management codx и powershell 2 на 2 плиз", "expected": {"layout": "grid_2x2", "targets": ["spreadsheet_compare", "print_management", "codex", "powershell"]}}
-{"text": "beavis разложи appvlp windows terminal блокнот и cleanmgr два на два", "expected": {"layout": "grid_2x2", "targets": ["database_compare", "terminal", "notepad", "disk_cleanup"]}}
-{"text": "beavis разложи appvlp киберпанк лайтрумм и word плиткой пожалуйста", "expected": {"layout": "grid_2x2", "targets": ["database_compare", "cyberpunk_2077", "lightroom", "word"]}}
-{"text": "beavis разложи appvlp медиа енкодер adobe premiere и device manager по углам пожалуйста", "expected": {"layout": "grid_2x2", "targets": ["database_compare", "media_encoder", "premiere_pro", "device_manager"]}}
-{"text": "beavis разложи calc msconfig lightroom и microsoft project два на два", "expected": {"layout": "grid_2x2", "targets": ["calculator", "system_configuration", "lightroom", "project"]}}
-{"text": "beavis разложи calculator system information task manager и device manager квадратом у меня", "expected": {"layout": "grid_2x2", "targets": ["calculator", "system_information", "task_manager", "device_manager"]}}
-{"text": "beavis разложи calculator winwrd psr и magnify плиткой", "expected": {"layout": "grid_2x2", "targets": ["calculator", "word", "steps_recorder", "magnify"]}}
-{"text": "beavis разложи character map блокнот outlook и cleanmgr 2 на 2 на экране", "expected": {"layout": "grid_2x2", "targets": ["character_map", "notepad", "outlook", "disk_cleanup"]}}
-{"text": "beavis разложи cleanmgr powerpoint performance monitor и taskmgr сеткой на экране", "expected": {"layout": "grid_2x2", "targets": ["disk_cleanup", "powerpoint", "performance_monitor", "task_manager"]}}
-{"text": "beavis разложи cmd perfmon афтер эффектс и office два на два пожалуйста", "expected": {"layout": "grid_2x2", "targets": ["cmd", "performance_monitor", "after_effects", "office"]}}
-{"text": "beavis разложи cntrol word event viewer и terminal два на два плиз", "expected": {"layout": "grid_2x2", "targets": ["control_panel", "word", "event_viewer", "terminal"]}}
-{"text": "beavis разложи codex языковые параметры office проект офис и taskschd плиткой", "expected": {"layout": "grid_2x2", "targets": ["codex", "office", "project", "task_scheduler"]}}
-{"text": "beavis разложи command prompt system information powerpoint и wt плиткой нормально", "expected": {"layout": "grid_2x2", "targets": ["cmd", "system_information", "powerpoint", "terminal"]}}
-{"text": "beavis разложи command prompt акробат ридер services и edge четыре окна сеткой быстро", "expected": {"layout": "grid_2x2", "targets": ["cmd", "acrobat_reader", "services", "edge"]}}
-{"text": "beavis разложи compmgmt diskmgmt appvlp и character map 2 на 2 плиз", "expected": {"layout": "grid_2x2", "targets": ["computer_management", "disk_management", "spreadsheet_compare", "character_map"]}}
-{"text": "beavis разложи compmgmt дай муызку task manager и openai квадратом на экране", "expected": {"layout": "grid_2x2", "targets": ["computer_management", "yandexmusic", "task_manager", "codex"]}}
-{"text": "beavis разложи computer management devmgmt one not и yandexmusic плиткой", "expected": {"layout": "grid_2x2", "targets": ["computer_management", "device_manager", "onenote", "yandexmusic"]}}
+{"text": "bavis telega вверх у меня", "expected": {"layout": "top_half", "targets": ["telegram"]}}
+{"text": "bavis в левую часть окно давай", "expected": {"layout": "left_half", "targets": ["current"]}}
+{"text": "bavis в центр это у меня", "expected": {"layout": "center", "targets": ["current"]}}
+{"text": "bavis вскод завис блин", "expected": {"missing": ["layout"]}}
+{"text": "bavis запусти телеграмм", "expected": {"missing": ["layout"]}}
+{"text": "bavis не закрывай телега", "expected": {"missing": ["layout"]}}
+{"text": "bavis открой excel", "expected": {"missing": ["layout"]}}
+{"text": "bavis отправь окно на низ щас", "expected": {"layout": "bottom_half", "targets": ["current"]}}
+{"text": "bavis перекинь в центр текущие окно пожалуйста", "expected": {"layout": "center", "targets": ["current"]}}
+{"text": "bavis половина дела сделана опять", "expected": {"missing": ["layout"]}}
+{"text": "bavis поставь excel сверху а телега снизу щас", "expected": {"layout": "split_2_horizontal", "targets": ["excel", "telegram"]}}
+{"text": "bavis поставь telega слева а excel справа пожалуйста", "expected": {"layout": "split_2_vertical", "targets": ["telegram", "excel"]}}
+{"text": "bavis поставь telegram слева а excel справа быстро", "expected": {"layout": "split_2_vertical", "targets": ["telegram", "excel"]}}
+{"text": "bavis поставь его fullscreen на экране", "expected": {"layout": "fullscreen", "targets": ["current"]}}
+{"text": "bavis поставь тг справо пожалуйста", "expected": {"layout": "right_half", "targets": ["telegram"]}}
+{"text": "bavis разверни telega и excel пополам на экране", "expected": {"layout": "split_2_vertical", "targets": ["telegram", "excel"]}}
+{"text": "bavis разверни эксель и телеграм пополам на экране", "expected": {"layout": "split_2_vertical", "targets": ["excel", "telegram"]}}
+{"text": "bavis разверни эксель и телеграмм пополам давай", "expected": {"layout": "split_2_vertical", "targets": ["excel", "telegram"]}}
+{"text": "bavis раздели экран между телеграмм и эксель нормально", "expected": {"layout": "split_2_vertical", "targets": ["telegram", "excel"]}}
+{"text": "bavis сверху его быстро", "expected": {"layout": "top_half", "targets": ["current"]}}
+{"text": "bavis сделай сверху телеграм плиз", "expected": {"layout": "top_half", "targets": ["telegram"]}}
+{"text": "bavis сделай телега и эксель рядом на экране", "expected": {"layout": "split_2_vertical", "targets": ["telegram", "excel"]}}
+{"text": "bavis справа активное окно на экране", "expected": {"layout": "right_half", "targets": ["current"]}}
+{"text": "bavis текущее окно на снизу давай", "expected": {"layout": "bottom_half", "targets": ["current"]}}
+{"text": "bavis текущее окно слева у меня", "expected": {"layout": "left_half", "targets": ["current"]}}
+{"text": "bavis текущие окно на весь экран давай", "expected": {"layout": "fullscreen", "targets": ["current"]}}
+{"text": "bavis эксель в верх плиз", "expected": {"layout": "top_half", "targets": ["excel"]}}
+{"text": "bavis эксель сверху телеграм снизу у меня", "expected": {"layout": "split_2_horizontal", "targets": ["excel", "telegram"]}}
+{"text": "bavis это окно на влево щас", "expected": {"layout": "left_half", "targets": ["current"]}}
+{"text": "beaavis в верх окно на экране", "expected": {"layout": "top_half", "targets": ["current"]}}
+{"text": "beaavis закинь окно с низу пожалуйста", "expected": {"layout": "bottom_half", "targets": ["current"]}}
+{"text": "beaavis на низ excel давай", "expected": {"layout": "bottom_half", "targets": ["excel"]}}
+{"text": "beaavis окно на посередине у меня", "expected": {"layout": "center", "targets": ["current"]}}
+{"text": "beaavis перекинь на низ это давай", "expected": {"layout": "bottom_half", "targets": ["current"]}}
+{"text": "beaavis перемести в правую часть текущее плиз", "expected": {"layout": "right_half", "targets": ["current"]}}
+{"text": "beaavis раздели экран между телеграмм и эксель щас", "expected": {"layout": "split_2_vertical", "targets": ["telegram", "excel"]}}
+{"text": "beaavis раскинь excel и тг по половинам у меня", "expected": {"layout": "split_2_vertical", "targets": ["excel", "telegram"]}}
+{"text": "beaavis снизу текущее быстро", "expected": {"layout": "bottom_half", "targets": ["current"]}}
+{"text": "beaavis тг лагает", "expected": {"missing": ["layout"]}}
+{"text": "beaavis текущее вверх щас", "expected": {"layout": "top_half", "targets": ["current"]}}
+{"text": "beaavis текущее окно на в центр плиз", "expected": {"layout": "center", "targets": ["current"]}}
+{"text": "beaavis телеграмм с низу быстро", "expected": {"layout": "bottom_half", "targets": ["telegram"]}}
+{"text": "beaavis удали эксель", "expected": {"missing": ["layout"]}}
+{"text": "beaavis центром его щас", "expected": {"layout": "center", "targets": ["current"]}}
+{"text": "beaavis эксель на в центр плиз", "expected": {"layout": "center", "targets": ["excel"]}}
+{"text": "beaavis это окно центром давай", "expected": {"layout": "center", "targets": ["current"]}}
+{"text": "beais excel под телеграм нормально", "expected": {"layout": "split_2_horizontal", "targets": ["telegram", "excel"]}}
+{"text": "beais в центр окно быстро", "expected": {"layout": "center", "targets": ["current"]}}
+{"text": "beais его слева пожалуйста", "expected": {"layout": "left_half", "targets": ["current"]}}
+{"text": "beais закинь активное окно слева нормально", "expected": {"layout": "left_half", "targets": ["current"]}}
+{"text": "beais закинь вверх текущее у меня", "expected": {"layout": "top_half", "targets": ["current"]}}
+{"text": "beais запусти excel", "expected": {"missing": ["layout"]}}
+{"text": "beais максимизируй окно на максимум экрана у меня", "expected": {"layout": "fullscreen", "targets": ["current"]}}
+{"text": "beais отправь слево текущее окно щас", "expected": {"layout": "left_half", "targets": ["current"]}}
+{"text": "beais отправь справа тг плиз", "expected": {"layout": "right_half", "targets": ["telegram"]}}
+{"text": "beais перемести с низу текущее окно", "expected": {"layout": "bottom_half", "targets": ["current"]}}
+{"text": "beais перемести с низу текущее окно давай", "expected": {"layout": "bottom_half", "targets": ["current"]}}
+{"text": "beais по середине эксель нормально", "expected": {"layout": "center", "targets": ["excel"]}}
+{"text": "beais поставь таймер", "expected": {"missing": ["layout"]}}
+{"text": "beais поставь эксель слева а telega справа плиз", "expected": {"layout": "split_2_vertical", "targets": ["excel", "telegram"]}}
+{"text": "beais размести активное окно в левую часть нормально", "expected": {"layout": "left_half", "targets": ["current"]}}
+{"text": "beais размести на верх его пожалуйста", "expected": {"layout": "top_half", "targets": ["current"]}}
+{"text": "beais размести текущее окно в правую часть давай", "expected": {"layout": "right_half", "targets": ["current"]}}
+{"text": "beais раскинь excel и telega по половинам", "expected": {"layout": "split_2_vertical", "targets": ["excel", "telegram"]}}
+{"text": "beais телеграмм и excel друг под другом плиз", "expected": {"layout": "split_2_horizontal", "targets": ["telegram", "excel"]}}
+{"text": "beais телеграмм слева excel справа у меня", "expected": {"layout": "split_2_vertical", "targets": ["telegram", "excel"]}}
+{"text": "beais эксель над telegram пожалуйста", "expected": {"layout": "split_2_horizontal", "targets": ["excel", "telegram"]}}
+{"text": "beais эксель слева тг справа", "expected": {"layout": "split_2_vertical", "targets": ["excel", "telegram"]}}
+{"text": "beais это на по середине нормально", "expected": {"layout": "center", "targets": ["current"]}}
+{"text": "beaviis telegram на справа", "expected": {"layout": "right_half", "targets": ["telegram"]}}
+{"text": "beaviis telegram открыт уже опять", "expected": {"missing": ["layout"]}}
+{"text": "beaviis активное окно с верху у меня", "expected": {"layout": "top_half", "targets": ["current"]}}
+{"text": "beaviis восстанови телега", "expected": {"missing": ["layout"]}}
+{"text": "beaviis окно слева", "expected": {"layout": "left_half", "targets": ["current"]}}
+{"text": "beaviis перекинь тг слево пожалуйста", "expected": {"layout": "left_half", "targets": ["telegram"]}}
+{"text": "beaviis по середине текущее окно у меня", "expected": {"layout": "center", "targets": ["current"]}}
+{"text": "beaviis по центру это окно у меня", "expected": {"layout": "center", "targets": ["current"]}}
+{"text": "beaviis поставь телеграм на весь екран у меня", "expected": {"layout": "fullscreen", "targets": ["telegram"]}}
+{"text": "beaviis разверни telegram и excel пополам щас", "expected": {"layout": "split_2_vertical", "targets": ["telegram", "excel"]}}
+{"text": "beaviis разверни мысль", "expected": {"missing": ["layout"]}}
+{"text": "beaviis раздели экран сверху снизу между тг и excel", "expected": {"layout": "split_2_horizontal", "targets": ["telegram", "excel"]}}
+{"text": "beaviis размести центром текущие окно щас", "expected": {"layout": "center", "targets": ["current"]}}
+{"text": "beaviis размести эксель вправо щас", "expected": {"layout": "right_half", "targets": ["excel"]}}
+{"text": "beaviis скачай telegram", "expected": {"missing": ["layout"]}}
+{"text": "beaviis справа текущие окно пожалуйста", "expected": {"layout": "right_half", "targets": ["current"]}}
+{"text": "beaviis текущие окно с лева пожалуйста", "expected": {"layout": "left_half", "targets": ["current"]}}
+{"text": "beaviis телеграм над эксель плиз", "expected": {"layout": "split_2_horizontal", "targets": ["telegram", "excel"]}}
+{"text": "beaviis телеграмм слева эксель справа", "expected": {"layout": "split_2_vertical", "targets": ["telegram", "excel"]}}
+{"text": "beaviis эксель вверх", "expected": {"layout": "top_half", "targets": ["excel"]}}
+{"text": "beaviis эксель на на правый бок у меня", "expected": {"layout": "right_half", "targets": ["excel"]}}
+{"text": "beaviis это окно фулл скрин", "expected": {"layout": "fullscreen", "targets": ["current"]}}
+{"text": "beaviis это снизу плиз", "expected": {"layout": "bottom_half", "targets": ["current"]}}
+{"text": "beavis ecel слева телега справа нормально", "expected": {"layout": "split_2_vertical", "targets": ["excel", "telegram"]}}
+{"text": "beavis exccel завис", "expected": {"missing": ["layout"]}}
+{"text": "beavis exceel слева телеграмм справа пожалуйста", "expected": {"layout": "split_2_vertical", "targets": ["excel", "telegram"]}}
+{"text": "beavis excel fullscreen", "expected": {"layout": "fullscreen", "targets": ["excel"]}}
+{"text": "beavis excel fullscreen плиз", "expected": {"layout": "fullscreen", "targets": ["excel"]}}
+{"text": "beavis excel fullscreen щас", "expected": {"layout": "fullscreen", "targets": ["excel"]}}
+{"text": "beavis excel fulscreen давай", "expected": {"layout": "fullscreen", "targets": ["excel"]}}
+{"text": "beavis excel а потом telega на две половины у меня", "expected": {"layout": "split_2_vertical", "targets": ["excel", "telegram"]}}
+{"text": "beavis excel а потом telegram пополам быстро", "expected": {"layout": "split_2_vertical", "targets": ["excel", "telegram"]}}
+{"text": "beavis excel а потом тг по полам быстро", "expected": {"layout": "split_2_vertical", "targets": ["excel", "telegram"]}}
+{"text": "beavis excel а потом телега палавину быстро", "expected": {"layout": "split_2_vertical", "targets": ["excel", "telegram"]}}
+{"text": "beavis excel а потом телега пополам экрана давай", "expected": {"layout": "split_2_vertical", "targets": ["excel", "telegram"]}}
+{"text": "beavis excel а потом телеграм пополам давай", "expected": {"layout": "split_2_vertical", "targets": ["excel", "telegram"]}}
+{"text": "beavis excel а потом телеграм поровну у меня", "expected": {"layout": "split_2_vertical", "targets": ["excel", "telegram"]}}
+{"text": "beavis excel в верх", "expected": {"layout": "top_half", "targets": ["excel"]}}
+{"text": "beavis excel в верх пожалуйста", "expected": {"layout": "top_half", "targets": ["excel"]}}
+{"text": "beavis excel в низ давай", "expected": {"layout": "bottom_half", "targets": ["excel"]}}
+{"text": "beavis excel в низ на экране", "expected": {"layout": "bottom_half", "targets": ["excel"]}}
+{"text": "beavis excel в низ пожалуйста", "expected": {"layout": "bottom_half", "targets": ["excel"]}}
+{"text": "beavis excel в правую часть пожалуйста", "expected": {"layout": "right_half", "targets": ["excel"]}}
+{"text": "beavis excel в середину", "expected": {"layout": "center", "targets": ["excel"]}}
+{"text": "beavis excel в середину плиз", "expected": {"layout": "center", "targets": ["excel"]}}
+{"text": "beavis excel ввверх на экране", "expected": {"layout": "top_half", "targets": ["excel"]}}
+{"text": "beavis excel вверх плиз", "expected": {"layout": "top_half", "targets": ["excel"]}}
+{"text": "beavis excel вверх пожалуйста", "expected": {"layout": "top_half", "targets": ["excel"]}}
+{"text": "beavis excel во весь экран давай", "expected": {"layout": "fullscreen", "targets": ["excel"]}}
+{"text": "beavis excel во весь экран на экране", "expected": {"layout": "fullscreen", "targets": ["excel"]}}
+{"text": "beavis excel во весь экран плиз", "expected": {"layout": "fullscreen", "targets": ["excel"]}}
+{"text": "beavis excel во весь экран пожалуйста", "expected": {"layout": "fullscreen", "targets": ["excel"]}}
+{"text": "beavis excel вправо нормально", "expected": {"layout": "right_half", "targets": ["excel"]}}
+{"text": "beavis excel громко уведомляет", "expected": {"missing": ["layout"]}}
+{"text": "beavis excel заис", "expected": {"missing": ["layout"]}}
+{"text": "beavis excel и telega друг под другом", "expected": {"layout": "split_2_horizontal", "targets": ["excel", "telegram"]}}
+{"text": "beavis excel и telega друг под другом быстро", "expected": {"layout": "split_2_horizontal", "targets": ["excel", "telegram"]}}
+{"text": "beavis excel и telega друг под другом давай", "expected": {"layout": "split_2_horizontal", "targets": ["excel", "telegram"]}}
+{"text": "beavis excel и telega друг под другом на экране", "expected": {"layout": "split_2_horizontal", "targets": ["excel", "telegram"]}}
+{"text": "beavis excel и telega друг под другом нормально", "expected": {"layout": "split_2_horizontal", "targets": ["excel", "telegram"]}}
+{"text": "beavis excel и telega друг под дугом нормально", "expected": {"layout": "split_2_horizontal", "targets": ["excel", "telegram"]}}
+{"text": "beavis excel и telegram друг под другом", "expected": {"layout": "split_2_horizontal", "targets": ["excel", "telegram"]}}
+{"text": "beavis excel и telegram друг под другом быстро", "expected": {"layout": "split_2_horizontal", "targets": ["excel", "telegram"]}}
+{"text": "beavis excel и telegram друг под другом давай", "expected": {"layout": "split_2_horizontal", "targets": ["excel", "telegram"]}}
+{"text": "beavis excel и telegram друг под другом плиз", "expected": {"layout": "split_2_horizontal", "targets": ["excel", "telegram"]}}
+{"text": "beavis excel и telegram друг под другом щас", "expected": {"layout": "split_2_horizontal", "targets": ["excel", "telegram"]}}
+{"text": "beavis excel и тг друг под другом", "expected": {"layout": "split_2_horizontal", "targets": ["excel", "telegram"]}}
+{"text": "beavis excel и тг друг под другом быстро", "expected": {"layout": "split_2_horizontal", "targets": ["excel", "telegram"]}}
+{"text": "beavis excel и тг друг под другом давай", "expected": {"layout": "split_2_horizontal", "targets": ["excel", "telegram"]}}
+{"text": "beavis excel и тг друг под другом нормально", "expected": {"layout": "split_2_horizontal", "targets": ["excel", "telegram"]}}
+{"text": "beavis excel и тг друг под другом у меня", "expected": {"layout": "split_2_horizontal", "targets": ["excel", "telegram"]}}
+{"text": "beavis excel и тг друг под другом щас", "expected": {"layout": "split_2_horizontal", "targets": ["excel", "telegram"]}}
+{"text": "beavis excel лагает", "expected": {"missing": ["layout"]}}
+{"text": "beavis excel лагает как обычно", "expected": {"missing": ["layout"]}}
+{"text": "beavis excel на в верх щас", "expected": {"layout": "top_half", "targets": ["excel"]}}
+{"text": "beavis excel на в левую часть у меня", "expected": {"layout": "left_half", "targets": ["excel"]}}
+{"text": "beavis excel на в низ", "expected": {"layout": "bottom_half", "targets": ["excel"]}}
+{"text": "beavis excel на в низ у меня", "expected": {"layout": "bottom_half", "targets": ["excel"]}}
+{"text": "beavis excel на в правую часть", "expected": {"layout": "right_half", "targets": ["excel"]}}
+{"text": "beavis excel на в правую часть быстро", "expected": {"layout": "right_half", "targets": ["excel"]}}
+{"text": "beavis excel на в правую часть давай", "expected": {"layout": "right_half", "targets": ["excel"]}}
+{"text": "beavis excel на в правую часть щас", "expected": {"layout": "right_half", "targets": ["excel"]}}
+{"text": "beavis excel на в центр", "expected": {"layout": "center", "targets": ["excel"]}}
+{"text": "beavis excel на в центр быстро", "expected": {"layout": "center", "targets": ["excel"]}}
+{"text": "beavis excel на вверх", "expected": {"layout": "top_half", "targets": ["excel"]}}
+{"text": "beavis excel на вверх быстро", "expected": {"layout": "top_half", "targets": ["excel"]}}
+{"text": "beavis excel на вверх давай", "expected": {"layout": "top_half", "targets": ["excel"]}}
+{"text": "beavis excel на верх быстро", "expected": {"layout": "top_half", "targets": ["excel"]}}
+{"text": "beavis excel на верхнюю половину", "expected": {"layout": "top_half", "targets": ["excel"]}}
+{"text": "beavis excel на верхнюю половину давай", "expected": {"layout": "top_half", "targets": ["excel"]}}
+{"text": "beavis excel на верхнюю половину пожалуйста", "expected": {"layout": "top_half", "targets": ["excel"]}}
+{"text": "beavis excel на весь экран плиз", "expected": {"layout": "fullscreen", "targets": ["excel"]}}
+{"text": "beavis excel на весь экран у меня", "expected": {"layout": "fullscreen", "targets": ["excel"]}}
+{"text": "beavis excel на весь экран щас", "expected": {"layout": "fullscreen", "targets": ["excel"]}}
+{"text": "beavis excel на влево давай", "expected": {"layout": "left_half", "targets": ["excel"]}}
+{"text": "beavis excel на вниз у меня", "expected": {"layout": "bottom_half", "targets": ["excel"]}}
+{"text": "beavis excel на вправо", "expected": {"layout": "right_half", "targets": ["excel"]}}
+{"text": "beavis excel на вправо нормально", "expected": {"layout": "right_half", "targets": ["excel"]}}
+{"text": "beavis excel на левую половину быстро", "expected": {"layout": "left_half", "targets": ["excel"]}}
+{"text": "beavis excel на левый бок нормально", "expected": {"layout": "left_half", "targets": ["excel"]}}
+{"text": "beavis excel на максимум экрана нормально", "expected": {"layout": "fullscreen", "targets": ["excel"]}}
+{"text": "beavis excel на максимум экрана пожалуйста", "expected": {"layout": "fullscreen", "targets": ["excel"]}}
+{"text": "beavis excel на на левый бок на экране", "expected": {"layout": "left_half", "targets": ["excel"]}}
+{"text": "beavis excel на на левый бок нормально", "expected": {"layout": "left_half", "targets": ["excel"]}}
+{"text": "beavis excel на на левый бок плиз", "expected": {"layout": "left_half", "targets": ["excel"]}}
+{"text": "beavis excel на на нижнюю половину", "expected": {"layout": "bottom_half", "targets": ["excel"]}}
+{"text": "beavis excel на на низ на экрране", "expected": {"layout": "bottom_half", "targets": ["excel"]}}
+{"text": "beavis excel на нижнюю половину у меня", "expected": {"layout": "bottom_half", "targets": ["excel"]}}
+{"text": "beavis excel на низ давай", "expected": {"layout": "bottom_half", "targets": ["excel"]}}
+{"text": "beavis excel на по середине пожалуйста", "expected": {"layout": "center", "targets": ["excel"]}}
+{"text": "beavis excel на по центру", "expected": {"layout": "center", "targets": ["excel"]}}
+{"text": "beavis excel на посередине давай", "expected": {"layout": "center", "targets": ["excel"]}}
+{"text": "beavis excel на посередине щас", "expected": {"layout": "center", "targets": ["excel"]}}
+{"text": "beavis excel на правую половину плиз", "expected": {"layout": "right_half", "targets": ["excel"]}}
+{"text": "beavis excel на с верху пожалуйста", "expected": {"layout": "top_half", "targets": ["excel"]}}
+{"text": "beavis excel на с лева нормально", "expected": {"layout": "left_half", "targets": ["excel"]}}
+{"text": "beavis excel на с лева плиз", "expected": {"layout": "left_half", "targets": ["excel"]}}
+{"text": "beavis excel на с низу давай", "expected": {"layout": "bottom_half", "targets": ["excel"]}}
+{"text": "beavis excel на с низу щас", "expected": {"layout": "bottom_half", "targets": ["excel"]}}
+{"text": "beavis excel на с право у меня", "expected": {"layout": "right_half", "targets": ["excel"]}}
+{"text": "beavis excel на слево плиз", "expected": {"layout": "left_half", "targets": ["excel"]}}
+{"text": "beavis excel на справо щас", "expected": {"layout": "right_half", "targets": ["excel"]}}
+{"text": "beavis excel на спрао давай", "expected": {"layout": "right_half", "targets": ["excel"]}}
+{"text": "beavis excel на спрва", "expected": {"layout": "right_half", "targets": ["excel"]}}
+{"text": "beavis excel не работает", "expected": {"missing": ["layout"]}}
+{"text": "beavis excel открыт уже", "expected": {"missing": ["layout"]}}
+{"text": "beavis excel отрыт уже", "expected": {"missing": ["layout"]}}
+{"text": "beavis excel по середине быстро", "expected": {"layout": "center", "targets": ["excel"]}}
+{"text": "beavis excel по середине давай", "expected": {"layout": "center", "targets": ["excel"]}}
+{"text": "beavis excel по середине пожалуйста", "expected": {"layout": "center", "targets": ["excel"]}}
+{"text": "beavis excel прислал сообщение", "expected": {"missing": ["layout"]}}
+{"text": "beavis excel прислал сообщение блин", "expected": {"missing": ["layout"]}}
+{"text": "beavis excel прислал сообщение сейчас", "expected": {"missing": ["layout"]}}
+{"text": "beavis excel с лева на экране", "expected": {"layout": "left_half", "targets": ["excel"]}}
+{"text": "beavis excel с лева пожалуйста", "expected": {"layout": "left_half", "targets": ["excel"]}}
+{"text": "beavis excel с низу пожалуйста", "expected": {"layout": "bottom_half", "targets": ["excel"]}}
+{"text": "beavis excel с низу щас", "expected": {"layout": "bottom_half", "targets": ["excel"]}}
+{"text": "beavis excel сделай fullscreen давай", "expected": {"layout": "fullscreen", "targets": ["excel"]}}
+{"text": "beavis excel сделай fullscreen плиз", "expected": {"layout": "fullscreen", "targets": ["excel"]}}
+{"text": "beavis excel сделай во весь экран нормально", "expected": {"layout": "fullscreen", "targets": ["excel"]}}
+{"text": "beavis excel сделай во весь экран у меня", "expected": {"layout": "fullscreen", "targets": ["excel"]}}
+{"text": "beavis excel сделай во весь экран щас", "expected": {"layout": "fullscreen", "targets": ["excel"]}}
+{"text": "beavis excel сделай на весь экран давай", "expected": {"layout": "fullscreen", "targets": ["excel"]}}
+{"text": "beavis excel слево", "expected": {"layout": "left_half", "targets": ["excel"]}}
+{"text": "beavis excel справа давай", "expected": {"layout": "right_half", "targets": ["excel"]}}
+{"text": "beavis excel справо нормально", "expected": {"layout": "right_half", "targets": ["excel"]}}
+{"text": "beavis telega в левую частть щас", "expected": {"layout": "left_half", "targets": ["telegram"]}}

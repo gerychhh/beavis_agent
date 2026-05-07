@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import re
 from dataclasses import dataclass
+from difflib import SequenceMatcher
 from typing import Any
 
 import numpy as np
@@ -94,7 +95,7 @@ class WindowLayoutArgModel:
                     if len(targets) >= required_targets:
                         break
 
-            mentioned_targets = self._targets_by_text_order(str(text), max_targets)
+            mentioned_targets = self._targets_by_text_order(str(text), max_targets, targets)
             if mentioned_targets:
                 merged = list(mentioned_targets)
                 for target in targets:
@@ -154,44 +155,121 @@ class WindowLayoutArgModel:
             return 0.0
         return float(proba[row_idx][idx])
 
-    def _targets_by_text_order(self, text: str, max_targets: int) -> list[str]:
+    def _targets_by_text_order(self, text: str, max_targets: int, candidate_targets: list[str] | None = None) -> list[str]:
         metadata = self.metadata or {}
         surfaces = metadata.get("app_surface_forms")
         if not isinstance(surfaces, dict):
             return []
 
         normalized = " ".join(str(text).lower().split())
-        matches: list[tuple[int, int, int, str]] = []
+        matches: list[tuple[int, int, int, int, str]] = []
+        candidate_rank = {target: idx for idx, target in enumerate(candidate_targets or [])}
+        exact_apps: set[str] = set()
+
         for app_id, values in surfaces.items():
             if not isinstance(values, list):
                 continue
-            best: tuple[int, int, int, str] | None = None
             for raw_surface in values:
                 surface = " ".join(str(raw_surface).lower().split())
                 if len(surface) < 3:
                     continue
                 pattern = rf"(?<![\wа-яё]){re.escape(surface)}(?![\wа-яё])"
-                found = re.search(pattern, normalized, flags=re.IGNORECASE)
-                if not found:
-                    continue
-                candidate = (found.start(), found.end(), -len(surface), str(app_id))
-                if best is None or candidate < best:
-                    best = candidate
-            if best is not None:
-                matches.append(best)
+                for found in re.finditer(pattern, normalized, flags=re.IGNORECASE):
+                    matches.append((
+                        found.start(),
+                        found.end(),
+                        -len(surface),
+                        candidate_rank.get(str(app_id), 10_000),
+                        str(app_id),
+                    ))
+                    exact_apps.add(str(app_id))
+
+        # If the trained target slots already found an app, use the app surface
+        # metadata to place typoed mentions like "нооутпад" back in text order.
+        for app_id in candidate_targets or []:
+            if app_id in exact_apps:
+                continue
+            values = surfaces.get(app_id)
+            if not isinstance(values, list):
+                continue
+            fuzzy = self._best_fuzzy_surface_match(normalized, values)
+            if fuzzy is None:
+                continue
+            start, end, surface_len, score = fuzzy
+            if score >= self._fuzzy_surface_threshold(surface_len):
+                matches.append((
+                    start,
+                    end,
+                    -surface_len,
+                    candidate_rank.get(str(app_id), 10_000),
+                    str(app_id),
+                ))
 
         matches.sort()
-        if max_targets == 2 and len(matches) >= 2:
-            first = matches[0]
-            second = matches[1]
+
+        ordered_matches: list[tuple[int, int, int, int, str]] = []
+        used_spans: list[tuple[int, int]] = []
+        used_apps: set[str] = set()
+        for match in matches:
+            start, end, _length, _rank, app_id = match
+            if app_id in used_apps:
+                continue
+            if any(start < used_end and end > used_start for used_start, used_end in used_spans):
+                continue
+            ordered_matches.append(match)
+            used_spans.append((start, end))
+            used_apps.add(app_id)
+            if len(ordered_matches) >= max_targets:
+                break
+
+        if max_targets == 2 and len(ordered_matches) >= 2:
+            first = ordered_matches[0]
+            second = ordered_matches[1]
             between = normalized[first[1]:second[0]]
             if re.search(r"(?<![\wа-яё])под(?![\wа-яё])", between, flags=re.IGNORECASE):
                 return [second[3], first[3]]
 
         ordered: list[str] = []
-        for _start, _end, _length, app_id in matches:
+        for _start, _end, _length, _rank, app_id in ordered_matches:
             if app_id not in ordered:
                 ordered.append(app_id)
             if len(ordered) >= max_targets:
                 break
         return ordered
+
+    def _best_fuzzy_surface_match(self, normalized: str, surfaces: list[Any]) -> tuple[int, int, int, float] | None:
+        tokens = [
+            (match.group(0), match.start(), match.end())
+            for match in re.finditer(r"[\wа-яё]+", normalized, flags=re.IGNORECASE)
+        ]
+        if not tokens:
+            return None
+
+        best: tuple[int, int, int, float] | None = None
+        for raw_surface in surfaces:
+            surface = " ".join(str(raw_surface).lower().split())
+            if len(surface) < 5:
+                continue
+            surface_token_count = max(1, len(surface.split()))
+            window_sizes = {
+                max(1, surface_token_count - 1),
+                surface_token_count,
+                surface_token_count + 1,
+            }
+            for window_size in window_sizes:
+                if window_size > len(tokens):
+                    continue
+                for idx in range(0, len(tokens) - window_size + 1):
+                    start = tokens[idx][1]
+                    end = tokens[idx + window_size - 1][2]
+                    candidate = normalized[start:end]
+                    score = SequenceMatcher(None, candidate, surface).ratio()
+                    item = (start, end, len(surface), float(score))
+                    if best is None or score > best[3] or (score == best[3] and item[:2] < best[:2]):
+                        best = item
+        return best
+
+    def _fuzzy_surface_threshold(self, surface_len: int) -> float:
+        if surface_len >= 10:
+            return 0.82
+        return 0.86

@@ -18,8 +18,6 @@
 {"text": "саунд потише", "expected_skill": "volume_set"}
 {"text": "mute звук", "expected_skill": "volume_set"}
 {"text": "запусти блокнот", "expected_skill": "open_app"}
-{"text": "открой фотошоп", "expected_skill": "open_app"}
-{"text": "запусти премьер про", "expected_skill": "open_app"}
 {"text": "запусти 3д макс", "expected_skill": "open_app"}
 {"text": "закрой браузер", "expected_skill": "window_control"}
 {"text": "закрой хром", "expected_skill": "window_control"}
@@ -43,123 +41,339 @@
 {"text": "следующий трек", "expected_skill": "unknown"}
 {"text": "поставь музыку", "expected_skill": "unknown"}
 {"text": "бивис", "expected_skill": "unknown"}
-{"text": "close акробат ридер", "expected_skill": "window_control"}
-{"text": "алло акробат ридер заверши", "expected_skill": "window_control"}
-{"text": "эй бивис закрывай адоб акробат", "expected_skill": "window_control"}
-{"text": "ну ка адоб ридер заверши", "expected_skill": "window_control"}
-{"text": "ну ка pdf откыть выключи", "expected_skill": "window_control"}
-{"text": "бивис закрыть acrobat", "expected_skill": "window_control"}
-{"text": "алло выйди из pdf открыть", "expected_skill": "window_control"}
-{"text": "алло close адобридер", "expected_skill": "window_control"}
-{"text": "брух закрой читалка pdf", "expected_skill": "window_control"}
-{"text": "beavis close пдф ридер", "expected_skill": "window_control"}
-{"text": "дружище закрывай эту акробат ридер", "expected_skill": "window_control"}
-{"text": "слушай закрой окно акробат рыдер", "expected_skill": "window_control"}
-{"text": "слушай выключи pdf reader", "expected_skill": "window_control"}
-{"text": "закрыть читалка pdf", "expected_skill": "window_control"}
-{"text": "алло прибей читалкаpdf", "expected_skill": "window_control"}
-{"text": "ну ка заверши акрабат", "expected_skill": "window_control"}
-{"text": "ну ка выключи акрабат", "expected_skill": "window_control"}
-{"text": "брух убери нахрен читалка pdf", "expected_skill": "window_control"}
-{"text": "ну ка закрой пожалуйста adobe acrobat", "expected_skill": "window_control"}
-{"text": "beavis убери нахрен pdf открыть", "expected_skill": "window_control"}
-{"text": "ну ка pdf открыть закрой", "expected_skill": "window_control"}
-{"text": "алло kill читалка pdf", "expected_skill": "window_control"}
-{"text": "дружище убери arobat полностью", "expected_skill": "window_control"}
-{"text": "дружище убери читалкаpdf полностью", "expected_skill": "window_control"}
-{"text": "слушай adobe acrbat закрой", "expected_skill": "window_control"}
-{"text": "дружище выключи акробат", "expected_skill": "window_control"}
-{"text": "брух закрой нафиг pdf открыть", "expected_skill": "window_control"}
-{"text": "бивис pdf открыть выключи", "expected_skill": "window_control"}
-{"text": "adobe acrobat закрой", "expected_skill": "window_control"}
-{"text": "эй бивис kill адобридер", "expected_skill": "window_control"}
-{"text": "бивис убери нахрен acrobat", "expected_skill": "window_control"}
-{"text": "брух закрой окно шиталка pdf", "expected_skill": "window_control"}
-{"text": "алло хватит адобридер", "expected_skill": "window_control"}
-{"text": "ну ка close шиталка pdf", "expected_skill": "window_control"}
-{"text": "слушай заверши adobe acrobat", "expected_skill": "window_control"}
-{"text": "алло закрывай эту читалка pdf", "expected_skill": "window_control"}
-{"text": "beavis прибей adobe acrobat", "expected_skill": "window_control"}
-{"text": "алло заверши пдф ридер", "expected_skill": "window_control"}
-{"text": "бивис закрывай эту акробат рыдер", "expected_skill": "window_control"}
-{"text": "ну ка close пдф ридер", "expected_skill": "window_control"}
-{"text": "алло закрывай arobat", "expected_skill": "window_control"}
-{"text": "алло закрой pdf reader", "expected_skill": "window_control"}
-{"text": "эй бивис зкрой акробат рыдер", "expected_skill": "window_control"}
-{"text": "слушай читалкаpdf заверши", "expected_skill": "window_control"}
-{"text": "дружище снеси адобридер", "expected_skill": "window_control"}
-{"text": "закрой нафиг шиталка pdf", "expected_skill": "window_control"}
-{"text": "алло закрой пожалуйста адобридер", "expected_skill": "window_control"}
-{"text": "эй бивис читалка pdf выключи", "expected_skill": "window_control"}
-{"text": "алло закрывай адоб ридер", "expected_skill": "window_control"}
-{"text": "ну ка заканчивай с читалкаpdf", "expected_skill": "window_control"}
-{"text": "бивис закрывай адобридер", "expected_skill": "window_control"}
-{"text": "beavis заверши адоб акробат", "expected_skill": "window_control"}
-{"text": "дружище закрыть читалкаpdf", "expected_skill": "window_control"}
-{"text": "beavis закрой нафиг adobe acrobat", "expected_skill": "window_control"}
-{"text": "брух закрой окно adobe acrbat", "expected_skill": "window_control"}
-{"text": "бивис выйди из акробат ридер", "expected_skill": "window_control"}
-{"text": "алло адоб акробат выключи", "expected_skill": "window_control"}
-{"text": "бивис прибей шиталка pdf", "expected_skill": "window_control"}
-{"text": "ну ка хватит pdf reader", "expected_skill": "window_control"}
-{"text": "ну ка закрывай шиталка pdf", "expected_skill": "window_control"}
-{"text": "бивис закрой нафиг акробат рыдер", "expected_skill": "window_control"}
-{"text": "эй бивис убери нахрен акробат", "expected_skill": "window_control"}
-{"text": "слушай закрой нафиг адоб ридер", "expected_skill": "window_control"}
-{"text": "ну ка заканчивай с адоб ридер", "expected_skill": "window_control"}
-{"text": "эй бивис закрывай pdf откыть", "expected_skill": "window_control"}
-{"text": "ну ка зкрой читалка pdf", "expected_skill": "window_control"}
-{"text": "брух хватит читалка pdf", "expected_skill": "window_control"}
-{"text": "beavis закрывай эту acrobat", "expected_skill": "window_control"}
-{"text": "эй бивис закрой pdf откыть", "expected_skill": "window_control"}
-{"text": "брух выключи адоб акробат", "expected_skill": "window_control"}
-{"text": "close aкrobat reader", "expected_skill": "window_control"}
-{"text": "слушай закрывай читалкаpdf", "expected_skill": "window_control"}
-{"text": "слушай закрывай эту адоб ридер", "expected_skill": "window_control"}
-{"text": "ну ка pdf откыть заверши", "expected_skill": "window_control"}
-{"text": "закрывай акробат ридер", "expected_skill": "window_control"}
-{"text": "beavis закрой читалкаpdf", "expected_skill": "window_control"}
-{"text": "эй бивис close адоб ридер", "expected_skill": "window_control"}
-{"text": "ну ка убей процесс акробат", "expected_skill": "window_control"}
-{"text": "эй бивис kill pdf reader", "expected_skill": "window_control"}
-{"text": "ну ка читалкаpdf заверши", "expected_skill": "window_control"}
-{"text": "заканчивай с шиталка pdf", "expected_skill": "window_control"}
-{"text": "бивис закрой пдф ридер", "expected_skill": "window_control"}
-{"text": "дружище выйди из адоб акробат", "expected_skill": "window_control"}
-{"text": "beavis закрой окно pdf откыть", "expected_skill": "window_control"}
-{"text": "слушай закрыть adobe acrbat", "expected_skill": "window_control"}
-{"text": "бивис закрой пожалуйста адобридер", "expected_skill": "window_control"}
-{"text": "beavis прибей адоб акробат", "expected_skill": "window_control"}
-{"text": "эй бивис aкrobat reader выключи", "expected_skill": "window_control"}
-{"text": "эй бивис хватит акробат ридер", "expected_skill": "window_control"}
-{"text": "эй бивис pdf откыть выключи", "expected_skill": "window_control"}
-{"text": "бивис хватит акробат", "expected_skill": "window_control"}
-{"text": "ну ка закрой акробат", "expected_skill": "window_control"}
-{"text": "beavis убери arobat полностью", "expected_skill": "window_control"}
-{"text": "слушай kill читалка pdf", "expected_skill": "window_control"}
-{"text": "beavis закрой окно arobat", "expected_skill": "window_control"}
-{"text": "алло адоб акробат заверши", "expected_skill": "window_control"}
-{"text": "слушай закрой пожалуйста adobe acrobat", "expected_skill": "window_control"}
-{"text": "эй бивис закрой окно читалка pdf", "expected_skill": "window_control"}
-{"text": "ну ка заканчивай с адоб акробат", "expected_skill": "window_control"}
-{"text": "эй бивис pdf открыть закрой", "expected_skill": "window_control"}
-{"text": "ну ка выйди из acrobat reader", "expected_skill": "window_control"}
-{"text": "слушай убей процесс pdf открыть", "expected_skill": "window_control"}
-{"text": "beavis закрывай adobe acrobat", "expected_skill": "window_control"}
-{"text": "слушай снеси acrobat", "expected_skill": "window_control"}
-{"text": "beavis закрой пожалуйста pdf reader", "expected_skill": "window_control"}
-{"text": "бивис адобридер заверши", "expected_skill": "window_control"}
-{"text": "закрой окно aкrobat reader", "expected_skill": "window_control"}
-{"text": "алло kill акробат", "expected_skill": "window_control"}
-{"text": "брух arobat закрой", "expected_skill": "window_control"}
-{"text": "beavis закрыть акробат ридер", "expected_skill": "window_control"}
-{"text": "брух закрывай эту pdf reader", "expected_skill": "window_control"}
-{"text": "алло закрывай эту акробат", "expected_skill": "window_control"}
-{"text": "ну ка выключи acrobat reader", "expected_skill": "window_control"}
-{"text": "алло снеси pdf reader", "expected_skill": "window_control"}
-{"text": "алло kill адоб ридер", "expected_skill": "window_control"}
-{"text": "дружище зкрой адобридер", "expected_skill": "window_control"}
-{"text": "алло убери pdf reader полностью", "expected_skill": "window_control"}
-{"text": "брух закрой пожалуйста акрабат", "expected_skill": "window_control"}
-{"text": "слушай заканчивай с adobe acrbat", "expected_skill": "window_control"}
-{"text": "beavis снеси acrobat reader", "expected_skill": "window_control"}
+{"text": "3ds max 2025 в центр", "expected_skill": "window_layout"}
+{"text": "3ds max 2025 во весь экран плиз", "expected_skill": "window_layout"}
+{"text": "3ds max 2025 и regedit друг под другом у меня", "expected_skill": "window_layout"}
+{"text": "3ds max 2025 и task manager друг под другом быстро", "expected_skill": "window_layout"}
+{"text": "3ds max 2025 и музыку дай друг под другом щас", "expected_skill": "window_layout"}
+{"text": "3ds max 2025 на в низ давай", "expected_skill": "window_layout"}
+{"text": "3ds max 2025 на весь екран", "expected_skill": "window_layout"}
+{"text": "3ds max 2025 на весь экран", "expected_skill": "window_layout"}
+{"text": "3ds max 2025 на низ быстро", "expected_skill": "window_layout"}
+{"text": "3ds max 2025 на с верху у меня", "expected_skill": "window_layout"}
+{"text": "3ds max 2025 над event viewer", "expected_skill": "window_layout"}
+{"text": "3ds max 2025 над excel плиз", "expected_skill": "window_layout"}
+{"text": "3ds max 2025 над regedit на экране", "expected_skill": "window_layout"}
+{"text": "3ds max 2025 по центру быстро", "expected_skill": "window_layout"}
+{"text": "3ds max 2025 под planetvpn1 щас", "expected_skill": "window_layout"}
+{"text": "3ds max 2025 под printmanagement пожалуйста", "expected_skill": "window_layout"}
+{"text": "3ds max 2025 потом winword на две половины плиз", "expected_skill": "window_layout"}
+{"text": "3ds max 2025 сверу", "expected_skill": "window_layout"}
+{"text": "3ds max 2025 сверху", "expected_skill": "window_layout"}
+{"text": "3ds max 2025 сверху excel снизу на экране", "expected_skill": "window_layout"}
+{"text": "3ds max 2025 сверху print management снизу пожалуйста", "expected_skill": "window_layout"}
+{"text": "3ds max 2025 сделай во весь экран", "expected_skill": "window_layout"}
+{"text": "3ds max 2025 слева", "expected_skill": "window_layout"}
+{"text": "3ds max 2025 слева calculator справа давай", "expected_skill": "window_layout"}
+{"text": "3ds max 2025 снизу", "expected_skill": "window_layout"}
+{"text": "3ds max 2025 справа", "expected_skill": "window_layout"}
+{"text": "3ds max 2025 справо", "expected_skill": "window_layout"}
+{"text": "3ds max 2025 срава", "expected_skill": "window_layout"}
+{"text": "3ds max 2025 центром пожалуйста", "expected_skill": "window_layout"}
+{"text": "3dsmax fullscreen плиз", "expected_skill": "window_layout"}
+{"text": "3dsmax в центр", "expected_skill": "window_layout"}
+{"text": "3dsmax во весь экран плиз", "expected_skill": "window_layout"}
+{"text": "3dsmax и eventvwr друг под другом у меня", "expected_skill": "window_layout"}
+{"text": "3dsmax и кодекс друг под другм быстро", "expected_skill": "window_layout"}
+{"text": "3dsmax на в низ пожалуйста", "expected_skill": "window_layout"}
+{"text": "3dsmax на в правую часть давай", "expected_skill": "window_layout"}
+{"text": "3dsmax на в середину пожалуйста", "expected_skill": "window_layout"}
+{"text": "3dsmax на вверх на экране", "expected_skill": "window_layout"}
+{"text": "3dsmax на верхнюю половину щас", "expected_skill": "window_layout"}
+{"text": "3dsmax на весь экран", "expected_skill": "window_layout"}
+{"text": "3dsmax на вправо щас", "expected_skill": "window_layout"}
+{"text": "3dsmax на левую половину у меня", "expected_skill": "window_layout"}
+{"text": "3dsmax на максимум экрана", "expected_skill": "window_layout"}
+{"text": "3dsmax на максимум экрана щас", "expected_skill": "window_layout"}
+{"text": "3dsmax на правый бок щас", "expected_skill": "window_layout"}
+{"text": "3dsmax на с верху давай", "expected_skill": "window_layout"}
+{"text": "3dsmax на слево давай", "expected_skill": "window_layout"}
+{"text": "3dsmax над disk management у меня", "expected_skill": "window_layout"}
+{"text": "3dsmax над блокнотик", "expected_skill": "window_layout"}
+{"text": "3dsmax под event viewer плиз", "expected_skill": "window_layout"}
+{"text": "3dsmax под print management щас", "expected_skill": "window_layout"}
+{"text": "3dsmax под блакнот на экране", "expected_skill": "window_layout"}
+{"text": "3dsmax посередине быстро", "expected_skill": "window_layout"}
+{"text": "3dsmax сверху", "expected_skill": "window_layout"}
+{"text": "3dsmax сверху yandex music снизу пожалуйста", "expected_skill": "window_layout"}
+{"text": "3dsmax сверху дота снизу плиз", "expected_skill": "window_layout"}
+{"text": "3dsmax сделай фулл скрин быстро", "expected_skill": "window_layout"}
+{"text": "3dsmax сделай фулл скрин пожалуйста", "expected_skill": "window_layout"}
+{"text": "3dsmax слева", "expected_skill": "window_layout"}
+{"text": "3dsmax слева terminal справа", "expected_skill": "window_layout"}
+{"text": "3dsmax снизу", "expected_skill": "window_layout"}
+{"text": "3dsmax спава", "expected_skill": "window_layout"}
+{"text": "3dsmax спправа", "expected_skill": "window_layout"}
+{"text": "3dsmax спраава", "expected_skill": "window_layout"}
+{"text": "3dsmax справа", "expected_skill": "window_layout"}
+{"text": "3dsmmax на вправо щас", "expected_skill": "window_layout"}
+{"text": "3smax на весь экран", "expected_skill": "window_layout"}
+{"text": "bavis cleanmgr потом блакнот поровну пожалуйста", "expected_skill": "window_layout"}
+{"text": "bavis devmgmt в верх плиз", "expected_skill": "window_layout"}
+{"text": "bavis edge вверх у меня", "expected_skill": "window_layout"}
+{"text": "bavis explorer на максимум экрана у меня", "expected_skill": "window_layout"}
+{"text": "bavis freevpnplanet на справо щас", "expected_skill": "window_layout"}
+{"text": "bavis powerpoint сверху щас", "expected_skill": "window_layout"}
+{"text": "bavis taskmgr центром плиз", "expected_skill": "window_layout"}
+{"text": "bavis блокнот слева у меня", "expected_skill": "window_layout"}
+{"text": "bavis в центр это у меня", "expected_skill": "window_layout"}
+{"text": "bavis поставь msedge справо пожалуйста", "expected_skill": "window_layout"}
+{"text": "bavis поставь perfmon fullscreen на экране", "expected_skill": "window_layout"}
+{"text": "bavis поставь справа его", "expected_skill": "window_layout"}
+{"text": "bavis раздели экран сверху снизу между word и cyberpunk пожалуйста", "expected_skill": "window_layout"}
+{"text": "bavis раскинь microsoft edge и calculator по половинам у меня", "expected_skill": "window_layout"}
+{"text": "bavis раскинь paint и devmgmt по половинам у меня", "expected_skill": "window_layout"}
+{"text": "bavis растяни notepad fullscreen", "expected_skill": "window_layout"}
+{"text": "bavis сделай control и вайершарк рядом нормально", "expected_skill": "window_layout"}
+{"text": "bavis текущее окно на снизу давай", "expected_skill": "window_layout"}
+{"text": "bavis текущие окно фулл скрин щас", "expected_skill": "window_layout"}
+{"text": "beaavis calc справо пожалуйста", "expected_skill": "window_layout"}
+{"text": "beaavis device manager в правую часть нормально", "expected_skill": "window_layout"}
+{"text": "beaavis dota в центр быстро", "expected_skill": "window_layout"}
+{"text": "beaavis excel с низу быстро", "expected_skill": "window_layout"}
+{"text": "beaavis file explorer с лева", "expected_skill": "window_layout"}
+{"text": "beaavis freevpnplanet с верху нормально", "expected_skill": "window_layout"}
+{"text": "beaavis msedge с право пожалуйста", "expected_skill": "window_layout"}
+{"text": "beaavis powerpoint и devmgmt друг под другом на экране", "expected_skill": "window_layout"}
+{"text": "beaavis вверх edge нормально", "expected_skill": "window_layout"}
+{"text": "beaavis его справо быстро", "expected_skill": "window_layout"}
+{"text": "beaavis закинь planetvpn с низу пожалуйста", "expected_skill": "window_layout"}
+{"text": "beaavis музыка в середину нормально", "expected_skill": "window_layout"}
+{"text": "beaavis на низ device manager давай", "expected_skill": "window_layout"}
+{"text": "beaavis поставь calc на верх давай", "expected_skill": "window_layout"}
+{"text": "beaavis поставь control panel слева а блокнгт справа у меня", "expected_skill": "window_layout"}
+{"text": "beaavis размести event viewer снизу давай", "expected_skill": "window_layout"}
+{"text": "beaavis размести с право mspaint плиз", "expected_skill": "window_layout"}
+{"text": "beaavis размести текущие окно в середину у меня", "expected_skill": "window_layout"}
+{"text": "beaavis сделай окно fullscreen на экране", "expected_skill": "window_layout"}
+{"text": "beaavis центром terminal щас", "expected_skill": "window_layout"}
+{"text": "beaavis яндекс мьюзик на на верх щас", "expected_skill": "window_layout"}
+{"text": "beais calc вправо давай", "expected_skill": "window_layout"}
+{"text": "beais codex под cleanmgr давай", "expected_skill": "window_layout"}
+{"text": "beais resource monitor слева control panel справа быстро", "expected_skill": "window_layout"}
+{"text": "beais закинь registry editor слева нормально", "expected_skill": "window_layout"}
+{"text": "beais закинь кдекс с низу у меня", "expected_skill": "window_layout"}
+{"text": "beais закрепи на левую половину disk cleanup нормально", "expected_skill": "window_layout"}
+{"text": "beais отправь на левый бок word давай", "expected_skill": "window_layout"}
+{"text": "beais перемести с низу registry editor", "expected_skill": "window_layout"}
+{"text": "beais перемести с низу текущее окно давай", "expected_skill": "window_layout"}
+{"text": "beais по середине devmgmt нормально", "expected_skill": "window_layout"}
+{"text": "beais поставь вайршарк слева а device manager справа щас", "expected_skill": "window_layout"}
+{"text": "beais размести task manager в левую часть нормально", "expected_skill": "window_layout"}
+{"text": "beais размести текущее снизу давай", "expected_skill": "window_layout"}
+{"text": "beais раскинь performance monitor taskmgr cyberpunk dota 2 два на два быстро", "expected_skill": "window_layout"}
+{"text": "beais сделай сетку из task manager powerpnt msedge и device manager на экране", "expected_skill": "window_layout"}
+{"text": "beaviis control на на правый бок у меня", "expected_skill": "window_layout"}
+{"text": "beaviis devmgmt вверх", "expected_skill": "window_layout"}
+{"text": "beaviis music слева windows terminal справа пожалуйста", "expected_skill": "window_layout"}
+{"text": "beaviis powerpnt под freevpnplanet щас", "expected_skill": "window_layout"}
+{"text": "beaviis print management вверх пожалуйста", "expected_skill": "window_layout"}
+{"text": "beaviis print management на слева щас", "expected_skill": "window_layout"}
+{"text": "beaviis vpn снизу плиз", "expected_skill": "window_layout"}
+{"text": "beaviis windows terminal над perfmon у меня", "expected_skill": "window_layout"}
+{"text": "beaviis winword сделай фулл скрин пожалуйста", "expected_skill": "window_layout"}
+{"text": "beaviis блакнот на по середине давай", "expected_skill": "window_layout"}
+{"text": "beaviis в верх wireshark", "expected_skill": "window_layout"}
+{"text": "beaviis закрепи на нижнюю половину control panel плиз", "expected_skill": "window_layout"}
+{"text": "beaviis максимизируй wt на весь экран пожалуйста", "expected_skill": "window_layout"}
+{"text": "beaviis максимизируй текущие окно во весь экран пожалуйста", "expected_skill": "window_layout"}
+{"text": "beaviis окно слева", "expected_skill": "window_layout"}
+{"text": "beaviis перекинь cleanmgr слево быстро", "expected_skill": "window_layout"}
+{"text": "beaviis перемести dota 2 на левую половину", "expected_skill": "window_layout"}
+{"text": "beaviis по середине текущее окно у меня", "expected_skill": "window_layout"}
+{"text": "beaviis поставь control слево а powerpoint справа давай", "expected_skill": "window_layout"}
+{"text": "beaviis поставь excel в правую часть нормально", "expected_skill": "window_layout"}
+{"text": "beaviis раздели экран между yandex music и performance monitor щас", "expected_skill": "window_layout"}
+{"text": "beaviis размести control вправо щас", "expected_skill": "window_layout"}
+{"text": "beaviis сделай на левую половину cyberpunk 2077 плиз", "expected_skill": "window_layout"}
+{"text": "beaviis текущие окно с лева пожалуйста", "expected_skill": "window_layout"}
+{"text": "beavis 3ds max 2025 в низ", "expected_skill": "window_layout"}
+{"text": "beavis 3ds max 2025 в низ у меня", "expected_skill": "window_layout"}
+{"text": "beavis 3ds max 2025 и calc палавину быстро", "expected_skill": "window_layout"}
+{"text": "beavis 3ds max 2025 и wireshark пополам быстро", "expected_skill": "window_layout"}
+{"text": "beavis 3ds max 2025 на в середину быстро", "expected_skill": "window_layout"}
+{"text": "beavis 3ds max 2025 на в середину щас", "expected_skill": "window_layout"}
+{"text": "beavis 3ds max 2025 на весь экран пжалуйста", "expected_skill": "window_layout"}
+{"text": "beavis 3ds max 2025 на вправо", "expected_skill": "window_layout"}
+{"text": "beavis 3ds max 2025 на по центру плиз", "expected_skill": "window_layout"}
+{"text": "beavis 3ds max 2025 на посередине давай", "expected_skill": "window_layout"}
+{"text": "beavis 3ds max 2025 на с верху быстро", "expected_skill": "window_layout"}
+{"text": "beavis 3ds max 2025 на сверху давай", "expected_skill": "window_layout"}
+{"text": "beavis 3ds max 2025 на центром нормально", "expected_skill": "window_layout"}
+{"text": "beavis 3ds max 2025 посередине у меня", "expected_skill": "window_layout"}
+{"text": "beavis 3ds max 2025 потом devmgmt пополам экрана быстро", "expected_skill": "window_layout"}
+{"text": "beavis 3ds max 2025 рядом с вайершарк пополам экрана на экране", "expected_skill": "window_layout"}
+{"text": "beavis 3ds max 2025 сделай fullscreen на экране", "expected_skill": "window_layout"}
+{"text": "beavis 3ds max 2025 сделай на весь екран у меня", "expected_skill": "window_layout"}
+{"text": "beavis 3ds max 2025 сделай на максимум экрана давай", "expected_skill": "window_layout"}
+{"text": "beavis 3ds max 2025 слева disk cleanup справа на экране", "expected_skill": "window_layout"}
+{"text": "beavis 3ds max 2025 слева regedit справа пожалуйста", "expected_skill": "window_layout"}
+{"text": "beavis 3dsmax вверх", "expected_skill": "window_layout"}
+{"text": "beavis 3dsmax вместе с дота два на две половины на экране", "expected_skill": "window_layout"}
+{"text": "beavis 3dsmax на в верх быстро", "expected_skill": "window_layout"}
+{"text": "beavis 3dsmax на на левую половину пожалуйста", "expected_skill": "window_layout"}
+{"text": "beavis 3dsmax по середине плиз", "expected_skill": "window_layout"}
+{"text": "beavis 3dsmax потом devmgmt пополам быстро", "expected_skill": "window_layout"}
+{"text": "beavis 3dsmax рядом с perfmon палавину давай", "expected_skill": "window_layout"}
+{"text": "beavis 3dsmax слева event viewer справа давай", "expected_skill": "window_layout"}
+{"text": "beavis 3dsmax слева powerpoint справа давай", "expected_skill": "window_layout"}
+{"text": "beavis 3dsmx в низ быстро", "expected_skill": "window_layout"}
+{"text": "beavis calc в центр на экране", "expected_skill": "window_layout"}
+{"text": "beavis calc в центр пожалуйста", "expected_skill": "window_layout"}
+{"text": "beavis calc вверх нормально", "expected_skill": "window_layout"}
+{"text": "beavis calc на в низ щас", "expected_skill": "window_layout"}
+{"text": "beavis calc на верх на экране", "expected_skill": "window_layout"}
+{"text": "beavis calc на влево", "expected_skill": "window_layout"}
+{"text": "beavis calc на на лвый бок щас", "expected_skill": "window_layout"}
+{"text": "beavis calc на с верху у меня", "expected_skill": "window_layout"}
+{"text": "beavis calc на слева на экране", "expected_skill": "window_layout"}
+{"text": "beavis calc на снизу нормально", "expected_skill": "window_layout"}
+{"text": "beavis calc снизу нормально", "expected_skill": "window_layout"}
+{"text": "beavis calculator в низ пожалуйста", "expected_skill": "window_layout"}
+{"text": "beavis calculator вниз быстро", "expected_skill": "window_layout"}
+{"text": "beavis calculator на в левую часть у меня", "expected_skill": "window_layout"}
+{"text": "beavis calculator на левый бок нормально", "expected_skill": "window_layout"}
+{"text": "beavis calculator на с лева", "expected_skill": "window_layout"}
+{"text": "beavis calculator с лева на экране", "expected_skill": "window_layout"}
+{"text": "beavis разложи 3ds max 2025 paint дотан и мзыка сеткой у меня", "expected_skill": "window_layout"}
+{"text": "beavis разложи 3dsmax нооутпад киберпанк и device manager плиткой плиз", "expected_skill": "window_layout"}
+{"text": "beavis разложи cdex dota event viewer и wt два на два пожалуйста", "expected_skill": "window_layout"}
+{"text": "beavis разложи cdex freevpnplnet сайберпанк и доточка сеткой нормально", "expected_skill": "window_layout"}
+{"text": "beavis разложи cleanmgr calculator file explorer и resource monitor по углам на экране", "expected_skill": "window_layout"}
+{"text": "beavis разложи cleanmgr file explorer device manager и vpn сеткой плиз", "expected_skill": "window_layout"}
+{"text": "beavis разложи cleanmgr perfmon print management и perfmon четыре окна сеткой нормально", "expected_skill": "window_layout"}
+{"text": "beavis разложи cleanmgr powerpoint вайершарк и eventvwr квадратом нормально", "expected_skill": "window_layout"}
+{"text": "beavis разложи cleanmgr registry editor performance monitor и mspaint 2 на 2 на экране", "expected_skill": "window_layout"}
+{"text": "beavis разложи cleanmgr wireshark taskmgr и yandex music четыре окна сеткой у меня", "expected_skill": "window_layout"}
+{"text": "beavis разложи cleanmgr word cdex и file explorer сеткой на экране", "expected_skill": "window_layout"}
+{"text": "beavis разложи cleanmgr wt excel и calculator сеткой пожалуйста", "expected_skill": "window_layout"}
+{"text": "beavis разложи codx registry editor excel и device manager сеткой пожалуйста", "expected_skill": "window_layout"}
+{"text": "beavis разложи control edge кибер пунк и dota два на два нормально", "expected_skill": "window_layout"}
+{"text": "beavis разложи control panel evnt viewer блокнотик и кибер панк два на два быстро", "expected_skill": "window_layout"}
+{"text": "beavis разложи control panel excel calculator и device manager два на два плиз", "expected_skill": "window_layout"}
+{"text": "beavis разложи control panel paint printmanagement и музыка сеткй плиз", "expected_skill": "window_layout"}
+{"text": "beavis разложи control panel planetvpn1 openai и regedit четыре окна сеткой пожалуйста", "expected_skill": "window_layout"}
+{"text": "beavis разложи control panel regedit calculator и ноутпад плиткой нормально", "expected_skill": "window_layout"}
+{"text": "beavis разложи control print management дотан и explorer плиткой на экране", "expected_skill": "window_layout"}
+{"text": "beavis разложи cyberpunk 2077 excel вайершарк и planetvpn1 по углам пожалуйста", "expected_skill": "window_layout"}
+{"text": "beavis разложи cyberpunk 2077 wireshark disk cleanup и excel квадратом щас", "expected_skill": "window_layout"}
+{"text": "бивис убери нахрен calcuator", "expected_skill": "window_control"}
+{"text": "слушай закрой нафиг calc", "expected_skill": "window_control"}
+{"text": "убери кalculator полностью", "expected_skill": "window_control"}
+{"text": "ну ка заканчивай с кalc", "expected_skill": "window_control"}
+{"text": "эй бивис close calc", "expected_skill": "window_control"}
+{"text": "calc закрой", "expected_skill": "window_control"}
+{"text": "бивис заканчивай с calculator", "expected_skill": "window_control"}
+{"text": "дружище прибей кalc", "expected_skill": "window_control"}
+{"text": "beavis хватит clculator", "expected_skill": "window_control"}
+{"text": "бивис закрой нафиг calcuator", "expected_skill": "window_control"}
+{"text": "дружище закрой пожалуйста кalc", "expected_skill": "window_control"}
+{"text": "слушай закрой кalculator", "expected_skill": "window_control"}
+{"text": "алло зкрой кalc", "expected_skill": "window_control"}
+{"text": "брух закрыть calculator", "expected_skill": "window_control"}
+{"text": "убей процесс кalculator", "expected_skill": "window_control"}
+{"text": "убей процесс clculator", "expected_skill": "window_control"}
+{"text": "брух убери calc полностью", "expected_skill": "window_control"}
+{"text": "алло убери нахрен calcuator", "expected_skill": "window_control"}
+{"text": "beavis закрыть кalc", "expected_skill": "window_control"}
+{"text": "брух снеси clculator", "expected_skill": "window_control"}
+{"text": "слушай прибей кalculator", "expected_skill": "window_control"}
+{"text": "beavis зкрой calcuator", "expected_skill": "window_control"}
+{"text": "слушай выключи calcuator", "expected_skill": "window_control"}
+{"text": "слушай кalculator заверши", "expected_skill": "window_control"}
+{"text": "брух закрывай clculator", "expected_skill": "window_control"}
+{"text": "дружище убери кalc полностью", "expected_skill": "window_control"}
+{"text": "слушай прибей clculator", "expected_skill": "window_control"}
+{"text": "дружище закрой кalculator", "expected_skill": "window_control"}
+{"text": "эй бивис заканчивай с calc", "expected_skill": "window_control"}
+{"text": "дружище убей процесс calculator", "expected_skill": "window_control"}
+{"text": "брух кalc заверши", "expected_skill": "window_control"}
+{"text": "эй бивис calc выключи", "expected_skill": "window_control"}
+{"text": "алло закрыть calc", "expected_skill": "window_control"}
+{"text": "ну ка заканчивай с calculator", "expected_skill": "window_control"}
+{"text": "брух закрой кalc", "expected_skill": "window_control"}
+{"text": "бивис close кalc", "expected_skill": "window_control"}
+{"text": "эй бивис закрыть кalculator", "expected_skill": "window_control"}
+{"text": "ну ка выключи кalc", "expected_skill": "window_control"}
+{"text": "алло закрывай кalculator", "expected_skill": "window_control"}
+{"text": "слушай закрой нафиг кalculator", "expected_skill": "window_control"}
+{"text": "ну ка зкрой calcuator", "expected_skill": "window_control"}
+{"text": "брух убери нахрен calculator", "expected_skill": "window_control"}
+{"text": "эй бивис закрой пожалуйста calc", "expected_skill": "window_control"}
+{"text": "заверши кalc", "expected_skill": "window_control"}
+{"text": "дружище calcuator закрой", "expected_skill": "window_control"}
+{"text": "дружище закрывай эту кalc", "expected_skill": "window_control"}
+{"text": "эй бивис кalc закрой", "expected_skill": "window_control"}
+{"text": "брух заканчивай с clculator", "expected_skill": "window_control"}
+{"text": "beavis kill calcuator", "expected_skill": "window_control"}
+{"text": "слушай закрывай эту calc", "expected_skill": "window_control"}
+{"text": "слушай снеси calc", "expected_skill": "window_control"}
+{"text": "ну ка убери нахрен clculator", "expected_skill": "window_control"}
+{"text": "слушай calcuator выключи", "expected_skill": "window_control"}
+{"text": "ну ка закрыть calcuator", "expected_skill": "window_control"}
+{"text": "эй бивис kill кalc", "expected_skill": "window_control"}
+{"text": "бивис убери нахрен clculator", "expected_skill": "window_control"}
+{"text": "алло убери нахрен clculator", "expected_skill": "window_control"}
+{"text": "алло прибей clculator", "expected_skill": "window_control"}
+{"text": "ну ка убери clculator полностью", "expected_skill": "window_control"}
+{"text": "beavis закрывай calculator", "expected_skill": "window_control"}
+{"text": "эй бивис закрывай кalculator", "expected_skill": "window_control"}
+{"text": "ну ка выйди из calculator", "expected_skill": "window_control"}
+{"text": "брух прибей calc", "expected_skill": "window_control"}
+{"text": "ну ка calculator выключи", "expected_skill": "window_control"}
+{"text": "бивис выйди из calc", "expected_skill": "window_control"}
+{"text": "эй бивис закрой calcuator", "expected_skill": "window_control"}
+{"text": "beavis убери кalc полностью", "expected_skill": "window_control"}
+{"text": "брух убей процесс calcuator", "expected_skill": "window_control"}
+{"text": "ну ка заканчивай с calc", "expected_skill": "window_control"}
+{"text": "бивис закрой пожалуйста calculator", "expected_skill": "window_control"}
+{"text": "брух close calcuator", "expected_skill": "window_control"}
+{"text": "дружище закрывай calc", "expected_skill": "window_control"}
+{"text": "эй бивис хватит кalculator", "expected_skill": "window_control"}
+{"text": "beavis calcuator закрой", "expected_skill": "window_control"}
+{"text": "алло выйди из calcuator", "expected_skill": "window_control"}
+{"text": "бивис хватит calculator", "expected_skill": "window_control"}
+{"text": "ну ка убей процесс clculator", "expected_skill": "window_control"}
+{"text": "ну ка закрывай calcuator", "expected_skill": "window_control"}
+{"text": "ну ка выйди из calc", "expected_skill": "window_control"}
+{"text": "брух clculator заверши", "expected_skill": "window_control"}
+{"text": "дружище убери кalculator полностью", "expected_skill": "window_control"}
+{"text": "слушай заверши clculator", "expected_skill": "window_control"}
+{"text": "дружище выйди из calcuator", "expected_skill": "window_control"}
+{"text": "beavis close кalculator", "expected_skill": "window_control"}
+{"text": "бивис хватит calcuator", "expected_skill": "window_control"}
+{"text": "брух выключи calc", "expected_skill": "window_control"}
+{"text": "закрывай эту calcuator", "expected_skill": "window_control"}
+{"text": "дружище calc выключи", "expected_skill": "window_control"}
+{"text": "дружище заканчивай с calcuator", "expected_skill": "window_control"}
+{"text": "дружище выключи calculator", "expected_skill": "window_control"}
+{"text": "убери clculator полностью", "expected_skill": "window_control"}
+{"text": "ну ка выйди из кalculator", "expected_skill": "window_control"}
+{"text": "ну ка выключи calculator", "expected_skill": "window_control"}
+{"text": "дружище выйди из clculator", "expected_skill": "window_control"}
+{"text": "эй бивис clculator выключи", "expected_skill": "window_control"}
+{"text": "бивис close clculator", "expected_skill": "window_control"}
+{"text": "ну ка close clculator", "expected_skill": "window_control"}
+{"text": "алло зкрой clculator", "expected_skill": "window_control"}
+{"text": "бивис kill clculator", "expected_skill": "window_control"}
+{"text": "эй бивис выйди из кalculator", "expected_skill": "window_control"}
+{"text": "бивис выйди из calcuator", "expected_skill": "window_control"}
+{"text": "слушай зкрой clculator", "expected_skill": "window_control"}
+{"text": "слушай кalculator выключи", "expected_skill": "window_control"}
+{"text": "эй бивис закрывай кalc", "expected_skill": "window_control"}
+{"text": "дружище хватит calculator", "expected_skill": "window_control"}
+{"text": "слушай сверни окно calculator", "expected_skill": "window_control"}
+{"text": "эй бивис убери окно clculator", "expected_skill": "window_control"}
+{"text": "сверни в панель calcuator", "expected_skill": "window_control"}
+{"text": "слушай сверни кalculator", "expected_skill": "window_control"}
+{"text": "beavis спрячь clculator", "expected_skill": "window_control"}
+{"text": "алло кalculator вниз", "expected_skill": "window_control"}
+{"text": "эй бивис убери кalc с экрана", "expected_skill": "window_control"}
+{"text": "дружище кalculator вниз", "expected_skill": "window_control"}
+{"text": "ну ка убери calculator с экрана", "expected_skill": "window_control"}
+{"text": "алло сверни окно кalc", "expected_skill": "window_control"}
+{"text": "дружище кalc вниз", "expected_skill": "window_control"}
+{"text": "слушай сверний calc", "expected_skill": "window_control"}
+{"text": "эй бивис убери calc с глаз", "expected_skill": "window_control"}
+{"text": "beavis убери calculator с глаз", "expected_skill": "window_control"}
+{"text": "дружище убери кalculator с глаз", "expected_skill": "window_control"}

@@ -190,13 +190,13 @@ def looks_like_window_layout_command(text: str) -> bool:
         return False
 
     layout_cues = (
-        "слева", "слево", "влево", "левую", "левый",
+        "слева", "слево", "слеа", "влево", "левую", "левый",
         "справа", "справо", "вправо", "правую", "правый",
         "сверху", "вверх", "верхнюю",
         "снизу", "вниз", "нижнюю",
         "центр", "середин",
         "пополам", "палавину", "половин", "поровну",
-        "рядом", "друг под другом",
+        "рядом", "друг под другом", "над ", "под ",
         "на весь экран", "во весь экран", "фулл", "fullscreen", "максимум экрана",
         "сетк", "2 на 2", "два на два", "углам", "плитк",
     )
@@ -331,7 +331,9 @@ def build_manual_tests(app_catalog):
                 if not line.strip():
                     continue
                 row = json.loads(line)
-                if row.get("expected_layout") and row.get("text"):
+                expected = row.get("expected") if isinstance(row.get("expected"), dict) else {}
+                expected_layout = row.get("expected_layout") or expected.get("layout")
+                if expected_layout and row.get("text"):
                     tests.append({"text": row["text"], "expected_skill": SKILL_WINDOW_LAYOUT})
 
     window_control_tests = ROOT / "data" / "window_control" / "processed" / "combined_examples.jsonl"

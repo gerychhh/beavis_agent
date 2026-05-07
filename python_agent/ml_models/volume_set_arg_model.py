@@ -1,4 +1,62 @@
+import re
 from typing import Any, Dict, List, Optional, Tuple
+
+
+_UNIT_WORDS = {
+    "ноль": 0,
+    "нуль": 0,
+    "один": 1,
+    "одна": 1,
+    "одну": 1,
+    "два": 2,
+    "две": 2,
+    "три": 3,
+    "четыре": 4,
+    "пять": 5,
+    "шесть": 6,
+    "семь": 7,
+    "сеть": 7,
+    "восемь": 8,
+    "девять": 9,
+}
+_TEEN_WORDS = {
+    "десять": 10,
+    "деисть": 10,
+    "одиннадцать": 11,
+    "двенадцать": 12,
+    "тринадцать": 13,
+    "четырнадцать": 14,
+    "пятнадцать": 15,
+    "шестнадцать": 16,
+    "семнадцать": 17,
+    "восемнадцать": 18,
+    "девятнадцать": 19,
+}
+_TENS_WORDS = {
+    "двадцать": 20,
+    "дватцать": 20,
+    "тридцать": 30,
+    "сорок": 40,
+    "пятьдесят": 50,
+    "питдесят": 50,
+    "полтинник": 50,
+    "половина": 50,
+    "половину": 50,
+    "шестьдесят": 60,
+    "семьдесят": 70,
+    "семдесят": 70,
+    "восемьдесят": 80,
+    "девяносто": 90,
+    "девяноста": 90,
+    "сотня": 100,
+    "сто": 100,
+    "полная": 100,
+    "полную": 100,
+    "максимум": 100,
+    "максималка": 100,
+}
+_NUMBER_WORDS = {**_UNIT_WORDS, **_TEEN_WORDS, **_TENS_WORDS}
+_WORD_RE = re.compile(r"[a-zа-яё0-9]+", re.IGNORECASE)
 
 
 class VolumeSetArgModel:
@@ -49,8 +107,22 @@ class VolumeSetArgModel:
                 "debug": {"source": "action_mute", "action": action, "action_conf": round(float(action_conf), 4)},
             }
 
+        rule_vague = self._extract_rule_vague(text, action, action_conf)
+        if rule_vague is not None:
+            return rule_vague
+
         # 1) Value model: exact value or NO_VALUE.
         value, value_conf = self._predict_label(self.value_model, text)
+        rule_value = self._extract_rule_value(text)
+        if rule_value is not None and value_conf < 0.2:
+            return self._build_from_action_and_value(
+                action=action,
+                action_conf=action_conf,
+                value=rule_value,
+                value_conf=1.0,
+                source="rule_value",
+            )
+
         if value != "NO_VALUE" and value_conf >= self.min_value_confidence:
             try:
                 number = int(value)
@@ -65,6 +137,15 @@ class VolumeSetArgModel:
                     value_conf=value_conf,
                     source="value_model",
                 )
+
+        if rule_value is not None:
+            return self._build_from_action_and_value(
+                action=action,
+                action_conf=action_conf,
+                value=rule_value,
+                value_conf=1.0,
+                source="rule_value",
+            )
 
         # 2) Vague model: human relative/soft volume phrases.
         vague, vague_conf = self._predict_label(self.vague_model, text)
@@ -134,6 +215,53 @@ class VolumeSetArgModel:
             except Exception:
                 confidence = 0.7
         return str(label), confidence
+
+    def _extract_rule_value(self, text: str) -> Optional[int]:
+        normalized = text.lower().replace("ё", "е")
+        tokens = _WORD_RE.findall(normalized)
+
+        index = 0
+        while index < len(tokens):
+            token = tokens[index]
+            value = self._parse_number_token(token)
+            if value is None:
+                index += 1
+                continue
+
+            if value in {20, 30, 40, 50, 60, 70, 80, 90} and index + 1 < len(tokens):
+                next_value = self._parse_number_token(tokens[index + 1])
+                if next_value is not None:
+                    if 0 <= next_value <= 9:
+                        return max(0, min(100, int(value + next_value)))
+
+            return max(0, min(100, int(value)))
+        return None
+
+    def _parse_number_token(self, token: str) -> Optional[int]:
+        if token.isdigit():
+            return int(token)
+        return _NUMBER_WORDS.get(token)
+
+    def _extract_rule_vague(
+        self,
+        text: str,
+        action: str,
+        action_conf: float,
+    ) -> Optional[Dict[str, Any]]:
+        normalized = text.lower().replace("ё", "е")
+        if "еле слышно" in normalized or "едва слышно" in normalized:
+            return {
+                "mode": "delta",
+                "delta": 15,
+                "confidence": round(float(max(action_conf, 0.9)), 4),
+                "debug": {
+                    "source": "rule_vague",
+                    "action": action,
+                    "action_conf": round(float(action_conf), 4),
+                    "vague": "barely_audible",
+                },
+            }
+        return None
 
     def _parse_vague_label(self, label: str) -> Optional[Dict[str, Any]]:
         if not label or label == "UNKNOWN":

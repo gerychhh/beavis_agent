@@ -5,7 +5,8 @@ import json
 import os
 import subprocess
 import sys
-from dataclasses import dataclass, field
+import time
+from dataclasses import dataclass, field, replace
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Callable
@@ -31,6 +32,7 @@ from python_agent.resolvers.windows_app_discovery import discover_windows_apps
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_APPS_INDEX_PATH = PROJECT_ROOT / "python_agent" / "data" / "cache" / "apps_index.json"
 ProgressCallback = Callable[[str], None]
+CancelCallback = Callable[[], bool]
 STANDARD_DEFAULT_APP_IDS = {
     # Microsoft Office
     "access",
@@ -176,6 +178,14 @@ class ApplyUserAppChangesRequest:
 
 
 @dataclass(frozen=True)
+class SyncVisibleAppsRequest:
+    apps: list[AppCatalogChange]
+    retrain: bool = True
+    catalog_path: Path = DEFAULT_APPS_CATALOG_PATH
+    index_output_path: Path = DEFAULT_APPS_INDEX_PATH
+
+
+@dataclass(frozen=True)
 class ApplyUserAppChangesResult:
     changes: list[dict[str, Any]]
     index_summary: dict[str, Any]
@@ -191,16 +201,24 @@ class ApplyUserAppChangesResult:
         }
 
 
+class TrainingCancelled(RuntimeError):
+    pass
+
+
 def retrain_apps_pipeline(
     catalog_path: Path = DEFAULT_APPS_CATALOG_PATH,
     index_output_path: Path = DEFAULT_APPS_INDEX_PATH,
     progress: ProgressCallback | None = None,
+    should_cancel: CancelCallback | None = None,
 ) -> dict[str, Any]:
     progress = progress or (lambda _message: None)
+    should_cancel = should_cancel or (lambda: False)
     progress("Rebuilding runtime app index")
+    if should_cancel():
+        raise TrainingCancelled("Training cancelled before index rebuild")
     index_summary = rebuild_apps_index(catalog_path, index_output_path)
     progress("Training command pipeline")
-    commands = _run_training(progress, catalog_path)
+    commands = _run_training(progress, catalog_path, should_cancel=should_cancel)
     progress("Training finished")
     return {
         "index_summary": index_summary,
@@ -222,7 +240,7 @@ def add_user_app(
     existing = service.get_app(record.app_id)
     replace_existing = False
     if existing is not None:
-        replace_existing = existing.source != "user" and not existing.enabled
+        replace_existing = not existing.enabled or not _is_user_visible_app(existing)
         if not replace_existing:
             raise ValueError(f"app_id is already used: {record.app_id}")
 
@@ -263,6 +281,7 @@ def apply_user_app_changes(
     service = AppCatalogService(request.catalog_path)
     applied: list[dict[str, Any]] = []
     smoke_records: list[AppRecord] = []
+    normalized_changes: list[tuple[str, str, AppCatalogChange]] = []
 
     for raw_change in request.changes:
         operation = raw_change.operation.strip().lower()
@@ -273,6 +292,28 @@ def apply_user_app_changes(
 
         if operation != "add" and not app_id:
             raise ValueError("app_id is required")
+
+        normalized_changes.append((operation, app_id, raw_change))
+
+    removed_ids: set[str] = set()
+
+    for operation, app_id, _raw_change in normalized_changes:
+        if operation not in {"delete", "disable"}:
+            continue
+
+        record = service.get_app(app_id)
+        if record is None:
+            applied.append({"operation": "delete_missing", "source": "unknown", "app_id": app_id})
+            removed_ids.add(app_id)
+            continue
+
+        deleted = service.delete_app(app_id)
+        applied.append({"operation": "delete", "source": deleted.source, "app_id": app_id})
+        removed_ids.add(app_id)
+
+    for operation, app_id, raw_change in normalized_changes:
+        if operation in {"delete", "disable"}:
+            continue
 
         if operation == "add":
             record = _build_record(
@@ -292,7 +333,11 @@ def apply_user_app_changes(
             existing = service.get_app(record.app_id)
             replace_existing = False
             if existing is not None:
-                replace_existing = existing.source != "user" and not existing.enabled
+                replace_existing = (
+                    record.app_id in removed_ids
+                    or not existing.enabled
+                    or not _is_user_visible_app(existing)
+                )
                 if not replace_existing:
                     raise ValueError(f"app_id is already used: {record.app_id}")
 
@@ -315,20 +360,6 @@ def apply_user_app_changes(
                 smoke_records.append(updated)
             continue
 
-        if operation == "delete":
-            if record.source == "user":
-                deleted = service.delete_user_app(app_id)
-                applied.append({"operation": "delete", "source": deleted.source, "app_id": app_id})
-            else:
-                disabled = service.disable_app(app_id)
-                applied.append({"operation": "disable", "source": disabled.source, "app_id": app_id})
-            continue
-
-        if operation == "disable":
-            disabled = service.disable_app(app_id)
-            applied.append({"operation": "disable", "source": disabled.source, "app_id": app_id})
-            continue
-
         if operation == "enable":
             forms = normalize_speech_forms(raw_change.speech_forms)
             if forms:
@@ -339,8 +370,13 @@ def apply_user_app_changes(
             smoke_records.append(enabled)
             continue
 
+    _compact_catalog_to_visible_user_apps(service)
     progress("Обновляю каталог")
     index_summary = rebuild_apps_index(request.catalog_path, request.index_output_path)
+    index_summary["sync"] = verify_visible_catalog_runtime_sync(
+        request.catalog_path,
+        request.index_output_path,
+    )
 
     commands: list[dict[str, Any]] = []
     smoke_results: list[dict[str, Any]] = []
@@ -362,6 +398,66 @@ def apply_user_app_changes(
     progress("Готово")
     return ApplyUserAppChangesResult(
         changes=applied,
+        index_summary=index_summary,
+        commands=commands,
+        smoke_results=smoke_results,
+    )
+
+
+def sync_visible_user_apps(
+    request: SyncVisibleAppsRequest,
+    progress: ProgressCallback | None = None,
+) -> ApplyUserAppChangesResult:
+    progress = progress or (lambda _message: None)
+    progress("Синхронизирую список приложений")
+
+    service = AppCatalogService(request.catalog_path)
+    records: list[AppRecord] = []
+    seen_ids: set[str] = set()
+
+    for item in request.apps:
+        app_id = normalize_app_id(item.app_id)
+        record = _build_record(
+            AddUserAppRequest(
+                path=item.path,
+                display_name=item.display_name,
+                app_id=app_id or None,
+                speech_forms=item.speech_forms,
+                windows_app_id=item.windows_app_id,
+                launch_type=item.launch_type,
+                launch_target=item.launch_target,
+                retrain=False,
+                catalog_path=request.catalog_path,
+            )
+        )
+        if record.app_id in seen_ids:
+            raise ValueError(f"Duplicate app_id in visible apps snapshot: {record.app_id}")
+        seen_ids.add(record.app_id)
+        records.append(replace(record, source="user", enabled=True))
+
+    service.save(records)
+    progress("Обновляю каталог")
+    index_summary = rebuild_apps_index(request.catalog_path, request.index_output_path)
+    index_summary["sync"] = verify_visible_catalog_runtime_sync(
+        request.catalog_path,
+        request.index_output_path,
+    )
+
+    commands: list[dict[str, Any]] = []
+    smoke_results: list[dict[str, Any]] = []
+    if request.retrain:
+        commands.extend(_run_training(progress, request.catalog_path))
+        progress("Проверяю новые фразы")
+        for record in records[:20]:
+            smoke_results.extend(smoke_check(record))
+        _raise_if_smoke_failed(smoke_results, "App catalog smoke checks failed")
+
+    progress("Готово")
+    return ApplyUserAppChangesResult(
+        changes=[
+            {"operation": "sync", "source": "user", "app_id": record.app_id}
+            for record in records
+        ],
         index_summary=index_summary,
         commands=commands,
         smoke_results=smoke_results,
@@ -571,8 +667,13 @@ def _index_target_exists(launch_type: str, launch_target: str) -> bool:
     return Path(launch_target).expanduser().exists()
 
 
-def _run_training(progress: ProgressCallback, apps_catalog_path: Path) -> list[dict[str, Any]]:
+def _run_training(
+    progress: ProgressCallback,
+    apps_catalog_path: Path,
+    should_cancel: CancelCallback | None = None,
+) -> list[dict[str, Any]]:
     apps_catalog_path = Path(apps_catalog_path)
+    should_cancel = should_cancel or (lambda: False)
     worker_count = max(1, min(32, (os.cpu_count() or 4) - 1))
     training_env = {
         **os.environ,
@@ -648,35 +749,97 @@ def _run_training(progress: ProgressCallback, apps_catalog_path: Path) -> list[d
     results: list[dict[str, Any]] = []
 
     for title, module_args in commands:
+        if should_cancel():
+            raise TrainingCancelled(f"Training cancelled before step: {title}")
         progress(title)
         cmd = [sys.executable, "-m", *module_args]
-        completed = subprocess.run(
+        process = subprocess.Popen(
             cmd,
             cwd=PROJECT_ROOT,
             env=training_env,
-            capture_output=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
             text=True,
             encoding="utf-8",
             errors="replace",
-            check=False,
         )
+        while process.poll() is None:
+            if should_cancel():
+                progress(f"Отменяю шаг: {title}")
+                process.terminate()
+                try:
+                    process.wait(timeout=5)
+                except subprocess.TimeoutExpired:
+                    process.kill()
+                    process.wait(timeout=5)
+                stdout, stderr = process.communicate()
+                results.append({
+                    "title": title,
+                    "command": cmd,
+                    "returncode": process.returncode,
+                    "stdout": (stdout or "")[-6000:],
+                    "stderr": (stderr or "")[-6000:],
+                    "cancelled": True,
+                })
+                raise TrainingCancelled(f"Training cancelled during step: {title}")
+            time.sleep(0.2)
+
+        stdout, stderr = process.communicate()
         result = {
             "title": title,
             "command": cmd,
-            "returncode": completed.returncode,
-            "stdout": completed.stdout[-6000:],
-            "stderr": completed.stderr[-6000:],
+            "returncode": process.returncode,
+            "stdout": (stdout or "")[-6000:],
+            "stderr": (stderr or "")[-6000:],
         }
         results.append(result)
 
-        if completed.returncode != 0:
+        if process.returncode != 0:
             raise RuntimeError(
-                f"{title} failed with exit code {completed.returncode}\n"
-                f"STDOUT:\n{completed.stdout}\n"
-                f"STDERR:\n{completed.stderr}"
+                f"{title} failed with exit code {process.returncode}\n"
+                f"STDOUT:\n{stdout}\n"
+                f"STDERR:\n{stderr}"
             )
 
     return results
+
+
+def _compact_catalog_to_visible_user_apps(service: AppCatalogService) -> None:
+    visible_records = [
+        replace(record, source="user", enabled=True)
+        for record in service.get_all_apps()
+        if record.enabled and _is_user_visible_app(record)
+    ]
+    service.save(visible_records)
+
+
+def verify_visible_catalog_runtime_sync(
+    catalog_path: Path = DEFAULT_APPS_CATALOG_PATH,
+    index_output_path: Path = DEFAULT_APPS_INDEX_PATH,
+) -> dict[str, Any]:
+    visible_ids = {
+        record["app_id"]
+        for record in list_user_app_records(catalog_path)
+    }
+    if index_output_path.exists():
+        payload = json.loads(index_output_path.read_text(encoding="utf-8"))
+        runtime_ids = {
+            str(record.get("app_id") or "")
+            for record in payload.get("records", [])
+            if record.get("app_id")
+        }
+    else:
+        runtime_ids = set()
+
+    missing_from_runtime = sorted(visible_ids - runtime_ids)
+    extra_in_runtime = sorted(runtime_ids - visible_ids)
+    return {
+        "ok": not missing_from_runtime and not extra_in_runtime,
+        "visible_app_ids": len(visible_ids),
+        "runtime_app_ids": len(runtime_ids),
+        "missing_from_runtime": missing_from_runtime,
+        "extra_in_runtime": extra_in_runtime,
+    }
 
 
 def smoke_check(record: AppRecord) -> list[dict[str, Any]]:
