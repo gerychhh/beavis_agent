@@ -15,7 +15,7 @@ from python_agent.nlu.normalizer import Normalizer
 from python_agent.resolvers.app_catalog_utils import is_spoken_form
 from python_agent.resolvers.app_catalog_service import AppCatalogService
 from python_agent.resolvers.app_visibility import is_user_visible_app
-from python_agent.training.dataset_sources import dict_from_source, list_from_source, load_training_source
+from python_agent.training.dataset_sources import list_from_source, load_training_source
 
 
 RANDOM_SEED = 42
@@ -28,9 +28,7 @@ WAKE_PREFIXES = list_from_source(_SOURCE, "wake_prefixes")
 NOISE_SUFFIXES = list_from_source(_SOURCE, "noise_suffixes")
 NON_OPEN_APP_TEMPLATES = list_from_source(_SOURCE, "non_open_app_templates")
 UNKNOWN_PHRASES = list_from_source(_SOURCE, "unknown_phrases")
-MANUAL_TESTS = list_from_source(_SOURCE, "manual_tests")
-CURATED_TRAIN_EXAMPLES = [tuple(item) for item in list_from_source(_SOURCE, "curated_train_examples")]
-CURATED_APP_CATALOG = dict_from_source(_SOURCE, "app_catalog")
+TYPO_REPLACEMENTS = [tuple(item) for item in list_from_source(_SOURCE, "typo_replacements")]
 
 
 def clean_text(text: str) -> str:
@@ -52,12 +50,7 @@ def corrupt_token(token: str, rng: random.Random) -> str:
     elif op == "duplicate":
         chars.insert(i, chars[i])
     elif op == "replace":
-        replacements = {
-            "о": "а", "а": "о", "е": "и", "и": "е", "э": "е",
-            "т": "д", "д": "т", "с": "з", "з": "с", "в": "ф", "ф": "в",
-            "p": "r", "r": "p", "o": "a", "a": "o", "e": "i", "i": "e",
-        }
-        chars[i] = replacements.get(chars[i].lower(), chars[i])
+        chars[i] = dict(TYPO_REPLACEMENTS).get(chars[i].lower(), chars[i])
 
     return "".join(chars)
 
@@ -88,16 +81,13 @@ def build_phrase(app_text: str, rng: random.Random, noisy: bool = True) -> str:
     return clean_text(phrase)
 
 
-def build_app_catalog(catalog_path: Path | None = None) -> dict[str, dict[str, list[str]]]:
+def build_app_catalog(catalog_path: Path | None = None) -> dict[str, list[str]]:
     service = AppCatalogService(catalog_path)
-    catalog: dict[str, dict[str, list[str]]] = {}
+    catalog: dict[str, list[str]] = {}
 
     for app in service.get_enabled_apps():
         if not is_user_visible_app(app):
             continue
-        curated = CURATED_APP_CATALOG.get(app.app_id, {})
-        if not isinstance(curated, dict):
-            curated = {}
 
         forms = [
             app.display_name,
@@ -105,7 +95,6 @@ def build_app_catalog(catalog_path: Path | None = None) -> dict[str, dict[str, l
             Path(app.target_path).stem if app.target_path else "",
             app.app_id.replace("_", " "),
             *app.speech_forms,
-            *list(curated.get("surface_forms", [])),
         ]
 
         surface_forms = list(dict.fromkeys([
@@ -115,37 +104,20 @@ def build_app_catalog(catalog_path: Path | None = None) -> dict[str, dict[str, l
         ]))
 
         if surface_forms:
-            catalog[app.app_id] = {
-                "surface_forms": surface_forms,
-                "typos": list(dict.fromkeys(
-                    clean_text(item)
-                    for item in curated.get("typos", [])
-                    if str(item).strip()
-                )),
-                "semantic": list(dict.fromkeys(
-                    clean_text(item)
-                    for item in curated.get("semantic", [])
-                    if str(item).strip()
-                )),
-            }
+            catalog[app.app_id] = surface_forms
 
     return catalog
 
 
-def app_text_variants(app_id: str, catalog: dict[str, dict[str, list[str]]]) -> list[str]:
-    entry = catalog[app_id]
-    values: list[str] = []
-    values.extend(entry.get("surface_forms", []))
-    values.extend(entry.get("typos", []))
-    values.extend(entry.get("semantic", []))
-    return list(dict.fromkeys([clean_text(item) for item in values if clean_text(item)])) or [app_id]
+def app_text_variants(app_id: str, catalog: dict[str, list[str]]) -> list[str]:
+    return list(dict.fromkeys([clean_text(item) for item in catalog[app_id] if clean_text(item)])) or [app_id]
 
 
 def generate_dataset(
     samples_per_app: int,
     unknown_samples: int,
     seed: int,
-    catalog: dict[str, dict[str, list[str]]] | None = None,
+    catalog: dict[str, list[str]] | None = None,
 ) -> tuple[list[dict], list[dict]]:
     rng = random.Random(seed)
     catalog = catalog or build_app_catalog()
@@ -195,31 +167,33 @@ def generate_dataset(
         combined.append({"text": text, "args": {}})
         unknown_seen.add(text)
 
-    for text, app_id in CURATED_TRAIN_EXAMPLES:
-        if app_id != "unknown" and app_id not in catalog:
-            continue
-
-        repeat = 12 if app_id != "unknown" else 16
-        for _ in range(repeat):
-            rows.append({"text": clean_text(text), "app_id": app_id})
-            combined.append({"text": clean_text(text), "args": {"app_id": app_id} if app_id != "unknown" else {}})
-
     rng.shuffle(rows)
     rng.shuffle(combined)
     return rows, combined
 
 
-def build_manual_tests(catalog: dict[str, dict[str, list[str]]]) -> list[dict]:
-    tests = [
-        dict(item)
-        for item in MANUAL_TESTS
-        if item.get("expected_app_id") == "unknown" or item.get("expected_app_id") in catalog
-    ]
+def build_manual_tests(catalog: dict[str, list[str]]) -> list[dict]:
+    tests: list[dict] = []
 
     for app_id in sorted(catalog):
-        for variant in app_text_variants(app_id, catalog)[:4]:
-            tests.append({"text": f"открой {variant}", "expected_app_id": app_id})
-            tests.append({"text": f"запусти {variant}", "expected_app_id": app_id})
+        for variant in app_text_variants(app_id, catalog)[:3]:
+            for template in EXACT_OPEN_TEMPLATES[:3]:
+                tests.append({
+                    "text": clean_text(template.format(app=variant)),
+                    "expected_app_id": app_id,
+                })
+
+    for phrase in UNKNOWN_PHRASES[:20]:
+        tests.append({"text": clean_text(phrase), "expected_app_id": "unknown"})
+
+    if catalog:
+        first_app = sorted(catalog)[0]
+        first_variant = app_text_variants(first_app, catalog)[0]
+        for template in NON_OPEN_APP_TEMPLATES[:8]:
+            tests.append({
+                "text": clean_text(template.format(app=first_variant)),
+                "expected_app_id": "unknown",
+            })
 
     return tests
 

@@ -7,6 +7,7 @@ from pathlib import Path
 
 import joblib
 import pandas as pd
+from sklearn.dummy import DummyClassifier
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import SGDClassifier
 from sklearn.metrics import accuracy_score, f1_score
@@ -76,12 +77,15 @@ def main() -> None:
     y_action = df["action"].tolist()
     y_target = df["target"].tolist()
 
+    # Use stratify only when every target class has >= 2 samples.
     indices = list(range(len(X)))
+    target_counts = pd.Series(y_target).value_counts()
+    can_stratify = int(target_counts.min()) >= 2
     train_idx, val_idx = train_test_split(
         indices,
         test_size=0.2,
         random_state=42,
-        stratify=y_target,
+        stratify=y_target if can_stratify else None,
     )
 
     X_train = [X[i] for i in train_idx]
@@ -93,12 +97,18 @@ def main() -> None:
     y_target_train = [y_target[i] for i in train_idx]
     y_target_val = [y_target[i] for i in val_idx]
 
-    action_model = make_pipeline()
-    target_model = make_pipeline()
+    def _fit_model(X_tr: list, y_tr: list) -> object:
+        if len(set(y_tr)) < 2:
+            clf = DummyClassifier(strategy="most_frequent")
+            clf.fit([[0]] * len(y_tr), y_tr)
+            return clf
+        m = make_pipeline()
+        m.fit(X_tr, y_tr)
+        return m
 
     start = time.time()
-    action_model.fit(X_train, y_action_train)
-    target_model.fit(X_train, y_target_train)
+    action_model = _fit_model(X_train, y_action_train)
+    target_model = _fit_model(X_train, y_target_train)
     train_seconds = time.time() - start
 
     pred_action = action_model.predict(X_val)

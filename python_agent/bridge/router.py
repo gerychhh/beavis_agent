@@ -4,11 +4,13 @@ from typing import Any
 
 from python_agent.api.facade import BeavisApi
 from python_agent.api.result import fail
+from python_agent.core.logger import ActionLogger
 
 
 class BridgeRouter:
     def __init__(self, api: BeavisApi | None = None) -> None:
         self.api = api or BeavisApi()
+        self.logger = ActionLogger()
 
     def dispatch(self, method: str, params: dict[str, Any] | None = None) -> dict[str, Any]:
         params = params or {}
@@ -28,6 +30,8 @@ class BridgeRouter:
                 return self.api.apps.list_windows_apps()
             if method == "apps.list_user_apps":
                 return self.api.apps.list_user_apps()
+            if method == "apps.validate_path":
+                return self.api.apps.validate_path(**params)
             if method == "apps.add":
                 return self.api.apps.add(**params)
             if method == "apps.update_speech_forms":
@@ -63,6 +67,31 @@ class BridgeRouter:
 
             return fail(f"Unknown method: {method}", code="UNKNOWN_METHOD")
         except TypeError as error:
+            self._log_command_dispatch_error(method, params, error, "BAD_PARAMS")
             return fail(error, code="BAD_PARAMS")
         except Exception as error:
+            self._log_command_dispatch_error(method, params, error, "BRIDGE_ROUTER_ERROR")
             return fail(error, code="BRIDGE_ROUTER_ERROR")
+
+    def _log_command_dispatch_error(
+        self,
+        method: str,
+        params: dict[str, Any],
+        error: Exception,
+        code: str,
+    ) -> None:
+        if method not in {"commands.run", "commands.build_tool_call"}:
+            return
+        try:
+            self.logger.log_command_error(
+                raw_text=str(params.get("text") or ""),
+                message=str(error),
+                code=code,
+                source=str(params.get("source") or "text"),
+                stage="bridge_dispatch",
+                meta={
+                    "method": method,
+                },
+            )
+        except Exception:
+            pass

@@ -9,8 +9,7 @@ Beavis Agent converts imperfect natural-language commands into strict JSON `Tool
 The project currently contains:
 
 - Python NLU pipeline
-- PySide6 desktop UI
-- global text hotkey overlay
+- Tauri desktop UI (TypeScript / Vite)
 - voice input through `faster-whisper`
 - C++ runtime for Windows actions
 - app indexing from Windows sources
@@ -46,7 +45,7 @@ skill classification
 argument extraction
 training datasets
 model training
-UI
+UI API bridge
 voice transcription
 logging
 ```
@@ -76,6 +75,10 @@ beavis_agent/
 │   ├── CMakeLists.txt
 │   └── src/
 │
+├── desktop_ui/        ← Tauri + Vite (TypeScript)
+│   ├── src/
+│   └── src-tauri/
+│
 ├── docs/
 │   ├── ARCHITECTURE.md
 │   ├── COMMAND_PROTOCOL.md
@@ -90,7 +93,6 @@ beavis_agent/
 │   ├── nlu/
 │   ├── resolvers/
 │   ├── training/
-│   ├── ui/
 │   ├── voice/
 │   ├── cpp_client.py
 │   └── main.py
@@ -136,6 +138,8 @@ PowerShell
 Visual Studio 2022 with C++ build tools
 CMake
 Ninja
+Node.js
+Rust toolchain for Tauri
 ```
 
 Python dependencies are installed from:
@@ -173,8 +177,8 @@ smoke
 .\scripts\dev.ps1 train
 .\scripts\dev.ps1 test
 .\scripts\dev.ps1 smoke
+.\scripts\dev.ps1 ui-dev
 .\scripts\dev.ps1 run "запусти блокнот" --execute
-.\scripts\dev.ps1 ui
 ```
 
 ## Manual setup
@@ -229,24 +233,22 @@ Run through helper script:
 .\scripts\dev.ps1 run "запусти блокнот" --execute
 ```
 
-## Running UI
+## Desktop UI (Tauri)
+
+The desktop UI is built with Tauri + Vite (TypeScript).
+
+To run in development mode:
 
 ```powershell
-.\scripts\dev.ps1 ui
+.\scripts\dev.ps1 ui-install
+.\scripts\dev.ps1 ui-dev
 ```
 
-The UI includes:
+To build a production binary:
 
-```text
-command input
-hotkey overlay
-voice settings
-application management
-history
-toast feedback
+```powershell
+.\scripts\dev.ps1 ui-build
 ```
-
-The default text hotkey is configurable in the Settings tab.
 
 ## Voice input
 

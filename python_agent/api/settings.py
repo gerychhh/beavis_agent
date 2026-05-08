@@ -3,16 +3,13 @@ from __future__ import annotations
 from typing import Any
 
 from python_agent.api.result import ok, fail
-from python_agent.ui.settings_store import UiSettings, UiSettingsStore
+from python_agent.services.settings_store import UiSettings, UiSettingsStore
 from python_agent.voice.settings import VoiceSettings
 
 
 class SettingsApi:
     """
-    Stable settings API.
-
-    For now it reuses the existing UiSettingsStore to avoid changing the old UI.
-    Later UiSettingsStore should be moved from ui/ to services/settings_service.py.
+    Stable settings API backed by UiSettingsStore (python_agent/services/settings_store.py).
     """
 
     def __init__(self, store: UiSettingsStore | None = None) -> None:

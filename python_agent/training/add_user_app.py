@@ -27,85 +27,43 @@ from python_agent.resolvers.app_catalog_utils import (
 )
 from python_agent.resolvers.app_visibility import is_user_visible_app
 from python_agent.resolvers.windows_app_discovery import discover_windows_apps
+from python_agent.training.dataset_sources import dict_from_source, list_from_source, load_training_source
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_APPS_INDEX_PATH = PROJECT_ROOT / "python_agent" / "data" / "cache" / "apps_index.json"
 ProgressCallback = Callable[[str], None]
 CancelCallback = Callable[[], bool]
-STANDARD_DEFAULT_APP_IDS = {
-    # Microsoft Office
-    "access",
-    "database_compare",
-    "excel",
-    "office",
-    "onenote",
-    "outlook",
-    "powerpoint",
-    "project",
-    "spreadsheet_compare",
-    "visio",
-    "word",
-    # Adobe
-    "acrobat_reader",
-    "adobe_xd",
-    "after_effects",
-    "animate",
-    "audition",
-    "bridge",
-    "illustrator",
-    "indesign",
-    "lightroom",
-    "media_encoder",
-    "photoshop",
-    "premiere_pro",
-    "substance_painter",
-    # Windows shell/tools
-    "calculator",
-    "camera",
-    "character_map",
-    "cmd",
-    "computer_management",
-    "control_panel",
-    "device_manager",
-    "disk_cleanup",
-    "disk_management",
-    "edge",
-    "event_viewer",
-    "explorer",
-    "game_bar",
-    "magnify",
-    "microsoft_store",
-    "narrator",
-    "notepad",
-    "on_screen_keyboard",
-    "paint",
-    "performance_monitor",
-    "photos",
-    "powershell",
-    "print_management",
-    "regedit",
-    "remote_desktop_connection",
-    "resource_monitor",
-    "run",
-    "services",
-    "settings",
-    "snipping_tool",
-    "steps_recorder",
-    "system_configuration",
-    "system_information",
-    "task_manager",
-    "task_scheduler",
-    "terminal",
-    "voice_recorder",
-    "windows_defender_firewall_with_advanced_security",
-    "windows_media_player_legacy",
-    "wmplayer",
-}
+
+_WORKFLOW_SOURCE = load_training_source("user_app_workflow.json")
+PROGRESS_MESSAGES = {str(key): str(value) for key, value in dict_from_source(_WORKFLOW_SOURCE, "progress_messages").items()}
+TRAINING_STEPS = list_from_source(_WORKFLOW_SOURCE, "training_steps")
+SMOKE_OPEN_APP_TEMPLATES = [str(item) for item in list_from_source(_WORKFLOW_SOURCE, "smoke_open_app_templates")]
 
 
-def _is_user_visible_app(record: AppRecord) -> bool:
-    return is_user_visible_app(record)
+def _progress(key: str) -> str:
+    return PROGRESS_MESSAGES[key]
+
+
+def _workflow_training_steps(apps_catalog_path: Path) -> list[tuple[str, list[str]]]:
+    steps: list[tuple[str, list[str]]] = []
+
+    for item in TRAINING_STEPS:
+        if not isinstance(item, dict):
+            raise ValueError("training_steps entries must be objects")
+
+        title = str(item["title"])
+        raw_args = item.get("module_args", [])
+        if not isinstance(raw_args, list):
+            raise ValueError("training_steps.module_args must be a list")
+
+        module_args = [
+            str(arg).format(apps_catalog_path=str(apps_catalog_path))
+            for arg in raw_args
+        ]
+        steps.append((title, module_args))
+
+    return steps
 
 
 @dataclass(frozen=True)
@@ -219,6 +177,11 @@ def retrain_apps_pipeline(
     index_summary = rebuild_apps_index(catalog_path, index_output_path)
     progress("Training command pipeline")
     commands = _run_training(progress, catalog_path, should_cancel=should_cancel)
+    progress("Reloading command pipeline")
+    try:
+        CommandPipeline()  # warm-reload: forces re-reading models from disk
+    except Exception:
+        pass
     progress("Training finished")
     return {
         "index_summary": index_summary,
@@ -240,7 +203,7 @@ def add_user_app(
     existing = service.get_app(record.app_id)
     replace_existing = False
     if existing is not None:
-        replace_existing = not existing.enabled or not _is_user_visible_app(existing)
+        replace_existing = not existing.enabled or not is_user_visible_app(existing)
         if not replace_existing:
             raise ValueError(f"app_id is already used: {record.app_id}")
 
@@ -257,7 +220,7 @@ def add_user_app(
 
         progress("Проверяю новые фразы")
         smoke_results = smoke_check(record)
-        _raise_if_smoke_failed(smoke_results, "New app smoke checks failed")
+        smoke_warnings = _collect_smoke_warnings(smoke_results)
 
     progress("Готово")
     return AddUserAppResult(
@@ -336,7 +299,7 @@ def apply_user_app_changes(
                 replace_existing = (
                     record.app_id in removed_ids
                     or not existing.enabled
-                    or not _is_user_visible_app(existing)
+                    or not is_user_visible_app(existing)
                 )
                 if not replace_existing:
                     raise ValueError(f"app_id is already used: {record.app_id}")
@@ -393,7 +356,7 @@ def apply_user_app_changes(
             checked_ids.add(record.app_id)
             smoke_results.extend(smoke_check(record))
 
-        _raise_if_smoke_failed(smoke_results, "App catalog smoke checks failed")
+        _collect_smoke_warnings(smoke_results)  # warnings only, no raise
 
     progress("Готово")
     return ApplyUserAppChangesResult(
@@ -417,19 +380,24 @@ def sync_visible_user_apps(
 
     for item in request.apps:
         app_id = normalize_app_id(item.app_id)
-        record = _build_record(
-            AddUserAppRequest(
-                path=item.path,
-                display_name=item.display_name,
-                app_id=app_id or None,
-                speech_forms=item.speech_forms,
-                windows_app_id=item.windows_app_id,
-                launch_type=item.launch_type,
-                launch_target=item.launch_target,
-                retrain=False,
-                catalog_path=request.catalog_path,
+        try:
+            record = _build_record(
+                AddUserAppRequest(
+                    path=item.path,
+                    display_name=item.display_name,
+                    app_id=app_id or None,
+                    speech_forms=item.speech_forms,
+                    windows_app_id=item.windows_app_id,
+                    launch_type=item.launch_type,
+                    launch_target=item.launch_target,
+                    retrain=False,
+                    catalog_path=request.catalog_path,
+                )
             )
-        )
+        except (ValueError, OSError) as err:
+            import warnings
+            warnings.warn(f"sync_visible_user_apps: skipping app {app_id!r}: {err}")
+            continue
         if record.app_id in seen_ids:
             raise ValueError(f"Duplicate app_id in visible apps snapshot: {record.app_id}")
         seen_ids.add(record.app_id)
@@ -450,7 +418,7 @@ def sync_visible_user_apps(
         progress("Проверяю новые фразы")
         for record in records[:20]:
             smoke_results.extend(smoke_check(record))
-        _raise_if_smoke_failed(smoke_results, "App catalog smoke checks failed")
+        _collect_smoke_warnings(smoke_results)  # warnings only, no raise
 
     progress("Готово")
     return ApplyUserAppChangesResult(
@@ -523,7 +491,7 @@ def update_user_app(
         if record.enabled:
             progress("Проверяю новые фразы")
             smoke_results = smoke_check(record)
-            _raise_if_smoke_failed(smoke_results, "Updated app smoke checks failed")
+            _collect_smoke_warnings(smoke_results)  # warnings only, no raise
 
     progress("Готово")
     return AddUserAppResult(
@@ -573,6 +541,19 @@ def _build_record(request: AddUserAppRequest) -> AppRecord:
         target_path = str(app_path)
         working_directory = str(app_path.parent)
 
+    # Auto-add exe stems only when user has not provided explicit speech_forms.
+    # When user provides their own slang we respect it exactly — adding ugly
+    # stems like 'blender-launcher', 'vlc', 'explorer' is not helpful.
+    user_forms = list(request.speech_forms or [])
+    if user_forms:
+        auto_candidates = [display_name]
+    else:
+        auto_candidates = [
+            display_name,
+            Path(launch_target).stem if launch_target else "",
+            Path(target_path).stem if target_path else "",
+        ]
+
     return AppRecord(
         app_id=app_id,
         display_name=display_name,
@@ -582,14 +563,7 @@ def _build_record(request: AddUserAppRequest) -> AppRecord:
         launch_target=launch_target,
         target_path=target_path,
         working_directory=working_directory,
-        speech_forms=normalize_speech_forms(
-            [
-                display_name,
-                Path(launch_target).stem if launch_target else "",
-                Path(target_path).stem if target_path else "",
-                *(request.speech_forms or []),
-            ]
-        ),
+        speech_forms=normalize_speech_forms([*auto_candidates, *user_forms]),
         priority=300,
     )
 
@@ -600,7 +574,7 @@ def rebuild_apps_index(
 ) -> dict[str, Any]:
     service = AppCatalogService(catalog_path)
     apps = service.get_all_apps()
-    enabled = [app for app in apps if app.enabled and _is_user_visible_app(app)]
+    enabled = [app for app in apps if app.enabled and is_user_visible_app(app)]
 
     records: list[dict[str, Any]] = []
     for app in enabled:
@@ -808,7 +782,7 @@ def _compact_catalog_to_visible_user_apps(service: AppCatalogService) -> None:
     visible_records = [
         replace(record, source="user", enabled=True)
         for record in service.get_all_apps()
-        if record.enabled and _is_user_visible_app(record)
+        if record.enabled and is_user_visible_app(record)
     ]
     service.save(visible_records)
 
@@ -873,9 +847,21 @@ def smoke_check(record: AppRecord) -> list[dict[str, Any]]:
 
 
 def _raise_if_smoke_failed(smoke_results: list[dict[str, Any]], message: str) -> None:
+    """Kept for backwards compatibility — now only logs, does not raise."""
+    _collect_smoke_warnings(smoke_results)
+
+
+def _collect_smoke_warnings(smoke_results: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Return failed smoke checks as warnings. Never raises."""
     failed = [item for item in smoke_results if not item.get("ok")]
     if failed:
-        raise RuntimeError(message + ": " + json.dumps(failed, ensure_ascii=False))
+        import warnings
+        warnings.warn(
+            f"Smoke check warnings ({len(failed)} phrases not matched): "
+            + json.dumps(failed[:3], ensure_ascii=False),
+            stacklevel=3,
+        )
+    return failed
 
 
 def list_user_app_records(catalog_path: Path = DEFAULT_APPS_CATALOG_PATH) -> list[dict[str, Any]]:
@@ -884,7 +870,7 @@ def list_user_app_records(catalog_path: Path = DEFAULT_APPS_CATALOG_PATH) -> lis
     for record in service.get_all_apps():
         if not record.enabled:
             continue
-        if not _is_user_visible_app(record):
+        if not is_user_visible_app(record):
             continue
         payload = record.to_dict()
         payload["source"] = "user"

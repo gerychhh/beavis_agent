@@ -32,6 +32,11 @@ python_agent/data/user_apps/
 python_agent/data/user_apps/*.json
 python_agent/data/user_apps/catalog_overrides.json
 
+# Generated training/eval reports
+python_agent/data/*/eval/test_results.json
+python_agent/data/*/eval/train_metrics.json
+python_agent/data/*/processed/dataset_stats.json
+
 # ML / generated models
 python_agent/models/*
 !python_agent/models/.gitkeep

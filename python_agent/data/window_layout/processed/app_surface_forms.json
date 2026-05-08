@@ -1,14 +1,46 @@
 {
-  "excel": [
-    "excel",
-    "эксель"
+  "beavis_dev": [
+    "beavis",
+    "beavis dev",
+    "бивис"
+  ],
+  "blender_5_0": [
+    "blender 5.0",
+    "blender-launcher",
+    "blender 5 0",
+    "блендер",
+    "blender"
+  ],
+  "codex": [
+    "codex",
+    "openai",
+    "кодекс"
+  ],
+  "discord": [
+    "discord",
+    "com.squirrel.discord",
+    "дискорд",
+    "дис"
+  ],
+  "google_chrome": [
+    "google chrome",
+    "chrome",
+    "хром",
+    "брузер"
   ],
   "telegram": [
     "telegram",
     "телега",
     "тг",
-    "телеграмм",
-    "телеграм",
-    "telega"
+    "телеграм"
+  ],
+  "yandeks_muzyka": [
+    "яндекс музыка",
+    "ru.yandex.desktop",
+    "yandeks muzyka",
+    "музыка",
+    "мьюзик",
+    "music",
+    "yandexmusic"
   ]
 }

@@ -2,17 +2,81 @@
   "schema_version": 1,
   "apps": [
     {
-      "app_id": "excel",
-      "display_name": "Excel",
+      "app_id": "beavis_dev",
+      "display_name": "Beavis",
+      "source": "user",
+      "enabled": true,
+      "launch_type": "exe",
+      "launch_target": "C:\\Users\\gerychhh_\\beavis_agent\\desktop_ui\\src-tauri\\target\\debug\\beavis_desktop_ui.exe",
+      "target_path": "C:\\Users\\gerychhh_\\beavis_agent\\desktop_ui\\src-tauri\\target\\debug\\beavis_desktop_ui.exe",
+      "working_directory": "C:\\Users\\gerychhh_\\beavis_agent\\desktop_ui\\src-tauri\\target\\debug",
+      "speech_forms": [
+        "beavis",
+        "бивис"
+      ],
+      "priority": 300
+    },
+    {
+      "app_id": "blender_5_0",
+      "display_name": "Blender 5.0",
       "source": "user",
       "enabled": true,
       "launch_type": "apps_folder",
-      "launch_target": "shell:AppsFolder\\Microsoft.Office.EXCEL.EXE.15",
-      "target_path": "Microsoft.Office.EXCEL.EXE.15",
+      "launch_target": "shell:AppsFolder\\{6D809377-6AF0-444B-8957-A3773F02200E}\\Blender Foundation\\Blender 5.0\\blender-launcher.exe",
+      "target_path": "{6D809377-6AF0-444B-8957-A3773F02200E}\\Blender Foundation\\Blender 5.0\\blender-launcher.exe",
       "working_directory": "",
       "speech_forms": [
-        "excel",
-        "эксель"
+        "blender 5.0",
+        "блендер",
+        "blender"
+      ],
+      "priority": 300
+    },
+    {
+      "app_id": "codex",
+      "display_name": "Codex",
+      "source": "user",
+      "enabled": true,
+      "launch_type": "apps_folder",
+      "launch_target": "shell:AppsFolder\\OpenAI.Codex_2p2nqsd0c76g0!App",
+      "target_path": "OpenAI.Codex_2p2nqsd0c76g0!App",
+      "working_directory": "",
+      "speech_forms": [
+        "codex",
+        "кодекс"
+      ],
+      "priority": 300
+    },
+    {
+      "app_id": "discord",
+      "display_name": "Discord",
+      "source": "user",
+      "enabled": true,
+      "launch_type": "apps_folder",
+      "launch_target": "shell:AppsFolder\\com.squirrel.Discord.Discord",
+      "target_path": "com.squirrel.Discord.Discord",
+      "working_directory": "",
+      "speech_forms": [
+        "discord",
+        "дискорд",
+        "дис"
+      ],
+      "priority": 300
+    },
+    {
+      "app_id": "google_chrome",
+      "display_name": "Google Chrome",
+      "source": "user",
+      "enabled": true,
+      "launch_type": "apps_folder",
+      "launch_target": "shell:AppsFolder\\Chrome",
+      "target_path": "Chrome",
+      "working_directory": "",
+      "speech_forms": [
+        "google chrome",
+        "chrome",
+        "хром",
+        "брузер"
       ],
       "priority": 300
     },
@@ -29,9 +93,25 @@
         "telegram",
         "телега",
         "тг",
-        "телеграмм",
-        "телеграм",
-        "telega"
+        "телеграм"
+      ],
+      "priority": 300
+    },
+    {
+      "app_id": "yandeks_muzyka",
+      "display_name": "Яндекс Музыка",
+      "source": "user",
+      "enabled": true,
+      "launch_type": "apps_folder",
+      "launch_target": "shell:AppsFolder\\ru.yandex.desktop.music",
+      "target_path": "ru.yandex.desktop.music",
+      "working_directory": "",
+      "speech_forms": [
+        "яндекс музыка",
+        "музыка",
+        "мьюзик",
+        "music",
+        "yandexmusic"
       ],
       "priority": 300
     }

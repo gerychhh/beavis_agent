@@ -247,6 +247,16 @@ class AppCatalogService:
         return deleted
 
     def _clean_record(self, record: AppRecord) -> AppRecord:
+        # Auto-add exe stem only when record has no user-provided speech_forms.
+        # Prevents ugly filenames like blender-launcher appearing in slang.
+        existing_forms = list(record.speech_forms)
+        if existing_forms:
+            speech_candidates = [record.display_name, *existing_forms]
+        else:
+            speech_candidates = [
+                record.display_name,
+                Path(record.launch_target).stem if record.launch_target else "",
+            ]
         return AppRecord(
             app_id=normalize_app_id(record.app_id),
             display_name=record.display_name.strip(),
@@ -256,13 +266,7 @@ class AppCatalogService:
             launch_target=record.launch_target.strip(),
             target_path=(record.target_path or record.launch_target).strip(),
             working_directory=record.working_directory.strip(),
-            speech_forms=normalize_speech_forms(
-                [
-                    record.display_name,
-                    Path(record.launch_target).stem if record.launch_target else "",
-                    *record.speech_forms,
-                ]
-            ),
+            speech_forms=normalize_speech_forms(speech_candidates),
             priority=int(record.priority or 0),
         )
 

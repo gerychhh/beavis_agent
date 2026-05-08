@@ -1,29 +1,62 @@
 {"text": "динамики рвуться", "expected_app_id": "unknown"}
 {"text": "закрой хром", "expected_app_id": "unknown"}
-{"text": "запусти excel", "expected_app_id": "excel"}
-{"text": "запусти microsoft excel", "expected_app_id": "excel"}
+{"text": "запусти", "expected_app_id": "beavis_dev"}
+{"text": "запусти blender 5 0", "expected_app_id": "blender_5_0"}
+{"text": "запусти blender-launcher", "expected_app_id": "blender_5_0"}
+{"text": "запусти chrome", "expected_app_id": "google_chrome"}
+{"text": "запусти codex", "expected_app_id": "codex"}
+{"text": "запусти com squirrel discord", "expected_app_id": "discord"}
+{"text": "запусти dev", "expected_app_id": "beavis_dev"}
+{"text": "запусти discord", "expected_app_id": "discord"}
+{"text": "запусти google chrome", "expected_app_id": "google_chrome"}
+{"text": "запусти openai", "expected_app_id": "codex"}
+{"text": "запусти ru yandex desktop", "expected_app_id": "yandeks_muzyka"}
 {"text": "запусти telegram", "expected_app_id": "telegram"}
-{"text": "запусти ексель", "expected_app_id": "excel"}
+{"text": "запусти yandeks muzyka", "expected_app_id": "yandeks_muzyka"}
+{"text": "запусти блендер", "expected_app_id": "blender_5_0"}
+{"text": "запусти брузер", "expected_app_id": "google_chrome"}
+{"text": "запусти дис", "expected_app_id": "discord"}
+{"text": "запусти дискорд", "expected_app_id": "discord"}
+{"text": "запусти дс", "expected_app_id": "discord"}
+{"text": "запусти кодекс", "expected_app_id": "codex"}
+{"text": "запусти музыка", "expected_app_id": "yandeks_muzyka"}
 {"text": "запусти тг", "expected_app_id": "telegram"}
 {"text": "запусти телега", "expected_app_id": "telegram"}
+{"text": "запусти телеграм", "expected_app_id": "telegram"}
 {"text": "запусти телеграмм", "expected_app_id": "telegram"}
-{"text": "запусти эксель", "expected_app_id": "excel"}
+{"text": "запусти хром", "expected_app_id": "google_chrome"}
+{"text": "запусти яндекс музыка", "expected_app_id": "yandeks_muzyka"}
 {"text": "заткнись", "expected_app_id": "unknown"}
 {"text": "какая погода", "expected_app_id": "unknown"}
-{"text": "открой excel", "expected_app_id": "excel"}
-{"text": "открой microsoft excel", "expected_app_id": "excel"}
+{"text": "открой", "expected_app_id": "beavis_dev"}
+{"text": "открой blender 5 0", "expected_app_id": "blender_5_0"}
+{"text": "открой blender-launcher", "expected_app_id": "blender_5_0"}
+{"text": "открой chrome", "expected_app_id": "google_chrome"}
+{"text": "открой codex", "expected_app_id": "codex"}
+{"text": "открой com squirrel discord", "expected_app_id": "discord"}
+{"text": "открой dev", "expected_app_id": "beavis_dev"}
+{"text": "открой discord", "expected_app_id": "discord"}
+{"text": "открой google chrome", "expected_app_id": "google_chrome"}
+{"text": "открой openai", "expected_app_id": "codex"}
+{"text": "открой ru yandex desktop", "expected_app_id": "yandeks_muzyka"}
 {"text": "открой telegram", "expected_app_id": "telegram"}
-{"text": "открой ексель", "expected_app_id": "excel"}
+{"text": "открой yandeks muzyka", "expected_app_id": "yandeks_muzyka"}
+{"text": "открой блендер", "expected_app_id": "blender_5_0"}
+{"text": "открой брузер", "expected_app_id": "google_chrome"}
+{"text": "открой дис", "expected_app_id": "discord"}
+{"text": "открой дискорд", "expected_app_id": "discord"}
+{"text": "открой кодекс", "expected_app_id": "codex"}
+{"text": "открой музыка", "expected_app_id": "yandeks_muzyka"}
 {"text": "открой окно", "expected_app_id": "unknown"}
 {"text": "открой тг", "expected_app_id": "telegram"}
 {"text": "открой телега", "expected_app_id": "telegram"}
-{"text": "открой телеграмм", "expected_app_id": "telegram"}
+{"text": "открой телеграм", "expected_app_id": "telegram"}
 {"text": "открой телегу", "expected_app_id": "telegram"}
-{"text": "открой эксель", "expected_app_id": "excel"}
+{"text": "открой хром", "expected_app_id": "google_chrome"}
+{"text": "открой яндекс музыка", "expected_app_id": "yandeks_muzyka"}
 {"text": "поставь таймер", "expected_app_id": "unknown"}
 {"text": "сверни браузер", "expected_app_id": "unknown"}
 {"text": "сделай громкость 20", "expected_app_id": "unknown"}
 {"text": "сделай громче", "expected_app_id": "unknown"}
-{"text": "таблицу открыть", "expected_app_id": "excel"}
 {"text": "тг открой", "expected_app_id": "telegram"}
 {"text": "убавь звук", "expected_app_id": "unknown"}

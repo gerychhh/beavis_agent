@@ -9,10 +9,8 @@ from python_agent.api.voice import VoiceApi
 
 class BeavisApi:
     """
-    Single stable entry point for any UI.
-
-    Old PySide UI can stay untouched.
-    New UI should talk to this facade through bridge/stdio_server.py.
+    Single stable entry point for Tauri UI.
+    Tauri UI talks to this facade through bridge/stdio_server.py.
     """
 
     def __init__(self) -> None:
@@ -32,6 +30,8 @@ class BeavisApi:
     def apps(self) -> AppsApi:
         if self._apps is None:
             self._apps = AppsApi()
+            # Wire the shared CommandsApi so AppsApi can trigger reload after training.
+            self._apps._commands_api = self.commands
         return self._apps
 
     @property
@@ -65,6 +65,7 @@ class BeavisApi:
                     "commands.reload",
                     "apps.list_windows_apps",
                     "apps.list_user_apps",
+                    "apps.validate_path",
                     "apps.add",
                     "apps.update_speech_forms",
                     "apps.delete",

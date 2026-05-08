@@ -4,7 +4,7 @@ from typing import Any
 
 from python_agent.api.result import ok, fail
 from python_agent.voice import audio as audio_capture
-from python_agent.ui.settings_store import UiSettingsStore
+from python_agent.services.settings_store import UiSettingsStore
 from python_agent.voice.service import VoiceService, VoiceCommandResult
 from python_agent.voice.settings import VoiceSettings
 

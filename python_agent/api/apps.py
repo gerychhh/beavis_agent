@@ -9,6 +9,7 @@ from typing import Any, Callable
 from uuid import uuid4
 
 from python_agent.api.result import ok, fail
+from python_agent.api.commands import CommandsApi
 from python_agent.training.add_user_app import (
     AddUserAppRequest,
     UpdateUserAppRequest,
@@ -31,6 +32,26 @@ from python_agent.training.add_user_app import (
 ProgressCallback = Callable[[str], None]
 
 
+def _strip_enclosing_path_quotes(path: str) -> str:
+    value = str(path or "").strip()
+    quote_pairs = {
+        '"': '"',
+        "'": "'",
+        "`": "`",
+        "“": "”",
+        "«": "»",
+    }
+    changed = True
+    while changed and len(value) >= 2:
+        changed = False
+        for left, right in quote_pairs.items():
+            if value.startswith(left) and value.endswith(right):
+                value = value[1:-1].strip()
+                changed = True
+                break
+    return value
+
+
 class AppsApi:
     """
     Stable API for app catalog management.
@@ -44,6 +65,7 @@ class AppsApi:
         self._training_lock = threading.Lock()
         self._training_run_lock = threading.Lock()
         self._training_job: dict[str, Any] | None = None
+        self._commands_api: CommandsApi | None = None
 
     def _training_snapshot(self) -> dict[str, Any]:
         with self._training_lock:
@@ -116,6 +138,12 @@ class AppsApi:
                                     "cancel_requested": False,
                                 }
                             )
+                    # Reload pipeline so new models are active immediately.
+                    try:
+                        if self._commands_api is not None:
+                            self._commands_api.reload()
+                    except Exception:
+                        pass
                 except TrainingCancelled as error:
                     with self._training_lock:
                         if self._training_job and self._training_job.get("id") == job_id:
@@ -169,6 +197,41 @@ class AppsApi:
         except Exception as error:
             return fail(error, code="LIST_USER_APPS_ERROR")
 
+    def validate_path(self, path: str = "") -> dict[str, Any]:
+        try:
+            normalized_path = _strip_enclosing_path_quotes(path)
+            payload: dict[str, Any] = {
+                "path": str(path or ""),
+                "normalized_path": normalized_path,
+                "exists": False,
+                "is_file": False,
+                "is_exe": normalized_path.lower().endswith(".exe"),
+                "valid": False,
+                "error": None,
+            }
+
+            if not normalized_path:
+                payload["error"] = "Укажите путь к .exe"
+                return ok(payload)
+
+            app_path = Path(normalized_path).expanduser()
+            payload["exists"] = app_path.exists()
+            payload["is_file"] = app_path.is_file() if payload["exists"] else False
+            payload["is_exe"] = app_path.suffix.lower() == ".exe"
+
+            if not payload["exists"]:
+                payload["error"] = "Файл не найден"
+            elif not payload["is_file"]:
+                payload["error"] = "Это не файл"
+            elif not payload["is_exe"]:
+                payload["error"] = "Поддерживаются только .exe файлы"
+            else:
+                payload["valid"] = True
+
+            return ok(payload)
+        except Exception as error:
+            return fail(error, code="VALIDATE_APP_PATH_ERROR")
+
     def add(
         self,
         display_name: str,
@@ -182,6 +245,7 @@ class AppsApi:
         progress: ProgressCallback | None = None,
     ) -> dict[str, Any]:
         try:
+            path = _strip_enclosing_path_quotes(path)
             result = add_user_app(
                 AddUserAppRequest(
                     display_name=display_name,
@@ -246,7 +310,7 @@ class AppsApi:
     ) -> dict[str, Any]:
         try:
             def parse_change(item: dict[str, Any]) -> AppCatalogChange:
-                path_value = str(item.get("path") or "").strip()
+                path_value = _strip_enclosing_path_quotes(str(item.get("path") or ""))
                 return AppCatalogChange(
                     operation=str(item.get("operation") or ""),
                     source=str(item.get("source") or ""),

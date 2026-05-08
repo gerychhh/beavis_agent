@@ -1,120 +1,120 @@
-{"text": "закрой эксиль", "expected": {"action": "close", "target_type": "app", "app_id": "excel"}}
-{"text": "бивис экзель заверши", "expected": {"action": "close", "target_type": "app", "app_id": "excel"}}
-{"text": "дружище эсель закрой", "expected": {"action": "close", "target_type": "app", "app_id": "excel"}}
-{"text": "эй бивис закрой нафиг эсель", "expected": {"action": "close", "target_type": "app", "app_id": "excel"}}
-{"text": "закрывай eксcel", "expected": {"action": "close", "target_type": "app", "app_id": "excel"}}
-{"text": "брух выйди из эсель", "expected": {"action": "close", "target_type": "app", "app_id": "excel"}}
-{"text": "выключи eксcel", "expected": {"action": "close", "target_type": "app", "app_id": "excel"}}
-{"text": "убей процесс excel", "expected": {"action": "close", "target_type": "app", "app_id": "excel"}}
-{"text": "эй бивис хватит эксель", "expected": {"action": "close", "target_type": "app", "app_id": "excel"}}
-{"text": "слушай закрой эсель", "expected": {"action": "close", "target_type": "app", "app_id": "excel"}}
-{"text": "beavis эксель выключи", "expected": {"action": "close", "target_type": "app", "app_id": "excel"}}
-{"text": "закрой эксель", "expected": {"action": "close", "target_type": "app", "app_id": "excel"}}
-{"text": "снеси эсель", "expected": {"action": "close", "target_type": "app", "app_id": "excel"}}
-{"text": "ну ка выйди из экзель", "expected": {"action": "close", "target_type": "app", "app_id": "excel"}}
-{"text": "excel заверши", "expected": {"action": "close", "target_type": "app", "app_id": "excel"}}
-{"text": "закрыть экзель", "expected": {"action": "close", "target_type": "app", "app_id": "excel"}}
-{"text": "слушай убей процесс эксиль", "expected": {"action": "close", "target_type": "app", "app_id": "excel"}}
-{"text": "ну ка закрывай exкel", "expected": {"action": "close", "target_type": "app", "app_id": "excel"}}
-{"text": "брух закрой окно exкel", "expected": {"action": "close", "target_type": "app", "app_id": "excel"}}
-{"text": "beavis close exкel", "expected": {"action": "close", "target_type": "app", "app_id": "excel"}}
-{"text": "бивис закрой пожалуйста eксcel", "expected": {"action": "close", "target_type": "app", "app_id": "excel"}}
-{"text": "закрой exкel", "expected": {"action": "close", "target_type": "app", "app_id": "excel"}}
-{"text": "брух kill эсель", "expected": {"action": "close", "target_type": "app", "app_id": "excel"}}
-{"text": "бивис eксcel выключи", "expected": {"action": "close", "target_type": "app", "app_id": "excel"}}
-{"text": "ну ка спрячь эксль", "expected": {"action": "minimize", "target_type": "app", "app_id": "excel"}}
-{"text": "бивис отправь эксиль вниз", "expected": {"action": "minimize", "target_type": "app", "app_id": "excel"}}
-{"text": "слушай отправь эксль вниз", "expected": {"action": "minimize", "target_type": "app", "app_id": "excel"}}
-{"text": "бивис убери эксель с глаз", "expected": {"action": "minimize", "target_type": "app", "app_id": "excel"}}
-{"text": "дружище minimize эсель", "expected": {"action": "minimize", "target_type": "app", "app_id": "excel"}}
-{"text": "дружище сврени эксель", "expected": {"action": "minimize", "target_type": "app", "app_id": "excel"}}
-{"text": "beavis убери eксcel с экрана", "expected": {"action": "minimize", "target_type": "app", "app_id": "excel"}}
-{"text": "дружище убери excel с экрана", "expected": {"action": "minimize", "target_type": "app", "app_id": "excel"}}
-{"text": "эй бивис сверний эсель", "expected": {"action": "minimize", "target_type": "app", "app_id": "excel"}}
-{"text": "алло сверний эксель", "expected": {"action": "minimize", "target_type": "app", "app_id": "excel"}}
-{"text": "алло сверний экзель", "expected": {"action": "minimize", "target_type": "app", "app_id": "excel"}}
-{"text": "алло убери окно exкel", "expected": {"action": "minimize", "target_type": "app", "app_id": "excel"}}
-{"text": "слушай сверни эксиль", "expected": {"action": "minimize", "target_type": "app", "app_id": "excel"}}
-{"text": "алло эсель сверни", "expected": {"action": "minimize", "target_type": "app", "app_id": "excel"}}
-{"text": "эй бивис сврени эксиль", "expected": {"action": "minimize", "target_type": "app", "app_id": "excel"}}
-{"text": "ну ка эксель спрячь", "expected": {"action": "minimize", "target_type": "app", "app_id": "excel"}}
-{"text": "брух кинь вниз exкel", "expected": {"action": "minimize", "target_type": "app", "app_id": "excel"}}
-{"text": "брух спрячь эксиль", "expected": {"action": "minimize", "target_type": "app", "app_id": "excel"}}
-{"text": "слушай сверни окно эксель", "expected": {"action": "minimize", "target_type": "app", "app_id": "excel"}}
-{"text": "алло сврени excel", "expected": {"action": "minimize", "target_type": "app", "app_id": "excel"}}
-{"text": "брух отправь excel вниз", "expected": {"action": "minimize", "target_type": "app", "app_id": "excel"}}
-{"text": "слушай убери окно эсель", "expected": {"action": "minimize", "target_type": "app", "app_id": "excel"}}
-{"text": "beavis exкel спрячь", "expected": {"action": "minimize", "target_type": "app", "app_id": "excel"}}
-{"text": "брух убери эсель с экрана", "expected": {"action": "minimize", "target_type": "app", "app_id": "excel"}}
-{"text": "beavis эксиль на весь экран", "expected": {"action": "maximize", "target_type": "app", "app_id": "excel"}}
-{"text": "алло эсель разверни", "expected": {"action": "maximize", "target_type": "app", "app_id": "excel"}}
-{"text": "эй бивис увеличь окно экзель", "expected": {"action": "maximize", "target_type": "app", "app_id": "excel"}}
-{"text": "алло разверни на весь экран эксель", "expected": {"action": "maximize", "target_type": "app", "app_id": "excel"}}
-{"text": "бивис eксcel на весь экран", "expected": {"action": "maximize", "target_type": "app", "app_id": "excel"}}
-{"text": "дружище во весь экран эксель", "expected": {"action": "maximize", "target_type": "app", "app_id": "excel"}}
-{"text": "брух разверни окно экзель", "expected": {"action": "maximize", "target_type": "app", "app_id": "excel"}}
-{"text": "брух разверни exкel", "expected": {"action": "maximize", "target_type": "app", "app_id": "excel"}}
-{"text": "эй бивис fullscreen экзель", "expected": {"action": "maximize", "target_type": "app", "app_id": "excel"}}
-{"text": "разверни на весь экран экзель", "expected": {"action": "maximize", "target_type": "app", "app_id": "excel"}}
-{"text": "дружище раскрой exкel", "expected": {"action": "maximize", "target_type": "app", "app_id": "excel"}}
-{"text": "брух на весь экран exкel", "expected": {"action": "maximize", "target_type": "app", "app_id": "excel"}}
-{"text": "ну ка максимизируй exкel", "expected": {"action": "maximize", "target_type": "app", "app_id": "excel"}}
-{"text": "бивис экзель на весь экран", "expected": {"action": "maximize", "target_type": "app", "app_id": "excel"}}
-{"text": "алло увеличь окно эсель", "expected": {"action": "maximize", "target_type": "app", "app_id": "excel"}}
-{"text": "beavis fullscreen exкel", "expected": {"action": "maximize", "target_type": "app", "app_id": "excel"}}
-{"text": "эй бивис fullscreen эксель", "expected": {"action": "maximize", "target_type": "app", "app_id": "excel"}}
-{"text": "бивис максимизируй эксиль", "expected": {"action": "maximize", "target_type": "app", "app_id": "excel"}}
-{"text": "дружище эксль разверни", "expected": {"action": "maximize", "target_type": "app", "app_id": "excel"}}
-{"text": "брух фулл скрин exкel", "expected": {"action": "maximize", "target_type": "app", "app_id": "excel"}}
-{"text": "эй бивис увеличь окно eксcel", "expected": {"action": "maximize", "target_type": "app", "app_id": "excel"}}
-{"text": "дружище эксиль на весь экран", "expected": {"action": "maximize", "target_type": "app", "app_id": "excel"}}
-{"text": "брух фулл скрин eксcel", "expected": {"action": "maximize", "target_type": "app", "app_id": "excel"}}
-{"text": "ну ка на весь экран экзель", "expected": {"action": "maximize", "target_type": "app", "app_id": "excel"}}
-{"text": "слушай открой обратно эксиль", "expected": {"action": "restore", "target_type": "app", "app_id": "excel"}}
-{"text": "beavis разверни обратно экзель", "expected": {"action": "restore", "target_type": "app", "app_id": "excel"}}
-{"text": "верни окно эксль", "expected": {"action": "restore", "target_type": "app", "app_id": "excel"}}
-{"text": "ну ка восстанови окно excel", "expected": {"action": "restore", "target_type": "app", "app_id": "excel"}}
-{"text": "дружище верни эсель", "expected": {"action": "restore", "target_type": "app", "app_id": "excel"}}
-{"text": "beavis разверни обратно эсель", "expected": {"action": "restore", "target_type": "app", "app_id": "excel"}}
-{"text": "бивис верни окно эксель", "expected": {"action": "restore", "target_type": "app", "app_id": "excel"}}
-{"text": "beavis покажи обратно эксль", "expected": {"action": "restore", "target_type": "app", "app_id": "excel"}}
-{"text": "верни как было excel", "expected": {"action": "restore", "target_type": "app", "app_id": "excel"}}
-{"text": "эй бивис разверни обратно eксcel", "expected": {"action": "restore", "target_type": "app", "app_id": "excel"}}
-{"text": "слушай восстанови окно эксль", "expected": {"action": "restore", "target_type": "app", "app_id": "excel"}}
-{"text": "эй бивис верни на экран эксиль", "expected": {"action": "restore", "target_type": "app", "app_id": "excel"}}
-{"text": "открой обратно эксель", "expected": {"action": "restore", "target_type": "app", "app_id": "excel"}}
-{"text": "верни на экран эксль", "expected": {"action": "restore", "target_type": "app", "app_id": "excel"}}
-{"text": "эй бивис восстанови excel", "expected": {"action": "restore", "target_type": "app", "app_id": "excel"}}
-{"text": "beavis верни эсель", "expected": {"action": "restore", "target_type": "app", "app_id": "excel"}}
-{"text": "алло восстанови окно эксель", "expected": {"action": "restore", "target_type": "app", "app_id": "excel"}}
-{"text": "алло excel восстанови", "expected": {"action": "restore", "target_type": "app", "app_id": "excel"}}
-{"text": "разверни обратно эксель", "expected": {"action": "restore", "target_type": "app", "app_id": "excel"}}
-{"text": "дружище верни как было eксcel", "expected": {"action": "restore", "target_type": "app", "app_id": "excel"}}
-{"text": "алло верни как было экзель", "expected": {"action": "restore", "target_type": "app", "app_id": "excel"}}
-{"text": "алло покажи обратно эксль", "expected": {"action": "restore", "target_type": "app", "app_id": "excel"}}
-{"text": "восстанови окно эксиль", "expected": {"action": "restore", "target_type": "app", "app_id": "excel"}}
-{"text": "алло разверни обратно excel", "expected": {"action": "restore", "target_type": "app", "app_id": "excel"}}
-{"text": "напомни мне завтра быстро", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "эй поставь таймер", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "переключи трек быстро", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "ну ка бивис громкость на десять", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "слушай бивис громкость на десять", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "эй динамики рвуться", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "найди эксель быстро", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "эй покажи календарь", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "ну ка бивис зактни", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "бивис start экзель", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "эй start telegram", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "давай сделай тихо", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "бивис найди файл", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "эй open тг", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "переведи текст", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "слушай выключи компьютер", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "давай открой экзель", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "брух открой где код пишу", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "давай запусти eксcel", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "брух включи eксcel", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "ну ка найди тг", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "открой телега пожалуйста", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "ну ка громко слишком", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "слушай запусти телеграмм", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "дружище выключи beavisdev", "expected": {"action": "close", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "заверши beavisdev", "expected": {"action": "close", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "бивис закрой beaвis", "expected": {"action": "close", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "дружище заверши beavis", "expected": {"action": "close", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "бивис выключи beais", "expected": {"action": "close", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "брух бывис выключи", "expected": {"action": "close", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "beavis снеси bavis dev", "expected": {"action": "close", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "закрой beaвis dev", "expected": {"action": "close", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "ну ка прибей beavisdev", "expected": {"action": "close", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "beavis прибей beavis dev", "expected": {"action": "close", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "эй бивис kill beavis dev", "expected": {"action": "close", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "брух закрой окно beais", "expected": {"action": "close", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "дружище бывис заверши", "expected": {"action": "close", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "заканчивай с bavis", "expected": {"action": "close", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "дружище закрыть beavis dev", "expected": {"action": "close", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "слушай убери нахрен beaвis dev", "expected": {"action": "close", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "ну ка заверши beais dev", "expected": {"action": "close", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "слушай прибей beavis", "expected": {"action": "close", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "брух close beaвis", "expected": {"action": "close", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "дружище закрывай эту бивис", "expected": {"action": "close", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "алло убери beais полностью", "expected": {"action": "close", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "эй бивис beavisdev выключи", "expected": {"action": "close", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "брух kill beais dev", "expected": {"action": "close", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "дружище закрой пожалуйста beaвis", "expected": {"action": "close", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "скрой beais", "expected": {"action": "minimize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "брух убери окно beavis dev", "expected": {"action": "minimize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "эй бивис сврени beavis dev", "expected": {"action": "minimize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "beavis отправь beavis dev вниз", "expected": {"action": "minimize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "брух сверни окно beaвis dev", "expected": {"action": "minimize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "дружище отправь beavisdev вниз", "expected": {"action": "minimize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "бивис beavis dev вниз", "expected": {"action": "minimize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "слушай убери окно бифис", "expected": {"action": "minimize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "бивис сверни", "expected": {"action": "minimize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "ну ка сверни в панель бывис", "expected": {"action": "minimize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "ну ка убери окно бивис", "expected": {"action": "minimize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "beavis beais вниз", "expected": {"action": "minimize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "эй бивис сверний бифис", "expected": {"action": "minimize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "ну ка bavis dev вниз", "expected": {"action": "minimize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "beavis кинь вниз бывис", "expected": {"action": "minimize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "beavis сврени bavis dev", "expected": {"action": "minimize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "эй бивис убери beavis dev с глаз", "expected": {"action": "minimize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "брух beais спрячь", "expected": {"action": "minimize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "beavis убери бивис с экрана", "expected": {"action": "minimize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "beavis minimize bavis", "expected": {"action": "minimize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "эй бивис бивиз спрячь", "expected": {"action": "minimize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "слушай убери окно beavisdev", "expected": {"action": "minimize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "слушай beaвis сверни", "expected": {"action": "minimize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "ну ка beais сверни", "expected": {"action": "minimize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "эй бивис максимизируй beavisdev", "expected": {"action": "maximize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "бивис сделай beais dev на весь экран", "expected": {"action": "maximize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "слушай beaвis разверни", "expected": {"action": "maximize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "алло разверни бивис", "expected": {"action": "maximize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "бывис разверни", "expected": {"action": "maximize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "ну ка сделай beaвis на весь экран", "expected": {"action": "maximize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "дружище разверни окно beaвis dev", "expected": {"action": "maximize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "алло beavis dev на весь экран", "expected": {"action": "maximize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "beavis разверни на весь экран beavisdev", "expected": {"action": "maximize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "брух beavis dev на весь экран", "expected": {"action": "maximize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "бивис максимизируй beavis", "expected": {"action": "maximize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "алло разверни бывис", "expected": {"action": "maximize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "эй бивис увеличь окно beais", "expected": {"action": "maximize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "брух разверни бывис", "expected": {"action": "maximize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "слушай разверни бифис", "expected": {"action": "maximize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "брух во весь экран beavis", "expected": {"action": "maximize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "beavis на весь экран beavis dev", "expected": {"action": "maximize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "алло на весь экран beavis", "expected": {"action": "maximize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "бивис на весь экран бифис", "expected": {"action": "maximize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "брух на весь экран beais", "expected": {"action": "maximize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "брух максимизируй beaвis", "expected": {"action": "maximize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "слушай fullscreen beavis dev", "expected": {"action": "maximize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "эй бивис разверни на весь экран бывис", "expected": {"action": "maximize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "раскрой бывис", "expected": {"action": "maximize", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "алло открой обратно бивиз", "expected": {"action": "restore", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "ну ка открой обратно бивис", "expected": {"action": "restore", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "beavis верни окно beaвis dev", "expected": {"action": "restore", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "дружище верни на экран бивиз", "expected": {"action": "restore", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "ну ка верни на экран beavis dev", "expected": {"action": "restore", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "бивис верни как было beavis dev", "expected": {"action": "restore", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "брух восстанови окно beavis dev", "expected": {"action": "restore", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "эй бивис верни бивис", "expected": {"action": "restore", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "покажи обратно beavis dev", "expected": {"action": "restore", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "beavis верни на экран beavis", "expected": {"action": "restore", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "эй бивис бывис восстанови", "expected": {"action": "restore", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "слушай верни окно бивис", "expected": {"action": "restore", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "слушай верни beavisdev", "expected": {"action": "restore", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "ну ка восстанови окно bavis dev", "expected": {"action": "restore", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "эй бивис достань beaвis", "expected": {"action": "restore", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "открой обратно bavis dev", "expected": {"action": "restore", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "алло верни окно beaвis dev", "expected": {"action": "restore", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "бивис beaвis dev восстанови", "expected": {"action": "restore", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "алло бивис восстанови", "expected": {"action": "restore", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "алло bavis верни", "expected": {"action": "restore", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "beavis открой обратно beaвis", "expected": {"action": "restore", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "beavis восстанови beaвis", "expected": {"action": "restore", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "брух верни окно beaвis", "expected": {"action": "restore", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "брух покажи обратно бивис", "expected": {"action": "restore", "target_type": "app", "app_id": "beavis_dev"}}
+{"text": "ну ка open discord", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "слушай open яндекс музыка", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "start хром пожалуйста", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "давай включи chrome", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "слушай перезагрузи компьютер", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "эй open chrome", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "брух открой дискорд", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "слушай найди блендер", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "запусти блокнот", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "включи дискорд быстро", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "давай закрытый вопрос", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "эй start com.squirrel.discord", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "start telegram быстро", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "бивис открой хром", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "давай найди beavis dev", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "брух открой discord", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "open телеграм", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "ну ка найди яндекс музыка", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "включи дис пожалуйста", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "слушай open музыка", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "давай выруби звук", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "эй запусти openai", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "ну ка включи telegram", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "слушай найди дис", "expected": {"missing": ["action"], "confidence": 0.0}}

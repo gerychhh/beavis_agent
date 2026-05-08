@@ -10,8 +10,11 @@ param(
         "train",
         "smoke",
         "voice-test",
+        "ui-install",
+        "ui-dev",
+        "ui-build",
+        "ui-health",
         "run",
-        "ui",
         "all",
         "clean"
     )]
@@ -31,6 +34,7 @@ $OutputEncoding = [System.Text.UTF8Encoding]::new()
 $Root = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path
 $CppRuntime = Join-Path $Root "cpp_runtime"
 $BuildDir = Join-Path $CppRuntime "build"
+$DesktopUi = Join-Path $Root "desktop_ui"
 
 function Write-Step([string]$Message) {
     Write-Host ""
@@ -178,9 +182,6 @@ function Invoke-Test {
 
     Write-Step "Testing voice settings and VAD"
     Invoke-RepoCommand { python python_agent\training\test_voice.py }
-
-    Write-Step "Testing UI smoke"
-    Invoke-RepoCommand { $env:QT_QPA_PLATFORM="offscreen"; python python_agent\training\test_ui_smoke.py }
 }
 
 function Invoke-TestAll {
@@ -238,6 +239,29 @@ function Invoke-VoiceTest {
     Invoke-RepoCommand { python -m python_agent.voice.manual_test }
 }
 
+function Invoke-DesktopUiInstall {
+    Write-Step "Installing desktop UI dependencies"
+    Push-Location $DesktopUi
+    try { npm install } finally { Pop-Location }
+}
+
+function Invoke-DesktopUiDev {
+    Write-Step "Starting Beavis Tauri desktop UI"
+    Push-Location $DesktopUi
+    try { npm run tauri dev } finally { Pop-Location }
+}
+
+function Invoke-DesktopUiBuild {
+    Write-Step "Building Beavis Tauri desktop UI"
+    Push-Location $DesktopUi
+    try { npm run tauri build } finally { Pop-Location }
+}
+
+function Invoke-DesktopUiHealth {
+    Write-Step "Checking Python API bridge"
+    Invoke-RepoCommand { python -m python_agent.bridge.oneshot system.health }
+}
+
 function Invoke-Run {
     if (-not $Rest -or $Rest.Count -eq 0) {
         throw "Usage: .\scripts\dev.ps1 run `"команда`" [--execute]"
@@ -246,18 +270,24 @@ function Invoke-Run {
     Invoke-RepoCommand { python -m python_agent.main @Rest }
 }
 
-function Invoke-Ui {
-    Write-Step "Starting desktop UI"
-    Invoke-RepoCommand { python -m python_agent.ui.app }
-}
+
 
 function Invoke-Clean {
-    Write-Step "Removing local build/cache files"
+    Write-Step "Removing local generated build/cache/log files"
 
     $targets = @(
         (Join-Path $Root "cpp_runtime\build"),
-        (Join-Path $Root "python_agent\data\cache")
+        (Join-Path $Root "desktop_ui\dist"),
+        (Join-Path $Root "desktop_ui\.vite"),
+        (Join-Path $Root "desktop_ui\src-tauri\target"),
+        (Join-Path $Root "desktop_ui\src-tauri\gen"),
+        (Join-Path $Root "python_agent\data\cache"),
+        (Join-Path $Root "python_agent\data\logs"),
+        (Join-Path $Root "python_agent\data\feedback")
     )
+
+    $targets += Get-ChildItem -Path $DesktopUi -Force -File -Filter ".vite-dev-*.log" -ErrorAction SilentlyContinue |
+        ForEach-Object { $_.FullName }
 
     $targets += Get-ChildItem -Path (Join-Path $Root "python_agent") -Directory -Recurse -Force |
         Where-Object { $_.Name -eq "__pycache__" } |
@@ -291,10 +321,13 @@ Usage:
   .\scripts\dev.ps1 train       Regenerate/retrain window_control and skill classifier
   .\scripts\dev.ps1 smoke       Build ToolCall JSON for a few commands
   .\scripts\dev.ps1 voice-test  Record 3 seconds and print Whisper transcript
+  .\scripts\dev.ps1 ui-install  Install desktop UI dependencies
+  .\scripts\dev.ps1 ui-dev      Start Tauri desktop UI
+  .\scripts\dev.ps1 ui-build    Build Tauri desktop UI
+  .\scripts\dev.ps1 ui-health   Check Python API bridge used by UI
   .\scripts\dev.ps1 run "<command>" [--execute]
-  .\scripts\dev.ps1 ui          Start desktop UI
   .\scripts\dev.ps1 all         setup + build + index + test + smoke
-  .\scripts\dev.ps1 clean       Remove local build/cache files
+  .\scripts\dev.ps1 clean       Remove local generated build/cache/log files
 
 Typical first run:
   .\scripts\dev.ps1 all
@@ -302,6 +335,7 @@ Typical first run:
 Daily work:
   .\scripts\dev.ps1 build
   .\scripts\dev.ps1 test
+  .\scripts\dev.ps1 ui-dev
   .\scripts\dev.ps1 run "<command>" --execute
 "@
 }
@@ -317,8 +351,11 @@ switch ($Task) {
     "train" { Invoke-Train }
     "smoke" { Invoke-Smoke }
     "voice-test" { Invoke-VoiceTest }
+    "ui-install" { Invoke-DesktopUiInstall }
+    "ui-dev" { Invoke-DesktopUiDev }
+    "ui-build" { Invoke-DesktopUiBuild }
+    "ui-health" { Invoke-DesktopUiHealth }
     "run" { Invoke-Run }
-    "ui" { Invoke-Ui }
     "all" {
         Invoke-Setup
         Invoke-Build

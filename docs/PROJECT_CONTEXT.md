@@ -54,7 +54,7 @@ Python command pipeline
 ML skill classifier
 ML argument extractors
 application resolver/indexer
-PySide6 UI
+Tauri desktop UI
 global hotkeys
 voice input through faster-whisper
 C++ runtime
@@ -112,7 +112,7 @@ dataset generation
 model training
 model loading
 application index generation
-UI
+UI API bridge
 voice transcription
 voice settings
 logs
@@ -367,7 +367,7 @@ Common workflow:
 .\scripts\dev.ps1 train
 .\scripts\dev.ps1 test
 .\scripts\dev.ps1 smoke
-.\scripts\dev.ps1 ui
+.\scripts\dev.ps1 ui-dev
 ```
 
 First run:

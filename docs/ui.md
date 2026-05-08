@@ -1,30 +1,41 @@
-# Beavis Agent UI
+# Beavis Desktop UI
 
-Desktop UI lives in `python_agent/ui`.
+The active desktop UI lives in `desktop_ui/`.
 
-Run:
+It is a Tauri 2 shell with a Vite/React frontend. The UI talks to Python through
+the JSON-lines bridge in `python_agent/bridge/stdio_server.py`; Python then uses
+the same command pipeline and C++ runtime as the CLI.
 
-```powershell
-python -m python_agent.ui.app
-```
-
-Useful modes:
+Run in development mode:
 
 ```powershell
-python -m python_agent.ui.app --hidden
-python -m python_agent.ui.app --no-hotkey
+.\scripts\dev.ps1 ui-install
+.\scripts\dev.ps1 ui-dev
 ```
 
-What is included:
+Build a production binary:
 
-- command input with optional execution;
-- system tray icon;
-- overlay command line above other windows;
-- configurable global hotkey;
-- adding local applications with retraining;
-- command history from `python_agent/data/logs/actions.jsonl`;
-- recognition feedback saved to `python_agent/data/feedback/command_feedback.jsonl`.
+```powershell
+.\scripts\dev.ps1 ui-build
+```
 
-The history tab can mark a command as `correct` or `incorrect`. Those marks are
-kept separately from the action log, so retraining scripts can later consume
-confirmed examples without mutating the original runtime log.
+Check the Python bridge used by the UI:
+
+```powershell
+.\scripts\dev.ps1 ui-health
+```
+
+Included UI responsibilities:
+
+```text
+command input and execution
+global shortcuts through Tauri
+voice controls
+settings
+history
+local application management
+retraining status
+```
+
+The UI does not execute Windows actions directly. It calls the Python API bridge,
+which emits `ToolCall` JSON and sends execution to the C++ runtime.

@@ -4,6 +4,7 @@ import json
 from datetime import datetime
 from pathlib import Path
 from typing import Any
+from uuid import uuid4
 
 from python_agent.core.schemas import PipelineOutput
 
@@ -39,6 +40,63 @@ class ActionLogger:
                 else None
             ),
             "training_status": training_status,
+        }
+
+        with self.log_path.open("a", encoding="utf-8") as file:
+            file.write(json.dumps(record, ensure_ascii=False) + "\n")
+
+    def log_command_error(
+        self,
+        raw_text: str,
+        message: str,
+        code: str = "SYSTEM_ERROR",
+        source: str = "text",
+        stage: str = "system",
+        skill: str = "system_error",
+        meta: dict[str, Any] | None = None,
+    ) -> None:
+        self.log_path.parent.mkdir(parents=True, exist_ok=True)
+        request_id = f"err_{uuid4().hex[:8]}"
+        normalized_text = str(meta.get("normalized_text")) if meta and meta.get("normalized_text") else raw_text
+        record: dict[str, Any] = {
+            "timestamp": datetime.now().isoformat(timespec="seconds"),
+            "request_id": request_id,
+            "raw_text": raw_text,
+            "normalized_text": normalized_text,
+            "nlu": {
+                "predicted_skill": skill,
+                "skill_confidence": 0.0,
+                "predicted_args": {},
+                "args_confidence": 0.0,
+                "missing": [],
+                "source": stage,
+            },
+            "tool_call": {
+                "request_id": request_id,
+                "type": "tool_call",
+                "skill": skill,
+                "args": {},
+                "meta": {
+                    "source": source,
+                    "raw_text": raw_text,
+                    "stage": stage,
+                    **(meta or {}),
+                },
+            },
+            "execution_result": {
+                "request_id": request_id,
+                "type": "skill_result",
+                "success": False,
+                "skill": skill,
+                "message": message,
+                "data": {},
+                "error": {
+                    "code": code,
+                    "stage": stage,
+                    "details": message,
+                },
+            },
+            "training_status": "system_error",
         }
 
         with self.log_path.open("a", encoding="utf-8") as file:

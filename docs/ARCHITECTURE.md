@@ -2,14 +2,15 @@
 
 ## 1. Overview
 
-Beavis Agent is split into two main layers:
+Beavis Agent is split into three main layers:
 
 ```text
-Python layer — understanding, UI, voice, training
+Python layer — understanding, API bridge, voice, training
+Tauri UI     — desktop shell and user interaction
 C++ layer    — validation and Windows execution
 ```
 
-The boundary between the two layers is JSON.
+The runtime boundary between Python and C++ is JSON.
 
 ```text
 Python sends ToolCall JSON.
@@ -204,7 +205,17 @@ This folder is ignored by Git.
 
 ### 3.6 UI layer
 
-The UI is implemented with PySide6.
+The UI is implemented in `desktop_ui/` with Tauri + Vite/React.
+
+Communication boundary:
+
+```text
+Tauri frontend
+→ Rust bridge command
+→ python_agent/bridge/stdio_server.py
+→ python_agent/api/*
+→ CommandPipeline / services
+```
 
 Responsibilities:
 
@@ -212,14 +223,15 @@ Responsibilities:
 main window
 settings
 text command input
-hotkey overlay
-voice overlay
-toast feedback
+global shortcuts
+voice controls
 history
 user application management
+retraining status
 ```
 
-The UI does not directly execute Windows actions. It sends commands to the same pipeline.
+The UI does not directly execute Windows actions. It sends commands to the Python
+API bridge, which uses the same pipeline and C++ execution boundary as the CLI.
 
 ## 4. C++ layer
 

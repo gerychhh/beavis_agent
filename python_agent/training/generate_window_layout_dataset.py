@@ -38,6 +38,17 @@ FULL_WORDS = list(POSITION_WORDS["fullscreen"])
 HALF_WORDS = list(POSITION_WORDS["half"])
 GRID_WORDS = list(POSITION_WORDS["grid"])
 UNKNOWN_PHRASES = list_from_source(_SOURCE, "unknown_phrases")
+NOISE_REPLACEMENTS = [tuple(item) for item in list_from_source(_SOURCE, "noise_replacements")]
+SINGLE_VERBS = list_from_source(_SOURCE, "single_verbs")
+FULLSCREEN_VERBS = list_from_source(_SOURCE, "fullscreen_verbs")
+SINGLE_CORE_TEMPLATES = list_from_source(_SOURCE, "single_core_templates")
+FULLSCREEN_CORE_TEMPLATES = list_from_source(_SOURCE, "fullscreen_core_templates")
+EXACT_SINGLE_TEMPLATES = dict_from_source(_SOURCE, "exact_single_templates")
+SPLIT_2_VERTICAL_TEMPLATES = list_from_source(_SOURCE, "split_2_vertical_templates")
+SPLIT_2_HORIZONTAL_TEMPLATES = list_from_source(_SOURCE, "split_2_horizontal_templates")
+GRID_2X2_TEMPLATES = list_from_source(_SOURCE, "grid_2x2_templates")
+UNKNOWN_TEMPLATES = list_from_source(_SOURCE, "unknown_templates")
+UNKNOWN_SUFFIXES = list_from_source(_SOURCE, "unknown_suffixes")
 
 
 def clean_text(text: str) -> str:
@@ -72,23 +83,10 @@ def build_apps(apps_catalog_path: Path | None = None) -> dict[str, list[str]]:
 
 
 def with_noise(text: str) -> str:
-    replacements = [
-        ("поставь", "постафь"),
-        ("перетащи", "переташи"),
-        ("разверни", "развирни"),
-        ("разверни", "разверны"),
-        ("экран", "екран"),
-        ("половину", "палавину"),
-        ("справа", "справо"),
-        ("слева", "слево"),
-        ("вскод", "вскот"),
-        ("телеграм", "телиграм"),
-        ("фотошоп", "фоташоп"),
-    ]
     text = clean_text(text)
 
     if random.random() < 0.28:
-        src, dst = random.choice(replacements)
+        src, dst = random.choice(NOISE_REPLACEMENTS)
         text = text.replace(src, dst)
 
     if random.random() < 0.12 and len(text) > 8:
@@ -142,42 +140,24 @@ def generate(
         "center": CENTER_WORDS,
         "fullscreen": FULL_WORDS,
     }
-    verbs = ["поставь", "перемести", "перекинь", "закинь", "размести", "закрепи", "сделай", "отправь"]
-    full_verbs = ["разверни", "сделай", "растяни", "максимизируй", "поставь"]
-
     if app_ids:
         for layout, pos_words in single_layouts.items():
             for _ in range(samples_per_layout):
                 target = random.choice(app_ids + ["current"] * 8)
                 target_text = random.choice(ONE_CURRENT) if target == "current" else alias(target, apps)
                 word = random.choice(pos_words)
-                if layout == "fullscreen":
-                    core = random.choice([
-                        f"{random.choice(full_verbs)} {target_text} {word}",
-                        f"{target_text} {word}",
-                        f"{target_text} сделай {word}",
-                    ])
-                else:
-                    core = random.choice([
-                        f"{random.choice(verbs)} {target_text} {word}",
-                        f"{target_text} {word}",
-                        f"{word} {target_text}",
-                        f"{random.choice(verbs)} {word} {target_text}",
-                        f"{target_text} на {word}",
-                    ])
+                core_templates = FULLSCREEN_CORE_TEMPLATES if layout == "fullscreen" else SINGLE_CORE_TEMPLATES
+                verbs = FULLSCREEN_VERBS if layout == "fullscreen" else SINGLE_VERBS
+                core = random.choice(core_templates).format(
+                    verb=random.choice(verbs),
+                    target=target_text,
+                    position=word,
+                )
                 add(rows, decorate(core), layout, [target])
 
-        exact_single_templates = {
-            "left_half": ["поставь {app} слева", "{app} слева", "перемести {app} на левую половину"],
-            "right_half": ["поставь {app} справа", "{app} справа", "перемести {app} на правую половину"],
-            "top_half": ["поставь {app} сверху", "{app} сверху", "перемести {app} наверх"],
-            "bottom_half": ["поставь {app} снизу", "{app} снизу", "перемести {app} вниз"],
-            "center": ["поставь {app} по центру", "{app} в центр", "перемести {app} в центр"],
-            "fullscreen": ["{app} на весь экран", "разверни {app} на весь экран", "сделай {app} на весь экран"],
-        }
         for app_id in app_ids:
             for surface in apps[app_id][:4]:
-                for layout, templates in exact_single_templates.items():
+                for layout, templates in EXACT_SINGLE_TEMPLATES.items():
                     for template in templates:
                         for _ in range(8):
                             add(rows, with_noise(template.format(app=surface)), layout, [app_id])
@@ -186,64 +166,45 @@ def generate(
         for _ in range(samples_per_layout * 2):
             a, b = random.sample(app_ids, 2)
             aa, bb = alias(a, apps), alias(b, apps)
-            core = random.choice([
-                f"{aa}{random.choice(JOINERS)}{bb} {random.choice(HALF_WORDS)}",
-                f"раздели экран между {aa} и {bb}",
-                f"поставь {aa} слева а {bb} справа",
-                f"{aa} слева {bb} справа",
-                f"раскинь {aa} и {bb} по половинам",
-                f"сделай {aa} и {bb} рядом",
-                f"разверни {aa} и {bb} пополам",
-            ])
+            core = random.choice(SPLIT_2_VERTICAL_TEMPLATES).format(
+                a=aa,
+                b=bb,
+                joiner=random.choice(JOINERS),
+                half=random.choice(HALF_WORDS),
+            )
             add(rows, decorate(core), "split_2_vertical", [a, b])
 
         for _ in range(samples_per_layout):
             a, b = random.sample(app_ids, 2)
             aa, bb = alias(a, apps), alias(b, apps)
-            core = random.choice([
-                f"{aa} сверху {bb} снизу",
-                f"поставь {aa} сверху а {bb} снизу",
-                f"{aa} над {bb}",
-                f"{bb} под {aa}",
-                f"{aa} и {bb} друг под другом",
-                f"раздели экран сверху снизу между {aa} и {bb}",
-            ])
+            core = random.choice(SPLIT_2_HORIZONTAL_TEMPLATES).format(a=aa, b=bb)
             add(rows, decorate(core), "split_2_horizontal", [a, b])
 
     if len(app_ids) >= 4:
         for _ in range(samples_per_layout):
             targets = random.sample(app_ids, 4)
             names = [alias(target, apps) for target in targets]
-            core = random.choice([
-                f"раскинь {' '.join(names)} {random.choice(GRID_WORDS)}",
-                f"разложи {names[0]} {names[1]} {names[2]} и {names[3]} {random.choice(GRID_WORDS)}",
-                f"сделай сетку из {names[0]} {names[1]} {names[2]} и {names[3]}",
-                f"размести {names[0]} {names[1]} {names[2]} {names[3]} 2 на 2",
-                f"четыре окна сеткой {names[0]} {names[1]} {names[2]} {names[3]}",
-            ])
+            core = random.choice(GRID_2X2_TEMPLATES).format(
+                names=" ".join(names),
+                n0=names[0],
+                n1=names[1],
+                n2=names[2],
+                n3=names[3],
+                grid=random.choice(GRID_WORDS),
+            )
             add(rows, decorate(core), "grid_2x2", targets)
-
-    unknown_templates = [
-        "{app} лагает", "{app} тупит", "{app} завис", "{app} открыт уже", "{app} не работает",
-        "не трогай {app}", "не открывай {app}", "не закрывай {app}", "не сворачивай {app}",
-        "открой {app}", "запусти {app}", "закрой {app}", "сверни {app}", "верни {app}", "восстанови {app}",
-        "{app} слева красиво", "{app} справа не видно", "{app} сверху написано", "{app} снизу мелькает",
-        "окно {app} мешает", "окно {app} странное", "{app} громко уведомляет", "{app} прислал сообщение",
-        "найди {app}", "скачай {app}", "обнови {app}", "удали {app}", "переустанови {app}",
-        "что такое {app}", "почему {app} лагает", "как пользоваться {app}",
-    ]
 
     for _ in range(unknown_samples):
         if app_ids and random.random() < 0.70:
             app = random.choice(app_ids)
-            phrase = random.choice(unknown_templates).format(app=alias(app, apps))
+            phrase = random.choice(UNKNOWN_TEMPLATES).format(app=alias(app, apps))
         else:
             phrase = random.choice(UNKNOWN_PHRASES)
 
         if random.random() < 0.45:
             phrase = random.choice(PREFIXES).strip() + " " + phrase
         if random.random() < 0.20:
-            phrase = phrase + " " + random.choice(["сейчас", "вообще", "блин", "почему", "опять", "как обычно"])
+            phrase = phrase + " " + random.choice(UNKNOWN_SUFFIXES)
 
         add(rows, with_noise(phrase), "unknown", [])
 

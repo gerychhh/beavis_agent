@@ -40,6 +40,7 @@ SUFFIXES = list_from_source(_SOURCE, "suffixes")
 OPEN_TEMPLATES = list_from_source(_SOURCE, "open_templates")
 TYPO_PAIRS = [tuple(item) for item in list_from_source(_SOURCE, "typo_pairs")]
 NUMBER_WORDS = int_key_dict_from_source(_SOURCE, "number_words")
+NUMBER_SUFFIX_TEMPLATES = list_from_source(_SOURCE, "number_suffix_templates")
 VOLUME_FIXED = list_from_source(_SOURCE, "volume_fixed")
 VOLUME_SET_TEMPLATES = list_from_source(_SOURCE, "volume_set_templates")
 VOLUME_PLUS_TEMPLATES = list_from_source(_SOURCE, "volume_plus_templates")
@@ -49,6 +50,9 @@ UNKNOWN_TEMPLATES = list_from_source(_SOURCE, "unknown_templates")
 CURATED_HARD_EXAMPLES = [tuple(item) for item in list_from_source(_SOURCE, "curated_hard_examples")]
 WINDOW_CONTROL_ACTION_WORDS = set(list_from_source(_SOURCE, "window_control_action_words"))
 MANUAL_TESTS = list_from_source(_SOURCE, "manual_tests")
+WINDOW_LAYOUT_NEGATIVE_CUES = list_from_source(_SOURCE, "window_layout_negative_cues")
+WINDOW_LAYOUT_POSITIVE_CUES = list_from_source(_SOURCE, "window_layout_positive_cues")
+UNKNOWN_BACKFILL_TEMPLATE = str(_SOURCE.get("unknown_backfill_template") or "{text} variant {i}")
 
 
 def norm(text: str) -> str:
@@ -103,7 +107,8 @@ def add(rows, text, label, rng, wrap_prob=0.6):
 
 
 def number_surfaces(n: int) -> list[str]:
-    values = [str(n), f"{n} процентов", f"{n} процент"]
+    values = [str(n)]
+    values.extend(template.format(n=n) for template in NUMBER_SUFFIX_TEMPLATES)
     if n in NUMBER_WORDS:
         values.extend(NUMBER_WORDS[n])
     elif 20 < n < 100:
@@ -179,28 +184,10 @@ def generate_volume_rows(rng, target_count):
 
 def looks_like_window_layout_command(text: str) -> bool:
     text = norm(text)
-    control_down_cues = (
-        "кинь вниз",
-        "скинь вниз",
-        "сбрось вниз",
-        "опусти вниз",
-        "убери вниз",
-    )
-    if any(cue in text for cue in control_down_cues):
+    if any(cue in text for cue in WINDOW_LAYOUT_NEGATIVE_CUES):
         return False
 
-    layout_cues = (
-        "слева", "слево", "слеа", "влево", "левую", "левый",
-        "справа", "справо", "вправо", "правую", "правый",
-        "сверху", "вверх", "верхнюю",
-        "снизу", "вниз", "нижнюю",
-        "центр", "середин",
-        "пополам", "палавину", "половин", "поровну",
-        "рядом", "друг под другом", "над ", "под ",
-        "на весь экран", "во весь экран", "фулл", "fullscreen", "максимум экрана",
-        "сетк", "2 на 2", "два на два", "углам", "плитк",
-    )
-    return any(cue in text for cue in layout_cues)
+    return any(cue in text for cue in WINDOW_LAYOUT_POSITIVE_CUES)
 
 
 def generate_window_control_rows(rng, target_count):
@@ -297,7 +284,7 @@ def generate_unknown_rows(rng, count):
         i = 0
         while len(rows) < count and base:
             text, label = rng.choice(base)
-            candidate = norm(f"{text} вариант {i}")
+            candidate = norm(UNKNOWN_BACKFILL_TEMPLATE.format(text=text, i=i))
             key = (candidate, label)
             if key not in seen:
                 seen.add(key)
@@ -311,18 +298,29 @@ def manual_tests(app_catalog: dict[str, list[str]]):
     tests = []
     for item in MANUAL_TESTS:
         expected = item.get("expected_skill")
-        text = str(item.get("text", ""))
         if expected != SKILL_OPEN_APP:
             tests.append(dict(item))
-            continue
+    return tests
 
-        if any(surface in norm(text) for forms in app_catalog.values() for surface in forms):
-            tests.append(dict(item))
+
+def dynamic_open_app_manual_tests(app_catalog: dict[str, list[str]]) -> list[dict[str, str]]:
+    tests: list[dict[str, str]] = []
+    templates = OPEN_TEMPLATES[:3]
+
+    for _app_id, surface_forms in sorted(app_catalog.items()):
+        for surface in surface_forms[:2]:
+            for template in templates:
+                tests.append({
+                    "text": norm(template.format(app=surface)),
+                    "expected_skill": SKILL_OPEN_APP,
+                })
+
     return tests
 
 
 def build_manual_tests(app_catalog):
     tests = manual_tests(app_catalog)
+    tests.extend(dynamic_open_app_manual_tests(app_catalog))
 
     window_layout_tests = ROOT / "data" / "window_layout" / "eval" / "manual_tests.jsonl"
     if window_layout_tests.exists():

@@ -6,6 +6,7 @@ from pathlib import Path
 
 import joblib
 import pandas as pd
+from sklearn.dummy import DummyClassifier
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import SGDClassifier
 from sklearn.metrics import accuracy_score, f1_score
@@ -55,10 +56,25 @@ def make_classifier() -> SGDClassifier:
 
 
 def train_one(col: str, x_train_vec, x_test_vec, train_df, test_df):
-    model = make_classifier()
     y_train = train_df[col].astype(str)
     y_test = test_df[col].astype(str)
 
+    unique_classes = y_train.nunique()
+    if unique_classes < 2:
+        # Not enough classes for SGDClassifier — use a constant dummy model.
+        model = DummyClassifier(strategy="most_frequent")
+        model.fit([[0]], y_train.iloc[:1])
+        pred = [y_train.iloc[0]] * len(y_test)
+        metrics = {
+            "accuracy": float(accuracy_score(y_test, pred)),
+            "macro_f1": 0.0,
+            "weighted_f1": 0.0,
+            "classes": sorted(map(str, set(y_train))),
+            "note": f"DummyClassifier: only 1 class in {col}",
+        }
+        return model, metrics
+
+    model = make_classifier()
     model.fit(x_train_vec, y_train)
     pred = model.predict(x_test_vec)
 
@@ -77,11 +93,14 @@ def main():
     if APP_SURFACES_PATH.exists():
         app_surface_forms = json.loads(APP_SURFACES_PATH.read_text(encoding="utf-8"))
 
+    # Use stratify only when every layout class has >= 2 samples.
+    layout_counts = df["layout"].value_counts()
+    can_stratify = int(layout_counts.min()) >= 2
     train_df, test_df = train_test_split(
         df,
         test_size=0.20,
         random_state=42,
-        stratify=df["layout"],
+        stratify=df["layout"] if can_stratify else None,
     )
 
     x_train = train_df["text"].astype(str).tolist()

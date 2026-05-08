@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 import subprocess
 from pathlib import Path
 from typing import Any
@@ -18,6 +19,7 @@ EXECUTABLE_CANDIDATES = (
     PROJECT_ROOT / "cpp_runtime" / "build" / "Debug" / "beavis_runtime.exe",
     PROJECT_ROOT / "cpp_runtime" / "build" / "Release" / "beavis_runtime.exe",
 )
+WINDOWS_ERROR_MODE = 0x0001 | 0x0002 | 0x8000
 
 
 class CppClientError(RuntimeError):
@@ -42,16 +44,22 @@ class CppClient:
             raise CppClientError(f"C++ runtime not found: {self.executable_path}")
 
         payload = json.dumps(tool_call, ensure_ascii=False)
+        run_kwargs: dict[str, Any] = {
+            "input": payload,
+            "text": True,
+            "capture_output": True,
+            "timeout": self.timeout_seconds,
+            "check": False,
+            "encoding": "utf-8",
+        }
+        if os.name == "nt":
+            _suppress_windows_error_dialogs()
+            run_kwargs["creationflags"] = getattr(subprocess, "CREATE_NO_WINDOW", 0)
 
         try:
             completed = subprocess.run(
                 [str(self.executable_path)],
-                input=payload,
-                text=True,
-                capture_output=True,
-                timeout=self.timeout_seconds,
-                check=False,
-                encoding="utf-8",
+                **run_kwargs,
             )
         except subprocess.TimeoutExpired as error:
             raise CppClientError("C++ runtime timed out") from error
@@ -84,6 +92,15 @@ class CppClient:
                 return candidate
 
         return DEFAULT_EXECUTABLE
+
+
+def _suppress_windows_error_dialogs() -> None:
+    try:
+        import ctypes
+
+        ctypes.windll.kernel32.SetErrorMode(WINDOWS_ERROR_MODE)
+    except Exception:
+        pass
 
 
 def execute_tool_call(

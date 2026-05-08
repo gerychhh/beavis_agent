@@ -10,7 +10,7 @@ import numpy as np
 if __package__ is None or __package__ == "":
     sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
-from python_agent.ui.settings_store import UiSettings, UiSettingsStore
+from python_agent.services.settings_store import UiSettings, UiSettingsStore
 from python_agent.voice.service import build_voice_command_result
 from python_agent.voice.settings import VoiceSettings
 from python_agent.voice.stt import TranscriptionResult, resolve_runtime

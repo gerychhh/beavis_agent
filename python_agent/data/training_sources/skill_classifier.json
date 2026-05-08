@@ -21,426 +21,6 @@
     " если можно",
     " давай"
   ],
-  "app_catalog": {
-    "chrome": [
-      "браузер",
-      "хром",
-      "chrome",
-      "google chrome",
-      "гугл хром",
-      "интернет",
-      "хромчик"
-    ],
-    "edge": [
-      "edge",
-      "эдж",
-      "microsoft edge",
-      "майкрософт эдж"
-    ],
-    "firefox": [
-      "firefox",
-      "фаерфокс",
-      "файрфокс",
-      "mozilla",
-      "мозила"
-    ],
-    "opera": [
-      "opera",
-      "опера",
-      "браузер опера"
-    ],
-    "brave": [
-      "brave",
-      "брейв"
-    ],
-    "yandex_browser": [
-      "яндекс браузер",
-      "yandex browser",
-      "яндекс"
-    ],
-    "tor_browser": [
-      "tor browser",
-      "тор браузер",
-      "tor",
-      "тор"
-    ],
-    "notepad": [
-      "блокнот",
-      "notepad",
-      "нотпад",
-      "текстовый редактор"
-    ],
-    "calculator": [
-      "калькулятор",
-      "calculator",
-      "калк",
-      "считалку"
-    ],
-    "explorer": [
-      "проводник",
-      "explorer",
-      "файлы",
-      "папки",
-      "мой компьютер"
-    ],
-    "cmd": [
-      "cmd",
-      "цмд",
-      "командная строка",
-      "командную строку",
-      "консоль cmd"
-    ],
-    "powershell": [
-      "powershell",
-      "павершелл",
-      "пауэршелл",
-      "power shell"
-    ],
-    "terminal": [
-      "terminal",
-      "терминал",
-      "windows terminal",
-      "виндовс терминал"
-    ],
-    "settings": [
-      "настройки",
-      "параметры",
-      "settings",
-      "параметры windows",
-      "настройки винды"
-    ],
-    "task_manager": [
-      "диспетчер задач",
-      "task manager",
-      "таск менеджер",
-      "процессы"
-    ],
-    "control_panel": [
-      "панель управления",
-      "control panel",
-      "контрол панель"
-    ],
-    "paint": [
-      "paint",
-      "пейнт",
-      "паинт",
-      "рисовалку"
-    ],
-    "snipping_tool": [
-      "ножницы",
-      "snipping tool",
-      "сниппинг тул",
-      "скриншот ножницы"
-    ],
-    "photos": [
-      "фотографии",
-      "photos",
-      "просмотр фото"
-    ],
-    "camera": [
-      "камера",
-      "camera",
-      "вебка"
-    ],
-    "voice_recorder": [
-      "диктофон",
-      "voice recorder",
-      "запись голоса"
-    ],
-    "word": [
-      "word",
-      "ворд",
-      "microsoft word",
-      "документ ворд"
-    ],
-    "excel": [
-      "excel",
-      "эксель",
-      "microsoft excel",
-      "таблицы"
-    ],
-    "powerpoint": [
-      "powerpoint",
-      "power point",
-      "паверпоинт",
-      "презентации"
-    ],
-    "outlook": [
-      "outlook",
-      "аутлук",
-      "почта outlook",
-      "почту"
-    ],
-    "onenote": [
-      "onenote",
-      "one note",
-      "ван ноут",
-      "заметки onenote"
-    ],
-    "access": [
-      "access",
-      "аксесс"
-    ],
-    "visio": [
-      "visio",
-      "висио"
-    ],
-    "project": [
-      "microsoft project",
-      "project"
-    ],
-    "telegram": [
-      "telegram",
-      "телеграм",
-      "телега",
-      "тг",
-      "телиграм",
-      "телегу"
-    ],
-    "discord": [
-      "discord",
-      "дискорд",
-      "дс",
-      "дискордик"
-    ],
-    "whatsapp": [
-      "whatsapp",
-      "ватсап",
-      "вацап",
-      "ватс апп"
-    ],
-    "viber": [
-      "viber",
-      "вайбер",
-      "вибер"
-    ],
-    "skype": [
-      "skype",
-      "скайп"
-    ],
-    "signal": [
-      "signal",
-      "сигнал"
-    ],
-    "slack": [
-      "slack",
-      "слак"
-    ],
-    "teams": [
-      "teams",
-      "тимс",
-      "microsoft teams"
-    ],
-    "zoom": [
-      "zoom",
-      "зум"
-    ],
-    "photoshop": [
-      "photoshop",
-      "фотошоп",
-      "фатошоп",
-      "adobe photoshop",
-      "шоп"
-    ],
-    "illustrator": [
-      "illustrator",
-      "иллюстратор",
-      "adobe illustrator"
-    ],
-    "premiere_pro": [
-      "premiere pro",
-      "премьер",
-      "премьер про",
-      "adobe premiere"
-    ],
-    "after_effects": [
-      "after effects",
-      "афтер эффектс",
-      "after",
-      "моушн дизайн"
-    ],
-    "audition": [
-      "audition",
-      "аудишн",
-      "adobe audition"
-    ],
-    "lightroom": [
-      "lightroom",
-      "лайтрум"
-    ],
-    "acrobat_reader": [
-      "acrobat",
-      "acrobat reader",
-      "акробат",
-      "pdf reader",
-      "пдф ридер"
-    ],
-    "indesign": [
-      "indesign",
-      "индизайн"
-    ],
-    "adobe_xd": [
-      "adobe xd",
-      "xd",
-      "икс ди"
-    ],
-    "vscode": [
-      "vscode",
-      "vs code",
-      "вс код",
-      "visual studio code",
-      "код",
-      "где код пишу",
-      "редактор кода"
-    ],
-    "visual_studio": [
-      "visual studio",
-      "вижуал студио",
-      "студия",
-      "vs ide"
-    ],
-    "pycharm": [
-      "pycharm",
-      "пайчарм",
-      "пичарм",
-      "python ide"
-    ],
-    "intellij_idea": [
-      "intellij idea",
-      "интеллидж",
-      "idea",
-      "идея"
-    ],
-    "webstorm": [
-      "webstorm",
-      "вебшторм"
-    ],
-    "phpstorm": [
-      "phpstorm",
-      "пхп шторм"
-    ],
-    "clion": [
-      "clion",
-      "си лайон",
-      "cpp ide"
-    ],
-    "datagrip": [
-      "datagrip",
-      "дата грип"
-    ],
-    "android_studio": [
-      "android studio",
-      "андроид студио"
-    ],
-    "docker_desktop": [
-      "docker",
-      "docker desktop",
-      "докер",
-      "докер десктоп"
-    ],
-    "git_bash": [
-      "git bash",
-      "гит баш",
-      "гит консоль"
-    ],
-    "github_desktop": [
-      "github desktop",
-      "гитхаб десктоп",
-      "github"
-    ],
-    "postman": [
-      "postman",
-      "постман",
-      "api клиент"
-    ],
-    "blender": [
-      "blender",
-      "блендер",
-      "3д блендер",
-      "моделирование"
-    ],
-    "figma": [
-      "figma",
-      "фигма",
-      "фигму",
-      "дизайн макет"
-    ],
-    "fusion_360": [
-      "fusion 360",
-      "фьюжн",
-      "фьюжен 360"
-    ],
-    "autocad": [
-      "autocad",
-      "автокад",
-      "чертежи"
-    ],
-    "sketchup": [
-      "sketchup",
-      "скетчап"
-    ],
-    "max_3ds": [
-      "3ds max",
-      "3д макс",
-      "три д макс"
-    ],
-    "maya": [
-      "maya",
-      "майя"
-    ],
-    "cinema_4d": [
-      "cinema 4d",
-      "синема 4д",
-      "cinema"
-    ],
-    "zbrush": [
-      "zbrush",
-      "зибраш"
-    ],
-    "substance_painter": [
-      "substance painter",
-      "сабстанс",
-      "substance",
-      "текстуры"
-    ],
-    "unreal_engine": [
-      "unreal engine",
-      "анрил",
-      "unreal",
-      "ue5",
-      "движок анрил"
-    ],
-    "unity": [
-      "unity",
-      "юнити",
-      "unity hub"
-    ],
-    "godot": [
-      "godot",
-      "годот"
-    ],
-    "davinci_resolve": [
-      "davinci",
-      "davinci resolve",
-      "давинчи",
-      "resolve"
-    ],
-    "obs_studio": [
-      "obs",
-      "obs studio",
-      "обс",
-      "запись экрана"
-    ],
-    "vlc": [
-      "vlc",
-      "влц",
-      "видео плеер"
-    ],
-    "steam": [
-      "steam",
-      "стим"
-    ]
-  },
   "open_templates": [
     "открой {app}",
     "запусти {app}",
@@ -488,26 +68,6 @@
     [
       "слишком",
       "слышком"
-    ],
-    [
-      "телеграм",
-      "телиграм"
-    ],
-    [
-      "проводник",
-      "правадник"
-    ],
-    [
-      "блокнот",
-      "блакнот"
-    ],
-    [
-      "калькулятор",
-      "калкулятор"
-    ],
-    [
-      "фотошоп",
-      "фатошоп"
     ],
     [
       "семьдесят",
@@ -759,14 +319,12 @@
     "сделай скриншот",
     "сними экран",
     "запиши экран",
-    "закрой браузер",
     "сверни окно",
     "разверни окно",
     "переключи окно",
     "перезагрузи компьютер",
     "выключи компьютер",
     "отправь сообщение",
-    "напиши в телеграм",
     "прочитай сообщения",
     "что у меня в календаре",
     "создай встречу",
@@ -994,142 +552,6 @@
       "expected_skill": "volume_set"
     },
     {
-      "text": "бивис открой браузер",
-      "expected_skill": "open_app"
-    },
-    {
-      "text": "открой хром",
-      "expected_skill": "open_app"
-    },
-    {
-      "text": "браузер включи",
-      "expected_skill": "open_app"
-    },
-    {
-      "text": "запусти блокнот",
-      "expected_skill": "open_app"
-    },
-    {
-      "text": "бивис открой вс код",
-      "expected_skill": "open_app"
-    },
-    {
-      "text": "открой где код пишу",
-      "expected_skill": "open_app"
-    },
-    {
-      "text": "код открой",
-      "expected_skill": "open_app"
-    },
-    {
-      "text": "открой телиграм",
-      "expected_skill": "open_app"
-    },
-    {
-      "text": "тг запусти",
-      "expected_skill": "open_app"
-    },
-    {
-      "text": "включи дискордик",
-      "expected_skill": "open_app"
-    },
-    {
-      "text": "открой калькулятор",
-      "expected_skill": "open_app"
-    },
-    {
-      "text": "правадник запусти",
-      "expected_skill": "open_app"
-    },
-    {
-      "text": "командную строку открой",
-      "expected_skill": "open_app"
-    },
-    {
-      "text": "павершелл запусти",
-      "expected_skill": "open_app"
-    },
-    {
-      "text": "настройки винды",
-      "expected_skill": "open_app"
-    },
-    {
-      "text": "открой фотошоп",
-      "expected_skill": "open_app"
-    },
-    {
-      "text": "запусти премьер про",
-      "expected_skill": "open_app"
-    },
-    {
-      "text": "открой фигму",
-      "expected_skill": "open_app"
-    },
-    {
-      "text": "анрил включи",
-      "expected_skill": "open_app"
-    },
-    {
-      "text": "пайчарм открой",
-      "expected_skill": "open_app"
-    },
-    {
-      "text": "open visual studio code",
-      "expected_skill": "open_app"
-    },
-    {
-      "text": "start chrome",
-      "expected_skill": "open_app"
-    },
-    {
-      "text": "го телегу",
-      "expected_skill": "open_app"
-    },
-    {
-      "text": "запусти 3д макс",
-      "expected_skill": "open_app"
-    },
-    {
-      "text": "открой docker desktop",
-      "expected_skill": "open_app"
-    },
-    {
-      "text": "постман включи",
-      "expected_skill": "open_app"
-    },
-    {
-      "text": "закрой браузер",
-      "expected_skill": "window_control"
-    },
-    {
-      "text": "закрой хром",
-      "expected_skill": "window_control"
-    },
-    {
-      "text": "сверни окно",
-      "expected_skill": "window_control"
-    },
-    {
-      "text": "сверни блокнот",
-      "expected_skill": "window_control"
-    },
-    {
-      "text": "разверни окно",
-      "expected_skill": "window_control"
-    },
-    {
-      "text": "восстанови текущее окно",
-      "expected_skill": "window_control"
-    },
-    {
-      "text": "верни телеграм",
-      "expected_skill": "window_control"
-    },
-    {
-      "text": "close chrome",
-      "expected_skill": "window_control"
-    },
-    {
       "text": "minimize current window",
       "expected_skill": "window_control"
     },
@@ -1147,10 +569,6 @@
     },
     {
       "text": "сделай скриншот",
-      "expected_skill": "unknown"
-    },
-    {
-      "text": "напиши сообщение в телеграм",
       "expected_skill": "unknown"
     },
     {
@@ -1186,8 +604,67 @@
       "expected_skill": "unknown"
     },
     {
-      "text": "открой",
-      "expected_skill": "open_app"
+      "text": "сверни окно",
+      "expected_skill": "window_control"
+    },
+    {
+      "text": "разверни окно",
+      "expected_skill": "window_control"
+    },
+    {
+      "text": "восстанови текущее окно",
+      "expected_skill": "window_control"
     }
-  ]
+  ],
+  "number_suffix_templates": [
+    "{n} процентов",
+    "{n} процент"
+  ],
+  "window_layout_negative_cues": [
+    "кинь вниз",
+    "скинь вниз",
+    "сбрось вниз",
+    "опусти вниз",
+    "убери вниз"
+  ],
+  "window_layout_positive_cues": [
+    "слева",
+    "слево",
+    "слеа",
+    "влево",
+    "левую",
+    "левый",
+    "справа",
+    "справо",
+    "вправо",
+    "правую",
+    "правый",
+    "сверху",
+    "вверх",
+    "верхнюю",
+    "снизу",
+    "вниз",
+    "нижнюю",
+    "центр",
+    "середин",
+    "пополам",
+    "палавину",
+    "половин",
+    "поровну",
+    "рядом",
+    "друг под другом",
+    "над ",
+    "под ",
+    "на весь экран",
+    "во весь экран",
+    "фулл",
+    "fullscreen",
+    "максимум экрана",
+    "сетк",
+    "2 на 2",
+    "два на два",
+    "углам",
+    "плитк"
+  ],
+  "unknown_backfill_template": "{text} вариант {i}"
 }

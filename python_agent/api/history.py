@@ -3,15 +3,12 @@ from __future__ import annotations
 from typing import Any
 
 from python_agent.api.result import ok, fail
-from python_agent.ui.history_store import CommandHistoryStore
+from python_agent.services.history_store import CommandHistoryStore
 
 
 class HistoryApi:
     """
-    Stable history API.
-
-    For now it reuses the existing CommandHistoryStore to avoid changing the old UI.
-    Later CommandHistoryStore should be moved from ui/ to services/history_service.py.
+    Stable history API backed by CommandHistoryStore (python_agent/services/history_store.py).
     """
 
     def __init__(self, store: CommandHistoryStore | None = None) -> None:

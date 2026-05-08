@@ -36,6 +36,7 @@ CURRENT_TEMPLATES = dict_from_source(_SOURCE, "current_templates")
 UNKNOWN_PHRASES = list_from_source(_SOURCE, "unknown_phrases")
 NON_CONTROL_APP_TEMPLATES = list_from_source(_SOURCE, "non_control_app_templates")
 UNKNOWN_WRAPPERS = list_from_source(_SOURCE, "unknown_wrappers")
+TYPO_REPLACEMENTS = [tuple(item) for item in list_from_source(_SOURCE, "typo_replacements")]
 _NORMALIZER = Normalizer()
 
 
@@ -78,13 +79,8 @@ def stable_seed(text: str) -> int:
 
 def simple_typos(text: str) -> list[str]:
     variants = {text}
-    replacements = [
-        ("о", "а"), ("е", "и"), ("и", "ы"), ("ы", "и"), ("т", "д"), ("в", "ф"),
-        ("ш", "щ"), ("ч", "ш"), ("х", "к"), ("с", "з"), ("з", "с"),
-        ("ph", "ф"), ("c", "к"), ("v", "в"), ("w", "в"), ("x", "кс"),
-    ]
 
-    for old, new in replacements:
+    for old, new in TYPO_REPLACEMENTS:
         if old in text:
             variants.add(text.replace(old, new, 1))
 

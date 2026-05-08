@@ -92,13 +92,46 @@ class CommandPipeline:
         source: str = "text",
         meta: dict[str, object] | None = None,
     ) -> PipelineOutput:
-        output = self.build_tool_call(raw_text, source=source, meta=meta)
+        try:
+            output = self.build_tool_call(raw_text, source=source, meta=meta)
+        except PipelineError as error:
+            if log:
+                self.logger.log_command_error(
+                    raw_text=raw_text,
+                    message=str(error),
+                    code="PIPELINE_ERROR",
+                    source=source,
+                    stage="build_tool_call",
+                    skill="pipeline_error",
+                    meta=dict(meta or {}),
+                )
+            raise
 
         execution_result = None
         if execute:
             try:
                 result_payload = self.cpp_client.execute(output.tool_call.to_dict())
             except CppClientError as error:
+                failure = SkillResult(
+                    request_id=output.tool_call.request_id,
+                    success=False,
+                    skill=output.tool_call.skill,
+                    message=str(error),
+                    error={
+                        "type": "cpp_runtime",
+                        "details": str(error),
+                    },
+                )
+                failed_output = PipelineOutput(
+                    raw_text=output.raw_text,
+                    normalized_text=output.normalized_text,
+                    skill_prediction=output.skill_prediction,
+                    args_prediction=output.args_prediction,
+                    tool_call=output.tool_call,
+                    execution_result=failure,
+                )
+                if log:
+                    self.logger.log(failed_output, training_status="system_error")
                 raise PipelineError(str(error)) from error
 
             execution_result = SkillResult.from_dict(result_payload)

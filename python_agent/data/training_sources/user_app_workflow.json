@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "progress_messages": {
+    "rebuild_runtime_index": "Rebuilding runtime app index",
+    "training_command_pipeline": "Training command pipeline",
+    "reload_command_pipeline": "Reloading command pipeline",
+    "training_finished": "Training finished",
+    "check_app": "Проверяю приложение",
+    "save_app": "Сохраняю приложение",
+    "update_catalog": "Обновляю каталог",
+    "done": "Готово",
+    "check_changes": "Проверяю изменения",
+    "check_new_phrases": "Проверяю новые фразы",
+    "sync_apps": "Синхронизирую список приложений",
+    "delete_app": "Удаляю приложение",
+    "save_slang": "Сохраняю сленг",
+    "cancel_step": "Отменяю шаг: {title}"
+  },
+  "training_steps": [
+    {
+      "title": "Генерирую датасет open_app",
+      "module_args": [
+        "python_agent.training.generate_open_app_dataset",
+        "--apps-catalog-path",
+        "{apps_catalog_path}"
+      ]
+    },
+    {
+      "title": "Обучаю open_app",
+      "module_args": [
+        "python_agent.training.train_open_app_arg_model"
+      ]
+    },
+    {
+      "title": "Тестирую open_app",
+      "module_args": [
+        "python_agent.training.test_open_app_arg_model"
+      ]
+    },
+    {
+      "title": "Генерирую датасет window_control",
+      "module_args": [
+        "python_agent.training.generate_window_control_dataset",
+        "--apps-catalog-path",
+        "{apps_catalog_path}"
+      ]
+    },
+    {
+      "title": "Обучаю window_control",
+      "module_args": [
+        "python_agent.training.train_window_control_arg_model"
+      ]
+    },
+    {
+      "title": "Тестирую window_control",
+      "module_args": [
+        "python_agent.training.test_window_control_arg_model"
+      ]
+    },
+    {
+      "title": "Генерирую датасет window_layout",
+      "module_args": [
+        "python_agent.training.generate_window_layout_dataset",
+        "--apps-catalog-path",
+        "{apps_catalog_path}"
+      ]
+    },
+    {
+      "title": "Обучаю window_layout",
+      "module_args": [
+        "python_agent.training.train_window_layout_arg_model"
+      ]
+    },
+    {
+      "title": "Тестирую window_layout",
+      "module_args": [
+        "python_agent.training.test_window_layout_arg_model"
+      ]
+    },
+    {
+      "title": "Генерирую датасет skill_classifier",
+      "module_args": [
+        "python_agent.training.generate_skill_classifier_dataset",
+        "--apps-catalog-path",
+        "{apps_catalog_path}"
+      ]
+    },
+    {
+      "title": "Обучаю skill_classifier",
+      "module_args": [
+        "python_agent.training.train_skill_classifier"
+      ]
+    },
+    {
+      "title": "Тестирую skill_classifier",
+      "module_args": [
+        "python_agent.training.test_skill_classifier"
+      ]
+    }
+  ],
+  "smoke_open_app_templates": [
+    "открой {app}",
+    "запусти {app}",
+    "{app} открой"
+  ]
+}

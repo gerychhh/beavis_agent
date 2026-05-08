@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 import sys
 
-from python_agent.ui.settings_store import UiSettingsStore
+from python_agent.services.settings_store import UiSettingsStore
 from python_agent.voice.service import VoiceService
 
 
