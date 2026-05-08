@@ -12,6 +12,7 @@ class ArgSpec:
     values: list[str] | None = None
     min_value: int | float | None = None
     max_value: int | float | None = None
+    required_if: dict[str, Any] | None = None
     description: str = ""
 
 
@@ -23,3 +24,4 @@ class SkillSpec:
     extractor: Any
     args: list[ArgSpec]
     examples: list[dict[str, Any]] = field(default_factory=list)
+    enabled: bool = True

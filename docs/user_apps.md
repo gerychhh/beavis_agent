@@ -1,11 +1,15 @@
 # User Apps
 
-Beavis can learn local user applications without changing runtime code.
+User apps let Beavis learn local applications without changing runtime code.
 
-The user flow is:
+Flow:
 
 ```text
-UI -> user app catalog -> apps index -> generated local datasets -> retrained models
+UI or CLI
+-> user app catalog
+-> app index
+-> generated local datasets
+-> retrained local models
 ```
 
 Local catalog:
@@ -14,29 +18,10 @@ Local catalog:
 python_agent/data/user_apps/apps.json
 ```
 
-This file is ignored by git because it contains local paths and personal speech
+This path is ignored because it may contain personal paths and custom speech
 forms.
 
-Example:
-
-```json
-{
-  "schema_version": 1,
-  "apps": [
-    {
-      "app_id": "my_tool",
-      "display_name": "My Tool",
-      "launch_type": "exe",
-      "launch_target": "D:\\Tools\\MyTool\\mytool.exe",
-      "target_path": "D:\\Tools\\MyTool\\mytool.exe",
-      "working_directory": "D:\\Tools\\MyTool",
-      "speech_forms": ["мой тул", "тулза"]
-    }
-  ]
-}
-```
-
-CLI:
+## Add An EXE App
 
 ```powershell
 python -m python_agent.training.add_user_app `
@@ -46,8 +31,7 @@ python -m python_agent.training.add_user_app `
   --speech-form "тулза"
 ```
 
-Windows Start/Search and Microsoft Store apps can be added by AppID without
-looking for an `.exe` path:
+## Add A Windows AppID
 
 ```powershell
 python -m python_agent.training.add_user_app `
@@ -56,11 +40,14 @@ python -m python_agent.training.add_user_app `
   --speech-form "кодекс"
 ```
 
-Those records use `launch_type: "apps_folder"` and launch through
-`shell:AppsFolder\<AppID>`. The desktop UI exposes both flows: `Из списка
-Windows` and `По пути .exe`.
+Windows AppID records use:
 
-Update speech forms for an existing app and retrain:
+```text
+launch_type = apps_folder
+launch_target = shell:AppsFolder\<AppID>
+```
+
+## Update Speech Forms
 
 ```powershell
 python -m python_agent.training.add_user_app `
@@ -70,7 +57,7 @@ python -m python_agent.training.add_user_app `
   --speech-form "рабочая прога"
 ```
 
-Delete an app from the user catalog and retrain:
+## Delete A User App
 
 ```powershell
 python -m python_agent.training.add_user_app `
@@ -78,23 +65,15 @@ python -m python_agent.training.add_user_app `
   --app-id "my_tool"
 ```
 
-Storage:
+## Generated Files
 
-- user app catalog: `python_agent/data/user_apps/apps.json`;
-- local generated datasets after retraining: `python_agent/data/user_apps/generated/`;
-- app resolver cache: `python_agent/data/cache/apps_index.json`;
-- updated model files: `python_agent/models/open_app_arg_model.joblib` and `python_agent/models/skill_classifier.joblib`.
+```text
+python_agent/data/user_apps/apps.json
+python_agent/data/user_apps/generated/
+python_agent/data/cache/apps_index.json
+python_agent/models/open_app_arg_model.joblib
+python_agent/models/skill_classifier.joblib
+```
 
-The catalog and generated local data are ignored by git because they can contain
-personal paths and speech forms.
-
-The command:
-
-- saves the app to the local catalog;
-- rebuilds `python_agent/data/cache/apps_index.json`;
-- generates local augmented datasets under `python_agent/data/user_apps/generated/`;
-- retrains `open_app_arg_model.joblib` and `skill_classifier.joblib`;
-- runs model tests and smoke checks.
-
-The C++ runtime does not need changes. It receives the same `app_id` as before
-and resolves it through the updated app index.
+The C++ runtime does not need changes. It receives the same stable `app_id` and
+resolves it through the refreshed app index.

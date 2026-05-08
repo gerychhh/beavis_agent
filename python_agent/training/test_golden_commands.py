@@ -10,7 +10,7 @@ if __package__ is None or __package__ == "":
     sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
 
 
-from python_agent.core.pipeline import CommandPipeline, PipelineError
+from python_agent.core.pipeline import CommandPipeline
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
@@ -55,7 +55,7 @@ def run_case(
     case: dict[str, Any],
 ) -> dict[str, Any]:
     text = str(case.get("text", ""))
-    expected_skill = str(case.get("skill", ""))
+    expected_status = str(case.get("status", "ready"))
     expected_args = case.get("args", {})
     if not isinstance(expected_args, dict):
         return {
@@ -64,29 +64,46 @@ def run_case(
             "errors": ["case args must be an object"],
         }
 
-    try:
-        output = pipeline.build_tool_call(text)
-    except PipelineError as error:
-        return {
-            "text": text,
-            "ok": False,
-            "errors": [f"pipeline error: {error}"],
-        }
-
+    decision = pipeline.build(text)
     errors: list[str] = []
-    tool_call = output.tool_call
-    if tool_call.skill != expected_skill:
-        errors.append(f"skill: expected {expected_skill!r}, got {tool_call.skill!r}")
+    if decision.status != expected_status:
+        errors.append(f"status: expected {expected_status!r}, got {decision.status!r}")
 
-    errors.extend(compare_required_args(expected_args, tool_call.args))
+    if expected_status == "ready":
+        expected_skill = str(case.get("skill", ""))
+        if decision.tool_call is None:
+            errors.append("missing tool_call for ready decision")
+        else:
+            if decision.tool_call.skill != expected_skill:
+                errors.append(
+                    f"skill: expected {expected_skill!r}, got {decision.tool_call.skill!r}"
+                )
+            errors.extend(compare_required_args(expected_args, decision.tool_call.args))
+    elif expected_status in {"rejected", "needs_clarification", "error"}:
+        expected_reason = case.get("reason")
+        if expected_reason is not None and decision.reason != expected_reason:
+            errors.append(f"reason: expected {expected_reason!r}, got {decision.reason!r}")
+
+        expected_question_fragment = case.get("question_contains")
+        if expected_question_fragment is not None:
+            question = decision.question or ""
+            if str(expected_question_fragment) not in question:
+                errors.append(
+                    f"question: expected to contain {expected_question_fragment!r}, got {question!r}"
+                )
+    else:
+        errors.append(f"unsupported expected status: {expected_status!r}")
 
     return {
         "text": text,
         "ok": not errors,
         "errors": errors,
         "actual": {
-            "skill": tool_call.skill,
-            "args": tool_call.args,
+            "status": decision.status,
+            "reason": decision.reason,
+            "question": decision.question,
+            "skill": decision.tool_call.skill if decision.tool_call else None,
+            "args": decision.tool_call.args if decision.tool_call else None,
         },
     }
 

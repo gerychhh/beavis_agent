@@ -1,10 +1,20 @@
-# Beavis Desktop UI
+# Desktop UI
 
 The active desktop UI lives in `desktop_ui/`.
 
 It is a Tauri 2 shell with a Vite/React frontend. The UI talks to Python through
-the JSON-lines bridge in `python_agent/bridge/stdio_server.py`; Python then uses
-the same command pipeline and C++ runtime as the CLI.
+the JSON-lines bridge and never executes Windows actions directly.
+
+Flow:
+
+```text
+React UI
+-> Tauri Rust bridge
+-> python_agent/bridge/stdio_server.py
+-> python_agent/bridge/router.py
+-> python_agent/api/*
+-> CommandPipeline / services
+```
 
 Run in development mode:
 
@@ -13,23 +23,30 @@ Run in development mode:
 .\scripts\dev.ps1 ui-dev
 ```
 
-Build a production binary:
+Build frontend assets:
+
+```powershell
+cd desktop_ui
+npm run build
+```
+
+Build Tauri app:
 
 ```powershell
 .\scripts\dev.ps1 ui-build
 ```
 
-Check the Python bridge used by the UI:
+Check Python bridge health:
 
 ```powershell
 .\scripts\dev.ps1 ui-health
 ```
 
-Included UI responsibilities:
+UI responsibilities:
 
 ```text
-command input and execution
-global shortcuts through Tauri
+command input
+global shortcuts
 voice controls
 settings
 history
@@ -37,5 +54,4 @@ local application management
 retraining status
 ```
 
-The UI does not execute Windows actions directly. It calls the Python API bridge,
-which emits `ToolCall` JSON and sends execution to the C++ runtime.
+When splitting UI files, move code without changing design or behavior first.

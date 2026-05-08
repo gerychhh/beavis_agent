@@ -1,187 +1,75 @@
 # Beavis Agent
 
-Local Windows desktop assistant with text and voice input.
+Beavis Agent is a local Windows desktop assistant. It understands noisy text or
+voice commands, converts them into strict JSON, and executes Windows actions
+through a C++ runtime.
 
-Beavis Agent converts imperfect natural-language commands into strict JSON `ToolCall` objects, sends them to a C++ runtime, executes Windows actions, and logs the result for debugging and future model improvement.
+```text
+UI / Voice / CLI
+-> Python NLU
+-> CommandDecision / ToolCall JSON
+-> CommandExecutor
+-> C++ Runtime
+-> Windows API
+-> SkillResult JSON
+-> Logs
+```
 
-## Current state
+The boundary is intentional:
 
-The project currently contains:
+```text
+Python understands commands.
+C++ executes Windows actions.
+JSON is the contract.
+UI is only an interface.
+```
 
-- Python NLU pipeline
-- Tauri desktop UI (TypeScript / Vite)
-- voice input through `faster-whisper`
-- C++ runtime for Windows actions
-- app indexing from Windows sources
-- ML models for skill classification and argument extraction
-- developer automation through `scripts/dev.ps1`
+The NLU must tolerate imperfect user input: typos, wake words, mixed
+Russian/English app names, and rough phrasing. Do not replace working ML
+behavior with narrow regex rules unless the behavior is proven equivalent.
 
-Current supported skills:
+## Current Skills
 
-| Skill | Meaning | Example |
+| Skill | Purpose | Example |
 |---|---|---|
-| `open_app` | Open or focus an application | `запусти блокнот` |
+| `open_app` | Open or focus an application | `открой хром` |
 | `volume_set` | Set or change system volume | `звук на 50` |
-| `window_control` | Close/minimize/maximize/restore a window | `сверни телеграм` |
-| `window_layout` | Place windows on screen | `телеграм слева, vscode справа` |
+| `window_control` | Close, minimize, maximize, or restore a window | `сверни телеграм` |
+| `window_layout` | Move or arrange windows | `bavis сделай справо codex` |
 
-## Architecture
+Planner/multi-step planning is not part of the current architecture.
 
-```text
-Text / Voice input
-→ Python NLU pipeline
-→ ToolCall JSON
-→ C++ runtime
-→ Windows skill execution
-→ SkillResult JSON
-→ Python logger
-```
-
-Python is responsible for:
+## Repository Layout
 
 ```text
-normalization
-skill classification
-argument extraction
-training datasets
-model training
-UI API bridge
-voice transcription
-logging
-```
-
-C++ is responsible for:
-
-```text
-argument validation
-skill registry
-safe execution boundary
-Windows API calls
-application launching
-volume control
-window control
-window layout
-```
-
-## Repository structure
-
-```text
-beavis_agent/
-├── configs/
-│   ├── apps.manual.json
-│   └── normalizer.json
-│
-├── cpp_runtime/
-│   ├── CMakeLists.txt
-│   └── src/
-│
-├── desktop_ui/        ← Tauri + Vite (TypeScript)
-│   ├── src/
-│   └── src-tauri/
-│
-├── docs/
-│   ├── ARCHITECTURE.md
-│   ├── COMMAND_PROTOCOL.md
-│   ├── MODEL_STORAGE.md
-│   └── PROJECT_CONTEXT.md
-│
-├── python_agent/
-│   ├── core/
-│   ├── data/
-│   ├── ml_models/
-│   ├── models/
-│   ├── nlu/
-│   ├── resolvers/
-│   ├── training/
-│   ├── voice/
-│   ├── cpp_client.py
-│   └── main.py
-│
-├── scripts/
-│   └── dev.ps1
-│
-├── .gitignore
-├── README.md
-└── requirements.txt
-```
-
-## Important model policy
-
-Generated model files are local artifacts and should not be committed:
-
-```text
-python_agent/models/*.joblib
-python_agent/models/stt/*
-```
-
-The repository should keep only folder placeholders:
-
-```text
-python_agent/models/.gitkeep
-python_agent/models/stt/.gitkeep
-```
-
-See:
-
-```text
-docs/MODEL_STORAGE.md
+configs/              Shared configuration and manual app records
+cpp_runtime/          C++ JSON runtime and Windows skills
+desktop_ui/           Tauri + Vite desktop UI
+docs/                 Architecture and developer documentation
+python_agent/api/     Stable Python API services
+python_agent/bridge/  JSON-lines bridge used by the UI
+python_agent/core/    Command pipeline, executor, schemas, logging
+python_agent/nlu/     Normalizer, classifier, legacy extractor modules
+python_agent/skills/  Skill specs and modular extractor entrypoints
+python_agent/training/Dataset generation, training, and tests
+python_agent/voice/   Audio capture, STT, wake-word handling
+scripts/dev.ps1       Main Windows developer helper
 ```
 
 ## Requirements
 
-Recommended environment:
+Use Windows and PowerShell.
+
+Required tools:
 
 ```text
-Windows 10/11
 Python 3.10 or 3.11
-PowerShell
-Visual Studio 2022 with C++ build tools
+Visual Studio 2022 C++ build tools
 CMake
 Ninja
 Node.js
-Rust toolchain for Tauri
+Rust toolchain for Tauri desktop builds
 ```
-
-Python dependencies are installed from:
-
-```text
-requirements.txt
-```
-
-C++ dependencies are handled by CMake. The C++ runtime downloads `nlohmann/json` through `FetchContent`.
-
-## Quick start
-
-From the repository root:
-
-```powershell
-.\scripts\dev.ps1 all
-```
-
-This runs:
-
-```text
-setup
-build
-index
-test
-smoke
-```
-
-## Daily commands
-
-```powershell
-.\scripts\dev.ps1 setup
-.\scripts\dev.ps1 build
-.\scripts\dev.ps1 index
-.\scripts\dev.ps1 train
-.\scripts\dev.ps1 test
-.\scripts\dev.ps1 smoke
-.\scripts\dev.ps1 ui-dev
-.\scripts\dev.ps1 run "запусти блокнот" --execute
-```
-
-## Manual setup
 
 Install Python dependencies:
 
@@ -189,238 +77,171 @@ Install Python dependencies:
 python -m pip install -r requirements.txt
 ```
 
-Build C++ runtime:
+Use the same Python environment for training, tests, the CLI, and the desktop
+app. If the desktop app works but a shell command fails to load a `.joblib`
+model, the shell is probably using a different Python/sklearn environment.
+
+## Build And Run
+
+First run from the repository root:
 
 ```powershell
+.\scripts\dev.ps1 setup
 .\scripts\dev.ps1 build
-```
-
-Index installed Windows applications:
-
-```powershell
 .\scripts\dev.ps1 index
-```
-
-Train local models:
-
-```powershell
-.\scripts\dev.ps1 train
-```
-
-Run tests:
-
-```powershell
 .\scripts\dev.ps1 test
+.\scripts\dev.ps1 smoke
 ```
 
-## Running commands
-
-Build only the JSON without execution:
+Shortcut:
 
 ```powershell
-python -m python_agent.main "звук на 50" --no-log
+.\scripts\dev.ps1 all
 ```
 
-Execute through C++ runtime:
+Build a `ToolCall` without executing Windows actions:
 
 ```powershell
-python -m python_agent.main "звук на 50" --execute
+python -m python_agent.main "сверни телеграм" --no-log
 ```
 
-Run through helper script:
+Execute through the C++ runtime:
 
 ```powershell
-.\scripts\dev.ps1 run "запусти блокнот" --execute
+python -m python_agent.main "сверни телеграм" --execute
 ```
 
-## Desktop UI (Tauri)
-
-The desktop UI is built with Tauri + Vite (TypeScript).
-
-To run in development mode:
+Run the desktop UI:
 
 ```powershell
 .\scripts\dev.ps1 ui-install
 .\scripts\dev.ps1 ui-dev
 ```
 
-To build a production binary:
+Build frontend assets only:
+
+```powershell
+cd desktop_ui
+npm run build
+```
+
+Build the Tauri desktop app:
 
 ```powershell
 .\scripts\dev.ps1 ui-build
 ```
 
-## Voice input
+More setup, build, run, and troubleshooting details are in
+`docs/SETUP_AND_RUN.md`.
 
-Voice input uses `faster-whisper`.
+## Tests
 
-Default STT model directory:
-
-```text
-python_agent/models/stt/
-```
-
-This directory is ignored by Git because downloaded STT models can be large.
-
-Voice modes:
-
-```text
-off
-hotkey
-continuous
-```
-
-Continuous voice mode can require the wake word:
-
-```text
-бивис
-beavis
-```
-
-## Application indexing
-
-Build local app index:
+Stable daily checks:
 
 ```powershell
-.\scripts\dev.ps1 index
+.\scripts\dev.ps1 test
+.\scripts\dev.ps1 smoke
+.\scripts\dev.ps1 build
+cd desktop_ui
+npm run build
 ```
 
-The app index is generated into:
+Golden command tests:
 
-```text
-python_agent/data/cache/apps_index.json
+```powershell
+python python_agent\training\test_golden_commands.py
 ```
 
-This file is local runtime data and should not be committed.
-
-User-added applications are stored locally under:
+The golden dataset lives at:
 
 ```text
+python_agent/data/eval/golden_commands.jsonl
+```
+
+It checks `ready`, `rejected`, and `needs_clarification` decisions.
+
+`.\scripts\dev.ps1 test-all` also runs the legacy `volume_set` argument model
+test. That test can fail when local sklearn/joblib versions do not match the
+model file. Keep the runtime environment consistent before treating that as a
+behavior regression.
+
+## Adding A Skill
+
+Short version:
+
+```text
+1. Create python_agent/skills/<skill_name>/
+2. Add spec.py with SkillSpec
+3. Add extractor.py
+4. Add examples.py and golden cases
+5. Add C++ skill
+6. Add C++ ArgsValidator rules
+7. Register the skill in Python and C++
+8. Update COMMAND_PROTOCOL.md
+9. Run tests, smoke, C++ build, and UI build
+```
+
+Full guide: `docs/SKILL_DEVELOPMENT.md`.
+
+## Models And Local Data
+
+Generated models and local runtime data are ignored by Git:
+
+```text
+python_agent/models/*.joblib
+python_agent/models/stt/*
+python_agent/data/cache/
+python_agent/data/logs/
+python_agent/data/settings/
 python_agent/data/user_apps/
+external_data/
 ```
 
-This folder is ignored by Git.
-
-## Adding a user application
-
-From UI or command line:
-
-```powershell
-python -m python_agent.training.add_user_app --path "D:\Tools\App\app.exe" --display-name "App" --speech-form "мой апп"
-```
-
-After adding applications, rebuild the index and retrain if needed:
-
-```powershell
-.\scripts\dev.ps1 index
-.\scripts\dev.ps1 train
-```
-
-## C++ runtime
-
-Python calls the C++ runtime through stdin/stdout JSON.
-
-Expected executable paths:
+Keep only placeholders under `python_agent/models/`:
 
 ```text
-cpp_runtime/build/beavis_runtime.exe
-cpp_runtime/build/Debug/beavis_runtime.exe
-cpp_runtime/build/Release/beavis_runtime.exe
+python_agent/models/.gitkeep
+python_agent/models/stt/.gitkeep
 ```
 
-If `--execute` fails with `C++ runtime not found`, build the runtime:
+Do not commit generated models, logs, local app indexes, user app paths, build
+output, or downloaded STT models.
 
-```powershell
-.\scripts\dev.ps1 build
-```
+## Documentation Map
 
-## Logs
-
-Runtime logs are written locally to:
+Start here:
 
 ```text
-python_agent/data/logs/actions.jsonl
+docs/README.md              Documentation index
+docs/SETUP_AND_RUN.md       Build, run, test, and troubleshooting
+docs/ARCHITECTURE.md        Layer boundaries and code ownership
+docs/COMMAND_PROTOCOL.md    ToolCall, CommandDecision, SkillResult
+docs/SKILL_DEVELOPMENT.md   How to add or change a skill
+docs/MODEL_STORAGE.md       Model artifact policy
+docs/REFACTOR_PLAN.md       Current refactor direction
+docs/ui.md                  Desktop UI notes
+docs/user_apps.md           User-added local apps
+docs/app_index.md           App indexing and runtime resolution
 ```
 
-Logs are ignored by Git.
+## Development Rules
 
-Logs are used for:
+Do:
 
 ```text
-debugging
-dataset improvement
-future retraining
-unknown command analysis
+Keep Python as the understanding layer.
+Keep C++ as the Windows execution layer.
+Keep JSON as the contract between them.
+Keep each skill's schema and examples near that skill.
+Keep compatibility wrappers until all callers are migrated.
 ```
 
-## Troubleshooting
-
-### Push fails because model file is too large
-
-Do not commit generated models. See:
+Do not:
 
 ```text
-docs/MODEL_STORAGE.md
-```
-
-### Command builds JSON but does not execute
-
-Build C++ runtime:
-
-```powershell
-.\scripts\dev.ps1 build
-```
-
-### Application is not found
-
-Rebuild app index:
-
-```powershell
-.\scripts\dev.ps1 index
-```
-
-### Window commands fail with missing arguments
-
-Train local models:
-
-```powershell
-.\scripts\dev.ps1 train
-```
-
-### Voice model is slow or CUDA fails
-
-Use CPU profile or check CUDA/ctranslate2 installation. STT models are stored locally in:
-
-```text
-python_agent/models/stt/
-```
-
-## Development rule
-
-Do not mix NLU and execution.
-
-Correct flow:
-
-```text
-Input
-→ Python pipeline
-→ ToolCall JSON
-→ C++ Executor
-→ Skill
-→ SkillResult JSON
-→ Logger
-```
-
-New skill checklist:
-
-```text
-1. Add dataset/generator if ML is needed.
-2. Add argument extractor.
-3. Add model wrapper if needed.
-4. Register extractor in Python pipeline.
-5. Add C++ skill.
-6. Register C++ skill.
-7. Add argument validation.
-8. Add tests.
-9. Update docs.
+Execute Windows actions directly from UI or voice code.
+Move ML/NLU into C++.
+Move Windows API calls into Python.
+Commit generated models, logs, app indexes, or build output.
+Add Planner during this simplification pass.
 ```

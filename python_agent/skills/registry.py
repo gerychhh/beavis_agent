@@ -1,11 +1,13 @@
 from __future__ import annotations
 
+from dataclasses import replace
+
 from python_agent.nlu.argument_extractors.base import ArgumentExtractor
-from python_agent.nlu.argument_extractors.open_app import OpenAppExtractor
-from python_agent.nlu.argument_extractors.volume_set import VolumeSetExtractor
-from python_agent.nlu.argument_extractors.window_control import WindowControlExtractor
-from python_agent.nlu.argument_extractors.window_layout import WindowLayoutExtractor
-from python_agent.skills.spec import ArgSpec, SkillSpec
+from python_agent.skills.open_app.spec import SPEC as OPEN_APP
+from python_agent.skills.spec import SkillSpec
+from python_agent.skills.volume_set.spec import SPEC as VOLUME_SET
+from python_agent.skills.window_control.spec import SPEC as WINDOW_CONTROL
+from python_agent.skills.window_layout.spec import SPEC as WINDOW_LAYOUT
 
 
 class SkillRegistry:
@@ -29,66 +31,13 @@ class SkillRegistry:
 def build_skill_registry(
     extractors: dict[str, ArgumentExtractor] | None = None,
 ) -> SkillRegistry:
-    extractors = extractors or {
-        "open_app": OpenAppExtractor(),
-        "volume_set": VolumeSetExtractor(),
-        "window_control": WindowControlExtractor(),
-        "window_layout": WindowLayoutExtractor(),
-    }
-
     registry = SkillRegistry()
-    registry.register(
-        SkillSpec(
-            name="open_app",
-            description="Open or focus a Windows application",
-            risk="low",
-            extractor=extractors["open_app"],
-            args=[
-                ArgSpec(name="app_id", type="string", required=True),
-            ],
-        )
-    )
-    registry.register(
-        SkillSpec(
-            name="volume_set",
-            description="Set or change system volume",
-            risk="low",
-            extractor=extractors["volume_set"],
-            args=[
-                ArgSpec(name="mode", type="enum", required=True, values=["set", "delta"]),
-                ArgSpec(name="percent", type="int", required=False, min_value=0, max_value=100),
-                ArgSpec(name="delta", type="int", required=False, min_value=-100, max_value=100),
-            ],
-        )
-    )
-    registry.register(
-        SkillSpec(
-            name="window_control",
-            description="Close, minimize, maximize, or restore a window",
-            risk="medium",
-            extractor=extractors["window_control"],
-            args=[
-                ArgSpec(
-                    name="action",
-                    type="enum",
-                    required=True,
-                    values=["close", "minimize", "maximize", "restore"],
-                ),
-                ArgSpec(name="target_type", type="enum", required=True, values=["app", "current"]),
-                ArgSpec(name="app_id", type="string", required=False),
-            ],
-        )
-    )
-    registry.register(
-        SkillSpec(
-            name="window_layout",
-            description="Move or arrange one or more windows",
-            risk="medium",
-            extractor=extractors["window_layout"],
-            args=[
-                ArgSpec(name="layout", type="string", required=True),
-                ArgSpec(name="targets", type="list", required=True),
-            ],
-        )
-    )
+
+    for spec in (OPEN_APP, VOLUME_SET, WINDOW_CONTROL, WINDOW_LAYOUT):
+        if not spec.enabled:
+            continue
+        if extractors and spec.name in extractors:
+            spec = replace(spec, extractor=extractors[spec.name])
+        registry.register(spec)
+
     return registry

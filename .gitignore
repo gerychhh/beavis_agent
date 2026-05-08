@@ -1,43 +1,56 @@
-# Python cache
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
 
-# Virtual environments
+# Virtual environments and local env
 .venv/
 venv/
 env/
-
-# Local environment and editor state
 .env
 .env.*
+
+# Editors
 .idea/
 .vscode/
 
-# Native build outputs
-cpp_runtime/build/
+# C++ / native build output
 build/
 dist/
+cpp_runtime/build/
+
+# Desktop UI / Tauri
+desktop_ui/node_modules/
+desktop_ui/dist/
+desktop_ui/.vite/
+desktop_ui/.vite-dev-*.log
+desktop_ui/src-tauri/target/
+desktop_ui/src-tauri/gen/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
 # Local runtime data
 external_data/
 python_agent/data/cache/
-python_agent/data/feedback/*.jsonl
-python_agent/data/logs/*.jsonl
-python_agent/data/settings/*.json
+python_agent/data/logs/
+python_agent/data/settings/
 python_agent/data/user_apps/
-python_agent/data/user_apps/*.json
-python_agent/data/user_apps/catalog_overrides.json
+python_agent/data/feedback/*.jsonl
 
 # Generated training/eval reports
 python_agent/data/*/eval/test_results.json
 python_agent/data/*/eval/train_metrics.json
 python_agent/data/*/processed/dataset_stats.json
 
-# ML / generated models
+# Generated models
 python_agent/models/*
 !python_agent/models/.gitkeep
 !python_agent/models/stt/
@@ -49,21 +62,3 @@ python_agent/models/stt/*
 *.bak
 *.orig
 *.log
-
-# Desktop UI / Tauri
-desktop_ui/node_modules/
-desktop_ui/dist/
-desktop_ui/.vite/
-desktop_ui/src-tauri/target/
-desktop_ui/src-tauri/gen/
-
-# Logs / temp
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-
-# Local env
-.env
-.env.local

@@ -1,47 +1,50 @@
 # App Index
 
-`open_app` is split into two separate jobs:
+`open_app` has two separate responsibilities:
 
 ```text
-Python open_app_arg_model -> app_id
+Python open_app extractor -> app_id
 C++ AppResolver -> launch target
-C++ window lookup -> focus existing window or launch target
+Window lookup -> focus existing window or launch target
 ```
 
-The model does not know Windows paths. It only returns a canonical value like:
+The model does not know Windows paths. It returns a stable id:
 
 ```json
-{"app_id": "chrome"}
+{"app_id": "google_chrome"}
 ```
 
-The local app index is generated from Windows sources:
+## Sources
+
+The local app index is generated from:
 
 ```text
-Start Menu .lnk shortcuts
+Start Menu shortcuts
 Registry App Paths
-Built-in Windows launch targets
+Windows apps
 configs/apps.manual.json
 python_agent/data/user_apps/apps.json
 ```
 
-Build or refresh the index:
+Refresh the index:
 
-```bash
+```powershell
 python -m python_agent.resolvers.app_indexer
 ```
 
-Output:
+or:
+
+```powershell
+.\scripts\dev.ps1 index
+```
+
+Generated output:
 
 ```text
 python_agent/data/cache/apps_index.json
 ```
 
-That file is machine-specific and is ignored by git.
-
-At runtime `open_app` first searches visible top-level windows that match the
-resolved app path, executable name, app id, or display name. A found window is
-restored if minimized and brought to the foreground. A new process is launched
-only when no matching window exists.
+This file is ignored by Git.
 
 ## Manual Apps
 
@@ -60,10 +63,11 @@ Use `configs/apps.manual.json` for programs that Windows does not expose well.
 ]
 ```
 
-`display_names` are names from the system or installer, not user speech aliases.
-Speech variants belong in the model dataset.
+`display_names` are application names. User speech aliases belong in datasets or
+the user app catalog.
 
-User-added applications are stored separately in
-`python_agent/data/user_apps/apps.json`. That file may include `speech_forms`
-for model training, but the resolver still uses only the stable `app_id` and
-launch target.
+## Runtime Behavior
+
+At execution time `open_app` tries to find an existing visible top-level window
+for the resolved app. If found, it restores/focuses that window. If not found,
+it launches the configured target.
