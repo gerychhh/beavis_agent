@@ -6,12 +6,83 @@ use tauri::{
     Manager,
 };
 
+#[cfg(windows)]
+use windows::Win32::{
+    System::Threading::{AttachThreadInput, GetCurrentThreadId},
+    UI::{
+        WindowsAndMessaging::{
+            AllowSetForegroundWindow, BringWindowToTop, GetForegroundWindow,
+            GetWindowThreadProcessId, SetForegroundWindow, SetWindowPos, ShowWindow,
+            SwitchToThisWindow, HWND_TOPMOST, SWP_NOMOVE, SWP_NOSIZE, SWP_SHOWWINDOW,
+            SW_RESTORE, SW_SHOW,
+        },
+    },
+};
+
 fn show_main_window(app: &tauri::AppHandle) {
     if let Some(window) = app.get_webview_window("main") {
         let _ = window.show();
         let _ = window.unminimize();
         let _ = window.set_focus();
     }
+}
+
+#[cfg(windows)]
+fn force_focus_webview_window(window: &tauri::WebviewWindow) -> Result<(), String> {
+    let hwnd = window.hwnd().map_err(|error| error.to_string())?;
+    unsafe {
+        let foreground = GetForegroundWindow();
+        let current_thread = GetCurrentThreadId();
+        let foreground_thread = if !foreground.is_invalid() {
+            GetWindowThreadProcessId(foreground, None)
+        } else {
+            0
+        };
+
+        if foreground_thread != 0 && foreground_thread != current_thread {
+            let _ = AttachThreadInput(current_thread, foreground_thread, true);
+        }
+
+        let _ = AllowSetForegroundWindow(u32::MAX);
+        let _ = window.set_focus();
+        let _ = window.set_always_on_top(true);
+        let _ = window.show();
+        let _ = window.unminimize();
+        let _ = ShowWindow(hwnd, SW_RESTORE);
+        let _ = ShowWindow(hwnd, SW_SHOW);
+        let _ = SetWindowPos(
+            hwnd,
+            Some(HWND_TOPMOST),
+            0,
+            0,
+            0,
+            0,
+            SWP_NOMOVE | SWP_NOSIZE | SWP_SHOWWINDOW,
+        );
+        let _ = BringWindowToTop(hwnd);
+        let _ = SetForegroundWindow(hwnd);
+        SwitchToThisWindow(hwnd, true);
+
+        if foreground_thread != 0 && foreground_thread != current_thread {
+            let _ = AttachThreadInput(current_thread, foreground_thread, false);
+        }
+    }
+    Ok(())
+}
+
+#[cfg(not(windows))]
+fn force_focus_webview_window(window: &tauri::WebviewWindow) -> Result<(), String> {
+    window.show().map_err(|error| error.to_string())?;
+    window.unminimize().map_err(|error| error.to_string())?;
+    window.set_focus().map_err(|error| error.to_string())
+}
+
+#[tauri::command]
+fn force_focus_window(app: tauri::AppHandle, label: String) -> Result<(), String> {
+    let window = app
+        .get_webview_window(&label)
+        .ok_or_else(|| format!("Window not found: {label}"))?;
+    force_focus_webview_window(&window)
 }
 
 fn build_tray(app: &mut tauri::App) -> tauri::Result<()> {
@@ -55,7 +126,10 @@ pub fn run() {
     tauri::Builder::default()
         .plugin(tauri_plugin_global_shortcut::Builder::new().build())
         .manage(bridge::BridgeState::default())
-        .invoke_handler(tauri::generate_handler![bridge::beavis_call])
+        .invoke_handler(tauri::generate_handler![
+            bridge::beavis_call,
+            force_focus_window
+        ])
         .setup(|app| {
             build_tray(app)?;
             Ok(())

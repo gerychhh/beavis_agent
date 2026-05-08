@@ -4,18 +4,18 @@ use std::{
     io::{BufRead, BufReader, Write},
     path::PathBuf,
     process::{Child, ChildStdin, ChildStdout, Command, Stdio},
-    sync::Mutex,
+    sync::{Arc, Mutex},
     time::{SystemTime, UNIX_EPOCH},
 };
 
 pub struct BridgeState {
-    child: Mutex<Option<BridgeProcess>>,
+    child: Arc<Mutex<Option<BridgeProcess>>>,
 }
 
 impl Default for BridgeState {
     fn default() -> Self {
         Self {
-            child: Mutex::new(None),
+            child: Arc::new(Mutex::new(None)),
         }
     }
 }
@@ -85,13 +85,23 @@ fn request_id() -> String {
 }
 
 #[tauri::command]
-pub fn beavis_call(
+pub async fn beavis_call(
     method: String,
     params: Value,
     state: tauri::State<'_, BridgeState>,
 ) -> Result<Value, String> {
-    let mut guard = state
-        .child
+    let child = Arc::clone(&state.child);
+    tauri::async_runtime::spawn_blocking(move || beavis_call_blocking(method, params, child))
+        .await
+        .map_err(|error| format!("Bridge worker failed: {error}"))?
+}
+
+fn beavis_call_blocking(
+    method: String,
+    params: Value,
+    child: Arc<Mutex<Option<BridgeProcess>>>,
+) -> Result<Value, String> {
+    let mut guard = child
         .lock()
         .map_err(|_| "Bridge mutex poisoned".to_string())?;
 

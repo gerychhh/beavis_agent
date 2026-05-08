@@ -1,10 +1,11 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import {
   isRegistered,
   register,
   unregister,
 } from "@tauri-apps/plugin-global-shortcut";
+import { invoke } from "@tauri-apps/api/core";
 import { emitTo } from "@tauri-apps/api/event";
 import {
   WebviewWindow,
@@ -163,6 +164,19 @@ type AppData = {
   launch_target?: string;
   target_path?: string;
   working_directory?: string;
+};
+type AppPathValidation = {
+  path: string;
+  normalized_path: string;
+  exists: boolean;
+  is_file: boolean;
+  is_exe: boolean;
+  valid: boolean;
+  error: string | null;
+};
+type PathValidationState = {
+  status: "idle" | "checking" | "valid" | "invalid";
+  message: string;
 };
 type HistoryItem = {
   id: string;
@@ -530,10 +544,18 @@ function formatKeyboardShortcut(event: React.KeyboardEvent<HTMLInputElement>) {
   return parts.join("+");
 }
 
+const MAIN_WINDOW_LABEL = "main";
 const OVERLAY_WINDOW_LABEL = "beavis_overlay";
 const TOAST_WINDOW_LABEL = "beavis_toasts";
+const IN_APP_TOAST_EVENT = "beavis-in-app-toast";
+const TOAST_WINDOW_WIDTH = 380;
+const TOAST_WINDOW_MARGIN = 20;
+const TOAST_ROW_HEIGHT = 78;
+const TOAST_GAP = 10;
+const TOAST_MAX_VISIBLE = 4;
 
 type OverlayMode = "command" | "voice";
+type OverlayModePayload = { mode: OverlayMode; activationId: string };
 
 function hasTauriRuntime() {
   const candidate = window as unknown as {
@@ -590,30 +612,105 @@ async function waitForWindowCreation(windowRef: WebviewWindow) {
   });
 }
 
+async function sleep(ms: number) {
+  await new Promise<void>((resolve) => window.setTimeout(resolve, ms));
+}
+
 function getOverlayGeometry(mode: OverlayMode, bounds: Awaited<ReturnType<typeof getWorkAreaBounds>>) {
-  const width = mode === "command" ? Math.min(760, bounds.width - 32) : 360;
-  const height = mode === "command" ? 132 : 260;
+  // Keep the OS window compact; a fullscreen transparent window causes a flash.
+  const preferredWidth = mode === "command" ? 760 : 320;
+  const preferredHeight = mode === "command" ? 72 : 234;
+  const width = Math.max(240, Math.min(preferredWidth, bounds.width - 24));
+  const height = Math.max(72, Math.min(preferredHeight, bounds.height - 24));
+  const preferredY = bounds.y + Math.max(48, bounds.height * 0.22);
+  const maxY = bounds.y + Math.max(12, bounds.height - height - 24);
   return {
     x: Math.round(bounds.x + (bounds.width - width) / 2),
-    y: Math.round(bounds.y + Math.max(48, bounds.height * 0.22)),
+    y: Math.round(Math.min(preferredY, maxY)),
     width,
     height,
   };
 }
 
+function createToast(message: string, type: ToastType = "info"): Toast {
+  return {
+    id: `${Date.now()}_${Math.random().toString(16).slice(2)}`,
+    message,
+    type,
+  };
+}
+
+function getToastWindowGeometry(
+  bounds: Awaited<ReturnType<typeof getWorkAreaBounds>>,
+  count = 1,
+) {
+  const visibleCount = Math.min(Math.max(count, 1), TOAST_MAX_VISIBLE);
+  const height =
+    visibleCount * TOAST_ROW_HEIGHT + (visibleCount - 1) * TOAST_GAP + 4;
+  const width = Math.min(
+    TOAST_WINDOW_WIDTH,
+    bounds.width - TOAST_WINDOW_MARGIN * 2,
+  );
+  return {
+    x: Math.round(bounds.x + bounds.width - width - TOAST_WINDOW_MARGIN),
+    y: Math.round(bounds.y + bounds.height - height - TOAST_WINDOW_MARGIN),
+    width,
+    height,
+  };
+}
+
+async function positionToastWindow(windowRef: WebviewWindow, count: number) {
+  const bounds = await getWorkAreaBounds();
+  const geometry = getToastWindowGeometry(bounds, count);
+  await Promise.all([
+    windowRef.setPosition(new LogicalPosition(geometry.x, geometry.y)),
+    windowRef.setSize(new LogicalSize(geometry.width, geometry.height)),
+  ]);
+}
+
+async function forceNativeWindowFocus(label: string) {
+  if (!hasTauriRuntime()) return;
+  await invoke("force_focus_window", { label }).catch(() => {});
+}
+
+async function shouldUseGlobalToast() {
+  if (!hasTauriRuntime()) return false;
+  try {
+    const main = await WebviewWindow.getByLabel(MAIN_WINDOW_LABEL);
+    if (!main) return true;
+    const [visible, minimized] = await Promise.all([
+      main.isVisible().catch(() => true),
+      main.isMinimized().catch(() => false),
+    ]);
+    return !visible || minimized;
+  } catch {
+    return true;
+  }
+}
+
+async function routeExternalToast(toast: Toast) {
+  if (!hasTauriRuntime()) return;
+  if (await shouldUseGlobalToast()) {
+    await showGlobalToast(toast);
+    return;
+  }
+  await emitTo(MAIN_WINDOW_LABEL, IN_APP_TOAST_EVENT, toast).catch(() =>
+    showGlobalToast(toast),
+  );
+}
+
 async function openGlobalOverlay(mode: OverlayMode) {
   const bounds = await getWorkAreaBounds();
   const overlayBounds = getOverlayGeometry(mode, bounds);
+  const payload: OverlayModePayload = {
+    mode,
+    activationId: `${Date.now()}_${Math.random().toString(16).slice(2)}`,
+  };
+
   const existing = await WebviewWindow.getByLabel(OVERLAY_WINDOW_LABEL);
   if (existing) {
-    await existing.setPosition(new LogicalPosition(overlayBounds.x, overlayBounds.y));
-    await existing.setSize(new LogicalSize(overlayBounds.width, overlayBounds.height));
-    await existing.setAlwaysOnTop(true);
-    await existing.setVisibleOnAllWorkspaces(true).catch(() => {});
-    await existing.show();
-    await emitTo(OVERLAY_WINDOW_LABEL, "beavis-overlay-mode", { mode });
-    await existing.setFocus();
-    return;
+    await existing.destroy().catch(() => existing.close().catch(() => {}));
+    await sleep(120);
   }
 
   const overlay = new WebviewWindow(OVERLAY_WINDOW_LABEL, {
@@ -631,15 +728,16 @@ async function openGlobalOverlay(mode: OverlayMode) {
     visible: true,
     transparent: true,
     shadow: false,
-    backgroundColor: "transparent",
   });
   await waitForWindowCreation(overlay);
-  await overlay.setAlwaysOnTop(true).catch(() => {});
-  await overlay.setVisibleOnAllWorkspaces(true).catch(() => {});
-  await emitTo(OVERLAY_WINDOW_LABEL, "beavis-overlay-mode", { mode }).catch(
-    () => {},
-  );
+  overlay.setAlwaysOnTop(true).catch(() => {});
+  overlay.setVisibleOnAllWorkspaces(true).catch(() => {});
+  await overlay.setFocusable(true).catch(() => {});
+  await emitTo(OVERLAY_WINDOW_LABEL, "beavis-overlay-mode", payload).catch(() => {});
+  await forceNativeWindowFocus(OVERLAY_WINDOW_LABEL);
   await overlay.setFocus().catch(() => {});
+  window.setTimeout(() => void overlay.setFocus().catch(() => {}), 80);
+  window.setTimeout(() => void forceNativeWindowFocus(OVERLAY_WINDOW_LABEL), 120);
 }
 
 async function hideCurrentWindow() {
@@ -647,6 +745,14 @@ async function hideCurrentWindow() {
     await getCurrentWebviewWindow().hide();
   } catch {
     // Browser preview has no Tauri window to hide.
+  }
+}
+
+async function destroyCurrentWindow() {
+  try {
+    await getCurrentWebviewWindow().destroy();
+  } catch {
+    await hideCurrentWindow();
   }
 }
 
@@ -658,39 +764,30 @@ async function minimizeCurrentWindow() {
   }
 }
 
-async function showGlobalToast(message: string, type: ToastType = "info") {
-  const width = 430;
-  const height = 260;
-  const margin = 24;
+async function showGlobalToast(toast: Toast) {
   const bounds = await getWorkAreaBounds();
-  const x = Math.max(bounds.x + margin, bounds.x + bounds.width - width - margin);
-  const y = Math.max(bounds.y + margin, bounds.y + bounds.height - height - margin);
-  const payload = {
-    id: `${Date.now()}_${Math.random().toString(16).slice(2)}`,
-    message,
-    type,
-  };
+  const geometry = getToastWindowGeometry(bounds, 1);
 
   const existing = await WebviewWindow.getByLabel(TOAST_WINDOW_LABEL);
   if (existing) {
-    await existing.setPosition(new LogicalPosition(x, y));
-    await existing.setSize(new LogicalSize(width, height));
+    await positionToastWindow(existing, 1).catch(() => {});
     await existing.setAlwaysOnTop(true);
     await existing.setVisibleOnAllWorkspaces(true).catch(() => {});
+    await existing.setIgnoreCursorEvents(true).catch(() => {});
     await existing.show();
-    await emitTo(TOAST_WINDOW_LABEL, "beavis-toast", payload);
+    await emitTo(TOAST_WINDOW_LABEL, "beavis-toast", toast);
     return;
   }
 
   const toastWindow = new WebviewWindow(TOAST_WINDOW_LABEL, {
     url: `${overlayUrl("toast")}&toast=${encodeURIComponent(
-      JSON.stringify(payload),
+      JSON.stringify(toast),
     )}`,
     title: "Beavis Notifications",
-    x,
-    y,
-    width,
-    height,
+    x: geometry.x,
+    y: geometry.y,
+    width: geometry.width,
+    height: geometry.height,
     decorations: false,
     resizable: false,
     skipTaskbar: true,
@@ -704,7 +801,8 @@ async function showGlobalToast(message: string, type: ToastType = "info") {
   await waitForWindowCreation(toastWindow);
   await toastWindow.setAlwaysOnTop(true).catch(() => {});
   await toastWindow.setVisibleOnAllWorkspaces(true).catch(() => {});
-  await emitTo(TOAST_WINDOW_LABEL, "beavis-toast", payload).catch(() => {});
+  await toastWindow.setIgnoreCursorEvents(true).catch(() => {});
+  await emitTo(TOAST_WINDOW_LABEL, "beavis-toast", toast).catch(() => {});
 }
 
 let mockSettings: SettingsPayload = {
@@ -752,58 +850,109 @@ function useToast() {
   return React.useContext(ToastContext);
 }
 
-function ToastHost({ children }: { children: React.ReactNode }) {
+function ToastHost({
+  children,
+  surface = "main",
+}: {
+  children: React.ReactNode;
+  surface?: "main" | "overlay";
+}) {
   const [toasts, setToasts] = useState<Toast[]>([]);
-  const showToast = (message: string, type: ToastType = "info") => {
-    const id = `${Date.now()}_${Math.random().toString(16).slice(2)}`;
-    setToasts((prev) => [...prev, { id, message, type }]);
-    void showGlobalToast(message, type).catch(() => {});
-    setTimeout(
-      () => setToasts((prev) => prev.filter((toast) => toast.id !== id)),
+  const addLocalToast = useCallback((toast: Toast) => {
+    setToasts((prev) => [...prev.filter((item) => item.id !== toast.id), toast]);
+    window.setTimeout(
+      () => setToasts((prev) => prev.filter((item) => item.id !== toast.id)),
       3200,
     );
-  };
+  }, []);
+  const showToast = useCallback(
+    (message: string, type: ToastType = "info") => {
+      const toast = createToast(message, type);
+      if (surface === "main") {
+        addLocalToast(toast);
+        return;
+      }
+      void routeExternalToast(toast).catch(() => {});
+    },
+    [addLocalToast, surface],
+  );
+
+  useEffect(() => {
+    if (surface !== "main" || !hasTauriRuntime()) return;
+    let unlisten: (() => void) | undefined;
+    void getCurrentWebviewWindow()
+      .listen<Toast>(IN_APP_TOAST_EVENT, (event) => addLocalToast(event.payload))
+      .then((cleanup) => {
+        unlisten = cleanup;
+      })
+      .catch(() => {});
+    return () => {
+      unlisten?.();
+    };
+  }, [addLocalToast, surface]);
+
   return (
     <ToastContext.Provider value={{ showToast }}>
       {children}
-      <div className="fixed bottom-[80px] md:bottom-5 right-5 z-[1000] flex flex-col gap-3">
-        {toasts.map((toast) => (
-          <div
-            key={toast.id}
-            className={`toast-in flex items-center gap-3 rounded-2xl border px-5 py-3.5 text-sm font-medium shadow-[0_15px_40px_rgba(0,0,0,0.5)] backdrop-blur-xl ${toast.type === "success" ? "border-emerald-500/30 bg-emerald-500/15 text-emerald-100" : toast.type === "error" ? "border-rose-500/30 bg-rose-500/15 text-rose-100" : "border-white/15 bg-white/10 text-white"}`}
-          >
-            {toast.type === "success" && (
-              <Icon name="checkCircle" size={18} className="text-emerald-400" />
-            )}
-            {toast.type === "error" && (
-              <Icon name="xCircle" size={18} className="text-rose-400" />
-            )}
-            {toast.type === "info" && (
-              <Icon name="zap" size={18} className="text-blue-300" />
-            )}
-            {toast.message}
-          </div>
-        ))}
-      </div>
+      {surface === "main" && (
+        <div className="fixed bottom-[80px] right-5 z-[1000] flex flex-col gap-3 md:bottom-5">
+          {toasts.map((toast) => (
+            <div
+              key={toast.id}
+              className={`toast-in flex max-w-[min(380px,calc(100vw-40px))] items-center gap-3 rounded-2xl border px-5 py-3.5 text-sm font-medium shadow-[0_15px_40px_rgba(0,0,0,0.5)] backdrop-blur-xl ${toast.type === "success" ? "border-emerald-500/30 bg-emerald-500/15 text-emerald-100" : toast.type === "error" ? "border-rose-500/30 bg-rose-500/15 text-rose-100" : "border-white/15 bg-white/10 text-white"}`}
+            >
+              {toast.type === "success" && (
+                <Icon name="checkCircle" size={18} className="shrink-0 text-emerald-400" />
+              )}
+              {toast.type === "error" && (
+                <Icon name="xCircle" size={18} className="shrink-0 text-rose-400" />
+              )}
+              {toast.type === "info" && (
+                <Icon name="zap" size={18} className="shrink-0 text-blue-300" />
+              )}
+              <span className="min-w-0 break-words leading-snug">{toast.message}</span>
+            </div>
+          ))}
+        </div>
+      )}
     </ToastContext.Provider>
   );
 }
 
 function ToastView({ toast }: { toast: Toast }) {
+  const accentColor =
+    toast.type === "success"
+      ? "#22c55e"
+      : toast.type === "error"
+        ? "#f43f5e"
+        : "#60a5fa";
+  const bg =
+    toast.type === "success"
+      ? "rgba(6,35,21,0.92)"
+      : toast.type === "error"
+        ? "rgba(38,9,17,0.92)"
+        : "rgba(15,17,23,0.92)";
   return (
     <div
-      className={`toast-in flex items-center gap-3 rounded-2xl border px-5 py-3.5 text-sm font-medium shadow-[0_15px_40px_rgba(0,0,0,0.5)] backdrop-blur-xl ${toast.type === "success" ? "border-emerald-500/30 bg-emerald-500/15 text-emerald-100" : toast.type === "error" ? "border-rose-500/30 bg-rose-500/15 text-rose-100" : "border-white/15 bg-white/10 text-white"}`}
+      className="toast-in flex min-h-[68px] w-full items-center gap-3 px-4 py-3 text-sm font-medium text-white backdrop-blur-2xl"
+      style={{
+        background: bg,
+        border: "1px solid rgba(255,255,255,0.1)",
+        borderLeft: `3px solid ${accentColor}`,
+        borderRadius: "14px",
+        boxShadow: "0 16px 44px rgba(0,0,0,0.52)",
+      }}
     >
       {toast.type === "success" && (
-        <Icon name="checkCircle" size={18} className="shrink-0 text-emerald-400" />
+        <Icon name="checkCircle" size={16} className="shrink-0 text-emerald-400" />
       )}
       {toast.type === "error" && (
-        <Icon name="xCircle" size={18} className="shrink-0 text-rose-400" />
+        <Icon name="xCircle" size={16} className="shrink-0 text-rose-400" />
       )}
       {toast.type === "info" && (
-        <Icon name="zap" size={18} className="shrink-0 text-blue-300" />
+        <Icon name="zap" size={16} className="shrink-0 text-blue-400" />
       )}
-      <span className="min-w-0 break-words">{toast.message}</span>
+      <span className="min-w-0 break-words leading-snug">{toast.message}</span>
     </div>
   );
 }
@@ -811,7 +960,11 @@ function ToastView({ toast }: { toast: Toast }) {
 function GlobalToastWindow() {
   const [toasts, setToasts] = useState<Toast[]>([]);
   const addToast = (toast: Toast) => {
-    setToasts((prev) => [...prev.filter((item) => item.id !== toast.id), toast]);
+    setToasts((prev) =>
+      [...prev.filter((item) => item.id !== toast.id), toast].slice(
+        -TOAST_MAX_VISIBLE,
+      ),
+    );
     window.setTimeout(
       () => setToasts((prev) => prev.filter((item) => item.id !== toast.id)),
       3600,
@@ -844,6 +997,13 @@ function GlobalToastWindow() {
   }, []);
 
   useEffect(() => {
+    if (!hasTauriRuntime() || toasts.length === 0) return;
+    void positionToastWindow(getCurrentWebviewWindow(), toasts.length).catch(
+      () => {},
+    );
+  }, [toasts.length]);
+
+  useEffect(() => {
     if (toasts.length > 0) return;
     const timer = window.setTimeout(() => {
       void hideCurrentWindow();
@@ -855,14 +1015,18 @@ function GlobalToastWindow() {
     <>
       <GlobalStyles />
       <style>{`
-        html, body, #root { background: transparent !important; overflow: hidden !important; }
+        html, body, #root {
+          background: transparent !important;
+          overflow: hidden !important;
+          width: 100% !important;
+          height: 100% !important;
+          min-height: 100% !important;
+        }
       `}</style>
-      <div className="pointer-events-none flex h-screen w-screen items-end justify-end bg-transparent p-3">
-        <div className="flex w-full flex-col gap-3">
-          {toasts.map((toast) => (
-            <ToastView key={toast.id} toast={toast} />
-          ))}
-        </div>
+      <div className="pointer-events-none flex h-full w-full flex-col justify-end gap-2.5 p-0">
+        {toasts.map((toast) => (
+          <ToastView key={toast.id} toast={toast} />
+        ))}
       </div>
     </>
   );
@@ -870,36 +1034,115 @@ function GlobalToastWindow() {
 
 function SystemOverlayWindow({ initialMode }: { initialMode: OverlayMode }) {
   const [mode, setMode] = useState<OverlayMode | null>(initialMode);
+  const [activationId, setActivationId] = useState("initial");
+  const inputRef = useRef<HTMLInputElement | null>(null);
+  // Time of last confirmed OS focus — used to ignore spurious blur events.
+  const lastFocusAt = useRef(Date.now());
+
+  const close = useCallback(() => {
+    setMode(null);
+    void destroyCurrentWindow();
+  }, []);
+
+  const handleBlur = useCallback(() => {
+    const heldFor = Date.now() - lastFocusAt.current;
+    if (heldFor < 180) return;
+    close();
+  }, [close]);
 
   useEffect(() => {
     if (!hasTauriRuntime()) return;
+    const win = getCurrentWebviewWindow();
+    const cleanups: Array<() => void> = [];
 
-    let unlisten: (() => void) | undefined;
-    void getCurrentWebviewWindow()
-      .listen<{ mode: OverlayMode }>("beavis-overlay-mode", (event) => {
-        if (event.payload?.mode) setMode(event.payload.mode);
+    // Receives mode updates and triggers focus + re-arms dismiss handlers.
+    void win
+      .listen<OverlayModePayload>("beavis-overlay-mode", (event) => {
+        const m = event.payload?.mode;
+        if (!m) return;
+        setMode(m);
+        setActivationId(event.payload.activationId || `${Date.now()}`);
+        lastFocusAt.current = Date.now();
       })
-      .then((cleanup) => {
-        unlisten = cleanup;
-      })
+      .then((u) => cleanups.push(u))
       .catch(() => {});
-    return () => {
-      unlisten?.();
-    };
-  }, []);
 
-  const close = () => {
-    setMode(null);
-    void hideCurrentWindow();
-  };
+    // Track when we actually have OS focus to guard against spurious blur.
+    void win
+      .listen("tauri://focus", () => {
+        lastFocusAt.current = Date.now();
+      })
+      .then((u) => cleanups.push(u))
+      .catch(() => {});
+
+    // Close when OS focus leaves
+    void win
+      .listen("tauri://blur", handleBlur)
+      .then((u) => cleanups.push(u))
+      .catch(() => {});
+
+    window.addEventListener("blur", handleBlur);
+    cleanups.push(() => window.removeEventListener("blur", handleBlur));
+
+    // Global ESC — works even when input is not focused.
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        close();
+      }
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    cleanups.push(() => document.removeEventListener("keydown", handleKeyDown));
+
+    return () => cleanups.forEach((fn) => fn());
+  }, [close, handleBlur]);
+
+  // Initial mode is applied directly on mount; focus handled in CommandOverlay effect.
+  useEffect(() => {
+    if (mode === "command") lastFocusAt.current = Date.now();
+  }, [mode]);
+
+  useEffect(() => {
+    if (mode !== "command" || !hasTauriRuntime()) return;
+    const win = getCurrentWebviewWindow();
+    const activateOverlayWindow = (forceInput = false) => {
+      void forceNativeWindowFocus(OVERLAY_WINDOW_LABEL);
+      void win.setFocusable(true).catch(() => {});
+      void win.setAlwaysOnTop(true).catch(() => {});
+      void win.setFocus().catch(() => {});
+      const input = inputRef.current;
+      if (!input) return;
+      if (forceInput) input.blur();
+      window.setTimeout(() => input.focus({ preventScroll: true }), 35);
+    };
+    activateOverlayWindow(true);
+    const timers = [80, 180, 360, 650].map((delay) =>
+      window.setTimeout(() => activateOverlayWindow(delay === 80), delay),
+    );
+    return () => {
+      timers.forEach((timer) => window.clearTimeout(timer));
+    };
+  }, [activationId, mode]);
 
   return (
-    <ToastHost>
+    <ToastHost surface="overlay">
       <GlobalStyles />
       <style>{`
-        html, body, #root { background: transparent !important; overflow: hidden !important; }
+        html, body, #root {
+          background: transparent !important;
+          overflow: hidden !important;
+          width: 100% !important;
+          height: 100% !important;
+          min-height: 100% !important;
+          border-radius: 0;
+        }
       `}</style>
-      <CommandOverlay isOpen={mode === "command"} onClose={close} />
+      <CommandOverlay
+        key={mode === "command" ? activationId : "command-overlay"}
+        isOpen={mode === "command"}
+        activationId={activationId}
+        onClose={close}
+        inputRef={inputRef}
+      />
       <VoiceOverlay isOpen={mode === "voice"} onClose={close} />
     </ToastHost>
   );
@@ -1378,16 +1621,17 @@ function HomePage({ openVoice }: { openVoice: () => void }) {
 
   const run = async (event?: React.FormEvent) => {
     event?.preventDefault();
-    if (!query.trim()) return;
+    const command = query.trim();
+    if (!command) return;
+    setQuery("");
     setIsExecuting(true);
     const res = await beavisCall("commands.run", {
-      text: query,
+      text: command,
       execute,
       source: "text",
     });
     setIsExecuting(false);
     if (res.ok) {
-      setQuery("");
       showToast(execute ? "Команда выполнена" : "ToolCall построен", "success");
     } else showToast(res.error || "Ошибка", "error");
   };
@@ -1491,6 +1735,36 @@ function buildAddAppChange(draft: AppData) {
   };
 }
 
+const PATH_QUOTE_PAIRS: Array<[string, string]> = [
+  ['"', '"'],
+  ["'", "'"],
+  ["`", "`"],
+  ["“", "”"],
+  ["«", "»"],
+];
+
+function stripEnclosingPathQuotes(value: string) {
+  let next = value.trim();
+  let changed = true;
+  while (changed && next.length >= 2) {
+    changed = false;
+    for (const [left, right] of PATH_QUOTE_PAIRS) {
+      if (next.startsWith(left) && next.endsWith(right)) {
+        next = next.slice(1, -1).trim();
+        changed = true;
+        break;
+      }
+    }
+  }
+  return next;
+}
+
+function getLocalPathValidationError(value: string) {
+  if (!value.trim()) return "Укажите путь к .exe";
+  if (!/\.exe$/i.test(value.trim())) return "Поддерживаются только .exe файлы";
+  return null;
+}
+
 function buildAppChanges(originalApps: AppData[], draftApps: AppData[]) {
   const changes: any[] = [];
   const originalById = new Map(originalApps.map((app) => [app.app_id, app]));
@@ -1548,6 +1822,10 @@ function AppModal({
   const [displayName, setDisplayName] = useState("");
   const [appId, setAppId] = useState("");
   const [path, setPath] = useState("");
+  const [pathValidation, setPathValidation] = useState<PathValidationState>({
+    status: "idle",
+    message: "",
+  });
   const [winAppId, setWinAppId] = useState("");
   const [speechForms, setSpeechForms] = useState<string[]>([]);
   const [newSlang, setNewSlang] = useState("");
@@ -1561,7 +1839,8 @@ function AppModal({
     if (!isOpen) return;
     setDisplayName(appToEdit?.display_name || "");
     setAppId(appToEdit?.app_id || "");
-    setPath(appToEdit?.path || "");
+    setPath(stripEnclosingPathQuotes(appToEdit?.path || ""));
+    setPathValidation({ status: "idle", message: "" });
     setWinAppId(appToEdit?.windows_app_id || "");
     setSpeechForms(appToEdit?.speech_forms || []);
     setNewSlang("");
@@ -1570,6 +1849,66 @@ function AppModal({
       (res) => res.ok && res.data && setWindowsApps(res.data),
     );
   }, [isOpen, appToEdit]);
+
+  useEffect(() => {
+    if (!isOpen || appToEdit || mode !== "path") {
+      setPathValidation({ status: "idle", message: "" });
+      return;
+    }
+
+    const normalizedPath = stripEnclosingPathQuotes(path);
+    if (normalizedPath !== path) {
+      setPath(normalizedPath);
+      return;
+    }
+
+    if (!normalizedPath) {
+      setPathValidation({ status: "idle", message: "" });
+      return;
+    }
+
+    const localError = getLocalPathValidationError(normalizedPath);
+    if (localError) {
+      setPathValidation({ status: "invalid", message: localError });
+      return;
+    }
+
+    let alive = true;
+    setPathValidation({ status: "checking", message: "Проверяю путь..." });
+    const timer = window.setTimeout(async () => {
+      const result = await beavisCall<AppPathValidation>("apps.validate_path", {
+        path: normalizedPath,
+      });
+      if (!alive) return;
+      if (result.ok && result.data) {
+        if (
+          result.data.normalized_path &&
+          result.data.normalized_path !== normalizedPath
+        ) {
+          setPath(result.data.normalized_path);
+          return;
+        }
+        setPathValidation(
+          result.data.valid
+            ? { status: "valid", message: "Файл найден" }
+            : {
+                status: "invalid",
+                message: result.data.error || "Путь не прошел проверку",
+              },
+        );
+        return;
+      }
+      setPathValidation({
+        status: "invalid",
+        message: result.error || "Не удалось проверить путь",
+      });
+    }, 220);
+
+    return () => {
+      alive = false;
+      window.clearTimeout(timer);
+    };
+  }, [isOpen, appToEdit, mode, path]);
 
   if (!isOpen) return null;
   const isEditing = Boolean(appToEdit);
@@ -1625,9 +1964,26 @@ function AppModal({
     }
   };
 
+  const handlePathChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setPath(stripEnclosingPathQuotes(event.target.value));
+  };
+
   const saveDraft = () => {
-    if (!isEditing && mode === "path" && !path.trim())
+    const normalizedPath = stripEnclosingPathQuotes(path);
+    if (!isEditing && mode === "path" && !normalizedPath)
       return showToast("Укажите путь к .exe", "error");
+    const localPathError = getLocalPathValidationError(normalizedPath);
+    if (!isEditing && mode === "path" && localPathError)
+      return showToast(localPathError, "error");
+    if (
+      !isEditing &&
+      mode === "path" &&
+      pathValidation.status !== "valid" &&
+      pathValidation.status !== "invalid"
+    )
+      return showToast("Подождите, проверяю путь", "info");
+    if (!isEditing && mode === "path" && pathValidation.status === "invalid")
+      return showToast(pathValidation.message || "Путь не прошел проверку", "error");
     if (!isEditing && mode === "windows" && !winAppId.trim())
       return showToast("Выберите Windows-приложение", "error");
     if (!displayName.trim() || !normalizedAppId)
@@ -1645,7 +2001,11 @@ function AppModal({
       speech_forms: cleanSpeechForms(speechForms),
       enabled: true,
       source: appToEdit?.source || "user",
-      path: isEditing ? appToEdit?.path : mode === "path" ? path : undefined,
+      path: isEditing
+        ? appToEdit?.path
+        : mode === "path"
+          ? normalizedPath
+          : undefined,
       windows_app_id: isEditing
         ? appToEdit?.windows_app_id
         : mode === "windows"
@@ -1659,7 +2019,7 @@ function AppModal({
       launch_target: isEditing
         ? appToEdit?.launch_target
         : mode === "path"
-          ? path
+          ? normalizedPath
           : undefined,
       target_path: appToEdit?.target_path,
       working_directory: appToEdit?.working_directory,
@@ -1667,6 +2027,11 @@ function AppModal({
     showToast("Изменение добавлено в черновик", "success");
     onClose();
   };
+
+  const pathSaveBlocked =
+    !isEditing &&
+    mode === "path" &&
+    (!path.trim() || pathValidation.status !== "valid");
 
   const filteredWinApps = windowsApps.filter((app) =>
     app.display_name.toLowerCase().includes(winSearch.toLowerCase()),
@@ -1724,11 +2089,41 @@ function AppModal({
                 />
                 <GlassInput
                   value={path}
-                  onChange={(e) => setPath(e.target.value)}
+                  onChange={handlePathChange}
                   placeholder="C:\\Program Files\\App\\app.exe"
-                  className="pl-10 font-mono"
+                  className={`pl-10 pr-10 font-mono ${
+                    pathValidation.status === "valid"
+                      ? "border-emerald-400/45"
+                      : pathValidation.status === "invalid"
+                        ? "border-red-400/55"
+                        : ""
+                  }`}
                 />
+                <div className="absolute right-3 top-1/2 flex -translate-y-1/2 items-center text-white/35">
+                  {pathValidation.status === "checking" && (
+                    <Spinner size={15} />
+                  )}
+                  {pathValidation.status === "valid" && (
+                    <Icon name="checkCircle" size={16} className="text-emerald-300" />
+                  )}
+                  {pathValidation.status === "invalid" && (
+                    <Icon name="xCircle" size={16} className="text-red-300" />
+                  )}
+                </div>
               </div>
+              {pathValidation.status !== "idle" && (
+                <div
+                  className={`mt-1.5 text-xs ${
+                    pathValidation.status === "valid"
+                      ? "text-emerald-300/80"
+                      : pathValidation.status === "checking"
+                        ? "text-white/45"
+                        : "text-red-300/85"
+                  }`}
+                >
+                  {pathValidation.message}
+                </div>
+              )}
             </Field>
           ) : (
             <Field label="Windows приложение">
@@ -1834,6 +2229,7 @@ function AppModal({
           </button>
           <button
             onClick={saveDraft}
+            disabled={pathSaveBlocked}
             className={`${THEME.primaryBtn} flex items-center gap-2`}
           >
             <Icon name="check" size={16} />В черновик
@@ -1943,9 +2339,12 @@ function AppsPage() {
   const applyDraft = async () => {
     if (!pendingChanges.length) return;
     setApplying(true);
+    // Pass only `changes` — no desired_apps.
+    // When desired_apps is present the Python API calls sync_visible_user_apps
+    // which replaces the whole catalog and ignores the changes array entirely,
+    // so update_speech_forms operations are silently discarded.
     const res = await beavisCall("apps.apply_changes", {
       changes: pendingChanges,
-      desired_apps: draftApps.map(buildAddAppChange),
       retrain: false,
     });
     if (res.ok) {
@@ -2400,7 +2799,14 @@ function SettingsPage() {
       beavisCall<MicrophoneOption[]>("voice.list_microphones"),
     ]).then(([settingsRes, _healthRes, micRes]) => {
       if (!mounted) return;
-      if (settingsRes.ok && settingsRes.data) setSettings(settingsRes.data);
+      if (settingsRes.ok && settingsRes.data) {
+        setSettings(settingsRes.data);
+      } else {
+        showToast(
+          "Не удалось загрузить настройки — используются значения по умолчанию",
+          "error",
+        );
+      }
       if (micRes.ok && micRes.data) setMicrophones(micRes.data);
       setLoading(false);
     });
@@ -2846,21 +3252,48 @@ function SettingsPage() {
 
 function CommandOverlay({
   isOpen,
+  activationId = "initial",
   onClose,
+  inputRef: externalRef,
 }: {
   isOpen: boolean;
+  activationId?: string;
   onClose: () => void;
+  inputRef?: React.RefObject<HTMLInputElement | null>;
 }) {
   const [query, setQuery] = useState("");
-  const inputRef = useRef<HTMLInputElement>(null);
+  const internalRef = useRef<HTMLInputElement>(null);
+  // Use external ref when provided (SystemOverlayWindow), else own ref.
+  const inputRef = (externalRef ?? internalRef) as React.RefObject<HTMLInputElement>;
   const { showToast } = useToast();
+
   useEffect(() => {
-    if (isOpen) setTimeout(() => inputRef.current?.focus(), 50);
-  }, [isOpen]);
+    if (!isOpen) return;
+    setQuery("");
+    const focusInput = (force = false) => {
+      const input = inputRef.current;
+      if (!input) return;
+      if (force) input.blur();
+      input.focus({ preventScroll: true });
+    };
+    const frame = window.requestAnimationFrame(() => focusInput(true));
+    const timers = [0, 60, 140, 260, 420, 700].map((delay) =>
+      window.setTimeout(() => focusInput(delay === 0), delay),
+    );
+    const interval = window.setInterval(() => {
+      focusInput();
+    }, 120);
+    return () => {
+      window.cancelAnimationFrame(frame);
+      timers.forEach((timer) => window.clearTimeout(timer));
+      window.clearInterval(interval);
+    };
+  }, [activationId, isOpen, inputRef]);
+
   const submit = async (event: React.FormEvent) => {
     event.preventDefault();
     if (!query.trim()) return;
-    const command = query;
+    const command = query.trim();
     setQuery("");
     onClose();
     const res = await beavisCall("commands.run", {
@@ -2872,35 +3305,43 @@ function CommandOverlay({
       ? showToast(`Выполнено: ${command}`, "success")
       : showToast(res.error || "Ошибка", "error");
   };
+
   if (!isOpen) return null;
   return (
     <div
-      className="fixed inset-0 z-[500] flex items-center justify-center bg-transparent p-3 transition-opacity page-enter"
-      onClick={onClose}
+      className="fixed inset-0 z-[500] flex items-center justify-center"
+      onPointerDown={onClose}
     >
       <form
         onSubmit={submit}
-        onClick={(e) => e.stopPropagation()}
-        className="relative w-full"
+        onPointerDown={(e) => e.stopPropagation()}
+        className="flex h-full w-full items-center rounded-[20px] border border-white/[0.12] bg-[#09090d]/90 px-4 shadow-[0_20px_60px_rgba(0,0,0,0.48),0_0_0_1px_rgba(255,255,255,0.06)] backdrop-blur-2xl"
       >
-        <div className="relative flex items-center rounded-[28px] border border-white/[0.18] bg-black/55 p-2 shadow-[0_24px_70px_rgba(0,0,0,0.55),inset_0_1px_1px_rgba(255,255,255,.14)] backdrop-blur-2xl transition-all focus-within:border-white/35 focus-within:bg-black/65">
-          <div className="pl-4 pr-1 text-white/55">
-            <Icon name="zap" size={22} />
-          </div>
-          <input
-            ref={inputRef}
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            onKeyDown={(e) => e.key === "Escape" && onClose()}
-            placeholder="Что нужно сделать?"
-            className="min-w-0 flex-1 border-none bg-transparent px-3 py-4 text-xl font-light text-white outline-none placeholder:text-white/30"
-          />
-          <div className="hidden pr-3 sm:block">
-            <span className="rounded-lg border border-white/10 bg-white/8 px-2 py-1 text-[10px] font-mono text-white/35">
-              ESC
-            </span>
-          </div>
+        <div style={{ color: "rgba(255,255,255,0.45)" }} className="shrink-0">
+          <Icon name="zap" size={20} />
         </div>
+        <input
+          ref={inputRef}
+          autoFocus
+          tabIndex={0}
+          onBlur={() => {
+            if (!isOpen) return;
+            window.setTimeout(() => {
+              inputRef.current?.focus({ preventScroll: true });
+            }, 0);
+          }}
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Escape") onClose();
+          }}
+          placeholder="Что нужно сделать?"
+          className="min-w-0 flex-1 border-none bg-transparent px-3 py-0 text-[19px] font-light text-white outline-none placeholder:text-white/30"
+          style={{ lineHeight: "1" }}
+        />
+        <span className="shrink-0 rounded-md border border-white/10 px-2 py-0.5 text-[10px] font-mono text-white/30 mr-1">
+          ESC
+        </span>
       </form>
     </div>
   );
@@ -2961,62 +3402,50 @@ function VoiceOverlay({
   if (!isOpen) return null;
   return (
     <div
-      className="fixed inset-0 z-[500] flex items-center justify-center bg-transparent p-3 transition-opacity page-enter"
-      onClick={onClose}
+      className="fixed inset-0 z-[500] flex items-center justify-center"
+      onPointerDown={onClose}
     >
       <div
-        className="flex w-full flex-col items-center gap-4 rounded-[30px] border border-white/[0.16] bg-black/55 px-6 py-5 shadow-[0_24px_70px_rgba(0,0,0,0.55),inset_0_1px_1px_rgba(255,255,255,.14)] backdrop-blur-2xl"
-        onClick={(e) => e.stopPropagation()}
+        className="flex h-full w-full flex-col items-center justify-center gap-5 rounded-[22px] border border-white/[0.1] bg-[#09090d]/90 shadow-[0_24px_64px_rgba(0,0,0,0.5),0_0_0_1px_rgba(255,255,255,0.06)] backdrop-blur-2xl"
+        onPointerDown={(e) => e.stopPropagation()}
       >
-        <div className="relative flex h-24 w-24 items-center justify-center">
-          {status === "listening" && (
-            <>
-              <div className="absolute inset-0 animate-[ping_2s_cubic-bezier(0,0,0.2,1)_infinite] rounded-full border border-white/20 opacity-100" />
-              <div className="absolute inset-4 animate-[ping_2s_cubic-bezier(0,0,0.2,1)_infinite_0.5s] rounded-full bg-white/5 blur-xl" />
-            </>
-          )}
-          <div
-            className={`relative flex h-16 w-16 items-center justify-center rounded-full border border-white/45 bg-white/85 text-black shadow-[0_0_38px_rgba(255,255,255,.45)] backdrop-blur-md transition-all duration-500 ${status === "listening" ? "scale-110 shadow-[0_0_60px_rgba(255,255,255,.65)]" : ""}`}
-          >
-            {status === "listening" ? (
-              <div className="mt-1 flex h-8 items-center justify-center gap-[3px]">
-                {[0, 0.2, 0.4, 0.1, 0.5].map((delay, i) => (
-                  <div
-                    key={i}
-                    className="audio-bar"
-                    style={{ animationDelay: `${delay}s` }}
-                  />
-                ))}
-              </div>
-            ) : status === "processing" ? (
-              <Spinner size={30} />
-            ) : (
-              <Icon name="mic" size={30} />
-            )}
+      {/* Mic button — clean white circle, subtle glow, no rings */}
+      <div
+        className={`flex h-[62px] w-[62px] items-center justify-center rounded-full bg-white transition-all duration-400 ${
+          status === "listening"
+            ? "scale-110 shadow-[0_0_32px_10px_rgba(255,255,255,0.35)]"
+            : "shadow-[0_0_16px_4px_rgba(255,255,255,0.15)]"
+        }`}
+      >
+        {status === "listening" ? (
+          <div className="flex h-6 items-end justify-center gap-[3px]">
+            {[0, 0.12, 0.24, 0.08, 0.36].map((delay, i) => (
+              <div key={i} className="audio-bar" style={{ animationDelay: `${delay}s` }} />
+            ))}
           </div>
-        </div>
-        <div className="text-center">
-          <h3 className="mb-2 text-lg font-medium text-white">
-            {status === "listening"
-              ? "Слушаю..."
-              : status === "processing"
-                ? "Выполняю..."
-                : "Готов"}
-          </h3>
-          <p className="min-h-[24px] max-w-[280px] text-sm font-light text-white/45">
-            {status === "processing"
-              ? displayedTranscript
-              : status === "listening"
-                ? "Говорите команду"
-                : ""}
-          </p>
-        </div>
-        <button
-          onClick={onClose}
-          className="rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs text-white/45 transition-colors hover:bg-white/10 hover:text-white active:scale-95"
-        >
-          Отмена
-        </button>
+        ) : status === "processing" ? (
+          <Spinner size={24} />
+        ) : (
+          <Icon name="mic" size={26} className="text-black" />
+        )}
+      </div>
+
+      {/* Status */}
+      <div className="text-center">
+        <p className="text-[16px] font-semibold tracking-tight text-white">
+          {status === "listening" ? "Слушаю..." : status === "processing" ? "Выполняю..." : "Готов"}
+        </p>
+        <p className="mt-1 max-w-[240px] truncate text-[12px] text-white/40">
+          {status === "processing" ? displayedTranscript : status === "listening" ? "Говорите команду" : ""}
+        </p>
+      </div>
+
+      <button
+        onClick={onClose}
+        className="rounded-full border border-white/10 px-4 py-1 text-[11px] text-white/35 transition hover:border-white/25 hover:text-white/65"
+      >
+        Отмена
+      </button>
       </div>
     </div>
   );
@@ -3033,10 +3462,34 @@ function AppShell() {
     cloneJson(defaultSettings),
   );
   const openCommandOverlay = () => {
-    void openGlobalOverlay("command").catch(() => setCommandOverlayOpen(true));
+    if (!hasTauriRuntime()) {
+      setCommandOverlayOpen(true);
+      return;
+    }
+    void openGlobalOverlay("command")
+      .then(() => setCommandOverlayOpen(false))
+      .catch((error) => {
+        console.error("[beavis] openGlobalOverlay(command) failed:", error);
+        setCommandOverlayOpen(true);
+        void routeExternalToast(
+          createToast("Не удалось открыть поле ввода по хоткею", "error"),
+        ).catch(() => {});
+      });
   };
   const openVoiceOverlay = () => {
-    void openGlobalOverlay("voice").catch(() => setVoiceOverlayOpen(true));
+    if (!hasTauriRuntime()) {
+      setVoiceOverlayOpen(true);
+      return;
+    }
+    void openGlobalOverlay("voice")
+      .then(() => setVoiceOverlayOpen(false))
+      .catch((error) => {
+        console.error("[beavis] openGlobalOverlay(voice) failed:", error);
+        setVoiceOverlayOpen(true);
+        void routeExternalToast(
+          createToast("Не удалось открыть голосовой ввод по хоткею", "error"),
+        ).catch(() => {});
+      });
   };
   useEffect(() => {
     runSmokeTests().catch(console.error);
@@ -3084,6 +3537,12 @@ function AppShell() {
     shellSettings.voice.hotkey_sequence,
     shellSettings.voice.mode,
   ]);
+  // Keep latest overlay openers in refs so hotkey callbacks never go stale.
+  const openCommandOverlayRef = useRef(openCommandOverlay);
+  const openVoiceOverlayRef = useRef(openVoiceOverlay);
+  useEffect(() => { openCommandOverlayRef.current = openCommandOverlay; });
+  useEffect(() => { openVoiceOverlayRef.current = openVoiceOverlay; });
+
   useEffect(() => {
     const registered: string[] = [];
     let cancelled = false;
@@ -3093,7 +3552,7 @@ function AppShell() {
       if (shellSettings.text_hotkey_enabled && shellSettings.text_hotkey_sequence) {
         shortcuts.push({
           key: normalizeHotkeyForTauri(shellSettings.text_hotkey_sequence),
-          action: openCommandOverlay,
+          action: () => openCommandOverlayRef.current(),
         });
       }
       if (
@@ -3103,7 +3562,7 @@ function AppShell() {
       ) {
         shortcuts.push({
           key: normalizeHotkeyForTauri(shellSettings.voice.hotkey_sequence),
-          action: openVoiceOverlay,
+          action: () => openVoiceOverlayRef.current(),
         });
       }
 
@@ -3115,6 +3574,7 @@ function AppShell() {
             if (!cancelled && event.state === "Pressed") item.action();
           });
           registered.push(item.key);
+          console.log("[beavis] registered global shortcut:", item.key);
         } catch (error) {
           console.warn("Failed to register global shortcut", item.key, error);
         }
@@ -3281,14 +3741,19 @@ function AppShell() {
           ))}
         </nav>
 
-        <CommandOverlay
-          isOpen={isCommandOverlayOpen}
-          onClose={() => setCommandOverlayOpen(false)}
-        />
-        <VoiceOverlay
-          isOpen={isVoiceOverlayOpen}
-          onClose={() => setVoiceOverlayOpen(false)}
-        />
+        {/* In-app fallback for browser preview and failed global overlay creation. */}
+        {(!hasTauriRuntime() || isCommandOverlayOpen || isVoiceOverlayOpen) && (
+          <>
+            <CommandOverlay
+              isOpen={isCommandOverlayOpen}
+              onClose={() => setCommandOverlayOpen(false)}
+            />
+            <VoiceOverlay
+              isOpen={isVoiceOverlayOpen}
+              onClose={() => setVoiceOverlayOpen(false)}
+            />
+          </>
+        )}
       </div>
     </ToastHost>
   );
