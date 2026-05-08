@@ -64,6 +64,11 @@ def read_index(index_path: Path) -> dict:
     return json.loads(index_path.read_text(encoding="utf-8"))
 
 
+def catalog_forms(catalog: dict, app_id: str) -> list[str]:
+    forms = catalog.get(app_id, [])
+    return forms if isinstance(forms, list) else []
+
+
 def main() -> int:
     with tempfile.TemporaryDirectory() as temp:
         root = Path(temp)
@@ -197,7 +202,7 @@ def main() -> int:
         checks.update({
             "builtin_update_result_app_id": builtin_update.app.app_id == "notepad",
             "builtin_update_in_open_dataset": "my notes"
-            in open_catalog["notepad"]["surface_forms"],
+            in catalog_forms(open_catalog, "notepad"),
             "builtin_update_in_skill_dataset": "my notes" in skill_catalog["notepad"],
         })
 
@@ -277,9 +282,9 @@ def main() -> int:
             "batch_replaces_disabled_builtin_id": batch_service.get_app("edge") is not None
             and batch_service.get_app("edge").source == "user",
             "batch_replacement_in_dataset": "custom edge"
-            in batch_open_catalog["edge"]["surface_forms"],
+            in catalog_forms(batch_open_catalog, "edge"),
             "batch_builtin_update_in_dataset": "my notepad"
-            in batch_open_catalog["notepad"]["surface_forms"],
+            in catalog_forms(batch_open_catalog, "notepad"),
         })
 
         conflict_catalog_path = root / "conflict_catalog.json"

@@ -35,6 +35,22 @@ class CommandsApi:
         except Exception as error:
             return fail(error, code="COMMAND_API_ERROR")
 
+    def build_decision(
+        self,
+        text: str,
+        source: str = "text",
+        meta: dict[str, Any] | None = None,
+    ) -> dict[str, Any]:
+        try:
+            decision = self.pipeline.build(
+                text,
+                source=source,
+                meta=meta,
+            )
+            return ok(decision.to_dict())
+        except Exception as error:
+            return fail(error, code="COMMAND_API_ERROR")
+
     def run(
         self,
         text: str,

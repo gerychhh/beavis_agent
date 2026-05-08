@@ -61,6 +61,7 @@ class BeavisApi:
                 "methods": [
                     "system.health",
                     "commands.run",
+                    "commands.build_decision",
                     "commands.build_tool_call",
                     "commands.reload",
                     "apps.list_windows_apps",

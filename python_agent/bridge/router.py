@@ -21,6 +21,8 @@ class BridgeRouter:
 
             if method == "commands.run":
                 return self.api.commands.run(**params)
+            if method == "commands.build_decision":
+                return self.api.commands.build_decision(**params)
             if method == "commands.build_tool_call":
                 return self.api.commands.build_tool_call(**params)
             if method == "commands.reload":
@@ -80,7 +82,7 @@ class BridgeRouter:
         error: Exception,
         code: str,
     ) -> None:
-        if method not in {"commands.run", "commands.build_tool_call"}:
+        if method not in {"commands.run", "commands.build_decision", "commands.build_tool_call"}:
             return
         try:
             self.logger.log_command_error(

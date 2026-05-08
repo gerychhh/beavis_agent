@@ -165,6 +165,9 @@ function Invoke-Test {
     Write-Step "Compiling Python sources"
     Invoke-RepoCommand { python -m compileall python_agent }
 
+    Write-Step "Testing golden command pipeline"
+    Invoke-RepoCommand { python python_agent\training\test_golden_commands.py }
+
     Write-Step "Testing skill classifier"
     Invoke-RepoCommand { python python_agent\training\test_skill_classifier.py }
 
@@ -218,9 +221,9 @@ function Invoke-Smoke {
     Write-Step "Pipeline smoke tests without execution"
     Invoke-RepoCommand {
         $commands = @(
-            "0LfQsNC/0YPRgdGC0Lgg0LHQu9C+0LrQvdC+0YI=",
-            "0YHQstC10YDQvdC4INC+0LrQvdC+",
-            "0YHQtNC10LvQsNC5INC30LLRg9C6INC90LAgNTA="
+            "0L7RgtC60YDQvtC5INGF0YDQvtC8",
+            "0YHQstC10YDQvdC4INGC0LXQu9C10LPRgNCw0Lw=",
+            "YmF2aXMg0YHQtNC10LvQsNC5INGB0L/RgNCw0LLQviBjb2RleA=="
         ) | ForEach-Object {
             [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($_))
         }
