@@ -525,6 +525,20 @@ function normalizeHotkeyForTauri(value: string) {
     .join("+");
 }
 
+function hotkeyVariantsForTauri(value: string) {
+  const normalized = normalizeHotkeyForTauri(value);
+  if (!normalized) return [];
+
+  return Array.from(
+    new Set([
+      normalized,
+      normalized.replace(/\bCommandOrControl\b/g, "CmdOrControl"),
+      normalized.replace(/\bCommandOrControl\b/g, "Ctrl"),
+      normalized.replace(/\bCmdOrControl\b/g, "Ctrl"),
+    ]),
+  ).filter(Boolean);
+}
+
 function formatKeyboardShortcut(event: React.KeyboardEvent<HTMLInputElement>) {
   const key = event.key;
   if (key === "Escape" || key === "Backspace" || key === "Delete") return "";
@@ -3507,7 +3521,7 @@ function AppShell() {
       const pressed = normalizeHotkeyForTauri(formatKeyboardShortcut(event as any));
       if (
         shellSettings.text_hotkey_enabled &&
-        pressed === normalizeHotkeyForTauri(shellSettings.text_hotkey_sequence)
+        hotkeyVariantsForTauri(shellSettings.text_hotkey_sequence).includes(pressed)
       ) {
         event.preventDefault();
         openCommandOverlay();
@@ -3515,7 +3529,7 @@ function AppShell() {
       if (
         shellSettings.voice.hotkey_enabled &&
         shellSettings.voice.mode !== "off" &&
-        pressed === normalizeHotkeyForTauri(shellSettings.voice.hotkey_sequence)
+        hotkeyVariantsForTauri(shellSettings.voice.hotkey_sequence).includes(pressed)
       ) {
         event.preventDefault();
         openVoiceOverlay();
@@ -3548,10 +3562,11 @@ function AppShell() {
     let cancelled = false;
     const bind = async () => {
       if (!hasTauriRuntime()) return;
-      const shortcuts: { key: string; action: () => void }[] = [];
+      const shortcuts: { label: string; keys: string[]; action: () => void }[] = [];
       if (shellSettings.text_hotkey_enabled && shellSettings.text_hotkey_sequence) {
         shortcuts.push({
-          key: normalizeHotkeyForTauri(shellSettings.text_hotkey_sequence),
+          label: "text",
+          keys: hotkeyVariantsForTauri(shellSettings.text_hotkey_sequence),
           action: () => openCommandOverlayRef.current(),
         });
       }
@@ -3561,22 +3576,36 @@ function AppShell() {
         shellSettings.voice.hotkey_sequence
       ) {
         shortcuts.push({
-          key: normalizeHotkeyForTauri(shellSettings.voice.hotkey_sequence),
+          label: "voice",
+          keys: hotkeyVariantsForTauri(shellSettings.voice.hotkey_sequence),
           action: () => openVoiceOverlayRef.current(),
         });
       }
 
       for (const item of shortcuts) {
-        if (!item.key || registered.includes(item.key)) continue;
-        try {
-          if (await isRegistered(item.key)) await unregister(item.key);
-          await register(item.key, (event) => {
-            if (!cancelled && event.state === "Pressed") item.action();
-          });
-          registered.push(item.key);
-          console.log("[beavis] registered global shortcut:", item.key);
-        } catch (error) {
-          console.warn("Failed to register global shortcut", item.key, error);
+        let bound = false;
+        for (const key of item.keys) {
+          if (!key || registered.includes(key)) continue;
+          try {
+            try {
+              if (await isRegistered(key)) await unregister(key);
+            } catch {
+              await unregister(key).catch(() => {});
+            }
+
+            await register(key, (event) => {
+              if (!cancelled && event.state === "Pressed") item.action();
+            });
+            registered.push(key);
+            bound = true;
+            console.log("[beavis] registered global shortcut:", item.label, key);
+            break;
+          } catch (error) {
+            console.warn("Failed to register global shortcut variant", item.label, key, error);
+          }
+        }
+        if (!bound) {
+          console.warn("Failed to register global shortcut", item.label, item.keys);
         }
       }
     };
