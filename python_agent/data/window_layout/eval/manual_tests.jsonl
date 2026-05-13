@@ -1,240 +1,240 @@
-{"text": "bavis beavis dev над дискорд плиз", "expected": {"layout": "split_2_horizontal", "targets": ["beavis_dev", "discord"]}}
-{"text": "bavis blender 5.0 сверху быстро", "expected": {"layout": "top_half", "targets": ["blender_5_0"]}}
-{"text": "bavis chrome тупит", "expected": {"missing": ["layout"]}}
-{"text": "bavis dev справа", "expected": {"layout": "right_half", "targets": ["beavis_dev"]}}
-{"text": "bavis discord сверху щас", "expected": {"layout": "top_half", "targets": ["discord"]}}
-{"text": "bavis в центр это у меня", "expected": {"layout": "center", "targets": ["current"]}}
-{"text": "bavis восстанови beavis почему", "expected": {"missing": ["layout"]}}
-{"text": "bavis не трогай codex", "expected": {"missing": ["layout"]}}
-{"text": "bavis отправь его по центру щас", "expected": {"layout": "center", "targets": ["current"]}}
-{"text": "bavis поставь discord слева а ru.yandex.desktop справа быстро", "expected": {"layout": "split_2_vertical", "targets": ["discord", "yandeks_muzyka"]}}
-{"text": "bavis поставь брузер слева а yandeks muzyka справа щас", "expected": {"layout": "split_2_vertical", "targets": ["google_chrome", "yandeks_muzyka"]}}
-{"text": "bavis поставь сверху его", "expected": {"layout": "top_half", "targets": ["current"]}}
-{"text": "bavis поставь это окно fullscreen пожалуйста", "expected": {"layout": "fullscreen", "targets": ["current"]}}
-{"text": "bavis разверни blender и хром пополам щас", "expected": {"layout": "split_2_vertical", "targets": ["blender_5_0", "google_chrome"]}}
-{"text": "bavis размести yandexmusic blender chrome телега 2 на 2 у меня", "expected": {"layout": "grid_2x2", "targets": ["yandeks_muzyka", "blender_5_0", "google_chrome", "telegram"]}}
-{"text": "bavis сделай посередине com.squirrel.discord плиз", "expected": {"layout": "center", "targets": ["discord"]}}
-{"text": "bavis сделай справо codex", "expected": {"layout": "right_half", "targets": ["codex"]}}
-{"text": "bavis справа активное окно на экране", "expected": {"layout": "right_half", "targets": ["current"]}}
-{"text": "bavis справа не видно", "expected": {"missing": ["layout"]}}
-{"text": "bavis текущее на максимум экрана пожалуйста", "expected": {"layout": "fullscreen", "targets": ["current"]}}
-{"text": "bavis текущее сверху щас", "expected": {"layout": "top_half", "targets": ["current"]}}
-{"text": "beaavis beavis dev на в центр плиз", "expected": {"layout": "center", "targets": ["beavis_dev"]}}
-{"text": "beaavis beavis и ru.yandex.desktop палавину плиз", "expected": {"layout": "split_2_vertical", "targets": ["beavis_dev", "yandeks_muzyka"]}}
-{"text": "beaavis blender-launcher слева красиво", "expected": {"missing": ["layout"]}}
-{"text": "beaavis dev снизу мелькает", "expected": {"missing": ["layout"]}}
-{"text": "beaavis discord над openai щас", "expected": {"layout": "split_2_horizontal", "targets": ["discord", "codex"]}}
-{"text": "beaavis в центр", "expected": {"layout": "center", "targets": ["beavis_dev"]}}
-{"text": "beaavis кодекс над хром плиз", "expected": {"layout": "split_2_horizontal", "targets": ["codex", "google_chrome"]}}
-{"text": "beaavis на низ активное окно давай", "expected": {"layout": "bottom_half", "targets": ["current"]}}
-{"text": "beaavis не работает блин", "expected": {"missing": ["layout"]}}
-{"text": "beaavis окно music мешает", "expected": {"missing": ["layout"]}}
-{"text": "beaavis окно мьюзик странное", "expected": {"missing": ["layout"]}}
-{"text": "beaavis перекинь на низ это давай", "expected": {"layout": "bottom_half", "targets": ["current"]}}
-{"text": "beaavis перемести в правую часть брузер плиз", "expected": {"layout": "right_half", "targets": ["google_chrome"]}}
-{"text": "beaavis перемести окно центром быстро", "expected": {"layout": "center", "targets": ["current"]}}
-{"text": "beaavis сделай chrome на весь экран плиз", "expected": {"layout": "fullscreen", "targets": ["google_chrome"]}}
-{"text": "beaavis сделай окно fullscreen на экране", "expected": {"layout": "fullscreen", "targets": ["current"]}}
-{"text": "beaavis снизу", "expected": {"layout": "bottom_half", "targets": ["beavis_dev"]}}
-{"text": "beaavis снизу com.squirrel.discord щас", "expected": {"layout": "bottom_half", "targets": ["discord"]}}
-{"text": "beaavis снизу брузер быстро", "expected": {"layout": "bottom_half", "targets": ["google_chrome"]}}
-{"text": "beaavis спрва текущее окно у меня", "expected": {"layout": "right_half", "targets": ["current"]}}
-{"text": "beaavis текущее вправо щас", "expected": {"layout": "right_half", "targets": ["current"]}}
-{"text": "beaavis текущее окно fullscreen", "expected": {"layout": "fullscreen", "targets": ["current"]}}
-{"text": "beaavis центром его щас", "expected": {"layout": "center", "targets": ["current"]}}
-{"text": "beaavis что такое хром", "expected": {"missing": ["layout"]}}
-{"text": "beaavis это окно центром давай", "expected": {"layout": "center", "targets": ["current"]}}
-{"text": "beaavis это спрва давай", "expected": {"layout": "right_half", "targets": ["current"]}}
-{"text": "beais dev не работает", "expected": {"missing": ["layout"]}}
-{"text": "beais dev открыт уже", "expected": {"missing": ["layout"]}}
-{"text": "beais yandeks muzyka сверху телега снизу давай", "expected": {"layout": "split_2_horizontal", "targets": ["yandeks_muzyka", "telegram"]}}
-{"text": "beais дис и codex друг под другом плиз", "expected": {"layout": "split_2_horizontal", "targets": ["discord", "codex"]}}
-{"text": "beais закинь com.squirrel.discord слева нормально", "expected": {"layout": "left_half", "targets": ["discord"]}}
-{"text": "beais как пользоваться discord", "expected": {"missing": ["layout"]}}
-{"text": "beais кодекс прислал сообщение почему", "expected": {"missing": ["layout"]}}
-{"text": "beais лагает", "expected": {"missing": ["layout"]}}
-{"text": "beais отправь слево текущее окно щас", "expected": {"layout": "left_half", "targets": ["current"]}}
-{"text": "beais перекинь вниз blender 5.0 быстро", "expected": {"layout": "bottom_half", "targets": ["blender_5_0"]}}
-{"text": "beais перекинь посередине chrome", "expected": {"layout": "center", "targets": ["google_chrome"]}}
-{"text": "beais перемести с низу com.squirrel.discord", "expected": {"layout": "bottom_half", "targets": ["discord"]}}
-{"text": "beais по середине beavis dev нормально", "expected": {"layout": "center", "targets": ["beavis_dev"]}}
-{"text": "beais поставь по середине это на экране", "expected": {"layout": "center", "targets": ["current"]}}
-{"text": "beais разверни yandexmusic и кодекс пополам щас", "expected": {"layout": "split_2_vertical", "targets": ["yandeks_muzyka", "codex"]}}
-{"text": "beais раздели экран между chrome и дис щас", "expected": {"layout": "split_2_vertical", "targets": ["google_chrome", "discord"]}}
-{"text": "beais раздели экран между discord и google chrome нормально", "expected": {"layout": "split_2_vertical", "targets": ["discord", "google_chrome"]}}
-{"text": "beais разложи com.squirrel.discord мьюзик брузер и beavis плиткой у меня", "expected": {"layout": "grid_2x2", "targets": ["discord", "yandeks_muzyka", "google_chrome", "beavis_dev"]}}
-{"text": "beais размести на верх его пожалуйста", "expected": {"layout": "top_half", "targets": ["current"]}}
-{"text": "beais сверху активное окно", "expected": {"layout": "top_half", "targets": ["current"]}}
-{"text": "beais сделай телеграм и openai рядом на экране", "expected": {"layout": "split_2_vertical", "targets": ["telegram", "codex"]}}
-{"text": "beaviis com.squirrel.discord слева beavis справа давай", "expected": {"layout": "split_2_vertical", "targets": ["discord", "beavis_dev"]}}
-{"text": "beaviis dev сверху", "expected": {"layout": "top_half", "targets": ["beavis_dev"]}}
-{"text": "beaviis dev снизу", "expected": {"layout": "bottom_half", "targets": ["beavis_dev"]}}
-{"text": "beaviis dev справо не видно", "expected": {"missing": ["layout"]}}
-{"text": "beaviis telegram и music палавину плиз", "expected": {"layout": "split_2_vertical", "targets": ["telegram", "yandeks_muzyka"]}}
-{"text": "beaviis yandexmusic на верх нормально", "expected": {"layout": "top_half", "targets": ["yandeks_muzyka"]}}
-{"text": "beaviis брузер завис", "expected": {"missing": ["layout"]}}
-{"text": "beaviis вниз дискорд плиз", "expected": {"layout": "bottom_half", "targets": ["discord"]}}
-{"text": "beaviis вниз мьюзик плиз", "expected": {"layout": "bottom_half", "targets": ["yandeks_muzyka"]}}
-{"text": "beaviis вправо текущее нормально", "expected": {"layout": "right_half", "targets": ["current"]}}
-{"text": "beaviis дискорд потом телеграм по половинам давай", "expected": {"layout": "split_2_vertical", "targets": ["discord", "telegram"]}}
-{"text": "beaviis его сделай fullscreen пожалуйста", "expected": {"layout": "fullscreen", "targets": ["current"]}}
+{"text": "bavis blender 5 0 над вскод плиз", "expected": {"layout": "split_2_horizontal", "targets": ["blender_5_0", "visual_studio_code"]}}
+{"text": "bavis com.squirrel.discord с низу у меня", "expected": {"layout": "bottom_half", "targets": ["discord"]}}
+{"text": "bavis dev завис почему", "expected": {"missing": ["layout"]}}
+{"text": "bavis dev тупит", "expected": {"missing": ["layout"]}}
+{"text": "bavis google chrome по центру пожалуйста", "expected": {"layout": "center", "targets": ["google_chrome"]}}
+{"text": "bavis microsoft на с верху нормально", "expected": {"layout": "top_half", "targets": ["visual_studio_code"]}}
+{"text": "bavis ru.yandex.desktop тупит", "expected": {"missing": ["layout"]}}
+{"text": "bavis брузер слево нормально", "expected": {"layout": "left_half", "targets": ["google_chrome"]}}
+{"text": "bavis вижла потом блендер по полам нормально", "expected": {"layout": "split_2_vertical", "targets": ["visual_studio_code", "blender_5_0"]}}
+{"text": "bavis восстанови blender-launcher почему", "expected": {"missing": ["layout"]}}
+{"text": "bavis вправо окно быстро", "expected": {"layout": "right_half", "targets": ["current"]}}
+{"text": "bavis дис на с верху пожалуйста", "expected": {"layout": "top_half", "targets": ["discord"]}}
+{"text": "bavis его в левую часть давай", "expected": {"layout": "left_half", "targets": ["current"]}}
+{"text": "bavis закинь вниз музыка у меня", "expected": {"layout": "bottom_half", "targets": ["yandeks_muzyka"]}}
+{"text": "bavis на нижнюю половину окно нормально", "expected": {"layout": "bottom_half", "targets": ["current"]}}
+{"text": "bavis не закрывай microsoft", "expected": {"missing": ["layout"]}}
+{"text": "bavis перекинь с лева яндекс музыка пожалуйста", "expected": {"layout": "left_half", "targets": ["yandeks_muzyka"]}}
+{"text": "bavis перемести в центр beavis dev пожалуйста", "expected": {"layout": "center", "targets": ["beavis_dev"]}}
+{"text": "bavis по центру активное окно плиз", "expected": {"layout": "center", "targets": ["current"]}}
+{"text": "bavis по центру вижлу нормально", "expected": {"layout": "center", "targets": ["visual_studio_code"]}}
+{"text": "bavis поставь на правую палавину это окно щас", "expected": {"layout": "right_half", "targets": ["current"]}}
+{"text": "bavis поставь тг слева а word справа на экране", "expected": {"layout": "split_2_vertical", "targets": ["telegram", "word"]}}
+{"text": "bavis разверни blender 5.0 и telegram пополам", "expected": {"layout": "split_2_vertical", "targets": ["blender_5_0", "telegram"]}}
+{"text": "bavis размести в низ кодекс плиз", "expected": {"layout": "bottom_half", "targets": ["codex"]}}
+{"text": "bavis размести ворд хром bloknot кодекс 2 на 2", "expected": {"layout": "grid_2x2", "targets": ["word", "google_chrome", "bloknot", "codex"]}}
+{"text": "bavis растяни его на весь экран давай", "expected": {"layout": "fullscreen", "targets": ["current"]}}
+{"text": "bavis с низу кодекс", "expected": {"layout": "bottom_half", "targets": ["codex"]}}
+{"text": "bavis сверху написано почему", "expected": {"missing": ["layout"]}}
+{"text": "bavis сделай вижла и кодекс рядом нормально", "expected": {"layout": "split_2_vertical", "targets": ["visual_studio_code", "codex"]}}
+{"text": "bavis сделай ворд и yandeks muzyka рядом щас", "expected": {"layout": "split_2_vertical", "targets": ["word", "yandeks_muzyka"]}}
+{"text": "bavis сделай по середине это", "expected": {"layout": "center", "targets": ["current"]}}
+{"text": "bavis текущее сделай fullscreen давай", "expected": {"layout": "fullscreen", "targets": ["current"]}}
+{"text": "bavis текущие окно на вверх на екране", "expected": {"layout": "top_half", "targets": ["current"]}}
+{"text": "bavis текущие окно на по середине", "expected": {"layout": "center", "targets": ["current"]}}
+{"text": "bavis текущие окно на с низу у меня", "expected": {"layout": "bottom_half", "targets": ["current"]}}
+{"text": "bavis телеграм влево плиз", "expected": {"layout": "left_half", "targets": ["telegram"]}}
+{"text": "bavis хром сделай fullscreen на экране", "expected": {"layout": "fullscreen", "targets": ["google_chrome"]}}
+{"text": "bavis центром текущие окно нормально", "expected": {"layout": "center", "targets": ["current"]}}
+{"text": "beaavis bloknot на на низ пожалуйста", "expected": {"layout": "bottom_half", "targets": ["bloknot"]}}
+{"text": "beaavis bloknot слева красиво", "expected": {"missing": ["layout"]}}
+{"text": "beaavis dev на весь экран", "expected": {"layout": "fullscreen", "targets": ["beavis_dev"]}}
+{"text": "beaavis telegram на на нижнюю половину пожалуйста", "expected": {"layout": "bottom_half", "targets": ["telegram"]}}
+{"text": "beaavis word сделай fullscreen", "expected": {"layout": "fullscreen", "targets": ["word"]}}
+{"text": "beaavis бивис на низ щас", "expected": {"layout": "bottom_half", "targets": ["beavis_dev"]}}
+{"text": "beaavis запусти codex сейчас", "expected": {"missing": ["layout"]}}
+{"text": "beaavis кодекс сделай фулл скрин у меня", "expected": {"layout": "fullscreen", "targets": ["codex"]}}
+{"text": "beaavis на верхнюю половину это", "expected": {"layout": "top_half", "targets": ["current"]}}
+{"text": "beaavis перекинь bloknot в середину давай", "expected": {"layout": "center", "targets": ["bloknot"]}}
+{"text": "beaavis перекинь в центр текущее окно плиз", "expected": {"layout": "center", "targets": ["current"]}}
+{"text": "beaavis поставь openai в низ плиз", "expected": {"layout": "bottom_half", "targets": ["codex"]}}
+{"text": "beaavis поставь visual studio code сверху а discord снизу пожалуйста", "expected": {"layout": "split_2_horizontal", "targets": ["visual_studio_code", "discord"]}}
+{"text": "beaavis раздели экран между брузер и блендер плиз", "expected": {"layout": "split_2_vertical", "targets": ["google_chrome", "blender_5_0"]}}
+{"text": "beaavis размести visual studio code на правую палавину быстро", "expected": {"layout": "right_half", "targets": ["visual_studio_code"]}}
+{"text": "beaavis раскинь bloknot и телеграм по половинам давай", "expected": {"layout": "split_2_vertical", "targets": ["bloknot", "telegram"]}}
+{"text": "beaavis сделай с лева текущее", "expected": {"layout": "left_half", "targets": ["current"]}}
+{"text": "beaavis текущие окно сверху нормально", "expected": {"layout": "top_half", "targets": ["current"]}}
+{"text": "beaavis яндекс музыка на вверх пожалуйста", "expected": {"layout": "top_half", "targets": ["yandeks_muzyka"]}}
+{"text": "beais dev справа", "expected": {"layout": "right_half", "targets": ["beavis_dev"]}}
+{"text": "beais microsoft на в левую часть щас", "expected": {"layout": "left_half", "targets": ["bloknot"]}}
+{"text": "beais ru.yandex.desktop а потом ворд по половинам быстро", "expected": {"layout": "split_2_vertical", "targets": ["yandeks_muzyka", "word"]}}
+{"text": "beais word под blender 5 0 давай", "expected": {"layout": "split_2_horizontal", "targets": ["blender_5_0", "word"]}}
+{"text": "beais в центр это пожалуйста", "expected": {"layout": "center", "targets": ["current"]}}
+{"text": "beais вскод спрва давай", "expected": {"layout": "right_half", "targets": ["visual_studio_code"]}}
+{"text": "beais дис слева красиво", "expected": {"missing": ["layout"]}}
+{"text": "beais закинь yandeks muzyka вверх на экране", "expected": {"layout": "top_half", "targets": ["yandeks_muzyka"]}}
+{"text": "beais закинь на верхнюю половину beavis dev", "expected": {"layout": "top_half", "targets": ["beavis_dev"]}}
+{"text": "beais как пользоваться брузер", "expected": {"missing": ["layout"]}}
+{"text": "beais обнови blender 5.0", "expected": {"missing": ["layout"]}}
+{"text": "beais по центру текущее пожалуйста", "expected": {"layout": "center", "targets": ["current"]}}
+{"text": "beais поставь bloknot слева а google chrome справа на экране", "expected": {"layout": "split_2_vertical", "targets": ["bloknot", "google_chrome"]}}
+{"text": "beais поставь yandexmusic с низу нормально", "expected": {"layout": "bottom_half", "targets": ["yandeks_muzyka"]}}
+{"text": "beais поставь бивис слева а мьюзик справа пожалуйста", "expected": {"layout": "split_2_vertical", "targets": ["beavis_dev", "yandeks_muzyka"]}}
+{"text": "beais поставь это на максимум экрана давай", "expected": {"layout": "fullscreen", "targets": ["current"]}}
+{"text": "beais раздели экран между microsoft и openai", "expected": {"layout": "split_2_vertical", "targets": ["bloknot", "codex"]}}
+{"text": "beais сделай сетку из ворд bloknot вжуал студио и blender давай", "expected": {"layout": "grid_2x2", "targets": ["word", "bloknot", "visual_studio_code", "blender_5_0"]}}
+{"text": "beais сделай телега и вижлу рядом нормально", "expected": {"layout": "split_2_vertical", "targets": ["telegram", "visual_studio_code"]}}
+{"text": "beais это по середине щас", "expected": {"layout": "center", "targets": ["current"]}}
+{"text": "beais яндекс музыка на весь экран щас", "expected": {"layout": "fullscreen", "targets": ["yandeks_muzyka"]}}
+{"text": "beaviis beavis dev на левый бок у меня", "expected": {"layout": "left_half", "targets": ["beavis_dev"]}}
+{"text": "beaviis blender-launcher слева microsoft справа щас", "expected": {"layout": "split_2_vertical", "targets": ["blender_5_0", "visual_studio_code"]}}
+{"text": "beaviis dev сделай на весь экран быстро", "expected": {"layout": "fullscreen", "targets": ["beavis_dev"]}}
+{"text": "beaviis discord на сверху пожалуйста", "expected": {"layout": "top_half", "targets": ["discord"]}}
+{"text": "beaviis microsoft вниз быстро", "expected": {"layout": "bottom_half", "targets": ["visual_studio_code"]}}
+{"text": "beaviis music и вижлу друг под другом", "expected": {"layout": "split_2_horizontal", "targets": ["yandeks_muzyka", "visual_studio_code"]}}
+{"text": "beaviis visual studio code в середину пожалуйста", "expected": {"layout": "center", "targets": ["visual_studio_code"]}}
+{"text": "beaviis visual studio code слева нормально", "expected": {"layout": "left_half", "targets": ["visual_studio_code"]}}
+{"text": "beaviis word сделай fullscreen пожалуйста", "expected": {"layout": "fullscreen", "targets": ["word"]}}
+{"text": "beaviis блокнот сверху ворд снизу на экране", "expected": {"layout": "split_2_horizontal", "targets": ["bloknot", "word"]}}
+{"text": "beaviis верни beavis dev", "expected": {"missing": ["layout"]}}
+{"text": "beaviis ворд завис", "expected": {"missing": ["layout"]}}
 {"text": "beaviis завис", "expected": {"missing": ["layout"]}}
-{"text": "beaviis закрепи текущие окно вниз на экране", "expected": {"layout": "bottom_half", "targets": ["current"]}}
-{"text": "beaviis максимизируй текущие окно во весь экран пожалуйста", "expected": {"layout": "fullscreen", "targets": ["current"]}}
-{"text": "beaviis музыка сделай на весь экран быстро", "expected": {"layout": "fullscreen", "targets": ["yandeks_muzyka"]}}
-{"text": "beaviis мьюзик слева chrome справа пожалуйста", "expected": {"layout": "split_2_vertical", "targets": ["yandeks_muzyka", "google_chrome"]}}
-{"text": "beaviis окно chrome мешает", "expected": {"missing": ["layout"]}}
-{"text": "beaviis открой глаза", "expected": {"missing": ["layout"]}}
-{"text": "beaviis перекинь на правую половину это окно у меня", "expected": {"layout": "right_half", "targets": ["current"]}}
-{"text": "beaviis поставь активное окно на максимум экрана давай", "expected": {"layout": "fullscreen", "targets": ["current"]}}
-{"text": "beaviis раздели экран между музыка и codex щас", "expected": {"layout": "split_2_vertical", "targets": ["yandeks_muzyka", "codex"]}}
-{"text": "beaviis размести бивис справо у меня", "expected": {"layout": "right_half", "targets": ["beavis_dev"]}}
-{"text": "beaviis размести в центр blender давай", "expected": {"layout": "center", "targets": ["blender_5_0"]}}
-{"text": "beaviis сделай телега и chrome рядом у меня", "expected": {"layout": "split_2_vertical", "targets": ["telegram", "google_chrome"]}}
-{"text": "beaviis тг затем дис по половинам щас", "expected": {"layout": "split_2_vertical", "targets": ["telegram", "discord"]}}
-{"text": "beaviis текущие окно с лева пожалуйста", "expected": {"layout": "left_half", "targets": ["current"]}}
-{"text": "beaviis это окно на центром плиз", "expected": {"layout": "center", "targets": ["current"]}}
-{"text": "beaviis это снизу плиз", "expected": {"layout": "bottom_half", "targets": ["current"]}}
-{"text": "beavis beaviis dev плюс discord палавину пожалуйста", "expected": {"layout": "split_2_vertical", "targets": ["beavis_dev", "discord"]}}
-{"text": "beavis beavis dev fullscreen щас", "expected": {"layout": "fullscreen", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis dev в верх давай", "expected": {"layout": "top_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis dev в середину щас", "expected": {"layout": "center", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis dev в центр у меня", "expected": {"layout": "center", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis dev вместе с брузер пополам экрана щас", "expected": {"layout": "split_2_vertical", "targets": ["beavis_dev", "google_chrome"]}}
-{"text": "beavis beavis dev вместе с телеграм по половинам у меня", "expected": {"layout": "split_2_vertical", "targets": ["beavis_dev", "telegram"]}}
-{"text": "beavis beavis dev вправо пожалуйста", "expected": {"layout": "right_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis dev затем blnder на две половины давай", "expected": {"layout": "split_2_vertical", "targets": ["beavis_dev", "blender_5_0"]}}
-{"text": "beavis beavis dev и blender 5 0 друг под другом быстро", "expected": {"layout": "split_2_horizontal", "targets": ["beavis_dev", "blender_5_0"]}}
-{"text": "beavis beavis dev и blender 5 0 друг под другом плиз", "expected": {"layout": "split_2_horizontal", "targets": ["beavis_dev", "blender_5_0"]}}
-{"text": "beavis beavis dev и blender по плам давай", "expected": {"layout": "split_2_vertical", "targets": ["beavis_dev", "blender_5_0"]}}
-{"text": "beavis beavis dev и com.squirrel.discord друг под другом давай", "expected": {"layout": "split_2_horizontal", "targets": ["beavis_dev", "discord"]}}
-{"text": "beavis beavis dev и telegram друг под другом нормально", "expected": {"layout": "split_2_horizontal", "targets": ["beavis_dev", "telegram"]}}
-{"text": "beavis beavis dev и yandexmusic друг под другом пожалуйста", "expected": {"layout": "split_2_horizontal", "targets": ["beavis_dev", "yandeks_muzyka"]}}
-{"text": "beavis beavis dev и yandexmusic друг под другом у меня", "expected": {"layout": "split_2_horizontal", "targets": ["beavis_dev", "yandeks_muzyka"]}}
-{"text": "beavis beavis dev и брузер друг под другом давай", "expected": {"layout": "split_2_horizontal", "targets": ["beavis_dev", "google_chrome"]}}
-{"text": "beavis beavis dev и кодекс друг под другом на экране", "expected": {"layout": "split_2_horizontal", "targets": ["beavis_dev", "codex"]}}
-{"text": "beavis beavis dev и тг друг под другом у меня", "expected": {"layout": "split_2_horizontal", "targets": ["beavis_dev", "telegram"]}}
-{"text": "beavis beavis dev и телега друг под другом давай", "expected": {"layout": "split_2_horizontal", "targets": ["beavis_dev", "telegram"]}}
-{"text": "beavis beavis dev и яндекс музыка друг под другом у меня", "expected": {"layout": "split_2_horizontal", "targets": ["beavis_dev", "yandeks_muzyka"]}}
-{"text": "beavis beavis dev на в низ давай", "expected": {"layout": "bottom_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis dev на в низ на экране", "expected": {"layout": "bottom_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis dev на в центр на экране", "expected": {"layout": "center", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis dev на вверх нормально", "expected": {"layout": "top_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis dev на весь экран давай", "expected": {"layout": "fullscreen", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis dev на влево", "expected": {"layout": "left_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis dev на вправо", "expected": {"layout": "right_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis dev на левый бок на экране", "expected": {"layout": "left_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis dev на левый бок плиз", "expected": {"layout": "left_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis dev на максимум экрана", "expected": {"layout": "fullscreen", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis dev на на низ", "expected": {"layout": "bottom_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis dev на на правую половину быстро", "expected": {"layout": "right_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis dev на на правую половину щас", "expected": {"layout": "right_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis dev на на правый бок на экране", "expected": {"layout": "right_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis dev на по центру давай", "expected": {"layout": "center", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis dev на с право у меня", "expected": {"layout": "right_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis dev на слева быстро", "expected": {"layout": "left_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis dev на слева плиз", "expected": {"layout": "left_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis dev на снизу давай", "expected": {"layout": "bottom_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis dev на справо пожалуйста", "expected": {"layout": "right_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis dev на спрва щас", "expected": {"layout": "right_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis dev на центром", "expected": {"layout": "center", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis dev на центром пожалуйста", "expected": {"layout": "center", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis dev над openai давай", "expected": {"layout": "split_2_horizontal", "targets": ["beavis_dev", "codex"]}}
-{"text": "beavis beavis dev над yandexmusic", "expected": {"layout": "split_2_horizontal", "targets": ["beavis_dev", "yandeks_muzyka"]}}
-{"text": "beavis beavis dev над yandexmusic давай", "expected": {"layout": "split_2_horizontal", "targets": ["beavis_dev", "yandeks_muzyka"]}}
-{"text": "beavis beavis dev над yandexmusic плиз", "expected": {"layout": "split_2_horizontal", "targets": ["beavis_dev", "yandeks_muzyka"]}}
-{"text": "beavis beavis dev над брузер пожалуйста", "expected": {"layout": "split_2_horizontal", "targets": ["beavis_dev", "google_chrome"]}}
-{"text": "beavis beavis dev над кодекс у меня", "expected": {"layout": "split_2_horizontal", "targets": ["beavis_dev", "codex"]}}
-{"text": "beavis beavis dev над музыка быстро", "expected": {"layout": "split_2_horizontal", "targets": ["beavis_dev", "yandeks_muzyka"]}}
-{"text": "beavis beavis dev над телега плиз", "expected": {"layout": "split_2_horizontal", "targets": ["beavis_dev", "telegram"]}}
-{"text": "beavis beavis dev не работает", "expected": {"missing": ["layout"]}}
+{"text": "beaviis мьюзик в середину плиз", "expected": {"layout": "center", "targets": ["yandeks_muzyka"]}}
+{"text": "beaviis на нижнюю палавину его", "expected": {"layout": "bottom_half", "targets": ["current"]}}
+{"text": "beaviis открой вижла", "expected": {"missing": ["layout"]}}
+{"text": "beaviis поставь дискорд сверху а блендер снизу плиз", "expected": {"layout": "split_2_horizontal", "targets": ["discord", "blender_5_0"]}}
+{"text": "beaviis поставь текущее на весь экран", "expected": {"layout": "fullscreen", "targets": ["current"]}}
+{"text": "beaviis разверни com.squirrel.discord и bloknot пополам давай", "expected": {"layout": "split_2_vertical", "targets": ["discord", "bloknot"]}}
+{"text": "beaviis разверни google chrome и visual studio code пополам щас", "expected": {"layout": "split_2_vertical", "targets": ["google_chrome", "visual_studio_code"]}}
+{"text": "beaviis разверни тг и ворд пополам щас", "expected": {"layout": "split_2_vertical", "targets": ["telegram", "word"]}}
+{"text": "beaviis разложи ворд bloknot yandeks muzyka и вижла плиткой у меня", "expected": {"layout": "grid_2x2", "targets": ["word", "bloknot", "yandeks_muzyka", "visual_studio_code"]}}
+{"text": "beaviis размести его слево у меня", "expected": {"layout": "left_half", "targets": ["current"]}}
+{"text": "beaviis размести на левый бок bloknot плиз", "expected": {"layout": "left_half", "targets": ["bloknot"]}}
+{"text": "beaviis сделай beavis dev и telegram рядом давай", "expected": {"layout": "split_2_vertical", "targets": ["beavis_dev", "telegram"]}}
+{"text": "beaviis сделай сетку из openai телега google chrome и вжуал студио давай", "expected": {"layout": "grid_2x2", "targets": ["codex", "telegram", "google_chrome", "visual_studio_code"]}}
+{"text": "beaviis слево текущие окно давай", "expected": {"layout": "left_half", "targets": ["current"]}}
+{"text": "beaviis текущие окно фулл скрин", "expected": {"layout": "fullscreen", "targets": ["current"]}}
+{"text": "beaviis телега сделай на весь экран быстро", "expected": {"layout": "fullscreen", "targets": ["telegram"]}}
+{"text": "beaviis четыре окна сеткой google chrome кодекс yandexmusic вскод плиз", "expected": {"layout": "grid_2x2", "targets": ["google_chrome", "codex", "yandeks_muzyka", "visual_studio_code"]}}
+{"text": "beaviis это вниз на экране", "expected": {"layout": "bottom_half", "targets": ["current"]}}
+{"text": "beavis beavis dev а потом chrome по полам пожалуйста", "expected": {"layout": "split_2_vertical", "targets": ["beavis_dev", "google_chrome"]}}
+{"text": "beavis beavis dev а потом блокнот на две половины давай", "expected": {"layout": "split_2_vertical", "targets": ["beavis_dev", "bloknot"]}}
+{"text": "beavis beavis dev а потом яндекс музыка по полам пожалуйста", "expected": {"layout": "split_2_vertical", "targets": ["beavis_dev", "yandeks_muzyka"]}}
+{"text": "beavis beavis dev в верх нормально", "expected": {"layout": "top_half", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis dev в верх пожалуйста", "expected": {"layout": "top_half", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis dev в верх у меня", "expected": {"layout": "top_half", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis dev в низ у меня", "expected": {"layout": "bottom_half", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis dev вниз у меня", "expected": {"layout": "bottom_half", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis dev во весь экран у меня", "expected": {"layout": "fullscreen", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis dev вправо", "expected": {"layout": "right_half", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis dev и microsoft друг под другом пожалуйста", "expected": {"layout": "split_2_horizontal", "targets": ["beavis_dev", "bloknot"]}}
+{"text": "beavis beavis dev и word друг под другом у меня", "expected": {"layout": "split_2_horizontal", "targets": ["beavis_dev", "word"]}}
+{"text": "beavis beavis dev и блокнот друг под другом", "expected": {"layout": "split_2_horizontal", "targets": ["beavis_dev", "bloknot"]}}
+{"text": "beavis beavis dev и ворд друг под другом пожалуйста", "expected": {"layout": "split_2_horizontal", "targets": ["beavis_dev", "word"]}}
+{"text": "beavis beavis dev и телега друг под другом щас", "expected": {"layout": "split_2_horizontal", "targets": ["beavis_dev", "telegram"]}}
+{"text": "beavis beavis dev на в низ нормально", "expected": {"layout": "bottom_half", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis dev на в середину", "expected": {"layout": "center", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis dev на в центр щас", "expected": {"layout": "center", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis dev на весь экран на экране", "expected": {"layout": "fullscreen", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis dev на весь экран нормально", "expected": {"layout": "fullscreen", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis dev на весь экран щас", "expected": {"layout": "fullscreen", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis dev на вправо плиз", "expected": {"layout": "right_half", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis dev на левую половину", "expected": {"layout": "left_half", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis dev на максимум экрана на экране", "expected": {"layout": "fullscreen", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis dev на масимум экрана нормально", "expected": {"layout": "fullscreen", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis dev на на низ давай", "expected": {"layout": "bottom_half", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis dev на на низ плиз", "expected": {"layout": "bottom_half", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis dev на на правую половину пожалуйста", "expected": {"layout": "right_half", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis dev на на правый бок", "expected": {"layout": "right_half", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis dev на низ щас", "expected": {"layout": "bottom_half", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis dev на по середине", "expected": {"layout": "center", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis dev на посередине", "expected": {"layout": "center", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis dev на правую половину у меня", "expected": {"layout": "right_half", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis dev на правый бок давай", "expected": {"layout": "right_half", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis dev на с верху щас", "expected": {"layout": "top_half", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis dev на справо щас", "expected": {"layout": "right_half", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis dev над blender 5 0 давай", "expected": {"layout": "split_2_horizontal", "targets": ["beavis_dev", "blender_5_0"]}}
+{"text": "beavis beavis dev над com.squirrel.discord нормально", "expected": {"layout": "split_2_horizontal", "targets": ["beavis_dev", "discord"]}}
+{"text": "beavis beavis dev над visual studio code пожалуйста", "expected": {"layout": "split_2_horizontal", "targets": ["beavis_dev", "visual_studio_code"]}}
+{"text": "beavis beavis dev над вжуал студио", "expected": {"layout": "split_2_horizontal", "targets": ["beavis_dev", "visual_studio_code"]}}
+{"text": "beavis beavis dev над ворд плиз", "expected": {"layout": "split_2_horizontal", "targets": ["beavis_dev", "word"]}}
+{"text": "beavis beavis dev над дискорд давай", "expected": {"layout": "split_2_horizontal", "targets": ["beavis_dev", "discord"]}}
 {"text": "beavis beavis dev открыт уже", "expected": {"missing": ["layout"]}}
-{"text": "beavis beavis dev по центру пожалуйста", "expected": {"layout": "center", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis dev потом discord на две половины на экране", "expected": {"layout": "split_2_vertical", "targets": ["beavis_dev", "discord"]}}
-{"text": "beavis beavis dev потом брузер пополам щас", "expected": {"layout": "split_2_vertical", "targets": ["beavis_dev", "google_chrome"]}}
-{"text": "beavis beavis dev потом кодекс на две половины плиз", "expected": {"layout": "split_2_vertical", "targets": ["beavis_dev", "codex"]}}
-{"text": "beavis beavis dev потом телега поровну пожалуйста", "expected": {"layout": "split_2_vertical", "targets": ["beavis_dev", "telegram"]}}
-{"text": "beavis beavis dev прислал сообщение", "expected": {"missing": ["layout"]}}
-{"text": "beavis beavis dev с лева на экране", "expected": {"layout": "left_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis dev с лева у меня", "expected": {"layout": "left_half", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis dev плюс blender 5 0 пополам экрана у меня", "expected": {"layout": "split_2_vertical", "targets": ["beavis_dev", "blender_5_0"]}}
+{"text": "beavis beavis dev плюс com.squirrel.discord по полам плиз", "expected": {"layout": "split_2_vertical", "targets": ["beavis_dev", "discord"]}}
+{"text": "beavis beavis dev плюс телега на две половины пожалуйста", "expected": {"layout": "split_2_vertical", "targets": ["beavis_dev", "telegram"]}}
+{"text": "beavis beavis dev по середине давай", "expected": {"layout": "center", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis dev по середине щас", "expected": {"layout": "center", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis dev по центру", "expected": {"layout": "center", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis dev по центру у меня", "expected": {"layout": "center", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis dev под google chrome пожалуйста", "expected": {"layout": "split_2_horizontal", "targets": ["google_chrome", "beavis_dev"]}}
+{"text": "beavis beavis dev под microsoft быстрро", "expected": {"layout": "split_2_horizontal", "targets": ["visual_studio_code", "beavis_dev"]}}
+{"text": "beavis beavis dev под yandexmusic у меня", "expected": {"layout": "split_2_horizontal", "targets": ["yandeks_muzyka", "beavis_dev"]}}
+{"text": "beavis beavis dev под yandexmusic щас", "expected": {"layout": "split_2_horizontal", "targets": ["yandeks_muzyka", "beavis_dev"]}}
+{"text": "beavis beavis dev под дискорд давай", "expected": {"layout": "split_2_horizontal", "targets": ["discord", "beavis_dev"]}}
+{"text": "beavis beavis dev посередине давай", "expected": {"layout": "center", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis dev посередине на экране", "expected": {"layout": "center", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis dev с верху", "expected": {"layout": "top_half", "targets": ["beavis_dev"]}}
 {"text": "beavis beavis dev с лева щас", "expected": {"layout": "left_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis dev с низу быстро", "expected": {"layout": "bottom_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis dev с низу давай", "expected": {"layout": "bottom_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis dev с право нормально", "expected": {"layout": "right_half", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis dev с право плиз", "expected": {"layout": "right_half", "targets": ["beavis_dev"]}}
 {"text": "beavis beavis dev с право пожалуйста", "expected": {"layout": "right_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis dev сделай fullscreen нормально", "expected": {"layout": "fullscreen", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis dev сделай на максимум экрана быстро", "expected": {"layout": "fullscreen", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis dev сделай на максимум экрана плиз", "expected": {"layout": "fullscreen", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis dev сделай на максимум экрана щас", "expected": {"layout": "fullscreen", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis dev сделай фулл скрин на экране", "expected": {"layout": "fullscreen", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis dev слева давай", "expected": {"layout": "left_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis dev слева красиво", "expected": {"missing": ["layout"]}}
-{"text": "beavis beavis dev снизу нормально", "expected": {"layout": "bottom_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis dev справа на экране", "expected": {"layout": "right_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis dev спрва пожалуйста", "expected": {"layout": "right_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis dev фулл скрин давай", "expected": {"layout": "fullscreen", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis fullscreen у меня", "expected": {"layout": "fullscreen", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis dev сверху chrome снизу на экране", "expected": {"layout": "split_2_horizontal", "targets": ["beavis_dev", "google_chrome"]}}
+{"text": "beavis beavis dev сверху codex снизу давай", "expected": {"layout": "split_2_horizontal", "targets": ["beavis_dev", "codex"]}}
+{"text": "beavis beavis dev сделай fullscreen у меня", "expected": {"layout": "fullscreen", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis dev сделай на весь экран", "expected": {"layout": "fullscreen", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis dev сделай на весь экран пожалуйста", "expected": {"layout": "fullscreen", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis dev сделай фулл скрин быстро", "expected": {"layout": "fullscreen", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis dev слеа bloknot справа", "expected": {"layout": "split_2_vertical", "targets": ["beavis_dev", "bloknot"]}}
+{"text": "beavis beavis dev слева быстро", "expected": {"layout": "left_half", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis dev снизу плиз", "expected": {"layout": "bottom_half", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis dev справа не видно", "expected": {"missing": ["layout"]}}
+{"text": "beavis beavis dev справо быстро", "expected": {"layout": "right_half", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis fullscreen пожалуйста", "expected": {"layout": "fullscreen", "targets": ["beavis_dev"]}}
 {"text": "beavis beavis в верх давай", "expected": {"layout": "top_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis в верх нормально", "expected": {"layout": "top_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis в верх пожалуйста", "expected": {"layout": "top_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis в правую часть на экране", "expected": {"layout": "right_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis ввверх на экране", "expected": {"layout": "top_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis во весь экран на экране", "expected": {"layout": "fullscreen", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis во весь экран пожалуйста", "expected": {"layout": "fullscreen", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis на в верх щас", "expected": {"layout": "top_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis на в низ давай", "expected": {"layout": "bottom_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis на в низ у меня", "expected": {"layout": "bottom_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis на в правую часть давай", "expected": {"layout": "right_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis на в середину плиз", "expected": {"layout": "center", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis на верхнюю половину нормально", "expected": {"layout": "top_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis на влево нормально", "expected": {"layout": "left_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis на левую половину быстро", "expected": {"layout": "left_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis на левую половину давай", "expected": {"layout": "left_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis на левую половину плиз", "expected": {"layout": "left_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis на на верхнюю половину плиз", "expected": {"layout": "top_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis на на левый бок на экране", "expected": {"layout": "left_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis на на нижнюю половину", "expected": {"layout": "bottom_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis на на нижнюю половину давай", "expected": {"layout": "bottom_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis на по середине быстро", "expected": {"layout": "center", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis на по центру", "expected": {"layout": "center", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis на с верху нормально", "expected": {"layout": "top_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis на с лева плиз", "expected": {"layout": "left_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis на с низу быстро", "expected": {"layout": "bottom_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis на слева быстро", "expected": {"layout": "left_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis по середине пожалуйста", "expected": {"layout": "center", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis с лева на экране", "expected": {"layout": "left_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis с лева пожалуйста", "expected": {"layout": "left_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis сверху у меня", "expected": {"layout": "top_half", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis сделай fullscreen нормально", "expected": {"layout": "fullscreen", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis сделай во весь экран нормально", "expected": {"layout": "fullscreen", "targets": ["beavis_dev"]}}
-{"text": "beavis beavis сделай на весь экран щас", "expected": {"layout": "fullscreen", "targets": ["beavis_dev"]}}
-{"text": "beavis blendeer в верх у меня", "expected": {"layout": "top_half", "targets": ["blender_5_0"]}}
-{"text": "beavis blender 5 0 на вверх давай", "expected": {"layout": "top_half", "targets": ["blender_5_0"]}}
-{"text": "beavis blender 5 0 на верх у меня", "expected": {"layout": "top_half", "targets": ["blender_5_0"]}}
-{"text": "beavis blender 5 0 на верхнюю половину быстро", "expected": {"layout": "top_half", "targets": ["blender_5_0"]}}
-{"text": "beavis blender 5 0 на на верх нормально", "expected": {"layout": "top_half", "targets": ["blender_5_0"]}}
-{"text": "beavis blender 5 0 на слева", "expected": {"layout": "left_half", "targets": ["blender_5_0"]}}
-{"text": "beavis blender 5 0 на слева щас", "expected": {"layout": "left_half", "targets": ["blender_5_0"]}}
-{"text": "beavis blender 5.0 на в левую часть на экране", "expected": {"layout": "left_half", "targets": ["blender_5_0"]}}
-{"text": "beavis раззложи chrome openai телега и бивис сеткой плиз", "expected": {"layout": "grid_2x2", "targets": ["google_chrome", "codex", "telegram", "beavis_dev"]}}
-{"text": "beavis разлжи дис beavis dev codex и chrome два на два пожалуйста", "expected": {"layout": "grid_2x2", "targets": ["discord", "beavis_dev", "codex", "google_chrome"]}}
-{"text": "beavis разложи beavis blender 5 0 telegram и кодекс квадратом давай", "expected": {"layout": "grid_2x2", "targets": ["beavis_dev", "blender_5_0", "telegram", "codex"]}}
-{"text": "beavis разложи beavis blender 5 0 телеграм и music два на два быстро", "expected": {"layout": "grid_2x2", "targets": ["beavis_dev", "blender_5_0", "telegram", "yandeks_muzyka"]}}
-{"text": "beavis разложи beavis codex yandexmusic и com.squirrel.discord квадратом плиз", "expected": {"layout": "grid_2x2", "targets": ["beavis_dev", "codex", "yandeks_muzyka", "discord"]}}
-{"text": "beavis разложи beavis dev blender 5 0 com.squirrel.discord и ru.yandex.desktop плиткой пожалуйста", "expected": {"layout": "grid_2x2", "targets": ["beavis_dev", "blender_5_0", "discord", "yandeks_muzyka"]}}
-{"text": "beavis разложи beavis dev blender 5 0 discord и yandeks muzyka два на два давай", "expected": {"layout": "grid_2x2", "targets": ["beavis_dev", "blender_5_0", "discord", "yandeks_muzyka"]}}
-{"text": "beavis разложи beavis dev blender ru.yandex.desktop и discord четыре окна сеткой", "expected": {"layout": "grid_2x2", "targets": ["beavis_dev", "blender_5_0", "yandeks_muzyka", "discord"]}}
-{"text": "beavis разложи beavis dev chrome кодекс и музыка 2 на 2 пожалуйста", "expected": {"layout": "grid_2x2", "targets": ["beavis_dev", "google_chrome", "codex", "yandeks_muzyka"]}}
-{"text": "beavis разложи beavis dev codex мьюзик и blender 5.0 два на два щас", "expected": {"layout": "grid_2x2", "targets": ["beavis_dev", "codex", "yandeks_muzyka", "blender_5_0"]}}
-{"text": "beavis разложи beavis dev openai yandexmusic и blender 5 0 по углам у меня", "expected": {"layout": "grid_2x2", "targets": ["beavis_dev", "codex", "yandeks_muzyka", "blender_5_0"]}}
-{"text": "beavis разложи beavis dev ru.yandex.desktop кодекс и хром плиткой пожалуйста", "expected": {"layout": "grid_2x2", "targets": ["beavis_dev", "yandeks_muzyka", "codex", "google_chrome"]}}
-{"text": "beavis разложи beavis dev дис блендер и openai плиткой давай", "expected": {"layout": "grid_2x2", "targets": ["beavis_dev", "discord", "blender_5_0", "codex"]}}
-{"text": "beavis разложи beavis dev дискорд кодекс и chrome 2 на 2 нормально", "expected": {"layout": "grid_2x2", "targets": ["beavis_dev", "discord", "codex", "google_chrome"]}}
-{"text": "beavis разложи beavis dev кодекс blender и музыка 2 на 2 щас", "expected": {"layout": "grid_2x2", "targets": ["beavis_dev", "codex", "blender_5_0", "yandeks_muzyka"]}}
-{"text": "beavis разложи beavis dev музыка хром и blender 5.0 по углам", "expected": {"layout": "grid_2x2", "targets": ["beavis_dev", "yandeks_muzyka", "google_chrome", "blender_5_0"]}}
-{"text": "beavis разложи beavis discord google chrome и музыка 2 на 2 у меня", "expected": {"layout": "grid_2x2", "targets": ["beavis_dev", "discord", "google_chrome", "yandeks_muzyka"]}}
-{"text": "beavis разложи beavis discord хром и openai 2 на 2", "expected": {"layout": "grid_2x2", "targets": ["beavis_dev", "discord", "google_chrome", "codex"]}}
-{"text": "beavis разложи beavis google chrome openai и мьюзик квадратом щас", "expected": {"layout": "grid_2x2", "targets": ["beavis_dev", "google_chrome", "codex", "yandeks_muzyka"]}}
-{"text": "beavis разложи beavis telegram дискорд и мьюзик четыре окна сеткой щас", "expected": {"layout": "grid_2x2", "targets": ["beavis_dev", "telegram", "discord", "yandeks_muzyka"]}}
-{"text": "beavis разложи beavis yandexmusic openai и дис 2 на 2 у меня", "expected": {"layout": "grid_2x2", "targets": ["beavis_dev", "yandeks_muzyka", "codex", "discord"]}}
-{"text": "beavis разложи beavis тг blender 5.0 и дискорд по углам на экране", "expected": {"layout": "grid_2x2", "targets": ["beavis_dev", "telegram", "blender_5_0", "discord"]}}
+{"text": "beavis beavis вверх у меня", "expected": {"layout": "top_half", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis вправо пожалуйста", "expected": {"layout": "right_half", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis на вверх пожалуйста", "expected": {"layout": "top_half", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis на вверх у меня", "expected": {"layout": "top_half", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis на верхнюю половину щас", "expected": {"layout": "top_half", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis на вправо пожалуйста", "expected": {"layout": "right_half", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis на вправо щас", "expected": {"layout": "right_half", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis на на верхнюю половину пожалуйста", "expected": {"layout": "top_half", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis на на левую половину щас", "expected": {"layout": "left_half", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis на на правую половину пожалуйста", "expected": {"layout": "right_half", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis на нижнюю половину у меня", "expected": {"layout": "bottom_half", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis на нижнюю половину щас", "expected": {"layout": "bottom_half", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis на низ у меня", "expected": {"layout": "bottom_half", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis на с верху на экране", "expected": {"layout": "top_half", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis на с лева нормально", "expected": {"layout": "left_half", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis на слева плиз", "expected": {"layout": "left_half", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis на слева у меня", "expected": {"layout": "left_half", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis на слево у меня", "expected": {"layout": "left_half", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis слева быстро", "expected": {"layout": "left_half", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis слева давай", "expected": {"layout": "left_half", "targets": ["beavis_dev"]}}
+{"text": "beavis beavis справа не видно", "expected": {"missing": ["layout"]}}
+{"text": "beavis beavis тупит", "expected": {"missing": ["layout"]}}
+{"text": "beavis bevis dev в верх быстро", "expected": {"layout": "top_half", "targets": ["beavis_dev"]}}
+{"text": "beavis bevis dev на на правую половину щас", "expected": {"layout": "right_half", "targets": ["beavis_dev"]}}
+{"text": "beavis blendeer 5.0 на в верх у меня", "expected": {"layout": "top_half", "targets": ["blender_5_0"]}}
+{"text": "beavis blender 5 0 влево нормально", "expected": {"layout": "left_half", "targets": ["blender_5_0"]}}
+{"text": "beavis blender 5 0 на в верх быстро", "expected": {"layout": "top_half", "targets": ["blender_5_0"]}}
+{"text": "beavis blender 5 0 на влево у меня", "expected": {"layout": "left_half", "targets": ["blender_5_0"]}}
+{"text": "beavis blender 5 0 на вправо давай", "expected": {"layout": "right_half", "targets": ["blender_5_0"]}}
+{"text": "beavis blender 5 0 на правый бок у меня", "expected": {"layout": "right_half", "targets": ["blender_5_0"]}}
+{"text": "beavis blender 5 0 на с право", "expected": {"layout": "right_half", "targets": ["blender_5_0"]}}
+{"text": "beavis blender 5 0 на с право щас", "expected": {"layout": "right_half", "targets": ["blender_5_0"]}}
+{"text": "beavis blender 5 0 прислал сообщение", "expected": {"missing": ["layout"]}}
+{"text": "beavis blender 5.0 на на левую половину щас", "expected": {"layout": "left_half", "targets": ["blender_5_0"]}}
+{"text": "beavis blender 5.0 открыт уже", "expected": {"missing": ["layout"]}}
+{"text": "beavis blender 5.0 прислал сообщение", "expected": {"missing": ["layout"]}}
+{"text": "beavis blender 5.0 снизу мелькает", "expected": {"missing": ["layout"]}}
+{"text": "beavis blender 5.0 справа не видно", "expected": {"missing": ["layout"]}}
+{"text": "beavis раазмести beavis ворд дис bloknot 2 на 2 быстро", "expected": {"layout": "grid_2x2", "targets": ["beavis_dev", "word", "discord", "bloknot"]}}
+{"text": "beavis разлжи openai хром телега и com.squirrel.discord квадратом плиз", "expected": {"layout": "grid_2x2", "targets": ["codex", "google_chrome", "telegram", "discord"]}}
+{"text": "beavis разложжи ворд blender bloknot и yandexmusic сеткой давай", "expected": {"layout": "grid_2x2", "targets": ["word", "blender_5_0", "bloknot", "yandeks_muzyka"]}}
+{"text": "beavis разложи beavis dev вижла телега и microsoft сеткой на экране", "expected": {"layout": "grid_2x2", "targets": ["beavis_dev", "visual_studio_code", "telegram", "bloknot"]}}
+{"text": "beavis разложи beavis dev вижлу телега и chrome плиткой пожалуйста", "expected": {"layout": "grid_2x2", "targets": ["beavis_dev", "visual_studio_code", "telegram", "google_chrome"]}}
+{"text": "beavis разложи beavis dev вскод google chrome и com.squirrel.discord два на два", "expected": {"layout": "grid_2x2", "targets": ["beavis_dev", "visual_studio_code", "google_chrome", "discord"]}}
+{"text": "beavis разложи beavis dev яндекс музыка вскод и word квадратом пожалуйста", "expected": {"layout": "grid_2x2", "targets": ["beavis_dev", "yandeks_muzyka", "visual_studio_code", "word"]}}
+{"text": "beavis разложи beavis discord музыка и word четыре окна сеткой пожалуйста", "expected": {"layout": "grid_2x2", "targets": ["beavis_dev", "discord", "yandeks_muzyka", "word"]}}
+{"text": "beavis разложи beavis word telegram и codex квадратом у меня", "expected": {"layout": "grid_2x2", "targets": ["beavis_dev", "word", "telegram", "codex"]}}
+{"text": "beavis разложи beavis телеграм google chrome и openai по углам", "expected": {"layout": "grid_2x2", "targets": ["beavis_dev", "telegram", "google_chrome", "codex"]}}
+{"text": "beavis разложи blender 5 0 openai yandeks muzyka и бивис сеткой на экране", "expected": {"layout": "grid_2x2", "targets": ["blender_5_0", "codex", "yandeks_muzyka", "beavis_dev"]}}
+{"text": "beavis разложи blender 5 0 вжуал студио дис и yandeks muzyka по углам на экране", "expected": {"layout": "grid_2x2", "targets": ["blender_5_0", "visual_studio_code", "discord", "yandeks_muzyka"]}}
+{"text": "beavis разложи blender 5 0 кодекс бивис и word четыре окна сеткой", "expected": {"layout": "grid_2x2", "targets": ["blender_5_0", "codex", "beavis_dev", "word"]}}
+{"text": "beavis разложи blender 5 0 телеграм music и codex сеткой на экране", "expected": {"layout": "grid_2x2", "targets": ["blender_5_0", "telegram", "yandeks_muzyka", "codex"]}}
+{"text": "beavis разложи blender 5.0 beavis telegram и кодекс плиткой нормально", "expected": {"layout": "grid_2x2", "targets": ["blender_5_0", "beavis_dev", "telegram", "codex"]}}
+{"text": "beavis разложи blender 5.0 codex дис и word плиткой давай", "expected": {"layout": "grid_2x2", "targets": ["blender_5_0", "codex", "discord", "word"]}}
+{"text": "beavis разложи blender 5.0 блокнот music и codex 2 на 2", "expected": {"layout": "grid_2x2", "targets": ["blender_5_0", "bloknot", "yandeks_muzyka", "codex"]}}
+{"text": "beavis разложи blender 5.0 брузер телега и вижла два на два пожалуйста", "expected": {"layout": "grid_2x2", "targets": ["blender_5_0", "google_chrome", "telegram", "visual_studio_code"]}}
+{"text": "beavis разложи blender 5.0 ворд music и chrome плиткой щас", "expected": {"layout": "grid_2x2", "targets": ["blender_5_0", "word", "yandeks_muzyka", "google_chrome"]}}

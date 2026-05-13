@@ -110,7 +110,10 @@ class WhisperTranscriber:
         try:
             from faster_whisper import WhisperModel
         except ImportError as error:
-            raise RuntimeError("faster-whisper is required for speech recognition") from error
+            raise RuntimeError(
+                "faster-whisper or one of its dependencies is missing. "
+                "Run: python -m pip install -r requirements.txt"
+            ) from error
 
         model_dir = Path(settings.model_dir).expanduser()
         model_dir.mkdir(parents=True, exist_ok=True)

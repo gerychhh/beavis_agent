@@ -33,6 +33,20 @@
       "priority": 300
     },
     {
+      "app_id": "bloknot",
+      "display_name": "Блокнот",
+      "source": "user",
+      "enabled": true,
+      "launch_type": "apps_folder",
+      "launch_target": "shell:AppsFolder\\Microsoft.WindowsNotepad_8wekyb3d8bbwe!App",
+      "target_path": "Microsoft.WindowsNotepad_8wekyb3d8bbwe!App",
+      "working_directory": "",
+      "speech_forms": [
+        "блокнот"
+      ],
+      "priority": 300
+    },
+    {
       "app_id": "codex",
       "display_name": "Codex",
       "source": "user",
@@ -94,6 +108,39 @@
         "телега",
         "тг",
         "телеграм"
+      ],
+      "priority": 300
+    },
+    {
+      "app_id": "visual_studio_code",
+      "display_name": "Visual Studio Code",
+      "source": "user",
+      "enabled": true,
+      "launch_type": "apps_folder",
+      "launch_target": "shell:AppsFolder\\Microsoft.VisualStudioCode",
+      "target_path": "Microsoft.VisualStudioCode",
+      "working_directory": "",
+      "speech_forms": [
+        "visual studio code",
+        "вскод",
+        "вижла",
+        "вижлу",
+        "вжуал студио"
+      ],
+      "priority": 300
+    },
+    {
+      "app_id": "word",
+      "display_name": "Word",
+      "source": "user",
+      "enabled": true,
+      "launch_type": "apps_folder",
+      "launch_target": "shell:AppsFolder\\Microsoft.Office.WINWORD.EXE.15",
+      "target_path": "Microsoft.Office.WINWORD.EXE.15",
+      "working_directory": "",
+      "speech_forms": [
+        "word",
+        "ворд"
       ],
       "priority": 300
     },

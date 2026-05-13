@@ -22,9 +22,6 @@
     "core:window:allow-set-always-on-top",
     "core:window:allow-set-visible-on-all-workspaces",
     "core:window:allow-set-ignore-cursor-events",
-    "core:webview:allow-create-webview-window",
-    "global-shortcut:allow-is-registered",
-    "global-shortcut:allow-register",
-    "global-shortcut:allow-unregister"
+    "core:webview:allow-create-webview-window"
   ]
 }

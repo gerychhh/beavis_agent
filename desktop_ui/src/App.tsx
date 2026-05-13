@@ -1,12 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import {
-  isRegistered,
-  register,
-  unregister,
-} from "@tauri-apps/plugin-global-shortcut";
 import { invoke } from "@tauri-apps/api/core";
-import { emitTo } from "@tauri-apps/api/event";
+import { emitTo, listen } from "@tauri-apps/api/event";
 import {
   WebviewWindow,
   getCurrentWebviewWindow,
@@ -209,6 +204,7 @@ type SettingsPayload = {
     };
     vad: {
       sensitivity: number;
+      start_grace_ms: number;
       hotkey_silence_ms: number;
       continuous_silence_ms: number;
       max_utterance_ms: number;
@@ -525,20 +521,6 @@ function normalizeHotkeyForTauri(value: string) {
     .join("+");
 }
 
-function hotkeyVariantsForTauri(value: string) {
-  const normalized = normalizeHotkeyForTauri(value);
-  if (!normalized) return [];
-
-  return Array.from(
-    new Set([
-      normalized,
-      normalized.replace(/\bCommandOrControl\b/g, "CmdOrControl"),
-      normalized.replace(/\bCommandOrControl\b/g, "Ctrl"),
-      normalized.replace(/\bCmdOrControl\b/g, "Ctrl"),
-    ]),
-  ).filter(Boolean);
-}
-
 function formatKeyboardShortcut(event: React.KeyboardEvent<HTMLInputElement>) {
   const key = event.key;
   if (key === "Escape" || key === "Backspace" || key === "Delete") return "";
@@ -838,6 +820,7 @@ let mockSettings: SettingsPayload = {
     },
     vad: {
       sensitivity: 0.012,
+      start_grace_ms: 3000,
       hotkey_silence_ms: 500,
       continuous_silence_ms: 700,
       max_utterance_ms: 7000,
@@ -3229,7 +3212,16 @@ function SettingsPage() {
               className="w-full accent-white cursor-pointer h-2 bg-white/10 rounded-lg appearance-none"
             />
           </Field>
-          <div className="grid grid-cols-1 items-end gap-3 md:grid-cols-3">
+          <div className="grid grid-cols-1 items-end gap-3 md:grid-cols-4">
+            <Field
+              label="Start delay (ms)"
+              info="РЎРєРѕР»СЊРєРѕ Р¶РґР°С‚СЊ РіРѕР»РѕСЃ РїРѕСЃР»Рµ РѕС‚РєСЂС‹С‚РёСЏ РіРѕР»РѕСЃРѕРІРѕРіРѕ РІРІРѕРґР°."
+            >
+              <NumberField
+                value={settings.voice.vad.start_grace_ms}
+                onChange={(value) => patchVad({ start_grace_ms: value })}
+              />
+            </Field>
             <Field
               label="Hotkey silence (ms)"
               info="Сколько миллисекунд тишины ждать после голосовой команды, запущенной hotkey."
@@ -3521,7 +3513,7 @@ function AppShell() {
       const pressed = normalizeHotkeyForTauri(formatKeyboardShortcut(event as any));
       if (
         shellSettings.text_hotkey_enabled &&
-        hotkeyVariantsForTauri(shellSettings.text_hotkey_sequence).includes(pressed)
+        pressed === normalizeHotkeyForTauri(shellSettings.text_hotkey_sequence)
       ) {
         event.preventDefault();
         openCommandOverlay();
@@ -3529,7 +3521,7 @@ function AppShell() {
       if (
         shellSettings.voice.hotkey_enabled &&
         shellSettings.voice.mode !== "off" &&
-        hotkeyVariantsForTauri(shellSettings.voice.hotkey_sequence).includes(pressed)
+        pressed === normalizeHotkeyForTauri(shellSettings.voice.hotkey_sequence)
       ) {
         event.preventDefault();
         openVoiceOverlay();
@@ -3558,62 +3550,18 @@ function AppShell() {
   useEffect(() => { openVoiceOverlayRef.current = openVoiceOverlay; });
 
   useEffect(() => {
-    const registered: string[] = [];
-    let cancelled = false;
-    const bind = async () => {
-      if (!hasTauriRuntime()) return;
-      const shortcuts: { label: string; keys: string[]; action: () => void }[] = [];
-      if (shellSettings.text_hotkey_enabled && shellSettings.text_hotkey_sequence) {
-        shortcuts.push({
-          label: "text",
-          keys: hotkeyVariantsForTauri(shellSettings.text_hotkey_sequence),
-          action: () => openCommandOverlayRef.current(),
-        });
-      }
-      if (
-        shellSettings.voice.hotkey_enabled &&
-        shellSettings.voice.mode !== "off" &&
-        shellSettings.voice.hotkey_sequence
-      ) {
-        shortcuts.push({
-          label: "voice",
-          keys: hotkeyVariantsForTauri(shellSettings.voice.hotkey_sequence),
-          action: () => openVoiceOverlayRef.current(),
-        });
-      }
-
-      for (const item of shortcuts) {
-        let bound = false;
-        for (const key of item.keys) {
-          if (!key || registered.includes(key)) continue;
-          try {
-            try {
-              if (await isRegistered(key)) await unregister(key);
-            } catch {
-              await unregister(key).catch(() => {});
-            }
-
-            await register(key, (event) => {
-              if (!cancelled && event.state === "Pressed") item.action();
-            });
-            registered.push(key);
-            bound = true;
-            console.log("[beavis] registered global shortcut:", item.label, key);
-            break;
-          } catch (error) {
-            console.warn("Failed to register global shortcut variant", item.label, key, error);
-          }
-        }
-        if (!bound) {
-          console.warn("Failed to register global shortcut", item.label, item.keys);
-        }
-      }
-    };
-    void bind();
-    return () => {
-      cancelled = true;
-      for (const key of registered) void unregister(key).catch(() => {});
-    };
+    if (!hasTauriRuntime()) return;
+    void invoke("configure_global_hotkeys", {
+      settings: {
+        text_hotkey_enabled: shellSettings.text_hotkey_enabled,
+        text_hotkey_sequence: shellSettings.text_hotkey_sequence,
+        voice_hotkey_enabled:
+          shellSettings.voice.hotkey_enabled && shellSettings.voice.mode !== "off",
+        voice_hotkey_sequence: shellSettings.voice.hotkey_sequence,
+      },
+    }).catch((error) => {
+      console.warn("[beavis] Rust global hotkey registration failed:", error);
+    });
   }, [
     shellSettings.text_hotkey_enabled,
     shellSettings.text_hotkey_sequence,
@@ -3621,6 +3569,28 @@ function AppShell() {
     shellSettings.voice.hotkey_sequence,
     shellSettings.voice.mode,
   ]);
+
+  useEffect(() => {
+    if (!hasTauriRuntime()) return;
+    let unlisten: (() => void) | undefined;
+    listen<{ kind: "text" | "voice"; shortcut: string }>("beavis-hotkey", (event) => {
+      if (event.payload.kind === "text") {
+        openCommandOverlayRef.current();
+      } else if (shellSettings.voice.mode !== "off") {
+        openVoiceOverlayRef.current();
+      }
+    })
+      .then((cleanup) => {
+        unlisten = cleanup;
+      })
+      .catch((error) => {
+        console.warn("[beavis] Failed to listen for Rust hotkeys:", error);
+      });
+
+    return () => {
+      unlisten?.();
+    };
+  }, [shellSettings.voice.mode]);
   const nav = [
     { id: "home", label: "Главная", icon: "zap" as IconName },
     { id: "apps", label: "Приложения", icon: "apps" as IconName },

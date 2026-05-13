@@ -135,6 +135,12 @@ APP_SIGNATURES: dict[str, dict[str, list[str]]] = {
 }
 
 
+def no_console_kwargs() -> dict[str, int]:
+    if os.name == "nt":
+        return {"creationflags": getattr(subprocess, "CREATE_NO_WINDOW", 0)}
+    return {}
+
+
 def compact(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", "", value.lower())
 
@@ -297,6 +303,7 @@ foreach ($folder in $folders) {
         errors="replace",
         check=False,
         timeout=60,
+        **no_console_kwargs(),
     )
     if completed.returncode != 0:
         return []

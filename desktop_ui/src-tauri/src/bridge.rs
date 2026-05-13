@@ -8,6 +8,12 @@ use std::{
     time::{SystemTime, UNIX_EPOCH},
 };
 
+#[cfg(windows)]
+use std::os::windows::process::CommandExt;
+
+#[cfg(windows)]
+const CREATE_NO_WINDOW: u32 = 0x08000000;
+
 pub struct BridgeState {
     child: Arc<Mutex<Option<BridgeProcess>>>,
 }
@@ -50,13 +56,19 @@ fn spawn_bridge() -> Result<BridgeProcess, String> {
     let root = repo_root()?;
     let python = python_executable();
 
-    let mut child = Command::new(python)
+    let mut command = Command::new(python);
+    command
         .args(["-m", "python_agent.bridge.stdio_server"])
         .current_dir(root)
         .env("PYTHONIOENCODING", "utf-8")
         .stdin(Stdio::piped())
         .stdout(Stdio::piped())
-        .stderr(Stdio::inherit())
+        .stderr(Stdio::inherit());
+
+    #[cfg(windows)]
+    command.creation_flags(CREATE_NO_WINDOW);
+
+    let mut child = command
         .spawn()
         .map_err(|error| format!("Failed to start Python bridge: {error}"))?;
 

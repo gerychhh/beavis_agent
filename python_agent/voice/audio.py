@@ -57,15 +57,23 @@ def record_until_silence(
     vad_settings = voice.vad
     silence_ms = vad_settings.continuous_silence_ms if mode == "continuous" else vad_settings.hotkey_silence_ms
     block_size = int(SAMPLE_RATE * vad_settings.block_ms / 1000)
-    max_blocks = max(1, int(vad_settings.max_utterance_ms / vad_settings.block_ms))
+    max_utterance_blocks = max(1, int(vad_settings.max_utterance_ms / vad_settings.block_ms))
     silence_blocks_needed = max(1, int(silence_ms / vad_settings.block_ms))
+    if mode == "hotkey":
+        start_grace_blocks = max(1, int(vad_settings.start_grace_ms / vad_settings.block_ms))
+        max_total_blocks = start_grace_blocks + max_utterance_blocks
+    else:
+        start_grace_blocks = max_utterance_blocks
+        max_total_blocks = max_utterance_blocks
     device = _device_arg(voice.microphone_device)
     stop_event = stop_event or threading.Event()
     level_callback = level_callback or (lambda _level: None)
     vad = EnergyVad(vad_settings)
 
     frames: list[np.ndarray] = []
-    speech_started = mode == "hotkey"
+    speech_started = False
+    initial_silence_blocks = 0
+    utterance_blocks = 0
     silence_blocks = 0
     peak_rms = 0.0
     started_at = time.monotonic()
@@ -77,7 +85,7 @@ def record_until_silence(
         blocksize=block_size,
         device=device,
     ) as stream:
-        for _ in range(max_blocks):
+        for _ in range(max_total_blocks):
             if stop_event.is_set():
                 break
 
@@ -89,14 +97,24 @@ def record_until_silence(
 
             if decision.is_speech:
                 speech_started = True
+                utterance_blocks += 1
                 silence_blocks = 0
             elif speech_started:
+                utterance_blocks += 1
                 silence_blocks += 1
+            else:
+                initial_silence_blocks += 1
 
             if speech_started:
                 frames.append(samples.copy())
 
+            if not speech_started and initial_silence_blocks >= start_grace_blocks:
+                break
+
             if speech_started and silence_blocks >= silence_blocks_needed:
+                break
+
+            if speech_started and utterance_blocks >= max_utterance_blocks:
                 break
 
     audio = np.concatenate(frames).astype(np.float32) if frames else np.zeros(0, dtype=np.float32)

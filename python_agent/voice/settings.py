@@ -27,6 +27,7 @@ STT_COMPUTE_CHOICES = ("auto", "int8", "float16", "int8_float16", "float32")
 @dataclass(frozen=True)
 class VadSettings:
     sensitivity: float = 0.012
+    start_grace_ms: int = 3000
     hotkey_silence_ms: int = 500
     continuous_silence_ms: int = 700
     max_utterance_ms: int = 7000
@@ -35,6 +36,7 @@ class VadSettings:
     def to_dict(self) -> dict[str, Any]:
         return {
             "sensitivity": self.sensitivity,
+            "start_grace_ms": self.start_grace_ms,
             "hotkey_silence_ms": self.hotkey_silence_ms,
             "continuous_silence_ms": self.continuous_silence_ms,
             "max_utterance_ms": self.max_utterance_ms,
@@ -47,6 +49,7 @@ class VadSettings:
             return cls()
         return cls(
             sensitivity=_float(payload.get("sensitivity"), cls.sensitivity),
+            start_grace_ms=_int(payload.get("start_grace_ms"), cls.start_grace_ms),
             hotkey_silence_ms=_int(payload.get("hotkey_silence_ms"), cls.hotkey_silence_ms),
             continuous_silence_ms=_int(payload.get("continuous_silence_ms"), cls.continuous_silence_ms),
             max_utterance_ms=_int(payload.get("max_utterance_ms"), cls.max_utterance_ms),
@@ -56,6 +59,7 @@ class VadSettings:
     def normalized(self) -> "VadSettings":
         return VadSettings(
             sensitivity=max(0.001, min(0.20, float(self.sensitivity))),
+            start_grace_ms=max(500, min(8000, int(self.start_grace_ms))),
             hotkey_silence_ms=max(150, min(2500, int(self.hotkey_silence_ms))),
             continuous_silence_ms=max(150, min(3000, int(self.continuous_silence_ms))),
             max_utterance_ms=max(1000, min(20000, int(self.max_utterance_ms))),

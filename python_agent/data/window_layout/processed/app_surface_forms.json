@@ -11,6 +11,11 @@
     "блендер",
     "blender"
   ],
+  "bloknot": [
+    "блокнот",
+    "microsoft",
+    "bloknot"
+  ],
   "codex": [
     "codex",
     "openai",
@@ -33,6 +38,18 @@
     "телега",
     "тг",
     "телеграм"
+  ],
+  "visual_studio_code": [
+    "visual studio code",
+    "microsoft",
+    "вскод",
+    "вижла",
+    "вижлу",
+    "вжуал студио"
+  ],
+  "word": [
+    "word",
+    "ворд"
   ],
   "yandeks_muzyka": [
     "яндекс музыка",

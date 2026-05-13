@@ -45,6 +45,12 @@ def _progress(key: str) -> str:
     return PROGRESS_MESSAGES[key]
 
 
+def no_console_kwargs() -> dict[str, int]:
+    if os.name == "nt":
+        return {"creationflags": getattr(subprocess, "CREATE_NO_WINDOW", 0)}
+    return {}
+
+
 def _workflow_training_steps(apps_catalog_path: Path) -> list[tuple[str, list[str]]]:
     steps: list[tuple[str, list[str]]] = []
 
@@ -736,6 +742,7 @@ def _run_training(
             text=True,
             encoding="utf-8",
             errors="replace",
+            **no_console_kwargs(),
         )
         while process.poll() is None:
             if should_cancel():

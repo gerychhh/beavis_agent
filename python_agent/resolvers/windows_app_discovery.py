@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import os
 import re
 import subprocess
 import sys
@@ -57,6 +58,12 @@ SKIP_TERMS = (
 )
 
 
+def no_console_kwargs() -> dict[str, int]:
+    if os.name == "nt":
+        return {"creationflags": getattr(subprocess, "CREATE_NO_WINDOW", 0)}
+    return {}
+
+
 def discover_windows_apps() -> list[WindowsAppEntry]:
     if sys.platform != "win32":
         return []
@@ -82,6 +89,7 @@ Get-StartApps | Select-Object Name, AppID | ConvertTo-Json -Depth 3
         errors="replace",
         check=False,
         timeout=60,
+        **no_console_kwargs(),
     )
     if completed.returncode != 0:
         return []
@@ -122,6 +130,7 @@ if ($folder) {
         errors="replace",
         check=False,
         timeout=60,
+        **no_console_kwargs(),
     )
     if completed.returncode != 0:
         return []
