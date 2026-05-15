@@ -5,7 +5,7 @@ from uuid import uuid4
 from python_agent.core.command_executor import CommandExecutor
 from python_agent.core.decision import CommandDecision
 from python_agent.core.logger import ActionLogger
-from python_agent.core.schemas import PipelineOutput, ToolCall
+from python_agent.core.schemas import ArgsPrediction, PipelineOutput, ToolCall
 from python_agent.cpp_client import CppClient
 from python_agent.nlu.argument_extractors.base import ArgumentExtractor
 from python_agent.nlu.normalizer import Normalizer
@@ -192,17 +192,24 @@ class CommandPipeline:
         if meta:
             tool_meta.update(meta)
 
+        effective_args_prediction = self._apply_overlay_target_rewrite(
+            skill=skill_prediction.skill,
+            args_prediction=args_prediction,
+            raw_text=raw_text,
+            meta=tool_meta,
+        )
+
         tool_call = ToolCall(
             request_id=self._new_request_id(),
             skill=skill_prediction.skill,
-            args=args_prediction.args,
+            args=effective_args_prediction.args,
             meta=tool_meta,
         )
         output = PipelineOutput(
             raw_text=raw_text,
             normalized_text=normalized_text,
             skill_prediction=skill_prediction,
-            args_prediction=args_prediction,
+            args_prediction=effective_args_prediction,
             tool_call=tool_call,
         )
         return (
@@ -213,11 +220,62 @@ class CommandPipeline:
                 tool_call=tool_call,
                 debug={
                     "skill_prediction": skill_debug,
-                    "args_prediction": args_debug,
+                    "args_prediction": effective_args_prediction.to_dict(),
                 },
             ),
             output,
         )
+
+    def _apply_overlay_target_rewrite(
+        self,
+        skill: str,
+        args_prediction: ArgsPrediction,
+        raw_text: str,
+        meta: dict[str, object],
+    ) -> ArgsPrediction:
+        args = dict(args_prediction.args)
+        if (
+            skill != "window_control"
+            or args.get("target_type") != "app"
+            or args.get("app_id") != "beavis_dev"
+            or not meta.get("target_hwnd")
+            or self._has_explicit_beavis_target(raw_text)
+        ):
+            return args_prediction
+
+        return ArgsPrediction(
+            args={
+                **{key: value for key, value in args.items() if key != "app_id"},
+                "target_type": "current",
+            },
+            confidence=args_prediction.confidence,
+            missing=[],
+            source=f"{args_prediction.source}_overlay_current",
+        )
+
+    def _has_explicit_beavis_target(self, raw_text: str) -> bool:
+        text = self._strip_leading_wake_word(str(raw_text).lower().strip())
+        beavis_forms = (
+            "beavis",
+            "bavis",
+            "beais",
+            "beaвis",
+            "beavisdev",
+            "beavis dev",
+            "bavis dev",
+            "dev",
+            "бивис",
+            "бывис",
+        )
+        return any(form in text for form in beavis_forms)
+
+    def _strip_leading_wake_word(self, text: str) -> str:
+        for wake_word in ("beavis", "bavis", "бивис", "бывис"):
+            if text == wake_word:
+                return ""
+            if text.startswith(wake_word + " "):
+                return text[len(wake_word):].strip()
+        return text
 
     def _decision_error_message(self, decision: CommandDecision) -> str:
         if decision.reason == "unknown_command":

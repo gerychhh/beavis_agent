@@ -12,7 +12,7 @@ if __package__ is None or __package__ == "":
 
 from python_agent.services.settings_store import UiSettings, UiSettingsStore
 from python_agent.voice.service import build_voice_command_result
-from python_agent.voice.settings import VoiceSettings
+from python_agent.voice.settings import VadSettings, VoiceSettings
 from python_agent.voice.stt import TranscriptionResult, resolve_runtime
 from python_agent.voice.vad import EnergyVad
 from python_agent.voice.wake_word import strip_wake_word
@@ -25,6 +25,7 @@ def check_settings_roundtrip() -> None:
         settings = store.load()
         assert settings.text_hotkey_sequence == "Ctrl+Alt+Space"
         assert settings.voice.hotkey_sequence == "Ctrl+Alt+V"
+        assert settings.voice.vad.start_grace_ms == 3000
 
         changed = UiSettings(
             text_hotkey_enabled=False,
@@ -56,6 +57,8 @@ def check_vad() -> None:
     vad = EnergyVad(VoiceSettings().vad)
     assert not vad.decide(np.zeros(1600, dtype=np.float32)).is_speech
     assert vad.decide(np.ones(1600, dtype=np.float32) * 0.1).is_speech
+    assert VadSettings(start_grace_ms=100).normalized().start_grace_ms == 500
+    assert VadSettings(start_grace_ms=9000).normalized().start_grace_ms == 8000
 
 
 def check_voice_command_result() -> None:

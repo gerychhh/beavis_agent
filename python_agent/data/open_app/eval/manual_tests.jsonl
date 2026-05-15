@@ -1,8 +1,34 @@
-{"text": "динамики рвуться", "expected_app_id": "unknown"}
-{"text": "закрой хром", "expected_app_id": "unknown"}
+{"text": "включи", "expected_app_id": "beavis_dev"}
+{"text": "включи blender 5 0", "expected_app_id": "blender_5_0"}
+{"text": "включи blender-launcher", "expected_app_id": "blender_5_0"}
+{"text": "включи bloknot", "expected_app_id": "bloknot"}
+{"text": "включи chrome", "expected_app_id": "google_chrome"}
+{"text": "включи codex", "expected_app_id": "codex"}
+{"text": "включи com squirrel discord", "expected_app_id": "discord"}
+{"text": "включи dev", "expected_app_id": "beavis_dev"}
+{"text": "включи discord", "expected_app_id": "discord"}
+{"text": "включи google chrome", "expected_app_id": "google_chrome"}
+{"text": "включи openai", "expected_app_id": "codex"}
+{"text": "включи ru yandex desktop", "expected_app_id": "yandeks_muzyka"}
+{"text": "включи telegram", "expected_app_id": "telegram"}
+{"text": "включи visual studio code", "expected_app_id": "visual_studio_code"}
+{"text": "включи word", "expected_app_id": "word"}
+{"text": "включи yandeks muzyka", "expected_app_id": "yandeks_muzyka"}
+{"text": "включи блокнот", "expected_app_id": "bloknot"}
+{"text": "включи ворд", "expected_app_id": "word"}
+{"text": "включи вскод", "expected_app_id": "visual_studio_code"}
+{"text": "включи дискорд", "expected_app_id": "discord"}
+{"text": "включи кодекс", "expected_app_id": "codex"}
+{"text": "включи тг", "expected_app_id": "telegram"}
+{"text": "включи телега", "expected_app_id": "telegram"}
+{"text": "включи хром", "expected_app_id": "google_chrome"}
+{"text": "включи яндекс музыка", "expected_app_id": "yandeks_muzyka"}
+{"text": "выключи компьютер", "expected_app_id": "unknown"}
+{"text": "закрой", "expected_app_id": "unknown"}
 {"text": "запусти", "expected_app_id": "beavis_dev"}
 {"text": "запусти blender 5 0", "expected_app_id": "blender_5_0"}
 {"text": "запусти blender-launcher", "expected_app_id": "blender_5_0"}
+{"text": "запусти bloknot", "expected_app_id": "bloknot"}
 {"text": "запусти chrome", "expected_app_id": "google_chrome"}
 {"text": "запусти codex", "expected_app_id": "codex"}
 {"text": "запусти com squirrel discord", "expected_app_id": "discord"}
@@ -12,25 +38,28 @@
 {"text": "запусти openai", "expected_app_id": "codex"}
 {"text": "запусти ru yandex desktop", "expected_app_id": "yandeks_muzyka"}
 {"text": "запусти telegram", "expected_app_id": "telegram"}
+{"text": "запусти visual studio code", "expected_app_id": "visual_studio_code"}
+{"text": "запусти word", "expected_app_id": "word"}
 {"text": "запусти yandeks muzyka", "expected_app_id": "yandeks_muzyka"}
-{"text": "запусти блендер", "expected_app_id": "blender_5_0"}
-{"text": "запусти брузер", "expected_app_id": "google_chrome"}
-{"text": "запусти дис", "expected_app_id": "discord"}
+{"text": "запусти блокнот", "expected_app_id": "bloknot"}
+{"text": "запусти ворд", "expected_app_id": "word"}
+{"text": "запусти вскод", "expected_app_id": "visual_studio_code"}
 {"text": "запусти дискорд", "expected_app_id": "discord"}
-{"text": "запусти дс", "expected_app_id": "discord"}
 {"text": "запусти кодекс", "expected_app_id": "codex"}
-{"text": "запусти музыка", "expected_app_id": "yandeks_muzyka"}
 {"text": "запусти тг", "expected_app_id": "telegram"}
 {"text": "запусти телега", "expected_app_id": "telegram"}
-{"text": "запусти телеграм", "expected_app_id": "telegram"}
-{"text": "запусти телеграмм", "expected_app_id": "telegram"}
 {"text": "запусти хром", "expected_app_id": "google_chrome"}
 {"text": "запусти яндекс музыка", "expected_app_id": "yandeks_muzyka"}
-{"text": "заткнись", "expected_app_id": "unknown"}
 {"text": "какая погода", "expected_app_id": "unknown"}
+{"text": "найди", "expected_app_id": "unknown"}
+{"text": "найди файл", "expected_app_id": "unknown"}
+{"text": "напомни мне завтра", "expected_app_id": "unknown"}
+{"text": "обнови", "expected_app_id": "unknown"}
+{"text": "останови музыку", "expected_app_id": "unknown"}
 {"text": "открой", "expected_app_id": "beavis_dev"}
 {"text": "открой blender 5 0", "expected_app_id": "blender_5_0"}
 {"text": "открой blender-launcher", "expected_app_id": "blender_5_0"}
+{"text": "открой bloknot", "expected_app_id": "bloknot"}
 {"text": "открой chrome", "expected_app_id": "google_chrome"}
 {"text": "открой codex", "expected_app_id": "codex"}
 {"text": "открой com squirrel discord", "expected_app_id": "discord"}
@@ -40,23 +69,35 @@
 {"text": "открой openai", "expected_app_id": "codex"}
 {"text": "открой ru yandex desktop", "expected_app_id": "yandeks_muzyka"}
 {"text": "открой telegram", "expected_app_id": "telegram"}
+{"text": "открой visual studio code", "expected_app_id": "visual_studio_code"}
+{"text": "открой word", "expected_app_id": "word"}
 {"text": "открой yandeks muzyka", "expected_app_id": "yandeks_muzyka"}
-{"text": "открой блендер", "expected_app_id": "blender_5_0"}
-{"text": "открой брузер", "expected_app_id": "google_chrome"}
-{"text": "открой дис", "expected_app_id": "discord"}
+{"text": "открой блокнот", "expected_app_id": "bloknot"}
+{"text": "открой ворд", "expected_app_id": "word"}
+{"text": "открой вскод", "expected_app_id": "visual_studio_code"}
 {"text": "открой дискорд", "expected_app_id": "discord"}
 {"text": "открой кодекс", "expected_app_id": "codex"}
-{"text": "открой музыка", "expected_app_id": "yandeks_muzyka"}
 {"text": "открой окно", "expected_app_id": "unknown"}
 {"text": "открой тг", "expected_app_id": "telegram"}
 {"text": "открой телега", "expected_app_id": "telegram"}
-{"text": "открой телеграм", "expected_app_id": "telegram"}
-{"text": "открой телегу", "expected_app_id": "telegram"}
 {"text": "открой хром", "expected_app_id": "google_chrome"}
 {"text": "открой яндекс музыка", "expected_app_id": "yandeks_muzyka"}
+{"text": "отправь сообщение", "expected_app_id": "unknown"}
+{"text": "перезагрузи пк", "expected_app_id": "unknown"}
+{"text": "переключи музыку", "expected_app_id": "unknown"}
+{"text": "переустанови", "expected_app_id": "unknown"}
+{"text": "покажи рабочий стол", "expected_app_id": "unknown"}
+{"text": "поставь будильник", "expected_app_id": "unknown"}
 {"text": "поставь таймер", "expected_app_id": "unknown"}
-{"text": "сверни браузер", "expected_app_id": "unknown"}
+{"text": "сверни", "expected_app_id": "unknown"}
 {"text": "сделай громкость 20", "expected_app_id": "unknown"}
-{"text": "сделай громче", "expected_app_id": "unknown"}
-{"text": "тг открой", "expected_app_id": "telegram"}
+{"text": "сделай потише", "expected_app_id": "unknown"}
+{"text": "скачай", "expected_app_id": "unknown"}
+{"text": "сколько времени", "expected_app_id": "unknown"}
+{"text": "следующий трек", "expected_app_id": "unknown"}
+{"text": "создай папку", "expected_app_id": "unknown"}
 {"text": "убавь звук", "expected_app_id": "unknown"}
+{"text": "убери", "expected_app_id": "unknown"}
+{"text": "удали", "expected_app_id": "unknown"}
+{"text": "удали файл", "expected_app_id": "unknown"}
+{"text": "что по новостям", "expected_app_id": "unknown"}

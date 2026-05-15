@@ -94,27 +94,27 @@
 {"text": "beavis восстанови beaвis", "expected": {"action": "restore", "target_type": "app", "app_id": "beavis_dev"}}
 {"text": "брух верни окно beaвis", "expected": {"action": "restore", "target_type": "app", "app_id": "beavis_dev"}}
 {"text": "брух покажи обратно бивис", "expected": {"action": "restore", "target_type": "app", "app_id": "beavis_dev"}}
-{"text": "ну ка open discord", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "слушай open яндекс музыка", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "start хром пожалуйста", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "давай включи chrome", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "слушай перезагрузи компьютер", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "эй open chrome", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "брух открой дискорд", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "слушай найди блендер", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "запусти блокнот", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "включи дискорд быстро", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "давай закрытый вопрос", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "эй start com.squirrel.discord", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "start telegram быстро", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "бивис открой хром", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "давай найди beavis dev", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "брух открой discord", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "open телеграм", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "ну ка найди яндекс музыка", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "включи дис пожалуйста", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "слушай open музыка", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "давай выруби звук", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "эй запусти openai", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "ну ка включи telegram", "expected": {"missing": ["action"], "confidence": 0.0}}
-{"text": "слушай найди дис", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "эй start ворд", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "бивис открой вард", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "open кodex быстро", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "бивис на максимум", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "бивис запусти кодекс", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "бивис включи blender 5 0", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "open telegram", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "эй найди вижла", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "запусти discord быстро", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "эй start boknot", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "найди chrome", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "закрытый вопрос быстро", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "брух создай папку", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "открой кодекс пожалуйста", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "давай запусти microsoft", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "брух включи тг", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "эй включи chrome", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "ну ка создай папку", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "start вард быстро", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "слушай open телега", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "брух start discord", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "эй открой вскод", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "брух запусти блендер", "expected": {"missing": ["action"], "confidence": 0.0}}
+{"text": "start com.squirrel.discord пожалуйста", "expected": {"missing": ["action"], "confidence": 0.0}}

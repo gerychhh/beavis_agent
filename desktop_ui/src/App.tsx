@@ -1,12 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import {
-  isRegistered,
-  register,
-  unregister,
-} from "@tauri-apps/plugin-global-shortcut";
 import { invoke } from "@tauri-apps/api/core";
-import { emitTo } from "@tauri-apps/api/event";
+import { emitTo, listen } from "@tauri-apps/api/event";
 import {
   WebviewWindow,
   getCurrentWebviewWindow,
@@ -209,6 +204,7 @@ type SettingsPayload = {
     };
     vad: {
       sensitivity: number;
+      start_grace_ms: number;
       hotkey_silence_ms: number;
       continuous_silence_ms: number;
       max_utterance_ms: number;
@@ -525,20 +521,6 @@ function normalizeHotkeyForTauri(value: string) {
     .join("+");
 }
 
-function hotkeyVariantsForTauri(value: string) {
-  const normalized = normalizeHotkeyForTauri(value);
-  if (!normalized) return [];
-
-  return Array.from(
-    new Set([
-      normalized,
-      normalized.replace(/\bCommandOrControl\b/g, "CmdOrControl"),
-      normalized.replace(/\bCommandOrControl\b/g, "Ctrl"),
-      normalized.replace(/\bCmdOrControl\b/g, "Ctrl"),
-    ]),
-  ).filter(Boolean);
-}
-
 function formatKeyboardShortcut(event: React.KeyboardEvent<HTMLInputElement>) {
   const key = event.key;
   if (key === "Escape" || key === "Backspace" || key === "Delete") return "";
@@ -569,7 +551,11 @@ const TOAST_GAP = 10;
 const TOAST_MAX_VISIBLE = 4;
 
 type OverlayMode = "command" | "voice";
-type OverlayModePayload = { mode: OverlayMode; activationId: string };
+type OverlayModePayload = {
+  mode: OverlayMode;
+  activationId: string;
+  targetHwnd?: string;
+};
 
 function hasTauriRuntime() {
   const candidate = window as unknown as {
@@ -713,12 +699,30 @@ async function routeExternalToast(toast: Toast) {
   );
 }
 
-async function openGlobalOverlay(mode: OverlayMode) {
+async function openGlobalOverlay(mode: OverlayMode, targetHwnd?: string) {
+  const mainWindow = await WebviewWindow.getByLabel(MAIN_WINDOW_LABEL).catch(
+    () => null,
+  );
+
+  const [wasMainVisible, wasMainMinimized] = await Promise.all([
+    mainWindow?.isVisible().catch(() => true) ?? Promise.resolve(true),
+    mainWindow?.isMinimized().catch(() => false) ?? Promise.resolve(false),
+  ]);
+
+  const shouldKeepMainHidden = !wasMainVisible || wasMainMinimized;
+
+  const keepMainHidden = () => {
+    if (shouldKeepMainHidden) {
+      void mainWindow?.hide().catch(() => {});
+    }
+  };
+
   const bounds = await getWorkAreaBounds();
   const overlayBounds = getOverlayGeometry(mode, bounds);
   const payload: OverlayModePayload = {
     mode,
     activationId: `${Date.now()}_${Math.random().toString(16).slice(2)}`,
+    targetHwnd,
   };
 
   const existing = await WebviewWindow.getByLabel(OVERLAY_WINDOW_LABEL);
@@ -728,8 +732,10 @@ async function openGlobalOverlay(mode: OverlayMode) {
   }
 
   const overlay = new WebviewWindow(OVERLAY_WINDOW_LABEL, {
-    url: overlayUrl(mode),
-    title: "Beavis Overlay",
+    url: `${overlayUrl(mode)}&activation=${encodeURIComponent(payload.activationId)}${
+      targetHwnd ? `&target_hwnd=${encodeURIComponent(targetHwnd)}` : ""
+    }`,
+    title: mode === "command" ? "Beavis Command" : "Beavis Voice",
     x: overlayBounds.x,
     y: overlayBounds.y,
     width: overlayBounds.width,
@@ -738,20 +744,40 @@ async function openGlobalOverlay(mode: OverlayMode) {
     resizable: false,
     skipTaskbar: true,
     alwaysOnTop: true,
+    visibleOnAllWorkspaces: true,
     focus: true,
     visible: true,
     transparent: true,
     shadow: false,
   });
+
   await waitForWindowCreation(overlay);
+
   overlay.setAlwaysOnTop(true).catch(() => {});
   overlay.setVisibleOnAllWorkspaces(true).catch(() => {});
   await overlay.setFocusable(true).catch(() => {});
-  await emitTo(OVERLAY_WINDOW_LABEL, "beavis-overlay-mode", payload).catch(() => {});
+
+  await emitTo(OVERLAY_WINDOW_LABEL, "beavis-overlay-mode", payload).catch(
+    () => {},
+  );
+
   await forceNativeWindowFocus(OVERLAY_WINDOW_LABEL);
   await overlay.setFocus().catch(() => {});
-  window.setTimeout(() => void overlay.setFocus().catch(() => {}), 80);
-  window.setTimeout(() => void forceNativeWindowFocus(OVERLAY_WINDOW_LABEL), 120);
+  keepMainHidden();
+
+  window.setTimeout(() => {
+    void overlay.setFocus().catch(() => {});
+    keepMainHidden();
+  }, 80);
+
+  window.setTimeout(() => {
+    void forceNativeWindowFocus(OVERLAY_WINDOW_LABEL);
+    keepMainHidden();
+  }, 120);
+
+  window.setTimeout(() => {
+    keepMainHidden();
+  }, 220);
 }
 
 async function hideCurrentWindow() {
@@ -838,6 +864,7 @@ let mockSettings: SettingsPayload = {
     },
     vad: {
       sensitivity: 0.012,
+      start_grace_ms: 3000,
       hotkey_silence_ms: 500,
       continuous_silence_ms: 700,
       max_utterance_ms: 7000,
@@ -1046,21 +1073,46 @@ function GlobalToastWindow() {
   );
 }
 
-function SystemOverlayWindow({ initialMode }: { initialMode: OverlayMode }) {
+function SystemOverlayWindow({
+  initialMode,
+  initialActivationId = "initial",
+  initialTargetHwnd,
+}: {
+  initialMode: OverlayMode;
+  initialActivationId?: string;
+  initialTargetHwnd?: string;
+}) {
   const [mode, setMode] = useState<OverlayMode | null>(initialMode);
-  const [activationId, setActivationId] = useState("initial");
+  const [activationId, setActivationId] = useState(initialActivationId);
+  const [targetHwnd, setTargetHwnd] = useState<string | undefined>(
+    initialTargetHwnd,
+  );
   const inputRef = useRef<HTMLInputElement | null>(null);
   // Time of last confirmed OS focus — used to ignore spurious blur events.
   const lastFocusAt = useRef(Date.now());
+  const commandRunningRef = useRef(false);
 
   const close = useCallback(() => {
+    commandRunningRef.current = false;
     setMode(null);
     void destroyCurrentWindow();
   }, []);
 
   const handleBlur = useCallback(() => {
+    if (commandRunningRef.current) return;
     const heldFor = Date.now() - lastFocusAt.current;
     if (heldFor < 180) return;
+    close();
+  }, [close]);
+
+  const beforeCommandRun = useCallback(async () => {
+    commandRunningRef.current = true;
+    await hideCurrentWindow();
+    await sleep(120);
+  }, []);
+
+  const afterCommandRun = useCallback(() => {
+    commandRunningRef.current = false;
     close();
   }, [close]);
 
@@ -1076,6 +1128,7 @@ function SystemOverlayWindow({ initialMode }: { initialMode: OverlayMode }) {
         if (!m) return;
         setMode(m);
         setActivationId(event.payload.activationId || `${Date.now()}`);
+        setTargetHwnd(event.payload.targetHwnd);
         lastFocusAt.current = Date.now();
       })
       .then((u) => cleanups.push(u))
@@ -1155,9 +1208,18 @@ function SystemOverlayWindow({ initialMode }: { initialMode: OverlayMode }) {
         isOpen={mode === "command"}
         activationId={activationId}
         onClose={close}
+        onBeforeRun={beforeCommandRun}
+        onAfterRun={afterCommandRun}
+        targetHwnd={targetHwnd}
         inputRef={inputRef}
       />
-      <VoiceOverlay isOpen={mode === "voice"} onClose={close} />
+      <VoiceOverlay
+        isOpen={mode === "voice"}
+        onClose={close}
+        onBeforeRun={beforeCommandRun}
+        onAfterRun={afterCommandRun}
+        targetHwnd={targetHwnd}
+      />
     </ToastHost>
   );
 }
@@ -3229,7 +3291,16 @@ function SettingsPage() {
               className="w-full accent-white cursor-pointer h-2 bg-white/10 rounded-lg appearance-none"
             />
           </Field>
-          <div className="grid grid-cols-1 items-end gap-3 md:grid-cols-3">
+          <div className="grid grid-cols-1 items-end gap-3 md:grid-cols-4">
+            <Field
+              label="Start delay (ms)"
+              info="РЎРєРѕР»СЊРєРѕ Р¶РґР°С‚СЊ РіРѕР»РѕСЃ РїРѕСЃР»Рµ РѕС‚РєСЂС‹С‚РёСЏ РіРѕР»РѕСЃРѕРІРѕРіРѕ РІРІРѕРґР°."
+            >
+              <NumberField
+                value={settings.voice.vad.start_grace_ms}
+                onChange={(value) => patchVad({ start_grace_ms: value })}
+              />
+            </Field>
             <Field
               label="Hotkey silence (ms)"
               info="Сколько миллисекунд тишины ждать после голосовой команды, запущенной hotkey."
@@ -3268,14 +3339,21 @@ function CommandOverlay({
   isOpen,
   activationId = "initial",
   onClose,
+  onBeforeRun,
+  onAfterRun,
+  targetHwnd,
   inputRef: externalRef,
 }: {
   isOpen: boolean;
   activationId?: string;
   onClose: () => void;
+  onBeforeRun?: () => void | Promise<void>;
+  onAfterRun?: () => void;
+  targetHwnd?: string;
   inputRef?: React.RefObject<HTMLInputElement | null>;
 }) {
   const [query, setQuery] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const internalRef = useRef<HTMLInputElement>(null);
   // Use external ref when provided (SystemOverlayWindow), else own ref.
   const inputRef = (externalRef ?? internalRef) as React.RefObject<HTMLInputElement>;
@@ -3306,18 +3384,34 @@ function CommandOverlay({
 
   const submit = async (event: React.FormEvent) => {
     event.preventDefault();
-    if (!query.trim()) return;
+    if (isSubmitting || !query.trim()) return;
     const command = query.trim();
+    setIsSubmitting(true);
     setQuery("");
-    onClose();
-    const res = await beavisCall("commands.run", {
-      text: command,
-      execute: true,
-      source: "overlay",
-    });
-    res.ok
+    try {
+      await onBeforeRun?.();
+    } catch {
+      // Keep command dispatch alive even if hiding/focus handoff fails.
+    }
+
+    try {
+      const res = await beavisCall("commands.run", {
+        text: command,
+        execute: true,
+        source: "overlay",
+        meta: targetHwnd ? { target_hwnd: targetHwnd } : {},
+      });
+      res.ok
       ? showToast(`Выполнено: ${command}`, "success")
       : showToast(res.error || "Ошибка", "error");
+    } finally {
+      setIsSubmitting(false);
+      if (onAfterRun) {
+        onAfterRun();
+      } else {
+        onClose();
+      }
+    }
   };
 
   if (!isOpen) return null;
@@ -3364,9 +3458,15 @@ function CommandOverlay({
 function VoiceOverlay({
   isOpen,
   onClose,
+  onBeforeRun,
+  onAfterRun,
+  targetHwnd,
 }: {
   isOpen: boolean;
   onClose: () => void;
+  onBeforeRun?: () => void | Promise<void>;
+  onAfterRun?: () => void;
+  targetHwnd?: string;
 }) {
   const [status, setStatus] = useState<"idle" | "listening" | "processing">(
     "idle",
@@ -3387,23 +3487,40 @@ function VoiceOverlay({
     if (voice.ok && voice.data?.command_text) {
       setStatus("processing");
       setTranscript(voice.data.command_text);
+      try {
+        await onBeforeRun?.();
+      } catch {
+        // Keep command dispatch alive even if hiding/focus handoff fails.
+      }
+
       const run = await beavisCall("commands.run", {
         text: voice.data.command_text,
         execute: true,
         source: "voice",
-        meta: voice.data.meta || {},
+        meta: {
+          ...(voice.data.meta || {}),
+          ...(targetHwnd ? { target_hwnd: targetHwnd } : {}),
+        },
       });
       if (run.ok) {
         showToast("Голосовая команда выполнена", "success");
         setTimeout(() => {
-          onClose();
           setStatus("idle");
+          if (onAfterRun) {
+            onAfterRun();
+          } else {
+            onClose();
+          }
         }, 2000);
       } else {
         showToast(run.error || "Ошибка", "error");
         setTimeout(() => {
-          onClose();
           setStatus("idle");
+          if (onAfterRun) {
+            onAfterRun();
+          } else {
+            onClose();
+          }
         }, 1500);
       }
     } else {
@@ -3475,12 +3592,12 @@ function AppShell() {
   const [shellSettings, setShellSettings] = useState<SettingsPayload>(
     cloneJson(defaultSettings),
   );
-  const openCommandOverlay = () => {
+  const openCommandOverlay = (targetHwnd?: string) => {
     if (!hasTauriRuntime()) {
       setCommandOverlayOpen(true);
       return;
     }
-    void openGlobalOverlay("command")
+    void openGlobalOverlay("command", targetHwnd)
       .then(() => setCommandOverlayOpen(false))
       .catch((error) => {
         console.error("[beavis] openGlobalOverlay(command) failed:", error);
@@ -3490,12 +3607,12 @@ function AppShell() {
         ).catch(() => {});
       });
   };
-  const openVoiceOverlay = () => {
+  const openVoiceOverlay = (targetHwnd?: string) => {
     if (!hasTauriRuntime()) {
       setVoiceOverlayOpen(true);
       return;
     }
-    void openGlobalOverlay("voice")
+    void openGlobalOverlay("voice", targetHwnd)
       .then(() => setVoiceOverlayOpen(false))
       .catch((error) => {
         console.error("[beavis] openGlobalOverlay(voice) failed:", error);
@@ -3521,7 +3638,7 @@ function AppShell() {
       const pressed = normalizeHotkeyForTauri(formatKeyboardShortcut(event as any));
       if (
         shellSettings.text_hotkey_enabled &&
-        hotkeyVariantsForTauri(shellSettings.text_hotkey_sequence).includes(pressed)
+        pressed === normalizeHotkeyForTauri(shellSettings.text_hotkey_sequence)
       ) {
         event.preventDefault();
         openCommandOverlay();
@@ -3529,7 +3646,7 @@ function AppShell() {
       if (
         shellSettings.voice.hotkey_enabled &&
         shellSettings.voice.mode !== "off" &&
-        hotkeyVariantsForTauri(shellSettings.voice.hotkey_sequence).includes(pressed)
+        pressed === normalizeHotkeyForTauri(shellSettings.voice.hotkey_sequence)
       ) {
         event.preventDefault();
         openVoiceOverlay();
@@ -3558,62 +3675,18 @@ function AppShell() {
   useEffect(() => { openVoiceOverlayRef.current = openVoiceOverlay; });
 
   useEffect(() => {
-    const registered: string[] = [];
-    let cancelled = false;
-    const bind = async () => {
-      if (!hasTauriRuntime()) return;
-      const shortcuts: { label: string; keys: string[]; action: () => void }[] = [];
-      if (shellSettings.text_hotkey_enabled && shellSettings.text_hotkey_sequence) {
-        shortcuts.push({
-          label: "text",
-          keys: hotkeyVariantsForTauri(shellSettings.text_hotkey_sequence),
-          action: () => openCommandOverlayRef.current(),
-        });
-      }
-      if (
-        shellSettings.voice.hotkey_enabled &&
-        shellSettings.voice.mode !== "off" &&
-        shellSettings.voice.hotkey_sequence
-      ) {
-        shortcuts.push({
-          label: "voice",
-          keys: hotkeyVariantsForTauri(shellSettings.voice.hotkey_sequence),
-          action: () => openVoiceOverlayRef.current(),
-        });
-      }
-
-      for (const item of shortcuts) {
-        let bound = false;
-        for (const key of item.keys) {
-          if (!key || registered.includes(key)) continue;
-          try {
-            try {
-              if (await isRegistered(key)) await unregister(key);
-            } catch {
-              await unregister(key).catch(() => {});
-            }
-
-            await register(key, (event) => {
-              if (!cancelled && event.state === "Pressed") item.action();
-            });
-            registered.push(key);
-            bound = true;
-            console.log("[beavis] registered global shortcut:", item.label, key);
-            break;
-          } catch (error) {
-            console.warn("Failed to register global shortcut variant", item.label, key, error);
-          }
-        }
-        if (!bound) {
-          console.warn("Failed to register global shortcut", item.label, item.keys);
-        }
-      }
-    };
-    void bind();
-    return () => {
-      cancelled = true;
-      for (const key of registered) void unregister(key).catch(() => {});
-    };
+    if (!hasTauriRuntime()) return;
+    void invoke("configure_global_hotkeys", {
+      settings: {
+        text_hotkey_enabled: shellSettings.text_hotkey_enabled,
+        text_hotkey_sequence: shellSettings.text_hotkey_sequence,
+        voice_hotkey_enabled:
+          shellSettings.voice.hotkey_enabled && shellSettings.voice.mode !== "off",
+        voice_hotkey_sequence: shellSettings.voice.hotkey_sequence,
+      },
+    }).catch((error) => {
+      console.warn("[beavis] Rust global hotkey registration failed:", error);
+    });
   }, [
     shellSettings.text_hotkey_enabled,
     shellSettings.text_hotkey_sequence,
@@ -3621,6 +3694,28 @@ function AppShell() {
     shellSettings.voice.hotkey_sequence,
     shellSettings.voice.mode,
   ]);
+
+  useEffect(() => {
+    if (!hasTauriRuntime()) return;
+    let unlisten: (() => void) | undefined;
+    listen<{ kind: "text" | "voice"; shortcut: string; target_hwnd?: string }>("beavis-hotkey", (event) => {
+      if (event.payload.kind === "text") {
+        openCommandOverlayRef.current(event.payload.target_hwnd);
+      } else if (shellSettings.voice.mode !== "off") {
+        openVoiceOverlayRef.current(event.payload.target_hwnd);
+      }
+    })
+      .then((cleanup) => {
+        unlisten = cleanup;
+      })
+      .catch((error) => {
+        console.warn("[beavis] Failed to listen for Rust hotkeys:", error);
+      });
+
+    return () => {
+      unlisten?.();
+    };
+  }, [shellSettings.voice.mode]);
   const nav = [
     { id: "home", label: "Главная", icon: "zap" as IconName },
     { id: "apps", label: "Приложения", icon: "apps" as IconName },
@@ -3682,7 +3777,7 @@ function AppShell() {
               <span className="block h-px w-3 bg-current" />
             </button>
             <button
-              onClick={openCommandOverlay}
+              onClick={() => openCommandOverlay()}
               className="transition hover:text-white hover:scale-110 active:scale-95"
             >
               <Icon name="terminal" size={14} />
@@ -3716,7 +3811,7 @@ function AppShell() {
         <main className="relative z-10 min-h-0 flex-1 overflow-y-auto overflow-x-hidden pb-24 md:pb-10 custom-scrollbar">
           <div key={activeTab}>
             {activeTab === "home" && (
-              <HomePage openVoice={openVoiceOverlay} />
+              <HomePage openVoice={() => openVoiceOverlay()} />
             )}{" "}
             {activeTab === "apps" && <AppsPage />}{" "}
             {activeTab === "history" && <HistoryPage />}{" "}
@@ -3726,7 +3821,7 @@ function AppShell() {
 
         <div className="fixed bottom-6 left-6 z-40 hidden md:flex gap-3 page-enter stagger-5">
           <button
-            onClick={openCommandOverlay}
+            onClick={() => openCommandOverlay()}
             className="group flex items-center gap-2 rounded-2xl border border-white/10 bg-black/60 px-4 py-2.5 text-sm font-medium text-white/60 shadow-[0_10px_30px_rgba(0,0,0,0.5)] backdrop-blur-xl transition-all duration-300 hover:border-white/30 hover:bg-[#111] hover:text-white active:scale-95 hover:-translate-y-1"
           >
             <Icon
@@ -3739,7 +3834,7 @@ function AppShell() {
             </span>
           </button>
           <button
-            onClick={openVoiceOverlay}
+            onClick={() => openVoiceOverlay()}
             className="group flex items-center gap-2 rounded-2xl border border-white/10 bg-black/60 px-4 py-2.5 text-sm font-medium text-white/60 shadow-[0_10px_30px_rgba(0,0,0,0.5)] backdrop-blur-xl transition-all duration-300 hover:border-white/30 hover:bg-[#111] hover:text-white active:scale-95 hover:-translate-y-1"
           >
             <Icon
@@ -3789,10 +3884,17 @@ function AppShell() {
 }
 
 export default function App() {
-  const overlay = new URLSearchParams(window.location.search).get("overlay");
+  const params = new URLSearchParams(window.location.search);
+  const overlay = params.get("overlay");
   if (overlay === "toast") return <GlobalToastWindow />;
   if (overlay === "command" || overlay === "voice") {
-    return <SystemOverlayWindow initialMode={overlay} />;
+    return (
+      <SystemOverlayWindow
+        initialMode={overlay}
+        initialActivationId={params.get("activation") || "initial"}
+        initialTargetHwnd={params.get("target_hwnd") || undefined}
+      />
+    );
   }
   return <AppShell />;
 }

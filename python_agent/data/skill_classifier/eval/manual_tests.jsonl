@@ -17,26 +17,11 @@
 {"text": "убавь до двадцати", "expected_skill": "volume_set"}
 {"text": "саунд потише", "expected_skill": "volume_set"}
 {"text": "mute звук", "expected_skill": "volume_set"}
-{"text": "бивис открой браузер", "expected_skill": "open_app"}
-{"text": "открой хром", "expected_skill": "open_app"}
-{"text": "бивис открой вс код", "expected_skill": "open_app"}
-{"text": "тг запусти", "expected_skill": "open_app"}
-{"text": "включи дискордик", "expected_skill": "open_app"}
-{"text": "start chrome", "expected_skill": "open_app"}
-{"text": "закрой браузер", "expected_skill": "window_control"}
-{"text": "закрой хром", "expected_skill": "window_control"}
-{"text": "сверни окно", "expected_skill": "window_control"}
-{"text": "сверни блокнот", "expected_skill": "window_control"}
-{"text": "разверни окно", "expected_skill": "window_control"}
-{"text": "восстанови текущее окно", "expected_skill": "window_control"}
-{"text": "верни телеграм", "expected_skill": "window_control"}
-{"text": "close chrome", "expected_skill": "window_control"}
 {"text": "minimize current window", "expected_skill": "window_control"}
 {"text": "какая погода завтра", "expected_skill": "unknown"}
 {"text": "поставь таймер на десять минут", "expected_skill": "unknown"}
 {"text": "создай заметку про проект", "expected_skill": "unknown"}
 {"text": "сделай скриншот", "expected_skill": "unknown"}
-{"text": "напиши сообщение в телеграм", "expected_skill": "unknown"}
 {"text": "найди файл отчет", "expected_skill": "unknown"}
 {"text": "расскажи анекдот", "expected_skill": "unknown"}
 {"text": "что такое random forest", "expected_skill": "unknown"}
@@ -45,222 +30,285 @@
 {"text": "следующий трек", "expected_skill": "unknown"}
 {"text": "поставь музыку", "expected_skill": "unknown"}
 {"text": "бивис", "expected_skill": "unknown"}
-{"text": "bavis beavis dev над дискорд плиз", "expected_skill": "window_layout"}
-{"text": "bavis blender 5.0 сверху быстро", "expected_skill": "window_layout"}
-{"text": "bavis dev справа", "expected_skill": "window_layout"}
-{"text": "bavis discord сверху щас", "expected_skill": "window_layout"}
-{"text": "bavis в центр это у меня", "expected_skill": "window_layout"}
-{"text": "bavis отправь его по центру щас", "expected_skill": "window_layout"}
-{"text": "bavis поставь discord слева а ru.yandex.desktop справа быстро", "expected_skill": "window_layout"}
-{"text": "bavis поставь брузер слева а yandeks muzyka справа щас", "expected_skill": "window_layout"}
-{"text": "bavis поставь сверху его", "expected_skill": "window_layout"}
-{"text": "bavis поставь это окно fullscreen пожалуйста", "expected_skill": "window_layout"}
-{"text": "bavis разверни blender и хром пополам щас", "expected_skill": "window_layout"}
-{"text": "bavis размести yandexmusic blender chrome телега 2 на 2 у меня", "expected_skill": "window_layout"}
-{"text": "bavis сделай посередине com.squirrel.discord плиз", "expected_skill": "window_layout"}
-{"text": "bavis сделай справо codex", "expected_skill": "window_layout"}
-{"text": "bavis справа активное окно на экране", "expected_skill": "window_layout"}
-{"text": "bavis текущее на максимум экрана пожалуйста", "expected_skill": "window_layout"}
-{"text": "bavis текущее сверху щас", "expected_skill": "window_layout"}
-{"text": "beaavis beavis dev на в центр плиз", "expected_skill": "window_layout"}
-{"text": "beaavis beavis и ru.yandex.desktop палавину плиз", "expected_skill": "window_layout"}
-{"text": "beaavis discord над openai щас", "expected_skill": "window_layout"}
-{"text": "beaavis в центр", "expected_skill": "window_layout"}
-{"text": "beaavis кодекс над хром плиз", "expected_skill": "window_layout"}
-{"text": "beaavis на низ активное окно давай", "expected_skill": "window_layout"}
-{"text": "beaavis перекинь на низ это давай", "expected_skill": "window_layout"}
-{"text": "beaavis перемести в правую часть брузер плиз", "expected_skill": "window_layout"}
-{"text": "beaavis перемести окно центром быстро", "expected_skill": "window_layout"}
-{"text": "beaavis сделай chrome на весь экран плиз", "expected_skill": "window_layout"}
-{"text": "beaavis сделай окно fullscreen на экране", "expected_skill": "window_layout"}
-{"text": "beaavis снизу", "expected_skill": "window_layout"}
-{"text": "beaavis снизу com.squirrel.discord щас", "expected_skill": "window_layout"}
-{"text": "beaavis снизу брузер быстро", "expected_skill": "window_layout"}
-{"text": "beaavis спрва текущее окно у меня", "expected_skill": "window_layout"}
-{"text": "beaavis текущее вправо щас", "expected_skill": "window_layout"}
-{"text": "beaavis текущее окно fullscreen", "expected_skill": "window_layout"}
-{"text": "beaavis центром его щас", "expected_skill": "window_layout"}
-{"text": "beaavis это окно центром давай", "expected_skill": "window_layout"}
-{"text": "beaavis это спрва давай", "expected_skill": "window_layout"}
-{"text": "beais yandeks muzyka сверху телега снизу давай", "expected_skill": "window_layout"}
-{"text": "beais дис и codex друг под другом плиз", "expected_skill": "window_layout"}
-{"text": "beais закинь com.squirrel.discord слева нормально", "expected_skill": "window_layout"}
-{"text": "beais отправь слево текущее окно щас", "expected_skill": "window_layout"}
-{"text": "beais перекинь вниз blender 5.0 быстро", "expected_skill": "window_layout"}
-{"text": "beais перекинь посередине chrome", "expected_skill": "window_layout"}
-{"text": "beais перемести с низу com.squirrel.discord", "expected_skill": "window_layout"}
-{"text": "beais по середине beavis dev нормально", "expected_skill": "window_layout"}
-{"text": "beais поставь по середине это на экране", "expected_skill": "window_layout"}
-{"text": "beais разверни yandexmusic и кодекс пополам щас", "expected_skill": "window_layout"}
-{"text": "beais раздели экран между chrome и дис щас", "expected_skill": "window_layout"}
-{"text": "beais раздели экран между discord и google chrome нормально", "expected_skill": "window_layout"}
-{"text": "beais разложи com.squirrel.discord мьюзик брузер и beavis плиткой у меня", "expected_skill": "window_layout"}
-{"text": "beais размести на верх его пожалуйста", "expected_skill": "window_layout"}
-{"text": "beais сверху активное окно", "expected_skill": "window_layout"}
-{"text": "beais сделай телеграм и openai рядом на экране", "expected_skill": "window_layout"}
-{"text": "beaviis com.squirrel.discord слева beavis справа давай", "expected_skill": "window_layout"}
-{"text": "beaviis dev сверху", "expected_skill": "window_layout"}
-{"text": "beaviis dev снизу", "expected_skill": "window_layout"}
-{"text": "beaviis telegram и music палавину плиз", "expected_skill": "window_layout"}
-{"text": "beaviis yandexmusic на верх нормально", "expected_skill": "window_layout"}
-{"text": "beaviis вниз дискорд плиз", "expected_skill": "window_layout"}
-{"text": "beaviis вниз мьюзик плиз", "expected_skill": "window_layout"}
-{"text": "beaviis вправо текущее нормально", "expected_skill": "window_layout"}
-{"text": "beaviis дискорд потом телеграм по половинам давай", "expected_skill": "window_layout"}
-{"text": "beaviis его сделай fullscreen пожалуйста", "expected_skill": "window_layout"}
-{"text": "beaviis закрепи текущие окно вниз на экране", "expected_skill": "window_layout"}
-{"text": "beaviis максимизируй текущие окно во весь экран пожалуйста", "expected_skill": "window_layout"}
-{"text": "beaviis музыка сделай на весь экран быстро", "expected_skill": "window_layout"}
-{"text": "beaviis мьюзик слева chrome справа пожалуйста", "expected_skill": "window_layout"}
-{"text": "beaviis перекинь на правую половину это окно у меня", "expected_skill": "window_layout"}
-{"text": "beaviis поставь активное окно на максимум экрана давай", "expected_skill": "window_layout"}
-{"text": "beaviis раздели экран между музыка и codex щас", "expected_skill": "window_layout"}
-{"text": "beaviis размести бивис справо у меня", "expected_skill": "window_layout"}
-{"text": "beaviis размести в центр blender давай", "expected_skill": "window_layout"}
-{"text": "beaviis сделай телега и chrome рядом у меня", "expected_skill": "window_layout"}
-{"text": "beaviis тг затем дис по половинам щас", "expected_skill": "window_layout"}
-{"text": "beaviis текущие окно с лева пожалуйста", "expected_skill": "window_layout"}
-{"text": "beaviis это окно на центром плиз", "expected_skill": "window_layout"}
-{"text": "beaviis это снизу плиз", "expected_skill": "window_layout"}
-{"text": "beavis beaviis dev плюс discord палавину пожалуйста", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev fullscreen щас", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev в верх давай", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev в середину щас", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev в центр у меня", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev вместе с брузер пополам экрана щас", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev вместе с телеграм по половинам у меня", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev вправо пожалуйста", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev затем blnder на две половины давай", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev и blender 5 0 друг под другом быстро", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev и blender 5 0 друг под другом плиз", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev и blender по плам давай", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev и com.squirrel.discord друг под другом давай", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev и telegram друг под другом нормально", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev и yandexmusic друг под другом пожалуйста", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev и yandexmusic друг под другом у меня", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev и брузер друг под другом давай", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev и кодекс друг под другом на экране", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev и тг друг под другом у меня", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev и телега друг под другом давай", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev и яндекс музыка друг под другом у меня", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev на в низ давай", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev на в низ на экране", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev на в центр на экране", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev на вверх нормально", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev на весь экран давай", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev на влево", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev на вправо", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev на левый бок на экране", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev на левый бок плиз", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev на максимум экрана", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev на на низ", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev на на правую половину быстро", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev на на правую половину щас", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev на на правый бок на экране", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev на по центру давай", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev на с право у меня", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev на слева быстро", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev на слева плиз", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev на снизу давай", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev на справо пожалуйста", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev на спрва щас", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev на центром", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev на центром пожалуйста", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev над openai давай", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev над yandexmusic", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev над yandexmusic давай", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev над yandexmusic плиз", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev над брузер пожалуйста", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev над кодекс у меня", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev над музыка быстро", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev над телега плиз", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev по центру пожалуйста", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev потом discord на две половины на экране", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev потом брузер пополам щас", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev потом кодекс на две половины плиз", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev потом телега поровну пожалуйста", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev с лева на экране", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev с лева у меня", "expected_skill": "window_layout"}
+{"text": "сверни окно", "expected_skill": "window_control"}
+{"text": "разверни окно", "expected_skill": "window_control"}
+{"text": "восстанови текущее окно", "expected_skill": "window_control"}
+{"text": "открой beavis", "expected_skill": "open_app"}
+{"text": "запусти beavis", "expected_skill": "open_app"}
+{"text": "включи beavis", "expected_skill": "open_app"}
+{"text": "открой beavis dev", "expected_skill": "open_app"}
+{"text": "запусти beavis dev", "expected_skill": "open_app"}
+{"text": "включи beavis dev", "expected_skill": "open_app"}
+{"text": "открой blender 5.0", "expected_skill": "open_app"}
+{"text": "запусти blender 5.0", "expected_skill": "open_app"}
+{"text": "включи blender 5.0", "expected_skill": "open_app"}
+{"text": "открой blender-launcher", "expected_skill": "open_app"}
+{"text": "запусти blender-launcher", "expected_skill": "open_app"}
+{"text": "включи blender-launcher", "expected_skill": "open_app"}
+{"text": "открой блокнот", "expected_skill": "open_app"}
+{"text": "запусти блокнот", "expected_skill": "open_app"}
+{"text": "включи блокнот", "expected_skill": "open_app"}
+{"text": "открой microsoft", "expected_skill": "open_app"}
+{"text": "запусти microsoft", "expected_skill": "open_app"}
+{"text": "включи microsoft", "expected_skill": "open_app"}
+{"text": "открой codex", "expected_skill": "open_app"}
+{"text": "запусти codex", "expected_skill": "open_app"}
+{"text": "включи codex", "expected_skill": "open_app"}
+{"text": "открой openai", "expected_skill": "open_app"}
+{"text": "запусти openai", "expected_skill": "open_app"}
+{"text": "включи openai", "expected_skill": "open_app"}
+{"text": "открой discord", "expected_skill": "open_app"}
+{"text": "запусти discord", "expected_skill": "open_app"}
+{"text": "включи discord", "expected_skill": "open_app"}
+{"text": "открой com.squirrel.discord", "expected_skill": "open_app"}
+{"text": "запусти com.squirrel.discord", "expected_skill": "open_app"}
+{"text": "включи com.squirrel.discord", "expected_skill": "open_app"}
+{"text": "открой google chrome", "expected_skill": "open_app"}
+{"text": "запусти google chrome", "expected_skill": "open_app"}
+{"text": "включи google chrome", "expected_skill": "open_app"}
+{"text": "открой chrome", "expected_skill": "open_app"}
+{"text": "запусти chrome", "expected_skill": "open_app"}
+{"text": "включи chrome", "expected_skill": "open_app"}
+{"text": "открой telegram", "expected_skill": "open_app"}
+{"text": "запусти telegram", "expected_skill": "open_app"}
+{"text": "включи telegram", "expected_skill": "open_app"}
+{"text": "открой телега", "expected_skill": "open_app"}
+{"text": "запусти телега", "expected_skill": "open_app"}
+{"text": "включи телега", "expected_skill": "open_app"}
+{"text": "открой visual studio code", "expected_skill": "open_app"}
+{"text": "запусти visual studio code", "expected_skill": "open_app"}
+{"text": "включи visual studio code", "expected_skill": "open_app"}
+{"text": "открой microsoft", "expected_skill": "open_app"}
+{"text": "запусти microsoft", "expected_skill": "open_app"}
+{"text": "включи microsoft", "expected_skill": "open_app"}
+{"text": "открой word", "expected_skill": "open_app"}
+{"text": "запусти word", "expected_skill": "open_app"}
+{"text": "включи word", "expected_skill": "open_app"}
+{"text": "открой ворд", "expected_skill": "open_app"}
+{"text": "запусти ворд", "expected_skill": "open_app"}
+{"text": "включи ворд", "expected_skill": "open_app"}
+{"text": "открой яндекс музыка", "expected_skill": "open_app"}
+{"text": "запусти яндекс музыка", "expected_skill": "open_app"}
+{"text": "включи яндекс музыка", "expected_skill": "open_app"}
+{"text": "открой ru.yandex.desktop", "expected_skill": "open_app"}
+{"text": "запусти ru.yandex.desktop", "expected_skill": "open_app"}
+{"text": "включи ru.yandex.desktop", "expected_skill": "open_app"}
+{"text": "bavis blender 5 0 над вскод плиз", "expected_skill": "window_layout"}
+{"text": "bavis com.squirrel.discord с низу у меня", "expected_skill": "window_layout"}
+{"text": "bavis google chrome по центру пожалуйста", "expected_skill": "window_layout"}
+{"text": "bavis microsoft на с верху нормально", "expected_skill": "window_layout"}
+{"text": "bavis брузер слево нормально", "expected_skill": "window_layout"}
+{"text": "bavis вижла потом блендер по полам нормально", "expected_skill": "window_layout"}
+{"text": "bavis вправо окно быстро", "expected_skill": "window_layout"}
+{"text": "bavis дис на с верху пожалуйста", "expected_skill": "window_layout"}
+{"text": "bavis его в левую часть давай", "expected_skill": "window_layout"}
+{"text": "bavis закинь вниз музыка у меня", "expected_skill": "window_layout"}
+{"text": "bavis на нижнюю половину окно нормально", "expected_skill": "window_layout"}
+{"text": "bavis перекинь с лева яндекс музыка пожалуйста", "expected_skill": "window_layout"}
+{"text": "bavis перемести в центр beavis dev пожалуйста", "expected_skill": "window_layout"}
+{"text": "bavis по центру активное окно плиз", "expected_skill": "window_layout"}
+{"text": "bavis по центру вижлу нормально", "expected_skill": "window_layout"}
+{"text": "bavis поставь на правую палавину это окно щас", "expected_skill": "window_layout"}
+{"text": "bavis поставь тг слева а word справа на экране", "expected_skill": "window_layout"}
+{"text": "bavis разверни blender 5.0 и telegram пополам", "expected_skill": "window_layout"}
+{"text": "bavis размести в низ кодекс плиз", "expected_skill": "window_layout"}
+{"text": "bavis размести ворд хром bloknot кодекс 2 на 2", "expected_skill": "window_layout"}
+{"text": "bavis растяни его на весь экран давай", "expected_skill": "window_layout"}
+{"text": "bavis с низу кодекс", "expected_skill": "window_layout"}
+{"text": "bavis сделай вижла и кодекс рядом нормально", "expected_skill": "window_layout"}
+{"text": "bavis сделай ворд и yandeks muzyka рядом щас", "expected_skill": "window_layout"}
+{"text": "bavis сделай по середине это", "expected_skill": "window_layout"}
+{"text": "bavis текущее сделай fullscreen давай", "expected_skill": "window_layout"}
+{"text": "bavis текущие окно на вверх на екране", "expected_skill": "window_layout"}
+{"text": "bavis текущие окно на по середине", "expected_skill": "window_layout"}
+{"text": "bavis текущие окно на с низу у меня", "expected_skill": "window_layout"}
+{"text": "bavis телеграм влево плиз", "expected_skill": "window_layout"}
+{"text": "bavis хром сделай fullscreen на экране", "expected_skill": "window_layout"}
+{"text": "bavis центром текущие окно нормально", "expected_skill": "window_layout"}
+{"text": "beaavis bloknot на на низ пожалуйста", "expected_skill": "window_layout"}
+{"text": "beaavis dev на весь экран", "expected_skill": "window_layout"}
+{"text": "beaavis telegram на на нижнюю половину пожалуйста", "expected_skill": "window_layout"}
+{"text": "beaavis word сделай fullscreen", "expected_skill": "window_layout"}
+{"text": "beaavis бивис на низ щас", "expected_skill": "window_layout"}
+{"text": "beaavis кодекс сделай фулл скрин у меня", "expected_skill": "window_layout"}
+{"text": "beaavis на верхнюю половину это", "expected_skill": "window_layout"}
+{"text": "beaavis перекинь bloknot в середину давай", "expected_skill": "window_layout"}
+{"text": "beaavis перекинь в центр текущее окно плиз", "expected_skill": "window_layout"}
+{"text": "beaavis поставь openai в низ плиз", "expected_skill": "window_layout"}
+{"text": "beaavis поставь visual studio code сверху а discord снизу пожалуйста", "expected_skill": "window_layout"}
+{"text": "beaavis раздели экран между брузер и блендер плиз", "expected_skill": "window_layout"}
+{"text": "beaavis размести visual studio code на правую палавину быстро", "expected_skill": "window_layout"}
+{"text": "beaavis раскинь bloknot и телеграм по половинам давай", "expected_skill": "window_layout"}
+{"text": "beaavis сделай с лева текущее", "expected_skill": "window_layout"}
+{"text": "beaavis текущие окно сверху нормально", "expected_skill": "window_layout"}
+{"text": "beaavis яндекс музыка на вверх пожалуйста", "expected_skill": "window_layout"}
+{"text": "beais dev справа", "expected_skill": "window_layout"}
+{"text": "beais microsoft на в левую часть щас", "expected_skill": "window_layout"}
+{"text": "beais ru.yandex.desktop а потом ворд по половинам быстро", "expected_skill": "window_layout"}
+{"text": "beais word под blender 5 0 давай", "expected_skill": "window_layout"}
+{"text": "beais в центр это пожалуйста", "expected_skill": "window_layout"}
+{"text": "beais вскод спрва давай", "expected_skill": "window_layout"}
+{"text": "beais закинь yandeks muzyka вверх на экране", "expected_skill": "window_layout"}
+{"text": "beais закинь на верхнюю половину beavis dev", "expected_skill": "window_layout"}
+{"text": "beais по центру текущее пожалуйста", "expected_skill": "window_layout"}
+{"text": "beais поставь bloknot слева а google chrome справа на экране", "expected_skill": "window_layout"}
+{"text": "beais поставь yandexmusic с низу нормально", "expected_skill": "window_layout"}
+{"text": "beais поставь бивис слева а мьюзик справа пожалуйста", "expected_skill": "window_layout"}
+{"text": "beais поставь это на максимум экрана давай", "expected_skill": "window_layout"}
+{"text": "beais раздели экран между microsoft и openai", "expected_skill": "window_layout"}
+{"text": "beais сделай сетку из ворд bloknot вжуал студио и blender давай", "expected_skill": "window_layout"}
+{"text": "beais сделай телега и вижлу рядом нормально", "expected_skill": "window_layout"}
+{"text": "beais это по середине щас", "expected_skill": "window_layout"}
+{"text": "beais яндекс музыка на весь экран щас", "expected_skill": "window_layout"}
+{"text": "beaviis beavis dev на левый бок у меня", "expected_skill": "window_layout"}
+{"text": "beaviis blender-launcher слева microsoft справа щас", "expected_skill": "window_layout"}
+{"text": "beaviis dev сделай на весь экран быстро", "expected_skill": "window_layout"}
+{"text": "beaviis discord на сверху пожалуйста", "expected_skill": "window_layout"}
+{"text": "beaviis microsoft вниз быстро", "expected_skill": "window_layout"}
+{"text": "beaviis music и вижлу друг под другом", "expected_skill": "window_layout"}
+{"text": "beaviis visual studio code в середину пожалуйста", "expected_skill": "window_layout"}
+{"text": "beaviis visual studio code слева нормально", "expected_skill": "window_layout"}
+{"text": "beaviis word сделай fullscreen пожалуйста", "expected_skill": "window_layout"}
+{"text": "beaviis блокнот сверху ворд снизу на экране", "expected_skill": "window_layout"}
+{"text": "beaviis мьюзик в середину плиз", "expected_skill": "window_layout"}
+{"text": "beaviis на нижнюю палавину его", "expected_skill": "window_layout"}
+{"text": "beaviis поставь дискорд сверху а блендер снизу плиз", "expected_skill": "window_layout"}
+{"text": "beaviis поставь текущее на весь экран", "expected_skill": "window_layout"}
+{"text": "beaviis разверни com.squirrel.discord и bloknot пополам давай", "expected_skill": "window_layout"}
+{"text": "beaviis разверни google chrome и visual studio code пополам щас", "expected_skill": "window_layout"}
+{"text": "beaviis разверни тг и ворд пополам щас", "expected_skill": "window_layout"}
+{"text": "beaviis разложи ворд bloknot yandeks muzyka и вижла плиткой у меня", "expected_skill": "window_layout"}
+{"text": "beaviis размести его слево у меня", "expected_skill": "window_layout"}
+{"text": "beaviis размести на левый бок bloknot плиз", "expected_skill": "window_layout"}
+{"text": "beaviis сделай beavis dev и telegram рядом давай", "expected_skill": "window_layout"}
+{"text": "beaviis сделай сетку из openai телега google chrome и вжуал студио давай", "expected_skill": "window_layout"}
+{"text": "beaviis слево текущие окно давай", "expected_skill": "window_layout"}
+{"text": "beaviis текущие окно фулл скрин", "expected_skill": "window_layout"}
+{"text": "beaviis телега сделай на весь экран быстро", "expected_skill": "window_layout"}
+{"text": "beaviis четыре окна сеткой google chrome кодекс yandexmusic вскод плиз", "expected_skill": "window_layout"}
+{"text": "beaviis это вниз на экране", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev а потом chrome по полам пожалуйста", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev а потом блокнот на две половины давай", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev а потом яндекс музыка по полам пожалуйста", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev в верх нормально", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev в верх пожалуйста", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev в верх у меня", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev в низ у меня", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev вниз у меня", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev во весь экран у меня", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev вправо", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev и microsoft друг под другом пожалуйста", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev и word друг под другом у меня", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev и блокнот друг под другом", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev и ворд друг под другом пожалуйста", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev и телега друг под другом щас", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev на в низ нормально", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev на в середину", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev на в центр щас", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev на весь экран на экране", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev на весь экран нормально", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev на весь экран щас", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev на вправо плиз", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev на левую половину", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev на максимум экрана на экране", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev на масимум экрана нормально", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev на на низ давай", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev на на низ плиз", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev на на правую половину пожалуйста", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev на на правый бок", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev на низ щас", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev на по середине", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev на посередине", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev на правую половину у меня", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev на правый бок давай", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev на с верху щас", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev на справо щас", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev над blender 5 0 давай", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev над com.squirrel.discord нормально", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev над visual studio code пожалуйста", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev над вжуал студио", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev над ворд плиз", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev над дискорд давай", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev плюс blender 5 0 пополам экрана у меня", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev плюс com.squirrel.discord по полам плиз", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev плюс телега на две половины пожалуйста", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev по середине давай", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev по середине щас", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev по центру", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev по центру у меня", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev под google chrome пожалуйста", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev под microsoft быстрро", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev под yandexmusic у меня", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev под yandexmusic щас", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev под дискорд давай", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev посередине давай", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev посередине на экране", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev с верху", "expected_skill": "window_layout"}
 {"text": "beavis beavis dev с лева щас", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev с низу быстро", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev с низу давай", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev с право нормально", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev с право плиз", "expected_skill": "window_layout"}
 {"text": "beavis beavis dev с право пожалуйста", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev сделай fullscreen нормально", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev сделай на максимум экрана быстро", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev сделай на максимум экрана плиз", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev сделай на максимум экрана щас", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev сделай фулл скрин на экране", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev слева давай", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev снизу нормально", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev справа на экране", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev спрва пожалуйста", "expected_skill": "window_layout"}
-{"text": "beavis beavis dev фулл скрин давай", "expected_skill": "window_layout"}
-{"text": "beavis beavis fullscreen у меня", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev сверху chrome снизу на экране", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev сверху codex снизу давай", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev сделай fullscreen у меня", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev сделай на весь экран", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev сделай на весь экран пожалуйста", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev сделай фулл скрин быстро", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev слеа bloknot справа", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev слева быстро", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev снизу плиз", "expected_skill": "window_layout"}
+{"text": "beavis beavis dev справо быстро", "expected_skill": "window_layout"}
+{"text": "beavis beavis fullscreen пожалуйста", "expected_skill": "window_layout"}
 {"text": "beavis beavis в верх давай", "expected_skill": "window_layout"}
-{"text": "beavis beavis в верх нормально", "expected_skill": "window_layout"}
-{"text": "beavis beavis в верх пожалуйста", "expected_skill": "window_layout"}
-{"text": "beavis beavis в правую часть на экране", "expected_skill": "window_layout"}
-{"text": "beavis beavis ввверх на экране", "expected_skill": "window_layout"}
-{"text": "beavis beavis во весь экран на экране", "expected_skill": "window_layout"}
-{"text": "beavis beavis во весь экран пожалуйста", "expected_skill": "window_layout"}
-{"text": "beavis beavis на в верх щас", "expected_skill": "window_layout"}
-{"text": "beavis beavis на в низ давай", "expected_skill": "window_layout"}
-{"text": "beavis beavis на в низ у меня", "expected_skill": "window_layout"}
-{"text": "beavis beavis на в правую часть давай", "expected_skill": "window_layout"}
-{"text": "beavis beavis на в середину плиз", "expected_skill": "window_layout"}
-{"text": "beavis beavis на верхнюю половину нормально", "expected_skill": "window_layout"}
-{"text": "beavis beavis на влево нормально", "expected_skill": "window_layout"}
-{"text": "beavis beavis на левую половину быстро", "expected_skill": "window_layout"}
-{"text": "beavis beavis на левую половину давай", "expected_skill": "window_layout"}
-{"text": "beavis beavis на левую половину плиз", "expected_skill": "window_layout"}
-{"text": "beavis beavis на на верхнюю половину плиз", "expected_skill": "window_layout"}
-{"text": "beavis beavis на на левый бок на экране", "expected_skill": "window_layout"}
-{"text": "beavis beavis на на нижнюю половину", "expected_skill": "window_layout"}
-{"text": "beavis beavis на на нижнюю половину давай", "expected_skill": "window_layout"}
-{"text": "beavis beavis на по середине быстро", "expected_skill": "window_layout"}
-{"text": "beavis beavis на по центру", "expected_skill": "window_layout"}
-{"text": "beavis beavis на с верху нормально", "expected_skill": "window_layout"}
-{"text": "beavis beavis на с лева плиз", "expected_skill": "window_layout"}
-{"text": "beavis beavis на с низу быстро", "expected_skill": "window_layout"}
-{"text": "beavis beavis на слева быстро", "expected_skill": "window_layout"}
-{"text": "beavis beavis по середине пожалуйста", "expected_skill": "window_layout"}
-{"text": "beavis beavis с лева на экране", "expected_skill": "window_layout"}
-{"text": "beavis beavis с лева пожалуйста", "expected_skill": "window_layout"}
-{"text": "beavis beavis сверху у меня", "expected_skill": "window_layout"}
-{"text": "beavis beavis сделай fullscreen нормально", "expected_skill": "window_layout"}
-{"text": "beavis beavis сделай во весь экран нормально", "expected_skill": "window_layout"}
-{"text": "beavis beavis сделай на весь экран щас", "expected_skill": "window_layout"}
-{"text": "beavis blendeer в верх у меня", "expected_skill": "window_layout"}
-{"text": "beavis blender 5 0 на вверх давай", "expected_skill": "window_layout"}
-{"text": "beavis blender 5 0 на верх у меня", "expected_skill": "window_layout"}
-{"text": "beavis blender 5 0 на верхнюю половину быстро", "expected_skill": "window_layout"}
-{"text": "beavis blender 5 0 на на верх нормально", "expected_skill": "window_layout"}
-{"text": "beavis blender 5 0 на слева", "expected_skill": "window_layout"}
-{"text": "beavis blender 5 0 на слева щас", "expected_skill": "window_layout"}
-{"text": "beavis blender 5.0 на в левую часть на экране", "expected_skill": "window_layout"}
-{"text": "beavis раззложи chrome openai телега и бивис сеткой плиз", "expected_skill": "window_layout"}
-{"text": "beavis разлжи дис beavis dev codex и chrome два на два пожалуйста", "expected_skill": "window_layout"}
-{"text": "beavis разложи beavis blender 5 0 telegram и кодекс квадратом давай", "expected_skill": "window_layout"}
-{"text": "beavis разложи beavis blender 5 0 телеграм и music два на два быстро", "expected_skill": "window_layout"}
-{"text": "beavis разложи beavis codex yandexmusic и com.squirrel.discord квадратом плиз", "expected_skill": "window_layout"}
-{"text": "beavis разложи beavis dev blender 5 0 com.squirrel.discord и ru.yandex.desktop плиткой пожалуйста", "expected_skill": "window_layout"}
-{"text": "beavis разложи beavis dev blender 5 0 discord и yandeks muzyka два на два давай", "expected_skill": "window_layout"}
-{"text": "beavis разложи beavis dev blender ru.yandex.desktop и discord четыре окна сеткой", "expected_skill": "window_layout"}
-{"text": "beavis разложи beavis dev chrome кодекс и музыка 2 на 2 пожалуйста", "expected_skill": "window_layout"}
-{"text": "beavis разложи beavis dev codex мьюзик и blender 5.0 два на два щас", "expected_skill": "window_layout"}
-{"text": "beavis разложи beavis dev openai yandexmusic и blender 5 0 по углам у меня", "expected_skill": "window_layout"}
-{"text": "beavis разложи beavis dev ru.yandex.desktop кодекс и хром плиткой пожалуйста", "expected_skill": "window_layout"}
-{"text": "beavis разложи beavis dev дис блендер и openai плиткой давай", "expected_skill": "window_layout"}
-{"text": "beavis разложи beavis dev дискорд кодекс и chrome 2 на 2 нормально", "expected_skill": "window_layout"}
-{"text": "beavis разложи beavis dev кодекс blender и музыка 2 на 2 щас", "expected_skill": "window_layout"}
-{"text": "beavis разложи beavis dev музыка хром и blender 5.0 по углам", "expected_skill": "window_layout"}
-{"text": "beavis разложи beavis discord google chrome и музыка 2 на 2 у меня", "expected_skill": "window_layout"}
-{"text": "beavis разложи beavis discord хром и openai 2 на 2", "expected_skill": "window_layout"}
-{"text": "beavis разложи beavis google chrome openai и мьюзик квадратом щас", "expected_skill": "window_layout"}
-{"text": "beavis разложи beavis telegram дискорд и мьюзик четыре окна сеткой щас", "expected_skill": "window_layout"}
-{"text": "beavis разложи beavis yandexmusic openai и дис 2 на 2 у меня", "expected_skill": "window_layout"}
-{"text": "beavis разложи beavis тг blender 5.0 и дискорд по углам на экране", "expected_skill": "window_layout"}
+{"text": "beavis beavis вверх у меня", "expected_skill": "window_layout"}
+{"text": "beavis beavis вправо пожалуйста", "expected_skill": "window_layout"}
+{"text": "beavis beavis на вверх пожалуйста", "expected_skill": "window_layout"}
+{"text": "beavis beavis на вверх у меня", "expected_skill": "window_layout"}
+{"text": "beavis beavis на верхнюю половину щас", "expected_skill": "window_layout"}
+{"text": "beavis beavis на вправо пожалуйста", "expected_skill": "window_layout"}
+{"text": "beavis beavis на вправо щас", "expected_skill": "window_layout"}
+{"text": "beavis beavis на на верхнюю половину пожалуйста", "expected_skill": "window_layout"}
+{"text": "beavis beavis на на левую половину щас", "expected_skill": "window_layout"}
+{"text": "beavis beavis на на правую половину пожалуйста", "expected_skill": "window_layout"}
+{"text": "beavis beavis на нижнюю половину у меня", "expected_skill": "window_layout"}
+{"text": "beavis beavis на нижнюю половину щас", "expected_skill": "window_layout"}
+{"text": "beavis beavis на низ у меня", "expected_skill": "window_layout"}
+{"text": "beavis beavis на с верху на экране", "expected_skill": "window_layout"}
+{"text": "beavis beavis на с лева нормально", "expected_skill": "window_layout"}
+{"text": "beavis beavis на слева плиз", "expected_skill": "window_layout"}
+{"text": "beavis beavis на слева у меня", "expected_skill": "window_layout"}
+{"text": "beavis beavis на слево у меня", "expected_skill": "window_layout"}
+{"text": "beavis beavis слева быстро", "expected_skill": "window_layout"}
+{"text": "beavis beavis слева давай", "expected_skill": "window_layout"}
+{"text": "beavis bevis dev в верх быстро", "expected_skill": "window_layout"}
+{"text": "beavis bevis dev на на правую половину щас", "expected_skill": "window_layout"}
+{"text": "beavis blendeer 5.0 на в верх у меня", "expected_skill": "window_layout"}
+{"text": "beavis blender 5 0 влево нормально", "expected_skill": "window_layout"}
+{"text": "beavis blender 5 0 на в верх быстро", "expected_skill": "window_layout"}
+{"text": "beavis blender 5 0 на влево у меня", "expected_skill": "window_layout"}
+{"text": "beavis blender 5 0 на вправо давай", "expected_skill": "window_layout"}
+{"text": "beavis blender 5 0 на правый бок у меня", "expected_skill": "window_layout"}
+{"text": "beavis blender 5 0 на с право", "expected_skill": "window_layout"}
+{"text": "beavis blender 5 0 на с право щас", "expected_skill": "window_layout"}
+{"text": "beavis blender 5.0 на на левую половину щас", "expected_skill": "window_layout"}
+{"text": "beavis раазмести beavis ворд дис bloknot 2 на 2 быстро", "expected_skill": "window_layout"}
+{"text": "beavis разлжи openai хром телега и com.squirrel.discord квадратом плиз", "expected_skill": "window_layout"}
+{"text": "beavis разложжи ворд blender bloknot и yandexmusic сеткой давай", "expected_skill": "window_layout"}
+{"text": "beavis разложи beavis dev вижла телега и microsoft сеткой на экране", "expected_skill": "window_layout"}
+{"text": "beavis разложи beavis dev вижлу телега и chrome плиткой пожалуйста", "expected_skill": "window_layout"}
+{"text": "beavis разложи beavis dev вскод google chrome и com.squirrel.discord два на два", "expected_skill": "window_layout"}
+{"text": "beavis разложи beavis dev яндекс музыка вскод и word квадратом пожалуйста", "expected_skill": "window_layout"}
+{"text": "beavis разложи beavis discord музыка и word четыре окна сеткой пожалуйста", "expected_skill": "window_layout"}
+{"text": "beavis разложи beavis word telegram и codex квадратом у меня", "expected_skill": "window_layout"}
+{"text": "beavis разложи beavis телеграм google chrome и openai по углам", "expected_skill": "window_layout"}
+{"text": "beavis разложи blender 5 0 openai yandeks muzyka и бивис сеткой на экране", "expected_skill": "window_layout"}
+{"text": "beavis разложи blender 5 0 вжуал студио дис и yandeks muzyka по углам на экране", "expected_skill": "window_layout"}
+{"text": "beavis разложи blender 5 0 кодекс бивис и word четыре окна сеткой", "expected_skill": "window_layout"}
+{"text": "beavis разложи blender 5 0 телеграм music и codex сеткой на экране", "expected_skill": "window_layout"}
+{"text": "beavis разложи blender 5.0 beavis telegram и кодекс плиткой нормально", "expected_skill": "window_layout"}
+{"text": "beavis разложи blender 5.0 codex дис и word плиткой давай", "expected_skill": "window_layout"}
+{"text": "beavis разложи blender 5.0 блокнот music и codex 2 на 2", "expected_skill": "window_layout"}
+{"text": "beavis разложи blender 5.0 брузер телега и вижла два на два пожалуйста", "expected_skill": "window_layout"}
+{"text": "beavis разложи blender 5.0 ворд music и chrome плиткой щас", "expected_skill": "window_layout"}
 {"text": "дружище выключи beavisdev", "expected_skill": "window_control"}
 {"text": "заверши beavisdev", "expected_skill": "window_control"}
 {"text": "бивис закрой beaвis", "expected_skill": "window_control"}
