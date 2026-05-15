@@ -1,13 +1,19 @@
 from __future__ import annotations
 
-from dataclasses import replace
-
 from python_agent.nlu.argument_extractors.base import ArgumentExtractor
-from python_agent.skills.open_app.spec import SPEC as OPEN_APP
+from python_agent.skills.open_app.examples import EXAMPLES as OPEN_APP_EXAMPLES
+from python_agent.skills.open_app.extractor import OpenAppExtractor
+from python_agent.skills.open_app.spec import SPEC as OPEN_APP_SPEC
 from python_agent.skills.spec import SkillSpec
-from python_agent.skills.volume_set.spec import SPEC as VOLUME_SET
-from python_agent.skills.window_control.spec import SPEC as WINDOW_CONTROL
-from python_agent.skills.window_layout.spec import SPEC as WINDOW_LAYOUT
+from python_agent.skills.volume_set.examples import EXAMPLES as VOLUME_SET_EXAMPLES
+from python_agent.skills.volume_set.extractor import VolumeSetExtractor
+from python_agent.skills.volume_set.spec import SPEC as VOLUME_SET_SPEC
+from python_agent.skills.window_control.examples import EXAMPLES as WINDOW_CONTROL_EXAMPLES
+from python_agent.skills.window_control.extractor import WindowControlExtractor
+from python_agent.skills.window_control.spec import SPEC as WINDOW_CONTROL_SPEC
+from python_agent.skills.window_layout.examples import EXAMPLES as WINDOW_LAYOUT_EXAMPLES
+from python_agent.skills.window_layout.extractor import WindowLayoutExtractor
+from python_agent.skills.window_layout.spec import SPEC as WINDOW_LAYOUT_SPEC
 
 
 class SkillRegistry:
@@ -33,11 +39,56 @@ def build_skill_registry(
 ) -> SkillRegistry:
     registry = SkillRegistry()
 
-    for spec in (OPEN_APP, VOLUME_SET, WINDOW_CONTROL, WINDOW_LAYOUT):
+    for spec in _fresh_specs():
         if not spec.enabled:
             continue
         if extractors and spec.name in extractors:
-            spec = replace(spec, extractor=extractors[spec.name])
+            spec = _copy_spec_with_extractor(spec, extractors[spec.name])
         registry.register(spec)
 
     return registry
+
+
+def _fresh_specs() -> tuple[SkillSpec, ...]:
+    return (
+        _copy_spec_with_extractor(
+            _copy_spec_with_examples(OPEN_APP_SPEC, OPEN_APP_EXAMPLES),
+            OpenAppExtractor(),
+        ),
+        _copy_spec_with_extractor(
+            _copy_spec_with_examples(VOLUME_SET_SPEC, VOLUME_SET_EXAMPLES),
+            VolumeSetExtractor(),
+        ),
+        _copy_spec_with_extractor(
+            _copy_spec_with_examples(WINDOW_CONTROL_SPEC, WINDOW_CONTROL_EXAMPLES),
+            WindowControlExtractor(),
+        ),
+        _copy_spec_with_extractor(
+            _copy_spec_with_examples(WINDOW_LAYOUT_SPEC, WINDOW_LAYOUT_EXAMPLES),
+            WindowLayoutExtractor(),
+        ),
+    )
+
+
+def _copy_spec_with_examples(spec: SkillSpec, examples: list[dict]) -> SkillSpec:
+    return SkillSpec(
+        name=spec.name,
+        description=spec.description,
+        risk=spec.risk,
+        extractor=spec.extractor,
+        args=list(spec.args),
+        examples=examples,
+        enabled=spec.enabled,
+    )
+
+
+def _copy_spec_with_extractor(spec: SkillSpec, extractor: ArgumentExtractor) -> SkillSpec:
+    return SkillSpec(
+        name=spec.name,
+        description=spec.description,
+        risk=spec.risk,
+        extractor=extractor,
+        args=list(spec.args),
+        examples=list(spec.examples),
+        enabled=spec.enabled,
+    )

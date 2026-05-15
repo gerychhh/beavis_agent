@@ -1,35 +1,271 @@
 mod bridge;
 
 use serde::{Deserialize, Serialize};
-use std::sync::Mutex;
+use std::{
+    sync::Mutex,
+    thread,
+    time::{Duration, SystemTime, UNIX_EPOCH},
+};
 use tauri::{
     menu::{Menu, MenuItem},
     tray::{MouseButton, MouseButtonState, TrayIconBuilder, TrayIconEvent},
-    Emitter, Manager,
+    Emitter, Manager, WebviewUrl, WebviewWindowBuilder,
 };
 use tauri_plugin_global_shortcut::{
     Code, GlobalShortcutExt, Modifiers, Shortcut, ShortcutState,
 };
 
+const MAIN_WINDOW_LABEL: &str = "main";
+const OVERLAY_WINDOW_LABEL: &str = "beavis_overlay";
+
 #[cfg(windows)]
 use windows::Win32::{
+    Foundation::HWND,
     System::Threading::{AttachThreadInput, GetCurrentThreadId},
     UI::{
         WindowsAndMessaging::{
-            AllowSetForegroundWindow, BringWindowToTop, GetForegroundWindow,
-            GetWindowThreadProcessId, SetForegroundWindow, SetWindowPos, ShowWindow,
-            SwitchToThisWindow, HWND_TOPMOST, SWP_NOMOVE, SWP_NOSIZE, SWP_SHOWWINDOW,
-            SW_RESTORE, SW_SHOW,
+            AllowSetForegroundWindow, BringWindowToTop, GetForegroundWindow, GetWindowLongW,
+            GetWindowTextLengthW, GetWindowThreadProcessId, IsWindow, IsWindowVisible,
+            SetForegroundWindow, SetWindowPos, ShowWindow, SwitchToThisWindow, GWL_EXSTYLE,
+            HWND_TOPMOST, SWP_NOMOVE, SWP_NOSIZE, SWP_SHOWWINDOW, SW_RESTORE, SW_SHOW,
+            WS_EX_TOOLWINDOW,
         },
     },
 };
 
 fn show_main_window(app: &tauri::AppHandle) {
-    if let Some(window) = app.get_webview_window("main") {
+    if let Some(window) = app.get_webview_window(MAIN_WINDOW_LABEL) {
         let _ = window.show();
         let _ = window.unminimize();
         let _ = window.set_focus();
     }
+}
+
+#[derive(Clone, Copy)]
+struct WorkAreaBounds {
+    x: f64,
+    y: f64,
+    width: f64,
+    height: f64,
+}
+
+#[derive(Clone, Copy)]
+struct OverlayGeometry {
+    x: f64,
+    y: f64,
+    width: f64,
+    height: f64,
+}
+
+fn activation_id() -> String {
+    let millis = SystemTime::now()
+        .duration_since(UNIX_EPOCH)
+        .map(|duration| duration.as_millis())
+        .unwrap_or(0);
+    format!("hotkey_{millis}")
+}
+
+fn overlay_mode_for_hotkey(kind: &str) -> &'static str {
+    if kind == "voice" {
+        "voice"
+    } else {
+        "command"
+    }
+}
+
+fn overlay_url(mode: &str, activation_id: &str, target_hwnd: Option<&str>) -> String {
+    let mut url = format!("index.html?overlay={mode}&activation={activation_id}");
+    if let Some(hwnd) = target_hwnd {
+        url.push_str("&target_hwnd=");
+        url.push_str(hwnd);
+    }
+    url
+}
+
+fn work_area_bounds(app: &tauri::AppHandle) -> WorkAreaBounds {
+    let monitor = app
+        .get_webview_window(MAIN_WINDOW_LABEL)
+        .and_then(|window| window.current_monitor().ok().flatten())
+        .or_else(|| app.primary_monitor().ok().flatten())
+        .or_else(|| {
+            app.available_monitors()
+                .ok()
+                .and_then(|monitors| monitors.into_iter().next())
+        });
+
+    if let Some(monitor) = monitor {
+        let work_area = monitor.work_area();
+        let scale = monitor.scale_factor();
+        return WorkAreaBounds {
+            x: f64::from(work_area.position.x) / scale,
+            y: f64::from(work_area.position.y) / scale,
+            width: f64::from(work_area.size.width) / scale,
+            height: f64::from(work_area.size.height) / scale,
+        };
+    }
+
+    WorkAreaBounds {
+        x: 0.0,
+        y: 0.0,
+        width: 1280.0,
+        height: 720.0,
+    }
+}
+
+fn overlay_geometry(mode: &str, bounds: WorkAreaBounds) -> OverlayGeometry {
+    let preferred_width: f64 = if mode == "command" { 760.0 } else { 320.0 };
+    let preferred_height: f64 = if mode == "command" { 72.0 } else { 234.0 };
+    let width = preferred_width.min(bounds.width - 24.0).max(240.0);
+    let height = preferred_height.min(bounds.height - 24.0).max(72.0);
+    let preferred_y = bounds.y + 48.0_f64.max(bounds.height * 0.22);
+    let max_y = bounds.y + (bounds.height - height - 24.0).max(12.0);
+
+    OverlayGeometry {
+        x: bounds.x + ((bounds.width - width) / 2.0).round(),
+        y: preferred_y.min(max_y).round(),
+        width,
+        height,
+    }
+}
+
+fn create_overlay_window(
+    app: &tauri::AppHandle,
+    mode: &str,
+    target_hwnd: Option<&str>,
+) -> Result<(), String> {
+    if let Some(existing) = app.get_webview_window(OVERLAY_WINDOW_LABEL) {
+        let _ = existing.destroy().or_else(|_| existing.close());
+        thread::sleep(Duration::from_millis(120));
+    }
+
+    let activation_id = activation_id();
+    let geometry = overlay_geometry(mode, work_area_bounds(app));
+    let title = if mode == "command" {
+        "Beavis Command"
+    } else {
+        "Beavis Voice"
+    };
+
+    let overlay = WebviewWindowBuilder::new(
+        app,
+        OVERLAY_WINDOW_LABEL,
+        WebviewUrl::App(overlay_url(mode, &activation_id, target_hwnd).into()),
+    )
+    .title(title)
+    .position(geometry.x, geometry.y)
+    .inner_size(geometry.width, geometry.height)
+    .decorations(false)
+    .resizable(false)
+    .skip_taskbar(true)
+    .always_on_top(true)
+    .visible_on_all_workspaces(true)
+    .focused(true)
+    .focusable(true)
+    .visible(true)
+    .transparent(true)
+    .shadow(false)
+    .build()
+    .map_err(|error| error.to_string())?;
+
+    let _ = overlay.set_always_on_top(true);
+    let _ = overlay.set_visible_on_all_workspaces(true);
+    let _ = overlay.set_focusable(true);
+    force_focus_webview_window(&overlay)
+}
+
+#[cfg(windows)]
+fn hwnd_token(hwnd: HWND) -> String {
+    (hwnd.0 as usize).to_string()
+}
+
+#[cfg(windows)]
+fn is_user_window(hwnd: HWND) -> bool {
+    if hwnd.is_invalid() {
+        return false;
+    }
+
+    unsafe {
+        if !IsWindow(Some(hwnd)).as_bool() || !IsWindowVisible(hwnd).as_bool() {
+            return false;
+        }
+
+        let ex_style = GetWindowLongW(hwnd, GWL_EXSTYLE) as u32;
+        if (ex_style & WS_EX_TOOLWINDOW.0) != 0 {
+            return false;
+        }
+
+        if GetWindowTextLengthW(hwnd) <= 0 {
+            return false;
+        }
+
+        let mut process_id = 0u32;
+        GetWindowThreadProcessId(hwnd, Some(&mut process_id));
+        process_id != 0 && process_id != std::process::id()
+    }
+}
+
+#[cfg(windows)]
+fn foreground_user_hwnd_token() -> Option<String> {
+    let hwnd = unsafe { GetForegroundWindow() };
+    is_user_window(hwnd).then(|| hwnd_token(hwnd))
+}
+
+#[cfg(not(windows))]
+fn foreground_user_hwnd_token() -> Option<String> {
+    None
+}
+
+#[cfg(windows)]
+fn last_active_user_hwnd_token(app: &tauri::AppHandle) -> Option<String> {
+    if let Some(hwnd) = foreground_user_hwnd_token() {
+        if let Ok(mut state) = app.state::<Mutex<ActiveWindowState>>().lock() {
+            state.last_user_hwnd = Some(hwnd.clone());
+        }
+        return Some(hwnd);
+    }
+
+    app.state::<Mutex<ActiveWindowState>>()
+        .lock()
+        .ok()
+        .and_then(|state| state.last_user_hwnd.clone())
+}
+
+#[cfg(not(windows))]
+fn last_active_user_hwnd_token(_app: &tauri::AppHandle) -> Option<String> {
+    None
+}
+
+#[cfg(windows)]
+fn spawn_active_window_tracker(app: tauri::AppHandle) {
+    thread::spawn(move || loop {
+        if let Some(hwnd) = foreground_user_hwnd_token() {
+            if let Ok(mut state) = app.state::<Mutex<ActiveWindowState>>().lock() {
+                state.last_user_hwnd = Some(hwnd);
+            }
+        }
+        thread::sleep(Duration::from_millis(150));
+    });
+}
+
+#[cfg(not(windows))]
+fn spawn_active_window_tracker(_app: tauri::AppHandle) {}
+
+fn open_overlay_from_hotkey(app: tauri::AppHandle, kind: String, shortcut: String) {
+    let target_hwnd = last_active_user_hwnd_token(&app);
+    thread::spawn(move || {
+        let mode = overlay_mode_for_hotkey(&kind);
+        if create_overlay_window(&app, mode, target_hwnd.as_deref()).is_err() {
+            let _ = app.emit_to(
+                MAIN_WINDOW_LABEL,
+                "beavis-hotkey",
+                BeavisHotkeyEvent {
+                    kind,
+                    shortcut,
+                    target_hwnd,
+                },
+            );
+        }
+    });
 }
 
 #[cfg(windows)]
@@ -95,6 +331,11 @@ struct HotkeyState {
     registered: Vec<Shortcut>,
 }
 
+#[derive(Default)]
+struct ActiveWindowState {
+    last_user_hwnd: Option<String>,
+}
+
 #[derive(Debug, Deserialize)]
 struct GlobalHotkeySettings {
     text_hotkey_enabled: bool,
@@ -107,6 +348,7 @@ struct GlobalHotkeySettings {
 struct BeavisHotkeyEvent {
     kind: String,
     shortcut: String,
+    target_hwnd: Option<String>,
 }
 
 #[derive(Serialize)]
@@ -178,14 +420,10 @@ fn register_first_available_hotkey(
         let app_for_handler = app.clone();
         match app.global_shortcut().on_shortcut(shortcut, move |_app, _shortcut, event| {
             if event.state == ShortcutState::Pressed {
-                show_main_window(&app_for_handler);
-                let _ = app_for_handler.emit_to(
-                    "main",
-                    "beavis-hotkey",
-                    BeavisHotkeyEvent {
-                        kind: emit_kind.clone(),
-                        shortcut: emit_shortcut.clone(),
-                    },
+                open_overlay_from_hotkey(
+                    app_for_handler.clone(),
+                    emit_kind.clone(),
+                    emit_shortcut.clone(),
                 );
             }
         }) {
@@ -410,6 +648,7 @@ pub fn run() {
         .plugin(tauri_plugin_global_shortcut::Builder::new().build())
         .manage(bridge::BridgeState::default())
         .manage(Mutex::new(HotkeyState::default()))
+        .manage(Mutex::new(ActiveWindowState::default()))
         .invoke_handler(tauri::generate_handler![
             bridge::beavis_call,
             force_focus_window,
@@ -417,6 +656,7 @@ pub fn run() {
         ])
         .setup(|app| {
             build_tray(app)?;
+            spawn_active_window_tracker(app.handle().clone());
             Ok(())
         })
         .on_window_event(|window, event| {

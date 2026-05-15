@@ -58,6 +58,7 @@ SkillResult Executor::execute(const nlohmann::json& input) {
     }
 
     try {
+        context_.toolMeta = call.meta;
         SkillResult result = skill->execute(call.args, context_);
         result.requestId = call.requestId;
         result.skill = call.skill;

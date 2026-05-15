@@ -91,14 +91,38 @@ public:
         return scalarToPercent(scalar);
     }
 
+    bool isMuted() const {
+        BOOL muted = FALSE;
+        const HRESULT hr = volume_->GetMute(&muted);
+        if (FAILED(hr)) {
+            throw std::runtime_error("Failed to read mute state");
+        }
+
+        return muted != FALSE;
+    }
+
+    void setMuted(bool muted) {
+        const HRESULT hr = volume_->SetMute(muted ? TRUE : FALSE, nullptr);
+        if (FAILED(hr)) {
+            throw std::runtime_error("Failed to set mute state");
+        }
+    }
+
     void setPercent(int percent) {
-        const HRESULT hr = volume_->SetMasterVolumeLevelScalar(
-            percentToScalar(percent),
+        const int clampedPercent = std::clamp(percent, 0, 100);
+
+        const HRESULT volumeHr = volume_->SetMasterVolumeLevelScalar(
+            percentToScalar(clampedPercent),
             nullptr
         );
-        if (FAILED(hr)) {
+        if (FAILED(volumeHr)) {
             throw std::runtime_error("Failed to set volume");
         }
+
+        // Important behavior:
+        // 0% must be real system mute, not just volume level 0.
+        // Any positive volume should automatically unmute the endpoint.
+        setMuted(clampedPercent == 0);
     }
 
 private:
@@ -129,33 +153,44 @@ SkillResult VolumeSetSkill::execute(
     ComRuntime com;
     EndpointVolume endpointVolume;
     const int previousPercent = endpointVolume.getPercent();
+    const bool previousMuted = endpointVolume.isMuted();
     const std::string mode = args.value("mode", "set");
 
     if (mode == "delta") {
         const int delta = args.at("delta").get<int>();
         const int newPercent = std::clamp(previousPercent + delta, 0, 100);
         endpointVolume.setPercent(newPercent);
+        const bool muted = endpointVolume.isMuted();
 
         return SkillResult::ok(
-            "Volume changed to " + std::to_string(newPercent),
+            muted
+                ? "Volume muted"
+                : "Volume changed to " + std::to_string(newPercent),
             {
                 {"mode", "delta"},
                 {"delta", delta},
                 {"previous_percent", previousPercent},
-                {"percent", newPercent}
+                {"previous_muted", previousMuted},
+                {"percent", newPercent},
+                {"muted", muted}
             }
         );
     }
 
-    const int percent = args.at("percent").get<int>();
+    const int percent = std::clamp(args.at("percent").get<int>(), 0, 100);
     endpointVolume.setPercent(percent);
+    const bool muted = endpointVolume.isMuted();
 
     return SkillResult::ok(
-        "Volume set to " + std::to_string(percent),
+        muted
+            ? "Volume muted"
+            : "Volume set to " + std::to_string(percent),
         {
             {"mode", "set"},
             {"previous_percent", previousPercent},
-            {"percent", percent}
+            {"previous_muted", previousMuted},
+            {"percent", percent},
+            {"muted", muted}
         }
     );
 }

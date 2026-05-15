@@ -208,6 +208,160 @@ std::vector<WindowInfo> listWindows() {
     return windows;
 }
 
+bool fillWindowInfo(HWND hwnd, WindowInfo& info) {
+    if (!isCandidateWindow(hwnd)) {
+        return false;
+    }
+
+    DWORD processId = 0;
+    GetWindowThreadProcessId(hwnd, &processId);
+    if (processId == 0) {
+        return false;
+    }
+
+    info.hwnd = hwnd;
+    info.processId = processId;
+    info.title = getWindowTitle(hwnd);
+    info.processPath = getProcessPath(processId);
+    info.processFile = filenameOf(info.processPath);
+    return true;
+}
+
+bool isBeavisWindow(const WindowInfo& window) {
+    const std::wstring titleLower = lower(window.title);
+    const std::wstring fileLower = lower(window.processFile);
+    return fileLower.find(L"beavis_desktop_ui") != std::wstring::npos
+        || titleLower == L"beavis agent"
+        || titleLower == L"beavis command"
+        || titleLower == L"beavis voice"
+        || titleLower == L"beavis notifications";
+}
+
+bool readHwndFromMeta(const nlohmann::json& meta, HWND& hwnd) {
+    if (!meta.is_object() || !meta.contains("target_hwnd")) {
+        return false;
+    }
+
+    try {
+        std::uintptr_t raw = 0;
+        const auto& value = meta.at("target_hwnd");
+        if (value.is_string()) {
+            raw = static_cast<std::uintptr_t>(std::stoull(value.get<std::string>()));
+        } else if (value.is_number_unsigned()) {
+            raw = value.get<std::uintptr_t>();
+        } else if (value.is_number_integer()) {
+            const auto signedValue = value.get<long long>();
+            if (signedValue <= 0) {
+                return false;
+            }
+            raw = static_cast<std::uintptr_t>(signedValue);
+        } else {
+            return false;
+        }
+
+        if (raw == 0) {
+            return false;
+        }
+
+        hwnd = reinterpret_cast<HWND>(raw);
+        return true;
+    } catch (...) {
+        return false;
+    }
+}
+
+std::string jsonString(const nlohmann::json& value, const char* key) {
+    if (!value.is_object() || !value.contains(key) || !value.at(key).is_string()) {
+        return {};
+    }
+
+    return value.at(key).get<std::string>();
+}
+
+std::string lowerAscii(std::string value) {
+    std::transform(value.begin(), value.end(), value.begin(), [](unsigned char ch) {
+        if (ch >= 'A' && ch <= 'Z') {
+            return static_cast<char>(ch - 'A' + 'a');
+        }
+        return static_cast<char>(ch);
+    });
+    return value;
+}
+
+std::string trimAscii(std::string value) {
+    const auto first = value.find_first_not_of(" \t\r\n");
+    if (first == std::string::npos) {
+        return {};
+    }
+
+    const auto last = value.find_last_not_of(" \t\r\n");
+    return value.substr(first, last - first + 1);
+}
+
+bool startsWithToken(const std::string& value, const std::string& token) {
+    if (value == token) {
+        return true;
+    }
+    return value.size() > token.size()
+        && value.compare(0, token.size(), token) == 0
+        && value[token.size()] == ' ';
+}
+
+std::string stripLeadingWakeWord(std::string value) {
+    value = trimAscii(value);
+    const std::vector<std::string> wakeWords = {
+        "beavis",
+        "bavis",
+        "\xd0\xb1\xd0\xb8\xd0\xb2\xd0\xb8\xd1\x81",
+        "\xd0\xb1\xd1\x8b\xd0\xb2\xd0\xb8\xd1\x81",
+    };
+
+    for (const std::string& wakeWord : wakeWords) {
+        if (startsWithToken(value, wakeWord)) {
+            return trimAscii(value.substr(wakeWord.size()));
+        }
+    }
+
+    return value;
+}
+
+bool containsAny(const std::string& value, const std::vector<std::string>& needles) {
+    for (const std::string& needle : needles) {
+        if (!needle.empty() && value.find(needle) != std::string::npos) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
+bool hasExplicitBeavisTarget(const nlohmann::json& meta) {
+    std::string rawText = lowerAscii(jsonString(meta, "raw_text"));
+    rawText = stripLeadingWakeWord(rawText);
+
+    return containsAny(rawText, {
+        "beavis",
+        "bavis",
+        "beais",
+        "bea\xd0\xb2is",
+        "dev",
+        "\xd0\xb1\xd0\xb8\xd0\xb2\xd0\xb8\xd1\x81",
+        "\xd0\xb1\xd1\x8b\xd0\xb2\xd0\xb8\xd1\x81",
+    });
+}
+
+bool shouldPreferOverlayCurrentForBeavis(
+    const std::string& appId,
+    const nlohmann::json& meta,
+    HWND& hwnd
+) {
+    if (appId != "beavis_dev" || !readHwndFromMeta(meta, hwnd)) {
+        return false;
+    }
+
+    return !hasExplicitBeavisTarget(meta);
+}
+
 bool containsLower(const std::wstring& value, const std::wstring& needle) {
     if (value.empty() || needle.empty()) {
         return false;
@@ -409,54 +563,72 @@ SkillResult WindowControlSkill::execute(
     nlohmann::json targetData = nlohmann::json::object();
 
     if (targetType == "current") {
-        HWND hwnd = GetForegroundWindow();
-        if (!isCandidateWindow(hwnd)) {
+        HWND hwnd = nullptr;
+        if (readHwndFromMeta(context.toolMeta, hwnd) && fillWindowInfo(hwnd, window) && !isBeavisWindow(window)) {
+            targetData["source"] = "overlay_target_hwnd";
+            targetData["target_hwnd"] = reinterpret_cast<std::uintptr_t>(hwnd);
+        } else {
+            hwnd = GetForegroundWindow();
+            if (!fillWindowInfo(hwnd, window) || isBeavisWindow(window)) {
+                return failWindowControl(
+                    "No active user window found",
+                    "WINDOW_NOT_FOUND",
+                    "Foreground window is Beavis, hidden or not controllable"
+                );
+            }
+            targetData["source"] = "foreground";
+        }
+
+        if (window.hwnd == nullptr) {
             return failWindowControl(
                 "No active window found",
                 "WINDOW_NOT_FOUND",
                 "Foreground window is empty, hidden or not controllable"
             );
         }
-
-        DWORD processId = 0;
-        GetWindowThreadProcessId(hwnd, &processId);
-        window.hwnd = hwnd;
-        window.processId = processId;
-        window.title = getWindowTitle(hwnd);
-        window.processPath = getProcessPath(processId);
-        window.processFile = filenameOf(window.processPath);
         targetData["target_type"] = "current";
     } else {
         const std::string appId = args.at("app_id").get<std::string>();
-        const TargetInfo target = makeTargetInfo(appId);
+        HWND overlayHwnd = nullptr;
+        if (
+            shouldPreferOverlayCurrentForBeavis(appId, context.toolMeta, overlayHwnd)
+            && fillWindowInfo(overlayHwnd, window)
+            && !isBeavisWindow(window)
+        ) {
+            targetData["source"] = "overlay_target_hwnd_guard";
+            targetData["target_hwnd"] = reinterpret_cast<std::uintptr_t>(overlayHwnd);
+            targetData["target_type"] = "current";
+        } else {
+            const TargetInfo target = makeTargetInfo(appId);
 
-        bool found = false;
-        window = findAppWindow(appId, target, found);
-        if (!found) {
-            nlohmann::json data = {
+            bool found = false;
+            window = findAppWindow(appId, target, found);
+            if (!found) {
+                nlohmann::json data = {
+                    {"target_type", "app"},
+                    {"app_id", appId}
+                };
+                if (!target.resolverWarning.empty()) {
+                    data["resolver_warning"] = target.resolverWarning;
+                }
+
+                return failWindowControl(
+                    "Window was not found",
+                    "WINDOW_NOT_FOUND",
+                    "No visible window matched app_id: " + appId
+                );
+            }
+
+            targetData = {
                 {"target_type", "app"},
                 {"app_id", appId}
             };
-            if (!target.resolverWarning.empty()) {
-                data["resolver_warning"] = target.resolverWarning;
+            if (!target.resolved.is_null()) {
+                targetData["resolved"] = target.resolved;
             }
-
-            return failWindowControl(
-                "Window was not found",
-                "WINDOW_NOT_FOUND",
-                "No visible window matched app_id: " + appId
-            );
-        }
-
-        targetData = {
-            {"target_type", "app"},
-            {"app_id", appId}
-        };
-        if (!target.resolved.is_null()) {
-            targetData["resolved"] = target.resolved;
-        }
-        if (!target.resolverWarning.empty()) {
-            targetData["resolver_warning"] = target.resolverWarning;
+            if (!target.resolverWarning.empty()) {
+                targetData["resolver_warning"] = target.resolverWarning;
+            }
         }
     }
 
