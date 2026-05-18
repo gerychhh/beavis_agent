@@ -1,0 +1,1576 @@
+{"text": "будет ли дождь", "expected_site_id": "unknown"}
+{"text": "вбей rust ownership в airbnb", "expected_site_id": "unknown"}
+{"text": "включи звук", "expected_site_id": "unknown"}
+{"text": "выключи звук", "expected_site_id": "unknown"}
+{"text": "заведи будильник", "expected_site_id": "unknown"}
+{"text": "загугли rust ownership через airbnb", "expected_site_id": "unknown"}
+{"text": "зайди на 2gis", "expected_site_id": "two_gis"}
+{"text": "зайди на 2гис", "expected_site_id": "two_gis"}
+{"text": "зайди на air bnb", "expected_site_id": "airbnb"}
+{"text": "зайди на airbnb", "expected_site_id": "airbnb"}
+{"text": "зайди на aliexpress", "expected_site_id": "aliexpress"}
+{"text": "зайди на amazon", "expected_site_id": "amazon"}
+{"text": "зайди на amazon prime video", "expected_site_id": "prime_video"}
+{"text": "зайди на anaconda", "expected_site_id": "anaconda"}
+{"text": "зайди на ap news", "expected_site_id": "apnews"}
+{"text": "зайди на apnews", "expected_site_id": "apnews"}
+{"text": "зайди на apple music", "expected_site_id": "apple_music"}
+{"text": "зайди на archive org", "expected_site_id": "archive_org"}
+{"text": "зайди на arxiv", "expected_site_id": "arxiv"}
+{"text": "зайди на asana", "expected_site_id": "asana"}
+{"text": "зайди на ask ubuntu", "expected_site_id": "askubuntu"}
+{"text": "зайди на askubuntu", "expected_site_id": "askubuntu"}
+{"text": "зайди на associated press", "expected_site_id": "apnews"}
+{"text": "зайди на aviasales", "expected_site_id": "aviasales"}
+{"text": "зайди на avito", "expected_site_id": "avito"}
+{"text": "зайди на baidu", "expected_site_id": "baidu"}
+{"text": "зайди на band camp", "expected_site_id": "bandcamp"}
+{"text": "зайди на bandcamp", "expected_site_id": "bandcamp"}
+{"text": "зайди на battle net", "expected_site_id": "battle_net"}
+{"text": "зайди на bbc", "expected_site_id": "bbc"}
+{"text": "зайди на binance", "expected_site_id": "binance"}
+{"text": "зайди на bing", "expected_site_id": "bing"}
+{"text": "зайди на bitbucket", "expected_site_id": "bitbucket"}
+{"text": "зайди на bloomberg", "expected_site_id": "bloomberg"}
+{"text": "зайди на booking", "expected_site_id": "booking"}
+{"text": "зайди на booking com", "expected_site_id": "booking"}
+{"text": "зайди на brave", "expected_site_id": "brave_search"}
+{"text": "зайди на brave search", "expected_site_id": "brave_search"}
+{"text": "зайди на canva", "expected_site_id": "canva"}
+{"text": "зайди на chat gpt", "expected_site_id": "chatgpt"}
+{"text": "зайди на chatgpt", "expected_site_id": "chatgpt"}
+{"text": "зайди на claude", "expected_site_id": "claude"}
+{"text": "зайди на cloud flare", "expected_site_id": "cloudflare"}
+{"text": "зайди на cloudflare", "expected_site_id": "cloudflare"}
+{"text": "зайди на cnn", "expected_site_id": "cnn"}
+{"text": "зайди на code forces", "expected_site_id": "codeforces"}
+{"text": "зайди на code pen", "expected_site_id": "codepen"}
+{"text": "зайди на code wars", "expected_site_id": "codewars"}
+{"text": "зайди на codeforces", "expected_site_id": "codeforces"}
+{"text": "зайди на codepen", "expected_site_id": "codepen"}
+{"text": "зайди на codewars", "expected_site_id": "codewars"}
+{"text": "зайди на coin base", "expected_site_id": "coinbase"}
+{"text": "зайди на coinbase", "expected_site_id": "coinbase"}
+{"text": "зайди на colab", "expected_site_id": "google_colab"}
+{"text": "зайди на confluence", "expected_site_id": "confluence"}
+{"text": "зайди на copilot", "expected_site_id": "copilot"}
+{"text": "зайди на coursera", "expected_site_id": "coursera"}
+{"text": "зайди на deep l", "expected_site_id": "deepl"}
+{"text": "зайди на deep seek", "expected_site_id": "deepseek"}
+{"text": "зайди на deepl", "expected_site_id": "deepl"}
+{"text": "зайди на deepseek", "expected_site_id": "deepseek"}
+{"text": "зайди на deezer", "expected_site_id": "deezer"}
+{"text": "зайди на desmos", "expected_site_id": "desmos"}
+{"text": "зайди на dev by", "expected_site_id": "devby"}
+{"text": "зайди на devby", "expected_site_id": "devby"}
+{"text": "зайди на discord", "expected_site_id": "discord"}
+{"text": "зайди на disney plus", "expected_site_id": "disney_plus"}
+{"text": "зайди на disney+", "expected_site_id": "disney_plus"}
+{"text": "зайди на docker", "expected_site_id": "docker_hub"}
+{"text": "зайди на docker hub", "expected_site_id": "docker_hub"}
+{"text": "зайди на drive", "expected_site_id": "google_drive"}
+{"text": "зайди на dropbox", "expected_site_id": "dropbox"}
+{"text": "зайди на duck duck go", "expected_site_id": "duckduckgo"}
+{"text": "зайди на duckduckgo", "expected_site_id": "duckduckgo"}
+{"text": "зайди на duolingo", "expected_site_id": "duolingo"}
+{"text": "зайди на dzen", "expected_site_id": "dzen"}
+{"text": "зайди на ebay", "expected_site_id": "ebay"}
+{"text": "зайди на ed x", "expected_site_id": "edx"}
+{"text": "зайди на edx", "expected_site_id": "edx"}
+{"text": "зайди на epic", "expected_site_id": "epic_games"}
+{"text": "зайди на epic games", "expected_site_id": "epic_games"}
+{"text": "зайди на etsy", "expected_site_id": "etsy"}
+{"text": "зайди на facebook", "expected_site_id": "facebook"}
+{"text": "зайди на fandom", "expected_site_id": "fandom"}
+{"text": "зайди на figma", "expected_site_id": "figma"}
+{"text": "зайди на flight radar", "expected_site_id": "flightradar24"}
+{"text": "зайди на flightradar24", "expected_site_id": "flightradar24"}
+{"text": "зайди на g mail", "expected_site_id": "gmail"}
+{"text": "зайди на gemini", "expected_site_id": "gemini"}
+{"text": "зайди на geo gebra", "expected_site_id": "geogebra"}
+{"text": "зайди на geogebra", "expected_site_id": "geogebra"}
+{"text": "зайди на git hub", "expected_site_id": "github"}
+{"text": "зайди на git lab", "expected_site_id": "gitlab"}
+{"text": "зайди на github", "expected_site_id": "github"}
+{"text": "зайди на gitlab", "expected_site_id": "gitlab"}
+{"text": "зайди на gmail", "expected_site_id": "gmail"}
+{"text": "зайди на gog", "expected_site_id": "gog"}
+{"text": "зайди на google", "expected_site_id": "google"}
+{"text": "зайди на google colab", "expected_site_id": "google_colab"}
+{"text": "зайди на google drive", "expected_site_id": "google_drive"}
+{"text": "зайди на google maps", "expected_site_id": "google_maps"}
+{"text": "зайди на google meet", "expected_site_id": "google_meet"}
+{"text": "зайди на google translate", "expected_site_id": "translate_google"}
+{"text": "зайди на grammarly", "expected_site_id": "grammarly"}
+{"text": "зайди на guardian", "expected_site_id": "guardian"}
+{"text": "зайди на habr", "expected_site_id": "habr"}
+{"text": "зайди на hacker rank", "expected_site_id": "hackerrank"}
+{"text": "зайди на hackerrank", "expected_site_id": "hackerrank"}
+{"text": "зайди на hbo max", "expected_site_id": "max"}
+{"text": "зайди на hugging face", "expected_site_id": "huggingface"}
+{"text": "зайди на huggingface", "expected_site_id": "huggingface"}
+{"text": "зайди на hulu", "expected_site_id": "hulu"}
+{"text": "зайди на i cloud", "expected_site_id": "icloud"}
+{"text": "зайди на icloud", "expected_site_id": "icloud"}
+{"text": "зайди на ikea", "expected_site_id": "ikea"}
+{"text": "зайди на imdb", "expected_site_id": "imdb"}
+{"text": "зайди на insta", "expected_site_id": "instagram"}
+{"text": "зайди на instagram", "expected_site_id": "instagram"}
+{"text": "зайди на internet archive", "expected_site_id": "archive_org"}
+{"text": "зайди на investing", "expected_site_id": "investing"}
+{"text": "зайди на investing com", "expected_site_id": "investing"}
+{"text": "зайди на itch", "expected_site_id": "itch"}
+{"text": "зайди на itch io", "expected_site_id": "itch"}
+{"text": "зайди на ivi", "expected_site_id": "ivi"}
+{"text": "зайди на jira", "expected_site_id": "jira"}
+{"text": "зайди на js fiddle", "expected_site_id": "jsfiddle"}
+{"text": "зайди на jsfiddle", "expected_site_id": "jsfiddle"}
+{"text": "зайди на kaggle", "expected_site_id": "kaggle"}
+{"text": "зайди на khan academy", "expected_site_id": "khanacademy"}
+{"text": "зайди на khanacademy", "expected_site_id": "khanacademy"}
+{"text": "зайди на kinopoisk", "expected_site_id": "kinopoisk"}
+{"text": "зайди на kommersant", "expected_site_id": "kommersant"}
+{"text": "зайди на lamoda", "expected_site_id": "lamoda"}
+{"text": "зайди на learn microsoft", "expected_site_id": "microsoft_learn"}
+{"text": "зайди на leet code", "expected_site_id": "leetcode"}
+{"text": "зайди на leetcode", "expected_site_id": "leetcode"}
+{"text": "зайди на lenta", "expected_site_id": "lenta"}
+{"text": "зайди на letterboxd", "expected_site_id": "letterboxd"}
+{"text": "зайди на linked in", "expected_site_id": "linkedin"}
+{"text": "зайди на linkedin", "expected_site_id": "linkedin"}
+{"text": "зайди на mail ru", "expected_site_id": "mail_ru"}
+{"text": "зайди на maps", "expected_site_id": "google_maps"}
+{"text": "зайди на mastodon", "expected_site_id": "mastodon"}
+{"text": "зайди на max", "expected_site_id": "max"}
+{"text": "зайди на mdn", "expected_site_id": "mdn"}
+{"text": "зайди на mdn web docs", "expected_site_id": "mdn"}
+{"text": "зайди на medium", "expected_site_id": "medium"}
+{"text": "зайди на meduza", "expected_site_id": "meduza"}
+{"text": "зайди на meet", "expected_site_id": "google_meet"}
+{"text": "зайди на mega", "expected_site_id": "mega"}
+{"text": "зайди на mega nz", "expected_site_id": "mega"}
+{"text": "зайди на microsoft copilot", "expected_site_id": "copilot"}
+{"text": "зайди на microsoft learn", "expected_site_id": "microsoft_learn"}
+{"text": "зайди на microsoft teams", "expected_site_id": "microsoft_teams"}
+{"text": "зайди на minecraft", "expected_site_id": "minecraft"}
+{"text": "зайди на miro", "expected_site_id": "miro"}
+{"text": "зайди на mod db", "expected_site_id": "moddb"}
+{"text": "зайди на moddb", "expected_site_id": "moddb"}
+{"text": "зайди на n plus one", "expected_site_id": "nplus1"}
+{"text": "зайди на n+1", "expected_site_id": "nplus1"}
+{"text": "зайди на naver", "expected_site_id": "naver"}
+{"text": "зайди на netflix", "expected_site_id": "netflix"}
+{"text": "зайди на netology", "expected_site_id": "netology"}
+{"text": "зайди на new york times", "expected_site_id": "nytimes"}
+{"text": "зайди на nexus mods", "expected_site_id": "nexusmods"}
+{"text": "зайди на nexusmods", "expected_site_id": "nexusmods"}
+{"text": "зайди на nintendo", "expected_site_id": "nintendo"}
+{"text": "зайди на notion", "expected_site_id": "notion"}
+{"text": "зайди на nplus1", "expected_site_id": "nplus1"}
+{"text": "зайди на npm", "expected_site_id": "npm"}
+{"text": "зайди на nytimes", "expected_site_id": "nytimes"}
+{"text": "зайди на ok", "expected_site_id": "ok"}
+{"text": "зайди на one drive", "expected_site_id": "onedrive"}
+{"text": "зайди на onedrive", "expected_site_id": "onedrive"}
+{"text": "зайди на onliner", "expected_site_id": "onliner"}
+{"text": "зайди на onlíner", "expected_site_id": "onliner"}
+{"text": "зайди на open ai", "expected_site_id": "openai"}
+{"text": "зайди на open street map", "expected_site_id": "openstreetmap"}
+{"text": "зайди на openai", "expected_site_id": "openai"}
+{"text": "зайди на openstreetmap", "expected_site_id": "openstreetmap"}
+{"text": "зайди на oracle docs", "expected_site_id": "oracle_docs"}
+{"text": "зайди на oracle documentation", "expected_site_id": "oracle_docs"}
+{"text": "зайди на outlook", "expected_site_id": "outlook"}
+{"text": "зайди на overleaf", "expected_site_id": "overleaf"}
+{"text": "зайди на ozon", "expected_site_id": "ozon"}
+{"text": "зайди на papers with code", "expected_site_id": "paperswithcode"}
+{"text": "зайди на paperswithcode", "expected_site_id": "paperswithcode"}
+{"text": "зайди на pay pal", "expected_site_id": "paypal"}
+{"text": "зайди на paypal", "expected_site_id": "paypal"}
+{"text": "зайди на perplexity", "expected_site_id": "perplexity"}
+{"text": "зайди на pikabu", "expected_site_id": "pikabu"}
+{"text": "зайди на pinterest", "expected_site_id": "pinterest"}
+{"text": "зайди на play station", "expected_site_id": "playstation"}
+{"text": "зайди на playstation", "expected_site_id": "playstation"}
+{"text": "зайди на poe", "expected_site_id": "poe"}
+{"text": "зайди на prime video", "expected_site_id": "prime_video"}
+{"text": "зайди на proton", "expected_site_id": "proton_mail"}
+{"text": "зайди на proton mail", "expected_site_id": "proton_mail"}
+{"text": "зайди на pypi", "expected_site_id": "pypi"}
+{"text": "зайди на python docs", "expected_site_id": "python_docs"}
+{"text": "зайди на python documentation", "expected_site_id": "python_docs"}
+{"text": "зайди на qwant", "expected_site_id": "qwant"}
+{"text": "зайди на rambler", "expected_site_id": "rambler"}
+{"text": "зайди на rbc", "expected_site_id": "rbc"}
+{"text": "зайди на reddit", "expected_site_id": "reddit"}
+{"text": "зайди на replit", "expected_site_id": "replit"}
+{"text": "зайди на research gate", "expected_site_id": "researchgate"}
+{"text": "зайди на researchgate", "expected_site_id": "researchgate"}
+{"text": "зайди на reuters", "expected_site_id": "reuters"}
+{"text": "зайди на ria", "expected_site_id": "ria"}
+{"text": "зайди на roblox", "expected_site_id": "roblox"}
+{"text": "зайди на rotten tomatoes", "expected_site_id": "rottentomatoes"}
+{"text": "зайди на rottentomatoes", "expected_site_id": "rottentomatoes"}
+{"text": "зайди на rutube", "expected_site_id": "rutube"}
+{"text": "зайди на sber", "expected_site_id": "sber"}
+{"text": "зайди на shein", "expected_site_id": "shein"}
+{"text": "зайди на skillbox", "expected_site_id": "skillbox"}
+{"text": "зайди на sky scanner", "expected_site_id": "skyscanner"}
+{"text": "зайди на skyscanner", "expected_site_id": "skyscanner"}
+{"text": "зайди на slack", "expected_site_id": "slack"}
+{"text": "зайди на sound cloud", "expected_site_id": "soundcloud"}
+{"text": "зайди на soundcloud", "expected_site_id": "soundcloud"}
+{"text": "зайди на speed test", "expected_site_id": "speedtest"}
+{"text": "зайди на speedtest", "expected_site_id": "speedtest"}
+{"text": "зайди на spotify", "expected_site_id": "spotify"}
+{"text": "зайди на stack exchange", "expected_site_id": "stackexchange"}
+{"text": "зайди на stack overflow", "expected_site_id": "stackoverflow"}
+{"text": "зайди на stackexchange", "expected_site_id": "stackexchange"}
+{"text": "зайди на stackoverflow", "expected_site_id": "stackoverflow"}
+{"text": "зайди на steam", "expected_site_id": "steam"}
+{"text": "зайди на stepik", "expected_site_id": "stepik"}
+{"text": "зайди на stripe", "expected_site_id": "stripe"}
+{"text": "зайди на super user", "expected_site_id": "superuser"}
+{"text": "зайди на superuser", "expected_site_id": "superuser"}
+{"text": "зайди на tass", "expected_site_id": "tass"}
+{"text": "зайди на teams", "expected_site_id": "microsoft_teams"}
+{"text": "зайди на telegram", "expected_site_id": "telegram"}
+{"text": "зайди на telegram web", "expected_site_id": "telegram"}
+{"text": "зайди на temu", "expected_site_id": "temu"}
+{"text": "зайди на tenchat", "expected_site_id": "tenchat"}
+{"text": "зайди на the guardian", "expected_site_id": "guardian"}
+{"text": "зайди на the new york times", "expected_site_id": "nytimes"}
+{"text": "зайди на threads", "expected_site_id": "threads"}
+{"text": "зайди на threads net", "expected_site_id": "threads"}
+{"text": "зайди на tik tok", "expected_site_id": "tiktok"}
+{"text": "зайди на tiktok", "expected_site_id": "tiktok"}
+{"text": "зайди на tinkoff", "expected_site_id": "tinkoff"}
+{"text": "зайди на trading view", "expected_site_id": "tradingview"}
+{"text": "зайди на tradingview", "expected_site_id": "tradingview"}
+{"text": "зайди на translate", "expected_site_id": "translate_google"}
+{"text": "зайди на translate google", "expected_site_id": "translate_google"}
+{"text": "зайди на trello", "expected_site_id": "trello"}
+{"text": "зайди на trip advisor", "expected_site_id": "tripadvisor"}
+{"text": "зайди на tripadvisor", "expected_site_id": "tripadvisor"}
+{"text": "зайди на tutu", "expected_site_id": "tutu"}
+{"text": "зайди на twitch", "expected_site_id": "twitch"}
+{"text": "зайди на twitter", "expected_site_id": "x"}
+{"text": "зайди на two gis", "expected_site_id": "two_gis"}
+{"text": "зайди на uber", "expected_site_id": "uber"}
+{"text": "зайди на udemy", "expected_site_id": "udemy"}
+{"text": "зайди на vc", "expected_site_id": "vc_ru"}
+{"text": "зайди на vc ru", "expected_site_id": "vc_ru"}
+{"text": "зайди на vimeo", "expected_site_id": "vimeo"}
+{"text": "зайди на virus total", "expected_site_id": "virustotal"}
+{"text": "зайди на virustotal", "expected_site_id": "virustotal"}
+{"text": "зайди на vk", "expected_site_id": "vk"}
+{"text": "зайди на whats app", "expected_site_id": "whatsapp"}
+{"text": "зайди на whatsapp", "expected_site_id": "whatsapp"}
+{"text": "зайди на wiki", "expected_site_id": "wikipedia"}
+{"text": "зайди на wiki how", "expected_site_id": "wikihow"}
+{"text": "зайди на wikihow", "expected_site_id": "wikihow"}
+{"text": "зайди на wikipedia", "expected_site_id": "wikipedia"}
+{"text": "зайди на wild berries", "expected_site_id": "wildberries"}
+{"text": "зайди на wildberries", "expected_site_id": "wildberries"}
+{"text": "зайди на wise", "expected_site_id": "wise"}
+{"text": "зайди на wolfram alpha", "expected_site_id": "wolframalpha"}
+{"text": "зайди на wolframalpha", "expected_site_id": "wolframalpha"}
+{"text": "зайди на x", "expected_site_id": "x"}
+{"text": "зайди на x box", "expected_site_id": "xbox"}
+{"text": "зайди на xbox", "expected_site_id": "xbox"}
+{"text": "зайди на yahoo", "expected_site_id": "yahoo"}
+{"text": "зайди на yahoo finance", "expected_site_id": "yahoo_finance"}
+{"text": "зайди на yandex", "expected_site_id": "yandex"}
+{"text": "зайди на yandex go", "expected_site_id": "yandex_go"}
+{"text": "зайди на yandex maps", "expected_site_id": "yandex_maps"}
+{"text": "зайди на yandex market", "expected_site_id": "yandex_market"}
+{"text": "зайди на yandex music", "expected_site_id": "yandex_music"}
+{"text": "зайди на you com", "expected_site_id": "you_com"}
+{"text": "зайди на you tube", "expected_site_id": "youtube"}
+{"text": "зайди на youtube", "expected_site_id": "youtube"}
+{"text": "зайди на zoom", "expected_site_id": "zoom"}
+{"text": "зайди на авиасейлс", "expected_site_id": "aviasales"}
+{"text": "зайди на авиасэйлс", "expected_site_id": "aviasales"}
+{"text": "зайди на авито", "expected_site_id": "avito"}
+{"text": "зайди на ай эм ди би", "expected_site_id": "imdb"}
+{"text": "зайди на айклауд", "expected_site_id": "icloud"}
+{"text": "зайди на али экспресс", "expected_site_id": "aliexpress"}
+{"text": "зайди на алиэкспресс", "expected_site_id": "aliexpress"}
+{"text": "зайди на амазон", "expected_site_id": "amazon"}
+{"text": "зайди на анаконда", "expected_site_id": "anaconda"}
+{"text": "зайди на арксив", "expected_site_id": "arxiv"}
+{"text": "зайди на архив", "expected_site_id": "arxiv"}
+{"text": "зайди на архив орг", "expected_site_id": "archive_org"}
+{"text": "зайди на асана", "expected_site_id": "asana"}
+{"text": "зайди на аск убунту", "expected_site_id": "askubuntu"}
+{"text": "зайди на аутлук", "expected_site_id": "outlook"}
+{"text": "зайди на байду", "expected_site_id": "baidu"}
+{"text": "зайди на батл нет", "expected_site_id": "battle_net"}
+{"text": "зайди на ббс", "expected_site_id": "bbc"}
+{"text": "зайди на би би си", "expected_site_id": "bbc"}
+{"text": "зайди на бинанс", "expected_site_id": "binance"}
+{"text": "зайди на бинг", "expected_site_id": "bing"}
+{"text": "зайди на бит бакет", "expected_site_id": "bitbucket"}
+{"text": "зайди на битбакет", "expected_site_id": "bitbucket"}
+{"text": "зайди на блумберг", "expected_site_id": "bloomberg"}
+{"text": "зайди на брейв", "expected_site_id": "brave_search"}
+{"text": "зайди на бэндкамп", "expected_site_id": "bandcamp"}
+{"text": "зайди на вайз", "expected_site_id": "wise"}
+{"text": "зайди на вайлдберриз", "expected_site_id": "wildberries"}
+{"text": "зайди на ван драйв", "expected_site_id": "onedrive"}
+{"text": "зайди на ватсап", "expected_site_id": "whatsapp"}
+{"text": "зайди на википедия", "expected_site_id": "wikipedia"}
+{"text": "зайди на викихау", "expected_site_id": "wikihow"}
+{"text": "зайди на вимео", "expected_site_id": "vimeo"}
+{"text": "зайди на вирус тотал", "expected_site_id": "virustotal"}
+{"text": "зайди на вк", "expected_site_id": "vk"}
+{"text": "зайди на вконтакте", "expected_site_id": "vk"}
+{"text": "зайди на вольфрам альфа", "expected_site_id": "wolframalpha"}
+{"text": "зайди на гардиан", "expected_site_id": "guardian"}
+{"text": "зайди на гемини", "expected_site_id": "gemini"}
+{"text": "зайди на геогебра", "expected_site_id": "geogebra"}
+{"text": "зайди на гитлаб", "expected_site_id": "gitlab"}
+{"text": "зайди на гитхаб", "expected_site_id": "github"}
+{"text": "зайди на гог", "expected_site_id": "gog"}
+{"text": "зайди на граммарли", "expected_site_id": "grammarly"}
+{"text": "зайди на гугл", "expected_site_id": "google"}
+{"text": "зайди на гугл диск", "expected_site_id": "google_drive"}
+{"text": "зайди на гугл карты", "expected_site_id": "google_maps"}
+{"text": "зайди на гугл колаб", "expected_site_id": "google_colab"}
+{"text": "зайди на гугл мит", "expected_site_id": "google_meet"}
+{"text": "зайди на дакдакго", "expected_site_id": "duckduckgo"}
+{"text": "зайди на десмос", "expected_site_id": "desmos"}
+{"text": "зайди на джей эс фиддл", "expected_site_id": "jsfiddle"}
+{"text": "зайди на джемини", "expected_site_id": "gemini"}
+{"text": "зайди на джимейл", "expected_site_id": "gmail"}
+{"text": "зайди на джира", "expected_site_id": "jira"}
+{"text": "зайди на дзен", "expected_site_id": "dzen"}
+{"text": "зайди на дизер", "expected_site_id": "deezer"}
+{"text": "зайди на дипл", "expected_site_id": "deepl"}
+{"text": "зайди на дипсик", "expected_site_id": "deepseek"}
+{"text": "зайди на дискорд", "expected_site_id": "discord"}
+{"text": "зайди на дисней плюс", "expected_site_id": "disney_plus"}
+{"text": "зайди на докер хаб", "expected_site_id": "docker_hub"}
+{"text": "зайди на доки оракл", "expected_site_id": "oracle_docs"}
+{"text": "зайди на доки питон", "expected_site_id": "python_docs"}
+{"text": "зайди на дропбокс", "expected_site_id": "dropbox"}
+{"text": "зайди на дуолинго", "expected_site_id": "duolingo"}
+{"text": "зайди на ед икс", "expected_site_id": "edx"}
+{"text": "зайди на етси", "expected_site_id": "etsy"}
+{"text": "зайди на жира", "expected_site_id": "jira"}
+{"text": "зайди на зум", "expected_site_id": "zoom"}
+{"text": "зайди на и бей", "expected_site_id": "ebay"}
+{"text": "зайди на ибей", "expected_site_id": "ebay"}
+{"text": "зайди на иви", "expected_site_id": "ivi"}
+{"text": "зайди на икеа", "expected_site_id": "ikea"}
+{"text": "зайди на иксбокс", "expected_site_id": "xbox"}
+{"text": "зайди на имдб", "expected_site_id": "imdb"}
+{"text": "зайди на инстаграм", "expected_site_id": "instagram"}
+{"text": "зайди на кагл", "expected_site_id": "kaggle"}
+{"text": "зайди на канва", "expected_site_id": "canva"}
+{"text": "зайди на карты яндекс", "expected_site_id": "yandex_maps"}
+{"text": "зайди на квант", "expected_site_id": "qwant"}
+{"text": "зайди на кинопоиск", "expected_site_id": "kinopoisk"}
+{"text": "зайди на клауд", "expected_site_id": "claude"}
+{"text": "зайди на клаудфлер", "expected_site_id": "cloudflare"}
+{"text": "зайди на клод", "expected_site_id": "claude"}
+{"text": "зайди на кодварс", "expected_site_id": "codewars"}
+{"text": "зайди на кодпен", "expected_site_id": "codepen"}
+{"text": "зайди на кодфорсес", "expected_site_id": "codeforces"}
+{"text": "зайди на коинбейс", "expected_site_id": "coinbase"}
+{"text": "зайди на коммерсант", "expected_site_id": "kommersant"}
+{"text": "зайди на коммерсантъ", "expected_site_id": "kommersant"}
+{"text": "зайди на конфлюенс", "expected_site_id": "confluence"}
+{"text": "зайди на конфлюенс вики", "expected_site_id": "confluence"}
+{"text": "зайди на копайлот", "expected_site_id": "copilot"}
+{"text": "зайди на курсера", "expected_site_id": "coursera"}
+{"text": "зайди на кэгл", "expected_site_id": "kaggle"}
+{"text": "зайди на ламода", "expected_site_id": "lamoda"}
+{"text": "зайди на лента", "expected_site_id": "lenta"}
+{"text": "зайди на лента ру", "expected_site_id": "lenta"}
+{"text": "зайди на леттербоксд", "expected_site_id": "letterboxd"}
+{"text": "зайди на линкедин", "expected_site_id": "linkedin"}
+{"text": "зайди на литкод", "expected_site_id": "leetcode"}
+{"text": "зайди на майкрософт лерн", "expected_site_id": "microsoft_learn"}
+{"text": "зайди на майкрософт почта", "expected_site_id": "outlook"}
+{"text": "зайди на майнкрафт", "expected_site_id": "minecraft"}
+{"text": "зайди на макс", "expected_site_id": "max"}
+{"text": "зайди на маркет", "expected_site_id": "yandex_market"}
+{"text": "зайди на мастодон", "expected_site_id": "mastodon"}
+{"text": "зайди на мдн", "expected_site_id": "mdn"}
+{"text": "зайди на мега", "expected_site_id": "mega"}
+{"text": "зайди на медиум", "expected_site_id": "medium"}
+{"text": "зайди на медуза", "expected_site_id": "meduza"}
+{"text": "зайди на мейл ру", "expected_site_id": "mail_ru"}
+{"text": "зайди на миро", "expected_site_id": "miro"}
+{"text": "зайди на мод дб", "expected_site_id": "moddb"}
+{"text": "зайди на музыка яндекс", "expected_site_id": "yandex_music"}
+{"text": "зайди на нейвер", "expected_site_id": "naver"}
+{"text": "зайди на нексус модс", "expected_site_id": "nexusmods"}
+{"text": "зайди на нетология", "expected_site_id": "netology"}
+{"text": "зайди на нетфликс", "expected_site_id": "netflix"}
+{"text": "зайди на нинтендо", "expected_site_id": "nintendo"}
+{"text": "зайди на ноушен", "expected_site_id": "notion"}
+{"text": "зайди на ноушн", "expected_site_id": "notion"}
+{"text": "зайди на нпм", "expected_site_id": "npm"}
+{"text": "зайди на овер лиф", "expected_site_id": "overleaf"}
+{"text": "зайди на оверлиф", "expected_site_id": "overleaf"}
+{"text": "зайди на одноклассники", "expected_site_id": "ok"}
+{"text": "зайди на озон", "expected_site_id": "ozon"}
+{"text": "зайди на оки", "expected_site_id": "ok"}
+{"text": "зайди на онлайнер", "expected_site_id": "onliner"}
+{"text": "зайди на опенстритмап", "expected_site_id": "openstreetmap"}
+{"text": "зайди на оупен аи", "expected_site_id": "openai"}
+{"text": "зайди на пайпи", "expected_site_id": "pypi"}
+{"text": "зайди на пейпал", "expected_site_id": "paypal"}
+{"text": "зайди на пейперс виз код", "expected_site_id": "paperswithcode"}
+{"text": "зайди на перплексити", "expected_site_id": "perplexity"}
+{"text": "зайди на перплексити аи", "expected_site_id": "perplexity"}
+{"text": "зайди на пи вай пи ай", "expected_site_id": "pypi"}
+{"text": "зайди на пикабу", "expected_site_id": "pikabu"}
+{"text": "зайди на пинтерест", "expected_site_id": "pinterest"}
+{"text": "зайди на плейстейшен", "expected_site_id": "playstation"}
+{"text": "зайди на по", "expected_site_id": "poe"}
+{"text": "зайди на по ком", "expected_site_id": "poe"}
+{"text": "зайди на прайм видео", "expected_site_id": "prime_video"}
+{"text": "зайди на протон мейл", "expected_site_id": "proton_mail"}
+{"text": "зайди на рамблер", "expected_site_id": "rambler"}
+{"text": "зайди на рбк", "expected_site_id": "rbc"}
+{"text": "зайди на реддит", "expected_site_id": "reddit"}
+{"text": "зайди на редит", "expected_site_id": "reddit"}
+{"text": "зайди на реплит", "expected_site_id": "replit"}
+{"text": "зайди на ресерчгейт", "expected_site_id": "researchgate"}
+{"text": "зайди на риа", "expected_site_id": "ria"}
+{"text": "зайди на риа новости", "expected_site_id": "ria"}
+{"text": "зайди на роблокс", "expected_site_id": "roblox"}
+{"text": "зайди на ройтерс", "expected_site_id": "reuters"}
+{"text": "зайди на роттен томатос", "expected_site_id": "rottentomatoes"}
+{"text": "зайди на рутуб", "expected_site_id": "rutube"}
+{"text": "зайди на рутьюб", "expected_site_id": "rutube"}
+{"text": "зайди на саундклауд", "expected_site_id": "soundcloud"}
+{"text": "зайди на сбер", "expected_site_id": "sber"}
+{"text": "зайди на сбербанк", "expected_site_id": "sber"}
+{"text": "зайди на си эн эн", "expected_site_id": "cnn"}
+{"text": "зайди на скайсканер", "expected_site_id": "skyscanner"}
+{"text": "зайди на скилбокс", "expected_site_id": "skillbox"}
+{"text": "зайди на скиллбокс", "expected_site_id": "skillbox"}
+{"text": "зайди на слак", "expected_site_id": "slack"}
+{"text": "зайди на спидтест", "expected_site_id": "speedtest"}
+{"text": "зайди на спотифай", "expected_site_id": "spotify"}
+{"text": "зайди на стак оверфлоу", "expected_site_id": "stackoverflow"}
+{"text": "зайди на стак эксчейндж", "expected_site_id": "stackexchange"}
+{"text": "зайди на степик", "expected_site_id": "stepik"}
+{"text": "зайди на стим", "expected_site_id": "steam"}
+{"text": "зайди на страйп", "expected_site_id": "stripe"}
+{"text": "зайди на супер юзер", "expected_site_id": "superuser"}
+{"text": "зайди на т-банк", "expected_site_id": "tinkoff"}
+{"text": "зайди на тасс", "expected_site_id": "tass"}
+{"text": "зайди на твиттер", "expected_site_id": "x"}
+{"text": "зайди на твич", "expected_site_id": "twitch"}
+{"text": "зайди на телеграм", "expected_site_id": "telegram"}
+{"text": "зайди на тему", "expected_site_id": "temu"}
+{"text": "зайди на тен чат", "expected_site_id": "tenchat"}
+{"text": "зайди на тенчат", "expected_site_id": "tenchat"}
+{"text": "зайди на тикток", "expected_site_id": "tiktok"}
+{"text": "зайди на тимс", "expected_site_id": "microsoft_teams"}
+{"text": "зайди на тиму", "expected_site_id": "temu"}
+{"text": "зайди на тинькофф", "expected_site_id": "tinkoff"}
+{"text": "зайди на тредс", "expected_site_id": "threads"}
+{"text": "зайди на трейдингвью", "expected_site_id": "tradingview"}
+{"text": "зайди на трелло", "expected_site_id": "trello"}
+{"text": "зайди на трело", "expected_site_id": "trello"}
+{"text": "зайди на трипадвайзер", "expected_site_id": "tripadvisor"}
+{"text": "зайди на туту", "expected_site_id": "tutu"}
+{"text": "зайди на туту ру", "expected_site_id": "tutu"}
+{"text": "зайди на убер", "expected_site_id": "uber"}
+{"text": "зайди на удеми", "expected_site_id": "udemy"}
+{"text": "зайди на фандом", "expected_site_id": "fandom"}
+{"text": "зайди на фейсбук", "expected_site_id": "facebook"}
+{"text": "зайди на фигма", "expected_site_id": "figma"}
+{"text": "зайди на флайтрадар", "expected_site_id": "flightradar24"}
+{"text": "зайди на фэйсбук", "expected_site_id": "facebook"}
+{"text": "зайди на хабр", "expected_site_id": "habr"}
+{"text": "зайди на хабрахабр", "expected_site_id": "habr"}
+{"text": "зайди на хаггинг фейс", "expected_site_id": "huggingface"}
+{"text": "зайди на хакерранк", "expected_site_id": "hackerrank"}
+{"text": "зайди на хан академи", "expected_site_id": "khanacademy"}
+{"text": "зайди на хулу", "expected_site_id": "hulu"}
+{"text": "зайди на цнн", "expected_site_id": "cnn"}
+{"text": "зайди на чатгпт", "expected_site_id": "chatgpt"}
+{"text": "зайди на шейн", "expected_site_id": "shein"}
+{"text": "зайди на эйрбнб", "expected_site_id": "airbnb"}
+{"text": "зайди на эн пи эм", "expected_site_id": "npm"}
+{"text": "зайди на эпик геймс", "expected_site_id": "epic_games"}
+{"text": "зайди на эпл музыка", "expected_site_id": "apple_music"}
+{"text": "зайди на эпл мьюзик", "expected_site_id": "apple_music"}
+{"text": "зайди на этси", "expected_site_id": "etsy"}
+{"text": "зайди на ю ком", "expected_site_id": "you_com"}
+{"text": "зайди на юдеми", "expected_site_id": "udemy"}
+{"text": "зайди на ютуб", "expected_site_id": "youtube"}
+{"text": "зайди на яндекс", "expected_site_id": "yandex"}
+{"text": "зайди на яндекс go", "expected_site_id": "yandex_go"}
+{"text": "зайди на яндекс го", "expected_site_id": "yandex_go"}
+{"text": "зайди на яндекс дзен", "expected_site_id": "dzen"}
+{"text": "зайди на яндекс карты", "expected_site_id": "yandex_maps"}
+{"text": "зайди на яндекс маркет", "expected_site_id": "yandex_market"}
+{"text": "зайди на яндекс музыка", "expected_site_id": "yandex_music"}
+{"text": "зайди на яху", "expected_site_id": "yahoo"}
+{"text": "зайди на яху финанс", "expected_site_id": "yahoo_finance"}
+{"text": "зайди на яху финансы", "expected_site_id": "yahoo_finance"}
+{"text": "закрой окно", "expected_site_id": "unknown"}
+{"text": "запусти vscode", "expected_site_id": "unknown"}
+{"text": "запусти блокнот", "expected_site_id": "unknown"}
+{"text": "запусти проводник", "expected_site_id": "unknown"}
+{"text": "запусти терминал", "expected_site_id": "unknown"}
+{"text": "какая погода", "expected_site_id": "unknown"}
+{"text": "какая сегодня погода", "expected_site_id": "unknown"}
+{"text": "найди rust ownership на airbnb", "expected_site_id": "unknown"}
+{"text": "найди на airbnb rust ownership", "expected_site_id": "unknown"}
+{"text": "найди через airbnb rust ownership", "expected_site_id": "unknown"}
+{"text": "напомни мне завтра", "expected_site_id": "unknown"}
+{"text": "останови музыку", "expected_site_id": "unknown"}
+{"text": "открой 2gis", "expected_site_id": "two_gis"}
+{"text": "открой 2гис", "expected_site_id": "two_gis"}
+{"text": "открой air bnb", "expected_site_id": "airbnb"}
+{"text": "открой airbnb", "expected_site_id": "airbnb"}
+{"text": "открой aliexpress", "expected_site_id": "aliexpress"}
+{"text": "открой amazon", "expected_site_id": "amazon"}
+{"text": "открой amazon prime video", "expected_site_id": "prime_video"}
+{"text": "открой anaconda", "expected_site_id": "anaconda"}
+{"text": "открой ap news", "expected_site_id": "apnews"}
+{"text": "открой apnews", "expected_site_id": "apnews"}
+{"text": "открой apple music", "expected_site_id": "apple_music"}
+{"text": "открой archive org", "expected_site_id": "archive_org"}
+{"text": "открой arxiv", "expected_site_id": "arxiv"}
+{"text": "открой asana", "expected_site_id": "asana"}
+{"text": "открой ask ubuntu", "expected_site_id": "askubuntu"}
+{"text": "открой askubuntu", "expected_site_id": "askubuntu"}
+{"text": "открой associated press", "expected_site_id": "apnews"}
+{"text": "открой aviasales", "expected_site_id": "aviasales"}
+{"text": "открой avito", "expected_site_id": "avito"}
+{"text": "открой baidu", "expected_site_id": "baidu"}
+{"text": "открой band camp", "expected_site_id": "bandcamp"}
+{"text": "открой bandcamp", "expected_site_id": "bandcamp"}
+{"text": "открой battle net", "expected_site_id": "battle_net"}
+{"text": "открой bbc", "expected_site_id": "bbc"}
+{"text": "открой binance", "expected_site_id": "binance"}
+{"text": "открой bing", "expected_site_id": "bing"}
+{"text": "открой bitbucket", "expected_site_id": "bitbucket"}
+{"text": "открой bloomberg", "expected_site_id": "bloomberg"}
+{"text": "открой booking", "expected_site_id": "booking"}
+{"text": "открой booking com", "expected_site_id": "booking"}
+{"text": "открой brave", "expected_site_id": "brave_search"}
+{"text": "открой brave search", "expected_site_id": "brave_search"}
+{"text": "открой canva", "expected_site_id": "canva"}
+{"text": "открой chat gpt", "expected_site_id": "chatgpt"}
+{"text": "открой chatgpt", "expected_site_id": "chatgpt"}
+{"text": "открой claude", "expected_site_id": "claude"}
+{"text": "открой cloud flare", "expected_site_id": "cloudflare"}
+{"text": "открой cloudflare", "expected_site_id": "cloudflare"}
+{"text": "открой cnn", "expected_site_id": "cnn"}
+{"text": "открой code forces", "expected_site_id": "codeforces"}
+{"text": "открой code pen", "expected_site_id": "codepen"}
+{"text": "открой code wars", "expected_site_id": "codewars"}
+{"text": "открой codeforces", "expected_site_id": "codeforces"}
+{"text": "открой codepen", "expected_site_id": "codepen"}
+{"text": "открой codewars", "expected_site_id": "codewars"}
+{"text": "открой coin base", "expected_site_id": "coinbase"}
+{"text": "открой coinbase", "expected_site_id": "coinbase"}
+{"text": "открой colab", "expected_site_id": "google_colab"}
+{"text": "открой confluence", "expected_site_id": "confluence"}
+{"text": "открой copilot", "expected_site_id": "copilot"}
+{"text": "открой coursera", "expected_site_id": "coursera"}
+{"text": "открой deep l", "expected_site_id": "deepl"}
+{"text": "открой deep seek", "expected_site_id": "deepseek"}
+{"text": "открой deepl", "expected_site_id": "deepl"}
+{"text": "открой deepseek", "expected_site_id": "deepseek"}
+{"text": "открой deezer", "expected_site_id": "deezer"}
+{"text": "открой desmos", "expected_site_id": "desmos"}
+{"text": "открой dev by", "expected_site_id": "devby"}
+{"text": "открой devby", "expected_site_id": "devby"}
+{"text": "открой discord", "expected_site_id": "discord"}
+{"text": "открой disney plus", "expected_site_id": "disney_plus"}
+{"text": "открой disney+", "expected_site_id": "disney_plus"}
+{"text": "открой docker", "expected_site_id": "docker_hub"}
+{"text": "открой docker hub", "expected_site_id": "docker_hub"}
+{"text": "открой drive", "expected_site_id": "google_drive"}
+{"text": "открой dropbox", "expected_site_id": "dropbox"}
+{"text": "открой duck duck go", "expected_site_id": "duckduckgo"}
+{"text": "открой duckduckgo", "expected_site_id": "duckduckgo"}
+{"text": "открой duolingo", "expected_site_id": "duolingo"}
+{"text": "открой dzen", "expected_site_id": "dzen"}
+{"text": "открой ebay", "expected_site_id": "ebay"}
+{"text": "открой ed x", "expected_site_id": "edx"}
+{"text": "открой edx", "expected_site_id": "edx"}
+{"text": "открой epic", "expected_site_id": "epic_games"}
+{"text": "открой epic games", "expected_site_id": "epic_games"}
+{"text": "открой etsy", "expected_site_id": "etsy"}
+{"text": "открой facebook", "expected_site_id": "facebook"}
+{"text": "открой fandom", "expected_site_id": "fandom"}
+{"text": "открой figma", "expected_site_id": "figma"}
+{"text": "открой flight radar", "expected_site_id": "flightradar24"}
+{"text": "открой flightradar24", "expected_site_id": "flightradar24"}
+{"text": "открой g mail", "expected_site_id": "gmail"}
+{"text": "открой gemini", "expected_site_id": "gemini"}
+{"text": "открой geo gebra", "expected_site_id": "geogebra"}
+{"text": "открой geogebra", "expected_site_id": "geogebra"}
+{"text": "открой git hub", "expected_site_id": "github"}
+{"text": "открой git lab", "expected_site_id": "gitlab"}
+{"text": "открой github", "expected_site_id": "github"}
+{"text": "открой gitlab", "expected_site_id": "gitlab"}
+{"text": "открой gmail", "expected_site_id": "gmail"}
+{"text": "открой gog", "expected_site_id": "gog"}
+{"text": "открой google", "expected_site_id": "google"}
+{"text": "открой google colab", "expected_site_id": "google_colab"}
+{"text": "открой google drive", "expected_site_id": "google_drive"}
+{"text": "открой google maps", "expected_site_id": "google_maps"}
+{"text": "открой google meet", "expected_site_id": "google_meet"}
+{"text": "открой google translate", "expected_site_id": "translate_google"}
+{"text": "открой grammarly", "expected_site_id": "grammarly"}
+{"text": "открой guardian", "expected_site_id": "guardian"}
+{"text": "открой habr", "expected_site_id": "habr"}
+{"text": "открой hacker rank", "expected_site_id": "hackerrank"}
+{"text": "открой hackerrank", "expected_site_id": "hackerrank"}
+{"text": "открой hbo max", "expected_site_id": "max"}
+{"text": "открой hugging face", "expected_site_id": "huggingface"}
+{"text": "открой huggingface", "expected_site_id": "huggingface"}
+{"text": "открой hulu", "expected_site_id": "hulu"}
+{"text": "открой i cloud", "expected_site_id": "icloud"}
+{"text": "открой icloud", "expected_site_id": "icloud"}
+{"text": "открой ikea", "expected_site_id": "ikea"}
+{"text": "открой imdb", "expected_site_id": "imdb"}
+{"text": "открой insta", "expected_site_id": "instagram"}
+{"text": "открой instagram", "expected_site_id": "instagram"}
+{"text": "открой internet archive", "expected_site_id": "archive_org"}
+{"text": "открой investing", "expected_site_id": "investing"}
+{"text": "открой investing com", "expected_site_id": "investing"}
+{"text": "открой itch", "expected_site_id": "itch"}
+{"text": "открой itch io", "expected_site_id": "itch"}
+{"text": "открой ivi", "expected_site_id": "ivi"}
+{"text": "открой jira", "expected_site_id": "jira"}
+{"text": "открой js fiddle", "expected_site_id": "jsfiddle"}
+{"text": "открой jsfiddle", "expected_site_id": "jsfiddle"}
+{"text": "открой kaggle", "expected_site_id": "kaggle"}
+{"text": "открой khan academy", "expected_site_id": "khanacademy"}
+{"text": "открой khanacademy", "expected_site_id": "khanacademy"}
+{"text": "открой kinopoisk", "expected_site_id": "kinopoisk"}
+{"text": "открой kommersant", "expected_site_id": "kommersant"}
+{"text": "открой lamoda", "expected_site_id": "lamoda"}
+{"text": "открой learn microsoft", "expected_site_id": "microsoft_learn"}
+{"text": "открой leet code", "expected_site_id": "leetcode"}
+{"text": "открой leetcode", "expected_site_id": "leetcode"}
+{"text": "открой lenta", "expected_site_id": "lenta"}
+{"text": "открой letterboxd", "expected_site_id": "letterboxd"}
+{"text": "открой linked in", "expected_site_id": "linkedin"}
+{"text": "открой linkedin", "expected_site_id": "linkedin"}
+{"text": "открой mail ru", "expected_site_id": "mail_ru"}
+{"text": "открой maps", "expected_site_id": "google_maps"}
+{"text": "открой mastodon", "expected_site_id": "mastodon"}
+{"text": "открой max", "expected_site_id": "max"}
+{"text": "открой mdn", "expected_site_id": "mdn"}
+{"text": "открой mdn web docs", "expected_site_id": "mdn"}
+{"text": "открой medium", "expected_site_id": "medium"}
+{"text": "открой meduza", "expected_site_id": "meduza"}
+{"text": "открой meet", "expected_site_id": "google_meet"}
+{"text": "открой mega", "expected_site_id": "mega"}
+{"text": "открой mega nz", "expected_site_id": "mega"}
+{"text": "открой microsoft copilot", "expected_site_id": "copilot"}
+{"text": "открой microsoft learn", "expected_site_id": "microsoft_learn"}
+{"text": "открой microsoft teams", "expected_site_id": "microsoft_teams"}
+{"text": "открой minecraft", "expected_site_id": "minecraft"}
+{"text": "открой miro", "expected_site_id": "miro"}
+{"text": "открой mod db", "expected_site_id": "moddb"}
+{"text": "открой moddb", "expected_site_id": "moddb"}
+{"text": "открой n plus one", "expected_site_id": "nplus1"}
+{"text": "открой n+1", "expected_site_id": "nplus1"}
+{"text": "открой naver", "expected_site_id": "naver"}
+{"text": "открой netflix", "expected_site_id": "netflix"}
+{"text": "открой netology", "expected_site_id": "netology"}
+{"text": "открой new york times", "expected_site_id": "nytimes"}
+{"text": "открой nexus mods", "expected_site_id": "nexusmods"}
+{"text": "открой nexusmods", "expected_site_id": "nexusmods"}
+{"text": "открой nintendo", "expected_site_id": "nintendo"}
+{"text": "открой notion", "expected_site_id": "notion"}
+{"text": "открой nplus1", "expected_site_id": "nplus1"}
+{"text": "открой npm", "expected_site_id": "npm"}
+{"text": "открой nytimes", "expected_site_id": "nytimes"}
+{"text": "открой ok", "expected_site_id": "ok"}
+{"text": "открой one drive", "expected_site_id": "onedrive"}
+{"text": "открой onedrive", "expected_site_id": "onedrive"}
+{"text": "открой onliner", "expected_site_id": "onliner"}
+{"text": "открой onlíner", "expected_site_id": "onliner"}
+{"text": "открой open ai", "expected_site_id": "openai"}
+{"text": "открой open street map", "expected_site_id": "openstreetmap"}
+{"text": "открой openai", "expected_site_id": "openai"}
+{"text": "открой openstreetmap", "expected_site_id": "openstreetmap"}
+{"text": "открой oracle docs", "expected_site_id": "oracle_docs"}
+{"text": "открой oracle documentation", "expected_site_id": "oracle_docs"}
+{"text": "открой outlook", "expected_site_id": "outlook"}
+{"text": "открой overleaf", "expected_site_id": "overleaf"}
+{"text": "открой ozon", "expected_site_id": "ozon"}
+{"text": "открой papers with code", "expected_site_id": "paperswithcode"}
+{"text": "открой paperswithcode", "expected_site_id": "paperswithcode"}
+{"text": "открой pay pal", "expected_site_id": "paypal"}
+{"text": "открой paypal", "expected_site_id": "paypal"}
+{"text": "открой perplexity", "expected_site_id": "perplexity"}
+{"text": "открой pikabu", "expected_site_id": "pikabu"}
+{"text": "открой pinterest", "expected_site_id": "pinterest"}
+{"text": "открой play station", "expected_site_id": "playstation"}
+{"text": "открой playstation", "expected_site_id": "playstation"}
+{"text": "открой poe", "expected_site_id": "poe"}
+{"text": "открой prime video", "expected_site_id": "prime_video"}
+{"text": "открой proton", "expected_site_id": "proton_mail"}
+{"text": "открой proton mail", "expected_site_id": "proton_mail"}
+{"text": "открой pycharm", "expected_site_id": "unknown"}
+{"text": "открой pypi", "expected_site_id": "pypi"}
+{"text": "открой python docs", "expected_site_id": "python_docs"}
+{"text": "открой python documentation", "expected_site_id": "python_docs"}
+{"text": "открой qwant", "expected_site_id": "qwant"}
+{"text": "открой rambler", "expected_site_id": "rambler"}
+{"text": "открой rbc", "expected_site_id": "rbc"}
+{"text": "открой reddit", "expected_site_id": "reddit"}
+{"text": "открой replit", "expected_site_id": "replit"}
+{"text": "открой research gate", "expected_site_id": "researchgate"}
+{"text": "открой researchgate", "expected_site_id": "researchgate"}
+{"text": "открой reuters", "expected_site_id": "reuters"}
+{"text": "открой ria", "expected_site_id": "ria"}
+{"text": "открой roblox", "expected_site_id": "roblox"}
+{"text": "открой rotten tomatoes", "expected_site_id": "rottentomatoes"}
+{"text": "открой rottentomatoes", "expected_site_id": "rottentomatoes"}
+{"text": "открой rutube", "expected_site_id": "rutube"}
+{"text": "открой sber", "expected_site_id": "sber"}
+{"text": "открой shein", "expected_site_id": "shein"}
+{"text": "открой skillbox", "expected_site_id": "skillbox"}
+{"text": "открой sky scanner", "expected_site_id": "skyscanner"}
+{"text": "открой skyscanner", "expected_site_id": "skyscanner"}
+{"text": "открой slack", "expected_site_id": "slack"}
+{"text": "открой sound cloud", "expected_site_id": "soundcloud"}
+{"text": "открой soundcloud", "expected_site_id": "soundcloud"}
+{"text": "открой speed test", "expected_site_id": "speedtest"}
+{"text": "открой speedtest", "expected_site_id": "speedtest"}
+{"text": "открой spotify", "expected_site_id": "spotify"}
+{"text": "открой stack exchange", "expected_site_id": "stackexchange"}
+{"text": "открой stack overflow", "expected_site_id": "stackoverflow"}
+{"text": "открой stackexchange", "expected_site_id": "stackexchange"}
+{"text": "открой stackoverflow", "expected_site_id": "stackoverflow"}
+{"text": "открой steam", "expected_site_id": "steam"}
+{"text": "открой stepik", "expected_site_id": "stepik"}
+{"text": "открой stripe", "expected_site_id": "stripe"}
+{"text": "открой super user", "expected_site_id": "superuser"}
+{"text": "открой superuser", "expected_site_id": "superuser"}
+{"text": "открой tass", "expected_site_id": "tass"}
+{"text": "открой teams", "expected_site_id": "microsoft_teams"}
+{"text": "открой telegram", "expected_site_id": "telegram"}
+{"text": "открой telegram web", "expected_site_id": "telegram"}
+{"text": "открой temu", "expected_site_id": "temu"}
+{"text": "открой tenchat", "expected_site_id": "tenchat"}
+{"text": "открой the guardian", "expected_site_id": "guardian"}
+{"text": "открой the new york times", "expected_site_id": "nytimes"}
+{"text": "открой threads", "expected_site_id": "threads"}
+{"text": "открой threads net", "expected_site_id": "threads"}
+{"text": "открой tik tok", "expected_site_id": "tiktok"}
+{"text": "открой tiktok", "expected_site_id": "tiktok"}
+{"text": "открой tinkoff", "expected_site_id": "tinkoff"}
+{"text": "открой trading view", "expected_site_id": "tradingview"}
+{"text": "открой tradingview", "expected_site_id": "tradingview"}
+{"text": "открой translate", "expected_site_id": "translate_google"}
+{"text": "открой translate google", "expected_site_id": "translate_google"}
+{"text": "открой trello", "expected_site_id": "trello"}
+{"text": "открой trip advisor", "expected_site_id": "tripadvisor"}
+{"text": "открой tripadvisor", "expected_site_id": "tripadvisor"}
+{"text": "открой tutu", "expected_site_id": "tutu"}
+{"text": "открой twitch", "expected_site_id": "twitch"}
+{"text": "открой twitter", "expected_site_id": "x"}
+{"text": "открой two gis", "expected_site_id": "two_gis"}
+{"text": "открой uber", "expected_site_id": "uber"}
+{"text": "открой udemy", "expected_site_id": "udemy"}
+{"text": "открой vc", "expected_site_id": "vc_ru"}
+{"text": "открой vc ru", "expected_site_id": "vc_ru"}
+{"text": "открой vimeo", "expected_site_id": "vimeo"}
+{"text": "открой virus total", "expected_site_id": "virustotal"}
+{"text": "открой virustotal", "expected_site_id": "virustotal"}
+{"text": "открой vk", "expected_site_id": "vk"}
+{"text": "открой whats app", "expected_site_id": "whatsapp"}
+{"text": "открой whatsapp", "expected_site_id": "whatsapp"}
+{"text": "открой wiki", "expected_site_id": "wikipedia"}
+{"text": "открой wiki how", "expected_site_id": "wikihow"}
+{"text": "открой wikihow", "expected_site_id": "wikihow"}
+{"text": "открой wikipedia", "expected_site_id": "wikipedia"}
+{"text": "открой wild berries", "expected_site_id": "wildberries"}
+{"text": "открой wildberries", "expected_site_id": "wildberries"}
+{"text": "открой wise", "expected_site_id": "wise"}
+{"text": "открой wolfram alpha", "expected_site_id": "wolframalpha"}
+{"text": "открой wolframalpha", "expected_site_id": "wolframalpha"}
+{"text": "открой x", "expected_site_id": "x"}
+{"text": "открой x box", "expected_site_id": "xbox"}
+{"text": "открой xbox", "expected_site_id": "xbox"}
+{"text": "открой yahoo", "expected_site_id": "yahoo"}
+{"text": "открой yahoo finance", "expected_site_id": "yahoo_finance"}
+{"text": "открой yandex", "expected_site_id": "yandex"}
+{"text": "открой yandex go", "expected_site_id": "yandex_go"}
+{"text": "открой yandex maps", "expected_site_id": "yandex_maps"}
+{"text": "открой yandex market", "expected_site_id": "yandex_market"}
+{"text": "открой yandex music", "expected_site_id": "yandex_music"}
+{"text": "открой you com", "expected_site_id": "you_com"}
+{"text": "открой you tube", "expected_site_id": "youtube"}
+{"text": "открой youtube", "expected_site_id": "youtube"}
+{"text": "открой zoom", "expected_site_id": "zoom"}
+{"text": "открой авиасейлс", "expected_site_id": "aviasales"}
+{"text": "открой авиасэйлс", "expected_site_id": "aviasales"}
+{"text": "открой авито", "expected_site_id": "avito"}
+{"text": "открой ай эм ди би", "expected_site_id": "imdb"}
+{"text": "открой айклауд", "expected_site_id": "icloud"}
+{"text": "открой али экспресс", "expected_site_id": "aliexpress"}
+{"text": "открой алиэкспресс", "expected_site_id": "aliexpress"}
+{"text": "открой амазон", "expected_site_id": "amazon"}
+{"text": "открой анаконда", "expected_site_id": "anaconda"}
+{"text": "открой арксив", "expected_site_id": "arxiv"}
+{"text": "открой архив", "expected_site_id": "arxiv"}
+{"text": "открой архив орг", "expected_site_id": "archive_org"}
+{"text": "открой асана", "expected_site_id": "asana"}
+{"text": "открой аск убунту", "expected_site_id": "askubuntu"}
+{"text": "открой аутлук", "expected_site_id": "outlook"}
+{"text": "открой байду", "expected_site_id": "baidu"}
+{"text": "открой батл нет", "expected_site_id": "battle_net"}
+{"text": "открой ббс", "expected_site_id": "bbc"}
+{"text": "открой би би си", "expected_site_id": "bbc"}
+{"text": "открой бинанс", "expected_site_id": "binance"}
+{"text": "открой бинг", "expected_site_id": "bing"}
+{"text": "открой бит бакет", "expected_site_id": "bitbucket"}
+{"text": "открой битбакет", "expected_site_id": "bitbucket"}
+{"text": "открой блумберг", "expected_site_id": "bloomberg"}
+{"text": "открой брейв", "expected_site_id": "brave_search"}
+{"text": "открой бэндкамп", "expected_site_id": "bandcamp"}
+{"text": "открой вайз", "expected_site_id": "wise"}
+{"text": "открой вайлдберриз", "expected_site_id": "wildberries"}
+{"text": "открой ван драйв", "expected_site_id": "onedrive"}
+{"text": "открой ватсап", "expected_site_id": "whatsapp"}
+{"text": "открой википедия", "expected_site_id": "wikipedia"}
+{"text": "открой викихау", "expected_site_id": "wikihow"}
+{"text": "открой вимео", "expected_site_id": "vimeo"}
+{"text": "открой вирус тотал", "expected_site_id": "virustotal"}
+{"text": "открой вк", "expected_site_id": "vk"}
+{"text": "открой вконтакте", "expected_site_id": "vk"}
+{"text": "открой вольфрам альфа", "expected_site_id": "wolframalpha"}
+{"text": "открой гардиан", "expected_site_id": "guardian"}
+{"text": "открой гемини", "expected_site_id": "gemini"}
+{"text": "открой геогебра", "expected_site_id": "geogebra"}
+{"text": "открой гитлаб", "expected_site_id": "gitlab"}
+{"text": "открой гитхаб", "expected_site_id": "github"}
+{"text": "открой гог", "expected_site_id": "gog"}
+{"text": "открой граммарли", "expected_site_id": "grammarly"}
+{"text": "открой гугл", "expected_site_id": "google"}
+{"text": "открой гугл диск", "expected_site_id": "google_drive"}
+{"text": "открой гугл карты", "expected_site_id": "google_maps"}
+{"text": "открой гугл колаб", "expected_site_id": "google_colab"}
+{"text": "открой гугл мит", "expected_site_id": "google_meet"}
+{"text": "открой дакдакго", "expected_site_id": "duckduckgo"}
+{"text": "открой десмос", "expected_site_id": "desmos"}
+{"text": "открой джей эс фиддл", "expected_site_id": "jsfiddle"}
+{"text": "открой джемини", "expected_site_id": "gemini"}
+{"text": "открой джимейл", "expected_site_id": "gmail"}
+{"text": "открой джира", "expected_site_id": "jira"}
+{"text": "открой дзен", "expected_site_id": "dzen"}
+{"text": "открой дизер", "expected_site_id": "deezer"}
+{"text": "открой дипл", "expected_site_id": "deepl"}
+{"text": "открой дипсик", "expected_site_id": "deepseek"}
+{"text": "открой дискорд", "expected_site_id": "discord"}
+{"text": "открой дисней плюс", "expected_site_id": "disney_plus"}
+{"text": "открой докер хаб", "expected_site_id": "docker_hub"}
+{"text": "открой доки оракл", "expected_site_id": "oracle_docs"}
+{"text": "открой доки питон", "expected_site_id": "python_docs"}
+{"text": "открой дропбокс", "expected_site_id": "dropbox"}
+{"text": "открой дуолинго", "expected_site_id": "duolingo"}
+{"text": "открой ед икс", "expected_site_id": "edx"}
+{"text": "открой етси", "expected_site_id": "etsy"}
+{"text": "открой жира", "expected_site_id": "jira"}
+{"text": "открой зум", "expected_site_id": "zoom"}
+{"text": "открой и бей", "expected_site_id": "ebay"}
+{"text": "открой ибей", "expected_site_id": "ebay"}
+{"text": "открой иви", "expected_site_id": "ivi"}
+{"text": "открой икеа", "expected_site_id": "ikea"}
+{"text": "открой иксбокс", "expected_site_id": "xbox"}
+{"text": "открой имдб", "expected_site_id": "imdb"}
+{"text": "открой инстаграм", "expected_site_id": "instagram"}
+{"text": "открой кагл", "expected_site_id": "kaggle"}
+{"text": "открой калькулятор", "expected_site_id": "unknown"}
+{"text": "открой канва", "expected_site_id": "canva"}
+{"text": "открой карты яндекс", "expected_site_id": "yandex_maps"}
+{"text": "открой квант", "expected_site_id": "qwant"}
+{"text": "открой кинопоиск", "expected_site_id": "kinopoisk"}
+{"text": "открой клауд", "expected_site_id": "claude"}
+{"text": "открой клаудфлер", "expected_site_id": "cloudflare"}
+{"text": "открой клод", "expected_site_id": "claude"}
+{"text": "открой кодварс", "expected_site_id": "codewars"}
+{"text": "открой кодпен", "expected_site_id": "codepen"}
+{"text": "открой кодфорсес", "expected_site_id": "codeforces"}
+{"text": "открой коинбейс", "expected_site_id": "coinbase"}
+{"text": "открой коммерсант", "expected_site_id": "kommersant"}
+{"text": "открой коммерсантъ", "expected_site_id": "kommersant"}
+{"text": "открой конфлюенс", "expected_site_id": "confluence"}
+{"text": "открой конфлюенс вики", "expected_site_id": "confluence"}
+{"text": "открой копайлот", "expected_site_id": "copilot"}
+{"text": "открой курсера", "expected_site_id": "coursera"}
+{"text": "открой кэгл", "expected_site_id": "kaggle"}
+{"text": "открой ламода", "expected_site_id": "lamoda"}
+{"text": "открой лента", "expected_site_id": "lenta"}
+{"text": "открой лента ру", "expected_site_id": "lenta"}
+{"text": "открой леттербоксд", "expected_site_id": "letterboxd"}
+{"text": "открой линкедин", "expected_site_id": "linkedin"}
+{"text": "открой литкод", "expected_site_id": "leetcode"}
+{"text": "открой майкрософт лерн", "expected_site_id": "microsoft_learn"}
+{"text": "открой майкрософт почта", "expected_site_id": "outlook"}
+{"text": "открой майнкрафт", "expected_site_id": "minecraft"}
+{"text": "открой макс", "expected_site_id": "max"}
+{"text": "открой маркет", "expected_site_id": "yandex_market"}
+{"text": "открой мастодон", "expected_site_id": "mastodon"}
+{"text": "открой мдн", "expected_site_id": "mdn"}
+{"text": "открой мега", "expected_site_id": "mega"}
+{"text": "открой медиум", "expected_site_id": "medium"}
+{"text": "открой медуза", "expected_site_id": "meduza"}
+{"text": "открой мейл ру", "expected_site_id": "mail_ru"}
+{"text": "открой миро", "expected_site_id": "miro"}
+{"text": "открой мод дб", "expected_site_id": "moddb"}
+{"text": "открой музыка яндекс", "expected_site_id": "yandex_music"}
+{"text": "открой настройки", "expected_site_id": "unknown"}
+{"text": "открой нейвер", "expected_site_id": "naver"}
+{"text": "открой нексус модс", "expected_site_id": "nexusmods"}
+{"text": "открой нетология", "expected_site_id": "netology"}
+{"text": "открой нетфликс", "expected_site_id": "netflix"}
+{"text": "открой нинтендо", "expected_site_id": "nintendo"}
+{"text": "открой ноушен", "expected_site_id": "notion"}
+{"text": "открой ноушн", "expected_site_id": "notion"}
+{"text": "открой нпм", "expected_site_id": "npm"}
+{"text": "открой овер лиф", "expected_site_id": "overleaf"}
+{"text": "открой оверлиф", "expected_site_id": "overleaf"}
+{"text": "открой одноклассники", "expected_site_id": "ok"}
+{"text": "открой озон", "expected_site_id": "ozon"}
+{"text": "открой оки", "expected_site_id": "ok"}
+{"text": "открой онлайнер", "expected_site_id": "onliner"}
+{"text": "открой опенстритмап", "expected_site_id": "openstreetmap"}
+{"text": "открой оупен аи", "expected_site_id": "openai"}
+{"text": "открой пайпи", "expected_site_id": "pypi"}
+{"text": "открой пейпал", "expected_site_id": "paypal"}
+{"text": "открой пейперс виз код", "expected_site_id": "paperswithcode"}
+{"text": "открой перплексити", "expected_site_id": "perplexity"}
+{"text": "открой перплексити аи", "expected_site_id": "perplexity"}
+{"text": "открой пи вай пи ай", "expected_site_id": "pypi"}
+{"text": "открой пикабу", "expected_site_id": "pikabu"}
+{"text": "открой пинтерест", "expected_site_id": "pinterest"}
+{"text": "открой плейстейшен", "expected_site_id": "playstation"}
+{"text": "открой по", "expected_site_id": "poe"}
+{"text": "открой по ком", "expected_site_id": "poe"}
+{"text": "открой прайм видео", "expected_site_id": "prime_video"}
+{"text": "открой протон мейл", "expected_site_id": "proton_mail"}
+{"text": "открой рамблер", "expected_site_id": "rambler"}
+{"text": "открой рбк", "expected_site_id": "rbc"}
+{"text": "открой реддит", "expected_site_id": "reddit"}
+{"text": "открой редит", "expected_site_id": "reddit"}
+{"text": "открой реплит", "expected_site_id": "replit"}
+{"text": "открой ресерчгейт", "expected_site_id": "researchgate"}
+{"text": "открой риа", "expected_site_id": "ria"}
+{"text": "открой риа новости", "expected_site_id": "ria"}
+{"text": "открой роблокс", "expected_site_id": "roblox"}
+{"text": "открой ройтерс", "expected_site_id": "reuters"}
+{"text": "открой роттен томатос", "expected_site_id": "rottentomatoes"}
+{"text": "открой рутуб", "expected_site_id": "rutube"}
+{"text": "открой рутьюб", "expected_site_id": "rutube"}
+{"text": "открой саундклауд", "expected_site_id": "soundcloud"}
+{"text": "открой сбер", "expected_site_id": "sber"}
+{"text": "открой сбербанк", "expected_site_id": "sber"}
+{"text": "открой си эн эн", "expected_site_id": "cnn"}
+{"text": "открой скайсканер", "expected_site_id": "skyscanner"}
+{"text": "открой скилбокс", "expected_site_id": "skillbox"}
+{"text": "открой скиллбокс", "expected_site_id": "skillbox"}
+{"text": "открой слак", "expected_site_id": "slack"}
+{"text": "открой спидтест", "expected_site_id": "speedtest"}
+{"text": "открой спотифай", "expected_site_id": "spotify"}
+{"text": "открой стак оверфлоу", "expected_site_id": "stackoverflow"}
+{"text": "открой стак эксчейндж", "expected_site_id": "stackexchange"}
+{"text": "открой степик", "expected_site_id": "stepik"}
+{"text": "открой стим", "expected_site_id": "steam"}
+{"text": "открой страйп", "expected_site_id": "stripe"}
+{"text": "открой супер юзер", "expected_site_id": "superuser"}
+{"text": "открой т-банк", "expected_site_id": "tinkoff"}
+{"text": "открой тасс", "expected_site_id": "tass"}
+{"text": "открой твиттер", "expected_site_id": "x"}
+{"text": "открой твич", "expected_site_id": "twitch"}
+{"text": "открой телеграм", "expected_site_id": "telegram"}
+{"text": "открой тему", "expected_site_id": "temu"}
+{"text": "открой тен чат", "expected_site_id": "tenchat"}
+{"text": "открой тенчат", "expected_site_id": "tenchat"}
+{"text": "открой тикток", "expected_site_id": "tiktok"}
+{"text": "открой тимс", "expected_site_id": "microsoft_teams"}
+{"text": "открой тиму", "expected_site_id": "temu"}
+{"text": "открой тинькофф", "expected_site_id": "tinkoff"}
+{"text": "открой тредс", "expected_site_id": "threads"}
+{"text": "открой трейдингвью", "expected_site_id": "tradingview"}
+{"text": "открой трелло", "expected_site_id": "trello"}
+{"text": "открой трело", "expected_site_id": "trello"}
+{"text": "открой трипадвайзер", "expected_site_id": "tripadvisor"}
+{"text": "открой туту", "expected_site_id": "tutu"}
+{"text": "открой туту ру", "expected_site_id": "tutu"}
+{"text": "открой убер", "expected_site_id": "uber"}
+{"text": "открой удеми", "expected_site_id": "udemy"}
+{"text": "открой фандом", "expected_site_id": "fandom"}
+{"text": "открой фейсбук", "expected_site_id": "facebook"}
+{"text": "открой фигма", "expected_site_id": "figma"}
+{"text": "открой флайтрадар", "expected_site_id": "flightradar24"}
+{"text": "открой фэйсбук", "expected_site_id": "facebook"}
+{"text": "открой хабр", "expected_site_id": "habr"}
+{"text": "открой хабрахабр", "expected_site_id": "habr"}
+{"text": "открой хаггинг фейс", "expected_site_id": "huggingface"}
+{"text": "открой хакерранк", "expected_site_id": "hackerrank"}
+{"text": "открой хан академи", "expected_site_id": "khanacademy"}
+{"text": "открой хулу", "expected_site_id": "hulu"}
+{"text": "открой цнн", "expected_site_id": "cnn"}
+{"text": "открой чатгпт", "expected_site_id": "chatgpt"}
+{"text": "открой шейн", "expected_site_id": "shein"}
+{"text": "открой эйрбнб", "expected_site_id": "airbnb"}
+{"text": "открой эн пи эм", "expected_site_id": "npm"}
+{"text": "открой эпик геймс", "expected_site_id": "epic_games"}
+{"text": "открой эпл музыка", "expected_site_id": "apple_music"}
+{"text": "открой эпл мьюзик", "expected_site_id": "apple_music"}
+{"text": "открой этси", "expected_site_id": "etsy"}
+{"text": "открой ю ком", "expected_site_id": "you_com"}
+{"text": "открой юдеми", "expected_site_id": "udemy"}
+{"text": "открой ютуб", "expected_site_id": "youtube"}
+{"text": "открой яндекс", "expected_site_id": "yandex"}
+{"text": "открой яндекс go", "expected_site_id": "yandex_go"}
+{"text": "открой яндекс го", "expected_site_id": "yandex_go"}
+{"text": "открой яндекс дзен", "expected_site_id": "dzen"}
+{"text": "открой яндекс карты", "expected_site_id": "yandex_maps"}
+{"text": "открой яндекс маркет", "expected_site_id": "yandex_market"}
+{"text": "открой яндекс музыка", "expected_site_id": "yandex_music"}
+{"text": "открой яху", "expected_site_id": "yahoo"}
+{"text": "открой яху финанс", "expected_site_id": "yahoo_finance"}
+{"text": "открой яху финансы", "expected_site_id": "yahoo_finance"}
+{"text": "отыщи rust ownership на airbnb", "expected_site_id": "unknown"}
+{"text": "перейди на 2gis", "expected_site_id": "two_gis"}
+{"text": "перейди на 2гис", "expected_site_id": "two_gis"}
+{"text": "перейди на air bnb", "expected_site_id": "airbnb"}
+{"text": "перейди на airbnb", "expected_site_id": "airbnb"}
+{"text": "перейди на aliexpress", "expected_site_id": "aliexpress"}
+{"text": "перейди на amazon", "expected_site_id": "amazon"}
+{"text": "перейди на amazon prime video", "expected_site_id": "prime_video"}
+{"text": "перейди на anaconda", "expected_site_id": "anaconda"}
+{"text": "перейди на ap news", "expected_site_id": "apnews"}
+{"text": "перейди на apnews", "expected_site_id": "apnews"}
+{"text": "перейди на apple music", "expected_site_id": "apple_music"}
+{"text": "перейди на archive org", "expected_site_id": "archive_org"}
+{"text": "перейди на arxiv", "expected_site_id": "arxiv"}
+{"text": "перейди на asana", "expected_site_id": "asana"}
+{"text": "перейди на ask ubuntu", "expected_site_id": "askubuntu"}
+{"text": "перейди на askubuntu", "expected_site_id": "askubuntu"}
+{"text": "перейди на associated press", "expected_site_id": "apnews"}
+{"text": "перейди на aviasales", "expected_site_id": "aviasales"}
+{"text": "перейди на avito", "expected_site_id": "avito"}
+{"text": "перейди на baidu", "expected_site_id": "baidu"}
+{"text": "перейди на band camp", "expected_site_id": "bandcamp"}
+{"text": "перейди на bandcamp", "expected_site_id": "bandcamp"}
+{"text": "перейди на battle net", "expected_site_id": "battle_net"}
+{"text": "перейди на bbc", "expected_site_id": "bbc"}
+{"text": "перейди на binance", "expected_site_id": "binance"}
+{"text": "перейди на bing", "expected_site_id": "bing"}
+{"text": "перейди на bitbucket", "expected_site_id": "bitbucket"}
+{"text": "перейди на bloomberg", "expected_site_id": "bloomberg"}
+{"text": "перейди на booking", "expected_site_id": "booking"}
+{"text": "перейди на booking com", "expected_site_id": "booking"}
+{"text": "перейди на brave", "expected_site_id": "brave_search"}
+{"text": "перейди на brave search", "expected_site_id": "brave_search"}
+{"text": "перейди на canva", "expected_site_id": "canva"}
+{"text": "перейди на chat gpt", "expected_site_id": "chatgpt"}
+{"text": "перейди на chatgpt", "expected_site_id": "chatgpt"}
+{"text": "перейди на claude", "expected_site_id": "claude"}
+{"text": "перейди на cloud flare", "expected_site_id": "cloudflare"}
+{"text": "перейди на cloudflare", "expected_site_id": "cloudflare"}
+{"text": "перейди на cnn", "expected_site_id": "cnn"}
+{"text": "перейди на code forces", "expected_site_id": "codeforces"}
+{"text": "перейди на code pen", "expected_site_id": "codepen"}
+{"text": "перейди на code wars", "expected_site_id": "codewars"}
+{"text": "перейди на codeforces", "expected_site_id": "codeforces"}
+{"text": "перейди на codepen", "expected_site_id": "codepen"}
+{"text": "перейди на codewars", "expected_site_id": "codewars"}
+{"text": "перейди на coin base", "expected_site_id": "coinbase"}
+{"text": "перейди на coinbase", "expected_site_id": "coinbase"}
+{"text": "перейди на colab", "expected_site_id": "google_colab"}
+{"text": "перейди на confluence", "expected_site_id": "confluence"}
+{"text": "перейди на copilot", "expected_site_id": "copilot"}
+{"text": "перейди на coursera", "expected_site_id": "coursera"}
+{"text": "перейди на deep l", "expected_site_id": "deepl"}
+{"text": "перейди на deep seek", "expected_site_id": "deepseek"}
+{"text": "перейди на deepl", "expected_site_id": "deepl"}
+{"text": "перейди на deepseek", "expected_site_id": "deepseek"}
+{"text": "перейди на deezer", "expected_site_id": "deezer"}
+{"text": "перейди на desmos", "expected_site_id": "desmos"}
+{"text": "перейди на dev by", "expected_site_id": "devby"}
+{"text": "перейди на devby", "expected_site_id": "devby"}
+{"text": "перейди на discord", "expected_site_id": "discord"}
+{"text": "перейди на disney plus", "expected_site_id": "disney_plus"}
+{"text": "перейди на disney+", "expected_site_id": "disney_plus"}
+{"text": "перейди на docker", "expected_site_id": "docker_hub"}
+{"text": "перейди на docker hub", "expected_site_id": "docker_hub"}
+{"text": "перейди на drive", "expected_site_id": "google_drive"}
+{"text": "перейди на dropbox", "expected_site_id": "dropbox"}
+{"text": "перейди на duck duck go", "expected_site_id": "duckduckgo"}
+{"text": "перейди на duckduckgo", "expected_site_id": "duckduckgo"}
+{"text": "перейди на duolingo", "expected_site_id": "duolingo"}
+{"text": "перейди на dzen", "expected_site_id": "dzen"}
+{"text": "перейди на ebay", "expected_site_id": "ebay"}
+{"text": "перейди на ed x", "expected_site_id": "edx"}
+{"text": "перейди на edx", "expected_site_id": "edx"}
+{"text": "перейди на epic", "expected_site_id": "epic_games"}
+{"text": "перейди на epic games", "expected_site_id": "epic_games"}
+{"text": "перейди на etsy", "expected_site_id": "etsy"}
+{"text": "перейди на facebook", "expected_site_id": "facebook"}
+{"text": "перейди на fandom", "expected_site_id": "fandom"}
+{"text": "перейди на figma", "expected_site_id": "figma"}
+{"text": "перейди на flight radar", "expected_site_id": "flightradar24"}
+{"text": "перейди на flightradar24", "expected_site_id": "flightradar24"}
+{"text": "перейди на g mail", "expected_site_id": "gmail"}
+{"text": "перейди на gemini", "expected_site_id": "gemini"}
+{"text": "перейди на geo gebra", "expected_site_id": "geogebra"}
+{"text": "перейди на geogebra", "expected_site_id": "geogebra"}
+{"text": "перейди на git hub", "expected_site_id": "github"}
+{"text": "перейди на git lab", "expected_site_id": "gitlab"}
+{"text": "перейди на github", "expected_site_id": "github"}
+{"text": "перейди на gitlab", "expected_site_id": "gitlab"}
+{"text": "перейди на gmail", "expected_site_id": "gmail"}
+{"text": "перейди на gog", "expected_site_id": "gog"}
+{"text": "перейди на google", "expected_site_id": "google"}
+{"text": "перейди на google colab", "expected_site_id": "google_colab"}
+{"text": "перейди на google drive", "expected_site_id": "google_drive"}
+{"text": "перейди на google maps", "expected_site_id": "google_maps"}
+{"text": "перейди на google meet", "expected_site_id": "google_meet"}
+{"text": "перейди на google translate", "expected_site_id": "translate_google"}
+{"text": "перейди на grammarly", "expected_site_id": "grammarly"}
+{"text": "перейди на guardian", "expected_site_id": "guardian"}
+{"text": "перейди на habr", "expected_site_id": "habr"}
+{"text": "перейди на hacker rank", "expected_site_id": "hackerrank"}
+{"text": "перейди на hackerrank", "expected_site_id": "hackerrank"}
+{"text": "перейди на hbo max", "expected_site_id": "max"}
+{"text": "перейди на hugging face", "expected_site_id": "huggingface"}
+{"text": "перейди на huggingface", "expected_site_id": "huggingface"}
+{"text": "перейди на hulu", "expected_site_id": "hulu"}
+{"text": "перейди на i cloud", "expected_site_id": "icloud"}
+{"text": "перейди на icloud", "expected_site_id": "icloud"}
+{"text": "перейди на ikea", "expected_site_id": "ikea"}
+{"text": "перейди на imdb", "expected_site_id": "imdb"}
+{"text": "перейди на insta", "expected_site_id": "instagram"}
+{"text": "перейди на instagram", "expected_site_id": "instagram"}
+{"text": "перейди на internet archive", "expected_site_id": "archive_org"}
+{"text": "перейди на investing", "expected_site_id": "investing"}
+{"text": "перейди на investing com", "expected_site_id": "investing"}
+{"text": "перейди на itch", "expected_site_id": "itch"}
+{"text": "перейди на itch io", "expected_site_id": "itch"}
+{"text": "перейди на ivi", "expected_site_id": "ivi"}
+{"text": "перейди на jira", "expected_site_id": "jira"}
+{"text": "перейди на js fiddle", "expected_site_id": "jsfiddle"}
+{"text": "перейди на jsfiddle", "expected_site_id": "jsfiddle"}
+{"text": "перейди на kaggle", "expected_site_id": "kaggle"}
+{"text": "перейди на khan academy", "expected_site_id": "khanacademy"}
+{"text": "перейди на khanacademy", "expected_site_id": "khanacademy"}
+{"text": "перейди на kinopoisk", "expected_site_id": "kinopoisk"}
+{"text": "перейди на kommersant", "expected_site_id": "kommersant"}
+{"text": "перейди на lamoda", "expected_site_id": "lamoda"}
+{"text": "перейди на learn microsoft", "expected_site_id": "microsoft_learn"}
+{"text": "перейди на leet code", "expected_site_id": "leetcode"}
+{"text": "перейди на leetcode", "expected_site_id": "leetcode"}
+{"text": "перейди на lenta", "expected_site_id": "lenta"}
+{"text": "перейди на letterboxd", "expected_site_id": "letterboxd"}
+{"text": "перейди на linked in", "expected_site_id": "linkedin"}
+{"text": "перейди на linkedin", "expected_site_id": "linkedin"}
+{"text": "перейди на mail ru", "expected_site_id": "mail_ru"}
+{"text": "перейди на maps", "expected_site_id": "google_maps"}
+{"text": "перейди на mastodon", "expected_site_id": "mastodon"}
+{"text": "перейди на max", "expected_site_id": "max"}
+{"text": "перейди на mdn", "expected_site_id": "mdn"}
+{"text": "перейди на mdn web docs", "expected_site_id": "mdn"}
+{"text": "перейди на medium", "expected_site_id": "medium"}
+{"text": "перейди на meduza", "expected_site_id": "meduza"}
+{"text": "перейди на meet", "expected_site_id": "google_meet"}
+{"text": "перейди на mega", "expected_site_id": "mega"}
+{"text": "перейди на mega nz", "expected_site_id": "mega"}
+{"text": "перейди на microsoft copilot", "expected_site_id": "copilot"}
+{"text": "перейди на microsoft learn", "expected_site_id": "microsoft_learn"}
+{"text": "перейди на microsoft teams", "expected_site_id": "microsoft_teams"}
+{"text": "перейди на minecraft", "expected_site_id": "minecraft"}
+{"text": "перейди на miro", "expected_site_id": "miro"}
+{"text": "перейди на mod db", "expected_site_id": "moddb"}
+{"text": "перейди на moddb", "expected_site_id": "moddb"}
+{"text": "перейди на n plus one", "expected_site_id": "nplus1"}
+{"text": "перейди на n+1", "expected_site_id": "nplus1"}
+{"text": "перейди на naver", "expected_site_id": "naver"}
+{"text": "перейди на netflix", "expected_site_id": "netflix"}
+{"text": "перейди на netology", "expected_site_id": "netology"}
+{"text": "перейди на new york times", "expected_site_id": "nytimes"}
+{"text": "перейди на nexus mods", "expected_site_id": "nexusmods"}
+{"text": "перейди на nexusmods", "expected_site_id": "nexusmods"}
+{"text": "перейди на nintendo", "expected_site_id": "nintendo"}
+{"text": "перейди на notion", "expected_site_id": "notion"}
+{"text": "перейди на nplus1", "expected_site_id": "nplus1"}
+{"text": "перейди на npm", "expected_site_id": "npm"}
+{"text": "перейди на nytimes", "expected_site_id": "nytimes"}
+{"text": "перейди на ok", "expected_site_id": "ok"}
+{"text": "перейди на one drive", "expected_site_id": "onedrive"}
+{"text": "перейди на onedrive", "expected_site_id": "onedrive"}
+{"text": "перейди на onliner", "expected_site_id": "onliner"}
+{"text": "перейди на onlíner", "expected_site_id": "onliner"}
+{"text": "перейди на open ai", "expected_site_id": "openai"}
+{"text": "перейди на open street map", "expected_site_id": "openstreetmap"}
+{"text": "перейди на openai", "expected_site_id": "openai"}
+{"text": "перейди на openstreetmap", "expected_site_id": "openstreetmap"}
+{"text": "перейди на oracle docs", "expected_site_id": "oracle_docs"}
+{"text": "перейди на oracle documentation", "expected_site_id": "oracle_docs"}
+{"text": "перейди на outlook", "expected_site_id": "outlook"}
+{"text": "перейди на overleaf", "expected_site_id": "overleaf"}
+{"text": "перейди на ozon", "expected_site_id": "ozon"}
+{"text": "перейди на papers with code", "expected_site_id": "paperswithcode"}
+{"text": "перейди на paperswithcode", "expected_site_id": "paperswithcode"}
+{"text": "перейди на pay pal", "expected_site_id": "paypal"}
+{"text": "перейди на paypal", "expected_site_id": "paypal"}
+{"text": "перейди на perplexity", "expected_site_id": "perplexity"}
+{"text": "перейди на pikabu", "expected_site_id": "pikabu"}
+{"text": "перейди на pinterest", "expected_site_id": "pinterest"}
+{"text": "перейди на play station", "expected_site_id": "playstation"}
+{"text": "перейди на playstation", "expected_site_id": "playstation"}
+{"text": "перейди на poe", "expected_site_id": "poe"}
+{"text": "перейди на prime video", "expected_site_id": "prime_video"}
+{"text": "перейди на proton", "expected_site_id": "proton_mail"}
+{"text": "перейди на proton mail", "expected_site_id": "proton_mail"}
+{"text": "перейди на pypi", "expected_site_id": "pypi"}
+{"text": "перейди на python docs", "expected_site_id": "python_docs"}
+{"text": "перейди на python documentation", "expected_site_id": "python_docs"}
+{"text": "перейди на qwant", "expected_site_id": "qwant"}
+{"text": "перейди на rambler", "expected_site_id": "rambler"}
+{"text": "перейди на rbc", "expected_site_id": "rbc"}
+{"text": "перейди на reddit", "expected_site_id": "reddit"}
+{"text": "перейди на replit", "expected_site_id": "replit"}
+{"text": "перейди на research gate", "expected_site_id": "researchgate"}
+{"text": "перейди на researchgate", "expected_site_id": "researchgate"}
+{"text": "перейди на reuters", "expected_site_id": "reuters"}
+{"text": "перейди на ria", "expected_site_id": "ria"}
+{"text": "перейди на roblox", "expected_site_id": "roblox"}
+{"text": "перейди на rotten tomatoes", "expected_site_id": "rottentomatoes"}
+{"text": "перейди на rottentomatoes", "expected_site_id": "rottentomatoes"}
+{"text": "перейди на rutube", "expected_site_id": "rutube"}
+{"text": "перейди на sber", "expected_site_id": "sber"}
+{"text": "перейди на shein", "expected_site_id": "shein"}
+{"text": "перейди на skillbox", "expected_site_id": "skillbox"}
+{"text": "перейди на sky scanner", "expected_site_id": "skyscanner"}
+{"text": "перейди на skyscanner", "expected_site_id": "skyscanner"}
+{"text": "перейди на slack", "expected_site_id": "slack"}
+{"text": "перейди на sound cloud", "expected_site_id": "soundcloud"}
+{"text": "перейди на soundcloud", "expected_site_id": "soundcloud"}
+{"text": "перейди на speed test", "expected_site_id": "speedtest"}
+{"text": "перейди на speedtest", "expected_site_id": "speedtest"}
+{"text": "перейди на spotify", "expected_site_id": "spotify"}
+{"text": "перейди на stack exchange", "expected_site_id": "stackexchange"}
+{"text": "перейди на stack overflow", "expected_site_id": "stackoverflow"}
+{"text": "перейди на stackexchange", "expected_site_id": "stackexchange"}
+{"text": "перейди на stackoverflow", "expected_site_id": "stackoverflow"}
+{"text": "перейди на steam", "expected_site_id": "steam"}
+{"text": "перейди на stepik", "expected_site_id": "stepik"}
+{"text": "перейди на stripe", "expected_site_id": "stripe"}
+{"text": "перейди на super user", "expected_site_id": "superuser"}
+{"text": "перейди на superuser", "expected_site_id": "superuser"}
+{"text": "перейди на tass", "expected_site_id": "tass"}
+{"text": "перейди на teams", "expected_site_id": "microsoft_teams"}
+{"text": "перейди на telegram", "expected_site_id": "telegram"}
+{"text": "перейди на telegram web", "expected_site_id": "telegram"}
+{"text": "перейди на temu", "expected_site_id": "temu"}
+{"text": "перейди на tenchat", "expected_site_id": "tenchat"}
+{"text": "перейди на the guardian", "expected_site_id": "guardian"}
+{"text": "перейди на the new york times", "expected_site_id": "nytimes"}
+{"text": "перейди на threads", "expected_site_id": "threads"}
+{"text": "перейди на threads net", "expected_site_id": "threads"}
+{"text": "перейди на tik tok", "expected_site_id": "tiktok"}
+{"text": "перейди на tiktok", "expected_site_id": "tiktok"}
+{"text": "перейди на tinkoff", "expected_site_id": "tinkoff"}
+{"text": "перейди на trading view", "expected_site_id": "tradingview"}
+{"text": "перейди на tradingview", "expected_site_id": "tradingview"}
+{"text": "перейди на translate", "expected_site_id": "translate_google"}
+{"text": "перейди на translate google", "expected_site_id": "translate_google"}
+{"text": "перейди на trello", "expected_site_id": "trello"}
+{"text": "перейди на trip advisor", "expected_site_id": "tripadvisor"}
+{"text": "перейди на tripadvisor", "expected_site_id": "tripadvisor"}
+{"text": "перейди на tutu", "expected_site_id": "tutu"}
+{"text": "перейди на twitch", "expected_site_id": "twitch"}
+{"text": "перейди на twitter", "expected_site_id": "x"}
+{"text": "перейди на two gis", "expected_site_id": "two_gis"}
+{"text": "перейди на uber", "expected_site_id": "uber"}
+{"text": "перейди на udemy", "expected_site_id": "udemy"}
+{"text": "перейди на vc", "expected_site_id": "vc_ru"}
+{"text": "перейди на vc ru", "expected_site_id": "vc_ru"}
+{"text": "перейди на vimeo", "expected_site_id": "vimeo"}
+{"text": "перейди на virus total", "expected_site_id": "virustotal"}
+{"text": "перейди на virustotal", "expected_site_id": "virustotal"}
+{"text": "перейди на vk", "expected_site_id": "vk"}
+{"text": "перейди на whats app", "expected_site_id": "whatsapp"}
+{"text": "перейди на whatsapp", "expected_site_id": "whatsapp"}
+{"text": "перейди на wiki", "expected_site_id": "wikipedia"}
+{"text": "перейди на wiki how", "expected_site_id": "wikihow"}
+{"text": "перейди на wikihow", "expected_site_id": "wikihow"}
+{"text": "перейди на wikipedia", "expected_site_id": "wikipedia"}
+{"text": "перейди на wild berries", "expected_site_id": "wildberries"}
+{"text": "перейди на wildberries", "expected_site_id": "wildberries"}
+{"text": "перейди на wise", "expected_site_id": "wise"}
+{"text": "перейди на wolfram alpha", "expected_site_id": "wolframalpha"}
+{"text": "перейди на wolframalpha", "expected_site_id": "wolframalpha"}
+{"text": "перейди на x", "expected_site_id": "x"}
+{"text": "перейди на x box", "expected_site_id": "xbox"}
+{"text": "перейди на xbox", "expected_site_id": "xbox"}
+{"text": "перейди на yahoo", "expected_site_id": "yahoo"}
+{"text": "перейди на yahoo finance", "expected_site_id": "yahoo_finance"}
+{"text": "перейди на yandex", "expected_site_id": "yandex"}
+{"text": "перейди на yandex go", "expected_site_id": "yandex_go"}
+{"text": "перейди на yandex maps", "expected_site_id": "yandex_maps"}
+{"text": "перейди на yandex market", "expected_site_id": "yandex_market"}
+{"text": "перейди на yandex music", "expected_site_id": "yandex_music"}
+{"text": "перейди на you com", "expected_site_id": "you_com"}
+{"text": "перейди на you tube", "expected_site_id": "youtube"}
+{"text": "перейди на youtube", "expected_site_id": "youtube"}
+{"text": "перейди на zoom", "expected_site_id": "zoom"}
+{"text": "перейди на авиасейлс", "expected_site_id": "aviasales"}
+{"text": "перейди на авиасэйлс", "expected_site_id": "aviasales"}
+{"text": "перейди на авито", "expected_site_id": "avito"}
+{"text": "перейди на ай эм ди би", "expected_site_id": "imdb"}
+{"text": "перейди на айклауд", "expected_site_id": "icloud"}
+{"text": "перейди на али экспресс", "expected_site_id": "aliexpress"}
+{"text": "перейди на алиэкспресс", "expected_site_id": "aliexpress"}
+{"text": "перейди на амазон", "expected_site_id": "amazon"}
+{"text": "перейди на анаконда", "expected_site_id": "anaconda"}
+{"text": "перейди на арксив", "expected_site_id": "arxiv"}
+{"text": "перейди на архив", "expected_site_id": "arxiv"}
+{"text": "перейди на архив орг", "expected_site_id": "archive_org"}
+{"text": "перейди на асана", "expected_site_id": "asana"}
+{"text": "перейди на аск убунту", "expected_site_id": "askubuntu"}
+{"text": "перейди на аутлук", "expected_site_id": "outlook"}
+{"text": "перейди на байду", "expected_site_id": "baidu"}
+{"text": "перейди на батл нет", "expected_site_id": "battle_net"}
+{"text": "перейди на ббс", "expected_site_id": "bbc"}
+{"text": "перейди на би би си", "expected_site_id": "bbc"}
+{"text": "перейди на бинанс", "expected_site_id": "binance"}
+{"text": "перейди на бинг", "expected_site_id": "bing"}
+{"text": "перейди на бит бакет", "expected_site_id": "bitbucket"}
+{"text": "перейди на битбакет", "expected_site_id": "bitbucket"}
+{"text": "перейди на блумберг", "expected_site_id": "bloomberg"}
+{"text": "перейди на брейв", "expected_site_id": "brave_search"}
+{"text": "перейди на бэндкамп", "expected_site_id": "bandcamp"}
+{"text": "перейди на вайз", "expected_site_id": "wise"}
+{"text": "перейди на вайлдберриз", "expected_site_id": "wildberries"}
+{"text": "перейди на ван драйв", "expected_site_id": "onedrive"}
+{"text": "перейди на ватсап", "expected_site_id": "whatsapp"}
+{"text": "перейди на википедия", "expected_site_id": "wikipedia"}
+{"text": "перейди на викихау", "expected_site_id": "wikihow"}
+{"text": "перейди на вимео", "expected_site_id": "vimeo"}
+{"text": "перейди на вирус тотал", "expected_site_id": "virustotal"}
+{"text": "перейди на вк", "expected_site_id": "vk"}
+{"text": "перейди на вконтакте", "expected_site_id": "vk"}
+{"text": "перейди на вольфрам альфа", "expected_site_id": "wolframalpha"}
+{"text": "перейди на гардиан", "expected_site_id": "guardian"}
+{"text": "перейди на гемини", "expected_site_id": "gemini"}
+{"text": "перейди на геогебра", "expected_site_id": "geogebra"}
+{"text": "перейди на гитлаб", "expected_site_id": "gitlab"}
+{"text": "перейди на гитхаб", "expected_site_id": "github"}
+{"text": "перейди на гог", "expected_site_id": "gog"}
+{"text": "перейди на граммарли", "expected_site_id": "grammarly"}
+{"text": "перейди на гугл", "expected_site_id": "google"}
+{"text": "перейди на гугл диск", "expected_site_id": "google_drive"}
+{"text": "перейди на гугл карты", "expected_site_id": "google_maps"}
+{"text": "перейди на гугл колаб", "expected_site_id": "google_colab"}
+{"text": "перейди на гугл мит", "expected_site_id": "google_meet"}
+{"text": "перейди на дакдакго", "expected_site_id": "duckduckgo"}
+{"text": "перейди на десмос", "expected_site_id": "desmos"}
+{"text": "перейди на джей эс фиддл", "expected_site_id": "jsfiddle"}
+{"text": "перейди на джемини", "expected_site_id": "gemini"}
+{"text": "перейди на джимейл", "expected_site_id": "gmail"}
+{"text": "перейди на джира", "expected_site_id": "jira"}
+{"text": "перейди на дзен", "expected_site_id": "dzen"}
+{"text": "перейди на дизер", "expected_site_id": "deezer"}
+{"text": "перейди на дипл", "expected_site_id": "deepl"}
+{"text": "перейди на дипсик", "expected_site_id": "deepseek"}
+{"text": "перейди на дискорд", "expected_site_id": "discord"}
+{"text": "перейди на дисней плюс", "expected_site_id": "disney_plus"}
+{"text": "перейди на докер хаб", "expected_site_id": "docker_hub"}
+{"text": "перейди на доки оракл", "expected_site_id": "oracle_docs"}
+{"text": "перейди на доки питон", "expected_site_id": "python_docs"}
+{"text": "перейди на дропбокс", "expected_site_id": "dropbox"}
+{"text": "перейди на дуолинго", "expected_site_id": "duolingo"}
+{"text": "перейди на ед икс", "expected_site_id": "edx"}
+{"text": "перейди на етси", "expected_site_id": "etsy"}
+{"text": "перейди на жира", "expected_site_id": "jira"}
+{"text": "перейди на зум", "expected_site_id": "zoom"}
+{"text": "перейди на и бей", "expected_site_id": "ebay"}
+{"text": "перейди на ибей", "expected_site_id": "ebay"}
+{"text": "перейди на иви", "expected_site_id": "ivi"}
+{"text": "перейди на икеа", "expected_site_id": "ikea"}
+{"text": "перейди на иксбокс", "expected_site_id": "xbox"}
+{"text": "перейди на имдб", "expected_site_id": "imdb"}
+{"text": "перейди на инстаграм", "expected_site_id": "instagram"}
+{"text": "перейди на кагл", "expected_site_id": "kaggle"}
+{"text": "перейди на канва", "expected_site_id": "canva"}
+{"text": "перейди на карты яндекс", "expected_site_id": "yandex_maps"}
+{"text": "перейди на квант", "expected_site_id": "qwant"}
+{"text": "перейди на кинопоиск", "expected_site_id": "kinopoisk"}
+{"text": "перейди на клауд", "expected_site_id": "claude"}
+{"text": "перейди на клаудфлер", "expected_site_id": "cloudflare"}
+{"text": "перейди на клод", "expected_site_id": "claude"}
+{"text": "перейди на кодварс", "expected_site_id": "codewars"}
+{"text": "перейди на кодпен", "expected_site_id": "codepen"}
+{"text": "перейди на кодфорсес", "expected_site_id": "codeforces"}
+{"text": "перейди на коинбейс", "expected_site_id": "coinbase"}
+{"text": "перейди на коммерсант", "expected_site_id": "kommersant"}
+{"text": "перейди на коммерсантъ", "expected_site_id": "kommersant"}
+{"text": "перейди на конфлюенс", "expected_site_id": "confluence"}
+{"text": "перейди на конфлюенс вики", "expected_site_id": "confluence"}
+{"text": "перейди на копайлот", "expected_site_id": "copilot"}
+{"text": "перейди на курсера", "expected_site_id": "coursera"}
+{"text": "перейди на кэгл", "expected_site_id": "kaggle"}
+{"text": "перейди на ламода", "expected_site_id": "lamoda"}
+{"text": "перейди на лента", "expected_site_id": "lenta"}
+{"text": "перейди на лента ру", "expected_site_id": "lenta"}
+{"text": "перейди на леттербоксд", "expected_site_id": "letterboxd"}
+{"text": "перейди на линкедин", "expected_site_id": "linkedin"}
+{"text": "перейди на литкод", "expected_site_id": "leetcode"}
+{"text": "перейди на майкрософт лерн", "expected_site_id": "microsoft_learn"}
+{"text": "перейди на майкрософт почта", "expected_site_id": "outlook"}
+{"text": "перейди на майнкрафт", "expected_site_id": "minecraft"}
+{"text": "перейди на макс", "expected_site_id": "max"}
+{"text": "перейди на маркет", "expected_site_id": "yandex_market"}
+{"text": "перейди на мастодон", "expected_site_id": "mastodon"}
+{"text": "перейди на мдн", "expected_site_id": "mdn"}
+{"text": "перейди на мега", "expected_site_id": "mega"}
+{"text": "перейди на медиум", "expected_site_id": "medium"}
+{"text": "перейди на медуза", "expected_site_id": "meduza"}
+{"text": "перейди на мейл ру", "expected_site_id": "mail_ru"}
+{"text": "перейди на миро", "expected_site_id": "miro"}
+{"text": "перейди на мод дб", "expected_site_id": "moddb"}
+{"text": "перейди на музыка яндекс", "expected_site_id": "yandex_music"}
+{"text": "перейди на нейвер", "expected_site_id": "naver"}
+{"text": "перейди на нексус модс", "expected_site_id": "nexusmods"}
+{"text": "перейди на нетология", "expected_site_id": "netology"}
+{"text": "перейди на нетфликс", "expected_site_id": "netflix"}
+{"text": "перейди на нинтендо", "expected_site_id": "nintendo"}
+{"text": "перейди на ноушен", "expected_site_id": "notion"}
+{"text": "перейди на ноушн", "expected_site_id": "notion"}
+{"text": "перейди на нпм", "expected_site_id": "npm"}
+{"text": "перейди на овер лиф", "expected_site_id": "overleaf"}
+{"text": "перейди на оверлиф", "expected_site_id": "overleaf"}
+{"text": "перейди на одноклассники", "expected_site_id": "ok"}
+{"text": "перейди на озон", "expected_site_id": "ozon"}
+{"text": "перейди на оки", "expected_site_id": "ok"}
+{"text": "перейди на онлайнер", "expected_site_id": "onliner"}
+{"text": "перейди на опенстритмап", "expected_site_id": "openstreetmap"}
+{"text": "перейди на оупен аи", "expected_site_id": "openai"}
+{"text": "перейди на пайпи", "expected_site_id": "pypi"}
+{"text": "перейди на пейпал", "expected_site_id": "paypal"}
+{"text": "перейди на пейперс виз код", "expected_site_id": "paperswithcode"}
+{"text": "перейди на перплексити", "expected_site_id": "perplexity"}
+{"text": "перейди на перплексити аи", "expected_site_id": "perplexity"}
+{"text": "перейди на пи вай пи ай", "expected_site_id": "pypi"}
+{"text": "перейди на пикабу", "expected_site_id": "pikabu"}
+{"text": "перейди на пинтерест", "expected_site_id": "pinterest"}
+{"text": "перейди на плейстейшен", "expected_site_id": "playstation"}
+{"text": "перейди на по", "expected_site_id": "poe"}
+{"text": "перейди на по ком", "expected_site_id": "poe"}
+{"text": "перейди на прайм видео", "expected_site_id": "prime_video"}
+{"text": "перейди на протон мейл", "expected_site_id": "proton_mail"}
+{"text": "перейди на рамблер", "expected_site_id": "rambler"}
+{"text": "перейди на рбк", "expected_site_id": "rbc"}
+{"text": "перейди на реддит", "expected_site_id": "reddit"}
+{"text": "перейди на редит", "expected_site_id": "reddit"}
+{"text": "перейди на реплит", "expected_site_id": "replit"}
+{"text": "перейди на ресерчгейт", "expected_site_id": "researchgate"}
+{"text": "перейди на риа", "expected_site_id": "ria"}
+{"text": "перейди на риа новости", "expected_site_id": "ria"}
+{"text": "перейди на роблокс", "expected_site_id": "roblox"}
+{"text": "перейди на ройтерс", "expected_site_id": "reuters"}
+{"text": "перейди на роттен томатос", "expected_site_id": "rottentomatoes"}
+{"text": "перейди на рутуб", "expected_site_id": "rutube"}
+{"text": "перейди на рутьюб", "expected_site_id": "rutube"}
+{"text": "перейди на саундклауд", "expected_site_id": "soundcloud"}
+{"text": "перейди на сбер", "expected_site_id": "sber"}
+{"text": "перейди на сбербанк", "expected_site_id": "sber"}
+{"text": "перейди на си эн эн", "expected_site_id": "cnn"}
+{"text": "перейди на скайсканер", "expected_site_id": "skyscanner"}
+{"text": "перейди на скилбокс", "expected_site_id": "skillbox"}
+{"text": "перейди на скиллбокс", "expected_site_id": "skillbox"}
+{"text": "перейди на слак", "expected_site_id": "slack"}
+{"text": "перейди на спидтест", "expected_site_id": "speedtest"}
+{"text": "перейди на спотифай", "expected_site_id": "spotify"}
+{"text": "перейди на стак оверфлоу", "expected_site_id": "stackoverflow"}
+{"text": "перейди на стак эксчейндж", "expected_site_id": "stackexchange"}
+{"text": "перейди на степик", "expected_site_id": "stepik"}
+{"text": "перейди на стим", "expected_site_id": "steam"}
+{"text": "перейди на страйп", "expected_site_id": "stripe"}
+{"text": "перейди на супер юзер", "expected_site_id": "superuser"}
+{"text": "перейди на т-банк", "expected_site_id": "tinkoff"}
+{"text": "перейди на тасс", "expected_site_id": "tass"}
+{"text": "перейди на твиттер", "expected_site_id": "x"}
+{"text": "перейди на твич", "expected_site_id": "twitch"}
+{"text": "перейди на телеграм", "expected_site_id": "telegram"}
+{"text": "перейди на тему", "expected_site_id": "temu"}
+{"text": "перейди на тен чат", "expected_site_id": "tenchat"}
+{"text": "перейди на тенчат", "expected_site_id": "tenchat"}
+{"text": "перейди на тикток", "expected_site_id": "tiktok"}
+{"text": "перейди на тимс", "expected_site_id": "microsoft_teams"}
+{"text": "перейди на тиму", "expected_site_id": "temu"}
+{"text": "перейди на тинькофф", "expected_site_id": "tinkoff"}
+{"text": "перейди на тредс", "expected_site_id": "threads"}
+{"text": "перейди на трейдингвью", "expected_site_id": "tradingview"}
+{"text": "перейди на трелло", "expected_site_id": "trello"}
+{"text": "перейди на трело", "expected_site_id": "trello"}
+{"text": "перейди на трипадвайзер", "expected_site_id": "tripadvisor"}
+{"text": "перейди на туту", "expected_site_id": "tutu"}
+{"text": "перейди на туту ру", "expected_site_id": "tutu"}
+{"text": "перейди на убер", "expected_site_id": "uber"}
+{"text": "перейди на удеми", "expected_site_id": "udemy"}
+{"text": "перейди на фандом", "expected_site_id": "fandom"}
+{"text": "перейди на фейсбук", "expected_site_id": "facebook"}
+{"text": "перейди на фигма", "expected_site_id": "figma"}
+{"text": "перейди на флайтрадар", "expected_site_id": "flightradar24"}
+{"text": "перейди на фэйсбук", "expected_site_id": "facebook"}
+{"text": "перейди на хабр", "expected_site_id": "habr"}
+{"text": "перейди на хабрахабр", "expected_site_id": "habr"}
+{"text": "перейди на хаггинг фейс", "expected_site_id": "huggingface"}
+{"text": "перейди на хакерранк", "expected_site_id": "hackerrank"}
+{"text": "перейди на хан академи", "expected_site_id": "khanacademy"}
+{"text": "перейди на хулу", "expected_site_id": "hulu"}
+{"text": "перейди на цнн", "expected_site_id": "cnn"}
+{"text": "перейди на чатгпт", "expected_site_id": "chatgpt"}
+{"text": "перейди на шейн", "expected_site_id": "shein"}
+{"text": "перейди на эйрбнб", "expected_site_id": "airbnb"}
+{"text": "перейди на эн пи эм", "expected_site_id": "npm"}
+{"text": "перейди на эпик геймс", "expected_site_id": "epic_games"}
+{"text": "перейди на эпл музыка", "expected_site_id": "apple_music"}
+{"text": "перейди на эпл мьюзик", "expected_site_id": "apple_music"}
+{"text": "перейди на этси", "expected_site_id": "etsy"}
+{"text": "перейди на ю ком", "expected_site_id": "you_com"}
+{"text": "перейди на юдеми", "expected_site_id": "udemy"}
+{"text": "перейди на ютуб", "expected_site_id": "youtube"}
+{"text": "перейди на яндекс", "expected_site_id": "yandex"}
+{"text": "перейди на яндекс go", "expected_site_id": "yandex_go"}
+{"text": "перейди на яндекс го", "expected_site_id": "yandex_go"}
+{"text": "перейди на яндекс дзен", "expected_site_id": "dzen"}
+{"text": "перейди на яндекс карты", "expected_site_id": "yandex_maps"}
+{"text": "перейди на яндекс маркет", "expected_site_id": "yandex_market"}
+{"text": "перейди на яндекс музыка", "expected_site_id": "yandex_music"}
+{"text": "перейди на яху", "expected_site_id": "yahoo"}
+{"text": "перейди на яху финанс", "expected_site_id": "yahoo_finance"}
+{"text": "перейди на яху финансы", "expected_site_id": "yahoo_finance"}
+{"text": "переключи трек", "expected_site_id": "unknown"}
+{"text": "поиск rust ownership на airbnb", "expected_site_id": "unknown"}
+{"text": "поищи rust ownership на airbnb", "expected_site_id": "unknown"}
+{"text": "поищи на airbnb rust ownership", "expected_site_id": "unknown"}
+{"text": "посмотри rust ownership на airbnb", "expected_site_id": "unknown"}
+{"text": "поставь громкость на пятьдесят", "expected_site_id": "unknown"}
+{"text": "поставь музыку", "expected_site_id": "unknown"}
+{"text": "поставь таймер", "expected_site_id": "unknown"}
+{"text": "поставь таймер на десять минут", "expected_site_id": "unknown"}
+{"text": "разузнай rust ownership на airbnb", "expected_site_id": "unknown"}
+{"text": "сделай громче", "expected_site_id": "unknown"}
+{"text": "сделай поиск rust ownership на airbnb", "expected_site_id": "unknown"}
+{"text": "сделай тише", "expected_site_id": "unknown"}
+{"text": "создай напоминание", "expected_site_id": "unknown"}
+{"text": "что на улице", "expected_site_id": "unknown"}

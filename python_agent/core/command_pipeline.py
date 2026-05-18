@@ -148,7 +148,8 @@ class CommandPipeline:
             )
 
         try:
-            args_prediction = skill_spec.extractor.extract(normalized_text)
+            extractor_text = raw_text if skill_prediction.skill == "web_open" else normalized_text
+            args_prediction = skill_spec.extractor.extract(extractor_text)
         except Exception as error:
             return (
                 CommandDecision(

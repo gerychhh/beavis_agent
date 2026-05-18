@@ -160,6 +160,15 @@ type AppData = {
   target_path?: string;
   working_directory?: string;
 };
+type SiteData = {
+  display_name: string;
+  site_id: string;
+  speech_forms: string[];
+  enabled: boolean;
+  source?: string;
+  base_url: string;
+  priority?: number;
+};
 type AppPathValidation = {
   path: string;
   normalized_path: string;
@@ -220,7 +229,7 @@ type MicrophoneOption = {
 type TrainingJobState = {
   id?: string;
   running: boolean;
-  status: "idle" | "running" | "completed" | "failed";
+  status: "idle" | "running" | "completed" | "failed" | "cancelled";
   started_at?: string | null;
   finished_at?: string | null;
   last_message?: string;
@@ -237,6 +246,7 @@ type IconName =
   | "cpu"
   | "edit"
   | "folder"
+  | "globe"
   | "history"
   | "info"
   | "keyboard"
@@ -306,6 +316,14 @@ function Icon({ name, size = 20, className = "" }: IconProps) {
     ),
     folder: (
       <path d="M3 7a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z" />
+    ),
+    globe: (
+      <>
+        <circle cx="12" cy="12" r="10" />
+        <path d="M2 12h20" />
+        <path d="M12 2a15.3 15.3 0 0 1 0 20" />
+        <path d="M12 2a15.3 15.3 0 0 0 0 20" />
+      </>
     ),
     history: (
       <>
@@ -501,6 +519,18 @@ function normalizeAppRecord(raw: AppData): AppData {
     windows_app_id: windowsAppId,
     speech_forms: cleanSpeechForms(raw.speech_forms || []),
     enabled: raw.enabled !== false,
+  };
+}
+
+function normalizeSiteRecord(raw: SiteData): SiteData {
+  return {
+    ...raw,
+    site_id: String(raw.site_id || "").trim().toLowerCase().replace(/\s+/g, "_"),
+    display_name: String(raw.display_name || "").trim(),
+    base_url: String(raw.base_url || "").trim(),
+    speech_forms: cleanSpeechForms(raw.speech_forms || []),
+    enabled: raw.enabled !== false,
+    priority: Number(raw.priority || 300),
   };
 }
 
@@ -1811,6 +1841,68 @@ function buildAddAppChange(draft: AppData) {
   };
 }
 
+function sitesEqual(a: SiteData, b: SiteData) {
+  return (
+    a.site_id === b.site_id &&
+    a.display_name === b.display_name &&
+    a.base_url === b.base_url &&
+    JSON.stringify(a.speech_forms || []) === JSON.stringify(b.speech_forms || []) &&
+    Number(a.priority || 300) === Number(b.priority || 300)
+  );
+}
+
+function buildAddSiteChange(draft: SiteData) {
+  return {
+    operation: "add",
+    source: draft.source || "user",
+    site_id: draft.site_id,
+    display_name: draft.display_name,
+    base_url: draft.base_url,
+    speech_forms: draft.speech_forms,
+    enabled: draft.enabled !== false,
+    priority: Number(draft.priority || 300),
+  };
+}
+
+function buildSiteChanges(originalSites: SiteData[], draftSites: SiteData[]) {
+  const changes: any[] = [];
+  const originalById = new Map(originalSites.map((site) => [site.site_id, site]));
+  const draftById = new Map(draftSites.map((site) => [site.site_id, site]));
+
+  for (const original of originalSites) {
+    if (!draftById.has(original.site_id)) {
+      changes.push({
+        operation: "delete",
+        site_id: original.site_id,
+      });
+    }
+  }
+
+  for (const draft of draftSites) {
+    const original = originalById.get(draft.site_id);
+    if (!original) {
+      changes.push(buildAddSiteChange(draft));
+    } else if (!sitesEqual(original, draft)) {
+      changes.push({
+        ...buildAddSiteChange(draft),
+        operation: "update",
+        source: original.source || draft.source || "user",
+      });
+    }
+  }
+
+  return changes;
+}
+
+function isHttpUrl(value: string) {
+  try {
+    const parsed = new URL(value);
+    return parsed.protocol === "http:" || parsed.protocol === "https:";
+  } catch {
+    return false;
+  }
+}
+
 const PATH_QUOTE_PAIRS: Array<[string, string]> = [
   ['"', '"'],
   ["'", "'"],
@@ -2314,6 +2406,495 @@ function AppModal({
       </div>
     </div>,
     document.body,
+  );
+}
+
+function SiteModal({
+  isOpen,
+  onClose,
+  siteToEdit,
+  onSaveDraft,
+  sites,
+}: {
+  isOpen: boolean;
+  onClose: () => void;
+  siteToEdit?: SiteData | null;
+  onSaveDraft: (site: SiteData) => void;
+  sites: SiteData[];
+}) {
+  const [displayName, setDisplayName] = useState("");
+  const [siteId, setSiteId] = useState("");
+  const [baseUrl, setBaseUrl] = useState("");
+  const [speechForms, setSpeechForms] = useState<string[]>([]);
+  const { showToast } = useToast();
+
+  useEffect(() => {
+    if (!isOpen) return;
+    setDisplayName(siteToEdit?.display_name || "");
+    setSiteId(siteToEdit?.site_id || "");
+    setBaseUrl(siteToEdit?.base_url || "");
+    setSpeechForms(siteToEdit?.speech_forms || []);
+  }, [isOpen, siteToEdit]);
+
+  if (!isOpen) return null;
+
+  const isEditing = Boolean(siteToEdit);
+  const normalizedSiteId = siteId.trim().toLowerCase().replace(/\s+/g, "_");
+  const duplicateSiteId =
+    !isEditing && sites.some((site) => site.site_id === normalizedSiteId);
+
+  const saveDraft = () => {
+    const normalizedBaseUrl = baseUrl.trim();
+    if (!displayName.trim() || !normalizedSiteId) {
+      return showToast("Заполните имя и site_id", "error");
+    }
+    if (duplicateSiteId) {
+      return showToast(`Site ID уже занят: ${normalizedSiteId}`, "error");
+    }
+    if (!isHttpUrl(normalizedBaseUrl)) {
+      return showToast("Base URL должен начинаться с http:// или https://", "error");
+    }
+
+    onSaveDraft({
+      display_name: displayName.trim(),
+      site_id: normalizedSiteId,
+      base_url: normalizedBaseUrl,
+      speech_forms: cleanSpeechForms(speechForms),
+      enabled: true,
+      source: siteToEdit?.source || "user",
+      priority: siteToEdit?.priority || 300,
+    });
+    showToast("Изменение добавлено в черновик", "success");
+    onClose();
+  };
+
+  return createPortal(
+    <div className="fixed inset-0 z-[100] flex min-h-screen items-center justify-center overflow-hidden bg-black/80 p-4 md:p-6 backdrop-blur-xl transition-opacity">
+      <div
+        className={`${THEME.surface} max-h-[calc(100vh-48px)] w-full max-w-xl overflow-y-auto p-6 md:p-8 custom-scrollbar scale-100 page-enter`}
+      >
+        <div className="mb-6 flex items-center justify-between">
+          <h2 className="text-2xl font-light text-white">
+            {siteToEdit ? "Изменить сайт" : "Новый сайт"}
+          </h2>
+          <button
+            onClick={onClose}
+            className="rounded-full bg-white/[0.06] p-2 text-white/40 transition hover:text-white hover:bg-white/15 active:scale-95"
+          >
+            <Icon name="x" size={20} />
+          </button>
+        </div>
+        <div className="space-y-5">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+            <Field label="Имя">
+              <GlassInput
+                value={displayName}
+                onChange={(e) => setDisplayName(e.target.value)}
+                placeholder="YouTube"
+              />
+            </Field>
+            <Field label="Site ID">
+              <GlassInput
+                value={siteId}
+                readOnly={isEditing}
+                onChange={(e) =>
+                  setSiteId(e.target.value.toLowerCase().replace(/\s+/g, "_"))
+                }
+                className={`font-mono ${isEditing ? "opacity-60" : ""} ${duplicateSiteId ? "border-red-400/50" : ""}`}
+                placeholder="youtube"
+              />
+              {duplicateSiteId && (
+                <div className="mt-1 text-xs text-red-300/80">
+                  Такой site_id уже занят
+                </div>
+              )}
+            </Field>
+          </div>
+          <Field label="Base URL">
+            <GlassInput
+              value={baseUrl}
+              onChange={(e) => setBaseUrl(e.target.value)}
+              placeholder="https://example.com"
+              className={!baseUrl || isHttpUrl(baseUrl) ? "font-mono" : "font-mono border-red-400/55"}
+            />
+          </Field>
+          <Field label="Сленг и фразы" hint="Enter / вынеси чип за строку">
+            <ChipEditor
+              values={speechForms}
+              onChange={setSpeechForms}
+              placeholder="Добавить..."
+            />
+          </Field>
+        </div>
+        <div className="mt-8 flex justify-end gap-3">
+          <button
+            onClick={onClose}
+            className="px-5 py-2.5 text-sm font-medium text-white/50 transition hover:text-white active:scale-95"
+          >
+            Отмена
+          </button>
+          <button
+            onClick={saveDraft}
+            className={`${THEME.primaryBtn} flex items-center gap-2`}
+          >
+            <Icon name="check" size={16} />В черновик
+          </button>
+        </div>
+      </div>
+    </div>,
+    document.body,
+  );
+}
+
+function SitesPage() {
+  const [originalSites, setOriginalSites] = useState<SiteData[]>([]);
+  const [draftSites, setDraftSites] = useState<SiteData[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [applying, setApplying] = useState(false);
+  const [training, setTraining] = useState<TrainingJobState>({
+    running: false,
+    status: "idle",
+  });
+  const [search, setSearch] = useState("");
+  const [visibleSitesCount, setVisibleSitesCount] = useState(APP_RENDER_CHUNK);
+  const [isModalOpen, setModalOpen] = useState(false);
+  const [editSite, setEditSite] = useState<SiteData | null>(null);
+  const { showToast } = useToast();
+
+  const pendingChanges = useMemo(
+    () => buildSiteChanges(originalSites, draftSites),
+    [originalSites, draftSites],
+  );
+  const hasDraft = pendingChanges.length > 0;
+
+  const loadSites = async () => {
+    setLoading(true);
+    const res = await beavisCall<SiteData[]>("sites.list_user_sites");
+    if (res.ok && res.data) {
+      const records = res.data.map(normalizeSiteRecord);
+      setOriginalSites(cloneJson(records));
+      setDraftSites(cloneJson(records));
+      setVisibleSitesCount(APP_RENDER_CHUNK);
+    }
+    setLoading(false);
+  };
+
+  useEffect(() => {
+    loadSites();
+  }, []);
+
+  useEffect(() => {
+    let alive = true;
+    void beavisCall<TrainingJobState>("sites.retrain_status").then(
+      async (res) => {
+        if (!alive || !res.ok || !res.data || res.data.status === "idle") return;
+        setTraining(res.data);
+        if (res.data.status === "completed") {
+          await beavisCall("commands.reload");
+        }
+      },
+    );
+    return () => {
+      alive = false;
+    };
+  }, []);
+
+  useEffect(() => {
+    setVisibleSitesCount(APP_RENDER_CHUNK);
+  }, [search]);
+
+  useEffect(() => {
+    let timer: number | undefined;
+    const poll = async () => {
+      const res = await beavisCall<TrainingJobState>("sites.retrain_status");
+      if (res.ok && res.data) {
+        setTraining(res.data);
+        if (!res.data.running) {
+          if (res.data.status === "completed") {
+            await beavisCall("commands.reload");
+            showToast("Новые модели загружены", "success");
+          } else if (res.data.status === "failed") {
+            showToast(res.data.error || "Обучение завершилось с ошибкой", "error");
+          }
+          return;
+        }
+      }
+      timer = window.setTimeout(poll, 1800);
+    };
+    if (training.running) timer = window.setTimeout(poll, 900);
+    return () => {
+      if (timer) window.clearTimeout(timer);
+    };
+  }, [training.running]);
+
+  const saveDraftSite = (site: SiteData) => {
+    const normalized = normalizeSiteRecord(site);
+    setDraftSites((prev) => {
+      const exists = prev.some((item) => item.site_id === normalized.site_id);
+      return exists
+        ? prev.map((item) => (item.site_id === normalized.site_id ? normalized : item))
+        : [...prev, normalized];
+    });
+  };
+
+  const deleteDraftSite = (siteId: string) => {
+    setDraftSites((prev) => prev.filter((site) => site.site_id !== siteId));
+    showToast("Удаление добавлено в черновик", "info");
+  };
+
+  const resetDraft = () => {
+    setDraftSites(cloneJson(originalSites));
+    showToast("Черновик сброшен", "info");
+  };
+
+  const applyDraft = async () => {
+    if (!pendingChanges.length) return;
+    setApplying(true);
+    const res = await beavisCall("sites.apply_changes", {
+      changes: pendingChanges,
+      retrain: false,
+    });
+    if (res.ok) {
+      await beavisCall("commands.reload");
+      showToast("Сайты сохранены, старые модели активны до конца обучения", "success");
+      await loadSites();
+      const train = await beavisCall<TrainingJobState>("sites.retrain_start");
+      if (train.ok && train.data) setTraining(train.data);
+      else showToast(train.error || "Не удалось запустить обучение", "error");
+    } else {
+      showToast(res.error || "Ошибка применения", "error");
+    }
+    setApplying(false);
+  };
+
+  const filteredSites = useMemo(() => {
+    const query = search.trim().toLowerCase();
+    if (!query) return draftSites;
+    return draftSites.filter(
+      (site) =>
+        site.display_name.toLowerCase().includes(query) ||
+        site.site_id.toLowerCase().includes(query) ||
+        site.base_url.toLowerCase().includes(query) ||
+        (site.speech_forms || []).some((form) => form.includes(query)),
+    );
+  }, [draftSites, search]);
+  const visibleSites = filteredSites.slice(0, visibleSitesCount);
+  const originalById = useMemo(
+    () => new Map(originalSites.map((site) => [site.site_id, site])),
+    [originalSites],
+  );
+
+  return (
+    <div className={THEME.page}>
+      <div className="mb-8 flex flex-col items-start justify-between gap-4 md:flex-row md:items-center">
+        <div>
+          <h2 className="mb-2 text-3xl font-light text-white tracking-tight">
+            Сайты
+          </h2>
+          <p className="text-sm text-white/40">
+            Сайты и прямые ссылки для команд “открой”, “перейди” и “зайди”
+          </p>
+        </div>
+        <div className="flex w-full flex-wrap md:flex-nowrap items-center gap-3 md:w-auto">
+          <div className="relative flex-1 md:w-64 min-w-[200px]">
+            <Icon
+              name="search"
+              size={18}
+              className="absolute left-3 top-1/2 -translate-y-1/2 text-white/40"
+            />
+            <GlassInput
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              placeholder="Поиск..."
+              className="pl-10"
+            />
+          </div>
+          <button onClick={loadSites} className={THEME.ghostBtn}>
+            <Icon name="refresh" size={18} />
+          </button>
+          <button
+            onClick={() => {
+              setEditSite(null);
+              setModalOpen(true);
+            }}
+            className={`${THEME.primaryBtn} flex items-center gap-2`}
+          >
+            <Icon name="plus" size={18} />
+            <span className="hidden sm:inline">Добавить</span>
+          </button>
+        </div>
+      </div>
+
+      {hasDraft && (
+        <div className="mb-6 flex flex-col gap-4 rounded-[24px] border border-white/10 bg-[#0c0c0e]/80 p-4 shadow-[0_18px_55px_rgba(0,0,0,.4),inset_0_1px_1px_rgba(255,255,255,.05)] backdrop-blur-[46px] md:flex-row md:items-center md:justify-between page-enter">
+          <div>
+            <div className="flex items-center gap-2 text-sm font-semibold text-white">
+              <Icon name="sparkles" size={16} className="text-white/70" />
+              Черновик изменений
+            </div>
+            <div className="mt-1 text-xs text-white/45">
+              {pendingChanges.length} измен. — применить, чтобы сохранить и запустить переобучение.
+            </div>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            <button
+              onClick={resetDraft}
+              className={`${THEME.ghostBtn} flex items-center gap-2`}
+            >
+              <Icon name="rotate" size={16} />
+              Сбросить
+            </button>
+            <button
+              onClick={applyDraft}
+              disabled={applying}
+              className={`${THEME.primaryBtn} flex items-center gap-2`}
+            >
+              {applying ? <Spinner size={16} /> : <Icon name="check" size={16} />}
+              Применить
+            </button>
+          </div>
+        </div>
+      )}
+
+      {training.status !== "idle" && (
+        <div className="mb-6 flex flex-col gap-3 rounded-[24px] border border-white/10 bg-[#0c0c0e]/80 p-4 shadow-[0_18px_55px_rgba(0,0,0,.4),inset_0_1px_1px_rgba(255,255,255,.05)] backdrop-blur-[46px] md:flex-row md:items-center md:justify-between">
+          <div className="flex items-start gap-3">
+            <div className="mt-0.5 flex h-9 w-9 items-center justify-center rounded-2xl border border-white/10 bg-white/5">
+              {training.running ? <Spinner size={17} /> : <Icon name={training.status === "failed" ? "xCircle" : "checkCircle"} size={17} />}
+            </div>
+            <div>
+              <div className="text-sm font-semibold text-white">
+                {training.running
+                  ? "Идёт обучение моделей"
+                  : training.status === "failed"
+                    ? "Обучение завершилось с ошибкой"
+                    : "Модели переобучены"}
+              </div>
+              <div className="mt-1 text-xs text-white/45">
+                {training.running
+                  ? "Каталог сайтов уже сохранён, новая модель подключится после завершения."
+                  : training.error || "Pipeline можно использовать с обновлённым classifier."}
+              </div>
+              {training.last_message && (
+                <div className="mt-2 font-mono text-[11px] text-white/35">
+                  {training.last_message}
+                </div>
+              )}
+            </div>
+          </div>
+          {!training.running && (
+            <button
+              onClick={() => setTraining({ running: false, status: "idle" })}
+              className={THEME.ghostBtn}
+            >
+              Скрыть
+            </button>
+          )}
+        </div>
+      )}
+
+      {loading ? (
+        <div className="flex justify-center p-20">
+          <Spinner size={40} className="text-white/50" />
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {visibleSites.map((site, index) => {
+            const original = originalById.get(site.site_id);
+            const isNew = !original;
+            const isChanged = Boolean(original && !sitesEqual(original, site));
+            let host = site.site_id;
+            try {
+              host = new URL(site.base_url).hostname;
+            } catch {
+              host = site.base_url || site.site_id;
+            }
+            return (
+              <div
+                key={site.site_id}
+                className={`${THEME.surface} ${THEME.surfaceHover} group p-6 page-enter stagger-${(index % 5) + 1} ${isNew ? "border-emerald-400/25" : isChanged ? "border-yellow-300/25" : ""}`}
+              >
+                <div className="relative z-10 mb-5 flex items-start justify-between">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/15 bg-white/5 shadow-inner transition-colors group-hover:bg-white/10 group-hover:shadow-[0_0_20px_rgba(255,255,255,0.1)] text-white/80">
+                    <Icon name="globe" size={22} />
+                  </div>
+                  <div className="flex translate-x-2 gap-2 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100">
+                    <button
+                      onClick={() => {
+                        setEditSite(site);
+                        setModalOpen(true);
+                      }}
+                      className="rounded-full bg-[#050505] p-2 text-white/50 shadow-md transition hover:bg-white/20 hover:text-white"
+                    >
+                      <Icon name="edit" size={14} />
+                    </button>
+                    <button
+                      onClick={() => deleteDraftSite(site.site_id)}
+                      className="rounded-full bg-[#050505] p-2 text-white/50 shadow-md transition hover:bg-red-500/30 hover:text-red-400"
+                    >
+                      <Icon name="trash" size={14} />
+                    </button>
+                  </div>
+                </div>
+                <div className="mb-1 flex items-center gap-2">
+                  <h3 className="text-xl font-semibold text-white tracking-tight">
+                    {site.display_name}
+                  </h3>
+                  {isNew && (
+                    <span className="rounded-md border border-emerald-400/20 bg-emerald-500/10 px-2 py-0.5 text-[10px] uppercase tracking-wide text-emerald-200">
+                      new
+                    </span>
+                  )}
+                  {isChanged && (
+                    <span className="rounded-md border border-yellow-300/20 bg-yellow-300/10 px-2 py-0.5 text-[10px] uppercase tracking-wide text-yellow-100">
+                      draft
+                    </span>
+                  )}
+                </div>
+                <p className="mb-5 truncate font-mono text-xs text-white/30">
+                  {host}
+                </p>
+                <div className="flex flex-wrap gap-1.5">
+                  {site.speech_forms.slice(0, 4).map((form) => (
+                    <span key={form} className={THEME.chip}>
+                      {form}
+                    </span>
+                  ))}
+                  {site.speech_forms.length > 4 && (
+                    <span className="rounded-md border border-white/10 bg-white/[0.04] px-2.5 py-1 text-xs text-white/40">
+                      +{site.speech_forms.length - 4}
+                    </span>
+                  )}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      )}
+
+      {!loading && visibleSitesCount < filteredSites.length && (
+        <div className="mt-6 flex justify-center">
+          <button
+            onClick={() =>
+              setVisibleSitesCount((count) => count + APP_RENDER_CHUNK)
+            }
+            className={`${THEME.ghostBtn} flex items-center gap-2`}
+          >
+            <Icon name="plus" size={16} />
+            Показать ещё{" "}
+            {Math.min(APP_RENDER_CHUNK, filteredSites.length - visibleSitesCount)}
+          </button>
+        </div>
+      )}
+
+      <SiteModal
+        isOpen={isModalOpen}
+        onClose={() => setModalOpen(false)}
+        siteToEdit={editSite}
+        onSaveDraft={saveDraftSite}
+        sites={draftSites}
+      />
+    </div>
   );
 }
 
@@ -3584,7 +4165,7 @@ function VoiceOverlay({
 
 function AppShell() {
   const [activeTab, setActiveTab] = useState<
-    "home" | "apps" | "history" | "settings"
+    "home" | "apps" | "sites" | "history" | "settings"
   >("home");
   const [isCommandOverlayOpen, setCommandOverlayOpen] = useState(false);
   const [isVoiceOverlayOpen, setVoiceOverlayOpen] = useState(false);
@@ -3719,6 +4300,7 @@ function AppShell() {
   const nav = [
     { id: "home", label: "Главная", icon: "zap" as IconName },
     { id: "apps", label: "Приложения", icon: "apps" as IconName },
+    { id: "sites", label: "Сайты", icon: "globe" as IconName },
     { id: "history", label: "История", icon: "history" as IconName },
     { id: "settings", label: "Настройки", icon: "settings" as IconName },
   ];
@@ -3750,12 +4332,12 @@ function AppShell() {
               {health === "online" ? "Готов" : "Offline"}
             </div>
           </div>
-          <nav className="absolute left-1/2 top-1/2 hidden w-[520px] -translate-x-1/2 -translate-y-1/2 grid-cols-4 items-center gap-0 rounded-2xl border border-white/[0.07] bg-[#050505]/80 p-1 md:grid shadow-[inset_0_1px_1px_rgba(255,255,255,.05)]">
+          <nav className="absolute left-1/2 top-1/2 hidden w-[650px] -translate-x-1/2 -translate-y-1/2 grid-cols-5 items-center gap-0 rounded-2xl border border-white/[0.07] bg-[#050505]/80 p-1 md:grid shadow-[inset_0_1px_1px_rgba(255,255,255,.05)]">
             <div
               className="absolute bottom-1 top-1 rounded-xl bg-white shadow-[0_0_28px_rgba(255,255,255,.35)] transition-all duration-500 ease-out"
               style={{
-                left: `calc(${activeIndex * 25}% + 4px)`,
-                width: "calc(25% - 8px)",
+                left: `calc(${activeIndex * 20}% + 4px)`,
+                width: "calc(20% - 8px)",
               }}
             />
             {nav.map((tab) => (
@@ -3814,6 +4396,7 @@ function AppShell() {
               <HomePage openVoice={() => openVoiceOverlay()} />
             )}{" "}
             {activeTab === "apps" && <AppsPage />}{" "}
+            {activeTab === "sites" && <SitesPage />}{" "}
             {activeTab === "history" && <HistoryPage />}{" "}
             {activeTab === "settings" && <SettingsPage />}
           </div>

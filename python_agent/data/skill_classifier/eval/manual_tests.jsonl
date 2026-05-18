@@ -93,6 +93,218 @@
 {"text": "открой ru.yandex.desktop", "expected_skill": "open_app"}
 {"text": "запусти ru.yandex.desktop", "expected_skill": "open_app"}
 {"text": "включи ru.yandex.desktop", "expected_skill": "open_app"}
+{"text": "открой github", "expected_skill": "web_open"}
+{"text": "перейди на ютуб", "expected_skill": "web_open"}
+{"text": "открой github.com/openai/codex", "expected_skill": "web_open"}
+{"text": "open https://example.com/docs", "expected_skill": "web_open"}
+{"text": "найди rust ownership", "expected_skill": "web_search"}
+{"text": "поищи lofi на ютубе", "expected_skill": "web_search"}
+{"text": "загугли рецепт", "expected_skill": "web_search"}
+{"text": "открой сайт airbnb", "expected_skill": "web_open"}
+{"text": "открой сайт aliexpress", "expected_skill": "web_open"}
+{"text": "открой сайт amazon", "expected_skill": "web_open"}
+{"text": "открой сайт anaconda", "expected_skill": "web_open"}
+{"text": "открой сайт ap news", "expected_skill": "web_open"}
+{"text": "открой сайт apple music", "expected_skill": "web_open"}
+{"text": "открой сайт internet archive", "expected_skill": "web_open"}
+{"text": "открой сайт arxiv", "expected_skill": "web_open"}
+{"text": "открой сайт asana", "expected_skill": "web_open"}
+{"text": "открой сайт ask ubuntu", "expected_skill": "web_open"}
+{"text": "открой сайт aviasales", "expected_skill": "web_open"}
+{"text": "открой сайт авито", "expected_skill": "web_open"}
+{"text": "открой сайт baidu", "expected_skill": "web_open"}
+{"text": "открой сайт bandcamp", "expected_skill": "web_open"}
+{"text": "открой сайт battle.net", "expected_skill": "web_open"}
+{"text": "открой сайт bbc", "expected_skill": "web_open"}
+{"text": "открой сайт binance", "expected_skill": "web_open"}
+{"text": "открой сайт bing", "expected_skill": "web_open"}
+{"text": "открой сайт bitbucket", "expected_skill": "web_open"}
+{"text": "открой сайт bloomberg", "expected_skill": "web_open"}
+{"text": "открой сайт booking.com", "expected_skill": "web_open"}
+{"text": "открой сайт brave search", "expected_skill": "web_open"}
+{"text": "открой сайт canva", "expected_skill": "web_open"}
+{"text": "открой сайт chatgpt", "expected_skill": "web_open"}
+{"text": "открой сайт claude", "expected_skill": "web_open"}
+{"text": "открой сайт cloudflare", "expected_skill": "web_open"}
+{"text": "открой сайт cnn", "expected_skill": "web_open"}
+{"text": "открой сайт codeforces", "expected_skill": "web_open"}
+{"text": "открой сайт codepen", "expected_skill": "web_open"}
+{"text": "открой сайт codewars", "expected_skill": "web_open"}
+{"text": "открой сайт coinbase", "expected_skill": "web_open"}
+{"text": "открой сайт confluence", "expected_skill": "web_open"}
+{"text": "открой сайт microsoft copilot", "expected_skill": "web_open"}
+{"text": "открой сайт coursera", "expected_skill": "web_open"}
+{"text": "открой сайт deepl", "expected_skill": "web_open"}
+{"text": "открой сайт deepseek", "expected_skill": "web_open"}
+{"text": "открой сайт deezer", "expected_skill": "web_open"}
+{"text": "открой сайт desmos", "expected_skill": "web_open"}
+{"text": "открой сайт dev.by", "expected_skill": "web_open"}
+{"text": "открой сайт discord", "expected_skill": "web_open"}
+{"text": "открой сайт disney+", "expected_skill": "web_open"}
+{"text": "открой сайт docker hub", "expected_skill": "web_open"}
+{"text": "открой сайт dropbox", "expected_skill": "web_open"}
+{"text": "открой сайт duckduckgo", "expected_skill": "web_open"}
+{"text": "открой сайт duolingo", "expected_skill": "web_open"}
+{"text": "открой сайт дзен", "expected_skill": "web_open"}
+{"text": "открой сайт ebay", "expected_skill": "web_open"}
+{"text": "открой сайт edx", "expected_skill": "web_open"}
+{"text": "открой сайт epic games", "expected_skill": "web_open"}
+{"text": "открой сайт etsy", "expected_skill": "web_open"}
+{"text": "открой сайт facebook", "expected_skill": "web_open"}
+{"text": "открой сайт fandom", "expected_skill": "web_open"}
+{"text": "открой сайт figma", "expected_skill": "web_open"}
+{"text": "открой сайт flightradar24", "expected_skill": "web_open"}
+{"text": "открой сайт gemini", "expected_skill": "web_open"}
+{"text": "открой сайт geogebra", "expected_skill": "web_open"}
+{"text": "открой сайт github", "expected_skill": "web_open"}
+{"text": "открой сайт gitlab", "expected_skill": "web_open"}
+{"text": "открой сайт gmail", "expected_skill": "web_open"}
+{"text": "открой сайт gog", "expected_skill": "web_open"}
+{"text": "открой сайт google", "expected_skill": "web_open"}
+{"text": "открой сайт google colab", "expected_skill": "web_open"}
+{"text": "открой сайт google drive", "expected_skill": "web_open"}
+{"text": "открой сайт google maps", "expected_skill": "web_open"}
+{"text": "открой сайт google meet", "expected_skill": "web_open"}
+{"text": "открой сайт grammarly", "expected_skill": "web_open"}
+{"text": "открой сайт the guardian", "expected_skill": "web_open"}
+{"text": "открой сайт хабр", "expected_skill": "web_open"}
+{"text": "открой сайт hackerrank", "expected_skill": "web_open"}
+{"text": "открой сайт hugging face", "expected_skill": "web_open"}
+{"text": "открой сайт hulu", "expected_skill": "web_open"}
+{"text": "открой сайт icloud", "expected_skill": "web_open"}
+{"text": "открой сайт ikea", "expected_skill": "web_open"}
+{"text": "открой сайт imdb", "expected_skill": "web_open"}
+{"text": "открой сайт instagram", "expected_skill": "web_open"}
+{"text": "открой сайт investing.com", "expected_skill": "web_open"}
+{"text": "открой сайт itch.io", "expected_skill": "web_open"}
+{"text": "открой сайт иви", "expected_skill": "web_open"}
+{"text": "открой сайт jira", "expected_skill": "web_open"}
+{"text": "открой сайт jsfiddle", "expected_skill": "web_open"}
+{"text": "открой сайт kaggle", "expected_skill": "web_open"}
+{"text": "открой сайт khan academy", "expected_skill": "web_open"}
+{"text": "открой сайт кинопоиск", "expected_skill": "web_open"}
+{"text": "открой сайт коммерсантъ", "expected_skill": "web_open"}
+{"text": "открой сайт lamoda", "expected_skill": "web_open"}
+{"text": "открой сайт leetcode", "expected_skill": "web_open"}
+{"text": "открой сайт лента.ру", "expected_skill": "web_open"}
+{"text": "открой сайт letterboxd", "expected_skill": "web_open"}
+{"text": "открой сайт linkedin", "expected_skill": "web_open"}
+{"text": "открой сайт mail.ru", "expected_skill": "web_open"}
+{"text": "открой сайт mastodon", "expected_skill": "web_open"}
+{"text": "открой сайт max", "expected_skill": "web_open"}
+{"text": "открой сайт mdn web docs", "expected_skill": "web_open"}
+{"text": "открой сайт medium", "expected_skill": "web_open"}
+{"text": "открой сайт meduza", "expected_skill": "web_open"}
+{"text": "открой сайт mega", "expected_skill": "web_open"}
+{"text": "открой сайт microsoft learn", "expected_skill": "web_open"}
+{"text": "открой сайт microsoft teams", "expected_skill": "web_open"}
+{"text": "открой сайт minecraft", "expected_skill": "web_open"}
+{"text": "открой сайт miro", "expected_skill": "web_open"}
+{"text": "открой сайт mod db", "expected_skill": "web_open"}
+{"text": "открой сайт naver", "expected_skill": "web_open"}
+{"text": "открой сайт netflix", "expected_skill": "web_open"}
+{"text": "открой сайт нетология", "expected_skill": "web_open"}
+{"text": "открой сайт nexus mods", "expected_skill": "web_open"}
+{"text": "открой сайт nintendo", "expected_skill": "web_open"}
+{"text": "открой сайт notion", "expected_skill": "web_open"}
+{"text": "открой сайт n+1", "expected_skill": "web_open"}
+{"text": "открой сайт npm", "expected_skill": "web_open"}
+{"text": "открой сайт the new york times", "expected_skill": "web_open"}
+{"text": "открой сайт одноклассники", "expected_skill": "web_open"}
+{"text": "открой сайт onedrive", "expected_skill": "web_open"}
+{"text": "открой сайт onlíner", "expected_skill": "web_open"}
+{"text": "открой сайт openai", "expected_skill": "web_open"}
+{"text": "открой сайт openstreetmap", "expected_skill": "web_open"}
+{"text": "открой сайт oracle docs", "expected_skill": "web_open"}
+{"text": "открой сайт outlook", "expected_skill": "web_open"}
+{"text": "открой сайт overleaf", "expected_skill": "web_open"}
+{"text": "открой сайт ozon", "expected_skill": "web_open"}
+{"text": "открой сайт papers with code", "expected_skill": "web_open"}
+{"text": "открой сайт paypal", "expected_skill": "web_open"}
+{"text": "открой сайт perplexity", "expected_skill": "web_open"}
+{"text": "открой сайт пикабу", "expected_skill": "web_open"}
+{"text": "открой сайт pinterest", "expected_skill": "web_open"}
+{"text": "открой сайт playstation", "expected_skill": "web_open"}
+{"text": "открой сайт poe", "expected_skill": "web_open"}
+{"text": "открой сайт prime video", "expected_skill": "web_open"}
+{"text": "открой сайт proton mail", "expected_skill": "web_open"}
+{"text": "открой сайт pypi", "expected_skill": "web_open"}
+{"text": "открой сайт python docs", "expected_skill": "web_open"}
+{"text": "открой сайт qwant", "expected_skill": "web_open"}
+{"text": "открой сайт rambler", "expected_skill": "web_open"}
+{"text": "открой сайт рбк", "expected_skill": "web_open"}
+{"text": "открой сайт reddit", "expected_skill": "web_open"}
+{"text": "открой сайт replit", "expected_skill": "web_open"}
+{"text": "открой сайт researchgate", "expected_skill": "web_open"}
+{"text": "открой сайт reuters", "expected_skill": "web_open"}
+{"text": "открой сайт риа новости", "expected_skill": "web_open"}
+{"text": "открой сайт roblox", "expected_skill": "web_open"}
+{"text": "открой сайт rotten tomatoes", "expected_skill": "web_open"}
+{"text": "открой сайт rutube", "expected_skill": "web_open"}
+{"text": "открой сайт сбер", "expected_skill": "web_open"}
+{"text": "открой сайт shein", "expected_skill": "web_open"}
+{"text": "открой сайт skillbox", "expected_skill": "web_open"}
+{"text": "открой сайт skyscanner", "expected_skill": "web_open"}
+{"text": "открой сайт slack", "expected_skill": "web_open"}
+{"text": "открой сайт soundcloud", "expected_skill": "web_open"}
+{"text": "открой сайт speedtest", "expected_skill": "web_open"}
+{"text": "открой сайт spotify", "expected_skill": "web_open"}
+{"text": "открой сайт stack exchange", "expected_skill": "web_open"}
+{"text": "открой сайт stack overflow", "expected_skill": "web_open"}
+{"text": "открой сайт steam", "expected_skill": "web_open"}
+{"text": "открой сайт stepik", "expected_skill": "web_open"}
+{"text": "открой сайт stripe", "expected_skill": "web_open"}
+{"text": "открой сайт super user", "expected_skill": "web_open"}
+{"text": "открой сайт тасс", "expected_skill": "web_open"}
+{"text": "открой сайт telegram", "expected_skill": "web_open"}
+{"text": "открой сайт temu", "expected_skill": "web_open"}
+{"text": "открой сайт tenchat", "expected_skill": "web_open"}
+{"text": "открой сайт threads", "expected_skill": "web_open"}
+{"text": "открой сайт tiktok", "expected_skill": "web_open"}
+{"text": "открой сайт т-банк", "expected_skill": "web_open"}
+{"text": "открой сайт tradingview", "expected_skill": "web_open"}
+{"text": "открой сайт google translate", "expected_skill": "web_open"}
+{"text": "открой сайт trello", "expected_skill": "web_open"}
+{"text": "открой сайт tripadvisor", "expected_skill": "web_open"}
+{"text": "открой сайт туту", "expected_skill": "web_open"}
+{"text": "открой сайт twitch", "expected_skill": "web_open"}
+{"text": "открой сайт 2гис", "expected_skill": "web_open"}
+{"text": "открой сайт uber", "expected_skill": "web_open"}
+{"text": "открой сайт udemy", "expected_skill": "web_open"}
+{"text": "открой сайт vc.ru", "expected_skill": "web_open"}
+{"text": "открой сайт vimeo", "expected_skill": "web_open"}
+{"text": "открой сайт virustotal", "expected_skill": "web_open"}
+{"text": "открой сайт vk", "expected_skill": "web_open"}
+{"text": "открой сайт whatsapp", "expected_skill": "web_open"}
+{"text": "открой сайт wikihow", "expected_skill": "web_open"}
+{"text": "открой сайт wikipedia", "expected_skill": "web_open"}
+{"text": "открой сайт wildberries", "expected_skill": "web_open"}
+{"text": "открой сайт wise", "expected_skill": "web_open"}
+{"text": "открой сайт wolframalpha", "expected_skill": "web_open"}
+{"text": "открой сайт x", "expected_skill": "web_open"}
+{"text": "открой сайт xbox", "expected_skill": "web_open"}
+{"text": "открой сайт yahoo", "expected_skill": "web_open"}
+{"text": "открой сайт yahoo finance", "expected_skill": "web_open"}
+{"text": "открой сайт yandex", "expected_skill": "web_open"}
+{"text": "открой сайт яндекс go", "expected_skill": "web_open"}
+{"text": "открой сайт яндекс карты", "expected_skill": "web_open"}
+{"text": "открой сайт яндекс маркет", "expected_skill": "web_open"}
+{"text": "открой сайт яндекс музыка", "expected_skill": "web_open"}
+{"text": "открой сайт you.com", "expected_skill": "web_open"}
+{"text": "открой сайт youtube", "expected_skill": "web_open"}
+{"text": "открой сайт zoom", "expected_skill": "web_open"}
+{"text": "найди rust ownership", "expected_skill": "web_search"}
+{"text": "загугли рецепт сырников", "expected_skill": "web_search"}
+{"text": "google tauri build windows", "expected_skill": "web_search"}
+{"text": "что такое docker compose", "expected_skill": "web_search"}
+{"text": "найди погоду в минске", "expected_skill": "web_search"}
+{"text": "загугли погоду в минске", "expected_skill": "web_search"}
+{"text": "поищи погоду в минске", "expected_skill": "web_search"}
+{"text": "найди кафе в москве", "expected_skill": "web_search"}
+{"text": "загугли вакансии python в минске", "expected_skill": "web_search"}
+{"text": "найди рецепт сырников на сковороде", "expected_skill": "web_search"}
+{"text": "открой google", "expected_skill": "web_open"}
+{"text": "открой github", "expected_skill": "web_open"}
 {"text": "bavis blender 5 0 над вскод плиз", "expected_skill": "window_layout"}
 {"text": "bavis com.squirrel.discord с низу у меня", "expected_skill": "window_layout"}
 {"text": "bavis google chrome по центру пожалуйста", "expected_skill": "window_layout"}

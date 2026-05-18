@@ -24,6 +24,7 @@ env/
 build/
 dist/
 cpp_runtime/build/
+cpp_runtime/build-vs/
 
 # Desktop UI / Tauri
 desktop_ui/node_modules/

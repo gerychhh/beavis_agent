@@ -47,6 +47,15 @@ class BridgeRouter:
             if method == "apps.retrain_status":
                 return self.api.apps.retrain_status()
 
+            if method == "sites.list_user_sites":
+                return self.api.sites.list_user_sites()
+            if method == "sites.apply_changes":
+                return self.api.sites.apply_changes(**params)
+            if method == "sites.retrain_start":
+                return self.api.sites.retrain_start()
+            if method == "sites.retrain_status":
+                return self.api.sites.retrain_status()
+
             if method == "voice.preload":
                 return self.api.voice.preload(**params)
             if method == "voice.listen_once":

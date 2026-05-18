@@ -23,6 +23,8 @@ public:
 private:
     ValidationResult validateVolumeSet(const ToolCall& call) const;
     ValidationResult validateOpenApp(const ToolCall& call) const;
+    ValidationResult validateWebOpen(const ToolCall& call) const;
+    ValidationResult validateWebSearch(const ToolCall& call) const;
     ValidationResult validateWindowControl(const ToolCall& call) const;
     ValidationResult validateWindowLayout(const ToolCall& call) const;
     ValidationResult validateWindowSnap(const ToolCall& call) const;

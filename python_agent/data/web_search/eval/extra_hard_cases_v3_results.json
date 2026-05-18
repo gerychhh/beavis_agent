@@ -1,0 +1,2303 @@
+{
+  "total": 153,
+  "correct": 153,
+  "accuracy": 1.0,
+  "errors": [],
+  "results": [
+    {
+      "text": "найди в интернете как найти баги в коде на плюсах",
+      "normalized_text": "найди в интернете как найти баги в коде на плюсах",
+      "expected_query": "как найти баги в коде на плюсах",
+      "prediction": {
+        "args": {
+          "query": "как найти баги в коде на плюсах"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "как найти баги в коде на плюсах",
+      "ok": true
+    },
+    {
+      "text": "поищи как найти утечку памяти в c++",
+      "normalized_text": "поищи как найти утечку памяти в c++",
+      "expected_query": "как найти утечку памяти в c++",
+      "prediction": {
+        "args": {
+          "query": "как найти утечку памяти в c++"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "как найти утечку памяти в c++",
+      "ok": true
+    },
+    {
+      "text": "загугли как найти ошибку segmentation fault",
+      "normalized_text": "загугли как найти ошибку segmentation fault",
+      "expected_query": "как найти ошибку segmentation fault",
+      "prediction": {
+        "args": {
+          "query": "как найти ошибку segmentation fault"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "как найти ошибку segmentation fault",
+      "ok": true
+    },
+    {
+      "text": "найди как найти файл в linux через терминал",
+      "normalized_text": "найди как найти файл в linux через терминал",
+      "expected_query": "как найти файл в linux через терминал",
+      "prediction": {
+        "args": {
+          "query": "как найти файл в linux через терминал"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "как найти файл в linux через терминал",
+      "ok": true
+    },
+    {
+      "text": "поищи как найти процесс по порту windows",
+      "normalized_text": "поищи как найти процесс по порту windows",
+      "expected_query": "как найти процесс по порту windows",
+      "prediction": {
+        "args": {
+          "query": "как найти процесс по порту windows"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "как найти процесс по порту windows",
+      "ok": true
+    },
+    {
+      "text": "найди в гугле как найти драйвер для wifi",
+      "normalized_text": "найди в гугле как найти драйвер для wifi",
+      "expected_query": "как найти драйвер для wifi",
+      "prediction": {
+        "args": {
+          "query": "как найти драйвер для wifi"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "как найти драйвер для wifi",
+      "ok": true
+    },
+    {
+      "text": "погугли как найти причину синего экрана",
+      "normalized_text": "погугли как найти причину синего экрана",
+      "expected_query": "как найти причину синего экрана",
+      "prediction": {
+        "args": {
+          "query": "как найти причину синего экрана"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "как найти причину синего экрана",
+      "ok": true
+    },
+    {
+      "text": "google как найти баг в python коде",
+      "normalized_text": "google как найти баг в python коде",
+      "expected_query": "как найти баг в python коде",
+      "prediction": {
+        "args": {
+          "query": "как найти баг в python коде"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "как найти баг в python коде",
+      "ok": true
+    },
+    {
+      "text": "search how to find memory leak in c++",
+      "normalized_text": "search how to find memory leak in c++",
+      "expected_query": "how to find memory leak in c++",
+      "prediction": {
+        "args": {
+          "query": "how to find memory leak in c++"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "how to find memory leak in c++",
+      "ok": true
+    },
+    {
+      "text": "look up how to find bug in neural network training",
+      "normalized_text": "look up how to find bug in neural network training",
+      "expected_query": "how to find bug in neural network training",
+      "prediction": {
+        "args": {
+          "query": "how to find bug in neural network training"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "how to find bug in neural network training",
+      "ok": true
+    },
+    {
+      "text": "зкзгули как исправить баги в нейронках",
+      "normalized_text": "зкзгули как исправить баги в нейронках",
+      "expected_query": "как исправить баги в нейронках",
+      "prediction": {
+        "args": {
+          "query": "как исправить баги в нейронках"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "как исправить баги в нейронках",
+      "ok": true
+    },
+    {
+      "text": "загуглм почему не работает bluetooth",
+      "normalized_text": "загуглм почему не работает bluetooth",
+      "expected_query": "почему не работает bluetooth",
+      "prediction": {
+        "args": {
+          "query": "почему не работает bluetooth"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "почему не работает bluetooth",
+      "ok": true
+    },
+    {
+      "text": "загуглиии ошибка tauri build windows",
+      "normalized_text": "загуглиии ошибка tauri build windows",
+      "expected_query": "ошибка tauri build windows",
+      "prediction": {
+        "args": {
+          "query": "ошибка tauri build windows"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "ошибка tauri build windows",
+      "ok": true
+    },
+    {
+      "text": "пойщи курс долара в рб",
+      "normalized_text": "пойщи курс долара в рб",
+      "expected_query": "курс долара в рб",
+      "prediction": {
+        "args": {
+          "query": "курс долара в рб"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "курс долара в рб",
+      "ok": true
+    },
+    {
+      "text": "паищи погоду в минске",
+      "normalized_text": "паищи погоду в минске",
+      "expected_query": "погоду в минске",
+      "prediction": {
+        "args": {
+          "query": "погоду в минске"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "погоду в минске",
+      "ok": true
+    },
+    {
+      "text": "наиди кафе в москве",
+      "normalized_text": "наиди кафе в москве",
+      "expected_query": "кафе в москве",
+      "prediction": {
+        "args": {
+          "query": "кафе в москве"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "кафе в москве",
+      "ok": true
+    },
+    {
+      "text": "найтм документацию по rust",
+      "normalized_text": "найтм документацию по rust",
+      "expected_query": "документацию по rust",
+      "prediction": {
+        "args": {
+          "query": "документацию по rust"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "документацию по rust",
+      "ok": true
+    },
+    {
+      "text": "нйди рецепт сырников на сковороде",
+      "normalized_text": "нйди рецепт сырников на сковороде",
+      "expected_query": "рецепт сырников на сковороде",
+      "prediction": {
+        "args": {
+          "query": "рецепт сырников на сковороде"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "рецепт сырников на сковороде",
+      "ok": true
+    },
+    {
+      "text": "поши как открыть порт в firewall",
+      "normalized_text": "поши как открыть порт в firewall",
+      "expected_query": "как открыть порт в firewall",
+      "prediction": {
+        "args": {
+          "query": "как открыть порт в firewall"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "как открыть порт в firewall",
+      "ok": true
+    },
+    {
+      "text": "гугл rust ownership",
+      "normalized_text": "гугл rust ownership",
+      "expected_query": "rust ownership",
+      "prediction": {
+        "args": {
+          "query": "rust ownership"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "rust ownership",
+      "ok": true
+    },
+    {
+      "text": "gogle rust ownership",
+      "normalized_text": "gogle rust ownership",
+      "expected_query": "rust ownership",
+      "prediction": {
+        "args": {
+          "query": "rust ownership"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "rust ownership",
+      "ok": true
+    },
+    {
+      "text": "googl python list comprehension examples",
+      "normalized_text": "googl python list comprehension examples",
+      "expected_query": "python list comprehension examples",
+      "prediction": {
+        "args": {
+          "query": "python list comprehension examples"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "python list comprehension examples",
+      "ok": true
+    },
+    {
+      "text": "serch windows active window api",
+      "normalized_text": "serch windows active window api",
+      "expected_query": "windows active window api",
+      "prediction": {
+        "args": {
+          "query": "windows active window api"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "windows active window api",
+      "ok": true
+    },
+    {
+      "text": "sarch how to install cmake windows",
+      "normalized_text": "sarch how to install cmake windows",
+      "expected_query": "how to install cmake windows",
+      "prediction": {
+        "args": {
+          "query": "how to install cmake windows"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "how to install cmake windows",
+      "ok": true
+    },
+    {
+      "text": "loook up java servlet tutorial",
+      "normalized_text": "loook up java servlet tutorial",
+      "expected_query": "java servlet tutorial",
+      "prediction": {
+        "args": {
+          "query": "java servlet tutorial"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "java servlet tutorial",
+      "ok": true
+    },
+    {
+      "text": "найди в интее курс долара в рб",
+      "normalized_text": "найди в интее курс долара в рб",
+      "expected_query": "курс долара в рб",
+      "prediction": {
+        "args": {
+          "query": "курс долара в рб"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "курс долара в рб",
+      "ok": true
+    },
+    {
+      "text": "найди в инете вакансии python в минске",
+      "normalized_text": "найди в инете вакансии python в минске",
+      "expected_query": "вакансии python в минске",
+      "prediction": {
+        "args": {
+          "query": "вакансии python в минске"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "вакансии python в минске",
+      "ok": true
+    },
+    {
+      "text": "поищи в интэрнете как работает docker compose",
+      "normalized_text": "поищи в интэрнете как работает docker compose",
+      "expected_query": "как работает docker compose",
+      "prediction": {
+        "args": {
+          "query": "как работает docker compose"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "как работает docker compose",
+      "ok": true
+    },
+    {
+      "text": "найди через gogle rust ownership",
+      "normalized_text": "найди через gogle rust ownership",
+      "expected_query": "rust ownership",
+      "prediction": {
+        "args": {
+          "query": "rust ownership"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "rust ownership",
+      "ok": true
+    },
+    {
+      "text": "поищи через googl python jsonl",
+      "normalized_text": "поищи через googl python jsonl",
+      "expected_query": "python jsonl",
+      "prediction": {
+        "args": {
+          "query": "python jsonl"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "python jsonl",
+      "ok": true
+    },
+    {
+      "text": "найди в гугл ошибка windows 11",
+      "normalized_text": "найди в гугл ошибка windows 11",
+      "expected_query": "ошибка windows 11",
+      "prediction": {
+        "args": {
+          "query": "ошибка windows 11"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "ошибка windows 11",
+      "ok": true
+    },
+    {
+      "text": "поищи в google search tauri build windows",
+      "normalized_text": "поищи в google search tauri build windows",
+      "expected_query": "tauri build windows",
+      "prediction": {
+        "args": {
+          "query": "tauri build windows"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "tauri build windows",
+      "ok": true
+    },
+    {
+      "text": "найди rust ownership в гугле",
+      "normalized_text": "найди rust ownership в гугле",
+      "expected_query": "rust ownership",
+      "prediction": {
+        "args": {
+          "query": "rust ownership"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "rust ownership",
+      "ok": true
+    },
+    {
+      "text": "поищи python decorators через google",
+      "normalized_text": "поищи python decorators через google",
+      "expected_query": "python decorators",
+      "prediction": {
+        "args": {
+          "query": "python decorators"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "python decorators",
+      "ok": true
+    },
+    {
+      "text": "загугли рецепт сырников на сковороде в гугле",
+      "normalized_text": "загугли рецепт сырников на сковороде в гугле",
+      "expected_query": "рецепт сырников на сковороде",
+      "prediction": {
+        "args": {
+          "query": "рецепт сырников на сковороде"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "рецепт сырников на сковороде",
+      "ok": true
+    },
+    {
+      "text": "найди погоду в минске",
+      "normalized_text": "найди погоду в минске",
+      "expected_query": "погоду в минске",
+      "prediction": {
+        "args": {
+          "query": "погоду в минске"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "погоду в минске",
+      "ok": true
+    },
+    {
+      "text": "найди кафе в москве",
+      "normalized_text": "найди кафе в москве",
+      "expected_query": "кафе в москве",
+      "prediction": {
+        "args": {
+          "query": "кафе в москве"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "кафе в москве",
+      "ok": true
+    },
+    {
+      "text": "загугли вакансии python в минске",
+      "normalized_text": "загугли вакансии python в минске",
+      "expected_query": "вакансии python в минске",
+      "prediction": {
+        "args": {
+          "query": "вакансии python в минске"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "вакансии python в минске",
+      "ok": true
+    },
+    {
+      "text": "найди рецепт сырников на сковороде",
+      "normalized_text": "найди рецепт сырников на сковороде",
+      "expected_query": "рецепт сырников на сковороде",
+      "prediction": {
+        "args": {
+          "query": "рецепт сырников на сковороде"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "рецепт сырников на сковороде",
+      "ok": true
+    },
+    {
+      "text": "поищи документацию по rust",
+      "normalized_text": "поищи документацию по rust",
+      "expected_query": "документацию по rust",
+      "prediction": {
+        "args": {
+          "query": "документацию по rust"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "документацию по rust",
+      "ok": true
+    },
+    {
+      "text": "найди музыку для работы",
+      "normalized_text": "найди музыку для работы",
+      "expected_query": "музыку для работы",
+      "prediction": {
+        "args": {
+          "query": "музыку для работы"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "музыку для работы",
+      "ok": true
+    },
+    {
+      "text": "погугли ошибка в windows 11",
+      "normalized_text": "погугли ошибка в windows 11",
+      "expected_query": "ошибка в windows 11",
+      "prediction": {
+        "args": {
+          "query": "ошибка в windows 11"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "ошибка в windows 11",
+      "ok": true
+    },
+    {
+      "text": "найди билеты в питер",
+      "normalized_text": "найди билеты в питер",
+      "expected_query": "билеты в питер",
+      "prediction": {
+        "args": {
+          "query": "билеты в питер"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "билеты в питер",
+      "ok": true
+    },
+    {
+      "text": "поищи статью о машинном обучении",
+      "normalized_text": "поищи статью о машинном обучении",
+      "expected_query": "статью о машинном обучении",
+      "prediction": {
+        "args": {
+          "query": "статью о машинном обучении"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "статью о машинном обучении",
+      "ok": true
+    },
+    {
+      "text": "найди видео про c++ coroutines",
+      "normalized_text": "найди видео про c++ coroutines",
+      "expected_query": "видео про c++ coroutines",
+      "prediction": {
+        "args": {
+          "query": "видео про c++ coroutines"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "видео про c++ coroutines",
+      "ok": true
+    },
+    {
+      "text": "найди игру с открытым миром",
+      "normalized_text": "найди игру с открытым миром",
+      "expected_query": "игру с открытым миром",
+      "prediction": {
+        "args": {
+          "query": "игру с открытым миром"
+        },
+        "confidence": 0.9162,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "игру с открытым миром",
+      "ok": true
+    },
+    {
+      "text": "поищи книги по java для начинающих",
+      "normalized_text": "поищи книги по java для начинающих",
+      "expected_query": "книги по java для начинающих",
+      "prediction": {
+        "args": {
+          "query": "книги по java для начинающих"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "книги по java для начинающих",
+      "ok": true
+    },
+    {
+      "text": "найди курс по математике для программистов",
+      "normalized_text": "найди курс по математике для программистов",
+      "expected_query": "курс по математике для программистов",
+      "prediction": {
+        "args": {
+          "query": "курс по математике для программистов"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "курс по математике для программистов",
+      "ok": true
+    },
+    {
+      "text": "загугли проблема с драйвером nvidia",
+      "normalized_text": "загугли проблема с драйвером nvidia",
+      "expected_query": "проблема с драйвером nvidia",
+      "prediction": {
+        "args": {
+          "query": "проблема с драйвером nvidia"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "проблема с драйвером nvidia",
+      "ok": true
+    },
+    {
+      "text": "найди способ для ускорения windows",
+      "normalized_text": "найди способ для ускорения windows",
+      "expected_query": "способ для ускорения windows",
+      "prediction": {
+        "args": {
+          "query": "способ для ускорения windows"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "способ для ускорения windows",
+      "ok": true
+    },
+    {
+      "text": "бивис найди погоду в минске",
+      "normalized_text": "найди погоду в минске",
+      "expected_query": "погоду в минске",
+      "prediction": {
+        "args": {
+          "query": "погоду в минске"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "погоду в минске",
+      "ok": true
+    },
+    {
+      "text": "эй бивис поищи rust ownership",
+      "normalized_text": "поищи rust ownership",
+      "expected_query": "rust ownership",
+      "prediction": {
+        "args": {
+          "query": "rust ownership"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "rust ownership",
+      "ok": true
+    },
+    {
+      "text": "эй, бивис, найди как установить cmake windows",
+      "normalized_text": "найди как установить cmake windows",
+      "expected_query": "как установить cmake windows",
+      "prediction": {
+        "args": {
+          "query": "как установить cmake windows"
+        },
+        "confidence": 0.9472,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "как установить cmake windows",
+      "ok": true
+    },
+    {
+      "text": "слушай найди рецепт пасты карбонара",
+      "normalized_text": "найди рецепт пасты карбонара",
+      "expected_query": "рецепт пасты карбонара",
+      "prediction": {
+        "args": {
+          "query": "рецепт пасты карбонара"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "рецепт пасты карбонара",
+      "ok": true
+    },
+    {
+      "text": "ну ка загугли почему не работает микрофон",
+      "normalized_text": "ка загугли почему не работает микрофон",
+      "expected_query": "почему не работает микрофон",
+      "prediction": {
+        "args": {
+          "query": "почему не работает микрофон"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "почему не работает микрофон",
+      "ok": true
+    },
+    {
+      "text": "бивис пожалуйста найди документацию по rust",
+      "normalized_text": "найди документацию по rust",
+      "expected_query": "документацию по rust",
+      "prediction": {
+        "args": {
+          "query": "документацию по rust"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "документацию по rust",
+      "ok": true
+    },
+    {
+      "text": "эй бивис можешь найти кафе в москве",
+      "normalized_text": "можешь найти кафе в москве",
+      "expected_query": "кафе в москве",
+      "prediction": {
+        "args": {
+          "query": "кафе в москве"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "кафе в москве",
+      "ok": true
+    },
+    {
+      "text": "ассистент поищи lofi на ютубе",
+      "normalized_text": "ассистент поищи lofi на ютубе",
+      "expected_query": "lofi на ютубе",
+      "prediction": {
+        "args": {
+          "query": "lofi на ютубе"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "lofi на ютубе",
+      "ok": true
+    },
+    {
+      "text": "слушай бивис загугли вакансии java в минске быстро",
+      "normalized_text": "загугли вакансии java в минске",
+      "expected_query": "вакансии java в минске",
+      "prediction": {
+        "args": {
+          "query": "вакансии java в минске"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "вакансии java в минске",
+      "ok": true
+    },
+    {
+      "text": "ну короче можешь пожалуйста найти как открыть порт в firewall",
+      "normalized_text": "можешь найти как открыть порт в firewall",
+      "expected_query": "как открыть порт в firewall",
+      "prediction": {
+        "args": {
+          "query": "как открыть порт в firewall"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "как открыть порт в firewall",
+      "ok": true
+    },
+    {
+      "text": "найди rust ownership пожалуйста",
+      "normalized_text": "найди rust ownership",
+      "expected_query": "rust ownership",
+      "prediction": {
+        "args": {
+          "query": "rust ownership"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "rust ownership",
+      "ok": true
+    },
+    {
+      "text": "поищи погоду в минске быстро",
+      "normalized_text": "поищи погоду в минске",
+      "expected_query": "погоду в минске",
+      "prediction": {
+        "args": {
+          "query": "погоду в минске"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "погоду в минске",
+      "ok": true
+    },
+    {
+      "text": "загугли рецепт сырников на сковороде плиз",
+      "normalized_text": "загугли рецепт сырников на сковороде",
+      "expected_query": "рецепт сырников на сковороде",
+      "prediction": {
+        "args": {
+          "query": "рецепт сырников на сковороде"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "рецепт сырников на сковороде",
+      "ok": true
+    },
+    {
+      "text": "найди python list comprehension examples если можешь",
+      "normalized_text": "найди python list comprehension examples если можешь",
+      "expected_query": "python list comprehension examples",
+      "prediction": {
+        "args": {
+          "query": "python list comprehension examples"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "python list comprehension examples",
+      "ok": true
+    },
+    {
+      "text": "поищи как установить cmake windows срочно",
+      "normalized_text": "поищи как установить cmake windows срочно",
+      "expected_query": "как установить cmake windows",
+      "prediction": {
+        "args": {
+          "query": "как установить cmake windows"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "как установить cmake windows",
+      "ok": true
+    },
+    {
+      "text": "google tauri build windows пожалуйста",
+      "normalized_text": "google tauri build windows",
+      "expected_query": "tauri build windows",
+      "prediction": {
+        "args": {
+          "query": "tauri build windows"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "tauri build windows",
+      "ok": true
+    },
+    {
+      "text": "search windows active window api quickly",
+      "normalized_text": "search windows active window api quickly",
+      "expected_query": "windows active window api",
+      "prediction": {
+        "args": {
+          "query": "windows active window api"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "windows active window api",
+      "ok": true
+    },
+    {
+      "text": "look up postgres jdbc connection please",
+      "normalized_text": "look up postgres jdbc connection please",
+      "expected_query": "postgres jdbc connection",
+      "prediction": {
+        "args": {
+          "query": "postgres jdbc connection"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "postgres jdbc connection",
+      "ok": true
+    },
+    {
+      "text": "найди курс доллара в рб сейчас",
+      "normalized_text": "найди курс доллара в рб",
+      "expected_query": "курс доллара в рб",
+      "prediction": {
+        "args": {
+          "query": "курс доллара в рб"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "курс доллара в рб",
+      "ok": true
+    },
+    {
+      "text": "поищи музыку для работы в браузере",
+      "normalized_text": "поищи музыку для работы в браузере",
+      "expected_query": "музыку для работы",
+      "prediction": {
+        "args": {
+          "query": "музыку для работы"
+        },
+        "confidence": 0.6202,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "музыку для работы",
+      "ok": true
+    },
+    {
+      "text": "что такое docker compose",
+      "normalized_text": "что такое docker compose",
+      "expected_query": "что такое docker compose",
+      "prediction": {
+        "args": {
+          "query": "что такое docker compose"
+        },
+        "confidence": 0.857,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "что такое docker compose",
+      "ok": true
+    },
+    {
+      "text": "что такое rust ownership",
+      "normalized_text": "что такое rust ownership",
+      "expected_query": "что такое rust ownership",
+      "prediction": {
+        "args": {
+          "query": "что такое rust ownership"
+        },
+        "confidence": 0.857,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "что такое rust ownership",
+      "ok": true
+    },
+    {
+      "text": "кто такой алан тьюринг",
+      "normalized_text": "кто такой алан тьюринг",
+      "expected_query": "кто такой алан тьюринг",
+      "prediction": {
+        "args": {
+          "query": "кто такой алан тьюринг"
+        },
+        "confidence": 0.857,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "кто такой алан тьюринг",
+      "ok": true
+    },
+    {
+      "text": "как работает docker compose",
+      "normalized_text": "как работает docker compose",
+      "expected_query": "как работает docker compose",
+      "prediction": {
+        "args": {
+          "query": "как работает docker compose"
+        },
+        "confidence": 0.857,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "как работает docker compose",
+      "ok": true
+    },
+    {
+      "text": "как установить cmake windows",
+      "normalized_text": "как установить cmake windows",
+      "expected_query": "как установить cmake windows",
+      "prediction": {
+        "args": {
+          "query": "как установить cmake windows"
+        },
+        "confidence": 0.857,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "как установить cmake windows",
+      "ok": true
+    },
+    {
+      "text": "почему не работает bluetooth на windows 11",
+      "normalized_text": "почему не работает bluetooth на windows 11",
+      "expected_query": "почему не работает bluetooth на windows 11",
+      "prediction": {
+        "args": {
+          "query": "почему не работает bluetooth на windows 11"
+        },
+        "confidence": 0.87,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "почему не работает bluetooth на windows 11",
+      "ok": true
+    },
+    {
+      "text": "где находится папка appdata windows",
+      "normalized_text": "где находится папка appdata windows",
+      "expected_query": "где находится папка appdata windows",
+      "prediction": {
+        "args": {
+          "query": "где находится папка appdata windows"
+        },
+        "confidence": 0.8473,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "где находится папка appdata windows",
+      "ok": true
+    },
+    {
+      "text": "когда вышел python 3.12",
+      "normalized_text": "когда вышел python 3 12",
+      "expected_query": "когда вышел python 3 12",
+      "prediction": {
+        "args": {
+          "query": "когда вышел python 3.12"
+        },
+        "confidence": 0.857,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "когда вышел python 3 12",
+      "ok": true
+    },
+    {
+      "text": "зачем нужен bcrypt",
+      "normalized_text": "зачем нужен bcrypt",
+      "expected_query": "зачем нужен bcrypt",
+      "prediction": {
+        "args": {
+          "query": "зачем нужен bcrypt"
+        },
+        "confidence": 0.857,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "зачем нужен bcrypt",
+      "ok": true
+    },
+    {
+      "text": "почему tauri build падает на windows",
+      "normalized_text": "почему tauri build падает на windows",
+      "expected_query": "почему tauri build падает на windows",
+      "prediction": {
+        "args": {
+          "query": "почему tauri build падает на windows"
+        },
+        "confidence": 0.87,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "почему tauri build падает на windows",
+      "ok": true
+    },
+    {
+      "text": "what is docker compose",
+      "normalized_text": "what is docker compose",
+      "expected_query": "what is docker compose",
+      "prediction": {
+        "args": {
+          "query": "what is docker compose"
+        },
+        "confidence": 0.857,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "what is docker compose",
+      "ok": true
+    },
+    {
+      "text": "how to install cmake on windows",
+      "normalized_text": "how to install cmake on windows",
+      "expected_query": "how to install cmake on windows",
+      "prediction": {
+        "args": {
+          "query": "how to install cmake on windows"
+        },
+        "confidence": 0.857,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "how to install cmake on windows",
+      "ok": true
+    },
+    {
+      "text": "why bluetooth not working windows 11",
+      "normalized_text": "why bluetooth not working windows 11",
+      "expected_query": "why bluetooth not working windows 11",
+      "prediction": {
+        "args": {
+          "query": "why bluetooth not working windows 11"
+        },
+        "confidence": 0.857,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "why bluetooth not working windows 11",
+      "ok": true
+    },
+    {
+      "text": "where is appdata folder windows",
+      "normalized_text": "where is appdata folder windows",
+      "expected_query": "where is appdata folder windows",
+      "prediction": {
+        "args": {
+          "query": "where is appdata folder windows"
+        },
+        "confidence": 0.507,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "where is appdata folder windows",
+      "ok": true
+    },
+    {
+      "text": "when was python 3.12 released",
+      "normalized_text": "when was python 3 12 released",
+      "expected_query": "when was python 3 12 released",
+      "prediction": {
+        "args": {
+          "query": "when was python 3.12 released"
+        },
+        "confidence": 0.857,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "when was python 3 12 released",
+      "ok": true
+    },
+    {
+      "text": "найди python list comprehension examples",
+      "normalized_text": "найди python list comprehension examples",
+      "expected_query": "python list comprehension examples",
+      "prediction": {
+        "args": {
+          "query": "python list comprehension examples"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "python list comprehension examples",
+      "ok": true
+    },
+    {
+      "text": "поищи windows active window api",
+      "normalized_text": "поищи windows active window api",
+      "expected_query": "windows active window api",
+      "prediction": {
+        "args": {
+          "query": "windows active window api"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "windows active window api",
+      "ok": true
+    },
+    {
+      "text": "загугли java servlet tutorial",
+      "normalized_text": "загугли java servlet tutorial",
+      "expected_query": "java servlet tutorial",
+      "prediction": {
+        "args": {
+          "query": "java servlet tutorial"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "java servlet tutorial",
+      "ok": true
+    },
+    {
+      "text": "найди tauri build windows error",
+      "normalized_text": "найди tauri build windows error",
+      "expected_query": "tauri build windows error",
+      "prediction": {
+        "args": {
+          "query": "tauri build windows error"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "tauri build windows error",
+      "ok": true
+    },
+    {
+      "text": "поищи docker compose postgres example",
+      "normalized_text": "поищи docker compose postgres example",
+      "expected_query": "docker compose postgres example",
+      "prediction": {
+        "args": {
+          "query": "docker compose postgres example"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "docker compose postgres example",
+      "ok": true
+    },
+    {
+      "text": "найди rust borrow checker explained",
+      "normalized_text": "найди rust borrow checker explained",
+      "expected_query": "rust borrow checker explained",
+      "prediction": {
+        "args": {
+          "query": "rust borrow checker explained"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "rust borrow checker explained",
+      "ok": true
+    },
+    {
+      "text": "погугли unreal engine multiplayer steam subsystem",
+      "normalized_text": "погугли unreal engine multiplayer steam subsystem",
+      "expected_query": "unreal engine multiplayer steam subsystem",
+      "prediction": {
+        "args": {
+          "query": "unreal engine multiplayer steam subsystem"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "unreal engine multiplayer steam subsystem",
+      "ok": true
+    },
+    {
+      "text": "найди opencv face detection python",
+      "normalized_text": "найди opencv face detection python",
+      "expected_query": "opencv face detection python",
+      "prediction": {
+        "args": {
+          "query": "opencv face detection python"
+        },
+        "confidence": 0.9453,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "opencv face detection python",
+      "ok": true
+    },
+    {
+      "text": "поищи hikaricp configuration postgres",
+      "normalized_text": "поищи hikaricp configuration postgres",
+      "expected_query": "hikaricp configuration postgres",
+      "prediction": {
+        "args": {
+          "query": "hikaricp configuration postgres"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "hikaricp configuration postgres",
+      "ok": true
+    },
+    {
+      "text": "загугли bcrypt password hashing java",
+      "normalized_text": "загугли bcrypt password hashing java",
+      "expected_query": "bcrypt password hashing java",
+      "prediction": {
+        "args": {
+          "query": "bcrypt password hashing java"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "bcrypt password hashing java",
+      "ok": true
+    },
+    {
+      "text": "найди google search console setup",
+      "normalized_text": "найди google search console setup",
+      "expected_query": "google search console setup",
+      "prediction": {
+        "args": {
+          "query": "google search console setup"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "google search console setup",
+      "ok": true
+    },
+    {
+      "text": "поищи что такое google search console",
+      "normalized_text": "поищи что такое google search console",
+      "expected_query": "что такое google search console",
+      "prediction": {
+        "args": {
+          "query": "что такое google search console"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "что такое google search console",
+      "ok": true
+    },
+    {
+      "text": "загугли google search api pricing",
+      "normalized_text": "загугли google search api pricing",
+      "expected_query": "google search api pricing",
+      "prediction": {
+        "args": {
+          "query": "google search api pricing"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "google search api pricing",
+      "ok": true
+    },
+    {
+      "text": "найди как работает google search engine",
+      "normalized_text": "найди как работает google search engine",
+      "expected_query": "как работает google search engine",
+      "prediction": {
+        "args": {
+          "query": "как работает google search engine"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "как работает google search engine",
+      "ok": true
+    },
+    {
+      "text": "поищи google search operators examples",
+      "normalized_text": "поищи google search operators examples",
+      "expected_query": "google search operators examples",
+      "prediction": {
+        "args": {
+          "query": "google search operators examples"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "google search operators examples",
+      "ok": true
+    },
+    {
+      "text": "google google search console setup",
+      "normalized_text": "google google search console setup",
+      "expected_query": "google search console setup",
+      "prediction": {
+        "args": {
+          "query": "google search console setup"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "google search console setup",
+      "ok": true
+    },
+    {
+      "text": "search google search ranking factors",
+      "normalized_text": "search google search ranking factors",
+      "expected_query": "google search ranking factors",
+      "prediction": {
+        "args": {
+          "query": "google search ranking factors"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "google search ranking factors",
+      "ok": true
+    },
+    {
+      "text": "look up google search operators",
+      "normalized_text": "look up google search operators",
+      "expected_query": "google search operators",
+      "prediction": {
+        "args": {
+          "query": "google search operators"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "google search operators",
+      "ok": true
+    },
+    {
+      "text": "найди rust ownership в гугле",
+      "normalized_text": "найди rust ownership в гугле",
+      "expected_query": "rust ownership",
+      "prediction": {
+        "args": {
+          "query": "rust ownership"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "rust ownership",
+      "ok": true
+    },
+    {
+      "text": "поищи docker compose через google",
+      "normalized_text": "поищи docker compose через google",
+      "expected_query": "docker compose",
+      "prediction": {
+        "args": {
+          "query": "docker compose"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "docker compose",
+      "ok": true
+    },
+    {
+      "text": "загугли python jsonl в google search",
+      "normalized_text": "загугли python jsonl в google search",
+      "expected_query": "python jsonl",
+      "prediction": {
+        "args": {
+          "query": "python jsonl"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "python jsonl",
+      "ok": true
+    },
+    {
+      "text": "найди курс доллара в рб через гугл",
+      "normalized_text": "найди курс доллара в рб через гугл",
+      "expected_query": "курс доллара в рб",
+      "prediction": {
+        "args": {
+          "query": "курс доллара в рб"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "курс доллара в рб",
+      "ok": true
+    },
+    {
+      "text": "поищи как открыть порт в firewall в гугле",
+      "normalized_text": "поищи как открыть порт в firewall в гугле",
+      "expected_query": "как открыть порт в firewall",
+      "prediction": {
+        "args": {
+          "query": "как открыть порт в firewall"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "как открыть порт в firewall",
+      "ok": true
+    },
+    {
+      "text": "найди рецепт сырников на сковороде через google",
+      "normalized_text": "найди рецепт сырников на сковороде через google",
+      "expected_query": "рецепт сырников на сковороде",
+      "prediction": {
+        "args": {
+          "query": "рецепт сырников на сковороде"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "рецепт сырников на сковороде",
+      "ok": true
+    },
+    {
+      "text": "search windows active window api in google",
+      "normalized_text": "search windows active window api in google",
+      "expected_query": "windows active window api",
+      "prediction": {
+        "args": {
+          "query": "windows active window api"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "windows active window api",
+      "ok": true
+    },
+    {
+      "text": "look up java servlet tutorial on google",
+      "normalized_text": "look up java servlet tutorial on google",
+      "expected_query": "java servlet tutorial",
+      "prediction": {
+        "args": {
+          "query": "java servlet tutorial"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "java servlet tutorial",
+      "ok": true
+    },
+    {
+      "text": "найди",
+      "normalized_text": "найди",
+      "expected_query": "",
+      "prediction": {
+        "args": {},
+        "confidence": 0.0,
+        "missing": [
+          "query"
+        ],
+        "source": "web_search_model_invalid_output"
+      },
+      "predicted_query": "",
+      "ok": true
+    },
+    {
+      "text": "поищи",
+      "normalized_text": "поищи",
+      "expected_query": "",
+      "prediction": {
+        "args": {},
+        "confidence": 0.0,
+        "missing": [
+          "query"
+        ],
+        "source": "web_search_model_invalid_output"
+      },
+      "predicted_query": "",
+      "ok": true
+    },
+    {
+      "text": "загугли",
+      "normalized_text": "загугли",
+      "expected_query": "",
+      "prediction": {
+        "args": {},
+        "confidence": 0.0,
+        "missing": [
+          "query"
+        ],
+        "source": "web_search_model_invalid_output"
+      },
+      "predicted_query": "",
+      "ok": true
+    },
+    {
+      "text": "google",
+      "normalized_text": "google",
+      "expected_query": "",
+      "prediction": {
+        "args": {},
+        "confidence": 0.0,
+        "missing": [
+          "query"
+        ],
+        "source": "web_search_model_invalid_output"
+      },
+      "predicted_query": "",
+      "ok": true
+    },
+    {
+      "text": "search",
+      "normalized_text": "search",
+      "expected_query": "",
+      "prediction": {
+        "args": {},
+        "confidence": 0.0,
+        "missing": [
+          "query"
+        ],
+        "source": "web_search_model_invalid_output"
+      },
+      "predicted_query": "",
+      "ok": true
+    },
+    {
+      "text": "найди в интернете",
+      "normalized_text": "найди в интернете",
+      "expected_query": "",
+      "prediction": {
+        "args": {},
+        "confidence": 0.0,
+        "missing": [
+          "query"
+        ],
+        "source": "web_search_model_invalid_output"
+      },
+      "predicted_query": "",
+      "ok": true
+    },
+    {
+      "text": "поищи в гугле",
+      "normalized_text": "поищи в гугле",
+      "expected_query": "",
+      "prediction": {
+        "args": {},
+        "confidence": 0.0,
+        "missing": [
+          "query"
+        ],
+        "source": "web_search_model_invalid_output"
+      },
+      "predicted_query": "",
+      "ok": true
+    },
+    {
+      "text": "можешь найти",
+      "normalized_text": "можешь найти",
+      "expected_query": "",
+      "prediction": {
+        "args": {},
+        "confidence": 0.0,
+        "missing": [
+          "query"
+        ],
+        "source": "web_search_model_invalid_output"
+      },
+      "predicted_query": "",
+      "ok": true
+    },
+    {
+      "text": "бивис поищи пожалуйста",
+      "normalized_text": "поищи",
+      "expected_query": "",
+      "prediction": {
+        "args": {},
+        "confidence": 0.0,
+        "missing": [
+          "query"
+        ],
+        "source": "web_search_model_invalid_output"
+      },
+      "predicted_query": "",
+      "ok": true
+    },
+    {
+      "text": "эй бивис загугли",
+      "normalized_text": "загугли",
+      "expected_query": "",
+      "prediction": {
+        "args": {},
+        "confidence": 0.0,
+        "missing": [
+          "query"
+        ],
+        "source": "web_search_model_invalid_output"
+      },
+      "predicted_query": "",
+      "ok": true
+    },
+    {
+      "text": "открой google",
+      "normalized_text": "открой google",
+      "expected_query": "",
+      "prediction": {
+        "args": {},
+        "confidence": 0.0,
+        "missing": [
+          "query"
+        ],
+        "source": "web_search_model_invalid_output"
+      },
+      "predicted_query": "",
+      "ok": true
+    },
+    {
+      "text": "открой github",
+      "normalized_text": "открой github",
+      "expected_query": "",
+      "prediction": {
+        "args": {},
+        "confidence": 0.0,
+        "missing": [
+          "query"
+        ],
+        "source": "web_search_model_invalid_output"
+      },
+      "predicted_query": "",
+      "ok": true
+    },
+    {
+      "text": "открой сайт google",
+      "normalized_text": "открой сайт google",
+      "expected_query": "",
+      "prediction": {
+        "args": {},
+        "confidence": 0.0,
+        "missing": [
+          "query"
+        ],
+        "source": "web_search_model_invalid_output"
+      },
+      "predicted_query": "",
+      "ok": true
+    },
+    {
+      "text": "открой github.com/openai/codex",
+      "normalized_text": "открой github com/openai/codex",
+      "expected_query": "",
+      "prediction": {
+        "args": {},
+        "confidence": 0.0,
+        "missing": [
+          "query"
+        ],
+        "source": "web_search_model_invalid_output"
+      },
+      "predicted_query": "",
+      "ok": true
+    },
+    {
+      "text": "запусти chrome",
+      "normalized_text": "запусти chrome",
+      "expected_query": "",
+      "prediction": {
+        "args": {},
+        "confidence": 0.0,
+        "missing": [
+          "query"
+        ],
+        "source": "web_search_model_invalid_output"
+      },
+      "predicted_query": "",
+      "ok": true
+    },
+    {
+      "text": "запусти браузер",
+      "normalized_text": "запусти браузер",
+      "expected_query": "",
+      "prediction": {
+        "args": {},
+        "confidence": 0.0,
+        "missing": [
+          "query"
+        ],
+        "source": "web_search_model_invalid_output"
+      },
+      "predicted_query": "",
+      "ok": true
+    },
+    {
+      "text": "закрой окно",
+      "normalized_text": "закрой окно",
+      "expected_query": "",
+      "prediction": {
+        "args": {},
+        "confidence": 0.0,
+        "missing": [
+          "query"
+        ],
+        "source": "web_search_model_invalid_output"
+      },
+      "predicted_query": "",
+      "ok": true
+    },
+    {
+      "text": "сверни окно",
+      "normalized_text": "сверни окно",
+      "expected_query": "",
+      "prediction": {
+        "args": {},
+        "confidence": 0.0,
+        "missing": [
+          "query"
+        ],
+        "source": "web_search_model_invalid_output"
+      },
+      "predicted_query": "",
+      "ok": true
+    },
+    {
+      "text": "сверни google",
+      "normalized_text": "сверни google",
+      "expected_query": "",
+      "prediction": {
+        "args": {},
+        "confidence": 0.0,
+        "missing": [
+          "query"
+        ],
+        "source": "web_search_model_invalid_output"
+      },
+      "predicted_query": "",
+      "ok": true
+    },
+    {
+      "text": "разверни chrome",
+      "normalized_text": "разверни chrome",
+      "expected_query": "",
+      "prediction": {
+        "args": {},
+        "confidence": 0.0,
+        "missing": [
+          "query"
+        ],
+        "source": "web_search_model_invalid_output"
+      },
+      "predicted_query": "",
+      "ok": true
+    },
+    {
+      "text": "сделай громче",
+      "normalized_text": "сделай громче",
+      "expected_query": "",
+      "prediction": {
+        "args": {},
+        "confidence": 0.0,
+        "missing": [
+          "query"
+        ],
+        "source": "web_search_model_invalid_output"
+      },
+      "predicted_query": "",
+      "ok": true
+    },
+    {
+      "text": "сделай тише",
+      "normalized_text": "сделай тише",
+      "expected_query": "",
+      "prediction": {
+        "args": {},
+        "confidence": 0.0,
+        "missing": [
+          "query"
+        ],
+        "source": "web_search_model_invalid_output"
+      },
+      "predicted_query": "",
+      "ok": true
+    },
+    {
+      "text": "выключи компьютер",
+      "normalized_text": "выключи компьютер",
+      "expected_query": "",
+      "prediction": {
+        "args": {},
+        "confidence": 0.0,
+        "missing": [
+          "query"
+        ],
+        "source": "web_search_model_invalid_output"
+      },
+      "predicted_query": "",
+      "ok": true
+    },
+    {
+      "text": "перезагрузи ноутбук",
+      "normalized_text": "перезагрузи ноутбук",
+      "expected_query": "",
+      "prediction": {
+        "args": {},
+        "confidence": 0.0,
+        "missing": [
+          "query"
+        ],
+        "source": "web_search_model_invalid_output"
+      },
+      "predicted_query": "",
+      "ok": true
+    },
+    {
+      "text": "введи rust ownership",
+      "normalized_text": "введи rust ownership",
+      "expected_query": "",
+      "prediction": {
+        "args": {},
+        "confidence": 0.0,
+        "missing": [
+          "query"
+        ],
+        "source": "web_search_model_invalid_output"
+      },
+      "predicted_query": "",
+      "ok": true
+    },
+    {
+      "text": "напиши rust ownership",
+      "normalized_text": "напиши rust ownership",
+      "expected_query": "",
+      "prediction": {
+        "args": {},
+        "confidence": 0.0,
+        "missing": [
+          "query"
+        ],
+        "source": "web_search_model_invalid_output"
+      },
+      "predicted_query": "",
+      "ok": true
+    },
+    {
+      "text": "найди файл отчет",
+      "normalized_text": "найди файл отчет",
+      "expected_query": "",
+      "prediction": {
+        "args": {},
+        "confidence": 0.0,
+        "missing": [
+          "query"
+        ],
+        "source": "web_search_model_invalid_output"
+      },
+      "predicted_query": "",
+      "ok": true
+    },
+    {
+      "text": "найди папку документы",
+      "normalized_text": "найди папку документы",
+      "expected_query": "",
+      "prediction": {
+        "args": {},
+        "confidence": 0.0,
+        "missing": [
+          "query"
+        ],
+        "source": "web_search_model_invalid_output"
+      },
+      "predicted_query": "",
+      "ok": true
+    },
+    {
+      "text": "найди на компьютере отчет по практике",
+      "normalized_text": "найди на компьютере отчет по практике",
+      "expected_query": "",
+      "prediction": {
+        "args": {},
+        "confidence": 0.0,
+        "missing": [
+          "query"
+        ],
+        "source": "web_search_model_invalid_output"
+      },
+      "predicted_query": "",
+      "ok": true
+    },
+    {
+      "text": "как дела",
+      "normalized_text": "как дела",
+      "expected_query": "",
+      "prediction": {
+        "args": {},
+        "confidence": 0.0,
+        "missing": [
+          "query"
+        ],
+        "source": "web_search_model_invalid_output"
+      },
+      "predicted_query": "",
+      "ok": true
+    },
+    {
+      "text": "привет бивис",
+      "normalized_text": "привет",
+      "expected_query": "",
+      "prediction": {
+        "args": {},
+        "confidence": 0.0,
+        "missing": [
+          "query"
+        ],
+        "source": "web_search_model_invalid_output"
+      },
+      "predicted_query": "",
+      "ok": true
+    },
+    {
+      "text": "расскажи анекдот",
+      "normalized_text": "расскажи анекдот",
+      "expected_query": "",
+      "prediction": {
+        "args": {},
+        "confidence": 0.0,
+        "missing": [
+          "query"
+        ],
+        "source": "web_search_model_invalid_output"
+      },
+      "predicted_query": "",
+      "ok": true
+    },
+    {
+      "text": "эй бивис ну короче найди в интернете как найти и исправить баги в коде на плюсах пожалуйста",
+      "normalized_text": "найди в интернете как найти и исправить баги в коде на плюсах",
+      "expected_query": "как найти и исправить баги в коде на плюсах",
+      "prediction": {
+        "args": {
+          "query": "как найти и исправить баги в коде на плюсах"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "как найти и исправить баги в коде на плюсах",
+      "ok": true
+    },
+    {
+      "text": "слушай можешь пж загуглить почему после npm install не находится express в node js",
+      "normalized_text": "можешь пж загуглить почему после npm install не находится express в node js",
+      "expected_query": "почему после npm install не находится express в node js",
+      "prediction": {
+        "args": {
+          "query": "почему после npm install не находится express в node js"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "почему после npm install не находится express в node js",
+      "ok": true
+    },
+    {
+      "text": "бивис наиди в интее как найти причину почему tomcat 10 не запускает war файл",
+      "normalized_text": "наиди в интее как найти причину почему tomcat 10 не запускает war файл",
+      "expected_query": "как найти причину почему tomcat 10 не запускает war файл",
+      "prediction": {
+        "args": {
+          "query": "как найти причину почему tomcat 10 не запускает war файл"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "как найти причину почему tomcat 10 не запускает war файл",
+      "ok": true
+    },
+    {
+      "text": "ну ка пойщи через gogle как исправить ошибку module not found express windows",
+      "normalized_text": "ка пойщи через gogle как исправить ошибку module not found express windows",
+      "expected_query": "как исправить ошибку module not found express windows",
+      "prediction": {
+        "args": {
+          "query": "как исправить ошибку module not found express windows"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "как исправить ошибку module not found express windows",
+      "ok": true
+    },
+    {
+      "text": "эй ассистент погугли пожалуйста как найти активное окно через windows api c++",
+      "normalized_text": "ассистент погугли как найти активное окно через windows api c++",
+      "expected_query": "как найти активное окно через windows api c++",
+      "prediction": {
+        "args": {
+          "query": "как найти активное окно через windows api c++"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "как найти активное окно через windows api c++",
+      "ok": true
+    },
+    {
+      "text": "можешь найти в гугле почему openwakeword плохо распознает русское слово бивис",
+      "normalized_text": "можешь найти в гугле почему openwakeword плохо распознает русское слово",
+      "expected_query": "почему openwakeword плохо распознает русское слово",
+      "prediction": {
+        "args": {
+          "query": "почему openwakeword плохо распознает русское слово бивис"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "почему openwakeword плохо распознает русское слово",
+      "ok": true
+    },
+    {
+      "text": "поищи пожалуйста в интернете как найти leakage в machine learning dataset",
+      "normalized_text": "поищи в интернете как найти leakage в machine learning dataset",
+      "expected_query": "как найти leakage в machine learning dataset",
+      "prediction": {
+        "args": {
+          "query": "как найти leakage в machine learning dataset"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "как найти leakage в machine learning dataset",
+      "ok": true
+    },
+    {
+      "text": "зкзгули как найти где в python проекте вызывается функция",
+      "normalized_text": "зкзгули как найти где в python проекте вызывается функция",
+      "expected_query": "как найти где в python проекте вызывается функция",
+      "prediction": {
+        "args": {
+          "query": "как найти где в python проекте вызывается функция"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "как найти где в python проекте вызывается функция",
+      "ok": true
+    },
+    {
+      "text": "найди в интернете почему модель режет запрос после предлога в",
+      "normalized_text": "найди в интернете почему модель режет запрос после предлога в",
+      "expected_query": "почему модель режет запрос после предлога в",
+      "prediction": {
+        "args": {
+          "query": "почему модель режет запрос после предлога в"
+        },
+        "confidence": 0.948,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "почему модель режет запрос после предлога в",
+      "ok": true
+    },
+    {
+      "text": "поищи в google search как исправить query extractor для русских предлогов",
+      "normalized_text": "поищи в google search как исправить query extractor для русских предлогов",
+      "expected_query": "как исправить query extractor для русских предлогов",
+      "prediction": {
+        "args": {
+          "query": "как исправить query extractor для русских предлогов"
+        },
+        "confidence": 0.961,
+        "missing": [],
+        "source": "web_search_model_joblib"
+      },
+      "predicted_query": "как исправить query extractor для русских предлогов",
+      "ok": true
+    }
+  ]
+}

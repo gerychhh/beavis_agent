@@ -27,6 +27,14 @@ ValidationResult ArgsValidator::validate(const ToolCall& call) const {
         return validateOpenApp(call);
     }
 
+    if (call.skill == "web_open") {
+        return validateWebOpen(call);
+    }
+
+    if (call.skill == "web_search") {
+        return validateWebSearch(call);
+    }
+
     if (call.skill == "window_control") {
         return validateWindowControl(call);
     }
@@ -109,6 +117,81 @@ ValidationResult ArgsValidator::validateOpenApp(const ToolCall& call) const {
 
     if (!call.args.at("app_id").is_string() || call.args.at("app_id").get<std::string>().empty()) {
         return ValidationResult::invalid("INVALID_ARGS", "app_id must be a non-empty string");
+    }
+
+    return ValidationResult::valid();
+}
+
+ValidationResult ArgsValidator::validateWebOpen(const ToolCall& call) const {
+    if (!call.args.contains("url")) {
+        return ValidationResult::invalid("MISSING_ARG", "Missing required arg: url");
+    }
+
+    if (!call.args.at("url").is_string() || call.args.at("url").get<std::string>().empty()) {
+        return ValidationResult::invalid("INVALID_ARGS", "url must be a non-empty string");
+    }
+
+    const std::string url = call.args.at("url").get<std::string>();
+    if (url.rfind("https://", 0) != 0 && url.rfind("http://", 0) != 0) {
+        return ValidationResult::invalid("INVALID_ARGS", "url must start with http:// or https://");
+    }
+
+    if (call.args.contains("action")) {
+        if (!call.args.at("action").is_string()) {
+            return ValidationResult::invalid("INVALID_ARGS", "action must be a string");
+        }
+
+        static const std::unordered_set<std::string> allowedActions = {
+            "open"
+        };
+
+        const std::string action = call.args.at("action").get<std::string>();
+        if (allowedActions.find(action) == allowedActions.end()) {
+            return ValidationResult::invalid("INVALID_ARGS", "action is not supported");
+        }
+    }
+
+    if (call.args.contains("site_id")) {
+        if (!call.args.at("site_id").is_string() || call.args.at("site_id").get<std::string>().empty()) {
+            return ValidationResult::invalid("INVALID_ARGS", "site_id must be a non-empty string");
+        }
+    }
+
+    return ValidationResult::valid();
+}
+
+ValidationResult ArgsValidator::validateWebSearch(const ToolCall& call) const {
+    if (!call.args.contains("query")) {
+        return ValidationResult::invalid("MISSING_ARG", "Missing required arg: query");
+    }
+
+    if (!call.args.at("query").is_string() || call.args.at("query").get<std::string>().empty()) {
+        return ValidationResult::invalid("INVALID_ARGS", "query must be a non-empty string");
+    }
+
+    if (!call.args.contains("url")) {
+        return ValidationResult::invalid("MISSING_ARG", "Missing required arg: url");
+    }
+
+    if (!call.args.at("url").is_string() || call.args.at("url").get<std::string>().empty()) {
+        return ValidationResult::invalid("INVALID_ARGS", "url must be a non-empty string");
+    }
+
+    const std::string url = call.args.at("url").get<std::string>();
+    if (url.rfind("https://www.google.com/search?", 0) != 0) {
+        return ValidationResult::invalid("INVALID_ARGS", "url must be a Google search URL");
+    }
+
+    if (call.args.contains("action")) {
+        if (!call.args.at("action").is_string() || call.args.at("action").get<std::string>() != "search") {
+            return ValidationResult::invalid("INVALID_ARGS", "action must be search");
+        }
+    }
+
+    if (call.args.contains("provider")) {
+        if (!call.args.at("provider").is_string() || call.args.at("provider").get<std::string>() != "google") {
+            return ValidationResult::invalid("INVALID_ARGS", "provider must be google");
+        }
     }
 
     return ValidationResult::valid();

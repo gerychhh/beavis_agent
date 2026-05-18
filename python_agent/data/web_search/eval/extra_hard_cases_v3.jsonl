@@ -1,0 +1,153 @@
+{"text": "найди в интернете как найти баги в коде на плюсах", "expected_query": "как найти баги в коде на плюсах", "case_type": "hard_find_inside_query"}
+{"text": "поищи как найти утечку памяти в c++", "expected_query": "как найти утечку памяти в c++", "case_type": "hard_find_inside_query"}
+{"text": "загугли как найти ошибку segmentation fault", "expected_query": "как найти ошибку segmentation fault", "case_type": "hard_find_inside_query"}
+{"text": "найди как найти файл в linux через терминал", "expected_query": "как найти файл в linux через терминал", "case_type": "hard_find_inside_query"}
+{"text": "поищи как найти процесс по порту windows", "expected_query": "как найти процесс по порту windows", "case_type": "hard_find_inside_query"}
+{"text": "найди в гугле как найти драйвер для wifi", "expected_query": "как найти драйвер для wifi", "case_type": "hard_find_inside_query"}
+{"text": "погугли как найти причину синего экрана", "expected_query": "как найти причину синего экрана", "case_type": "hard_find_inside_query"}
+{"text": "google как найти баг в python коде", "expected_query": "как найти баг в python коде", "case_type": "hard_find_inside_query"}
+{"text": "search how to find memory leak in c++", "expected_query": "how to find memory leak in c++", "case_type": "hard_find_inside_query"}
+{"text": "look up how to find bug in neural network training", "expected_query": "how to find bug in neural network training", "case_type": "hard_find_inside_query"}
+{"text": "зкзгули как исправить баги в нейронках", "expected_query": "как исправить баги в нейронках", "case_type": "typo_command"}
+{"text": "загуглм почему не работает bluetooth", "expected_query": "почему не работает bluetooth", "case_type": "typo_command"}
+{"text": "загуглиии ошибка tauri build windows", "expected_query": "ошибка tauri build windows", "case_type": "typo_command"}
+{"text": "пойщи курс долара в рб", "expected_query": "курс долара в рб", "case_type": "typo_command"}
+{"text": "паищи погоду в минске", "expected_query": "погоду в минске", "case_type": "typo_command"}
+{"text": "наиди кафе в москве", "expected_query": "кафе в москве", "case_type": "typo_command"}
+{"text": "найтм документацию по rust", "expected_query": "документацию по rust", "case_type": "typo_command"}
+{"text": "нйди рецепт сырников на сковороде", "expected_query": "рецепт сырников на сковороде", "case_type": "typo_command"}
+{"text": "поши как открыть порт в firewall", "expected_query": "как открыть порт в firewall", "case_type": "typo_command"}
+{"text": "гугл rust ownership", "expected_query": "rust ownership", "case_type": "typo_command"}
+{"text": "gogle rust ownership", "expected_query": "rust ownership", "case_type": "typo_command"}
+{"text": "googl python list comprehension examples", "expected_query": "python list comprehension examples", "case_type": "typo_command"}
+{"text": "serch windows active window api", "expected_query": "windows active window api", "case_type": "typo_command"}
+{"text": "sarch how to install cmake windows", "expected_query": "how to install cmake windows", "case_type": "typo_command"}
+{"text": "loook up java servlet tutorial", "expected_query": "java servlet tutorial", "case_type": "typo_command"}
+{"text": "найди в интее курс долара в рб", "expected_query": "курс долара в рб", "case_type": "typo_provider_preposition"}
+{"text": "найди в инете вакансии python в минске", "expected_query": "вакансии python в минске", "case_type": "typo_provider_preposition"}
+{"text": "поищи в интэрнете как работает docker compose", "expected_query": "как работает docker compose", "case_type": "typo_provider_preposition"}
+{"text": "найди через gogle rust ownership", "expected_query": "rust ownership", "case_type": "typo_provider_preposition"}
+{"text": "поищи через googl python jsonl", "expected_query": "python jsonl", "case_type": "typo_provider_preposition"}
+{"text": "найди в гугл ошибка windows 11", "expected_query": "ошибка windows 11", "case_type": "typo_provider_preposition"}
+{"text": "поищи в google search tauri build windows", "expected_query": "tauri build windows", "case_type": "typo_provider_preposition"}
+{"text": "найди rust ownership в гугле", "expected_query": "rust ownership", "case_type": "provider_suffix"}
+{"text": "поищи python decorators через google", "expected_query": "python decorators", "case_type": "provider_suffix"}
+{"text": "загугли рецепт сырников на сковороде в гугле", "expected_query": "рецепт сырников на сковороде", "case_type": "provider_suffix"}
+{"text": "найди погоду в минске", "expected_query": "погоду в минске", "case_type": "preposition"}
+{"text": "найди кафе в москве", "expected_query": "кафе в москве", "case_type": "preposition"}
+{"text": "загугли вакансии python в минске", "expected_query": "вакансии python в минске", "case_type": "preposition"}
+{"text": "найди рецепт сырников на сковороде", "expected_query": "рецепт сырников на сковороде", "case_type": "preposition"}
+{"text": "поищи документацию по rust", "expected_query": "документацию по rust", "case_type": "preposition"}
+{"text": "найди музыку для работы", "expected_query": "музыку для работы", "case_type": "preposition"}
+{"text": "погугли ошибка в windows 11", "expected_query": "ошибка в windows 11", "case_type": "preposition"}
+{"text": "найди билеты в питер", "expected_query": "билеты в питер", "case_type": "preposition"}
+{"text": "поищи статью о машинном обучении", "expected_query": "статью о машинном обучении", "case_type": "preposition"}
+{"text": "найди видео про c++ coroutines", "expected_query": "видео про c++ coroutines", "case_type": "preposition"}
+{"text": "найди игру с открытым миром", "expected_query": "игру с открытым миром", "case_type": "preposition"}
+{"text": "поищи книги по java для начинающих", "expected_query": "книги по java для начинающих", "case_type": "preposition"}
+{"text": "найди курс по математике для программистов", "expected_query": "курс по математике для программистов", "case_type": "preposition"}
+{"text": "загугли проблема с драйвером nvidia", "expected_query": "проблема с драйвером nvidia", "case_type": "preposition"}
+{"text": "найди способ для ускорения windows", "expected_query": "способ для ускорения windows", "case_type": "preposition"}
+{"text": "бивис найди погоду в минске", "expected_query": "погоду в минске", "case_type": "wake"}
+{"text": "эй бивис поищи rust ownership", "expected_query": "rust ownership", "case_type": "wake"}
+{"text": "эй, бивис, найди как установить cmake windows", "expected_query": "как установить cmake windows", "case_type": "wake"}
+{"text": "слушай найди рецепт пасты карбонара", "expected_query": "рецепт пасты карбонара", "case_type": "wake"}
+{"text": "ну ка загугли почему не работает микрофон", "expected_query": "почему не работает микрофон", "case_type": "wake_noise"}
+{"text": "бивис пожалуйста найди документацию по rust", "expected_query": "документацию по rust", "case_type": "wake_noise"}
+{"text": "эй бивис можешь найти кафе в москве", "expected_query": "кафе в москве", "case_type": "wake_noise"}
+{"text": "ассистент поищи lofi на ютубе", "expected_query": "lofi на ютубе", "case_type": "wake"}
+{"text": "слушай бивис загугли вакансии java в минске быстро", "expected_query": "вакансии java в минске", "case_type": "wake_noise"}
+{"text": "ну короче можешь пожалуйста найти как открыть порт в firewall", "expected_query": "как открыть порт в firewall", "case_type": "noise_prefix"}
+{"text": "найди rust ownership пожалуйста", "expected_query": "rust ownership", "case_type": "noise_suffix"}
+{"text": "поищи погоду в минске быстро", "expected_query": "погоду в минске", "case_type": "noise_suffix"}
+{"text": "загугли рецепт сырников на сковороде плиз", "expected_query": "рецепт сырников на сковороде", "case_type": "noise_suffix"}
+{"text": "найди python list comprehension examples если можешь", "expected_query": "python list comprehension examples", "case_type": "noise_suffix"}
+{"text": "поищи как установить cmake windows срочно", "expected_query": "как установить cmake windows", "case_type": "noise_suffix"}
+{"text": "google tauri build windows пожалуйста", "expected_query": "tauri build windows", "case_type": "noise_suffix"}
+{"text": "search windows active window api quickly", "expected_query": "windows active window api", "case_type": "noise_suffix"}
+{"text": "look up postgres jdbc connection please", "expected_query": "postgres jdbc connection", "case_type": "noise_suffix"}
+{"text": "найди курс доллара в рб сейчас", "expected_query": "курс доллара в рб", "case_type": "noise_suffix"}
+{"text": "поищи музыку для работы в браузере", "expected_query": "музыку для работы", "case_type": "noise_suffix"}
+{"text": "что такое docker compose", "expected_query": "что такое docker compose", "case_type": "question"}
+{"text": "что такое rust ownership", "expected_query": "что такое rust ownership", "case_type": "question"}
+{"text": "кто такой алан тьюринг", "expected_query": "кто такой алан тьюринг", "case_type": "question"}
+{"text": "как работает docker compose", "expected_query": "как работает docker compose", "case_type": "question"}
+{"text": "как установить cmake windows", "expected_query": "как установить cmake windows", "case_type": "question"}
+{"text": "почему не работает bluetooth на windows 11", "expected_query": "почему не работает bluetooth на windows 11", "case_type": "question"}
+{"text": "где находится папка appdata windows", "expected_query": "где находится папка appdata windows", "case_type": "question"}
+{"text": "когда вышел python 3.12", "expected_query": "когда вышел python 3.12", "case_type": "question"}
+{"text": "зачем нужен bcrypt", "expected_query": "зачем нужен bcrypt", "case_type": "question"}
+{"text": "почему tauri build падает на windows", "expected_query": "почему tauri build падает на windows", "case_type": "question"}
+{"text": "what is docker compose", "expected_query": "what is docker compose", "case_type": "question"}
+{"text": "how to install cmake on windows", "expected_query": "how to install cmake on windows", "case_type": "question"}
+{"text": "why bluetooth not working windows 11", "expected_query": "why bluetooth not working windows 11", "case_type": "question"}
+{"text": "where is appdata folder windows", "expected_query": "where is appdata folder windows", "case_type": "question"}
+{"text": "when was python 3.12 released", "expected_query": "when was python 3.12 released", "case_type": "question"}
+{"text": "найди python list comprehension examples", "expected_query": "python list comprehension examples", "case_type": "mixed"}
+{"text": "поищи windows active window api", "expected_query": "windows active window api", "case_type": "mixed"}
+{"text": "загугли java servlet tutorial", "expected_query": "java servlet tutorial", "case_type": "mixed"}
+{"text": "найди tauri build windows error", "expected_query": "tauri build windows error", "case_type": "mixed"}
+{"text": "поищи docker compose postgres example", "expected_query": "docker compose postgres example", "case_type": "mixed"}
+{"text": "найди rust borrow checker explained", "expected_query": "rust borrow checker explained", "case_type": "mixed"}
+{"text": "погугли unreal engine multiplayer steam subsystem", "expected_query": "unreal engine multiplayer steam subsystem", "case_type": "mixed"}
+{"text": "найди opencv face detection python", "expected_query": "opencv face detection python", "case_type": "mixed"}
+{"text": "поищи hikaricp configuration postgres", "expected_query": "hikaricp configuration postgres", "case_type": "mixed"}
+{"text": "загугли bcrypt password hashing java", "expected_query": "bcrypt password hashing java", "case_type": "mixed"}
+{"text": "найди google search console setup", "expected_query": "google search console setup", "case_type": "provider_as_query"}
+{"text": "поищи что такое google search console", "expected_query": "что такое google search console", "case_type": "provider_as_query"}
+{"text": "загугли google search api pricing", "expected_query": "google search api pricing", "case_type": "provider_as_query"}
+{"text": "найди как работает google search engine", "expected_query": "как работает google search engine", "case_type": "provider_as_query"}
+{"text": "поищи google search operators examples", "expected_query": "google search operators examples", "case_type": "provider_as_query"}
+{"text": "google google search console setup", "expected_query": "google search console setup", "case_type": "provider_prefix_query_contains_provider"}
+{"text": "search google search ranking factors", "expected_query": "google search ranking factors", "case_type": "provider_as_query"}
+{"text": "look up google search operators", "expected_query": "google search operators", "case_type": "provider_as_query"}
+{"text": "найди rust ownership в гугле", "expected_query": "rust ownership", "case_type": "provider_suffix"}
+{"text": "поищи docker compose через google", "expected_query": "docker compose", "case_type": "provider_suffix"}
+{"text": "загугли python jsonl в google search", "expected_query": "python jsonl", "case_type": "provider_suffix"}
+{"text": "найди курс доллара в рб через гугл", "expected_query": "курс доллара в рб", "case_type": "provider_suffix"}
+{"text": "поищи как открыть порт в firewall в гугле", "expected_query": "как открыть порт в firewall", "case_type": "provider_suffix"}
+{"text": "найди рецепт сырников на сковороде через google", "expected_query": "рецепт сырников на сковороде", "case_type": "provider_suffix"}
+{"text": "search windows active window api in google", "expected_query": "windows active window api", "case_type": "provider_suffix"}
+{"text": "look up java servlet tutorial on google", "expected_query": "java servlet tutorial", "case_type": "provider_suffix"}
+{"text": "найди", "expected_query": null, "case_type": "negative_no_query"}
+{"text": "поищи", "expected_query": null, "case_type": "negative_no_query"}
+{"text": "загугли", "expected_query": null, "case_type": "negative_no_query"}
+{"text": "google", "expected_query": null, "case_type": "negative_no_query"}
+{"text": "search", "expected_query": null, "case_type": "negative_no_query"}
+{"text": "найди в интернете", "expected_query": null, "case_type": "negative_no_query"}
+{"text": "поищи в гугле", "expected_query": null, "case_type": "negative_no_query"}
+{"text": "можешь найти", "expected_query": null, "case_type": "negative_no_query"}
+{"text": "бивис поищи пожалуйста", "expected_query": null, "case_type": "negative_no_query"}
+{"text": "эй бивис загугли", "expected_query": null, "case_type": "negative_no_query"}
+{"text": "открой google", "expected_query": null, "case_type": "negative_web_open"}
+{"text": "открой github", "expected_query": null, "case_type": "negative_web_open"}
+{"text": "открой сайт google", "expected_query": null, "case_type": "negative_web_open"}
+{"text": "открой github.com/openai/codex", "expected_query": null, "case_type": "negative_web_open"}
+{"text": "запусти chrome", "expected_query": null, "case_type": "negative_web_open"}
+{"text": "запусти браузер", "expected_query": null, "case_type": "negative_web_open"}
+{"text": "закрой окно", "expected_query": null, "case_type": "negative_window"}
+{"text": "сверни окно", "expected_query": null, "case_type": "negative_window"}
+{"text": "сверни google", "expected_query": null, "case_type": "negative_window"}
+{"text": "разверни chrome", "expected_query": null, "case_type": "negative_window"}
+{"text": "сделай громче", "expected_query": null, "case_type": "negative_system"}
+{"text": "сделай тише", "expected_query": null, "case_type": "negative_system"}
+{"text": "выключи компьютер", "expected_query": null, "case_type": "negative_system"}
+{"text": "перезагрузи ноутбук", "expected_query": null, "case_type": "negative_system"}
+{"text": "введи rust ownership", "expected_query": null, "case_type": "negative_input"}
+{"text": "напиши rust ownership", "expected_query": null, "case_type": "negative_input"}
+{"text": "найди файл отчет", "expected_query": null, "case_type": "negative_local_search"}
+{"text": "найди папку документы", "expected_query": null, "case_type": "negative_local_search"}
+{"text": "найди на компьютере отчет по практике", "expected_query": null, "case_type": "negative_local_search"}
+{"text": "как дела", "expected_query": null, "case_type": "negative_chat"}
+{"text": "привет бивис", "expected_query": null, "case_type": "negative_chat"}
+{"text": "расскажи анекдот", "expected_query": null, "case_type": "negative_chat"}
+{"text": "эй бивис ну короче найди в интернете как найти и исправить баги в коде на плюсах пожалуйста", "expected_query": "как найти и исправить баги в коде на плюсах", "case_type": "super_hard"}
+{"text": "слушай можешь пж загуглить почему после npm install не находится express в node js", "expected_query": "почему после npm install не находится express в node js", "case_type": "super_hard"}
+{"text": "бивис наиди в интее как найти причину почему tomcat 10 не запускает war файл", "expected_query": "как найти причину почему tomcat 10 не запускает war файл", "case_type": "super_hard"}
+{"text": "ну ка пойщи через gogle как исправить ошибку module not found express windows", "expected_query": "как исправить ошибку module not found express windows", "case_type": "super_hard"}
+{"text": "эй ассистент погугли пожалуйста как найти активное окно через windows api c++", "expected_query": "как найти активное окно через windows api c++", "case_type": "super_hard"}
+{"text": "можешь найти в гугле почему openwakeword плохо распознает русское слово бивис", "expected_query": "почему openwakeword плохо распознает русское слово бивис", "case_type": "super_hard"}
+{"text": "поищи пожалуйста в интернете как найти leakage в machine learning dataset", "expected_query": "как найти leakage в machine learning dataset", "case_type": "super_hard"}
+{"text": "зкзгули как найти где в python проекте вызывается функция", "expected_query": "как найти где в python проекте вызывается функция", "case_type": "super_hard"}
+{"text": "найди в интернете почему модель режет запрос после предлога в", "expected_query": "почему модель режет запрос после предлога в", "case_type": "super_hard"}
+{"text": "поищи в google search как исправить query extractor для русских предлогов", "expected_query": "как исправить query extractor для русских предлогов", "case_type": "super_hard"}

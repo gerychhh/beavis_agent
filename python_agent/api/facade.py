@@ -4,6 +4,7 @@ from python_agent.api.apps import AppsApi
 from python_agent.api.commands import CommandsApi
 from python_agent.api.history import HistoryApi
 from python_agent.api.settings import SettingsApi
+from python_agent.api.sites import SitesApi
 from python_agent.api.voice import VoiceApi
 
 
@@ -17,6 +18,7 @@ class BeavisApi:
         self._commands: CommandsApi | None = None
         self._apps: AppsApi | None = None
         self._voice: VoiceApi | None = None
+        self._sites: SitesApi | None = None
         self._history: HistoryApi | None = None
         self._settings: SettingsApi | None = None
 
@@ -39,6 +41,13 @@ class BeavisApi:
         if self._voice is None:
             self._voice = VoiceApi()
         return self._voice
+
+    @property
+    def sites(self) -> SitesApi:
+        if self._sites is None:
+            self._sites = SitesApi()
+            self._sites._commands_api = self.commands
+        return self._sites
 
     @property
     def history(self) -> HistoryApi:
@@ -73,6 +82,10 @@ class BeavisApi:
                     "apps.apply_changes",
                     "apps.retrain_start",
                     "apps.retrain_status",
+                    "sites.list_user_sites",
+                    "sites.apply_changes",
+                    "sites.retrain_start",
+                    "sites.retrain_status",
                     "voice.preload",
                     "voice.listen_once",
                     "voice.test_microphone",

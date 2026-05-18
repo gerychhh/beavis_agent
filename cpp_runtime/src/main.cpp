@@ -10,6 +10,8 @@
 #include "executor/SkillRegistry.h"
 #include "skills/apps/OpenAppSkill.h"
 #include "skills/system/VolumeSetSkill.h"
+#include "skills/web/WebOpenSkill.h"
+#include "skills/web/WebSearchSkill.h"
 #include "skills/windows/WindowControlSkill.h"
 #include "skills/windows/WindowLayoutSkill.h"
 
@@ -17,6 +19,8 @@ int main() {
     SkillRegistry registry;
     registry.registerSkill(std::make_unique<OpenAppSkill>());
     registry.registerSkill(std::make_unique<VolumeSetSkill>());
+    registry.registerSkill(std::make_unique<WebOpenSkill>());
+    registry.registerSkill(std::make_unique<WebSearchSkill>());
     registry.registerSkill(std::make_unique<WindowControlSkill>());
     registry.registerSkill(std::make_unique<WindowLayoutSkill>());
 

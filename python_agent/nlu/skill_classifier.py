@@ -13,6 +13,8 @@ DEFAULT_MODEL_PATH = PROJECT_ROOT / "python_agent" / "models" / "skill_classifie
 DEFAULT_ALLOWED_SKILLS = {
     "open_app",
     "volume_set",
+    "web_open",
+    "web_search",
     "window_control",
     "window_layout",
     "unknown",
@@ -143,4 +145,3 @@ class ModelSkillClassifier:
             return self._coerce_confidence(max(probabilities))
         except Exception:
             return 0.0
-

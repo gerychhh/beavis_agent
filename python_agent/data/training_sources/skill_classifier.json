@@ -40,6 +40,33 @@
     "го {app}",
     "гоу {app}"
   ],
+  "web_direct_urls": [
+    "github.com/openai/codex",
+    "https://github.com",
+    "youtube.com",
+    "vk.com/gerychhh",
+    "stackoverflow.com/questions",
+    "docs.python.org/3",
+    "localhost:5173",
+    "127.0.0.1:8000/docs"
+  ],
+  "web_direct_url_templates": [
+    "открой {url}",
+    "открой ссылку {url}",
+    "перейди на {url}",
+    "зайди на {url}",
+    "open {url}",
+    "go to {url}",
+    "{url}"
+  ],
+  "web_site_open_templates": [
+    "открой {site}",
+    "открой сайт {site}",
+    "перейди на {site}",
+    "зайди на {site}",
+    "open {site}",
+    "go to {site}"
+  ],
   "typo_pairs": [
     [
       "открой",
@@ -455,6 +482,86 @@
     [
       "открывай",
       "open_app"
+    ],
+    [
+      "найди rust ownership",
+      "web_search"
+    ],
+    [
+      "поищи lofi на ютубе",
+      "web_search"
+    ],
+    [
+      "загугли рецепт",
+      "web_search"
+    ],
+    [
+      "найди погоду в минске",
+      "web_search"
+    ],
+    [
+      "загугли погоду в минске",
+      "web_search"
+    ],
+    [
+      "поищи погоду в минске",
+      "web_search"
+    ],
+    [
+      "найди кафе в москве",
+      "web_search"
+    ],
+    [
+      "загугли вакансии python в минске",
+      "web_search"
+    ],
+    [
+      "найди рецепт сырников на сковороде",
+      "web_search"
+    ],
+    [
+      "найди beavis agent на github",
+      "web_search"
+    ],
+    [
+      "найди rust ownership на github",
+      "web_search"
+    ],
+    [
+      "поищи lofi на ютубе",
+      "web_search"
+    ],
+    [
+      "google rust ownership",
+      "web_search"
+    ],
+    [
+      "закрой github",
+      "unknown"
+    ],
+    [
+      "открой github",
+      "web_open"
+    ],
+    [
+      "открой google",
+      "web_open"
+    ],
+    [
+      "открой yandex",
+      "web_open"
+    ],
+    [
+      "открой github.com/openai/codex",
+      "web_open"
+    ],
+    [
+      "open https://example.com/docs",
+      "web_open"
+    ],
+    [
+      "beais вскод спрва давай",
+      "window_layout"
     ]
   ],
   "window_control_action_words": [

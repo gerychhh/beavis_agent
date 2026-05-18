@@ -17,6 +17,7 @@ from python_agent.nlu.normalizer import Normalizer
 from python_agent.resolvers.app_catalog_utils import is_spoken_form
 from python_agent.resolvers.app_catalog_service import AppCatalogService
 from python_agent.resolvers.app_visibility import is_user_visible_app
+from python_agent.resolvers.site_catalog_service import SiteCatalogService
 from python_agent.training.dataset_sources import int_key_dict_from_source, list_from_source, load_training_source
 
 
@@ -24,9 +25,30 @@ DATA_DIR = ROOT / "data" / "skill_classifier"
 PROCESSED_DIR = DATA_DIR / "processed"
 EVAL_DIR = DATA_DIR / "eval"
 FEEDBACK_DIR = DATA_DIR / "feedback"
+WEB_OPEN_DATASET_PATH = ROOT / "data" / "web_open" / "processed" / "site_train.csv"
+WEB_SEARCH_DATASET_PATH = ROOT / "data" / "web_search" / "processed" / "query_train.csv"
+WEB_SEARCH_RAW_DATASET_PATH = ROOT / "data" / "web_search" / "raw" / "web_search_query_extraction_dataset.jsonl"
+WEB_OPEN_CLASSIFIER_CUES = (
+    ".",
+    "://",
+    "localhost",
+    "127.0.0.1",
+    "сайт",
+    "ссылк",
+    "страниц",
+    "браузер",
+    "вкладк",
+    "перейди",
+    "зайди",
+    "go to",
+    "website",
+    "web",
+)
 
 SKILL_VOLUME_SET = "volume_set"
 SKILL_OPEN_APP = "open_app"
+SKILL_WEB_OPEN = "web_open"
+SKILL_WEB_SEARCH = "web_search"
 SKILL_WINDOW_CONTROL = "window_control"
 SKILL_WINDOW_LAYOUT = "window_layout"
 SKILL_UNKNOWN = "unknown"
@@ -38,6 +60,33 @@ _SOURCE = load_training_source("skill_classifier.json")
 AGENT_PREFIXES = list_from_source(_SOURCE, "agent_prefixes")
 SUFFIXES = list_from_source(_SOURCE, "suffixes")
 OPEN_TEMPLATES = list_from_source(_SOURCE, "open_templates")
+WEB_DIRECT_URLS = list_from_source(_SOURCE, "web_direct_urls") or [
+    "github.com/openai/codex",
+    "https://github.com",
+    "youtube.com",
+    "vk.com/gerychhh",
+    "stackoverflow.com/questions",
+    "docs.python.org/3",
+    "localhost:5173",
+    "127.0.0.1:8000/docs",
+]
+WEB_DIRECT_URL_TEMPLATES = list_from_source(_SOURCE, "web_direct_url_templates") or [
+    "открой {url}",
+    "открой ссылку {url}",
+    "перейди на {url}",
+    "зайди на {url}",
+    "open {url}",
+    "go to {url}",
+    "{url}",
+]
+WEB_SITE_OPEN_TEMPLATES = list_from_source(_SOURCE, "web_site_open_templates") or [
+    "открой {site}",
+    "открой сайт {site}",
+    "перейди на {site}",
+    "зайди на {site}",
+    "open {site}",
+    "go to {site}",
+]
 TYPO_PAIRS = [tuple(item) for item in list_from_source(_SOURCE, "typo_pairs")]
 NUMBER_WORDS = int_key_dict_from_source(_SOURCE, "number_words")
 NUMBER_SUFFIX_TEMPLATES = list_from_source(_SOURCE, "number_suffix_templates")
@@ -144,6 +193,27 @@ def build_app_catalog(apps_catalog_path: Path | None = None) -> dict[str, list[s
     return catalog
 
 
+def build_site_catalog(sites_catalog_path: Path | None = None) -> dict[str, list[str]]:
+    service = SiteCatalogService(sites_catalog_path)
+    catalog: dict[str, list[str]] = {}
+
+    for site in service.get_enabled_sites():
+        forms = [
+            site.display_name,
+            site.site_id.replace("_", " "),
+            *site.speech_forms,
+        ]
+        cleaned = unique([
+            " ".join(str(form).strip().lower().split())
+            for form in forms
+            if is_spoken_form(str(form))
+        ])
+        if cleaned:
+            catalog[site.site_id] = cleaned
+
+    return catalog
+
+
 def generate_open_app_rows(rng, samples_per_app, app_catalog):
     rows = []
     for app_id, surface_forms in app_catalog.items():
@@ -159,6 +229,112 @@ def generate_open_app_rows(rng, samples_per_app, app_catalog):
             candidates.append(rng.choice(candidates))
         for phrase in candidates[:samples_per_app]:
             add(rows, phrase, SKILL_OPEN_APP, rng, wrap_prob=0.65)
+    return rows
+
+
+def generate_web_open_rows(rng, target_count, site_catalog):
+    rows = []
+
+    if WEB_OPEN_DATASET_PATH.exists():
+        with WEB_OPEN_DATASET_PATH.open("r", encoding="utf-8", newline="") as file:
+            reader = csv.DictReader(file)
+            for row in reader:
+                site_id = str(row.get("site_id", "unknown"))
+                text = str(row.get("text", ""))
+                if (
+                    site_id != "unknown"
+                    and text.strip()
+                    and _looks_like_classifier_web_open_text(text)
+                ):
+                    rows.append((text, SKILL_WEB_OPEN))
+
+        rows = unique_pairs(rows)
+        if len(rows) > target_count:
+            rng.shuffle(rows)
+            return rows[:target_count]
+
+    for url in WEB_DIRECT_URLS:
+        for template in WEB_DIRECT_URL_TEMPLATES:
+            add(rows, template.format(url=url), SKILL_WEB_OPEN, rng, wrap_prob=0.5)
+
+    for site_id, surface_forms in site_catalog.items():
+        for surface in surface_forms:
+            for template in WEB_SITE_OPEN_TEMPLATES:
+                add(rows, template.format(site=surface), SKILL_WEB_OPEN, rng, wrap_prob=0.55)
+
+    rows = unique_pairs(rows)
+    if len(rows) > target_count:
+        rng.shuffle(rows)
+        return rows[:target_count]
+
+    base = list(rows)
+    seen = set(rows)
+    for text, label in base:
+        for prefix in AGENT_PREFIXES:
+            for suffix in SUFFIXES:
+                candidate = (norm(f"{prefix}{text}{suffix}"), label)
+                if not candidate[0] or candidate in seen:
+                    continue
+                seen.add(candidate)
+                rows.append(candidate)
+                if len(rows) >= target_count:
+                    rng.shuffle(rows)
+                    return rows[:target_count]
+
+    return rows
+
+
+def _looks_like_classifier_web_open_text(text: str) -> bool:
+    normalized = norm(text)
+    return any(cue in normalized for cue in WEB_OPEN_CLASSIFIER_CUES)
+
+
+def generate_web_search_rows(rng, target_count):
+    rows = []
+    if WEB_SEARCH_DATASET_PATH.exists():
+        with WEB_SEARCH_DATASET_PATH.open("r", encoding="utf-8", newline="") as file:
+            reader = csv.DictReader(file)
+            for row in reader:
+                text = str(row.get("text", ""))
+                query = str(row.get("query", ""))
+                if query.strip() and text.strip():
+                    rows.append((text, SKILL_WEB_SEARCH))
+                elif text.strip():
+                    rows.append((text, SKILL_UNKNOWN))
+
+    if WEB_SEARCH_RAW_DATASET_PATH.exists():
+        with WEB_SEARCH_RAW_DATASET_PATH.open("r", encoding="utf-8") as file:
+            for line in file:
+                if not line.strip():
+                    continue
+                row = json.loads(line)
+                text = str(row.get("text", ""))
+                if not text.strip():
+                    continue
+                rows.append((
+                    text,
+                    SKILL_UNKNOWN if row.get("query") is None else SKILL_WEB_SEARCH,
+                ))
+
+    rows = unique_pairs(rows)
+    if len(rows) > target_count:
+        rng.shuffle(rows)
+        return rows[:target_count]
+
+    base = list(rows)
+    seen = set(rows)
+    for text, label in base:
+        for prefix in AGENT_PREFIXES:
+            for suffix in SUFFIXES:
+                candidate = (norm(f"{prefix}{text}{suffix}"), label)
+                if not candidate[0] or candidate in seen:
+                    continue
+                seen.add(candidate)
+                rows.append(candidate)
+                if len(rows) >= target_count:
+                    rng.shuffle(rows)
+                    return rows[:target_count]
+
     return rows
 
 
@@ -318,9 +494,46 @@ def dynamic_open_app_manual_tests(app_catalog: dict[str, list[str]]) -> list[dic
     return tests
 
 
-def build_manual_tests(app_catalog):
+def dynamic_web_open_manual_tests(site_catalog: dict[str, list[str]]) -> list[dict[str, str]]:
+    tests = [
+        {"text": "открой github", "expected_skill": SKILL_WEB_OPEN},
+        {"text": "перейди на ютуб", "expected_skill": SKILL_WEB_OPEN},
+        {"text": "открой github.com/openai/codex", "expected_skill": SKILL_WEB_OPEN},
+        {"text": "open https://example.com/docs", "expected_skill": SKILL_WEB_OPEN},
+        {"text": "найди rust ownership", "expected_skill": SKILL_WEB_SEARCH},
+        {"text": "поищи lofi на ютубе", "expected_skill": SKILL_WEB_SEARCH},
+        {"text": "загугли рецепт", "expected_skill": SKILL_WEB_SEARCH},
+    ]
+
+    for site_id, forms in sorted(site_catalog.items()):
+        surface = forms[0] if forms else site_id
+        tests.append({"text": norm(f"открой сайт {surface}"), "expected_skill": SKILL_WEB_OPEN})
+
+    return tests
+
+
+def dynamic_web_search_manual_tests() -> list[dict[str, str]]:
+    return [
+        {"text": "найди rust ownership", "expected_skill": SKILL_WEB_SEARCH},
+        {"text": "загугли рецепт сырников", "expected_skill": SKILL_WEB_SEARCH},
+        {"text": "google tauri build windows", "expected_skill": SKILL_WEB_SEARCH},
+        {"text": "что такое docker compose", "expected_skill": SKILL_WEB_SEARCH},
+        {"text": "найди погоду в минске", "expected_skill": SKILL_WEB_SEARCH},
+        {"text": "загугли погоду в минске", "expected_skill": SKILL_WEB_SEARCH},
+        {"text": "поищи погоду в минске", "expected_skill": SKILL_WEB_SEARCH},
+        {"text": "найди кафе в москве", "expected_skill": SKILL_WEB_SEARCH},
+        {"text": "загугли вакансии python в минске", "expected_skill": SKILL_WEB_SEARCH},
+        {"text": "найди рецепт сырников на сковороде", "expected_skill": SKILL_WEB_SEARCH},
+        {"text": "открой google", "expected_skill": SKILL_WEB_OPEN},
+        {"text": "открой github", "expected_skill": SKILL_WEB_OPEN},
+    ]
+
+
+def build_manual_tests(app_catalog, site_catalog):
     tests = manual_tests(app_catalog)
     tests.extend(dynamic_open_app_manual_tests(app_catalog))
+    tests.extend(dynamic_web_open_manual_tests(site_catalog))
+    tests.extend(dynamic_web_search_manual_tests())
 
     window_layout_tests = ROOT / "data" / "window_layout" / "eval" / "manual_tests.jsonl"
     if window_layout_tests.exists():
@@ -356,9 +569,11 @@ def normalize_and_resolve(rows):
     rows_by_text: dict[str, list[tuple[str, str]]] = {}
 
     priority = {
-        SKILL_VOLUME_SET: 6,
-        SKILL_WINDOW_CONTROL: 5,
-        SKILL_WINDOW_LAYOUT: 4,
+        SKILL_VOLUME_SET: 7,
+        SKILL_WINDOW_CONTROL: 6,
+        SKILL_WINDOW_LAYOUT: 5,
+        SKILL_WEB_OPEN: 4,
+        SKILL_WEB_SEARCH: 4,
         SKILL_OPEN_APP: 3,
         SKILL_UNKNOWN: 1,
     }
@@ -407,7 +622,10 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--output-dir", type=Path, default=DATA_DIR)
     parser.add_argument("--apps-catalog-path", type=Path, default=None)
+    parser.add_argument("--sites-catalog-path", type=Path, default=None)
     parser.add_argument("--samples-per-open-app", type=int, default=380)
+    parser.add_argument("--web-open-samples", type=int, default=12000)
+    parser.add_argument("--web-search-samples", type=int, default=12000)
     parser.add_argument("--volume-samples", type=int, default=14000)
     parser.add_argument("--window-control-samples", type=int, default=14000)
     parser.add_argument("--window-layout-samples", type=int, default=14000)
@@ -417,9 +635,12 @@ def main():
 
     rng = random.Random(args.seed)
     app_catalog = build_app_catalog(args.apps_catalog_path)
+    site_catalog = build_site_catalog(args.sites_catalog_path)
 
     rows = []
     rows.extend(generate_open_app_rows(rng, args.samples_per_open_app, app_catalog))
+    rows.extend(generate_web_open_rows(rng, args.web_open_samples, site_catalog))
+    rows.extend(generate_web_search_rows(rng, args.web_search_samples))
     rows.extend(generate_volume_rows(rng, args.volume_samples))
     rows.extend(generate_window_control_rows(rng, args.window_control_samples))
     rows.extend(generate_window_layout_rows(rng, args.window_layout_samples))
@@ -429,7 +650,7 @@ def main():
         if label == SKILL_OPEN_APP:
             if not any(surface in norm(text) for forms in app_catalog.values() for surface in forms):
                 continue
-        repeat = 36 if label == SKILL_VOLUME_SET else 12
+        repeat = 36 if label == SKILL_VOLUME_SET else 48 if label in {SKILL_WEB_OPEN, SKILL_WEB_SEARCH} else 12
         for _ in range(repeat):
             add(rows, text, label, rng, wrap_prob=0.6)
 
@@ -441,7 +662,7 @@ def main():
     feedback_dir = args.output_dir / "feedback"
 
     write_csv(processed_dir / "skill_train.csv", rows)
-    write_jsonl(eval_dir / "manual_tests.jsonl", build_manual_tests(app_catalog))
+    write_jsonl(eval_dir / "manual_tests.jsonl", build_manual_tests(app_catalog, site_catalog))
 
     corrections_path = feedback_dir / "corrections.jsonl"
     corrections_path.parent.mkdir(parents=True, exist_ok=True)
@@ -453,6 +674,7 @@ def main():
         "rows": len(rows),
         "label_counts": dict(Counter(label for _text, label in rows)),
         "enabled_app_ids": sorted(app_catalog),
+        "enabled_site_ids": sorted(site_catalog),
     }
     (processed_dir / "dataset_stats.json").write_text(
         json.dumps(stats, ensure_ascii=False, indent=2),

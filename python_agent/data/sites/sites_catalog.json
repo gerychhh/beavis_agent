@@ -1,0 +1,2544 @@
+{
+  "schema_version": 1,
+  "sites": [
+    {
+      "site_id": "airbnb",
+      "display_name": "Airbnb",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.airbnb.com",
+      "speech_forms": [
+        "airbnb",
+        "air bnb",
+        "эйрбнб",
+        "аирбнб"
+      ],
+      "priority": 215
+    },
+    {
+      "site_id": "aliexpress",
+      "display_name": "AliExpress",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.aliexpress.com",
+      "speech_forms": [
+        "aliexpress",
+        "алиэкспресс",
+        "али экспресс"
+      ],
+      "priority": 240
+    },
+    {
+      "site_id": "amazon",
+      "display_name": "Amazon",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.amazon.com",
+      "speech_forms": [
+        "amazon",
+        "амазон"
+      ],
+      "priority": 260
+    },
+    {
+      "site_id": "anaconda",
+      "display_name": "Anaconda",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.anaconda.com",
+      "speech_forms": [
+        "anaconda",
+        "анаконда"
+      ],
+      "priority": 180
+    },
+    {
+      "site_id": "apnews",
+      "display_name": "AP News",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://apnews.com",
+      "speech_forms": [
+        "ap news",
+        "apnews",
+        "associated press",
+        "ап ньюс"
+      ],
+      "priority": 180
+    },
+    {
+      "site_id": "apple_music",
+      "display_name": "Apple Music",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://music.apple.com",
+      "speech_forms": [
+        "apple music",
+        "эпл музыка",
+        "эпл мьюзик"
+      ],
+      "priority": 220
+    },
+    {
+      "site_id": "archive_org",
+      "display_name": "Internet Archive",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://archive.org",
+      "speech_forms": [
+        "internet archive",
+        "archive org",
+        "архив орг",
+        "интернет архив"
+      ],
+      "priority": 200
+    },
+    {
+      "site_id": "arxiv",
+      "display_name": "arXiv",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://arxiv.org",
+      "speech_forms": [
+        "arxiv",
+        "архив",
+        "арксив"
+      ],
+      "priority": 210
+    },
+    {
+      "site_id": "asana",
+      "display_name": "Asana",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://asana.com",
+      "speech_forms": [
+        "asana",
+        "асана"
+      ],
+      "priority": 175
+    },
+    {
+      "site_id": "askubuntu",
+      "display_name": "Ask Ubuntu",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://askubuntu.com",
+      "speech_forms": [
+        "ask ubuntu",
+        "askubuntu",
+        "аск убунту",
+        "убунту вопросы"
+      ],
+      "priority": 175
+    },
+    {
+      "site_id": "aviasales",
+      "display_name": "Aviasales",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.aviasales.ru",
+      "speech_forms": [
+        "aviasales",
+        "авиасейлс",
+        "авиасэйлс"
+      ],
+      "priority": 200
+    },
+    {
+      "site_id": "avito",
+      "display_name": "Авито",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.avito.ru",
+      "speech_forms": [
+        "авито",
+        "avito"
+      ],
+      "priority": 245
+    },
+    {
+      "site_id": "baidu",
+      "display_name": "Baidu",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.baidu.com",
+      "speech_forms": [
+        "baidu",
+        "байду"
+      ],
+      "priority": 150
+    },
+    {
+      "site_id": "bandcamp",
+      "display_name": "Bandcamp",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://bandcamp.com",
+      "speech_forms": [
+        "bandcamp",
+        "band camp",
+        "бэндкамп"
+      ],
+      "priority": 160
+    },
+    {
+      "site_id": "battle_net",
+      "display_name": "Battle.net",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.blizzard.com",
+      "speech_forms": [
+        "battle.net",
+        "battle net",
+        "батл нет",
+        "близзард"
+      ],
+      "priority": 190
+    },
+    {
+      "site_id": "bbc",
+      "display_name": "BBC",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.bbc.com",
+      "speech_forms": [
+        "bbc",
+        "би би си",
+        "ббс"
+      ],
+      "priority": 210
+    },
+    {
+      "site_id": "binance",
+      "display_name": "Binance",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.binance.com",
+      "speech_forms": [
+        "binance",
+        "бинанс"
+      ],
+      "priority": 230
+    },
+    {
+      "site_id": "bing",
+      "display_name": "Bing",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.bing.com",
+      "speech_forms": [
+        "bing",
+        "бинг"
+      ],
+      "priority": 190
+    },
+    {
+      "site_id": "bitbucket",
+      "display_name": "Bitbucket",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://bitbucket.org",
+      "speech_forms": [
+        "bitbucket",
+        "битбакет",
+        "бит бакет"
+      ],
+      "priority": 185
+    },
+    {
+      "site_id": "bloomberg",
+      "display_name": "Bloomberg",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.bloomberg.com",
+      "speech_forms": [
+        "bloomberg",
+        "блумберг"
+      ],
+      "priority": 195
+    },
+    {
+      "site_id": "booking",
+      "display_name": "Booking.com",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.booking.com",
+      "speech_forms": [
+        "booking.com",
+        "booking",
+        "booking com",
+        "букинг"
+      ],
+      "priority": 230
+    },
+    {
+      "site_id": "brave_search",
+      "display_name": "Brave Search",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://search.brave.com",
+      "speech_forms": [
+        "brave search",
+        "brave",
+        "брейв",
+        "брейв поиск"
+      ],
+      "priority": 170
+    },
+    {
+      "site_id": "canva",
+      "display_name": "Canva",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.canva.com",
+      "speech_forms": [
+        "canva",
+        "канва"
+      ],
+      "priority": 230
+    },
+    {
+      "site_id": "chatgpt",
+      "display_name": "ChatGPT",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://chatgpt.com",
+      "speech_forms": [
+        "chatgpt",
+        "chat gpt",
+        "чатгпт",
+        "чат джипити",
+        "чат гпт"
+      ],
+      "priority": 320
+    },
+    {
+      "site_id": "claude",
+      "display_name": "Claude",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://claude.ai",
+      "speech_forms": [
+        "claude",
+        "клод",
+        "клауд"
+      ],
+      "priority": 290
+    },
+    {
+      "site_id": "cloudflare",
+      "display_name": "Cloudflare",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.cloudflare.com",
+      "speech_forms": [
+        "cloudflare",
+        "cloud flare",
+        "клаудфлер",
+        "клауд флэр"
+      ],
+      "priority": 205
+    },
+    {
+      "site_id": "cnn",
+      "display_name": "CNN",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.cnn.com",
+      "speech_forms": [
+        "cnn",
+        "си эн эн",
+        "цнн"
+      ],
+      "priority": 200
+    },
+    {
+      "site_id": "codeforces",
+      "display_name": "Codeforces",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://codeforces.com",
+      "speech_forms": [
+        "codeforces",
+        "code forces",
+        "кодфорсес",
+        "код форсес"
+      ],
+      "priority": 210
+    },
+    {
+      "site_id": "codepen",
+      "display_name": "CodePen",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://codepen.io",
+      "speech_forms": [
+        "codepen",
+        "code pen",
+        "кодпен",
+        "код пен"
+      ],
+      "priority": 185
+    },
+    {
+      "site_id": "codewars",
+      "display_name": "Codewars",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.codewars.com",
+      "speech_forms": [
+        "codewars",
+        "code wars",
+        "кодварс",
+        "код варс"
+      ],
+      "priority": 175
+    },
+    {
+      "site_id": "coinbase",
+      "display_name": "Coinbase",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.coinbase.com",
+      "speech_forms": [
+        "coinbase",
+        "coin base",
+        "коинбейс",
+        "койнбейс"
+      ],
+      "priority": 200
+    },
+    {
+      "site_id": "confluence",
+      "display_name": "Confluence",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.atlassian.com/software/confluence",
+      "speech_forms": [
+        "confluence",
+        "конфлюенс",
+        "конфлюенс вики"
+      ],
+      "priority": 170
+    },
+    {
+      "site_id": "copilot",
+      "display_name": "Microsoft Copilot",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://copilot.microsoft.com",
+      "speech_forms": [
+        "microsoft copilot",
+        "copilot",
+        "копайлот",
+        "майкрософт копайлот"
+      ],
+      "priority": 265
+    },
+    {
+      "site_id": "coursera",
+      "display_name": "Coursera",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.coursera.org",
+      "speech_forms": [
+        "coursera",
+        "курсера"
+      ],
+      "priority": 210
+    },
+    {
+      "site_id": "deepl",
+      "display_name": "DeepL",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.deepl.com",
+      "speech_forms": [
+        "deepl",
+        "deep l",
+        "дипл",
+        "дип эл"
+      ],
+      "priority": 220
+    },
+    {
+      "site_id": "deepseek",
+      "display_name": "DeepSeek",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://chat.deepseek.com",
+      "speech_forms": [
+        "deepseek",
+        "deep seek",
+        "дипсик",
+        "дип сик"
+      ],
+      "priority": 260
+    },
+    {
+      "site_id": "deezer",
+      "display_name": "Deezer",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.deezer.com",
+      "speech_forms": [
+        "deezer",
+        "дизер"
+      ],
+      "priority": 170
+    },
+    {
+      "site_id": "desmos",
+      "display_name": "Desmos",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.desmos.com",
+      "speech_forms": [
+        "desmos",
+        "десмос"
+      ],
+      "priority": 190
+    },
+    {
+      "site_id": "devby",
+      "display_name": "dev.by",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://dev.by",
+      "speech_forms": [
+        "dev.by",
+        "devby",
+        "dev by",
+        "дев бай",
+        "дев точка бай"
+      ],
+      "priority": 160
+    },
+    {
+      "site_id": "discord",
+      "display_name": "Discord",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://discord.com",
+      "speech_forms": [
+        "discord",
+        "дискорд"
+      ],
+      "priority": 260
+    },
+    {
+      "site_id": "disney_plus",
+      "display_name": "Disney+",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.disneyplus.com",
+      "speech_forms": [
+        "disney+",
+        "disney plus",
+        "дисней плюс"
+      ],
+      "priority": 210
+    },
+    {
+      "site_id": "docker_hub",
+      "display_name": "Docker Hub",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://hub.docker.com",
+      "speech_forms": [
+        "docker hub",
+        "docker",
+        "докер хаб",
+        "докер"
+      ],
+      "priority": 230
+    },
+    {
+      "site_id": "dropbox",
+      "display_name": "Dropbox",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.dropbox.com",
+      "speech_forms": [
+        "dropbox",
+        "дропбокс"
+      ],
+      "priority": 220
+    },
+    {
+      "site_id": "duckduckgo",
+      "display_name": "DuckDuckGo",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://duckduckgo.com",
+      "speech_forms": [
+        "duckduckgo",
+        "duck duck go",
+        "дакдакго",
+        "дак дак го"
+      ],
+      "priority": 185
+    },
+    {
+      "site_id": "duolingo",
+      "display_name": "Duolingo",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.duolingo.com",
+      "speech_forms": [
+        "duolingo",
+        "дуолинго"
+      ],
+      "priority": 205
+    },
+    {
+      "site_id": "dzen",
+      "display_name": "Дзен",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://dzen.ru",
+      "speech_forms": [
+        "дзен",
+        "dzen",
+        "яндекс дзен"
+      ],
+      "priority": 190
+    },
+    {
+      "site_id": "ebay",
+      "display_name": "eBay",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.ebay.com",
+      "speech_forms": [
+        "ebay",
+        "и бей",
+        "ибей"
+      ],
+      "priority": 225
+    },
+    {
+      "site_id": "edx",
+      "display_name": "edX",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.edx.org",
+      "speech_forms": [
+        "edx",
+        "ed x",
+        "ед икс"
+      ],
+      "priority": 180
+    },
+    {
+      "site_id": "epic_games",
+      "display_name": "Epic Games",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://store.epicgames.com",
+      "speech_forms": [
+        "epic games",
+        "epic",
+        "эпик геймс",
+        "эпик"
+      ],
+      "priority": 230
+    },
+    {
+      "site_id": "etsy",
+      "display_name": "Etsy",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.etsy.com",
+      "speech_forms": [
+        "etsy",
+        "этси",
+        "етси"
+      ],
+      "priority": 190
+    },
+    {
+      "site_id": "facebook",
+      "display_name": "Facebook",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.facebook.com",
+      "speech_forms": [
+        "facebook",
+        "фейсбук",
+        "фэйсбук"
+      ],
+      "priority": 255
+    },
+    {
+      "site_id": "fandom",
+      "display_name": "Fandom",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.fandom.com",
+      "speech_forms": [
+        "fandom",
+        "фандом"
+      ],
+      "priority": 175
+    },
+    {
+      "site_id": "figma",
+      "display_name": "Figma",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.figma.com",
+      "speech_forms": [
+        "figma",
+        "фигма"
+      ],
+      "priority": 240
+    },
+    {
+      "site_id": "flightradar24",
+      "display_name": "Flightradar24",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.flightradar24.com",
+      "speech_forms": [
+        "flightradar24",
+        "flight radar",
+        "флайтрадар",
+        "флайт радар"
+      ],
+      "priority": 175
+    },
+    {
+      "site_id": "gemini",
+      "display_name": "Gemini",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://gemini.google.com",
+      "speech_forms": [
+        "gemini",
+        "джемини",
+        "гемини",
+        "google gemini"
+      ],
+      "priority": 285
+    },
+    {
+      "site_id": "geogebra",
+      "display_name": "GeoGebra",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.geogebra.org",
+      "speech_forms": [
+        "geogebra",
+        "geo gebra",
+        "геогебра"
+      ],
+      "priority": 180
+    },
+    {
+      "site_id": "github",
+      "display_name": "GitHub",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://github.com",
+      "speech_forms": [
+        "github",
+        "git hub",
+        "гитхаб",
+        "гит хаб"
+      ],
+      "priority": 300
+    },
+    {
+      "site_id": "gitlab",
+      "display_name": "GitLab",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://gitlab.com",
+      "speech_forms": [
+        "gitlab",
+        "git lab",
+        "гитлаб",
+        "гит лаб"
+      ],
+      "priority": 235
+    },
+    {
+      "site_id": "gmail",
+      "display_name": "Gmail",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://mail.google.com",
+      "speech_forms": [
+        "gmail",
+        "g mail",
+        "джимейл",
+        "гмейл",
+        "гугл почта"
+      ],
+      "priority": 275
+    },
+    {
+      "site_id": "gog",
+      "display_name": "GOG",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.gog.com",
+      "speech_forms": [
+        "gog",
+        "гог"
+      ],
+      "priority": 175
+    },
+    {
+      "site_id": "google",
+      "display_name": "Google",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.google.com",
+      "speech_forms": [
+        "google",
+        "гугл"
+      ],
+      "priority": 100
+    },
+    {
+      "site_id": "google_colab",
+      "display_name": "Google Colab",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://colab.research.google.com",
+      "speech_forms": [
+        "google colab",
+        "colab",
+        "гугл колаб",
+        "колаб"
+      ],
+      "priority": 230
+    },
+    {
+      "site_id": "google_drive",
+      "display_name": "Google Drive",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://drive.google.com",
+      "speech_forms": [
+        "google drive",
+        "drive",
+        "гугл диск",
+        "драйв"
+      ],
+      "priority": 265
+    },
+    {
+      "site_id": "google_maps",
+      "display_name": "Google Maps",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://maps.google.com",
+      "speech_forms": [
+        "google maps",
+        "maps",
+        "гугл карты",
+        "карты гугл"
+      ],
+      "priority": 255
+    },
+    {
+      "site_id": "google_meet",
+      "display_name": "Google Meet",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://meet.google.com",
+      "speech_forms": [
+        "google meet",
+        "meet",
+        "гугл мит",
+        "мит"
+      ],
+      "priority": 220
+    },
+    {
+      "site_id": "grammarly",
+      "display_name": "Grammarly",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.grammarly.com",
+      "speech_forms": [
+        "grammarly",
+        "граммарли"
+      ],
+      "priority": 175
+    },
+    {
+      "site_id": "guardian",
+      "display_name": "The Guardian",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.theguardian.com",
+      "speech_forms": [
+        "the guardian",
+        "guardian",
+        "гардиан"
+      ],
+      "priority": 190
+    },
+    {
+      "site_id": "habr",
+      "display_name": "Хабр",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://habr.com",
+      "speech_forms": [
+        "хабр",
+        "habr",
+        "хабрахабр"
+      ],
+      "priority": 245
+    },
+    {
+      "site_id": "hackerrank",
+      "display_name": "HackerRank",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.hackerrank.com",
+      "speech_forms": [
+        "hackerrank",
+        "hacker rank",
+        "хакерранк",
+        "хакер ранк"
+      ],
+      "priority": 185
+    },
+    {
+      "site_id": "huggingface",
+      "display_name": "Hugging Face",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://huggingface.co",
+      "speech_forms": [
+        "hugging face",
+        "huggingface",
+        "хаггинг фейс",
+        "хагинг фейс"
+      ],
+      "priority": 270
+    },
+    {
+      "site_id": "hulu",
+      "display_name": "Hulu",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.hulu.com",
+      "speech_forms": [
+        "hulu",
+        "хулу"
+      ],
+      "priority": 175
+    },
+    {
+      "site_id": "icloud",
+      "display_name": "iCloud",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.icloud.com",
+      "speech_forms": [
+        "icloud",
+        "айклауд",
+        "i cloud"
+      ],
+      "priority": 210
+    },
+    {
+      "site_id": "ikea",
+      "display_name": "IKEA",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.ikea.com",
+      "speech_forms": [
+        "ikea",
+        "икеа"
+      ],
+      "priority": 190
+    },
+    {
+      "site_id": "imdb",
+      "display_name": "IMDb",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.imdb.com",
+      "speech_forms": [
+        "imdb",
+        "ай эм ди би",
+        "имдб"
+      ],
+      "priority": 220
+    },
+    {
+      "site_id": "instagram",
+      "display_name": "Instagram",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.instagram.com",
+      "speech_forms": [
+        "instagram",
+        "insta",
+        "инстаграм",
+        "инста"
+      ],
+      "priority": 265
+    },
+    {
+      "site_id": "investing",
+      "display_name": "Investing.com",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.investing.com",
+      "speech_forms": [
+        "investing.com",
+        "investing",
+        "investing com",
+        "инвестинг"
+      ],
+      "priority": 200
+    },
+    {
+      "site_id": "itch",
+      "display_name": "itch.io",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://itch.io",
+      "speech_forms": [
+        "itch.io",
+        "itch",
+        "itch io",
+        "итч",
+        "итч ио"
+      ],
+      "priority": 170
+    },
+    {
+      "site_id": "ivi",
+      "display_name": "Иви",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.ivi.ru",
+      "speech_forms": [
+        "иви",
+        "ivi"
+      ],
+      "priority": 190
+    },
+    {
+      "site_id": "jira",
+      "display_name": "Jira",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.atlassian.com/software/jira",
+      "speech_forms": [
+        "jira",
+        "джира",
+        "жира"
+      ],
+      "priority": 210
+    },
+    {
+      "site_id": "jsfiddle",
+      "display_name": "JSFiddle",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://jsfiddle.net",
+      "speech_forms": [
+        "jsfiddle",
+        "js fiddle",
+        "джей эс фиддл"
+      ],
+      "priority": 165
+    },
+    {
+      "site_id": "kaggle",
+      "display_name": "Kaggle",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.kaggle.com",
+      "speech_forms": [
+        "kaggle",
+        "кагл",
+        "кэгл"
+      ],
+      "priority": 235
+    },
+    {
+      "site_id": "khanacademy",
+      "display_name": "Khan Academy",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.khanacademy.org",
+      "speech_forms": [
+        "khan academy",
+        "khanacademy",
+        "хан академи",
+        "академия хана"
+      ],
+      "priority": 195
+    },
+    {
+      "site_id": "kinopoisk",
+      "display_name": "Кинопоиск",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.kinopoisk.ru",
+      "speech_forms": [
+        "кинопоиск",
+        "kinopoisk"
+      ],
+      "priority": 235
+    },
+    {
+      "site_id": "kommersant",
+      "display_name": "Коммерсантъ",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.kommersant.ru",
+      "speech_forms": [
+        "коммерсантъ",
+        "kommersant",
+        "коммерсант"
+      ],
+      "priority": 175
+    },
+    {
+      "site_id": "lamoda",
+      "display_name": "Lamoda",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.lamoda.ru",
+      "speech_forms": [
+        "lamoda",
+        "ламода"
+      ],
+      "priority": 185
+    },
+    {
+      "site_id": "leetcode",
+      "display_name": "LeetCode",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://leetcode.com",
+      "speech_forms": [
+        "leetcode",
+        "leet code",
+        "литкод",
+        "лит код"
+      ],
+      "priority": 220
+    },
+    {
+      "site_id": "lenta",
+      "display_name": "Лента.ру",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://lenta.ru",
+      "speech_forms": [
+        "лента.ру",
+        "lenta",
+        "лента",
+        "лента ру"
+      ],
+      "priority": 185
+    },
+    {
+      "site_id": "letterboxd",
+      "display_name": "Letterboxd",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://letterboxd.com",
+      "speech_forms": [
+        "letterboxd",
+        "леттербоксд"
+      ],
+      "priority": 165
+    },
+    {
+      "site_id": "linkedin",
+      "display_name": "LinkedIn",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.linkedin.com",
+      "speech_forms": [
+        "linkedin",
+        "linked in",
+        "линкедин",
+        "линкед ин"
+      ],
+      "priority": 250
+    },
+    {
+      "site_id": "mail_ru",
+      "display_name": "Mail.ru",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://mail.ru",
+      "speech_forms": [
+        "mail.ru",
+        "mail ru",
+        "мейл ру",
+        "майл ру",
+        "почта майл"
+      ],
+      "priority": 210
+    },
+    {
+      "site_id": "mastodon",
+      "display_name": "Mastodon",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://mastodon.social",
+      "speech_forms": [
+        "mastodon",
+        "мастодон"
+      ],
+      "priority": 150
+    },
+    {
+      "site_id": "max",
+      "display_name": "Max",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.max.com",
+      "speech_forms": [
+        "max",
+        "hbo max",
+        "макс",
+        "эйч би о макс"
+      ],
+      "priority": 180
+    },
+    {
+      "site_id": "mdn",
+      "display_name": "MDN Web Docs",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://developer.mozilla.org",
+      "speech_forms": [
+        "mdn web docs",
+        "mdn",
+        "мдн",
+        "доки мозилла"
+      ],
+      "priority": 235
+    },
+    {
+      "site_id": "medium",
+      "display_name": "Medium",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://medium.com",
+      "speech_forms": [
+        "medium",
+        "медиум"
+      ],
+      "priority": 210
+    },
+    {
+      "site_id": "meduza",
+      "display_name": "Meduza",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://meduza.io",
+      "speech_forms": [
+        "meduza",
+        "медуза"
+      ],
+      "priority": 165
+    },
+    {
+      "site_id": "mega",
+      "display_name": "MEGA",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://mega.nz",
+      "speech_forms": [
+        "mega",
+        "мега",
+        "mega nz"
+      ],
+      "priority": 190
+    },
+    {
+      "site_id": "microsoft_learn",
+      "display_name": "Microsoft Learn",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://learn.microsoft.com",
+      "speech_forms": [
+        "microsoft learn",
+        "learn microsoft",
+        "майкрософт лерн",
+        "доки майкрософт"
+      ],
+      "priority": 205
+    },
+    {
+      "site_id": "microsoft_teams",
+      "display_name": "Microsoft Teams",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://teams.microsoft.com",
+      "speech_forms": [
+        "microsoft teams",
+        "teams",
+        "тимс",
+        "майкрософт тимс"
+      ],
+      "priority": 225
+    },
+    {
+      "site_id": "minecraft",
+      "display_name": "Minecraft",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.minecraft.net",
+      "speech_forms": [
+        "minecraft",
+        "майнкрафт"
+      ],
+      "priority": 220
+    },
+    {
+      "site_id": "miro",
+      "display_name": "Miro",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://miro.com",
+      "speech_forms": [
+        "miro",
+        "миро"
+      ],
+      "priority": 210
+    },
+    {
+      "site_id": "moddb",
+      "display_name": "Mod DB",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.moddb.com",
+      "speech_forms": [
+        "mod db",
+        "moddb",
+        "мод дб"
+      ],
+      "priority": 155
+    },
+    {
+      "site_id": "naver",
+      "display_name": "Naver",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.naver.com",
+      "speech_forms": [
+        "naver",
+        "нейвер"
+      ],
+      "priority": 145
+    },
+    {
+      "site_id": "netflix",
+      "display_name": "Netflix",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.netflix.com",
+      "speech_forms": [
+        "netflix",
+        "нетфликс"
+      ],
+      "priority": 240
+    },
+    {
+      "site_id": "netology",
+      "display_name": "Нетология",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://netology.ru",
+      "speech_forms": [
+        "нетология",
+        "netology"
+      ],
+      "priority": 145
+    },
+    {
+      "site_id": "nexusmods",
+      "display_name": "Nexus Mods",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.nexusmods.com",
+      "speech_forms": [
+        "nexus mods",
+        "nexusmods",
+        "нексус модс"
+      ],
+      "priority": 190
+    },
+    {
+      "site_id": "nintendo",
+      "display_name": "Nintendo",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.nintendo.com",
+      "speech_forms": [
+        "nintendo",
+        "нинтендо"
+      ],
+      "priority": 185
+    },
+    {
+      "site_id": "notion",
+      "display_name": "Notion",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.notion.so",
+      "speech_forms": [
+        "notion",
+        "ноушен",
+        "ноушн"
+      ],
+      "priority": 245
+    },
+    {
+      "site_id": "nplus1",
+      "display_name": "N+1",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://nplus1.ru",
+      "speech_forms": [
+        "n+1",
+        "nplus1",
+        "n plus one",
+        "n plus 1",
+        "эн плюс один",
+        "н плюс один"
+      ],
+      "priority": 175
+    },
+    {
+      "site_id": "npm",
+      "display_name": "npm",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.npmjs.com",
+      "speech_forms": [
+        "npm",
+        "нпм",
+        "эн пи эм"
+      ],
+      "priority": 220
+    },
+    {
+      "site_id": "nytimes",
+      "display_name": "The New York Times",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.nytimes.com",
+      "speech_forms": [
+        "the new york times",
+        "nytimes",
+        "new york times",
+        "нью йорк таймс"
+      ],
+      "priority": 190
+    },
+    {
+      "site_id": "ok",
+      "display_name": "Одноклассники",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://ok.ru",
+      "speech_forms": [
+        "одноклассники",
+        "ok",
+        "оки"
+      ],
+      "priority": 210
+    },
+    {
+      "site_id": "onedrive",
+      "display_name": "OneDrive",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://onedrive.live.com",
+      "speech_forms": [
+        "onedrive",
+        "one drive",
+        "ван драйв",
+        "уандрайв"
+      ],
+      "priority": 215
+    },
+    {
+      "site_id": "onliner",
+      "display_name": "Onlíner",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.onliner.by",
+      "speech_forms": [
+        "onlíner",
+        "onliner",
+        "онлайнер"
+      ],
+      "priority": 195
+    },
+    {
+      "site_id": "openai",
+      "display_name": "OpenAI",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://openai.com",
+      "speech_forms": [
+        "openai",
+        "open ai",
+        "оупен аи",
+        "опен аи"
+      ],
+      "priority": 300
+    },
+    {
+      "site_id": "openstreetmap",
+      "display_name": "OpenStreetMap",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.openstreetmap.org",
+      "speech_forms": [
+        "openstreetmap",
+        "open street map",
+        "опенстритмап",
+        "открытая карта"
+      ],
+      "priority": 170
+    },
+    {
+      "site_id": "oracle_docs",
+      "display_name": "Oracle Docs",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://docs.oracle.com",
+      "speech_forms": [
+        "oracle docs",
+        "oracle documentation",
+        "доки оракл",
+        "документация оракл"
+      ],
+      "priority": 155
+    },
+    {
+      "site_id": "outlook",
+      "display_name": "Outlook",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://outlook.live.com",
+      "speech_forms": [
+        "outlook",
+        "аутлук",
+        "майкрософт почта"
+      ],
+      "priority": 245
+    },
+    {
+      "site_id": "overleaf",
+      "display_name": "Overleaf",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.overleaf.com",
+      "speech_forms": [
+        "overleaf",
+        "оверлиф",
+        "овер лиф"
+      ],
+      "priority": 180
+    },
+    {
+      "site_id": "ozon",
+      "display_name": "Ozon",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.ozon.ru",
+      "speech_forms": [
+        "ozon",
+        "озон"
+      ],
+      "priority": 245
+    },
+    {
+      "site_id": "paperswithcode",
+      "display_name": "Papers with Code",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://paperswithcode.com",
+      "speech_forms": [
+        "papers with code",
+        "paperswithcode",
+        "пейперс виз код"
+      ],
+      "priority": 205
+    },
+    {
+      "site_id": "paypal",
+      "display_name": "PayPal",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.paypal.com",
+      "speech_forms": [
+        "paypal",
+        "pay pal",
+        "пейпал",
+        "пэйпал"
+      ],
+      "priority": 225
+    },
+    {
+      "site_id": "perplexity",
+      "display_name": "Perplexity",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.perplexity.ai",
+      "speech_forms": [
+        "perplexity",
+        "перплексити",
+        "перплексити аи"
+      ],
+      "priority": 280
+    },
+    {
+      "site_id": "pikabu",
+      "display_name": "Пикабу",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://pikabu.ru",
+      "speech_forms": [
+        "пикабу",
+        "pikabu"
+      ],
+      "priority": 200
+    },
+    {
+      "site_id": "pinterest",
+      "display_name": "Pinterest",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.pinterest.com",
+      "speech_forms": [
+        "pinterest",
+        "пинтерест"
+      ],
+      "priority": 230
+    },
+    {
+      "site_id": "playstation",
+      "display_name": "PlayStation",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.playstation.com",
+      "speech_forms": [
+        "playstation",
+        "play station",
+        "плейстейшен",
+        "плейстейшн"
+      ],
+      "priority": 195
+    },
+    {
+      "site_id": "poe",
+      "display_name": "Poe",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://poe.com",
+      "speech_forms": [
+        "poe",
+        "по",
+        "по ком"
+      ],
+      "priority": 210
+    },
+    {
+      "site_id": "prime_video",
+      "display_name": "Prime Video",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.primevideo.com",
+      "speech_forms": [
+        "prime video",
+        "amazon prime video",
+        "прайм видео"
+      ],
+      "priority": 210
+    },
+    {
+      "site_id": "proton_mail",
+      "display_name": "Proton Mail",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://mail.proton.me",
+      "speech_forms": [
+        "proton mail",
+        "proton",
+        "протон мейл",
+        "протон почта"
+      ],
+      "priority": 190
+    },
+    {
+      "site_id": "pypi",
+      "display_name": "PyPI",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://pypi.org",
+      "speech_forms": [
+        "pypi",
+        "пайпи",
+        "пи вай пи ай"
+      ],
+      "priority": 215
+    },
+    {
+      "site_id": "python_docs",
+      "display_name": "Python Docs",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://docs.python.org",
+      "speech_forms": [
+        "python docs",
+        "python documentation",
+        "доки питон",
+        "документация питон"
+      ],
+      "priority": 220
+    },
+    {
+      "site_id": "qwant",
+      "display_name": "Qwant",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.qwant.com",
+      "speech_forms": [
+        "qwant",
+        "квант"
+      ],
+      "priority": 135
+    },
+    {
+      "site_id": "rambler",
+      "display_name": "Rambler",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.rambler.ru",
+      "speech_forms": [
+        "rambler",
+        "рамблер"
+      ],
+      "priority": 130
+    },
+    {
+      "site_id": "rbc",
+      "display_name": "РБК",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.rbc.ru",
+      "speech_forms": [
+        "рбк",
+        "rbc"
+      ],
+      "priority": 220
+    },
+    {
+      "site_id": "reddit",
+      "display_name": "Reddit",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.reddit.com",
+      "speech_forms": [
+        "reddit",
+        "реддит",
+        "редит"
+      ],
+      "priority": 270
+    },
+    {
+      "site_id": "replit",
+      "display_name": "Replit",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://replit.com",
+      "speech_forms": [
+        "replit",
+        "реплит"
+      ],
+      "priority": 195
+    },
+    {
+      "site_id": "researchgate",
+      "display_name": "ResearchGate",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.researchgate.net",
+      "speech_forms": [
+        "researchgate",
+        "research gate",
+        "ресерчгейт",
+        "ресерч гейт"
+      ],
+      "priority": 180
+    },
+    {
+      "site_id": "reuters",
+      "display_name": "Reuters",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.reuters.com",
+      "speech_forms": [
+        "reuters",
+        "ройтерс"
+      ],
+      "priority": 210
+    },
+    {
+      "site_id": "ria",
+      "display_name": "РИА Новости",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://ria.ru",
+      "speech_forms": [
+        "риа новости",
+        "ria",
+        "риа"
+      ],
+      "priority": 180
+    },
+    {
+      "site_id": "roblox",
+      "display_name": "Roblox",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.roblox.com",
+      "speech_forms": [
+        "roblox",
+        "роблокс"
+      ],
+      "priority": 220
+    },
+    {
+      "site_id": "rottentomatoes",
+      "display_name": "Rotten Tomatoes",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.rottentomatoes.com",
+      "speech_forms": [
+        "rotten tomatoes",
+        "rottentomatoes",
+        "роттен томатос",
+        "гнилые помидоры"
+      ],
+      "priority": 165
+    },
+    {
+      "site_id": "rutube",
+      "display_name": "RUTUBE",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://rutube.ru",
+      "speech_forms": [
+        "rutube",
+        "рутьюб",
+        "рутуб",
+        "рутюб"
+      ],
+      "priority": 205
+    },
+    {
+      "site_id": "sber",
+      "display_name": "Сбер",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.sberbank.com",
+      "speech_forms": [
+        "сбер",
+        "sber",
+        "сбербанк"
+      ],
+      "priority": 185
+    },
+    {
+      "site_id": "shein",
+      "display_name": "SHEIN",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.shein.com",
+      "speech_forms": [
+        "shein",
+        "шейн"
+      ],
+      "priority": 185
+    },
+    {
+      "site_id": "skillbox",
+      "display_name": "Skillbox",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://skillbox.ru",
+      "speech_forms": [
+        "skillbox",
+        "скиллбокс",
+        "скилбокс"
+      ],
+      "priority": 150
+    },
+    {
+      "site_id": "skyscanner",
+      "display_name": "Skyscanner",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.skyscanner.net",
+      "speech_forms": [
+        "skyscanner",
+        "sky scanner",
+        "скайсканер",
+        "скай сканер"
+      ],
+      "priority": 190
+    },
+    {
+      "site_id": "slack",
+      "display_name": "Slack",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://slack.com",
+      "speech_forms": [
+        "slack",
+        "слак"
+      ],
+      "priority": 230
+    },
+    {
+      "site_id": "soundcloud",
+      "display_name": "SoundCloud",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://soundcloud.com",
+      "speech_forms": [
+        "soundcloud",
+        "sound cloud",
+        "саундклауд",
+        "саунд клауд"
+      ],
+      "priority": 210
+    },
+    {
+      "site_id": "speedtest",
+      "display_name": "Speedtest",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.speedtest.net",
+      "speech_forms": [
+        "speedtest",
+        "speed test",
+        "спидтест",
+        "спид тест"
+      ],
+      "priority": 210
+    },
+    {
+      "site_id": "spotify",
+      "display_name": "Spotify",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://open.spotify.com",
+      "speech_forms": [
+        "spotify",
+        "спотифай"
+      ],
+      "priority": 250
+    },
+    {
+      "site_id": "stackexchange",
+      "display_name": "Stack Exchange",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://stackexchange.com",
+      "speech_forms": [
+        "stack exchange",
+        "stackexchange",
+        "стак эксчейндж",
+        "стек эксчейндж"
+      ],
+      "priority": 190
+    },
+    {
+      "site_id": "stackoverflow",
+      "display_name": "Stack Overflow",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://stackoverflow.com",
+      "speech_forms": [
+        "stack overflow",
+        "stackoverflow",
+        "стак оверфлоу",
+        "стек оверфлоу"
+      ],
+      "priority": 240
+    },
+    {
+      "site_id": "steam",
+      "display_name": "Steam",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://store.steampowered.com",
+      "speech_forms": [
+        "steam",
+        "стим"
+      ],
+      "priority": 255
+    },
+    {
+      "site_id": "stepik",
+      "display_name": "Stepik",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://stepik.org",
+      "speech_forms": [
+        "stepik",
+        "степик"
+      ],
+      "priority": 195
+    },
+    {
+      "site_id": "stripe",
+      "display_name": "Stripe",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://stripe.com",
+      "speech_forms": [
+        "stripe",
+        "страйп"
+      ],
+      "priority": 190
+    },
+    {
+      "site_id": "superuser",
+      "display_name": "Super User",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://superuser.com",
+      "speech_forms": [
+        "super user",
+        "superuser",
+        "супер юзер"
+      ],
+      "priority": 175
+    },
+    {
+      "site_id": "tass",
+      "display_name": "ТАСС",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://tass.ru",
+      "speech_forms": [
+        "тасс",
+        "tass"
+      ],
+      "priority": 175
+    },
+    {
+      "site_id": "telegram",
+      "display_name": "Telegram",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://web.telegram.org",
+      "speech_forms": [
+        "telegram",
+        "telegram web",
+        "телеграм",
+        "телега"
+      ],
+      "priority": 285
+    },
+    {
+      "site_id": "temu",
+      "display_name": "Temu",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.temu.com",
+      "speech_forms": [
+        "temu",
+        "тему",
+        "тиму"
+      ],
+      "priority": 190
+    },
+    {
+      "site_id": "tenchat",
+      "display_name": "TenChat",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://tenchat.ru",
+      "speech_forms": [
+        "tenchat",
+        "тенчат",
+        "тен чат"
+      ],
+      "priority": 130
+    },
+    {
+      "site_id": "threads",
+      "display_name": "Threads",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.threads.net",
+      "speech_forms": [
+        "threads",
+        "тредс",
+        "threads net"
+      ],
+      "priority": 205
+    },
+    {
+      "site_id": "tiktok",
+      "display_name": "TikTok",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.tiktok.com",
+      "speech_forms": [
+        "tiktok",
+        "tik tok",
+        "тикток",
+        "тик ток"
+      ],
+      "priority": 265
+    },
+    {
+      "site_id": "tinkoff",
+      "display_name": "Т-Банк",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.tbank.ru",
+      "speech_forms": [
+        "т-банк",
+        "tinkoff",
+        "тинькофф",
+        "т банк",
+        "t bank"
+      ],
+      "priority": 190
+    },
+    {
+      "site_id": "tradingview",
+      "display_name": "TradingView",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.tradingview.com",
+      "speech_forms": [
+        "tradingview",
+        "trading view",
+        "трейдингвью",
+        "трейдинг вью"
+      ],
+      "priority": 220
+    },
+    {
+      "site_id": "translate_google",
+      "display_name": "Google Translate",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://translate.google.com",
+      "speech_forms": [
+        "google translate",
+        "translate google",
+        "translate",
+        "гугл переводчик",
+        "переводчик гугл"
+      ],
+      "priority": 245
+    },
+    {
+      "site_id": "trello",
+      "display_name": "Trello",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://trello.com",
+      "speech_forms": [
+        "trello",
+        "трелло",
+        "трело"
+      ],
+      "priority": 205
+    },
+    {
+      "site_id": "tripadvisor",
+      "display_name": "Tripadvisor",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.tripadvisor.com",
+      "speech_forms": [
+        "tripadvisor",
+        "trip advisor",
+        "трипадвайзер",
+        "трип адвайзер"
+      ],
+      "priority": 205
+    },
+    {
+      "site_id": "tutu",
+      "display_name": "Туту",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.tutu.ru",
+      "speech_forms": [
+        "туту",
+        "tutu",
+        "туту ру"
+      ],
+      "priority": 170
+    },
+    {
+      "site_id": "twitch",
+      "display_name": "Twitch",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.twitch.tv",
+      "speech_forms": [
+        "twitch",
+        "твич"
+      ],
+      "priority": 255
+    },
+    {
+      "site_id": "two_gis",
+      "display_name": "2ГИС",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://2gis.ru",
+      "speech_forms": [
+        "2гис",
+        "two gis",
+        "2gis",
+        "два гис",
+        "ту гис"
+      ],
+      "priority": 220
+    },
+    {
+      "site_id": "uber",
+      "display_name": "Uber",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.uber.com",
+      "speech_forms": [
+        "uber",
+        "убер"
+      ],
+      "priority": 180
+    },
+    {
+      "site_id": "udemy",
+      "display_name": "Udemy",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.udemy.com",
+      "speech_forms": [
+        "udemy",
+        "юдеми",
+        "удеми"
+      ],
+      "priority": 200
+    },
+    {
+      "site_id": "vc_ru",
+      "display_name": "VC.ru",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://vc.ru",
+      "speech_forms": [
+        "vc.ru",
+        "vc ru",
+        "vc",
+        "ви си",
+        "виси ру"
+      ],
+      "priority": 190
+    },
+    {
+      "site_id": "vimeo",
+      "display_name": "Vimeo",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://vimeo.com",
+      "speech_forms": [
+        "vimeo",
+        "вимео"
+      ],
+      "priority": 180
+    },
+    {
+      "site_id": "virustotal",
+      "display_name": "VirusTotal",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.virustotal.com",
+      "speech_forms": [
+        "virustotal",
+        "virus total",
+        "вирус тотал"
+      ],
+      "priority": 200
+    },
+    {
+      "site_id": "vk",
+      "display_name": "VK",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://vk.com",
+      "speech_forms": [
+        "vk",
+        "вк",
+        "вконтакте",
+        "контакт"
+      ],
+      "priority": 260
+    },
+    {
+      "site_id": "whatsapp",
+      "display_name": "WhatsApp",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://web.whatsapp.com",
+      "speech_forms": [
+        "whatsapp",
+        "whats app",
+        "ватсап",
+        "вацап"
+      ],
+      "priority": 260
+    },
+    {
+      "site_id": "wikihow",
+      "display_name": "wikiHow",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.wikihow.com",
+      "speech_forms": [
+        "wikihow",
+        "wiki how",
+        "викихау",
+        "вики хау"
+      ],
+      "priority": 170
+    },
+    {
+      "site_id": "wikipedia",
+      "display_name": "Wikipedia",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.wikipedia.org",
+      "speech_forms": [
+        "wikipedia",
+        "wiki",
+        "википедия",
+        "вики"
+      ],
+      "priority": 230
+    },
+    {
+      "site_id": "wildberries",
+      "display_name": "Wildberries",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.wildberries.ru",
+      "speech_forms": [
+        "wildberries",
+        "wild berries",
+        "вайлдберриз",
+        "вб"
+      ],
+      "priority": 245
+    },
+    {
+      "site_id": "wise",
+      "display_name": "Wise",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://wise.com",
+      "speech_forms": [
+        "wise",
+        "вайз"
+      ],
+      "priority": 185
+    },
+    {
+      "site_id": "wolframalpha",
+      "display_name": "WolframAlpha",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.wolframalpha.com",
+      "speech_forms": [
+        "wolframalpha",
+        "wolfram alpha",
+        "вольфрам альфа"
+      ],
+      "priority": 210
+    },
+    {
+      "site_id": "x",
+      "display_name": "X",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://x.com",
+      "speech_forms": [
+        "x",
+        "twitter",
+        "твиттер",
+        "икс"
+      ],
+      "priority": 275
+    },
+    {
+      "site_id": "xbox",
+      "display_name": "Xbox",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.xbox.com",
+      "speech_forms": [
+        "xbox",
+        "иксбокс",
+        "x box"
+      ],
+      "priority": 195
+    },
+    {
+      "site_id": "yahoo",
+      "display_name": "Yahoo",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.yahoo.com",
+      "speech_forms": [
+        "yahoo",
+        "яху"
+      ],
+      "priority": 160
+    },
+    {
+      "site_id": "yahoo_finance",
+      "display_name": "Yahoo Finance",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://finance.yahoo.com",
+      "speech_forms": [
+        "yahoo finance",
+        "яху финансы",
+        "яху финанс"
+      ],
+      "priority": 175
+    },
+    {
+      "site_id": "yandex",
+      "display_name": "Yandex",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://ya.ru",
+      "speech_forms": [
+        "yandex",
+        "яндекс"
+      ],
+      "priority": 200
+    },
+    {
+      "site_id": "yandex_go",
+      "display_name": "Яндекс Go",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://go.yandex",
+      "speech_forms": [
+        "яндекс go",
+        "yandex go",
+        "яндекс го",
+        "яндекс такси"
+      ],
+      "priority": 190
+    },
+    {
+      "site_id": "yandex_maps",
+      "display_name": "Яндекс Карты",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://yandex.ru/maps",
+      "speech_forms": [
+        "яндекс карты",
+        "yandex maps",
+        "карты яндекс"
+      ],
+      "priority": 250
+    },
+    {
+      "site_id": "yandex_market",
+      "display_name": "Яндекс Маркет",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://market.yandex.ru",
+      "speech_forms": [
+        "яндекс маркет",
+        "yandex market",
+        "маркет"
+      ],
+      "priority": 230
+    },
+    {
+      "site_id": "yandex_music",
+      "display_name": "Яндекс Музыка",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://music.yandex.ru",
+      "speech_forms": [
+        "яндекс музыка",
+        "yandex music",
+        "музыка яндекс"
+      ],
+      "priority": 230
+    },
+    {
+      "site_id": "you_com",
+      "display_name": "You.com",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://you.com",
+      "speech_forms": [
+        "you.com",
+        "you com",
+        "ю ком"
+      ],
+      "priority": 185
+    },
+    {
+      "site_id": "youtube",
+      "display_name": "YouTube",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://www.youtube.com",
+      "speech_forms": [
+        "youtube",
+        "you tube",
+        "ютуб",
+        "ютубе"
+      ],
+      "priority": 280
+    },
+    {
+      "site_id": "zoom",
+      "display_name": "Zoom",
+      "source": "default",
+      "enabled": true,
+      "base_url": "https://zoom.us",
+      "speech_forms": [
+        "zoom",
+        "зум"
+      ],
+      "priority": 225
+    }
+  ]
+}

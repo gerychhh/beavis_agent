@@ -8,6 +8,12 @@ from python_agent.skills.spec import SkillSpec
 from python_agent.skills.volume_set.examples import EXAMPLES as VOLUME_SET_EXAMPLES
 from python_agent.skills.volume_set.extractor import VolumeSetExtractor
 from python_agent.skills.volume_set.spec import SPEC as VOLUME_SET_SPEC
+from python_agent.skills.web_open.examples import EXAMPLES as WEB_OPEN_EXAMPLES
+from python_agent.skills.web_open.extractor import WebOpenExtractor
+from python_agent.skills.web_open.spec import SPEC as WEB_OPEN_SPEC
+from python_agent.skills.web_search.examples import EXAMPLES as WEB_SEARCH_EXAMPLES
+from python_agent.skills.web_search.extractor import WebSearchExtractor
+from python_agent.skills.web_search.spec import SPEC as WEB_SEARCH_SPEC
 from python_agent.skills.window_control.examples import EXAMPLES as WINDOW_CONTROL_EXAMPLES
 from python_agent.skills.window_control.extractor import WindowControlExtractor
 from python_agent.skills.window_control.spec import SPEC as WINDOW_CONTROL_SPEC
@@ -58,6 +64,14 @@ def _fresh_specs() -> tuple[SkillSpec, ...]:
         _copy_spec_with_extractor(
             _copy_spec_with_examples(VOLUME_SET_SPEC, VOLUME_SET_EXAMPLES),
             VolumeSetExtractor(),
+        ),
+        _copy_spec_with_extractor(
+            _copy_spec_with_examples(WEB_OPEN_SPEC, WEB_OPEN_EXAMPLES),
+            WebOpenExtractor(),
+        ),
+        _copy_spec_with_extractor(
+            _copy_spec_with_examples(WEB_SEARCH_SPEC, WEB_SEARCH_EXAMPLES),
+            WebSearchExtractor(),
         ),
         _copy_spec_with_extractor(
             _copy_spec_with_examples(WINDOW_CONTROL_SPEC, WINDOW_CONTROL_EXAMPLES),

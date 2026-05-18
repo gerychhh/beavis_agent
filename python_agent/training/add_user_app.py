@@ -710,6 +710,30 @@ def _run_training(
             ["python_agent.training.test_window_layout_arg_model"],
         ),
         (
+            "Генерирую датасет web_open",
+            ["python_agent.training.generate_web_open_dataset"],
+        ),
+        (
+            "Обучаю web_open",
+            ["python_agent.training.train_web_open_arg_model"],
+        ),
+        (
+            "Тестирую web_open",
+            ["python_agent.training.test_web_open_arg_model"],
+        ),
+        (
+            "Генерирую датасет web_search",
+            ["python_agent.training.generate_web_search_dataset"],
+        ),
+        (
+            "Обучаю web_search query",
+            ["python_agent.training.train_web_search_query_model"],
+        ),
+        (
+            "Тестирую web_search query",
+            ["python_agent.training.test_web_search_query_model"],
+        ),
+        (
             "Генерирую датасет skill_classifier",
             [
                 "python_agent.training.generate_skill_classifier_dataset",

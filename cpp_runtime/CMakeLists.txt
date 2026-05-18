@@ -23,6 +23,8 @@ add_executable(beavis_runtime
     src/resolvers/AppResolver.cpp
     src/skills/apps/OpenAppSkill.cpp
     src/skills/system/VolumeSetSkill.cpp
+    src/skills/web/WebOpenSkill.cpp
+    src/skills/web/WebSearchSkill.cpp
     src/skills/windows/WindowControlSkill.cpp
     src/skills/windows/WindowLayoutSkill.cpp
     src/utils/WindowUtils.cpp
